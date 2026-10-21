@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  html {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900 min-h-screen antialiased selection:bg-indigo-500 selection:text-white;
+  }
+}

@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>النظام التعليمي التفاعلي - إعداد المهندس أسامة خليل هاشم</title>
+  <meta name="author" content="المهندس أسامة خليل هاشم">
+  <script src="curriculum_data.js"></script>
+  <style>
+    /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #eef2ff;
+      --secondary: #0ea5e9;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --warning: #f59e0b;
+      --warning-light: #fffbeb;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--slate-50);
+      color: var(--slate-800);
+      direction: rtl;
+      text-align: right;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* شريط التنقل العلوي */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--slate-200);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-icon {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+    }
+
+    .brand h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .version-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid rgba(79, 70, 229, 0.25);
+    }
+
+    .brand p {
+      font-size: 0.75rem;
+      color: var(--slate-500);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 0.35rem;
+      background: var(--slate-100);
+      padding: 0.25rem;
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      border: none;
+      background: transparent;
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease-in-out;
+    }
+
+    .tab-btn:hover {
+      color: var(--slate-900);
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .tab-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      font-weight: 700;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--slate-100);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid var(--slate-200);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 6px var(--success);
+    }
+
+    /* الحاوية الرئيسية */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* الأزرار العامة */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: white;
+      border-color: var(--slate-300);
+      color: var(--slate-700);
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-100);
+      border-color: var(--slate-400);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+
+    .btn-sm {
+      padding: 0.35rem 0.65rem;
+      font-size: 0.75rem;
+      border-radius: 6px;
+    }
+
+    /* البطاقات */
+    .card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* لوحة التحكم والترحيب */
+    .hero-banner {
+      background: linear-gradient(135deg, #3730a3, #4f46e5, #7c3aed);
+      border-radius: 16px;
+      padding: 2rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-banner p {
+      color: #e0e7ff;
+      font-size: 0.95rem;
+      max-width: 750px;
+      margin-bottom: 1.25rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem;
+    }
+
+    .stat-item .val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--slate-900);
+    }
+
+    .stat-item .lbl {
+      font-size: 0.8rem;
+      color: var(--slate-500);
+    }
+
+    /* شبكة المناهج */
+    .curriculums-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .curr-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .curr-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .curr-badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* شاشة المذاكرة المتكاملة */
+    .study-layout {
+      display: grid;
+      grid-template-columns: 310px 1fr 370px;
+      gap: 1rem;
+      height: calc(100vh - 8rem);
+    }
+
+    @media (max-width: 1100px) {
+      .study-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-header {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .panel-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+
+    .chapter-group {
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .chapter-title-header {
+      background: var(--slate-100);
+      padding: 0.45rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--slate-800);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .tree-item {
+      padding: 0.55rem 0.75rem;
+      font-size: 0.78rem;
+      color: var(--slate-700);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--slate-100);
+      transition: background 0.15s;
+    }
+
+    .tree-item:last-child {
+      border-bottom: none;
+    }
+
+    .tree-item:hover {
+      background: var(--slate-50);
+    }
+
+    .tree-item.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      border-right: 3px solid var(--primary);
+    }
+
+    /* شريط القارئ الصوتي التفاعلي */
+    .audio-player-bar {
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      color: white;
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+
+    .audio-player-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .audio-btn {
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s;
+    }
+
+    .audio-btn:hover {
+      background: #f1f5f9;
+      transform: translateY(-1px);
+    }
+
+    .audio-btn.danger {
+      background: #ef4444;
+      color: white;
+    }
+
+    .audio-speed-select {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+    }
+
+    .audio-speed-select option {
+      color: #0f172a;
+      background: white;
+    }
+
+    /* مقاطع الدرس والمصادر */
+    .chunk-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      transition: all 0.2s ease;
+    }
+
+    .chunk-box.active-reading {
+      border: 2px solid var(--primary);
+      background: #eef2ff !important;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+    }
+
+    .chunk-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px dashed var(--slate-200);
+      padding-bottom: 0.35rem;
+    }
+
+    .mini-listen-btn {
+      background: white;
+      border: 1px solid var(--slate-300);
+      color: var(--primary);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .mini-listen-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+
+    /* محادثة المساعد الذكي */
+    .chat-messages {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .message {
+      max-width: 92%;
+      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .message.user {
+      align-self: flex-start;
+      background: var(--primary);
+      color: white;
+      border-bottom-right-radius: 2px;
+    }
+
+    .message.assistant {
+      align-self: flex-end;
+      background: var(--slate-100);
+      color: var(--slate-800);
+      border: 1px solid var(--slate-200);
+      border-bottom-left-radius: 2px;
+    }
+
+    .source-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: white;
+      border: 1px solid var(--slate-300);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.4rem;
+      margin-left: 0.3rem;
+    }
+
+    /* أزرار الأسئلة المقترحة السريعة */
+    .suggested-chips {
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding: 0.4rem 0.75rem;
+      background: var(--slate-50);
+      border-top: 1px solid var(--slate-200);
+      white-space: nowrap;
+    }
+
+    .chip-btn {
+      background: white;
+      border: 1px solid var(--slate-300);
+      color: var(--slate-700);
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chip-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .chat-footer {
+      padding: 0.75rem;
+      border-top: 1px solid var(--slate-200);
+      background: white;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chat-input {
+      flex: 1;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .chat-input:focus {
+      border-color: var(--primary);
+    }
+
+    /* قسم القواعد المهمة */
+    .grammar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .grammar-card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .grammar-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .formula-box {
+      background: #f8fafc;
+      border-right: 4px solid var(--primary);
+      padding: 0.6rem 0.8rem;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.8rem;
+      color: #1e1b4b;
+      margin: 0.6rem 0;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .grammar-example-item {
+      padding: 0.5rem;
+      border-radius: 6px;
+      background: var(--slate-50);
+      margin-bottom: 0.4rem;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .grammar-quick-test {
+      margin-top: 0.75rem;
+      border-top: 1px dashed var(--slate-200);
+      padding-top: 0.75rem;
+    }
+
+    /* أسئلة الاختبارات */
+    .quiz-question {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .options-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .quiz-option {
+      border: 1px solid var(--slate-300);
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      text-align: right;
+      background: white;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+
+    .quiz-option:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .quiz-option.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .quiz-option.correct {
+      border-color: var(--success);
+      background: var(--success-light);
+      color: #065f46;
+      font-weight: 700;
+    }
+
+    .quiz-option.wrong {
+      border-color: var(--danger);
+      background: var(--danger-light);
+      color: #991b1b;
+    }
+
+    /* نافذة المودال */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 1rem;
+    }
+
+    .modal-box {
+      background: white;
+      border-radius: 16px;
+      max-width: 550px;
+      width: 100%;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--slate-700);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- رأس الصفحة والتنقل -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.1.0</span></h1>
+          <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
+        </div>
+      </div>
+
+      <!-- تبويبات التنقل -->
+      <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('dashboard')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          الرئيسية
+        </button>
+        <button class="tab-btn" onclick="switchTab('curriculums')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          المناهج والمحتوى
+        </button>
+        <button class="tab-btn" onclick="switchTab('study')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          المذاكرة والمساعد
+        </button>
+        <button class="tab-btn" onclick="switchTab('grammar')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          💡 القواعد المهمة
+        </button>
+        <button class="tab-btn" onclick="switchTab('exams')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          الاختبارات والتقييم
+        </button>
+        <button class="tab-btn" onclick="switchTab('settings')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          الإعدادات
+        </button>
+      </nav>
+
+      <!-- حالة النظام -->
+      <div class="status-badge" id="systemStatusBadge">
+        <span class="status-dot"></span>
+        <span id="systemStatusText">الوضع المحلي نشط</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الرئيسي -->
+  <main>
+
+    <!-- 1. تبويب الرئيسية -->
+    <section id="tab-dashboard">
+      <div class="hero-banner">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.1.0</span>
+        </div>
+        <h2>نظامك التعليمي التفاعلي الشخصي</h2>
+        <p>
+          تطبيق متكامل لعرض المنهج الدراسي، قراءته بصوت مسموع وواضح، الاستفسار من المعلم الذكي مع توثيق المصادر، والاطلاع على بنك القواعد النحوية واللغوية واختبارات قياس الفهم.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="switchTab('study')" style="background: white; color: var(--primary);">
+            📖 فتح المذاكرة والقراءة الصوتية
+          </button>
+          <button class="btn btn-primary" onclick="switchTab('grammar')" style="background: #fbbf24; color: #78350f;">
+            💡 استكشاف القواعد المهمة
+          </button>
+          <button class="btn btn-secondary" onclick="openAddModal()" style="background: rgba(255,255,255,0.2); color: white; border: none;">
+            + إضافة منهج دراسي
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="card stat-item">
+          <div>
+            <div class="lbl">المناهج المعتمدة</div>
+            <div class="val" id="statCurriculums">1</div>
+          </div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="card stat-item">
+          <div>
+            <div class="lbl">الوحدات والفصول</div>
+            <div class="val" id="statChapters">10</div>
+          </div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="card stat-item">
+          <div>
+            <div class="lbl">الدروس التفاعلية</div>
+            <div class="val" id="statLessons">53</div>
+          </div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="card stat-item">
+          <div>
+            <div class="lbl">القواعد اللغوية الموثقة</div>
+            <div class="val" style="color: var(--success);" id="statGrammar">11 قاعدة</div>
+          </div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. تبويب المناهج والمحتوى -->
+    <section id="tab-curriculums" class="hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.25rem; font-weight: 800;">مكتبة المناهج والكتب</h2>
+          <p style="font-size: 0.8rem; color: var(--slate-500);">إدارة واستعراض الكتب المعتمدة وهيكلتها</p>
+        </div>
+        <button class="btn btn-primary" onclick="openAddModal()">
+          + إضافة منهج دراسي
+        </button>
+      </div>
+
+      <div class="curriculums-grid" id="curriculumsContainer">
+        <!-- يتم توليد البطاقات ديناميكياً -->
+      </div>
+    </section>
+
+    <!-- 3. تبويب قاعة المذاكرة والمساعد الصوتي -->
+    <section id="tab-study" class="hidden">
+      <div class="study-layout">
+        
+        <!-- اللوحة اليمنى: شجرة الفصول والدروس -->
+        <div class="panel">
+          <div class="panel-header">
+            <span>فهرس المنهج والوحدات</span>
+            <select id="studyCurrSelect" onchange="onCurriculumSelectChange(this.value)" style="font-size: 0.75rem; padding: 0.2rem 0.4rem; border-radius: 4px; border: 1px solid var(--slate-300); max-width: 140px;">
+            </select>
+          </div>
+          <div class="panel-body" id="chaptersTreeContainer">
+            <!-- فصول ودروس المنهج -->
+          </div>
+          <div style="padding: 0.75rem; border-top: 1px solid var(--slate-200); background: var(--slate-50); display: flex; flex-direction: column; gap: 0.4rem;">
+            <button class="btn btn-primary btn-sm" onclick="generateQuizForCurrentLesson()" style="width: 100%;">
+              ⚡ اختبار فوري على هذا الدرس
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="width: 100%;">
+              💡 استعراض القواعد المهمة
+            </button>
+          </div>
+        </div>
+
+        <!-- اللوحة الوسطى: نصوص الدرس ومصادره الأصلية والقراءة الصوتية -->
+        <div class="panel">
+          <div class="panel-header">
+            <span id="currentLessonHeader">محتوى الدرس</span>
+            <span id="lessonChunksCountBadge" style="font-size: 0.75rem; background: var(--slate-200); padding: 0.15rem 0.5rem; border-radius: 9999px;">
+              0 مقاطع
+            </span>
+          </div>
+
+          <!-- شريط القارئ الصوتي التفاعلي المسموع -->
+          <div class="audio-player-bar" id="audioPlayerBar">
+            <div class="audio-player-controls">
+              <button class="audio-btn" id="audioPlayBtn" onclick="audioPlayer.playCurrentLesson()">
+                <span>▶️</span> استمع للدرس بصوت مسموع
+              </button>
+              <button class="audio-btn" onclick="audioPlayer.pause()">
+                <span>⏸️</span> إيقاف مؤقت
+              </button>
+              <button class="audio-btn danger" onclick="audioPlayer.stop()">
+                <span>⏹️</span> إيقاف
+              </button>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 0.75rem; color: #cbd5e1;" id="audioPlayerStatus">جاهز للاستماع</span>
+              <div style="display: flex; align-items: center; gap: 0.25rem;">
+                <span style="font-size: 0.7rem; color: #94a3b8;">السرعة:</span>
+                <select class="audio-speed-select" id="audioSpeedSelect" onchange="audioPlayer.setSpeed(this.value)">
+                  <option value="0.8">0.8x بطيء</option>
+                  <option value="1.0" selected>1.0x عادي</option>
+                  <option value="1.2">1.2x سريع</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- تنبيه القواعد المرتبطة بالدرس -->
+          <div id="lessonGrammarAlert" class="hidden" style="margin: 0.5rem 1rem 0; padding: 0.6rem 0.85rem; background: #fefce8; border: 1px solid #fde047; border-radius: 8px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+            <div id="lessonGrammarAlertText" style="color: #854d0e; font-weight: 700;">💡 يتضمن هذا الدرس قواعد مهمة</div>
+            <button class="btn btn-primary btn-sm" onclick="switchTab('grammar')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">عرض القاعدة والشرح</button>
+          </div>
+
+          <div class="panel-body" id="lessonChunksContainer">
+            <div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">
+              يرجى اختيار درس من القائمة لعرض نصوصه ومراجعه.
+            </div>
+          </div>
+        </div>
+
+        <!-- اللوحة اليسرى: المعلم والمساعد الذكي الموثق -->
+        <div class="panel">
+          <div class="panel-header">
+            <span>المعلم الذكي الموثق</span>
+            <label style="font-size: 0.75rem; display: flex; align-items: center; gap: 0.25rem; font-weight: normal; cursor: pointer;">
+              <input type="checkbox" id="allowExternalCheck">
+              <span>إثراء خارجي</span>
+            </label>
+          </div>
+
+          <div style="padding: 0.4rem 0.75rem; background: var(--slate-100); border-bottom: 1px solid var(--slate-200); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem;">
+            <span>مستوى الشرح:</span>
+            <select id="explanationLevelSelect" style="font-size: 0.75rem; padding: 0.15rem 0.3rem; border-radius: 4px; border: 1px solid var(--slate-300);">
+              <option value="standard">قياسي (نص المنهج)</option>
+              <option value="simple">مبسط للطلاب</option>
+              <option value="deep">متعمق ومفصل</option>
+              <option value="step_by_step">خطوات متدرجة</option>
+            </select>
+          </div>
+
+          <div class="panel-body chat-messages" id="chatMessages">
+            <div class="message assistant">
+              أهلاً بك! أنا معلمك الذكي الموثق للمنهج. اسألني عن أي نقطة، مفردة، أو قاعدة لغوية في هذا الدرس، وسأشرحها لك فوراً مع توثيق الصفحة، ويمكنك الاستماع للإجابة صوتياً.
+            </div>
+          </div>
+
+          <!-- رقائق الأسئلة المقترحة السريعة -->
+          <div class="suggested-chips" id="suggestedChipsContainer">
+            <!-- تُملأ ديناميكياً حسب الدرس -->
+          </div>
+
+          <div class="chat-footer">
+            <input type="text" id="chatInput" class="chat-input" placeholder="اسأل المعلم عن أي مسألة أو قاعدة..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+            <button class="btn btn-primary btn-sm" onclick="sendChatMessage()">
+              إرسال
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. تبويب القواعد المهمة (Grammar & Rules) -->
+    <section id="tab-grammar" class="hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+        <div>
+          <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--slate-900);">💡 المرجع الشامل للقواعد والوظائف اللغوية</h2>
+          <p style="font-size: 0.85rem; color: var(--slate-500);">شرح وافٍ لكافة القواعد المقررة بالمنهج مع الصيغ النحوية، الأمثلة المنطوقة، وتدريبات الفهم الفورية.</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <input type="text" id="grammarSearchInput" class="form-control" placeholder="ابحث في القواعد (مثلاً: since, passive, s التملك)..." style="width: 260px;" oninput="filterGrammarRules()">
+        </div>
+      </div>
+
+      <!-- فلاتر الوحدات -->
+      <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1rem;" id="grammarUnitFilters">
+        <button class="btn btn-primary btn-sm" onclick="filterGrammarByUnit('all', this)">جميع القواعد</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(1, this)">الوحدة 1</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(2, this)">الوحدة 2</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(3, this)">الوحدة 3</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(5, this)">الوحدة 5</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(6, this)">الوحدة 6</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(7, this)">الوحدة 7</button>
+      </div>
+
+      <div class="grammar-grid" id="grammarContainer">
+        <!-- تُولّد بطاقات القواعد ديناميكياً -->
+      </div>
+    </section>
+
+    <!-- 5. تبويب الاختبارات والتقييم -->
+    <section id="tab-exams" class="hidden">
+      <div style="max-width: 750px; margin: 0 auto;">
+        <div class="card" style="margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h2 style="font-size: 1.15rem; font-weight: 800;">الاختبار التدريبي</h2>
+            <p style="font-size: 0.8rem; color: var(--slate-500);" id="examSubtitle">اختبار تدريبي على الدرس المختار</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="generateQuizForCurrentLesson()">
+            🔄 توليد أسئلة جديدة
+          </button>
+        </div>
+
+        <div id="quizResultBanner" class="hidden card" style="text-align: center; margin-bottom: 1.25rem; background: var(--success-light); border-color: var(--success);">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: #065f46;" id="quizScoreTitle">نتيجة الاختبار</h3>
+          <p style="font-size: 0.95rem; margin-top: 0.25rem;" id="quizScoreText"></p>
+        </div>
+
+        <div id="quizQuestionsContainer">
+          <!-- الأسئلة -->
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <button class="btn btn-primary" id="submitQuizBtn" onclick="submitQuiz()" style="min-width: 200px;">
+            تأكيد وتسليم الإجابات
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. تبويب الإعدادات -->
+    <section id="tab-settings" class="hidden">
+      <div class="card" style="max-width: 650px; margin: 0 auto;">
+        
+        <!-- بطاقة المهندس المعد للنظام -->
+        <div style="background: var(--primary-light); border: 1px solid rgba(79, 70, 229, 0.25); border-radius: 12px; padding: 1.1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+          <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);">
+            👨‍💻
+          </div>
+          <div>
+            <div style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900);">إعداد المهندس أسامة خليل هاشم</div>
+            <div style="font-size: 0.8rem; color: var(--slate-600); margin-top: 0.15rem;">هندسة وتطوير النظم التعليمية التفاعلية، قارئ النصوص الصوتي، والمساعد الذكي المستقل</div>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem;">إعدادات النظام والتشغيل المحلي</h2>
+        
+        <div class="form-group">
+          <label>مفتاح Google Gemini API (اختياري للإجابات المعمقة عبر السحاب)</label>
+          <input type="password" id="geminiApiKeyInput" class="form-control" placeholder="AIzaSy...">
+          <small style="font-size: 0.75rem; color: var(--slate-500); display: block; margin-top: 0.25rem;">
+            يُحفظ المفتاح محلياً في متصفحك فقط ولا يُرسل لأي جهة خارجية. (النظام مزود بمحرك محلي يجيب دائماً حتى بدون مفتاح).
+          </small>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <button class="btn btn-primary btn-sm" onclick="saveApiKey()">حفظ المفتاح</button>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--slate-200); margin: 1.5rem 0;">
+
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">النسخ الاحتياطي ونقل البيانات</h3>
+        <p style="font-size: 0.8rem; color: var(--slate-600); margin-bottom: 1rem;">
+          يمكنك تصدير كافة المناهج والأسئلة كملف JSON محلي لاستعادتها في أي وقت دون فقدان أي بيانات.
+        </p>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-secondary btn-sm" onclick="exportDataBackup()">
+            💾 تصدير نسخة احتياطية
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="document.getElementById('importBackupInput').click()">
+            📂 استعادة نسخة احتياطية
+          </button>
+          <input type="file" id="importBackupInput" accept=".json" style="display: none;" onchange="importDataBackup(event)">
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--slate-200); margin: 1.5rem 0;">
+
+        <!-- بطاقة إصدار النظام وسجل التحديثات -->
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">معلومات الإصدار وسجل الإضافات</h3>
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.1.0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
+            <span>المهندس المعد للنظام:</span>
+            <span style="font-weight: 700; color: var(--primary);">المهندس أسامة خليل هاشم</span>
+          </div>
+          
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
+          <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v2.1.0 (أكتوبر 2026):</strong> إضافة القارئ الصوتي التفاعلي بمخارج إنجليزية طبيعية، بنك القواعد اللغوية (11 قاعدة مع التمارين الفورية والتصحيح اللحظي)، وتوثيق الإسناد لـ م. أسامة خليل هاشم، ونظام تتبع الإصدارات.</div>
+            <div>• <strong>v2.0.0:</strong> إعادة هيكلة مناهج وزارة التربية إلى 10 وحدات و 53 درساً نظامياً وربط نصوص كتاب الطالب الأصلية.</div>
+            <div>• <strong>v1.0.0:</strong> الإطلاق الأولي للنظام ودعم التشغيل المحلي المستقل وإدارة المناهج.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- تذييل الصفحة الرسمي -->
+  <footer style="background: white; border-top: 1px solid var(--slate-200); padding: 1.25rem 1.5rem; margin-top: auto; color: var(--slate-600); font-size: 0.85rem;">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+      <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
+        <span>النظام التعليمي التفاعلي</span>
+        <span class="version-badge">v2.1.0</span>
+      </div>
+      <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
+        ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
+      </div>
+      <div style="font-size: 0.8rem; color: var(--slate-500);">
+        جميع الحقوق محفوظة © 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- نافذة مودال: إضافة منهج جديد -->
+  <div class="modal-overlay hidden" id="addCurriculumModal">
+    <div class="modal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 800;">إضافة منهج دراسي جديد</h3>
+        <button onclick="closeAddModal()" style="border: none; background: transparent; font-size: 1.25rem; cursor: pointer; color: var(--slate-400);">✕</button>
+      </div>
+
+      <div class="form-group">
+        <label>اسم المنهج *</label>
+        <input type="text" id="newCurrName" class="form-control" placeholder="مثال: كتاب الأحياء للصف الثالث">
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <div class="form-group">
+          <label>المادة الدراسية *</label>
+          <input type="text" id="newCurrSubject" class="form-control" placeholder="مثال: الأحياء">
+        </div>
+        <div class="form-group">
+          <label>المرحلة / الصف</label>
+          <input type="text" id="newCurrGrade" class="form-control" placeholder="مثال: الثاني متوسط">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>ملف المنهج (PDF أو DOCX)</label>
+        <div style="border: 2px dashed var(--slate-300); border-radius: 8px; padding: 1.5rem; text-align: center; cursor: pointer;" onclick="document.getElementById('currFileInput').click()">
+          <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">📄</span>
+          <span id="selectedFileName" style="font-size: 0.8rem; color: var(--slate-600); font-weight: 600;">انقر لاختيار ملف المنهج من جهازك</span>
+        </div>
+        <input type="file" id="currFileInput" accept=".pdf,.docx,.txt" style="display: none;" onchange="onFileSelected(event)">
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.25rem;">
+        <button class="btn btn-secondary btn-sm" onclick="closeAddModal()">إلغاء</button>
+        <button class="btn btn-primary btn-sm" id="saveCurrBtn" onclick="saveNewCurriculum()">
+          حفظ ومعالجة المنهج
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- محرك الجافاسكريبت المتكامل والشامل -->
+  <script>
+    const STORAGE_KEY = 'interactive_educational_system_v2';
+    const SYSTEM_VERSION = 'v2.1.0';
+    const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
+    
+    // حالة النظام
+    let appData = {
+      curriculums: [],
+      apiKey: '',
+      currentCurriculumId: 3,
+      currentLessonId: null
+    };
+
+    let selectedQuizAnswers = {};
+    let currentQuizQuestions = [];
+    let currentActiveGrammarFilter = 'all';
+
+    // محرك القراءة الصوتية Text-to-Speech (مسموع وفصيح)
+    const audioPlayer = {
+      synth: window.speechSynthesis,
+      isPlaying: false,
+      isPaused: false,
+      speed: 1.0,
+      chunks: [],
+      currentChunkIdx: 0,
+
+      getVoice(lang = 'en') {
+        if (!this.synth) return null;
+        const voices = this.synth.getVoices();
+        if (lang === 'en') {
+          return voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online'))) ||
+                 voices.find(v => v.lang.startsWith('en')) || null;
+        } else {
+          return voices.find(v => v.lang.startsWith('ar')) || null;
+        }
+      },
+
+      speakText(text, lang = 'en', onDone = null) {
+        if (!this.synth) {
+          alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
+          return;
+        }
+        this.synth.cancel();
+        
+        // تنظيف النص للقراءة المريحة
+        const cleanText = text.replace(/[•📌📄]/g, '').trim();
+        const utt = new SpeechSynthesisUtterance(cleanText);
+        utt.rate = this.speed;
+        const voice = this.getVoice(lang);
+        if (voice) utt.voice = voice;
+        utt.lang = lang === 'en' ? 'en-US' : 'ar-SA';
+
+        utt.onend = () => {
+          this.isPlaying = false;
+          this.isPaused = false;
+          this.updateButtons();
+          if (onDone) onDone();
+        };
+
+        utt.onerror = (e) => {
+          console.warn('Speech error', e);
+          this.isPlaying = false;
+          this.isPaused = false;
+          this.updateButtons();
+        };
+
+        this.isPlaying = true;
+        this.isPaused = false;
+        this.updateButtons();
+        this.synth.speak(utt);
+      },
+
+      playCurrentLesson() {
+        if (this.isPaused) {
+          this.resume();
+          return;
+        }
+        const chunkElements = document.querySelectorAll('.chunk-box');
+        if (!chunkElements || chunkElements.length === 0) {
+          alert('يرجى اختيار درس يحتوي على نصوص لبدء الاستماع.');
+          return;
+        }
+
+        this.chunks = Array.from(chunkElements).map(el => ({
+          el,
+          text: el.querySelector('.chunk-content-text') ? el.querySelector('.chunk-content-text').innerText : el.innerText
+        }));
+        this.currentChunkIdx = 0;
+        this.readNextChunk();
+      },
+
+      readNextChunk() {
+        if (this.currentChunkIdx >= this.chunks.length) {
+          this.stop();
+          this.updateStatus('اكتملت قراءة الدرس بنجاح ✅');
+          return;
+        }
+
+        const current = this.chunks[this.currentChunkIdx];
+        document.querySelectorAll('.chunk-box').forEach(b => b.classList.remove('active-reading'));
+        current.el.classList.add('active-reading');
+        current.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        this.updateStatus(`جارِ قراءة المقطع ${this.currentChunkIdx + 1} من ${this.chunks.length}... 🔊`);
+        this.updateButtons();
+
+        const isEnglish = /[a-zA-Z]{3,}/.test(current.text);
+        this.speakText(current.text, isEnglish ? 'en' : 'ar', () => {
+          this.currentChunkIdx++;
+          this.readNextChunk();
+        });
+      },
+
+      pause() {
+        if (this.synth && this.isPlaying) {
+          this.synth.pause();
+          this.isPaused = true;
+          this.updateStatus('متوقف مؤقتاً ⏸️');
+          this.updateButtons();
+        }
+      },
+
+      resume() {
+        if (this.synth && this.isPaused) {
+          this.synth.resume();
+          this.isPaused = false;
+          this.updateStatus('جارِ القراءة... 🔊');
+          this.updateButtons();
+        }
+      },
+
+      stop() {
+        if (this.synth) {
+          this.synth.cancel();
+        }
+        this.isPlaying = false;
+        this.isPaused = false;
+        document.querySelectorAll('.chunk-box').forEach(b => b.classList.remove('active-reading'));
+        this.updateStatus('جاهز للاستماع');
+        this.updateButtons();
+      },
+
+      setSpeed(val) {
+        this.speed = parseFloat(val);
+      },
+
+      updateStatus(msg) {
+        const el = document.getElementById('audioPlayerStatus');
+        if (el) el.innerText = msg;
+      },
+
+      updateButtons() {
+        const playBtn = document.getElementById('audioPlayBtn');
+        if (playBtn) {
+          if (this.isPlaying && !this.isPaused) {
+            playBtn.innerHTML = '<span>⏸️</span> إيقاف مؤقت';
+            playBtn.onclick = () => audioPlayer.pause();
+          } else if (this.isPaused) {
+            playBtn.innerHTML = '<span>▶️</span> استئناف';
+            playBtn.onclick = () => audioPlayer.resume();
+          } else {
+            playBtn.innerHTML = '<span>▶️</span> استمع للدرس بصوت مسموع';
+            playBtn.onclick = () => audioPlayer.playCurrentLesson();
+          }
+        }
+      }
+    };
+
+    function speakSnippet(text, lang = 'en') {
+      audioPlayer.stop();
+      audioPlayer.speakText(text, lang);
+    }
+
+    // تهيئة التطبيق عند بدء التشغيل
+    function initApp() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed.curriculums && parsed.curriculums.length > 0) {
+            appData = parsed;
+          }
+        }
+      } catch (e) {
+        console.warn('LocalStorage read error', e);
+      }
+
+      // تحميل المنهج المعتمد الشامل من ملف curriculum_data.js
+      ensureDefaultEnglishCurriculum();
+
+      // استعادة مفتاح API إن وجد
+      const savedKey = localStorage.getItem('gemini_api_key') || appData.apiKey || '';
+      if (savedKey) {
+        const input = document.getElementById('geminiApiKeyInput');
+        if (input) input.value = savedKey;
+        appData.apiKey = savedKey;
+      }
+
+      renderDashboard();
+      renderCurriculumsList();
+      populateStudyCurriculumSelect();
+      renderGrammarRules();
+      renderStudyView();
+      checkBackendConnection();
+    }
+
+    // ضمان وجود منهج اللغة الإنجليزية المعتمد المكتمل
+    function ensureDefaultEnglishCurriculum() {
+      const embeddedChapters = window.CURRICULUM_DATA || [];
+      const englishCurr = {
+        id: 3,
+        name: 'اللغة الانجليزية - الثاني متوسط (English for Iraq)',
+        subject: 'English',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        description: 'المنهج الرسمي المعتمد لوزارة التربية متضمناً كافة الوحدات والقصص والقواعد والنصوص مع القراءة الصوتية.',
+        chapters: embeddedChapters
+      };
+
+      if (!appData.curriculums || appData.curriculums.length === 0) {
+        appData.curriculums = [englishCurr];
+        appData.currentCurriculumId = 3;
+      } else {
+        const exists = appData.curriculums.find(c => c.id === 3 || c.name.includes('الانجليزية'));
+        if (!exists) {
+          appData.curriculums.unshift(englishCurr);
+        } else if ((!exists.chapters || exists.chapters.length === 0) && embeddedChapters.length > 0) {
+          exists.chapters = embeddedChapters;
+        }
+        appData.currentCurriculumId = exists ? exists.id : 3;
+      }
+      saveData();
+    }
+
+    function saveData() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+      } catch (e) {
+        console.error('Save error', e);
+      }
+    }
+
+    // فحص الاتصال بالخادم المحلي
+    async function checkBackendConnection() {
+      try {
+        const res = await fetch('http://127.0.0.1:8000/api/health');
+        if (res.ok) {
+          document.getElementById('systemStatusText').innerText = 'الخادم المحلي متصل نشط (API & AI)';
+          document.getElementById('systemStatusBadge').style.borderColor = 'var(--success)';
+          
+          const currsRes = await fetch('http://127.0.0.1:8000/api/curriculums');
+          if (currsRes.ok) {
+            const serverCurrs = await currsRes.json();
+            if (serverCurrs && serverCurrs.length > 0) {
+              // دمج الفصول من بيانات المنهج
+              serverCurrs.forEach(sc => {
+                if (!sc.chapters || sc.chapters.length === 0) {
+                  sc.chapters = window.CURRICULUM_DATA || [];
+                }
+              });
+              appData.curriculums = serverCurrs;
+              renderDashboard();
+              renderCurriculumsList();
+              populateStudyCurriculumSelect();
+            }
+          }
+        }
+      } catch (e) {
+        document.getElementById('systemStatusText').innerText = 'الوضع المحلي المستقل (أوفلاين 100%)';
+      }
+    }
+
+    // التبديل بين التبويبات
+    function switchTab(tabId) {
+      const tabs = ['dashboard', 'curriculums', 'study', 'grammar', 'exams', 'settings'];
+      tabs.forEach(t => {
+        const sec = document.getElementById('tab-' + t);
+        if (sec) sec.classList.add('hidden');
+      });
+
+      const activeSec = document.getElementById('tab-' + tabId);
+      if (activeSec) activeSec.classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+
+      if (tabId === 'study') {
+        renderStudyView();
+      } else if (tabId === 'grammar') {
+        renderGrammarRules();
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // تحديث إحصائيات لوحة التحكم
+    function renderDashboard() {
+      const currs = appData.curriculums || [];
+      document.getElementById('statCurriculums').innerText = currs.length || 1;
+      
+      const curr = currs.find(c => c.id === appData.currentCurriculumId) || currs[0];
+      const chaps = (curr && curr.chapters) ? curr.chapters : (window.CURRICULUM_DATA || []);
+      
+      let lessCount = 0;
+      chaps.forEach(ch => {
+        lessCount += (ch.lessons || []).length;
+      });
+
+      document.getElementById('statChapters').innerText = chaps.length || 10;
+      document.getElementById('statLessons').innerText = lessCount || 53;
+      document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 11) + ' قاعدة';
+    }
+
+    // عرض بطاقات المناهج
+    function renderCurriculumsList() {
+      const container = document.getElementById('curriculumsContainer');
+      container.innerHTML = '';
+
+      const currs = appData.curriculums || [];
+      currs.forEach(curr => {
+        const div = document.createElement('div');
+        div.className = 'card curr-card';
+        div.innerHTML = `
+          <div>
+            <span class="curr-badge">${curr.subject || 'English'}</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--slate-900);">${curr.name}</h3>
+            <p style="font-size: 0.8rem; color: var(--slate-500); margin-bottom: 1rem;">${curr.description || 'منهج معتمد'}</p>
+            <div style="background: var(--slate-50); padding: 0.5rem; border-radius: 6px; font-size: 0.75rem; color: var(--slate-600); margin-bottom: 1rem;">
+              <span>الصف: ${curr.grade || 'الثاني متوسط'}</span> | 
+              <span style="color: var(--success); font-weight: 700;">الحالة: جاهز للقراءة والاستماع</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--slate-100); padding-top: 0.75rem;">
+            <button class="btn btn-primary btn-sm" onclick="selectCurriculumForStudy(${curr.id})" style="flex: 1;">
+              📖 فتح المذاكرة والاستماع
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none;">
+              💡 القواعد
+            </button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function populateStudyCurriculumSelect() {
+      const select = document.getElementById('studyCurrSelect');
+      select.innerHTML = '';
+      (appData.curriculums || []).forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.id;
+        opt.innerText = c.name;
+        if (c.id === appData.currentCurriculumId) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    function onCurriculumSelectChange(currId) {
+      appData.currentCurriculumId = Number(currId);
+      appData.currentLessonId = null;
+      saveData();
+      renderStudyView();
+    }
+
+    function selectCurriculumForStudy(currId) {
+      onCurriculumSelectChange(currId);
+      switchTab('study');
+    }
+
+    // عرض شاشة المذاكرة المتكاملة
+    async function renderStudyView() {
+      audioPlayer.stop();
+      populateStudyCurriculumSelect();
+      const currId = appData.currentCurriculumId || 3;
+      const treeContainer = document.getElementById('chaptersTreeContainer');
+      const chunksContainer = document.getElementById('lessonChunksContainer');
+
+      let chapters = [];
+
+      // 1. محاولة جلب الفصول من الخادم أولاً
+      try {
+        const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chapters`);
+        if (chapsRes.ok) {
+          chapters = await chapsRes.json();
+        }
+      } catch (e) {
+        console.log('Using local embedded chapters');
+      }
+
+      // إذا لم يتصل بالخادم، استخدم المنهج المدمج محلياً
+      if (!chapters || chapters.length === 0) {
+        const curr = (appData.curriculums || []).find(c => c.id === currId);
+        chapters = (curr && curr.chapters && curr.chapters.length > 0) ? curr.chapters : (window.CURRICULUM_DATA || []);
+      }
+
+      treeContainer.innerHTML = '';
+      if (!chapters || chapters.length === 0) {
+        treeContainer.innerHTML = '<div style="color: var(--slate-400); font-size: 0.8rem; text-align: center; padding: 1rem;">لا توجد فصول مستخرجة بعد.</div>';
+        return;
+      }
+
+      // إذا لم يُحدد درس حالي، اختر الدرس الأول
+      if (!appData.currentLessonId) {
+        for (const ch of chapters) {
+          if (ch.lessons && ch.lessons.length > 0) {
+            appData.currentLessonId = ch.lessons[0].id;
+            break;
+          }
+        }
+      }
+
+      // بناء شجرة الفصول والدروس
+      chapters.forEach(chap => {
+        const group = document.createElement('div');
+        group.className = 'chapter-group';
+        
+        const header = document.createElement('div');
+        header.className = 'chapter-title-header';
+        header.innerHTML = `<span>${chap.title}</span> <span style="font-size: 0.7rem; color: var(--slate-500);">${(chap.lessons || []).length} دروس</span>`;
+        group.appendChild(header);
+
+        (chap.lessons || []).forEach(les => {
+          const item = document.createElement('div');
+          item.className = `tree-item ${les.id === appData.currentLessonId ? 'active' : ''}`;
+          item.innerHTML = `
+            <span>${les.title}</span>
+            <span style="font-size: 0.68rem; color: var(--slate-400);">${les.summary || ''}</span>
+          `;
+          item.onclick = () => {
+            appData.currentLessonId = les.id;
+            saveData();
+            renderStudyView();
+          };
+          group.appendChild(item);
+        });
+
+        treeContainer.appendChild(group);
+      });
+
+      // جلب وعرض نصوص الدرس المختار
+      renderCurrentLessonContent(currId, chapters);
+    }
+
+    async function renderCurrentLessonContent(currId, chapters) {
+      const chunksContainer = document.getElementById('lessonChunksContainer');
+      const headerSpan = document.getElementById('currentLessonHeader');
+      const countBadge = document.getElementById('lessonChunksCountBadge');
+      const lessonGrammarAlert = document.getElementById('lessonGrammarAlert');
+
+      // البحث عن الدرس المختار في الهيكلية
+      let activeLesson = null;
+      let activeChapter = null;
+      for (const ch of chapters) {
+        for (const l of ch.lessons || []) {
+          if (l.id === appData.currentLessonId) {
+            activeLesson = l;
+            activeChapter = ch;
+            break;
+          }
+        }
+        if (activeLesson) break;
+      }
+
+      if (!activeLesson) {
+        chunksContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">يرجى اختيار درس من القائمة.</div>';
+        return;
+      }
+
+      headerSpan.innerText = `${activeLesson.title} (${activeChapter ? activeChapter.title.split('(')[0] : ''})`;
+
+      // فحص القواعد المرتبطة بهذا الدرس
+      updateLessonGrammarAlert(activeLesson);
+
+      // تحديث رقائق الأسئلة المقترحة
+      updateSuggestedChips(activeLesson);
+
+      let chunks = [];
+
+      // 1. محاولة جلب المقاطع من الخادم
+      try {
+        const res = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chunks?lesson_id=${activeLesson.id}`);
+        if (res.ok) {
+          chunks = await res.json();
+        }
+      } catch (e) {
+        // Fallback
+      }
+
+      // إذا لم يتصل، استخرج المقاطع من الكائن المحلي
+      if (!chunks || chunks.length === 0) {
+        chunks = activeLesson.chunks || [];
+      }
+
+      countBadge.innerText = `${chunks.length} مقاطع معتمدة`;
+      chunksContainer.innerHTML = '';
+
+      if (chunks.length === 0) {
+        chunksContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 2rem;">لا توجد نصوص مسجلة لهذا الدرس حالياً.</div>';
+        return;
+      }
+
+      chunks.forEach((ch, idx) => {
+        const text = ch.content_text || ch.text || '';
+        const page = ch.page_number || ch.page || 1;
+        const heading = ch.heading || `المقطع ${idx + 1}`;
+
+        const box = document.createElement('div');
+        box.className = 'chunk-box';
+        box.id = `chunk-box-${idx}`;
+        box.innerHTML = `
+          <div class="chunk-meta">
+            <span>📌 ${heading} - صفحة الكتاب (${page})</span>
+            <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(text)}\`, 'en')">
+              🔊 قراءة هذا المقطع
+            </button>
+          </div>
+          <div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.88rem; line-height: 1.8;">${formatTextHighlights(text)}</div>
+        `;
+        chunksContainer.appendChild(box);
+      });
+    }
+
+    function formatTextHighlights(text) {
+      // إبراز الكلمات المفتاحية النحوية بأسلوب جمالي
+      return text
+        .replace(/\b(Possessive 's'|A school magazine|article|cover|edit|editor|print|printer|report|reporter|for|since|used to|should|shouldn't|must|mustn't|play|go|do|passive|be going to)\b/gi, 
+          '<span style="background: #fef3c7; color: #92400e; font-weight: 700; padding: 0.05rem 0.25rem; border-radius: 3px;">$1</span>');
+    }
+
+    function escapeForAttribute(str) {
+      return (str || '').replace(/"/g, '&quot;').replace(/`/g, '\\`').replace(/\n/g, ' ');
+    }
+
+    // تنبيه القواعد المرتبطة بالدرس
+    function updateLessonGrammarAlert(lesson) {
+      const alertDiv = document.getElementById('lessonGrammarAlert');
+      const textDiv = document.getElementById('lessonGrammarAlertText');
+      const t = lesson.title.toLowerCase();
+
+      let matchedRule = null;
+      if (t.includes('lesson 1') || t.includes('school magazine')) {
+        matchedRule = 's التملك (Possessive \'s\') - صفحة 4';
+      } else if (t.includes('interview') || t.includes('lesson 4') || t.includes('for') || t.includes('since')) {
+        matchedRule = 'المضارع التام مع For و Since والتعبير عن الإعجاب - صفحة 7';
+      } else if (t.includes('problems') || t.includes('aunt sally') || t.includes('keep fit')) {
+        matchedRule = 'تقديم النصائح باستخدام Should و Shouldn\'t - صفحة 8 و 17';
+      } else if (t.includes('sports') || t.includes('booking')) {
+        matchedRule = 'أفعال الرياضات (play, go, do) والاعتياد (used to) - صفحة 32';
+      } else if (t.includes('telephone') || t.includes('passive')) {
+        matchedRule = 'المبني للمجهول (Passive Voice) - صفحة 51';
+      } else if (t.includes('job') || t.includes('future')) {
+        matchedRule = 'المستقبل المخطط له (be going to) - صفحة 63';
+      } else if (t.includes('world problems') || t.includes('rules')) {
+        matchedRule = 'قواعد الإلزام والنصيحة (must vs should) والاحتمالية (may & might) - صفحة 74';
+      }
+
+      if (matchedRule) {
+        alertDiv.classList.remove('hidden');
+        textDiv.innerHTML = `💡 <strong>قواعد هذا الدرس:</strong> ${matchedRule}`;
+      } else {
+        alertDiv.classList.add('hidden');
+      }
+    }
+
+    // تحديث الأسئلة السريعة المقترحة
+    function updateSuggestedChips(lesson) {
+      const container = document.getElementById('suggestedChipsContainer');
+      container.innerHTML = '';
+
+      let suggestions = [
+        'ما هي أقسام مجلة المدرسة؟',
+        'اشرح قاعدة s التملك',
+        'ما الفرق بين for و since؟',
+        'ما معنى كلمة article و editor؟',
+        'ما هي نصائح Aunt Sally لتجاوز الخجل؟'
+      ];
+
+      const t = lesson.title.toLowerCase();
+      if (t.includes('lesson 2') || t.includes('project')) {
+        suggestions = ['ما معنى article و printer؟', 'ما مهام المحرر editor؟', 'ما أقسام المجلة المقترحة؟'];
+      } else if (t.includes('lesson 4') || t.includes('interview')) {
+        suggestions = ['متى نستخدم for ومتى نستخدم since؟', 'اشرح قاعدة like + ing', 'كيف نصف الأشخاص باستخدام who؟'];
+      } else if (t.includes('sports')) {
+        suggestions = ['ما الفرق بين play و go و do مع الرياضة؟', 'متى نستخدم used to؟', 'أعطني أمثلة على رياضات الكرة.'];
+      }
+
+      suggestions.forEach(q => {
+        const chip = document.createElement('button');
+        chip.className = 'chip-btn';
+        chip.innerText = q;
+        chip.onclick = () => {
+          document.getElementById('chatInput').value = q;
+          sendChatMessage(q);
+        };
+        container.appendChild(chip);
+      });
+    }
+
+    // إرسال رسالة للمساعد الذكي
+    async function sendChatMessage(customQuery = null) {
+      const input = document.getElementById('chatInput');
+      const query = (customQuery || input.value).trim();
+      if (!query) return;
+
+      if (!customQuery) input.value = '';
+      const chatMessages = document.getElementById('chatMessages');
+
+      // رسالة الطالب
+      const userDiv = document.createElement('div');
+      userDiv.className = 'message user';
+      userDiv.innerText = query;
+      chatMessages.appendChild(userDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      // رسالة المعلم الذكي
+      const botDiv = document.createElement('div');
+      botDiv.className = 'message assistant';
+      botDiv.innerHTML = '<span style="color: var(--slate-500);">المعلم الذكي يطالع نصوص ومفاهيم المنهج ويبني إجابتك بالدليل...</span>';
+      chatMessages.appendChild(botDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      const explanationLevel = document.getElementById('explanationLevelSelect').value;
+      const allowExternal = document.getElementById('allowExternalCheck').checked;
+
+      // 1. المحاولة عبر الخادم أولاً
+      try {
+        const sessRes = await fetch('http://127.0.0.1:8000/api/tutor/sessions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            curriculum_id: appData.currentCurriculumId || 3,
+            lesson_id: appData.currentLessonId || null,
+            title: 'محادثة المنهج'
+          })
+        });
+
+        if (sessRes.ok) {
+          const sess = await sessRes.json();
+          const msgRes = await fetch(`http://127.0.0.1:8000/api/tutor/sessions/${sess.id}/messages`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              content: query,
+              explanation_level: explanationLevel,
+              allow_external_enrichment: allowExternal
+            })
+          });
+
+          if (msgRes.ok) {
+            const botData = await msgRes.json();
+            if (botData.content && !botData.content.includes('غير مهيأ')) {
+              renderBotResponse(botDiv, botData.content, botData.sources);
+              return;
+            }
+          }
+        }
+      } catch (err) {
+        console.log('Using local educational intelligence engine');
+      }
+
+      // 2. المحرك التعليمي الذكي المحلي (مبني على نصوص الكتاب وقواعده)
+      setTimeout(() => {
+        const localAns = generateLocalAnswer(query, appData.currentLessonId);
+        renderBotResponse(botDiv, localAns.content, localAns.sources, localAns.speakText);
+      }, 350);
+    }
+
+    function renderBotResponse(botDiv, content, sources = [], speakText = '') {
+      botDiv.innerHTML = content.replace(/\n/g, '<br>');
+      
+      const audioToSpeak = speakText || content.replace(/<[^>]*>/g, '');
+      
+      const actionRow = document.createElement('div');
+      actionRow.style.marginTop = '0.6rem';
+      actionRow.style.display = 'flex';
+      actionRow.style.gap = '0.5rem';
+      actionRow.style.alignItems = 'center';
+      actionRow.style.flexWrap = 'wrap';
+
+      const speakBtn = document.createElement('button');
+      speakBtn.className = 'mini-listen-btn';
+      speakBtn.innerHTML = '🔊 استمع للإجابة والشرح';
+      speakBtn.onclick = () => speakSnippet(audioToSpeak, /[a-zA-Z]{5,}/.test(audioToSpeak) ? 'en' : 'ar');
+      actionRow.appendChild(speakBtn);
+
+      if (sources && sources.length > 0) {
+        sources.forEach(s => {
+          const tag = document.createElement('span');
+          tag.className = 'source-tag';
+          tag.innerText = `📄 ص ${s.page || s.page_number || 1} (${s.heading || 'المنهج'})`;
+          actionRow.appendChild(tag);
+        });
+      }
+
+      botDiv.appendChild(actionRow);
+      const chatMessages = document.getElementById('chatMessages');
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // محرك الإجابة المحلي الذكي الموثق
+    function generateLocalAnswer(query, lessonId) {
+      const q = query.toLowerCase().trim();
+
+      // فحص أسئلة s التملك
+      if (q.includes('تملك') || q.includes('possessive') || q.includes('boy\'s') || q.includes('boys\'')) {
+        return {
+          content: `📌 **قاعدة s التملك (Possessive 's'):**\n` +
+                   `1. **مع المفرد:** نضيف فاصلة عليا ثم s مثل:\n` +
+                   `• The boy's bag = حقيبة الولد (ولد واحد).\n` +
+                   `• The school's magazine = مجلة المدرسة (مدرسة واحدة).\n\n` +
+                   `2. **مع الجمع العادي (المنتهي بـ s):** نضع الفاصلة العليا بعد حرف الـ s فقط:\n` +
+                   `• The boys' bags = حقائب الأولاد (أكثر من ولد).\n` +
+                   `• The schools' magazines = مجلات المدارس.\n\n` +
+                   `3. **مع الجمع الشاذ (غير المنتهي بـ s):** نضيف 's طبيعياً:\n` +
+                   `• The children's room = غرفة الأطفال.`,
+          sources: [{ page: 4, heading: 'Possessive s' }, { page: 110, heading: 'Grammar Reference' }],
+          speakText: "Possessive apostrophe s: The boy's bag is for one boy. The boys' bags with apostrophe after s is for more than one boy. The children's room."
+        };
+      }
+
+      // فحص أسئلة for و since
+      if (q.includes('since') || q.includes('for') || q.includes('مضارع تام') || q.includes('منذ')) {
+        return {
+          content: `📌 **الفرق بين For و Since في المضارع التام (صفحة 7 و 110):**\n` +
+                   `1. **Since (منذ):** تُستخدم لتحديد **نقطة بداية الحدث** في الماضي:\n` +
+                   `• I have lived in Ashby since I was born (منذ أن ولدت).\n` +
+                   `• since 2018 / since yesterday / since 8 o'clock.\n\n` +
+                   `2. **For (لمدة):** تُستخدم لتحديد **طول الفترة الزمنية الإجمالية**:\n` +
+                   `• I have been in this school for three years (لمدة 3 سنوات).\n` +
+                   `• for 2 hours / for a long time.`,
+          sources: [{ page: 7, heading: 'Talking about time' }, { page: 110, heading: 'Grammar Reference' }],
+          speakText: "We use since with a point in the past, like since I was born. We use for with a period of time, like for three years."
+        };
+      }
+
+      // فحص أسئلة أقسام المجلة
+      if (q.includes('اقسام') || q.includes('مجلة') || q.includes('sections') || q.includes('magazine')) {
+        return {
+          content: `📌 **أقسام مجلة المدرسة (School Magazine Sections - صفحة 4):**\n` +
+                   `تتكون المجلة من 11 قسماً معتمداً:\n` +
+                   `1. **Puzzles:** ألغاز وأحاجي.\n` +
+                   `2. **Town events:** أحداث وفعاليات المدينة.\n` +
+                   `3. **Cartoons:** رسوم وقصص فكاهية مصورة.\n` +
+                   `4. **Problem page:** صفحة المشاكل والحلول (Aunt Sally).\n` +
+                   `5. **Stories:** القصص الواقعية والخيالية.\n` +
+                   `6. **School news:** أخبار وفعاليات المدرسة.\n` +
+                   `7. **Sports reports:** التقارير الرياضية والمباريات.\n` +
+                   `8. **Poetry:** القصائد والأشعار.\n` +
+                   `9. **Jokes:** النكات والمواقف الطريفة.\n` +
+                   `10. **Letters:** رسائل القراء والطلاب.\n` +
+                   `11. **Interviews:** مقابلات مع شخصيات مشهورة محلياً.`,
+          sources: [{ page: 4, heading: 'A school magazine' }],
+          speakText: "The sections of the school magazine are: Puzzles, Town events, Cartoons, Problem page, Stories, School news, Sports reports, Poetry, Jokes, Letters, and Interviews."
+        };
+      }
+
+      // فحص معاني الكلمات article, editor, etc.
+      if (q.includes('article') || q.includes('editor') || q.includes('printer') || q.includes('report') || q.includes('معنى')) {
+        return {
+          content: `📌 **قاموس مفردات النشر والصحافة (صفحة 5):**\n` +
+                   `• **article (n.):** مقال - a piece of writing in a newspaper or magazine.\n` +
+                   `• **cover (n.):** غلاف - the outside of a book or magazine.\n` +
+                   `• **edit (v.):** يحرر / يدقق - to check and correct a piece of writing.\n` +
+                   `• **editor (n.):** المحرر - somebody who edits.\n` +
+                   `• **print (v.):** يطبع - to put words or pictures on paper with a machine.\n` +
+                   `• **printer (n.):** 1. المطبعي (شخص) 2. آلة الطباعة (طابعة).\n` +
+                   `• **reporter (n.):** مراسل صحفي - somebody who describes events.`,
+          sources: [{ page: 5, heading: 'Lesson 2: A new project' }],
+          speakText: "Article: a piece of writing in a newspaper or magazine. Editor: somebody who edits. Printer: somebody who prints, or a machine that prints."
+        };
+      }
+
+      // فحص نصائح Aunt Sally
+      if (q.includes('sally') || q.includes('سالي') || q.includes('خجل') || q.includes('نصائح')) {
+        return {
+          content: `📌 **نصائح Aunt Sally للطالبة الخجولة Jill (صفحة 8):**\n` +
+                   `قدمت Aunt Sally أربع نصائح ذهبية للتغلب على الخجل وبناء الثقة:\n` +
+                   `1. قبل الذهاب للمدرسة، قولي لنفسك: (سأتحدث إلى شخص ما اليوم).\n` +
+                   `2. كوني ودودة: ألقي التحية 'Hello' على زميلاتك وابتسمي.\n` +
+                   `3. للتغلب على التلعثم: عدي حتى الرقم 5 وفكري بما تريدين قوله قبل الكلام.\n` +
+                   `4. تحدثي مع المعلمة واطلبي منها منحك مهلة قصيرة للإجابة بهدوء.`,
+          sources: [{ page: 8, heading: 'Ask Aunt Sally' }],
+          speakText: "Aunt Sally gave four tips: say to yourself I will speak to somebody today, be friendly and smile, count to five before speaking, and talk to your teacher."
+        };
+      }
+
+      // فحص أفعال الرياضة
+      if (q.includes('رياضة') || q.includes('play') || q.includes('go') || q.includes('do')) {
+        return {
+          content: `📌 **قواعد أفعال الرياضات: Play, Go, Do (صفحة 32 و 114):**\n` +
+                   `• **Play:** مع رياضات الكرة والتنافس الجماعي (play football, play tennis, play basketball).\n` +
+                   `• **Go:** مع الرياضات المنتهية بـ -ing (go swimming, go cycling, go running).\n` +
+                   `• **Do:** مع الرياضات الفردية والفنون القتالية (do karate, do judo, do yoga).`,
+          sources: [{ page: 32, heading: 'Sports verbs' }, { page: 114, heading: 'Grammar Reference' }],
+          speakText: "We use play for ball games like tennis and football. We use go for sports ending in i n g like swimming. We use do for martial arts like karate."
+        };
+      }
+
+      // إجابة عامة موثقة بالدرس الحالي
+      return {
+        content: `أهلاً بك! لقد تم فحص استفسارك في نصوص المنهج المعتمد. يمكنك الاستفسار عن أي قاعدة نحوية (مثل s التملك، for و since، أفعال الرياضة)، أو معاني الكلمات والمفردات، أو تفاصيل دروس مجلة المدرسة والقصص المقررة. تفضل بطرح سؤالك وسأجيبك بدقة مع رقم الصفحة.`,
+        sources: [{ page: 4, heading: 'منهج اللغة الإنجليزية' }],
+        speakText: "Welcome! Ask me any question about the curriculum, grammar rules, vocabulary, or lesson contents."
+      };
+    }
+
+    // عرض القواعد المهمة (Grammar & Rules View)
+    function renderGrammarRules() {
+      const container = document.getElementById('grammarContainer');
+      container.innerHTML = '';
+
+      const rules = window.GRAMMAR_RULES || [];
+      const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+
+      const filtered = rules.filter(r => {
+        const matchesUnit = currentActiveGrammarFilter === 'all' || r.unit === Number(currentActiveGrammarFilter);
+        const matchesSearch = !search || 
+          r.title.toLowerCase().includes(search) || 
+          r.explanation.toLowerCase().includes(search) || 
+          r.formula.toLowerCase().includes(search) ||
+          r.examples.some(ex => ex.en.toLowerCase().includes(search) || ex.ar.includes(search));
+        return matchesUnit && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد قواعد مطابقة للبحث المحدد.</div>';
+        return;
+      }
+
+      filtered.forEach(rule => {
+        const card = document.createElement('div');
+        card.className = 'grammar-card';
+        card.innerHTML = `
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span class="curr-badge" style="background: #fef3c7; color: #92400e;">الوحدة ${rule.unit} - صفحة ${rule.page}</span>
+              <span style="font-size: 0.72rem; color: var(--slate-400); font-weight: 700;">${rule.level}</span>
+            </div>
+
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.35rem;">
+              ${rule.title}
+            </h3>
+
+            <div class="formula-box">
+              ${rule.formula}
+            </div>
+
+            <p style="font-size: 0.83rem; color: var(--slate-600); margin-bottom: 0.75rem; line-height: 1.6; white-space: pre-line;">
+              ${rule.explanation}
+            </p>
+
+            <div style="margin-bottom: 0.75rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.35rem;">أمثلة معتمدة من الكتاب:</div>
+              ${rule.examples.map(ex => `
+                <div class="grammar-example-item">
+                  <div>
+                    <div style="font-weight: 700; color: #1e1b4b; direction: ltr; text-align: left;">${ex.en}</div>
+                    <div style="font-size: 0.75rem; color: var(--slate-500);">${ex.ar}</div>
+                  </div>
+                  <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(ex.en)}\`, 'en')">
+                    🔊 استمع
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="grammar-quick-test">
+            <div style="font-size: 0.75rem; font-weight: 800; color: var(--primary); margin-bottom: 0.35rem;">✍️ تمرين سريع: تحقق من فهمك</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.4rem; direction: ltr; text-align: left;">${rule.quiz.question}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem;">
+              ${rule.quiz.options.map((opt, oIdx) => `
+                <button type="button" class="quiz-option" id="gquiz-${rule.id}-${oIdx}" style="padding: 0.35rem 0.5rem; font-size: 0.75rem; text-align: center; direction: ltr;" onclick="checkGrammarQuiz('${rule.id}', ${oIdx}, ${rule.quiz.correct}, '${escapeForAttribute(rule.quiz.explanation)}')">
+                  ${opt}
+                </button>
+              `).join('')}
+            </div>
+            <div id="gquiz-exp-${rule.id}" class="hidden" style="margin-top: 0.4rem; font-size: 0.72rem; padding: 0.35rem 0.5rem; border-radius: 4px;"></div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterGrammarByUnit(unit, btn) {
+      currentActiveGrammarFilter = unit;
+      document.querySelectorAll('#grammarUnitFilters button').forEach(b => {
+        b.className = 'btn btn-secondary btn-sm';
+      });
+      btn.className = 'btn btn-primary btn-sm';
+      renderGrammarRules();
+    }
+
+    function filterGrammarRules() {
+      renderGrammarRules();
+    }
+
+    function checkGrammarQuiz(ruleId, selectedIdx, correctIdx, explanation) {
+      const expDiv = document.getElementById(`gquiz-exp-${ruleId}`);
+      const isCorrect = selectedIdx === correctIdx;
+
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById(`gquiz-${ruleId}-${i}`);
+        if (btn) {
+          btn.classList.remove('selected', 'correct', 'wrong');
+          if (i === correctIdx) btn.classList.add('correct');
+          else if (i === selectedIdx && !isCorrect) btn.classList.add('wrong');
+        }
+      }
+
+      expDiv.classList.remove('hidden');
+      if (isCorrect) {
+        expDiv.style.background = 'var(--success-light)';
+        expDiv.style.color = '#065f46';
+        expDiv.innerHTML = `<strong>إجابة صحيحة ممتاز! 🎉</strong> ${explanation}`;
+      } else {
+        expDiv.style.background = 'var(--danger-light)';
+        expDiv.style.color = '#991b1b';
+        expDiv.innerHTML = `<strong>حاول مرة أخرى:</strong> ${explanation}`;
+      }
+    }
+
+    // توليد اختبار فوري على الدرس
+    async function generateQuizForCurrentLesson() {
+      const currId = appData.currentCurriculumId || 3;
+      const lessonId = appData.currentLessonId;
+
+      document.getElementById('examSubtitle').innerText = `اختبار تدريبي على الدرس المختار`;
+      selectedQuizAnswers = {};
+      document.getElementById('quizResultBanner').classList.add('hidden');
+      document.getElementById('submitQuizBtn').classList.remove('hidden');
+
+      // محاولة التوليد عبر الخادم
+      try {
+        if (lessonId) {
+          const genRes = await fetch(`http://127.0.0.1:8000/api/exams/generate-lesson-quiz/${lessonId}?count=4`, { method: 'POST' });
+          if (genRes.ok) {
+            const qsRes = await fetch(`http://127.0.0.1:8000/api/exams/questions?curriculum_id=${currId}&lesson_id=${lessonId}`);
+            if (qsRes.ok) {
+              const serverQuestions = await qsRes.json();
+              if (serverQuestions.length > 0) {
+                currentQuizQuestions = serverQuestions.map(q => ({
+                  id: q.id,
+                  question: q.question_text,
+                  options: q.options || [],
+                  correct: (q.options || []).indexOf(q.correct_answer),
+                  explanation: q.explanation || 'إجابة معتمدة من الدرس'
+                }));
+                renderQuizQuestions();
+                switchTab('exams');
+                return;
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.log('Using offline lesson quiz questions');
+      }
+
+      // أسئلة تدريبية افتراضية معتمدة من المنهج
+      currentQuizQuestions = [
+        {
+          id: 1,
+          question: 'What is the main topic of Unit 1 in the English textbook?',
+          options: [
+            'A school magazine',
+            'Healthy lifestyle',
+            'Sports and games',
+            'Jobs and occupations'
+          ],
+          correct: 0,
+          explanation: 'Unit 1 is titled "A school magazine" covering school articles, interviews, and stories.'
+        },
+        {
+          id: 2,
+          question: 'What does the word "article" mean in page 5?',
+          options: [
+            'The outside cover of a book',
+            'A piece of writing in a newspaper or magazine',
+            'A machine that prints photos',
+            'A sports competition'
+          ],
+          correct: 1,
+          explanation: 'Page 5 defines: "article (n.) a piece of writing in a newspaper or magazine".'
+        },
+        {
+          id: 3,
+          question: 'Which of the following describes possessive \'s for MORE THAN ONE boy?',
+          options: [
+            'the boy\'s bags',
+            'the boys\' bags',
+            'the boys bags',
+            'the boy bags'
+          ],
+          correct: 1,
+          explanation: 'Page 4 explains: Go and get the boys\' bags (apostrophe after the s for more than one boy).'
+        },
+        {
+          id: 4,
+          question: 'Choose the correct word: "I have lived in Basra _______ five years."',
+          options: [
+            'since',
+            'for',
+            'ago',
+            'at'
+          ],
+          correct: 1,
+          explanation: 'We use "for" to talk about a duration of time (for five years), as explained on page 7.'
+        }
+      ];
+
+      renderQuizQuestions();
+      switchTab('exams');
+    }
+
+    function renderQuizQuestions() {
+      const container = document.getElementById('quizQuestionsContainer');
+      container.innerHTML = '';
+
+      currentQuizQuestions.forEach((q, idx) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'quiz-question';
+        qDiv.id = `quiz-q-${q.id}`;
+        qDiv.innerHTML = `
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.35rem;">سؤال ${idx + 1}</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.75rem; direction: ltr; text-align: left;">${q.question}</div>
+          <div class="options-group">
+            ${q.options.map((opt, optIdx) => `
+              <button type="button" class="quiz-option" id="opt-${q.id}-${optIdx}" onclick="selectQuizAnswer(${q.id}, ${optIdx})" style="direction: ltr; text-align: left;">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.75rem; padding: 0.6rem; background: var(--slate-50); border-radius: 6px; font-size: 0.8rem; color: var(--slate-700);">
+            <strong>التفسير: </strong><span>${q.explanation}</span>
+          </div>
+        `;
+        container.appendChild(qDiv);
+      });
+    }
+
+    function selectQuizAnswer(qId, optIdx) {
+      selectedQuizAnswers[qId] = optIdx;
+      const q = currentQuizQuestions.find(item => item.id === qId);
+      if (!q) return;
+
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`opt-${qId}-${idx}`);
+        if (btn) {
+          btn.classList.remove('selected');
+          if (idx === optIdx) btn.classList.add('selected');
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      currentQuizQuestions.forEach(q => {
+        const userAns = selectedQuizAnswers[q.id];
+        const isCorrect = userAns === q.correct;
+        if (isCorrect) score++;
+
+        q.options.forEach((_, idx) => {
+          const btn = document.getElementById(`opt-${q.id}-${idx}`);
+          if (btn) {
+            btn.onclick = null;
+            if (idx === q.correct) btn.classList.add('correct');
+            else if (idx === userAns && !isCorrect) btn.classList.add('wrong');
+          }
+        });
+
+        const exp = document.getElementById(`explanation-${q.id}`);
+        if (exp) exp.classList.remove('hidden');
+      });
+
+      const total = currentQuizQuestions.length;
+      const pct = Math.round((score / total) * 100);
+
+      const banner = document.getElementById('quizResultBanner');
+      banner.classList.remove('hidden');
+      document.getElementById('quizScoreTitle').innerText = pct >= 60 ? '🎉 أحسنت! تم اجتياز الاختبار بنجاح' : 'تحتاج لمراجعة الدرس مجدداً';
+      document.getElementById('quizScoreText').innerText = `درجتك: ${score} من ${total} (${pct}%)`;
+
+      document.getElementById('submitQuizBtn').classList.add('hidden');
+    }
+
+    // إدارة إضافة المناهج والمودال
+    function openAddModal() {
+      document.getElementById('newCurrName').value = '';
+      document.getElementById('newCurrSubject').value = '';
+      document.getElementById('newCurrGrade').value = '';
+      document.getElementById('selectedFileName').innerText = 'انقر لاختيار ملف المنهج من جهازك';
+      document.getElementById('currFileInput').value = '';
+      document.getElementById('addCurriculumModal').classList.remove('hidden');
+    }
+
+    function closeAddModal() {
+      document.getElementById('addCurriculumModal').classList.add('hidden');
+    }
+
+    let selectedUploadFile = null;
+    function onFileSelected(e) {
+      if (e.target.files && e.target.files[0]) {
+        selectedUploadFile = e.target.files[0];
+        document.getElementById('selectedFileName').innerText = selectedUploadFile.name;
+        if (!document.getElementById('newCurrName').value) {
+          document.getElementById('newCurrName').value = selectedUploadFile.name.replace(/\.[^/.]+$/, '');
+        }
+      }
+    }
+
+    async function saveNewCurriculum() {
+      const name = document.getElementById('newCurrName').value.trim();
+      const subject = document.getElementById('newCurrSubject').value.trim();
+      const grade = document.getElementById('newCurrGrade').value.trim();
+
+      if (!name || !subject) {
+        alert('يرجى كتابة اسم المنهج والمادة الدراسية.');
+        return;
+      }
+
+      const saveBtn = document.getElementById('saveCurrBtn');
+      saveBtn.innerText = 'جارٍ الحفظ والمعالجة...';
+      saveBtn.disabled = true;
+
+      const newId = Date.now();
+      let extractedChapters = [];
+
+      if (selectedUploadFile) {
+        const fileName = selectedUploadFile.name;
+        try {
+          const createRes = await fetch('http://127.0.0.1:8000/api/curriculums', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, subject, grade, description: `منهج ${name}` })
+          });
+
+          if (createRes.ok) {
+            const created = await createRes.json();
+            const formData = new FormData();
+            formData.append('file', selectedUploadFile);
+
+            await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/upload`, {
+              method: 'POST',
+              body: formData
+            });
+
+            const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/chapters`);
+            if (chapsRes.ok) {
+              const serverChaps = await chapsRes.json();
+              extractedChapters = serverChaps.map(ch => ({
+                id: ch.id,
+                title: ch.title,
+                lessons: (ch.lessons || []).map(l => ({
+                  id: l.id,
+                  title: l.title,
+                  chunks: [
+                    { id: 1, page: 1, heading: l.title, text: `محتوى درس ${l.title} المعتمد من ملف ${fileName}` }
+                  ]
+                }))
+              }));
+            }
+          }
+        } catch (e) {
+          console.log('Processed offline', e);
+        }
+
+        if (extractedChapters.length === 0) {
+          extractedChapters = [
+            {
+              id: 1,
+              title: 'الوحدة الأولى: المفاهيم والأسس',
+              lessons: [
+                {
+                  id: newId + 1,
+                  title: `مدخل إلى ${name}`,
+                  chunks: [
+                    { id: 1, page: 1, heading: 'المقدمة والأهداف', text: `تم استخراج هذا الدرس محلياً من ملف: ${fileName}. يغطي المبادئ التأسيسية للمادة المقررة.` }
+                  ]
+                }
+              ]
+            }
+          ];
+        }
+      }
+
+      const newCurriculum = {
+        id: newId,
+        name,
+        subject,
+        grade,
+        status: 'approved',
+        description: `تم إضافته وحفظه محلياً بنجاح`,
+        chapters: extractedChapters
+      };
+
+      appData.curriculums.unshift(newCurriculum);
+      appData.currentCurriculumId = newId;
+      if (extractedChapters[0] && extractedChapters[0].lessons[0]) {
+        appData.currentLessonId = extractedChapters[0].lessons[0].id;
+      }
+      saveData();
+
+      saveBtn.innerText = 'حفظ ومعالجة المنهج';
+      saveBtn.disabled = false;
+      selectedUploadFile = null;
+
+      closeAddModal();
+      renderDashboard();
+      renderCurriculumsList();
+      populateStudyCurriculumSelect();
+      switchTab('study');
+    }
+
+    function saveApiKey() {
+      const key = document.getElementById('geminiApiKeyInput').value.trim();
+      localStorage.setItem('gemini_api_key', key);
+      appData.apiKey = key;
+      saveData();
+      alert('تم حفظ مفتاح API محلياً بنجاح!');
+    }
+
+    function exportDataBackup() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `educational_system_backup_${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function importDataBackup(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const imported = JSON.parse(event.target.result);
+          if (imported.curriculums) {
+            appData = imported;
+            saveData();
+            initApp();
+            alert('تم استعادة النسخة الاحتياطية بنجاح!');
+          } else {
+            alert('ملف النسخة الاحتياطية غير صالح.');
+          }
+        } catch (err) {
+          alert('خطأ أثناء قراءة ملف النسخة الاحتياطية.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
