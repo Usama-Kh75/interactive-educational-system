@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="pwa-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="472" height="472" x="20" y="20" rx="100" fill="url(#pwa-grad)" />
+  <!-- Cap -->
+  <polygon points="256,120 420,190 256,260 92,190" fill="#ffffff" />
+  <polygon points="170,225 342,225 320,300 192,300" fill="#e0e7ff" />
+  <circle cx="256" cy="190" r="12" fill="#fbbf24" />
+  <path d="M256,190 L395,230 L395,300" stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round" />
+  <circle cx="395" cy="310" r="14" fill="#fbbf24" />
+  <!-- Book -->
+  <polygon points="248,340 120,315 120,410 248,430" fill="#ffffff" />
+  <polygon points="264,340 392,315 392,410 264,430" fill="#f1f5f9" />
+  <line x1="256" y1="335" x2="256" y2="435" stroke="#c7d2fe" stroke-width="8" stroke-linecap="round" />
+</svg>

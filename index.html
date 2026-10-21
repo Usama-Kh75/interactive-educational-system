@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>النظام التعليمي التفاعلي - إعداد المهندس أسامة خليل هاشم</title>
   <meta name="author" content="المهندس أسامة خليل هاشم">
+
+  <!-- إعدادات تطبيق الويب التقدمي PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="النظام التعليمي">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+
   <script src="curriculum_data.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
@@ -811,6 +823,11 @@
         </button>
       </nav>
 
+      <!-- زر تثبيت تطبيق PWA -->
+      <button class="btn btn-sm" id="pwaInstallBtn" onclick="installPWA()" style="display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700;">
+        📲 تثبيت التطبيق
+      </button>
+
       <!-- حالة النظام -->
       <div class="status-badge" id="systemStatusBadge">
         <span class="status-dot"></span>
@@ -841,6 +858,9 @@
           </button>
           <button class="btn btn-secondary" onclick="openAddModal()" style="background: rgba(255,255,255,0.2); color: white; border: none;">
             + إضافة منهج دراسي
+          </button>
+          <button class="btn btn-secondary" id="heroPwaBtn" onclick="installPWA()" style="display: none; background: rgba(255,255,255,0.25); color: white; border: 1px solid rgba(255,255,255,0.4);">
+            📲 تثبيت كتطبيق PWA
           </button>
         </div>
       </div>
@@ -2459,6 +2479,51 @@
     }
 
     window.addEventListener('DOMContentLoaded', initApp);
+
+    // تسجيل Service Worker لتفعيل ميزات PWA والعمل بدون إنترنت
+    if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('PWA Service Worker registered:', reg.scope))
+          .catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+
+    // إدارة تثبيت تطبيق PWA
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const navBtn = document.getElementById('pwaInstallBtn');
+      if (navBtn) navBtn.style.display = 'inline-flex';
+      const heroBtn = document.getElementById('heroPwaBtn');
+      if (heroBtn) heroBtn.style.display = 'inline-flex';
+    });
+
+    async function installPWA() {
+      if (!deferredPrompt) {
+        alert('تطبيق النظام التعليمي جاهز! يمكنك تثبيته مباشرة عبر أيقونة التثبيت (Install App) في شريط عنوان المتصفح أو قائمة الخيارات.');
+        return;
+      }
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        const navBtn = document.getElementById('pwaInstallBtn');
+        if (navBtn) navBtn.style.display = 'none';
+        const heroBtn = document.getElementById('heroPwaBtn');
+        if (heroBtn) heroBtn.style.display = 'none';
+      }
+      deferredPrompt = null;
+    }
+
+    window.addEventListener('appinstalled', () => {
+      console.log('PWA installed successfully');
+      const navBtn = document.getElementById('pwaInstallBtn');
+      if (navBtn) navBtn.style.display = 'none';
+      const heroBtn = document.getElementById('heroPwaBtn');
+      if (heroBtn) heroBtn.style.display = 'none';
+      alert('تم تثبيت التطبيق بنجاح على جهازك!');
+    });
   </script>
 </body>
 </html>
