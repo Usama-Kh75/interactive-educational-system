@@ -1462,8 +1462,16 @@
       }
     }
 
-    // فحص الاتصال بالخادم المحلي
+    // فحص بيئة التشغيل
+    const IS_LOCAL_SERVER = (window.location.protocol === 'http:' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'));
+
+    // فحص الاتصال بالخادم
     async function checkBackendConnection() {
+      if (!IS_LOCAL_SERVER) {
+        document.getElementById('systemStatusText').innerText = 'وضع الويب السحابي التفاعلي (PWA أوفلاين)';
+        document.getElementById('systemStatusBadge').style.borderColor = 'var(--primary)';
+        return;
+      }
       try {
         const res = await fetch('http://127.0.0.1:8000/api/health');
         if (res.ok) {
@@ -1602,14 +1610,16 @@
 
       let chapters = [];
 
-      // 1. محاولة جلب الفصول من الخادم أولاً
-      try {
-        const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chapters`);
-        if (chapsRes.ok) {
-          chapters = await chapsRes.json();
+      // 1. محاولة جلب الفصول من الخادم أولاً إذا كان محلياً
+      if (IS_LOCAL_SERVER) {
+        try {
+          const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chapters`);
+          if (chapsRes.ok) {
+            chapters = await chapsRes.json();
+          }
+        } catch (e) {
+          console.log('Using local embedded chapters');
         }
-      } catch (e) {
-        console.log('Using local embedded chapters');
       }
 
       // إذا لم يتصل بالخادم، استخدم المنهج المدمج محلياً
@@ -1701,14 +1711,16 @@
 
       let chunks = [];
 
-      // 1. محاولة جلب المقاطع من الخادم
-      try {
-        const res = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chunks?lesson_id=${activeLesson.id}`);
-        if (res.ok) {
-          chunks = await res.json();
+      // 1. محاولة جلب المقاطع من الخادم إذا كان محلياً
+      if (IS_LOCAL_SERVER) {
+        try {
+          const res = await fetch(`http://127.0.0.1:8000/api/curriculums/${currId}/chunks?lesson_id=${activeLesson.id}`);
+          if (res.ok) {
+            chunks = await res.json();
+          }
+        } catch (e) {
+          // Fallback
         }
-      } catch (e) {
-        // Fallback
       }
 
       // إذا لم يتصل، استخرج المقاطع من الكائن المحلي
@@ -1847,40 +1859,42 @@
       const explanationLevel = document.getElementById('explanationLevelSelect').value;
       const allowExternal = document.getElementById('allowExternalCheck').checked;
 
-      // 1. المحاولة عبر الخادم أولاً
-      try {
-        const sessRes = await fetch('http://127.0.0.1:8000/api/tutor/sessions', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            curriculum_id: appData.currentCurriculumId || 3,
-            lesson_id: appData.currentLessonId || null,
-            title: 'محادثة المنهج'
-          })
-        });
-
-        if (sessRes.ok) {
-          const sess = await sessRes.json();
-          const msgRes = await fetch(`http://127.0.0.1:8000/api/tutor/sessions/${sess.id}/messages`, {
+      // 1. المحاولة عبر الخادم أولاً إذا كان محلياً
+      if (IS_LOCAL_SERVER) {
+        try {
+          const sessRes = await fetch('http://127.0.0.1:8000/api/tutor/sessions', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              content: query,
-              explanation_level: explanationLevel,
-              allow_external_enrichment: allowExternal
+              curriculum_id: appData.currentCurriculumId || 3,
+              lesson_id: appData.currentLessonId || null,
+              title: 'محادثة المنهج'
             })
           });
 
-          if (msgRes.ok) {
-            const botData = await msgRes.json();
-            if (botData.content && !botData.content.includes('غير مهيأ')) {
-              renderBotResponse(botDiv, botData.content, botData.sources);
-              return;
+          if (sessRes.ok) {
+            const sess = await sessRes.json();
+            const msgRes = await fetch(`http://127.0.0.1:8000/api/tutor/sessions/${sess.id}/messages`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                content: query,
+                explanation_level: explanationLevel,
+                allow_external_enrichment: allowExternal
+              })
+            });
+
+            if (msgRes.ok) {
+              const botData = await msgRes.json();
+              if (botData.content && !botData.content.includes('غير مهيأ')) {
+                renderBotResponse(botDiv, botData.content, botData.sources);
+                return;
+              }
             }
           }
+        } catch (err) {
+          console.log('Using local educational intelligence engine');
         }
-      } catch (err) {
-        console.log('Using local educational intelligence engine');
       }
 
       // 2. المحرك التعليمي الذكي المحلي (مبني على نصوص الكتاب وقواعده)
@@ -2155,30 +2169,34 @@
       document.getElementById('quizResultBanner').classList.add('hidden');
       document.getElementById('submitQuizBtn').classList.remove('hidden');
 
-      // محاولة التوليد عبر الخادم
-      try {
-        if (lessonId) {
-          const genRes = await fetch(`http://127.0.0.1:8000/api/exams/generate-lesson-quiz/${lessonId}?count=4`, { method: 'POST' });
-          if (genRes.ok) {
-            const qsRes = await fetch(`http://127.0.0.1:8000/api/exams/questions?curriculum_id=${currId}&lesson_id=${lessonId}`);
-            if (qsRes.ok) {
-              const serverQuestions = await qsRes.json();
-              if (serverQuestions.length > 0) {
-                currentQuizQuestions = serverQuestions.map(q => ({
-                  id: q.id,
-                  question: q.question_text,
-                  options: q.options || [],
-                  correct: (q.options || []).indexOf(q.correct_answer),
-                  explanation: q.explanation || 'إجابة معتمدة من الدرس'
-                }));
-                renderQuizQuestions();
-                switchTab('exams');
-                return;
+      // محاولة التوليد عبر الخادم إذا كان محلياً
+      if (IS_LOCAL_SERVER) {
+        try {
+          if (lessonId) {
+            const genRes = await fetch(`http://127.0.0.1:8000/api/exams/generate-lesson-quiz/${lessonId}?count=4`, { method: 'POST' });
+            if (genRes.ok) {
+              const qsRes = await fetch(`http://127.0.0.1:8000/api/exams/questions?curriculum_id=${currId}&lesson_id=${lessonId}`);
+              if (qsRes.ok) {
+                const serverQuestions = await qsRes.json();
+                if (serverQuestions.length > 0) {
+                  currentQuizQuestions = serverQuestions.map(q => ({
+                    id: q.id,
+                    question: q.question_text,
+                    options: q.options || [],
+                    correct: (q.options || []).indexOf(q.correct_answer),
+                    explanation: q.explanation || 'إجابة معتمدة من الدرس'
+                  }));
+                  renderQuizQuestions();
+                  switchTab('exams');
+                  return;
+                }
               }
             }
           }
+        } catch (err) {
+          console.log('Generating local smart quiz');
         }
-      } catch (err) {
+      }
         console.log('Using offline lesson quiz questions');
       }
 
@@ -2353,41 +2371,43 @@
 
       if (selectedUploadFile) {
         const fileName = selectedUploadFile.name;
-        try {
-          const createRes = await fetch('http://127.0.0.1:8000/api/curriculums', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, subject, grade, description: `منهج ${name}` })
-          });
-
-          if (createRes.ok) {
-            const created = await createRes.json();
-            const formData = new FormData();
-            formData.append('file', selectedUploadFile);
-
-            await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/upload`, {
+        if (IS_LOCAL_SERVER) {
+          try {
+            const createRes = await fetch('http://127.0.0.1:8000/api/curriculums', {
               method: 'POST',
-              body: formData
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, subject, grade, description: `منهج ${name}` })
             });
 
-            const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/chapters`);
-            if (chapsRes.ok) {
-              const serverChaps = await chapsRes.json();
-              extractedChapters = serverChaps.map(ch => ({
-                id: ch.id,
-                title: ch.title,
-                lessons: (ch.lessons || []).map(l => ({
-                  id: l.id,
-                  title: l.title,
-                  chunks: [
-                    { id: 1, page: 1, heading: l.title, text: `محتوى درس ${l.title} المعتمد من ملف ${fileName}` }
-                  ]
-                }))
-              }));
+            if (createRes.ok) {
+              const created = await createRes.json();
+              const formData = new FormData();
+              formData.append('file', selectedUploadFile);
+
+              await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/upload`, {
+                method: 'POST',
+                body: formData
+              });
+
+              const chapsRes = await fetch(`http://127.0.0.1:8000/api/curriculums/${created.id}/chapters`);
+              if (chapsRes.ok) {
+                const serverChaps = await chapsRes.json();
+                extractedChapters = serverChaps.map(ch => ({
+                  id: ch.id,
+                  title: ch.title,
+                  lessons: (ch.lessons || []).map(l => ({
+                    id: l.id,
+                    title: l.title,
+                    chunks: [
+                      { id: 1, page: 1, heading: l.title, text: `محتوى درس ${l.title} المعتمد من ملف ${fileName}` }
+                    ]
+                  }))
+                }));
+              }
             }
+          } catch (e) {
+            console.log('Processed offline', e);
           }
-        } catch (e) {
-          console.log('Processed offline', e);
         }
 
         if (extractedChapters.length === 0) {
