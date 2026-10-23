@@ -619,6 +619,42 @@
       letter-spacing: 0.3px;
     }
 
+    /* مؤشر التتبع اللحظي للكلمات المقروءة (Karaoke Live Word Highlighter) */
+    .karaoke-word {
+      display: inline-block;
+      transition: background-color 0.1s ease, color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      border-radius: 4px;
+      padding: 0 2px;
+      margin: 0 1px;
+    }
+
+    .karaoke-word-active {
+      background: #facc15 !important; /* Golden Amber Highlighter */
+      color: #020617 !important; /* High contrast Deep Navy */
+      font-weight: 800 !important;
+      border-radius: 4px;
+      padding: 1px 6px !important;
+      box-shadow: 0 0 12px rgba(250, 204, 21, 0.8), 0 2px 4px rgba(0, 0, 0, 0.2);
+      outline: 2px solid #eab308;
+      transform: scale(1.08);
+      position: relative;
+      z-index: 2;
+    }
+
+    .teleprompter-text-body .karaoke-word-active {
+      background: #facc15 !important;
+      color: #020617 !important;
+      box-shadow: 0 0 16px rgba(250, 204, 21, 0.95);
+      outline: 2px solid #ca8a04;
+    }
+
+    .chunk-box.active-reading .karaoke-word-active {
+      background: #fde047 !important;
+      color: #020617 !important;
+      box-shadow: 0 0 12px rgba(234, 179, 8, 0.85);
+      outline: 2px solid #eab308;
+    }
+
     /* شريط المشغل الصوتي العائم الثابت بالأسفل */
     .floating-audio-bar {
       position: fixed;
@@ -1039,7 +1075,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.4</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.5</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -1102,7 +1138,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.4</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.5</span>
         </div>
         <h2>نظامك التعليمي التفاعلي الشخصي</h2>
         <p>
@@ -1272,9 +1308,10 @@
             <!-- شاشة القراءة المباشرة (Live Teleprompter) -->
             <div id="liveTeleprompterBox" class="live-teleprompter-card" style="display: none;">
               <div class="teleprompter-top">
-                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                   <span class="pulsing-record-dot"></span>
                   <span style="font-size: 0.78rem; font-weight: 800; color: #c7d2fe;">🎙️ متابعة القراءة المباشرة (Live Speech Tracking)</span>
+                  <span style="font-size: 0.68rem; background: rgba(250, 204, 21, 0.2); color: #fde047; padding: 0.1rem 0.45rem; border-radius: 9999px; border: 1px solid rgba(250, 204, 21, 0.35); font-weight: 700;">✨ مؤشر تتبع الكلمات الحي</span>
                 </div>
                 <span id="teleprompterSpeakerBadge" class="speaker-tag">قارئ المنهج 🔊</span>
               </div>
@@ -1446,7 +1483,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.4</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.5</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1455,6 +1492,7 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v2.3.5 (أكتوبر 2026):</strong> تدشين مؤشر التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker / Karaoke Highlighter) مع تظليل تفاعلي ذهبي براق للكلمة المنطوقة حالياً في شاشة التتبع المباشر والمقطع الصوتي لتسهيل متابعة النطق السليم، وإعادة هيكلة اللوحة الوسطى لضمان ظهور كامل النصوص والبانرات بسلاسة - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.4 (أكتوبر 2026):</strong> إضافة زر الإيقاف الفوري (⏹️ Stop Button) ومؤشر القراءة المباشر داخل عارض صفحات الكتاب المدرسي (Book Page Viewer)، وتفعيل الإيقاف التلقائي للصوت عند إغلاق النافذة أو الضغط على زر الهروب (Escape) لمنع أي قراءة بالخلفية وضمان تحكم المستخدم التام - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.3 (أكتوبر 2026):</strong> إضافة المشغل الصوتي العائم الماستر الدائم (Fixed Floating Player) مع زر إيقاف فوري بارز، وتدشين شاشة القراءة المباشرة (Live Teleprompter Tracking)، وتوثيق موضع الدرس ورقم الوحدة وصفحات كتاب الطالب والنشاط ببطاقة تفصيلية مخصصة، ودعم وضع التركيز (Focus Mode) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.2 (أكتوبر 2026):</strong> استوديو ضبط ومعاينة الصوت البشري المتقدم (Voice Studio)، ومحرك المحادثات التبادلية متعددة الشخصيات (Multi-Speaker Dialogue Engine) بتبديل الأصوات والنبرات والوقفات الحوارية الطبيعية تلقائياً دون الحاجة لملفات صوتية خارجية - إعداد المهندس أسامة خليل هاشم.</div>
@@ -1477,7 +1515,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.3.4</span>
+        <span class="version-badge">v2.3.5</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1716,7 +1754,7 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const SYSTEM_VERSION = 'v2.3.4';
+    const SYSTEM_VERSION = 'v2.3.5';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     
     // حالة النظام
@@ -1747,6 +1785,10 @@
       voicesList: [],
       chunks: [],
       currentChunkIdx: 0,
+      currentWordMap: [],
+      activeWordIndex: -1,
+      karaokeTimer: null,
+      hasReceivedBoundary: false,
 
       init() {
         if (!this.synth) return;
@@ -1957,6 +1999,145 @@
         return [];
       },
 
+      // ----------------------------------------------------
+      // ميزات التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker)
+      // ----------------------------------------------------
+      buildKaraokeTokens(text, prefix = 'kw') {
+        const regex = /([a-zA-Z]+(?:'[a-zA-Z]+)?|[\u0600-\u06FF]+|[0-9]+|\s+|[^\s\w\u0600-\u06FF]+)/g;
+        let match;
+        let wordIdx = 0;
+        let html = '';
+        const wordMap = [];
+
+        while ((match = regex.exec(text)) !== null) {
+          const raw = match[0];
+          const isWord = /[a-zA-Z0-9\u0600-\u06FF]/.test(raw);
+          const start = match.index;
+          const end = match.index + raw.length;
+
+          if (isWord) {
+            const spanId = `${prefix}-${wordIdx}`;
+            wordMap.push({ id: spanId, idx: wordIdx, start, end, text: raw });
+            const escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            html += `<span class="karaoke-word" id="${spanId}" data-start="${start}" data-end="${end}">${escaped}</span>`;
+            wordIdx++;
+          } else {
+            const escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            html += escaped;
+          }
+        }
+        return { html, wordMap };
+      },
+
+      setupKaraoke(text) {
+        this.clearKaraoke();
+        const clean = text ? text.replace(/[•📌📄🔹💡🔍📖]/g, '').trim() : '';
+        if (!clean) return;
+
+        // 1. تجهيز نص شاشة التتبع المباشر (Live Teleprompter)
+        const tpRes = this.buildKaraokeTokens(clean, 'tp-w');
+        this.currentWordMap = tpRes.wordMap;
+        this.activeWordIndex = -1;
+        this.hasReceivedBoundary = false;
+
+        const liveText = document.getElementById('teleprompterCurrentText');
+        if (liveText) {
+          liveText.innerHTML = tpRes.html;
+        }
+
+        // 2. تجهيز المقطع النشط بالدرس إذا كان معروضاً
+        const activeChunk = document.querySelector('.chunk-box.active-reading .chunk-content-text');
+        if (activeChunk) {
+          const chunkRes = this.buildKaraokeTokens(clean, 'chunk-w');
+          activeChunk.innerHTML = chunkRes.html;
+        }
+      },
+
+      highlightWordByCharIndex(charIndex) {
+        if (!this.currentWordMap || this.currentWordMap.length === 0) return;
+
+        let matchIdx = this.currentWordMap.findIndex(w => charIndex >= w.start && charIndex < w.end);
+        if (matchIdx === -1) {
+          matchIdx = this.currentWordMap.findIndex(w => w.start >= charIndex);
+        }
+        if (matchIdx === -1) {
+          matchIdx = this.currentWordMap.length - 1;
+        }
+
+        if (matchIdx !== -1 && matchIdx !== this.activeWordIndex) {
+          this.setActiveWordIndex(matchIdx);
+        }
+      },
+
+      setActiveWordIndex(index) {
+        if (index < 0 || index >= this.currentWordMap.length) return;
+
+        // إزالة التظليل من الكلمة السابقة
+        if (this.activeWordIndex !== -1) {
+          const prevTp = document.getElementById(`tp-w-${this.activeWordIndex}`);
+          if (prevTp) prevTp.classList.remove('karaoke-word-active');
+          const prevChunk = document.getElementById(`chunk-w-${this.activeWordIndex}`);
+          if (prevChunk) prevChunk.classList.remove('karaoke-word-active');
+        }
+
+        this.activeWordIndex = index;
+        const currentWord = this.currentWordMap[index];
+        if (!currentWord) return;
+
+        // تظليل الكلمة الحالية باللون الذهبي البراق
+        const newTp = document.getElementById(`tp-w-${index}`);
+        if (newTp) {
+          newTp.classList.add('karaoke-word-active');
+          try {
+            newTp.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+          } catch (e) {}
+        }
+
+        const newChunk = document.getElementById(`chunk-w-${index}`);
+        if (newChunk) {
+          newChunk.classList.add('karaoke-word-active');
+        }
+
+        // تحديث شريط المشغل العائم بالكلمة الحالية
+        const floatText = document.getElementById('floatingPlayerCurrentText');
+        if (floatText) {
+          floatText.innerHTML = `<span style="opacity: 0.85;">الكلمة المنطوقة الآن:</span> <span style="background: #facc15; color: #020617; padding: 2px 9px; border-radius: 4px; font-weight: 800; font-size: 1.05rem; box-shadow: 0 0 12px #facc15; display: inline-block;">${currentWord.text}</span>`;
+        }
+      },
+
+      startKaraokeFallback() {
+        if (this.karaokeTimer) clearInterval(this.karaokeTimer);
+        setTimeout(() => {
+          if (!this.hasReceivedBoundary && this.isPlaying && !this.isPaused && this.currentWordMap && this.currentWordMap.length > 0) {
+            const msPerWord = Math.max(220, Math.min(650, (1000 * 60) / (135 * this.speed)));
+            let fallbackIdx = (this.activeWordIndex >= 0) ? this.activeWordIndex + 1 : 0;
+            this.karaokeTimer = setInterval(() => {
+              if (!this.isPlaying || this.isPaused || this.hasReceivedBoundary || fallbackIdx >= this.currentWordMap.length) {
+                clearInterval(this.karaokeTimer);
+                return;
+              }
+              this.setActiveWordIndex(fallbackIdx);
+              fallbackIdx++;
+            }, msPerWord);
+          }
+        }, 300);
+      },
+
+      clearKaraoke() {
+        if (this.karaokeTimer) {
+          clearInterval(this.karaokeTimer);
+          this.karaokeTimer = null;
+        }
+        if (this.activeWordIndex !== -1) {
+          const prevTp = document.getElementById(`tp-w-${this.activeWordIndex}`);
+          if (prevTp) prevTp.classList.remove('karaoke-word-active');
+          const prevChunk = document.getElementById(`chunk-w-${this.activeWordIndex}`);
+          if (prevChunk) prevChunk.classList.remove('karaoke-word-active');
+        }
+        this.activeWordIndex = -1;
+        this.hasReceivedBoundary = false;
+      },
+
       speakSmart(text, lang = 'en', onDone = null) {
         if (!this.synth) {
           alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
@@ -2028,8 +2209,20 @@
           const label = turn.speakerName ? ` (${turn.speakerName})` : ` (المتحدث ${turn.speaker + 1})`;
           this.updateStatus(`حوار جارٍ${label}... 🎙️`);
           this.showFloatingPlayer(cleanTurn, `حوار: ${turn.speakerName || ('المتحدث ' + (turn.speaker + 1))} 🎙️`);
+          this.setupKaraoke(cleanTurn);
+
+          utt.onboundary = (e) => {
+            this.hasReceivedBoundary = true;
+            if (this.karaokeTimer) clearInterval(this.karaokeTimer);
+            if (e.name === 'word' || e.charIndex !== undefined) {
+              this.highlightWordByCharIndex(e.charIndex);
+            }
+          };
+
+          this.startKaraokeFallback();
 
           utt.onend = () => {
+            this.clearKaraoke();
             idx++;
             setTimeout(() => {
               if (this.isPlaying) playNextTurn();
@@ -2038,6 +2231,7 @@
 
           utt.onerror = (e) => {
             console.warn('Dialogue turn error', e);
+            this.clearKaraoke();
             idx++;
             playNextTurn();
           };
@@ -2075,8 +2269,20 @@
         }
 
         this.showFloatingPlayer(cleanText, 'قراءة النص 🔊');
+        this.setupKaraoke(cleanText);
+
+        utt.onboundary = (e) => {
+          this.hasReceivedBoundary = true;
+          if (this.karaokeTimer) clearInterval(this.karaokeTimer);
+          if (e.name === 'word' || e.charIndex !== undefined) {
+            this.highlightWordByCharIndex(e.charIndex);
+          }
+        };
+
+        this.startKaraokeFallback();
 
         utt.onend = () => {
+          this.clearKaraoke();
           this.isPlaying = false;
           this.isPaused = false;
           this.updateButtons();
@@ -2086,6 +2292,7 @@
 
         utt.onerror = (e) => {
           console.warn('Speech error', e);
+          this.clearKaraoke();
           this.isPlaying = false;
           this.isPaused = false;
           this.updateButtons();
@@ -2151,6 +2358,7 @@
         if (this.synth && this.isPlaying) {
           this.synth.pause();
           this.isPaused = true;
+          if (this.karaokeTimer) clearInterval(this.karaokeTimer);
           this.updateStatus('متوقف مؤقتاً ⏸️');
           this.updateButtons();
           const floatText = document.getElementById('floatingPlayerCurrentText');
@@ -2164,6 +2372,7 @@
           this.isPaused = false;
           this.updateStatus('جارِ القراءة... 🔊');
           this.updateButtons();
+          this.startKaraokeFallback();
         }
       },
 
@@ -2179,6 +2388,7 @@
         if (this.synth) {
           this.synth.cancel();
         }
+        this.clearKaraoke();
         this.isPlaying = false;
         this.isPaused = false;
         document.querySelectorAll('.chunk-box').forEach(b => b.classList.remove('active-reading'));
