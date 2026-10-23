@@ -338,11 +338,20 @@
       transition: grid-template-columns 0.3s ease;
     }
 
-    .study-layout.focus-mode {
-      grid-template-columns: 280px 1fr !important;
+    .study-layout.hide-ai-panel {
+      grid-template-columns: 300px 1fr !important;
     }
 
-    .study-layout.focus-mode .ai-chat-panel {
+    .study-layout.hide-ai-panel .ai-chat-panel {
+      display: none !important;
+    }
+
+    .study-layout.focus-mode {
+      grid-template-columns: 1fr !important;
+    }
+
+    .study-layout.focus-mode .ai-chat-panel,
+    .study-layout.focus-mode > .panel:first-child {
       display: none !important;
     }
 
@@ -1078,7 +1087,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.6</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.7</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -1141,7 +1150,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.6</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.7</span>
         </div>
         <h2>نظامك التعليمي التفاعلي الشخصي</h2>
         <p>
@@ -1245,9 +1254,14 @@
                 0 مقاطع
               </span>
             </div>
-            <button class="btn btn-secondary btn-sm" onclick="toggleFocusMode()" id="focusModeBtn" title="تكبير مساحة المذاكرة وإخفاء الشريط الجانبي" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
-              <span>👁️</span> وضع التركيز (ملء الشاشة)
-            </button>
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <button class="btn btn-secondary btn-sm" onclick="toggleAiChatPanel()" id="toggleAiPanelBtn" title="إظهار أو إخفاء لوحة المعلم الذكي لتوسيع مساحة المذاكرة والقراءة" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+                <span>💬</span> المعلم الذكي
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="toggleFocusMode()" id="focusModeBtn" title="تكبير مساحة المذاكرة وإخفاء الشريط الجانبي" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+                <span>👁️</span> وضع التركيز (ملء الشاشة)
+              </button>
+            </div>
           </div>
 
           <!-- شريط القارئ الصوتي التفاعلي المسموع (مثبت بالأعلى) -->
@@ -1335,12 +1349,26 @@
 
         <!-- اللوحة اليسرى: المعلم والمساعد الذكي الموثق -->
         <div class="panel ai-chat-panel" id="aiChatPanel">
-          <div class="panel-header">
-            <span>المعلم الذكي الموثق</span>
-            <label style="font-size: 0.75rem; display: flex; align-items: center; gap: 0.25rem; font-weight: normal; cursor: pointer;">
-              <input type="checkbox" id="allowExternalCheck">
-              <span>إثراء خارجي</span>
-            </label>
+          <div class="panel-header" style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-bottom: 1px solid var(--slate-200);">
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span style="font-weight: 800; color: var(--primary); font-size: 0.88rem;">🤖 المعلم الذكي الموثق</span>
+              <span style="font-size: 0.65rem; background: var(--primary-light); color: var(--primary); padding: 0.12rem 0.45rem; border-radius: 9999px; font-weight: 700;">أسئلة وشروحات</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <label style="font-size: 0.72rem; display: flex; align-items: center; gap: 0.25rem; font-weight: normal; cursor: pointer;" title="إثراء الإجابة بمعلومات إضافية مفيدة">
+                <input type="checkbox" id="allowExternalCheck">
+                <span>إثراء خارجي</span>
+              </label>
+              <button class="btn btn-sm" onclick="toggleAiChatPanel(false)" title="إخفاء لوحة المعلم الذكي لتوسيع مساحة المذاكرة والقراءة" style="background: #e2e8f0; border: 1px solid #cbd5e1; font-size: 0.72rem; cursor: pointer; color: var(--slate-700); padding: 0.2rem 0.55rem; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem;">
+                ✖️ إخفاء
+              </button>
+            </div>
+          </div>
+
+          <!-- شريط توضيحي لفائدة القسم وكيفية الاستفادة منه -->
+          <div style="padding: 0.5rem 0.75rem; background: #eff6ff; border-bottom: 1px solid #dbeafe; font-size: 0.72rem; color: #1e40af; line-height: 1.45; display: flex; align-items: flex-start; gap: 0.35rem;">
+            <span style="font-size: 0.85rem;">💡</span>
+            <div><strong>فائدة هذا القسم:</strong> اسأل المعلم الذكي عن أي مفردة أو قاعدة أو حوار في الدرس ليجيبك فوراً مع توثيق الصفحة في الكتاب، ويمكنك إخفاء اللوحة في أي وقت بنقر زر <strong>«✖️ إخفاء»</strong> أعلاه لتوسيع شاشة القراءة.</div>
           </div>
 
           <div style="padding: 0.4rem 0.75rem; background: var(--slate-100); border-bottom: 1px solid var(--slate-200); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem;">
@@ -1486,7 +1514,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.6</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.7</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1495,6 +1523,7 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v2.3.7 (أكتوبر 2026):</strong> تطوير محرك التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker v2) بنظام الجدولة الصوتية المتزامنة الموزونة بمقاطع الكلمات ووقفات علامات الترقيم لمنع تقدم الصوت على الكلمات، وتوضيح فائدة قسم المعلم الذكي الموثق باليسار مع إضافة زر إغلاق وطي فوري (✖️ إخفاء) لتوسيع مساحة القراءة والمذاكرة للشاشة الكاملة - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.6 (أكتوبر 2026):</strong> ضبط اتجاه النصوص الإنجليزية من اليسار إلى اليمين (LTR) لمنع انقلاب الكلمات وعلامات الترقيم، وإزالة تكرار النص من شريط المشغل العائم بالأسفل لمنع التشتيت وحصر مؤشر تتبع الكلمات في شاشة القراءة المباشرة فقط - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.5 (أكتوبر 2026):</strong> تدشين مؤشر التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker / Karaoke Highlighter) مع تظليل تفاعلي ذهبي براق للكلمة المنطوقة حالياً في شاشة التتبع المباشر والمقطع الصوتي لتسهيل متابعة النطق السليم، وإعادة هيكلة اللوحة الوسطى لضمان ظهور كامل النصوص والبانرات بسلاسة - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.4 (أكتوبر 2026):</strong> إضافة زر الإيقاف الفوري (⏹️ Stop Button) ومؤشر القراءة المباشر داخل عارض صفحات الكتاب المدرسي (Book Page Viewer)، وتفعيل الإيقاف التلقائي للصوت عند إغلاق النافذة أو الضغط على زر الهروب (Escape) لمنع أي قراءة بالخلفية وضمان تحكم المستخدم التام - إعداد المهندس أسامة خليل هاشم.</div>
@@ -1519,7 +1548,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.3.6</span>
+        <span class="version-badge">v2.3.7</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1671,6 +1700,19 @@
           </div>
         </div>
 
+        <!-- ضبط تزامن مؤشر الكلمات المقروءة بدقة عالية -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800);">🎯 سرعة تزامن مؤشر الكلمات (Karaoke Tracker Calibration)</div>
+            <div style="font-size: 0.72rem; color: var(--slate-500);">مطابقة التظليل الذهبي مع سرعة نطق الصوت بدقة متناهية ومنع تقدم الصوت على الكلمات</div>
+          </div>
+          <select id="studioKaraokeSyncSelect" class="form-input" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; border-radius: 6px; border: 1px solid var(--slate-300); width: auto;" onchange="audioPlayer.setKaraokeSync(this.value)">
+            <option value="0.80">خاطف وسريع (0.80x) - للأصوات فائقة السرعة</option>
+            <option value="0.92" selected>✨ متطابق ذكي (0.92x) - الموصى به</option>
+            <option value="1.05">متأنٍ (1.05x) - للقراءة البطيئة جداً</option>
+          </select>
+        </div>
+
         <!-- تفعيل المحادثات التبادلية -->
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between;">
           <div>
@@ -1753,7 +1795,7 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const SYSTEM_VERSION = 'v2.3.6';
+    const SYSTEM_VERSION = 'v2.3.7';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     
     // حالة النظام
@@ -1770,7 +1812,7 @@
 
     // ----------------------------------------------------
     // محرك القراءة الصوتية الفصيحة البشرية (Natural Human-like TTS)
-    // إصدار متقدم v2.3.2 يدعم المحادثات التبادلية والاستوديو التفاعلي
+    // إصدار متقدم يدعم المحادثات التبادلية والاستوديو والتتبع الدقيق v2.3.7
     // إعداد المهندس أسامة خليل هاشم
     // ----------------------------------------------------
     const audioPlayer = {
@@ -1787,7 +1829,8 @@
       currentWordMap: [],
       activeWordIndex: -1,
       karaokeTimer: null,
-      hasReceivedBoundary: false,
+      hasReceivedRealWordBoundary: false,
+      karaokeSyncFactor: parseFloat(localStorage.getItem('preferred_karaoke_sync')) || 0.92,
 
       init() {
         if (!this.synth) return;
@@ -1797,6 +1840,8 @@
         }
         const sel = document.getElementById('audioSpeedSelect');
         if (sel) sel.value = this.speed.toString();
+        const syncSel = document.getElementById('studioKaraokeSyncSelect');
+        if (syncSel) syncSel.value = this.karaokeSyncFactor.toString();
       },
 
       loadVoices() {
@@ -1999,33 +2044,73 @@
       },
 
       // ----------------------------------------------------
-      // ميزات التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker)
+      // ميزات التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker v2)
+      // تزامن دقيق فائق الذكاء يطابق سرعة الصوت البشري تماماً
+      // إعداد المهندس أسامة خليل هاشم
       // ----------------------------------------------------
       buildKaraokeTokens(text, prefix = 'kw') {
         const regex = /([a-zA-Z]+(?:'[a-zA-Z]+)?|[\u0600-\u06FF]+|[0-9]+|\s+|[^\s\w\u0600-\u06FF]+)/g;
         let match;
+        const tokens = [];
+        while ((match = regex.exec(text)) !== null) {
+          const raw = match[0];
+          const isWord = /[a-zA-Z0-9\u0600-\u06FF]/.test(raw);
+          tokens.push({
+            raw,
+            isWord,
+            start: match.index,
+            end: match.index + raw.length
+          });
+        }
+
         let wordIdx = 0;
         let html = '';
         const wordMap = [];
 
-        while ((match = regex.exec(text)) !== null) {
-          const raw = match[0];
-          const isWord = /[a-zA-Z0-9\u0600-\u06FF]/.test(raw);
-          const start = match.index;
-          const end = match.index + raw.length;
-
-          if (isWord) {
+        for (let i = 0; i < tokens.length; i++) {
+          const t = tokens[i];
+          if (t.isWord) {
             const spanId = `${prefix}-${wordIdx}`;
-            wordMap.push({ id: spanId, idx: wordIdx, start, end, text: raw });
-            const escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            html += `<span class="karaoke-word" id="${spanId}" data-start="${start}" data-end="${end}">${escaped}</span>`;
+            let nextPunct = '';
+            if (i + 1 < tokens.length && !tokens[i + 1].isWord) {
+              const pMatch = tokens[i + 1].raw.match(/[.,!?;:—\-]/);
+              if (pMatch) nextPunct = pMatch[0];
+            }
+
+            const durationMs = this.estimateWordDuration(t.raw, nextPunct, this.speed);
+            const wordObj = {
+              id: spanId,
+              idx: wordIdx,
+              start: t.start,
+              end: t.end,
+              text: t.raw,
+              nextPunct,
+              durationMs
+            };
+            wordMap.push(wordObj);
+
+            const escaped = t.raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            html += `<span class="karaoke-word" id="${spanId}" data-start="${t.start}" data-end="${t.end}">${escaped}</span>`;
             wordIdx++;
           } else {
-            const escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const escaped = t.raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             html += escaped;
           }
         }
         return { html, wordMap };
+      },
+
+      estimateWordDuration(wordText, punct, speechRate) {
+        const len = wordText ? wordText.length : 3;
+        // حساب مدة الكلمة الطبيعية وفق مقاطع الحروف مع وزن سرعة الكلام
+        let baseMs = 110 + (Math.min(len, 10) * 32);
+        if (punct) {
+          if (/[.!?]/.test(punct)) baseMs += 240; // وقفة نهاية الجملة
+          else if (/[,;:—\-]/.test(punct)) baseMs += 140; // وقفة الفاصلة
+        }
+        const rate = Math.max(0.6, Math.min(2.0, speechRate || 0.85));
+        const sync = this.karaokeSyncFactor || 0.92;
+        return Math.round((baseMs / rate) * sync);
       },
 
       setupKaraoke(text) {
@@ -2042,7 +2127,7 @@
         const tpRes = this.buildKaraokeTokens(clean, 'tp-w');
         this.currentWordMap = tpRes.wordMap;
         this.activeWordIndex = -1;
-        this.hasReceivedBoundary = false;
+        this.hasReceivedRealWordBoundary = false;
 
         const liveText = document.getElementById('teleprompterCurrentText');
         if (liveText) {
@@ -2061,6 +2146,35 @@
         }
       },
 
+      startKaraokeLive() {
+        if (!this.currentWordMap || this.currentWordMap.length === 0) return;
+        // تظليل أول كلمة فوراً عند انطلاق الصوت دون أي تأخير
+        this.setActiveWordIndex(0);
+        // جدولة الكلمات التالية بشكل ديناميكي متزامن
+        this.scheduleNextWord(0);
+      },
+
+      scheduleNextWord(fromIndex) {
+        if (this.karaokeTimer) {
+          clearTimeout(this.karaokeTimer);
+          this.karaokeTimer = null;
+        }
+        if (!this.isPlaying || this.isPaused || !this.currentWordMap || this.currentWordMap.length === 0) return;
+
+        const currentIdx = (fromIndex !== undefined) ? fromIndex : this.activeWordIndex;
+        const nextIdx = currentIdx + 1;
+        if (nextIdx >= this.currentWordMap.length) return;
+
+        const currentWord = this.currentWordMap[currentIdx >= 0 ? currentIdx : 0];
+        const delay = currentWord ? currentWord.durationMs : 300;
+
+        this.karaokeTimer = setTimeout(() => {
+          if (!this.isPlaying || this.isPaused) return;
+          this.setActiveWordIndex(nextIdx);
+          this.scheduleNextWord(nextIdx);
+        }, delay);
+      },
+
       highlightWordByCharIndex(charIndex) {
         if (!this.currentWordMap || this.currentWordMap.length === 0) return;
 
@@ -2074,14 +2188,16 @@
 
         if (matchIdx !== -1 && matchIdx !== this.activeWordIndex) {
           this.setActiveWordIndex(matchIdx);
+          // إعادة مزامنة الجدولة من الكلمة الحقيقية المؤكدة
+          this.scheduleNextWord(matchIdx);
         }
       },
 
       setActiveWordIndex(index) {
-        if (index < 0 || index >= this.currentWordMap.length) return;
+        if (!this.currentWordMap || index < 0 || index >= this.currentWordMap.length) return;
 
         // إزالة التظليل من الكلمة السابقة
-        if (this.activeWordIndex !== -1) {
+        if (this.activeWordIndex !== -1 && this.activeWordIndex !== index) {
           const prevTp = document.getElementById(`tp-w-${this.activeWordIndex}`);
           if (prevTp) prevTp.classList.remove('karaoke-word-active');
           const prevChunk = document.getElementById(`chunk-w-${this.activeWordIndex}`);
@@ -2107,27 +2223,9 @@
         }
       },
 
-      startKaraokeFallback() {
-        if (this.karaokeTimer) clearInterval(this.karaokeTimer);
-        setTimeout(() => {
-          if (!this.hasReceivedBoundary && this.isPlaying && !this.isPaused && this.currentWordMap && this.currentWordMap.length > 0) {
-            const msPerWord = Math.max(220, Math.min(650, (1000 * 60) / (135 * this.speed)));
-            let fallbackIdx = (this.activeWordIndex >= 0) ? this.activeWordIndex + 1 : 0;
-            this.karaokeTimer = setInterval(() => {
-              if (!this.isPlaying || this.isPaused || this.hasReceivedBoundary || fallbackIdx >= this.currentWordMap.length) {
-                clearInterval(this.karaokeTimer);
-                return;
-              }
-              this.setActiveWordIndex(fallbackIdx);
-              fallbackIdx++;
-            }, msPerWord);
-          }
-        }, 300);
-      },
-
       clearKaraoke() {
         if (this.karaokeTimer) {
-          clearInterval(this.karaokeTimer);
+          clearTimeout(this.karaokeTimer);
           this.karaokeTimer = null;
         }
         if (this.activeWordIndex !== -1) {
@@ -2137,7 +2235,7 @@
           if (prevChunk) prevChunk.classList.remove('karaoke-word-active');
         }
         this.activeWordIndex = -1;
-        this.hasReceivedBoundary = false;
+        this.hasReceivedRealWordBoundary = false;
       },
 
       speakSmart(text, lang = 'en', onDone = null) {
@@ -2213,15 +2311,18 @@
           this.showFloatingPlayer(cleanTurn, `حوار: ${turn.speakerName || ('المتحدث ' + (turn.speaker + 1))} 🎙️`);
           this.setupKaraoke(cleanTurn);
 
-          utt.onboundary = (e) => {
-            this.hasReceivedBoundary = true;
-            if (this.karaokeTimer) clearInterval(this.karaokeTimer);
-            if (e.name === 'word' || e.charIndex !== undefined) {
-              this.highlightWordByCharIndex(e.charIndex);
-            }
+          utt.onstart = () => {
+            this.startKaraokeLive();
           };
 
-          this.startKaraokeFallback();
+          utt.onboundary = (e) => {
+            if (e.name === 'word') {
+              this.hasReceivedRealWordBoundary = true;
+              if (e.charIndex !== undefined) {
+                this.highlightWordByCharIndex(e.charIndex);
+              }
+            }
+          };
 
           utt.onend = () => {
             this.clearKaraoke();
@@ -2238,6 +2339,7 @@
             playNextTurn();
           };
 
+          this.startKaraokeLive();
           this.synth.speak(utt);
         };
 
@@ -2273,15 +2375,22 @@
         this.showFloatingPlayer(cleanText, 'قراءة النص 🔊');
         this.setupKaraoke(cleanText);
 
-        utt.onboundary = (e) => {
-          this.hasReceivedBoundary = true;
-          if (this.karaokeTimer) clearInterval(this.karaokeTimer);
-          if (e.name === 'word' || e.charIndex !== undefined) {
-            this.highlightWordByCharIndex(e.charIndex);
-          }
+        utt.onstart = () => {
+          this.isPlaying = true;
+          this.isPaused = false;
+          this.updateButtons();
+          this.updateStatus('جارِ القراءة... 🔊');
+          this.startKaraokeLive();
         };
 
-        this.startKaraokeFallback();
+        utt.onboundary = (e) => {
+          if (e.name === 'word') {
+            this.hasReceivedRealWordBoundary = true;
+            if (e.charIndex !== undefined) {
+              this.highlightWordByCharIndex(e.charIndex);
+            }
+          }
+        };
 
         utt.onend = () => {
           this.clearKaraoke();
@@ -2299,11 +2408,13 @@
           this.isPaused = false;
           this.updateButtons();
           this.hideFloatingPlayer();
+          if (onDone) onDone();
         };
 
         this.isPlaying = true;
         this.isPaused = false;
         this.updateButtons();
+        this.startKaraokeLive();
         this.synth.speak(utt);
       },
 
@@ -2360,7 +2471,10 @@
         if (this.synth && this.isPlaying) {
           this.synth.pause();
           this.isPaused = true;
-          if (this.karaokeTimer) clearInterval(this.karaokeTimer);
+          if (this.karaokeTimer) {
+            clearTimeout(this.karaokeTimer);
+            this.karaokeTimer = null;
+          }
           this.updateStatus('متوقف مؤقتاً ⏸️');
           this.updateButtons();
         }
@@ -2372,7 +2486,7 @@
           this.isPaused = false;
           this.updateStatus('جارِ القراءة... 🔊');
           this.updateButtons();
-          this.startKaraokeFallback();
+          this.scheduleNextWord(this.activeWordIndex);
         }
       },
 
@@ -2488,6 +2602,13 @@
         localStorage.setItem('preferred_multispeaker', this.multiSpeaker.toString());
       },
 
+      setKaraokeSync(val) {
+        this.karaokeSyncFactor = parseFloat(val) || 0.92;
+        localStorage.setItem('preferred_karaoke_sync', this.karaokeSyncFactor.toString());
+        const sel = document.getElementById('studioKaraokeSyncSelect');
+        if (sel) sel.value = this.karaokeSyncFactor.toString();
+      },
+
       updateStatus(msg) {
         const el = document.getElementById('audioPlayerStatus');
         if (el) el.innerText = msg;
@@ -2560,6 +2681,9 @@
       const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
       if (multiSwitch) multiSwitch.checked = audioPlayer.multiSpeaker;
 
+      const syncSel = document.getElementById('studioKaraokeSyncSelect');
+      if (syncSel) syncSel.value = (audioPlayer.karaokeSyncFactor || 0.92).toString();
+
       modal.classList.remove('hidden');
     }
 
@@ -2595,7 +2719,10 @@
       const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
       if (multiSwitch) audioPlayer.setMultiSpeaker(multiSwitch.checked);
 
-      alert('تم حفظ إعدادات الصوت البشري بنجاح واعتمادها للنظام بالكامل ✅\n- إعداد المهندس أسامة خليل هاشم');
+      const syncSel = document.getElementById('studioKaraokeSyncSelect');
+      if (syncSel) audioPlayer.setKaraokeSync(syncSel.value);
+
+      alert('تم حفظ إعدادات الصوت البشري وتزامن مؤشر الكلمات بنجاح واعتمادها للنظام بالكامل ✅\n- إعداد المهندس أسامة خليل هاشم');
       closeVoiceStudioModal();
     }
 
@@ -2604,6 +2731,7 @@
       audioPlayer.setSpeed(0.82);
       audioPlayer.setPitch(1.0);
       audioPlayer.setMultiSpeaker(true);
+      audioPlayer.setKaraokeSync(0.92);
 
       const studioVoiceSel = document.getElementById('studioVoiceSelect');
       if (studioVoiceSel) studioVoiceSel.value = 'auto';
@@ -2617,8 +2745,10 @@
       if (studioPitchVal) studioPitchVal.innerText = '1.0';
       const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
       if (multiSwitch) multiSwitch.checked = true;
+      const syncSel = document.getElementById('studioKaraokeSyncSelect');
+      if (syncSel) syncSel.value = '0.92';
 
-      alert('تمت استعادة الإعدادات الصوتية الافتراضية الموصى بها (0.82x سرعة هادئة - نبرة 1.0 معتدلة).');
+      alert('تمت استعادة الإعدادات الصوتية الافتراضية الموصى بها (0.82x سرعة هادئة - نبرة 1.0 معتدلة - تزامن ذكي 0.92x).');
     }
 
     // تهيئة التطبيق عند بدء التشغيل
@@ -2652,6 +2782,7 @@
       populateStudyCurriculumSelect();
       renderGrammarRules();
       renderStudyView();
+      initAiChatPanelState();
       checkBackendConnection();
     }
 
@@ -3197,6 +3328,44 @@
       const isFocused = studyLayout.classList.contains('focus-mode');
       if (btn) {
         btn.innerHTML = isFocused ? '<span>🔙</span> إلغاء التركيز' : '<span>👁️</span> وضع التركيز (ملء الشاشة)';
+      }
+    }
+
+    function toggleAiChatPanel(forceState) {
+      const studyLayout = document.querySelector('.study-layout');
+      const panel = document.getElementById('aiChatPanel');
+      const btn = document.getElementById('toggleAiPanelBtn');
+      if (!studyLayout || !panel) return;
+
+      const isCurrentlyHidden = studyLayout.classList.contains('hide-ai-panel') || panel.style.display === 'none';
+      const shouldShow = (typeof forceState === 'boolean') ? forceState : isCurrentlyHidden;
+
+      if (shouldShow) {
+        studyLayout.classList.remove('hide-ai-panel');
+        panel.style.display = 'flex';
+        if (btn) {
+          btn.innerHTML = '<span>💬</span> إخفاء المعلم الذكي';
+          btn.classList.add('active');
+        }
+        localStorage.setItem('show_ai_chat_panel', 'true');
+      } else {
+        studyLayout.classList.add('hide-ai-panel');
+        panel.style.display = 'none';
+        if (btn) {
+          btn.innerHTML = '<span>💬</span> المعلم الذكي';
+          btn.classList.remove('active');
+        }
+        localStorage.setItem('show_ai_chat_panel', 'false');
+      }
+    }
+
+    function initAiChatPanelState() {
+      const saved = localStorage.getItem('show_ai_chat_panel');
+      if (saved === 'false') {
+        toggleAiChatPanel(false);
+      } else {
+        const btn = document.getElementById('toggleAiPanelBtn');
+        if (btn) btn.innerHTML = '<span>💬</span> إخفاء المعلم الذكي';
       }
     }
 
