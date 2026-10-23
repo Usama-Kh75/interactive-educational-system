@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v2.3.3';
+const CACHE_NAME = 'interactive-edu-pwa-v2.3.4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -10,17 +10,18 @@ const ASSETS_TO_CACHE = [
   './icons/icon.svg'
 ];
 
-// تثبيت Service Worker وتخزين الموارد الأساسية
+// تثبيت Service Worker وتخزين الموارد الأساسية فوراً
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching core PWA assets');
+      console.log('[Service Worker] Caching core PWA assets v2.3.4');
       return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
-// تفعيل وإزالة الكاش القديم عند التحديث
+// تفعيل وإزالة الكاش القديم فوراً دون انتظار إغلاق التبويبات
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -36,26 +37,40 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// استراتيجية التعامل مع الطلبات (Cache-First مع تحديث ذكي)
+// استراتيجية التعامل مع الطلبات: Network-First لصفحات HTML لضمان التحديث اللحظي
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // إذا كان طلب API للخادم المحلي
   if (url.pathname.startsWith('/api/')) {
     event.respondWith(
-      fetch(event.request).catch(() => {
-        // في حال انقطاع الخادم، استرجع من الكاش إن وجد
-        return caches.match(event.request);
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // لصفحات HTML والتنقل: Network-First لضمان وصول التحديثات فوراً وعدم بقاء النسخ القديمة
+  if (event.request.mode === 'navigate' || event.request.destination === 'document' || url.pathname.endsWith('.html') || url.pathname === '/' || url.pathname.endsWith('/')) {
+    event.respondWith(
+      fetch(event.request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+        }
+        return networkResponse;
+      }).catch(() => {
+        return caches.match(event.request).then((cached) => cached || caches.match('./index.html'));
       })
     );
     return;
   }
 
-  // الموارد الثابتة (HTML, JS, CSS, Icons)
+  // لباقي الموارد الثابتة (الصور والخطوط): Cache-First مع تحديث بالخلفية
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // جلب نسخة محدثة في الخلفية (Stale-While-Revalidate)
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             caches.open(CACHE_NAME).then((cache) => {
@@ -76,7 +91,6 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       });
     }).catch(() => {
-      // العودة لصفحة البداية إذا فشل كل شيء
       if (event.request.mode === 'navigate') {
         return caches.match('./index.html');
       }
