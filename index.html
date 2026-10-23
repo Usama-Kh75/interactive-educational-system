@@ -790,7 +790,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.1.0</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.2.0</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -843,7 +843,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.1.0</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.2.0</span>
         </div>
         <h2>نظامك التعليمي التفاعلي الشخصي</h2>
         <p>
@@ -978,6 +978,11 @@
           <div id="lessonGrammarAlert" class="hidden" style="margin: 0.5rem 1rem 0; padding: 0.6rem 0.85rem; background: #fefce8; border: 1px solid #fde047; border-radius: 8px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
             <div id="lessonGrammarAlertText" style="color: #854d0e; font-weight: 700;">💡 يتضمن هذا الدرس قواعد مهمة</div>
             <button class="btn btn-primary btn-sm" onclick="switchTab('grammar')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">عرض القاعدة والشرح</button>
+          </div>
+
+          <!-- المعرض البصري والرسوم التوضيحية للدرس -->
+          <div id="lessonMediaVisualContainer" style="display: none; padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); background: #f8fafc;">
+            <!-- يتم تعبئتها ديناميكياً بصفحات الكتاب والبطاقات البصرية المصممة -->
           </div>
 
           <div class="panel-body" id="lessonChunksContainer">
@@ -1140,7 +1145,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.1.0</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.2.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1149,7 +1154,8 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
-            <div>• <strong style="color: var(--primary);">v2.1.0 (أكتوبر 2026):</strong> إضافة القارئ الصوتي التفاعلي بمخارج إنجليزية طبيعية، بنك القواعد اللغوية (11 قاعدة مع التمارين الفورية والتصحيح اللحظي)، وتوثيق الإسناد لـ م. أسامة خليل هاشم، ونظام تتبع الإصدارات.</div>
+            <div>• <strong style="color: var(--primary);">v2.2.0 (أكتوبر 2026):</strong> تقسيم خطة العمل إلى وحدات دراسية وتطويرية مستقلة (Unit-by-Unit)، ودعم الدروس بالصور التوضيحية لصفحات الكتاب المدرسي المعتمد (120 صفحة مدمجة)، وميزة التكبير (Modal Lightbox)، وتصميم بطاقات المفاهيم البصرية الشاملة لجميع دروس الوحدة الأولى (11 درساً) بإشراف إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong>v2.1.0:</strong> النشر السحابي بصيغة PWA تقدمية، والقارئ الصوتي التفاعلي بمخارج إنجليزية طبيعية، وبنك القواعد النحوية (11 قاعدة مع التمارين الفورية).</div>
             <div>• <strong>v2.0.0:</strong> إعادة هيكلة مناهج وزارة التربية إلى 10 وحدات و 53 درساً نظامياً وربط نصوص كتاب الطالب الأصلية.</div>
             <div>• <strong>v1.0.0:</strong> الإطلاق الأولي للنظام ودعم التشغيل المحلي المستقل وإدارة المناهج.</div>
           </div>
@@ -1166,7 +1172,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.1.0</span>
+        <span class="version-badge">v2.2.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1219,10 +1225,35 @@
     </div>
   </div>
 
+  <!-- نافذة مودال: تكبير وتصفح صفحات الكتاب المدرسي -->
+  <div class="modal-overlay hidden" id="bookPageModal">
+    <div class="modal-box" style="max-width: 900px; width: 95vw; max-height: 90vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.3rem;">📖</span>
+          <div>
+            <h3 id="bookPageModalTitle" style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin: 0;">صفحة الكتاب المدرسي</h3>
+            <span id="bookPageModalSubtitle" style="font-size: 0.75rem; color: var(--slate-500);">المنهج المعتمد - إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <button class="btn btn-secondary btn-sm" onclick="zoomBookPage(0.2)" title="تكبير">+</button>
+          <button class="btn btn-secondary btn-sm" onclick="zoomBookPage(-0.2)" title="تصغير">-</button>
+          <button class="btn btn-secondary btn-sm" onclick="resetBookPageZoom()" title="إعادة الضبط">100%</button>
+          <button class="btn btn-primary btn-sm" id="bookPageModalListenBtn" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">🔊 استماع للنص</button>
+          <button onclick="closeBookPageModal()" style="border: none; background: transparent; font-size: 1.3rem; cursor: pointer; color: var(--slate-400); margin-right: 0.5rem;">✕</button>
+        </div>
+      </div>
+      <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; background: var(--slate-100); border-radius: 8px; padding: 1rem; position: relative;" id="bookPageImgWrapper">
+        <img id="bookPageModalImg" src="" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
+      </div>
+    </div>
+  </div>
+
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const SYSTEM_VERSION = 'v2.1.0';
+    const SYSTEM_VERSION = 'v2.2.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     
     // حالة النظام
@@ -1728,6 +1759,9 @@
         chunks = activeLesson.chunks || [];
       }
 
+      // عرض المعرض البصري والرسوم التوضيحية لصفحات الكتاب والبطاقات المصممة
+      renderLessonMediaGallery(activeLesson, activeChapter, chunks);
+
       countBadge.innerText = `${chunks.length} مقاطع معتمدة`;
       chunksContainer.innerHTML = '';
 
@@ -1746,7 +1780,12 @@
         box.id = `chunk-box-${idx}`;
         box.innerHTML = `
           <div class="chunk-meta">
-            <span>📌 ${heading} - صفحة الكتاب (${page})</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span>📌 ${heading} - صفحة الكتاب (${page})</span>
+              <button class="mini-listen-btn" style="background: var(--slate-200); color: var(--slate-700);" onclick="openBookPageModal(${page}, \`${escapeForAttribute(activeLesson.title)}\`)">
+                📖 صورة صفحة (${page})
+              </button>
+            </div>
             <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(text)}\`, 'en')">
               🔊 قراءة هذا المقطع
             </button>
@@ -1755,6 +1794,184 @@
         `;
         chunksContainer.appendChild(box);
       });
+    }
+
+    // ----------------------------------------------------
+    // إدارة المعرض البصري وتكبير صفحات الكتاب وبطاقات المفاهيم
+    // ----------------------------------------------------
+    let currentBookZoom = 1;
+    let currentPageAudioText = '';
+
+    function openBookPageModal(pageNum, lessonTitle) {
+      const modal = document.getElementById('bookPageModal');
+      const img = document.getElementById('bookPageModalImg');
+      const title = document.getElementById('bookPageModalTitle');
+      const listenBtn = document.getElementById('bookPageModalListenBtn');
+
+      title.innerText = `📖 صفحة الكتاب المدرسي - صفحة (${pageNum}) - ${lessonTitle || ''}`;
+      img.src = `book_images/page_${pageNum}.jpeg`;
+      resetBookPageZoom();
+
+      // جمع نص الصفحة للاستماع
+      let pageText = '';
+      if (window.CURRICULUM_DATA) {
+        for (const curr of window.CURRICULUM_DATA) {
+          for (const ch of (curr.chapters || curr.lessons || [])) {
+            const lessons = ch.lessons || [ch];
+            for (const l of lessons) {
+              if (l.title === lessonTitle && l.chunks) {
+                const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
+                if (pageChunks.length > 0) {
+                  pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+      currentPageAudioText = pageText;
+
+      listenBtn.onclick = () => {
+        if (currentPageAudioText) {
+          speakSnippet(currentPageAudioText, 'en');
+        } else {
+          alert(`جاري الاستماع لصفحة الكتاب (${pageNum})`);
+        }
+      };
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeBookPageModal() {
+      document.getElementById('bookPageModal').classList.add('hidden');
+    }
+
+    function zoomBookPage(delta) {
+      currentBookZoom = Math.max(0.6, Math.min(2.5, currentBookZoom + delta));
+      const img = document.getElementById('bookPageModalImg');
+      if (img) img.style.transform = `scale(${currentBookZoom})`;
+    }
+
+    function resetBookPageZoom() {
+      currentBookZoom = 1;
+      const img = document.getElementById('bookPageModalImg');
+      if (img) img.style.transform = `scale(1)`;
+    }
+
+    function toggleMediaSection(secId) {
+      const el = document.getElementById(secId);
+      if (el) {
+        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+      }
+    }
+
+    function renderLessonMediaGallery(lesson, chapter, chunks) {
+      const container = document.getElementById('lessonMediaVisualContainer');
+      if (!container) return;
+
+      const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
+      const pages = [...new Set(rawPages)];
+      const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : null;
+
+      container.style.display = 'block';
+
+      let html = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.15rem;">🎨</span>
+            <span style="font-weight: 800; font-size: 0.92rem; color: var(--slate-800);">المعرض البصري التوضيحي للدرس</span>
+          </div>
+          <div style="display: flex; gap: 0.35rem; align-items: center;">
+            <span style="font-size: 0.72rem; color: var(--slate-500); margin-left: 0.25rem;">إعداد م. أسامة خليل هاشم</span>
+            <button class="btn btn-secondary btn-sm" onclick="toggleMediaSection('bookPagesSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem;">
+              📖 صور الكتاب (${pages.join(', ')})
+            </button>
+            ${cardData ? `
+              <button class="btn btn-primary btn-sm" onclick="toggleMediaSection('topicCardSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: ${cardData.themeColor || 'var(--primary)'};">
+                ✨ بطاقة المفهوم المصورة
+              </button>
+            ` : ''}
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 0.75rem;">
+      `;
+
+      // 1. بطاقات صفحات الكتاب الأصلية
+      pages.forEach(p => {
+        html += `
+          <div id="bookPagesSec" style="background: white; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.6rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <div style="width: 72px; height: 98px; border-radius: 6px; overflow: hidden; background: #e2e8f0; flex-shrink: 0; cursor: pointer; border: 1px solid var(--slate-300);" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`)">
+              <img src="book_images/page_${p}.jpeg" alt="صفحة ${p}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='icons/icon-192.png'">
+            </div>
+            <div style="flex: 1;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span class="badge" style="background: var(--primary-light); color: var(--primary); font-size: 0.7rem; font-weight: 700;">صفحة ${p}</span>
+                <span style="font-size: 0.72rem; color: var(--slate-500);">كتاب الطالب المعتمد</span>
+              </div>
+              <p style="font-size: 0.78rem; font-weight: 700; color: var(--slate-800); margin: 0 0 0.45rem 0; line-height: 1.3;">${lesson.title}</p>
+              <button class="btn btn-secondary btn-sm" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`)" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; width: 100%;">
+                🔍 تكبير ومطالعة الصفحة
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      // 2. البطاقة البصرية المصممة للموضوع
+      if (cardData) {
+        html += `
+          <div id="topicCardSec" style="background: white; border: 2px solid ${cardData.themeColor || 'var(--primary)'}; border-radius: 10px; padding: 0.75rem; box-shadow: 0 2px 6px rgba(0,0,0,0.06); grid-column: 1 / -1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px dashed var(--slate-200); padding-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span style="font-size: 1.35rem;">${cardData.icon || '📌'}</span>
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--slate-900);">${cardData.titleAr}</h4>
+                  <span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 600;">${cardData.titleEn}</span>
+                </div>
+              </div>
+              <span class="badge" style="background: ${cardData.themeColor}22; color: ${cardData.themeColor}; font-size: 0.7rem; font-weight: 800;">
+                بطاقة المفاهيم البصرية - الوحدة ${cardData.unit}
+              </span>
+            </div>
+
+            <!-- شبكة المفاهيم والمفردات المصورة -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.5rem; margin-bottom: 0.6rem;">
+              ${(cardData.sections || []).map(sec => `
+                <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; padding: 0.45rem 0.6rem;">
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <span style="font-size: 0.8rem; font-weight: 800; color: var(--slate-900);">${sec.icon || '🔹'} ${sec.name}</span>
+                    <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700;">${sec.ar}</span>
+                  </div>
+                  <p style="margin: 0.2rem 0 0 0; font-size: 0.7rem; color: var(--slate-600); line-height: 1.3;">${sec.def}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- صندوق القاعدة النحوية المميز -->
+            ${cardData.grammarFocus ? `
+              <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 0.5rem 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.25rem;">
+                  <span style="font-size: 0.9rem;">💡</span>
+                  <strong style="font-size: 0.8rem; color: #92400e;">${cardData.grammarFocus.title}</strong>
+                  <span style="font-size: 0.7rem; color: #b45309;">(${cardData.grammarFocus.rule})</span>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                  ${(cardData.grammarFocus.examples || []).map(ex => `
+                    <span style="background: white; border: 1px solid #fcd34d; border-radius: 4px; padding: 0.15rem 0.45rem; font-size: 0.73rem; color: #78350f;">
+                      <strong>${ex.en}</strong> ➔ ${ex.ar}
+                    </span>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      html += `</div>`;
+      container.innerHTML = html;
     }
 
     function formatTextHighlights(text) {
@@ -2197,8 +2414,7 @@
           console.log('Generating local smart quiz');
         }
       }
-        console.log('Using offline lesson quiz questions');
-      }
+      console.log('Using offline lesson quiz questions');
 
       // أسئلة تدريبية افتراضية معتمدة من المنهج
       currentQuizQuestions = [

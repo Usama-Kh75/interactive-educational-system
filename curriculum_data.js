@@ -1541,3 +1541,645 @@ window.GRAMMAR_RULES = [
     }
   }
 ];
+
+
+// بطاقات المفاهيم والرسوم التوضيحية المصممة للدروس والمواضيع
+window.TOPIC_CARDS = {
+  "261": {
+    "unit": 1,
+    "lessonNumber": 1,
+    "pages": [
+      4
+    ],
+    "titleAr": "مجلة المدرسة وأقسامها",
+    "titleEn": "A School Magazine Sections",
+    "themeColor": "#4f46e5",
+    "icon": "📰",
+    "sections": [
+      {
+        "name": "Cartoons",
+        "ar": "رسوم هزلية",
+        "icon": "🎨",
+        "def": "funny stories with small pictures"
+      },
+      {
+        "name": "Jokes",
+        "ar": "طرائف ونكات",
+        "icon": "😂",
+        "def": "short, funny stories"
+      },
+      {
+        "name": "Poetry",
+        "ar": "شعر وقوافٍ",
+        "icon": "📜",
+        "def": "writing with words that rhyme"
+      },
+      {
+        "name": "Letters",
+        "ar": "رسائل القراء",
+        "icon": "✉️",
+        "def": "messages sent to the editor"
+      },
+      {
+        "name": "Problem page",
+        "ar": "صفحة المشاكل",
+        "icon": "❓",
+        "def": "advice for student problems"
+      },
+      {
+        "name": "Interviews",
+        "ar": "مقابلات صحفية",
+        "icon": "🎙️",
+        "def": "asking somebody famous questions"
+      },
+      {
+        "name": "School news",
+        "ar": "أخبار المدرسة",
+        "icon": "🏫",
+        "def": "reports about school events"
+      },
+      {
+        "name": "Sports reports",
+        "ar": "تقارير رياضية",
+        "icon": "⚽",
+        "def": "descriptions of football and sports"
+      },
+      {
+        "name": "Town events",
+        "ar": "فعاليات المدينة",
+        "icon": "🏙️",
+        "def": "things happening in the town"
+      }
+    ],
+    "grammarFocus": {
+      "title": "قاعدة s التملك (Possessive 's)",
+      "rule": "المفرد يأخذ ('s) والجمع المنتهي بـ s يأخذ (s')",
+      "examples": [
+        {
+          "en": "the boy's bag",
+          "ar": "حقيبة الولد (ولد واحد)"
+        },
+        {
+          "en": "the boys' bags",
+          "ar": "حقائب الأولاد (أكثر من ولد)"
+        },
+        {
+          "en": "the school's magazine",
+          "ar": "مجلة المدرسة (مدرسة واحدة)"
+        },
+        {
+          "en": "the schools' magazines",
+          "ar": "مجلات المدارس (عدة مدارس)"
+        }
+      ]
+    }
+  },
+  "262": {
+    "unit": 1,
+    "lessonNumber": 2,
+    "pages": [
+      5
+    ],
+    "titleAr": "مشروع النشر والمفردات المهنية",
+    "titleEn": "Publishing Team & Core Vocabulary",
+    "themeColor": "#0ea5e9",
+    "icon": "✍️",
+    "sections": [
+      {
+        "name": "article",
+        "ar": "مقال",
+        "icon": "📄",
+        "def": "a piece of writing in a newspaper or magazine"
+      },
+      {
+        "name": "cover",
+        "ar": "غلاف",
+        "icon": "📖",
+        "def": "the outside of a book or magazine"
+      },
+      {
+        "name": "edit",
+        "ar": "يحرر / ينقح",
+        "icon": "✏️",
+        "def": "to check and correct a piece of writing"
+      },
+      {
+        "name": "editor",
+        "ar": "محرر صحفي",
+        "icon": "👨‍💼",
+        "def": "somebody who edits"
+      },
+      {
+        "name": "print",
+        "ar": "يطبع",
+        "icon": "🖨️",
+        "def": "to put words or pictures on paper with a machine"
+      },
+      {
+        "name": "printer",
+        "ar": "طابعة / عامل طباعة",
+        "icon": "⚙️",
+        "def": "1. somebody who prints as a job. 2. a machine that prints"
+      },
+      {
+        "name": "report",
+        "ar": "تقرير / يكتب تقريراً",
+        "icon": "📝",
+        "def": "to describe an event"
+      },
+      {
+        "name": "reporter",
+        "ar": "مراسل صحفي",
+        "icon": "🎙️",
+        "def": "somebody who writes reports for news"
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ الاقتراح (Making Suggestions)",
+      "rule": "استخدام Why don't we + مصدر أو Let's + مصدر",
+      "examples": [
+        {
+          "en": "Why don't we start a magazine?",
+          "ar": "لمَ لا نبدأ بتأسيس مجلة؟"
+        },
+        {
+          "en": "Let's have articles about the school.",
+          "ar": "دعونا نكتب مقالات عن المدرسة."
+        }
+      ]
+    }
+  },
+  "263": {
+    "unit": 1,
+    "lessonNumber": 3,
+    "pages": [
+      6
+    ],
+    "titleAr": "المقابلة الصحفية: جاك جيمس",
+    "titleEn": "An Interview: Jack James (Pizza Cabin)",
+    "themeColor": "#f59e0b",
+    "icon": "🍕",
+    "sections": [
+      {
+        "name": "Personality",
+        "ar": "الشخصية",
+        "icon": "👤",
+        "def": "Jack James runs Pizza Cabin in the High Street"
+      },
+      {
+        "name": "Likes",
+        "ar": "ما يحبه",
+        "icon": "👍",
+        "def": "Polite people, Italian food (pizzas, pasta), painting"
+      },
+      {
+        "name": "Dislikes",
+        "ar": "ما يكرهه",
+        "icon": "👎",
+        "def": "Impolite people shouting, cleaning up, gardening, washing-up"
+      },
+      {
+        "name": "TV Show",
+        "ar": "برنامجه المفضل",
+        "icon": "📺",
+        "def": "Cooking shows: A taste of the sea"
+      },
+      {
+        "name": "Town Idea",
+        "ar": "اقتراحه للمدينة",
+        "icon": "🚗",
+        "def": "Build a ring road to reduce cars in the center"
+      }
+    ],
+    "grammarFocus": {
+      "title": "مفردات المقابلة (Interview Vocabulary)",
+      "rule": "الكلمات ومعاكساتها المستخدمة في الحوار",
+      "examples": [
+        {
+          "en": "famous = well-known",
+          "ar": "مشهور = معروف"
+        },
+        {
+          "en": "polite <-> impolite",
+          "ar": "مؤدب <-> غير مؤدب"
+        },
+        {
+          "en": "like <-> dislike",
+          "ar": "يحب <-> يكره"
+        },
+        {
+          "en": "ring road",
+          "ar": "طريق دائري حول المدينة"
+        }
+      ]
+    }
+  },
+  "264": {
+    "unit": 1,
+    "lessonNumber": 4,
+    "pages": [
+      7
+    ],
+    "titleAr": "قواعد for و since والتفضيلات",
+    "titleEn": "Grammar: for & since and Likes/Dislikes",
+    "themeColor": "#10b981",
+    "icon": "⏳",
+    "sections": [
+      {
+        "name": "for + مدة زمنية",
+        "ar": "لمدة زمنية محددة الطول",
+        "icon": "⏱️",
+        "def": "for ten years, for two hours, for a long time"
+      },
+      {
+        "name": "since + نقطة بداية",
+        "ar": "منذ نقطة زمنية معينة",
+        "icon": "🎯",
+        "def": "since I was born, since 2015, since 8:00 o'clock"
+      },
+      {
+        "name": "like + ing",
+        "ar": "يحب فعل شيء",
+        "icon": "❤️",
+        "def": "I like meeting polite people"
+      },
+      {
+        "name": "enjoy + ing",
+        "ar": "يستمتع بفعل شيء",
+        "icon": "😊",
+        "def": "I enjoy cooking"
+      },
+      {
+        "name": "hate + ing",
+        "ar": "يكره فعل شيء",
+        "icon": "🚫",
+        "def": "I hate gardening and washing-up"
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغة المضارع التام (Present Perfect)",
+      "rule": "Subject + have / has + Past Participle (P.P) + for / since",
+      "examples": [
+        {
+          "en": "I have worked in the cafe for ten years.",
+          "ar": "عملت في المقهى لمدة عشر سنوات."
+        },
+        {
+          "en": "I have lived in Ashby since I was born.",
+          "ar": "عشت في أشبي منذ ولادتي."
+        }
+      ]
+    }
+  },
+  "265": {
+    "unit": 1,
+    "lessonNumber": 5,
+    "pages": [
+      8
+    ],
+    "titleAr": "صفحة المشاكل والنصائح: اسأل العمة سالي",
+    "titleEn": "The Problem Page: Ask Aunt Sally",
+    "themeColor": "#ec4899",
+    "icon": "💬",
+    "sections": [
+      {
+        "name": "The Problem",
+        "ar": "المشكلة",
+        "icon": "😟",
+        "def": "A girl is extremely shy and cannot speak in class"
+      },
+      {
+        "name": "Advice 1",
+        "ar": "النصيحة الأولى",
+        "icon": "💡",
+        "def": "You should try to be friendly and smile"
+      },
+      {
+        "name": "Advice 2",
+        "ar": "النصيحة الثانية",
+        "icon": "🤝",
+        "def": "You should say hello to other girls"
+      },
+      {
+        "name": "Negative Advice",
+        "ar": "التحذير",
+        "icon": "⚠️",
+        "def": "You shouldn't hide or avoid talking"
+      }
+    ],
+    "grammarFocus": {
+      "title": "إعطاء النصيحة (Giving Advice)",
+      "rule": "Subject + should / shouldn't + Infinitive (مصدر مجرد)",
+      "examples": [
+        {
+          "en": "You should speak to your teacher.",
+          "ar": "ينبغي عليك التحدث مع معلمتك."
+        },
+        {
+          "en": "You shouldn't worry so much.",
+          "ar": "لا ينبغي عليك القلق كثيراً."
+        }
+      ]
+    }
+  },
+  "266": {
+    "unit": 1,
+    "lessonNumber": 6,
+    "pages": [
+      9
+    ],
+    "titleAr": "تدوين الملاحظات والتلخيص",
+    "titleEn": "Taking Notes & Abbreviations",
+    "themeColor": "#8b5cf6",
+    "icon": "📝",
+    "sections": [
+      {
+        "name": "Keywords only",
+        "ar": "الكلمات المفتاحية فقط",
+        "icon": "🔑",
+        "def": "Don't write full sentences, only important words"
+      },
+      {
+        "name": "e.g.",
+        "ar": "على سبيل المثال",
+        "icon": "📌",
+        "def": "for example"
+      },
+      {
+        "name": "etc.",
+        "ar": "إلى آخره",
+        "icon": "🔄",
+        "def": "and so on"
+      },
+      {
+        "name": "w/",
+        "ar": "مع",
+        "icon": "➕",
+        "def": "with"
+      },
+      {
+        "name": "b/c",
+        "ar": "بسبب / لأن",
+        "icon": "❓",
+        "def": "because"
+      }
+    ],
+    "grammarFocus": {
+      "title": "مهارة كتابة الملاحظات (Study Skills: Note-Taking)",
+      "rule": "احذف أدوات التعريف (the/a/an) وأفعال الكينونة (am/is/are) واكتب جوهر الفكرة",
+      "examples": [
+        {
+          "en": "Note: shy girl -> speak teacher -> make friends",
+          "ar": "ملاحظة موجزة بدلاً من جملة طويلة"
+        }
+      ]
+    }
+  },
+  "267": {
+    "unit": 1,
+    "lessonNumber": 7,
+    "pages": [
+      10
+    ],
+    "titleAr": "مواقف محرجة وقصص طريفة",
+    "titleEn": "Embarrassing Moments - Storytelling",
+    "themeColor": "#ef4444",
+    "icon": "😳",
+    "sections": [
+      {
+        "name": "embarrassed",
+        "ar": "محرج / خجلان",
+        "icon": "🔴",
+        "def": "feeling shy or awkward because of an accident"
+      },
+      {
+        "name": "bump into",
+        "ar": "يصطدم بـ",
+        "icon": "💥",
+        "def": "to hit somebody or something by accident"
+      },
+      {
+        "name": "spill",
+        "ar": "يسكب السائل",
+        "icon": "☕",
+        "def": "to let liquid fall by mistake"
+      },
+      {
+        "name": "pour",
+        "ar": "يصب / يفرغ",
+        "icon": "🫗",
+        "def": "to make liquid flow"
+      }
+    ],
+    "grammarFocus": {
+      "title": "الربط بين الماضي المستمر والماضي البسيط (when)",
+      "rule": "Past Continuous (حدث مستمر طويل) + when + Past Simple (حدث مفاجئ قاطع)",
+      "examples": [
+        {
+          "en": "I was carrying a tray when I slipped.",
+          "ar": "كنت أحمل صينية عندما انزلقت."
+        },
+        {
+          "en": "He was looking at clothes when he walked into the mirror.",
+          "ar": "كان ينظر للملابس عندما اصطدم بالمرآة."
+        }
+      ]
+    }
+  },
+  "268": {
+    "unit": 1,
+    "lessonNumber": 8,
+    "pages": [
+      11
+    ],
+    "titleAr": "مجلة الشباب العالمية",
+    "titleEn": "The Global Youth Magazine",
+    "themeColor": "#06b6d4",
+    "icon": "🌍",
+    "sections": [
+      {
+        "name": "Pen friends",
+        "ar": "أصدقاء المراسلة",
+        "icon": "✉️",
+        "def": "friends who write letters to each other across countries"
+      },
+      {
+        "name": "Cultural exchange",
+        "ar": "التبادل الثقافي",
+        "icon": "🤝",
+        "def": "learning about traditions, food, and clothes of other nations"
+      },
+      {
+        "name": "Youth hobbies",
+        "ar": "هوايات الشباب",
+        "icon": "🎸",
+        "def": "music, sports, computer games, reading"
+      }
+    ],
+    "grammarFocus": {
+      "title": "المضارع التام مع ever و never (Experiences)",
+      "rule": "Have you ever + P.P? (للسؤال عن التجارب الحياتية)",
+      "examples": [
+        {
+          "en": "Have you ever written to a pen friend?",
+          "ar": "هل سبق لك أن راسلت صديق مراسلة؟"
+        },
+        {
+          "en": "I have never been to another country.",
+          "ar": "لم أسافر أبداً لدولة أخرى."
+        }
+      ]
+    }
+  },
+  "269": {
+    "unit": 1,
+    "lessonNumber": 9,
+    "pages": [
+      12
+    ],
+    "titleAr": "المراجعة الشاملة للوحدة الأولى",
+    "titleEn": "Unit 1 Round up & Master Review",
+    "themeColor": "#3b82f6",
+    "icon": "🎯",
+    "sections": [
+      {
+        "name": "All 9 sections",
+        "ar": "أقسام المجلة التسعة",
+        "icon": "📰",
+        "def": "Cartoons, Jokes, Poetry, Letters, Problem page, Interviews, News, Sports, Events"
+      },
+      {
+        "name": "Journalism jobs",
+        "ar": "وظائف الصحافة",
+        "icon": "💼",
+        "def": "editor, reporter, photographer, printer"
+      },
+      {
+        "name": "Time expressions",
+        "ar": "عبارات الوقت",
+        "icon": "⏳",
+        "def": "for (duration) vs since (starting point)"
+      },
+      {
+        "name": "Advice",
+        "ar": "النصيحة",
+        "icon": "💡",
+        "def": "should / shouldn't"
+      }
+    ],
+    "grammarFocus": {
+      "title": "ملخص قواعد الوحدة الأولى (Unit 1 Grammar Summary)",
+      "rule": "1. Possessive 's/s'  2. Present Perfect + for/since  3. Suggestions  4. Giving Advice",
+      "examples": [
+        {
+          "en": "The boys' school magazine is great.",
+          "ar": "مجلة مدرسة الأولاد رائعة."
+        },
+        {
+          "en": "You should study hard for exams.",
+          "ar": "ينبغي عليك أن تذاكر بجد للامتحانات."
+        }
+      ]
+    }
+  },
+  "270": {
+    "unit": 1,
+    "lessonNumber": 10,
+    "pages": [
+      13,
+      14
+    ],
+    "titleAr": "وقت القصة: جاد وجوني - جولة في لندن",
+    "titleEn": "Story Time: Jad & Johnny - A Tour of London",
+    "themeColor": "#84cc16",
+    "icon": "🎡",
+    "sections": [
+      {
+        "name": "Big Ben",
+        "ar": "ساعة بيغ بن",
+        "icon": "🕰️",
+        "def": "The famous clock tower in London"
+      },
+      {
+        "name": "London Eye",
+        "ar": "عين لندن",
+        "icon": "🎡",
+        "def": "A huge observation wheel on the South Bank of the River Thames"
+      },
+      {
+        "name": "Tower Bridge",
+        "ar": "جسر البرج",
+        "icon": "🌉",
+        "def": "The iconic bridge that opens for tall ships"
+      },
+      {
+        "name": "Double-decker",
+        "ar": "الحافلة ذات الطابقين",
+        "icon": "🚌",
+        "def": "The famous red London bus with two floors"
+      }
+    ],
+    "grammarFocus": {
+      "title": "مفردات القصة والوصف (Story Vocabulary & Imagery)",
+      "rule": "استخدام الصفات الوصفية: amazing, massive, iconic, excited",
+      "examples": [
+        {
+          "en": "The view from the London Eye was amazing!",
+          "ar": "كان المنظر من عين لندن مذهلاً!"
+        },
+        {
+          "en": "We took a red double-decker bus to Tower Bridge.",
+          "ar": "ركبنا الحافلة الحمراء ذات الطابقين إلى جسر البرج."
+        }
+      ]
+    }
+  },
+  "271": {
+    "unit": 1,
+    "lessonNumber": 11,
+    "pages": [
+      15,
+      16
+    ],
+    "titleAr": "مشروع الوحدة: يومي الأول في المدرسة",
+    "titleEn": "Project 1: My First Day at School",
+    "themeColor": "#6366f1",
+    "icon": "🎒",
+    "sections": [
+      {
+        "name": "Preparation",
+        "ar": "التحضير",
+        "icon": "👕",
+        "def": "Wearing new uniform, packing the school bag"
+      },
+      {
+        "name": "Feelings",
+        "ar": "المشاعر",
+        "icon": "💭",
+        "def": "nervous (مرتبك), excited (متحمس), shy (خجول)"
+      },
+      {
+        "name": "Meeting People",
+        "ar": "اللقاءات الأولى",
+        "icon": "👥",
+        "def": "Meeting the friendly teachers and making new classmates"
+      },
+      {
+        "name": "Conclusion",
+        "ar": "الخاتمة",
+        "icon": "🌟",
+        "def": "How I learned that school is an adventure of knowledge"
+      }
+    ],
+    "grammarFocus": {
+      "title": "كتابة مقال سردي منظم (Narrative Paragraph Writing)",
+      "rule": "Topic sentence + Supporting details (chronological order) + Concluding sentence",
+      "examples": [
+        {
+          "en": "I will never forget my first day at intermediate school.",
+          "ar": "لن أنسى أبداً يومي الأول في المدرسة المتوسطة."
+        }
+      ]
+    }
+  }
+};
