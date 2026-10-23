@@ -462,16 +462,21 @@
       color: white;
     }
 
-    .audio-speed-select {
+    .audio-speed-select, .audio-voice-select {
       background: rgba(255, 255, 255, 0.15);
       color: white;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       padding: 0.25rem 0.5rem;
       border-radius: 6px;
       font-size: 0.75rem;
+      cursor: pointer;
     }
 
-    .audio-speed-select option {
+    .audio-voice-select {
+      max-width: 175px;
+    }
+
+    .audio-speed-select option, .audio-voice-select option {
       color: #0f172a;
       background: white;
     }
@@ -961,14 +966,23 @@
               </button>
             </div>
             
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
               <span style="font-size: 0.75rem; color: #cbd5e1;" id="audioPlayerStatus">جاهز للاستماع</span>
+
               <div style="display: flex; align-items: center; gap: 0.25rem;">
-                <span style="font-size: 0.7rem; color: #94a3b8;">السرعة:</span>
+                <span style="font-size: 0.7rem; color: #cbd5e1;">🎙️ نبرة الصوت:</span>
+                <select class="audio-voice-select" id="audioVoiceSelect" onchange="audioPlayer.setSelectedVoice(this.value)" title="اختر الصوت البشري المناسب">
+                  <option value="auto">✨ طبيعي ذكي (الأفضل تلقائياً)</option>
+                </select>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.25rem;">
+                <span style="font-size: 0.7rem; color: #cbd5e1;">⚡ سرعة النطق:</span>
                 <select class="audio-speed-select" id="audioSpeedSelect" onchange="audioPlayer.setSpeed(this.value)">
-                  <option value="0.8">0.8x بطيء</option>
-                  <option value="1.0" selected>1.0x عادي</option>
-                  <option value="1.2">1.2x سريع</option>
+                  <option value="0.75">0.75x متأنٍ جداً</option>
+                  <option value="0.82" selected>0.82x هادئ طبيعي (موصى به)</option>
+                  <option value="0.92">0.92x معتدل</option>
+                  <option value="1.0">1.00x عادي</option>
                 </select>
               </div>
             </div>
@@ -1269,24 +1283,144 @@
     let currentQuizQuestions = [];
     let currentActiveGrammarFilter = 'all';
 
-    // محرك القراءة الصوتية Text-to-Speech (مسموع وفصيح)
+    // ----------------------------------------------------
+    // محرك القراءة الصوتية الفصيحة البشرية (Natural Human-like TTS)
+    // ----------------------------------------------------
     const audioPlayer = {
       synth: window.speechSynthesis,
       isPlaying: false,
       isPaused: false,
-      speed: 1.0,
+      speed: 0.82, // سرعة هادئة ومتأنية ومناسبة للتعلم وفهم النطق
+      pitch: 1.0,  // نبرة طبيعية معتدلة
+      selectedVoiceName: localStorage.getItem('preferred_voice_name') || 'auto',
+      voicesList: [],
       chunks: [],
       currentChunkIdx: 0,
 
-      getVoice(lang = 'en') {
-        if (!this.synth) return null;
-        const voices = this.synth.getVoices();
-        if (lang === 'en') {
-          return voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online'))) ||
-                 voices.find(v => v.lang.startsWith('en')) || null;
-        } else {
-          return voices.find(v => v.lang.startsWith('ar')) || null;
+      init() {
+        if (!this.synth) return;
+        this.loadVoices();
+        if (this.synth.onvoiceschanged !== undefined) {
+          this.synth.onvoiceschanged = () => this.loadVoices();
         }
+        const savedSpeed = localStorage.getItem('preferred_speech_speed');
+        if (savedSpeed) {
+          this.speed = parseFloat(savedSpeed);
+          const sel = document.getElementById('audioSpeedSelect');
+          if (sel) sel.value = savedSpeed;
+        }
+      },
+
+      loadVoices() {
+        if (!this.synth) return;
+        this.voicesList = this.synth.getVoices() || [];
+        this.populateVoiceSelect();
+      },
+
+      populateVoiceSelect() {
+        const sel = document.getElementById('audioVoiceSelect');
+        if (!sel) return;
+
+        // تصفية الأصوات الإنجليزية المتاحة
+        const enVoices = this.voicesList.filter(v => v.lang.startsWith('en'));
+        if (enVoices.length === 0) return;
+
+        // ترتيب الأصوات بحيث تظهر الأصوات الطبيعية والبشرية في البداية
+        enVoices.sort((a, b) => this.rateVoiceNaturalness(b) - this.rateVoiceNaturalness(a));
+
+        sel.innerHTML = '<option value="auto">✨ طبيعي ذكي (الأفضل تلقائياً)</option>';
+        enVoices.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.name;
+          const isNatural = v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online');
+          opt.innerText = (isNatural ? '🌟 ' : '') + `${v.name} (${v.lang})`;
+          if (v.name === this.selectedVoiceName) {
+            opt.selected = true;
+          }
+          sel.appendChild(opt);
+        });
+      },
+
+      rateVoiceNaturalness(voice) {
+        if (!voice) return 0;
+        let score = 0;
+        const name = (voice.name || '').toLowerCase();
+        const lang = (voice.lang || '').toLowerCase();
+
+        // أصوات مايكروسوفت الطبيعية (Edge Neural) - الأكثر نقاءً وبشرية
+        if (name.includes('online (natural)') || name.includes('natural')) score += 100;
+        if (name.includes('sonia') || name.includes('libby') || name.includes('ryan')) score += 50; // لكنة بريطانية ملائمة للمنهج
+        if (name.includes('jenny') || name.includes('aria') || name.includes('guy')) score += 40;
+
+        // أصوات جوجل عالية الجودة (Chrome)
+        if (name.includes('google uk english female') || name.includes('google uk english male')) score += 75;
+        if (name.includes('google us english')) score += 65;
+
+        // أصوات أبل الطبيعية
+        if (name.includes('samantha') || name.includes('daniel') || name.includes('serena') || name.includes('oliver')) score += 55;
+
+        // إعطاء أولوية للغة الإنجليزية البريطانية لمطابقة منهج العراق
+        if (lang === 'en-gb') score += 20;
+        else if (lang === 'en-us') score += 10;
+
+        // خفض تقييم الأصوات القديمة والروبوتية
+        if (name.includes('desktop') || name.includes('david') || name.includes('hazel') || name.includes('george')) score -= 30;
+
+        return score;
+      },
+
+      getBestVoice(lang = 'en') {
+        if (!this.synth) return null;
+        if (this.voicesList.length === 0) {
+          this.voicesList = this.synth.getVoices() || [];
+        }
+
+        // إذا اختار المستخدم صوتاً محدداً يدوياً
+        if (this.selectedVoiceName && this.selectedVoiceName !== 'auto') {
+          const customVoice = this.voicesList.find(v => v.name === this.selectedVoiceName);
+          if (customVoice) return customVoice;
+        }
+
+        // الاختيار الذكي التلقائي لأفضل وأكثر صوت بشري طبيعي
+        if (lang === 'en') {
+          const enVoices = this.voicesList.filter(v => v.lang.startsWith('en'));
+          if (enVoices.length > 0) {
+            enVoices.sort((a, b) => this.rateVoiceNaturalness(b) - this.rateVoiceNaturalness(a));
+            return enVoices[0];
+          }
+        } else {
+          // اللغة العربية (للشرح أو إجابات المعلم)
+          const arVoices = this.voicesList.filter(v => v.lang.startsWith('ar'));
+          if (arVoices.length > 0) {
+            return arVoices.find(v => v.name.includes('Natural') || v.name.includes('Google')) || arVoices[0];
+          }
+        }
+        return null;
+      },
+
+      cleanTextForSpeech(text) {
+        if (!text) return '';
+        return text
+          .replace(/[•📌📄🔹💡🔍📖]/g, '')
+          // استبدال اختصارات المنهج بكلمات منطوقة طبيعية وواضحة
+          .replace(/\(n\.\)/gi, ', noun, ')
+          .replace(/\(v\.\)/gi, ', verb, ')
+          .replace(/\(adj\.\)/gi, ', adjective, ')
+          .replace(/\(adv\.\)/gi, ', adverb, ')
+          .replace(/\be\.g\.\b/gi, 'for example, ')
+          .replace(/\betc\.\b/gi, ', and so on. ')
+          .replace(/\bw\/\b/gi, 'with ')
+          .replace(/\bb\/c\b/gi, 'because ')
+          .replace(/\bA\.M\.I\.S\.G\.\b/g, 'A, M, I, S, G')
+          .replace(/\bPOssessive\b/g, 'Possessive')
+          .replace(/\bAI Mustafa\b/g, 'Al Mustafa')
+          .replace(/\bAI-Sayyab\b/g, 'Al Sayyab')
+          .replace(/\bAB\s+\d+-\d+\b/gi, '') // إزالة أرقام كتاب النشاط الجانبية
+          // تحويل الأسطر والنقاط إلى وقفات نطق بشرية طبيعية
+          .replace(/([a-zA-Z0-9])\n+([a-zA-Z0-9])/g, '$1. $2')
+          .replace(/\s*-\s*/g, ', ')
+          .replace(/\s+/g, ' ')
+          .trim();
       },
 
       speakText(text, lang = 'en', onDone = null) {
@@ -1295,14 +1429,25 @@
           return;
         }
         this.synth.cancel();
-        
-        // تنظيف النص للقراءة المريحة
-        const cleanText = text.replace(/[•📌📄]/g, '').trim();
+
+        const cleanText = this.cleanTextForSpeech(text);
+        if (!cleanText) {
+          if (onDone) onDone();
+          return;
+        }
+
         const utt = new SpeechSynthesisUtterance(cleanText);
-        utt.rate = this.speed;
-        const voice = this.getVoice(lang);
-        if (voice) utt.voice = voice;
-        utt.lang = lang === 'en' ? 'en-US' : 'ar-SA';
+        utt.rate = this.speed;   // السرعة الهادئة المتأنية (افتراضياً 0.82)
+        utt.pitch = this.pitch;  // النبرة الطبيعية المعتدلة 1.0
+        utt.volume = 1.0;
+
+        const voice = this.getBestVoice(lang);
+        if (voice) {
+          utt.voice = voice;
+          utt.lang = voice.lang;
+        } else {
+          utt.lang = lang === 'en' ? 'en-GB' : 'ar-SA';
+        }
 
         utt.onend = () => {
           this.isPlaying = false;
@@ -1361,7 +1506,12 @@
         const isEnglish = /[a-zA-Z]{3,}/.test(current.text);
         this.speakText(current.text, isEnglish ? 'en' : 'ar', () => {
           this.currentChunkIdx++;
-          this.readNextChunk();
+          // مهلة بسيطة ومريحة بين المقاطع لمحاكاة التوقف البشري
+          setTimeout(() => {
+            if (this.isPlaying) {
+              this.readNextChunk();
+            }
+          }, 350);
         });
       },
 
@@ -1394,8 +1544,18 @@
         this.updateButtons();
       },
 
+      setSelectedVoice(voiceName) {
+        this.selectedVoiceName = voiceName;
+        localStorage.setItem('preferred_voice_name', voiceName);
+        if (this.isPlaying) {
+          this.stop();
+          this.playCurrentLesson();
+        }
+      },
+
       setSpeed(val) {
         this.speed = parseFloat(val);
+        localStorage.setItem('preferred_speech_speed', val);
       },
 
       updateStatus(msg) {
@@ -1427,6 +1587,7 @@
 
     // تهيئة التطبيق عند بدء التشغيل
     function initApp() {
+      audioPlayer.init();
       try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
