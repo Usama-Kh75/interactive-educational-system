@@ -331,9 +331,18 @@
     /* شاشة المذاكرة المتكاملة */
     .study-layout {
       display: grid;
-      grid-template-columns: 310px 1fr 370px;
+      grid-template-columns: 300px 1fr 350px;
       gap: 1rem;
       height: calc(100vh - 8rem);
+      transition: grid-template-columns 0.3s ease;
+    }
+
+    .study-layout.focus-mode {
+      grid-template-columns: 280px 1fr !important;
+    }
+
+    .study-layout.focus-mode .ai-chat-panel {
+      display: none !important;
     }
 
     @media (max-width: 1100px) {
@@ -418,23 +427,26 @@
 
     /* شريط القارئ الصوتي التفاعلي */
     .audio-player-bar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
       background: linear-gradient(135deg, #1e1b4b, #312e81);
       color: white;
-      border-radius: 10px;
-      padding: 0.65rem 1rem;
-      margin-bottom: 0.9rem;
+      border-radius: 8px;
+      padding: 0.6rem 0.85rem;
+      margin: 0.5rem 0.75rem 0.6rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.75rem;
+      gap: 0.6rem;
       flex-wrap: wrap;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
     }
 
     .audio-player-controls {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
     }
 
     .audio-btn {
@@ -458,8 +470,9 @@
     }
 
     .audio-btn.danger {
-      background: #ef4444;
-      color: white;
+      background: #dc2626 !important;
+      color: white !important;
+      font-weight: 800;
     }
 
     .audio-speed-select, .audio-voice-select {
@@ -481,6 +494,227 @@
       background: white;
     }
 
+    /* بطاقة موقع الدرس والوحدة والصفحة في الكتاب */
+    .lesson-breadcrumb-banner {
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      border-bottom: 2px solid var(--slate-200);
+      padding: 0.85rem 1rem;
+    }
+
+    .breadcrumb-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .breadcrumb-unit-badge {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #4338ca;
+      background: #e0e7ff;
+      border: 1px solid #c7d2fe;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .breadcrumb-lesson-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 0 0 0.5rem 0;
+      line-height: 1.4;
+    }
+
+    .breadcrumb-coords-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+    }
+
+    .coord-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .coord-badge.student-book {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+
+    .coord-badge.activity-book {
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* شاشة القراءة المباشرة (Teleprompter) */
+    .live-teleprompter-card {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      border: 2px solid #6366f1;
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+    }
+
+    .teleprompter-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 0.35rem;
+    }
+
+    .pulsing-record-dot {
+      width: 9px;
+      height: 9px;
+      background: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseRecord 1s infinite;
+    }
+
+    @keyframes pulseRecord {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .speaker-tag {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: #e0e7ff;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .teleprompter-text-body {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.7;
+      color: #fef08a; /* أصفر ذهبي ساطع عالي الوضوح */
+      letter-spacing: 0.3px;
+    }
+
+    /* شريط المشغل الصوتي العائم الثابت بالأسفل */
+    .floating-audio-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 2px solid var(--primary);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+      padding: 0.65rem 1.25rem;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      color: white;
+    }
+
+    .floating-audio-bar.hidden-float {
+      transform: translateY(110%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .floating-bar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .float-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 800;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s;
+    }
+
+    .float-stop-btn {
+      background: #dc2626 !important;
+      color: white !important;
+      font-size: 0.9rem !important;
+      padding: 0.5rem 1.2rem !important;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+      animation: pulseStopBtn 2s infinite;
+    }
+
+    @keyframes pulseStopBtn {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+      50% { box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.2); }
+    }
+
+    .float-pause-btn {
+      background: #334155;
+      color: white;
+    }
+
+    .float-pause-btn:hover {
+      background: #475569;
+    }
+
+    .floating-teleprompter {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .floating-teleprompter-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      margin-bottom: 0.2rem;
+      color: #94a3b8;
+    }
+
+    .teleprompter-pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+    }
+
+    .floating-teleprompter-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fef08a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 580px;
+    }
+
     /* مقاطع الدرس والمصادر */
     .chunk-box {
       background: var(--slate-50);
@@ -494,9 +728,11 @@
     }
 
     .chunk-box.active-reading {
-      border: 2px solid var(--primary);
-      background: #eef2ff !important;
-      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+      border: 2px solid #4f46e5 !important;
+      background: #eff6ff !important;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25), 0 4px 12px rgba(0,0,0,0.08) !important;
+      border-right: 5px solid #4f46e5 !important;
+      transform: translateY(-2px);
     }
 
     .chunk-meta {
@@ -795,7 +1031,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.2</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.3</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -828,6 +1064,11 @@
         </button>
       </nav>
 
+      <!-- زر إيقاف الصوت السريع الطارئ (يظهر أثناء القراءة فقط) -->
+      <button class="btn btn-sm" id="headerEmergencyStopBtn" onclick="audioPlayer.stop()" style="display: none; background: #dc2626; color: white; font-weight: 800; align-items: center; gap: 0.35rem; box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.4);" title="إيقاف القراءة الصوتية فوراً">
+        <span>⏹️</span> إيقاف الصوت النشط
+      </button>
+
       <!-- زر استوديو الصوت البشري المتقدم -->
       <button class="btn btn-sm" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;" title="استوديو ضبط ومعاينة الصوت البشري المتقدم">
         <span>🎙️</span> استوديو الصوت
@@ -853,7 +1094,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.2</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.3</span>
         </div>
         <h2>نظامك التعليمي التفاعلي الشخصي</h2>
         <p>
@@ -951,10 +1192,20 @@
         <!-- اللوحة الوسطى: نصوص الدرس ومصادره الأصلية والقراءة الصوتية -->
         <div class="panel">
           <div class="panel-header">
-            <span id="currentLessonHeader">محتوى الدرس</span>
-            <span id="lessonChunksCountBadge" style="font-size: 0.75rem; background: var(--slate-200); padding: 0.15rem 0.5rem; border-radius: 9999px;">
-              0 مقاطع
-            </span>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span id="currentLessonHeader" style="font-weight: 800; font-size: 0.95rem;">محتوى الدرس المعتمد</span>
+              <span id="lessonChunksCountBadge" style="font-size: 0.72rem; background: var(--slate-200); padding: 0.15rem 0.55rem; border-radius: 9999px;">
+                0 مقاطع
+              </span>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="toggleFocusMode()" id="focusModeBtn" title="تكبير مساحة المذاكرة وإخفاء الشريط الجانبي" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;">
+              <span>👁️</span> وضع التركيز (ملء الشاشة)
+            </button>
+          </div>
+
+          <!-- بطاقة موقع الدرس والوحدة والصفحة في الكتاب (Breadcrumb Banner) -->
+          <div id="lessonBreadcrumbBanner" class="lesson-breadcrumb-banner">
+            <!-- يتم تعبئتها ديناميكياً بكل تفاصيل الوحدة والدرس والكتاب المعتمد -->
           </div>
 
           <!-- شريط القارئ الصوتي التفاعلي المسموع -->
@@ -966,8 +1217,8 @@
               <button class="audio-btn" onclick="audioPlayer.pause()">
                 <span>⏸️</span> إيقاف مؤقت
               </button>
-              <button class="audio-btn danger" onclick="audioPlayer.stop()">
-                <span>⏹️</span> إيقاف
+              <button class="audio-btn danger" onclick="audioPlayer.stop()" style="background: #dc2626 !important; color: white !important; font-weight: 800;">
+                <span>⏹️</span> إيقاف فوري
               </button>
               <button class="audio-btn" onclick="openVoiceStudioModal()" style="background: rgba(99, 102, 241, 0.45); border: 1px solid rgba(165, 180, 252, 0.5);" title="استوديو ضبط ومعاينة الصوت البشري المتقدم">
                 <span>⚙️</span> استوديو الصوت
@@ -1007,15 +1258,33 @@
             <!-- يتم تعبئتها ديناميكياً بصفحات الكتاب والبطاقات البصرية المصممة -->
           </div>
 
-          <div class="panel-body" id="lessonChunksContainer">
-            <div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">
-              يرجى اختيار درس من القائمة لعرض نصوصه ومراجعه.
+          <!-- شاشة القراءة المباشرة (Live Teleprompter) ونصوص الدرس -->
+          <div class="panel-body" id="lessonChunksContainerWrapper" style="padding: 0.75rem 1rem;">
+            <!-- شاشة القراءة المباشرة -->
+            <div id="liveTeleprompterBox" class="live-teleprompter-card" style="display: none;">
+              <div class="teleprompter-top">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="pulsing-record-dot"></span>
+                  <span style="font-size: 0.78rem; font-weight: 800; color: #c7d2fe;">🎙️ متابعة القراءة المباشرة (Live Speech Tracking)</span>
+                </div>
+                <span id="teleprompterSpeakerBadge" class="speaker-tag">قارئ المنهج 🔊</span>
+              </div>
+              <div id="teleprompterCurrentText" class="teleprompter-text-body">
+                ...
+              </div>
+            </div>
+
+            <!-- قائمة نصوص ومقاطع الدرس -->
+            <div id="lessonChunksContainer">
+              <div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">
+                يرجى اختيار درس من القائمة لعرض نصوصه ومراجعه.
+              </div>
             </div>
           </div>
         </div>
 
         <!-- اللوحة اليسرى: المعلم والمساعد الذكي الموثق -->
-        <div class="panel">
+        <div class="panel ai-chat-panel" id="aiChatPanel">
           <div class="panel-header">
             <span>المعلم الذكي الموثق</span>
             <label style="font-size: 0.75rem; display: flex; align-items: center; gap: 0.25rem; font-weight: normal; cursor: pointer;">
@@ -1167,7 +1436,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.2</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.3</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1176,6 +1445,7 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v2.3.3 (أكتوبر 2026):</strong> إضافة المشغل الصوتي العائم الماستر الدائم (Fixed Floating Player) مع زر إيقاف فوري بارز، وتدشين شاشة القراءة المباشرة (Live Teleprompter Tracking)، وتوثيق موضع الدرس ورقم الوحدة وصفحات كتاب الطالب والنشاط ببطاقة تفصيلية مخصصة، ودعم وضع التركيز (Focus Mode) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.2 (أكتوبر 2026):</strong> استوديو ضبط ومعاينة الصوت البشري المتقدم (Voice Studio)، ومحرك المحادثات التبادلية متعددة الشخصيات (Multi-Speaker Dialogue Engine) بتبديل الأصوات والنبرات والوقفات الحوارية الطبيعية تلقائياً دون الحاجة لملفات صوتية خارجية - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.0 (أكتوبر 2026):</strong> إنجاز متطلبات الوحدة الثانية بالكامل (نمط الحياة الصحي - Healthy Lifestyle: الصفحات 17 إلى 27)، وتزويد كافة دروسها الـ 11 بالمعرض البصري لصفحات الكتاب المعتمدة وبطاقات المفاهيم المصورة، و7 قواعد نحوية تفصيلية مع اختبارات تفاعلية فورية ومحرك إجابة ذكي معتمد بالصفحات - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.2.0 (أكتوبر 2026):</strong> تقسيم خطة العمل إلى وحدات دراسية وتطويرية مستقلة (Unit-by-Unit)، ودعم الدروس بالصور التوضيحية لصفحات الكتاب المدرسي المعتمد (120 صفحة مدمجة)، وميزة التكبير (Modal Lightbox)، وتصميم بطاقات المفاهيم البصرية الشاملة لجميع دروس الوحدة الأولى (11 درساً) بإشراف إعداد المهندس أسامة خليل هاشم.</div>
@@ -1196,7 +1466,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.3.2</span>
+        <span class="version-badge">v2.3.3</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1386,10 +1656,47 @@
     </div>
   </div>
 
+  <!-- شريط المشغل الصوتي العائم الثابت بالأسفل (Master Floating Player) -->
+  <div id="floatingAudioPlayerBar" class="floating-audio-bar hidden-float" style="display: none;">
+    <div class="floating-bar-inner">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <button class="float-btn float-stop-btn" onclick="audioPlayer.stop()" title="إيقاف القراءة الصوتية فوراً">
+          <span>⏹️</span> إيقاف القراءة
+        </button>
+        <button class="float-btn float-pause-btn" id="floatingPauseBtn" onclick="audioPlayer.togglePause()">
+          <span>⏸️</span> مؤقت
+        </button>
+      </div>
+
+      <div class="floating-teleprompter">
+        <div class="floating-teleprompter-header">
+          <span class="teleprompter-pulse-dot"></span>
+          <span id="floatingPlayerSpeakerBadge" class="speaker-tag">قارئ المنهج 🔊</span>
+          <span id="floatingPlayerLocationTag" style="font-size: 0.72rem; color: #cbd5e1;">الوحدة 1 ⮞ الدرس 1 ⮞ صفحة 4</span>
+        </div>
+        <div id="floatingPlayerCurrentText" class="floating-teleprompter-text">
+          جملة القراءة المنطوقة حالياً...
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.4rem;">
+        <select class="audio-speed-select" id="floatingSpeedSelect" onchange="audioPlayer.setSpeed(this.value)" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.3); font-size: 0.8rem; padding: 0.35rem 0.6rem;">
+          <option value="0.75">0.75x متأنٍ</option>
+          <option value="0.82" selected>0.82x هادئ</option>
+          <option value="0.92">0.92x معتدل</option>
+          <option value="1.0">1.00x عادي</option>
+        </select>
+        <button class="float-btn" onclick="openVoiceStudioModal()" title="إعدادات الصوت المتقدمة" style="background: rgba(99, 102, 241, 0.4); padding: 0.4rem 0.75rem;">
+          ⚙️
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const SYSTEM_VERSION = 'v2.3.2';
+    const SYSTEM_VERSION = 'v2.3.3';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     
     // حالة النظام
@@ -1700,6 +2007,7 @@
 
           const label = turn.speakerName ? ` (${turn.speakerName})` : ` (المتحدث ${turn.speaker + 1})`;
           this.updateStatus(`حوار جارٍ${label}... 🎙️`);
+          this.showFloatingPlayer(cleanTurn, `حوار: ${turn.speakerName || ('المتحدث ' + (turn.speaker + 1))} 🎙️`);
 
           utt.onend = () => {
             idx++;
@@ -1746,10 +2054,13 @@
           utt.lang = lang === 'en' ? 'en-GB' : 'ar-SA';
         }
 
+        this.showFloatingPlayer(cleanText, 'قراءة النص 🔊');
+
         utt.onend = () => {
           this.isPlaying = false;
           this.isPaused = false;
           this.updateButtons();
+          this.hideFloatingPlayer();
           if (onDone) onDone();
         };
 
@@ -1758,6 +2069,7 @@
           this.isPlaying = false;
           this.isPaused = false;
           this.updateButtons();
+          this.hideFloatingPlayer();
         };
 
         this.isPlaying = true;
@@ -1800,6 +2112,10 @@
         this.updateStatus(`جارِ قراءة المقطع ${this.currentChunkIdx + 1} من ${this.chunks.length}... 🔊`);
         this.updateButtons();
 
+        const chunkMetaSpan = current.el.querySelector('.chunk-meta span');
+        const chunkHeading = chunkMetaSpan ? chunkMetaSpan.innerText : `المقطع ${this.currentChunkIdx + 1}`;
+        this.showFloatingPlayer(current.text, chunkHeading);
+
         const isEnglish = /[a-zA-Z]{3,}/.test(current.text);
         this.speakSmart(current.text, isEnglish ? 'en' : 'ar', () => {
           this.currentChunkIdx++;
@@ -1817,6 +2133,8 @@
           this.isPaused = true;
           this.updateStatus('متوقف مؤقتاً ⏸️');
           this.updateButtons();
+          const floatText = document.getElementById('floatingPlayerCurrentText');
+          if (floatText) floatText.innerText = '⏸️ القراءة متوقفة مؤقتاً - انقر على استئناف للمتابعة';
         }
       },
 
@@ -1829,6 +2147,14 @@
         }
       },
 
+      togglePause() {
+        if (this.isPaused) {
+          this.resume();
+        } else if (this.isPlaying) {
+          this.pause();
+        }
+      },
+
       stop() {
         if (this.synth) {
           this.synth.cancel();
@@ -1838,6 +2164,57 @@
         document.querySelectorAll('.chunk-box').forEach(b => b.classList.remove('active-reading'));
         this.updateStatus('جاهز للاستماع');
         this.updateButtons();
+        this.hideFloatingPlayer();
+      },
+
+      showFloatingPlayer(text, speakerLabel) {
+        const floatBar = document.getElementById('floatingAudioPlayerBar');
+        const floatText = document.getElementById('floatingPlayerCurrentText');
+        const floatSpeaker = document.getElementById('floatingPlayerSpeakerBadge');
+        const floatLoc = document.getElementById('floatingPlayerLocationTag');
+        const headerStopBtn = document.getElementById('headerEmergencyStopBtn');
+
+        const liveBox = document.getElementById('liveTeleprompterBox');
+        const liveText = document.getElementById('teleprompterCurrentText');
+        const liveSpeaker = document.getElementById('teleprompterSpeakerBadge');
+
+        const clean = text ? text.replace(/[•📌📄🔹💡🔍📖]/g, '').trim() : '';
+
+        if (floatBar) {
+          floatBar.style.display = 'flex';
+          setTimeout(() => floatBar.classList.remove('hidden-float'), 10);
+        }
+        if (floatText) floatText.innerText = clean || 'جارِ القراءة...';
+        if (floatSpeaker) floatSpeaker.innerText = speakerLabel || 'قارئ الدرس 🔊';
+
+        const bUnit = document.getElementById('breadcrumbUnitBadge');
+        const bTitle = document.getElementById('breadcrumbLessonTitle');
+        if (floatLoc && bUnit && bTitle) {
+          const uStr = bUnit.innerText.replace('📚', '').trim().split('(')[0];
+          const lStr = bTitle.innerText.trim().split('(')[0];
+          floatLoc.innerText = `${uStr} ⮞ ${lStr}`;
+        }
+
+        if (liveBox) liveBox.style.display = 'block';
+        if (liveText) liveText.innerText = clean || 'جارِ القراءة...';
+        if (liveSpeaker) liveSpeaker.innerText = speakerLabel || 'النص المقروء حالياً 🔊';
+
+        if (headerStopBtn) headerStopBtn.style.display = 'inline-flex';
+      },
+
+      hideFloatingPlayer() {
+        const floatBar = document.getElementById('floatingAudioPlayerBar');
+        const liveBox = document.getElementById('liveTeleprompterBox');
+        const headerStopBtn = document.getElementById('headerEmergencyStopBtn');
+
+        if (floatBar) {
+          floatBar.classList.add('hidden-float');
+          setTimeout(() => {
+            if (!this.isPlaying) floatBar.style.display = 'none';
+          }, 300);
+        }
+        if (liveBox) liveBox.style.display = 'none';
+        if (headerStopBtn) headerStopBtn.style.display = 'none';
       },
 
       setSelectedVoice(voiceName) {
@@ -1859,6 +2236,8 @@
         localStorage.setItem('preferred_speech_speed', val);
         const sel = document.getElementById('audioSpeedSelect');
         if (sel) sel.value = val;
+        const floatSel = document.getElementById('floatingSpeedSelect');
+        if (floatSel) floatSel.value = val;
         const slider = document.getElementById('studioSpeedSlider');
         if (slider) slider.value = val;
         const valText = document.getElementById('studioSpeedVal');
@@ -1899,6 +2278,20 @@
             playBtn.innerHTML = '<span>▶️</span> استمع للدرس بصوت مسموع';
             playBtn.onclick = () => audioPlayer.playCurrentLesson();
           }
+        }
+        const floatPauseBtn = document.getElementById('floatingPauseBtn');
+        if (floatPauseBtn) {
+          if (this.isPlaying && !this.isPaused) {
+            floatPauseBtn.innerHTML = '<span>⏸️</span> مؤقت';
+          } else if (this.isPaused) {
+            floatPauseBtn.innerHTML = '<span>▶️</span> استئناف';
+          } else {
+            floatPauseBtn.innerHTML = '<span>⏸️</span> مؤقت';
+          }
+        }
+        const headerStopBtn = document.getElementById('headerEmergencyStopBtn');
+        if (headerStopBtn) {
+          headerStopBtn.style.display = this.isPlaying ? 'inline-flex' : 'none';
         }
       }
     };
@@ -2283,7 +2676,7 @@
       const chunksContainer = document.getElementById('lessonChunksContainer');
       const headerSpan = document.getElementById('currentLessonHeader');
       const countBadge = document.getElementById('lessonChunksCountBadge');
-      const lessonGrammarAlert = document.getElementById('lessonGrammarAlert');
+      const breadcrumbEl = document.getElementById('lessonBreadcrumbBanner');
 
       // البحث عن الدرس المختار في الهيكلية
       let activeLesson = null;
@@ -2300,11 +2693,14 @@
       }
 
       if (!activeLesson) {
-        chunksContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">يرجى اختيار درس من القائمة.</div>';
+        if (chunksContainer) chunksContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">يرجى اختيار درس من القائمة.</div>';
         return;
       }
 
-      headerSpan.innerText = `${activeLesson.title} (${activeChapter ? activeChapter.title.split('(')[0] : ''})`;
+      const unitTitle = activeChapter ? activeChapter.title : 'الوحدة الدراسية';
+      const lessonTitle = activeLesson.title;
+
+      if (headerSpan) headerSpan.innerText = `${lessonTitle}`;
 
       // فحص القواعد المرتبطة بهذا الدرس
       updateLessonGrammarAlert(activeLesson);
@@ -2331,10 +2727,57 @@
         chunks = activeLesson.chunks || [];
       }
 
-      // عرض المعرض البصري والرسوم التوضيحية لصفحات الكتاب والبطاقات المصممة
+      const rawPages = (chunks || []).map(ch => ch.page || ch.page_number).filter(Boolean);
+      const pages = [...new Set(rawPages)];
+      const studentPageText = pages.length > 0 ? pages.join(', ') : '4';
+
+      let activityBookText = '';
+      for (const ch of chunks) {
+        const full = (ch.heading || '') + ' ' + (ch.text || ch.content_text || '');
+        const abM = full.match(/\bAB\s*(\d+(?:-\d+)?)\b/i);
+        if (abM) {
+          activityBookText = `صفحة (${abM[1]})`;
+          break;
+        }
+      }
+
+      // تحديث بطاقة موقع الدرس والوحدة والصفحة في الكتاب المعتمد
+      if (breadcrumbEl) {
+        breadcrumbEl.innerHTML = `
+          <div class="breadcrumb-top-row">
+            <div class="breadcrumb-unit-badge" id="breadcrumbUnitBadge">
+              <span>📚</span> ${unitTitle}
+            </div>
+            <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700;">
+              المنهج الوزاري المعتمد
+            </div>
+          </div>
+          <h2 class="breadcrumb-lesson-title" id="breadcrumbLessonTitle">
+            ${lessonTitle}
+          </h2>
+          <div class="breadcrumb-coords-row">
+            <div class="coord-badge student-book" id="breadcrumbStudentBookPage">
+              📖 <strong>كتاب الطالب (SB):</strong> صفحة ${studentPageText}
+            </div>
+            ${activityBookText ? `
+              <div class="coord-badge activity-book">
+                📝 <strong>كتاب النشاط (AB):</strong> ${activityBookText}
+              </div>
+            ` : ''}
+            <button class="btn btn-primary btn-sm" onclick="openBookPageModal(${pages[0] || 4}, \`${escapeForAttribute(lessonTitle)}\`)" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
+              🔍 فتح صفحة الكتاب الأصلية (${pages[0] || 4})
+            </button>
+            <button class="btn btn-secondary btn-sm" id="toggleVisualBtn" onclick="toggleMediaSection('lessonMediaVisualContainer')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
+              🎨 عرض بطاقة المفاهيم المصورة
+            </button>
+          </div>
+        `;
+      }
+
+      // تحديث المعرض البصري والرسوم التوضيحية لصفحات الكتاب والبطاقات المصممة
       renderLessonMediaGallery(activeLesson, activeChapter, chunks);
 
-      countBadge.innerText = `${chunks.length} مقاطع معتمدة`;
+      if (countBadge) countBadge.innerText = `${chunks.length} مقاطع معتمدة`;
       chunksContainer.innerHTML = '';
 
       if (chunks.length === 0) {
@@ -2344,7 +2787,7 @@
 
       chunks.forEach((ch, idx) => {
         const text = ch.content_text || ch.text || '';
-        const page = ch.page_number || ch.page || 1;
+        const page = ch.page || ch.page_number || 1;
         const heading = ch.heading || `المقطع ${idx + 1}`;
 
         const box = document.createElement('div');
@@ -2353,7 +2796,7 @@
         box.innerHTML = `
           <div class="chunk-meta">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span>📌 ${heading} - صفحة الكتاب (${page})</span>
+              <span>📌 ${heading.length > 50 ? heading.substring(0, 48) + '...' : heading} - صفحة (${page})</span>
               <button class="mini-listen-btn" style="background: var(--slate-200); color: var(--slate-700);" onclick="openBookPageModal(${page}, \`${escapeForAttribute(activeLesson.title)}\`)">
                 📖 صورة صفحة (${page})
               </button>
@@ -2362,7 +2805,7 @@
               🔊 قراءة هذا المقطع
             </button>
           </div>
-          <div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.88rem; line-height: 1.8;">${formatTextHighlights(text)}</div>
+          <div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800);">${formatTextHighlights(text)}</div>
         `;
         chunksContainer.appendChild(box);
       });
@@ -2433,8 +2876,27 @@
 
     function toggleMediaSection(secId) {
       const el = document.getElementById(secId);
+      const btn = document.getElementById('toggleVisualBtn');
       if (el) {
-        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+        const isHidden = (el.style.display === 'none' || !el.style.display);
+        el.style.display = isHidden ? 'block' : 'none';
+        if (btn) {
+          btn.innerHTML = isHidden ? '<span>🔼</span> إخفاء بطاقة المفاهيم' : '<span>🎨</span> عرض بطاقة المفاهيم المصورة';
+        }
+        if (isHidden) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    }
+
+    function toggleFocusMode() {
+      const studyLayout = document.querySelector('.study-layout');
+      const btn = document.getElementById('focusModeBtn');
+      if (!studyLayout) return;
+      studyLayout.classList.toggle('focus-mode');
+      const isFocused = studyLayout.classList.contains('focus-mode');
+      if (btn) {
+        btn.innerHTML = isFocused ? '<span>🔙</span> إلغاء التركيز' : '<span>👁️</span> وضع التركيز (ملء الشاشة)';
       }
     }
 
@@ -2446,7 +2908,8 @@
       const pages = [...new Set(rawPages)];
       const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : null;
 
-      container.style.display = 'block';
+      // افتراضياً نتركه مخفياً ليكون نص الدرس ومقاطعه أمام عين الطالب فوراً
+      container.style.display = 'none';
 
       let html = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
