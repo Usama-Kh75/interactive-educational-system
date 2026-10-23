@@ -191,7 +191,7 @@
       max-width: 1400px;
       width: 100%;
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 1rem 1.5rem;
     }
 
     /* الأزرار العامة */
@@ -333,7 +333,8 @@
       display: grid;
       grid-template-columns: 300px 1fr 350px;
       gap: 1rem;
-      height: calc(100vh - 8rem);
+      height: calc(100vh - 9rem);
+      min-height: 580px;
       transition: grid-template-columns 0.3s ease;
     }
 
@@ -349,6 +350,7 @@
       .study-layout {
         grid-template-columns: 1fr;
         height: auto;
+        min-height: auto;
       }
     }
 
@@ -360,10 +362,11 @@
       flex-direction: column;
       overflow: hidden;
       box-shadow: var(--shadow);
+      min-height: 0;
     }
 
     .panel-header {
-      padding: 0.85rem 1rem;
+      padding: 0.75rem 1rem;
       border-bottom: 1px solid var(--slate-200);
       background: var(--slate-50);
       display: flex;
@@ -371,12 +374,14 @@
       justify-content: space-between;
       font-size: 0.85rem;
       font-weight: 700;
+      flex-shrink: 0;
     }
 
     .panel-body {
       flex: 1;
       overflow-y: auto;
       padding: 1rem;
+      min-height: 0;
     }
 
     .chapter-group {
@@ -432,15 +437,17 @@
       z-index: 30;
       background: linear-gradient(135deg, #1e1b4b, #312e81);
       color: white;
-      border-radius: 8px;
-      padding: 0.6rem 0.85rem;
-      margin: 0.5rem 0.75rem 0.6rem;
+      padding: 0.55rem 0.85rem;
+      margin: 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 0.6rem;
       flex-wrap: wrap;
       box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      flex-shrink: 0;
     }
 
     .audio-player-controls {
@@ -497,7 +504,8 @@
     /* بطاقة موقع الدرس والوحدة والصفحة في الكتاب */
     .lesson-breadcrumb-banner {
       background: linear-gradient(to bottom, #ffffff, #f8fafc);
-      border-bottom: 2px solid var(--slate-200);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
       padding: 0.85rem 1rem;
     }
 
@@ -1203,12 +1211,7 @@
             </button>
           </div>
 
-          <!-- بطاقة موقع الدرس والوحدة والصفحة في الكتاب (Breadcrumb Banner) -->
-          <div id="lessonBreadcrumbBanner" class="lesson-breadcrumb-banner">
-            <!-- يتم تعبئتها ديناميكياً بكل تفاصيل الوحدة والدرس والكتاب المعتمد -->
-          </div>
-
-          <!-- شريط القارئ الصوتي التفاعلي المسموع -->
+          <!-- شريط القارئ الصوتي التفاعلي المسموع (مثبت بالأعلى) -->
           <div class="audio-player-bar" id="audioPlayerBar">
             <div class="audio-player-controls">
               <button class="audio-btn" id="audioPlayBtn" onclick="audioPlayer.playCurrentLesson()">
@@ -1247,20 +1250,26 @@
             </div>
           </div>
 
-          <!-- تنبيه القواعد المرتبطة بالدرس -->
-          <div id="lessonGrammarAlert" class="hidden" style="margin: 0.5rem 1rem 0; padding: 0.6rem 0.85rem; background: #fefce8; border: 1px solid #fde047; border-radius: 8px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
-            <div id="lessonGrammarAlertText" style="color: #854d0e; font-weight: 700;">💡 يتضمن هذا الدرس قواعد مهمة</div>
-            <button class="btn btn-primary btn-sm" onclick="switchTab('grammar')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">عرض القاعدة والشرح</button>
-          </div>
+          <!-- منطقة التمرير الكاملة لمحتوى ونصوص الدرس (Scrollable Body) -->
+          <div class="panel-body" id="lessonChunksContainerWrapper" style="padding: 0.85rem 1rem; overflow-y: auto; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            
+            <!-- بطاقة موقع الدرس والوحدة والصفحة في الكتاب (Breadcrumb Banner) -->
+            <div id="lessonBreadcrumbBanner" class="lesson-breadcrumb-banner">
+              <!-- يتم تعبئتها ديناميكياً بكل تفاصيل الوحدة والدرس والكتاب المعتمد -->
+            </div>
 
-          <!-- المعرض البصري والرسوم التوضيحية للدرس -->
-          <div id="lessonMediaVisualContainer" style="display: none; padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); background: #f8fafc;">
-            <!-- يتم تعبئتها ديناميكياً بصفحات الكتاب والبطاقات البصرية المصممة -->
-          </div>
+            <!-- تنبيه القواعد المرتبطة بالدرس -->
+            <div id="lessonGrammarAlert" class="hidden" style="padding: 0.6rem 0.85rem; background: #fefce8; border: 1px solid #fde047; border-radius: 8px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+              <div id="lessonGrammarAlertText" style="color: #854d0e; font-weight: 700;">💡 يتضمن هذا الدرس قواعد مهمة</div>
+              <button class="btn btn-primary btn-sm" onclick="switchTab('grammar')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">عرض القاعدة والشرح</button>
+            </div>
 
-          <!-- شاشة القراءة المباشرة (Live Teleprompter) ونصوص الدرس -->
-          <div class="panel-body" id="lessonChunksContainerWrapper" style="padding: 0.75rem 1rem;">
-            <!-- شاشة القراءة المباشرة -->
+            <!-- المعرض البصري والرسوم التوضيحية للدرس -->
+            <div id="lessonMediaVisualContainer" style="display: none; padding: 0.75rem 1rem; border: 1px solid var(--slate-200); border-radius: 8px; background: #f8fafc;">
+              <!-- يتم تعبئتها ديناميكياً بصفحات الكتاب والبطاقات البصرية المصممة -->
+            </div>
+
+            <!-- شاشة القراءة المباشرة (Live Teleprompter) -->
             <div id="liveTeleprompterBox" class="live-teleprompter-card" style="display: none;">
               <div class="teleprompter-top">
                 <div style="display: flex; align-items: center; gap: 0.4rem;">
@@ -1274,12 +1283,13 @@
               </div>
             </div>
 
-            <!-- قائمة نصوص ومقاطع الدرس -->
-            <div id="lessonChunksContainer">
+            <!-- قائمة نصوص ومقاطع الدرس المعتمدة بالكامل -->
+            <div id="lessonChunksContainer" style="display: flex; flex-direction: column; gap: 0.75rem;">
               <div style="text-align: center; color: var(--slate-400); padding: 3rem 1rem;">
                 يرجى اختيار درس من القائمة لعرض نصوصه ومراجعه.
               </div>
             </div>
+
           </div>
         </div>
 
@@ -1462,7 +1472,7 @@
   </main>
 
   <!-- تذييل الصفحة الرسمي -->
-  <footer style="background: white; border-top: 1px solid var(--slate-200); padding: 1.25rem 1.5rem; margin-top: auto; color: var(--slate-600); font-size: 0.85rem;">
+  <footer style="background: white; border-top: 1px solid var(--slate-200); padding: 1rem 1.5rem 4.5rem; margin-top: auto; color: var(--slate-600); font-size: 0.85rem;">
     <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
