@@ -1,4 +1,7 @@
-// بيانات المنهج التعليمي والقواعد والمساعد الذكي - نسخة محلية متكاملة 100%
+// النظام التعليمي التفاعلي - المنهج الدراسي المعتمد
+// إعداد وتطوير: المهندس أسامة خليل هاشم
+// الإصدار: v2.3.0
+
 window.CURRICULUM_DATA = [
   {
     "id": 190,
@@ -165,7 +168,7 @@ window.CURRICULUM_DATA = [
   {
     "id": 191,
     "title": "الوحدة 2: نمط الحياة الصحي (Unit 2: Healthy Lifestyle)",
-    "description": "صفحات 17 - 29",
+    "description": "صفحات 17 - 27",
     "lessons": [
       {
         "id": 272,
@@ -175,8 +178,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 504,
             "page": 17,
-            "heading": "Unit AB 22-23 Lesson 1: Keep fit! Read the article. What is each paragraph about? no • rake mv advice itness is very important. Unfit people cannot enjoy life. They get tired very quickly, so they cannot play games. They cannot run. In fact, they cannot even walk without getting tired and out of breath. So, if you want to enjoy life, you should get fit and keep fit. How can you get fit? You should take exercise regularly. Games like football, basketball and netball give you plenty of exercise because you have to run all the time. Swimming and cycling are also very good forms of exercise. If you don't like any Of these, you can just go walking. You should walk quickly for about 20 minutes every day. Walking slowly will not make you fit and walking to your bedroom will not either! Some people think that taking exercise is boring, but it doesn't have to be. If you take exercise with your friends, you will have fun. I'm fit. Are you? BOLT You should Give advice to the people who are unfit. Giving advice with should You need to get fit. You should take some exercise. You're always tired. You shouldn't go to bed late. Which of the people do you think is fit? They won't let me play. I get tired quickly. Zaid 2 I watch TV all the time. Sana I love running. 3 Hanaa 4 I love my car. I drive everywhere, Younis Healthy lifestyle unit 2 17",
-            "text": "Unit AB 22-23 Lesson 1: Keep fit! Read the article. What is each paragraph about? no • rake mv advice itness is very important. Unfit people cannot enjoy life. They get tired very quickly, so they cannot play games. They cannot run. In fact, they cannot even walk without getting tired and out of breath. So, if you want to enjoy life, you should get fit and keep fit. How can you get fit? You should take exercise regularly. Games like football, basketball and netball give you plenty of exercise because you have to run all the time. Swimming and cycling are also very good forms of exercise. If you don't like any Of these, you can just go walking. You should walk quickly for about 20 minutes every day. Walking slowly will not make you fit and walking to your bedroom will not either! Some people think that taking exercise is boring, but it doesn't have to be. If you take exercise with your friends, you will have fun. I'm fit. Are you? BOLT You should Give advice to the people who are unfit. Giving advice with should You need to get fit. You should take some exercise. You're always tired. You shouldn't go to bed late. Which of the people do you think is fit? They won't let me play. I get tired quickly. Zaid 2 I watch TV all the time. Sana I love running. 3 Hanaa 4 I love my car. I drive everywhere, Younis Healthy lifestyle unit 2 17"
+            "heading": "Lesson 1: Keep fit! - Take my advice (صفحة 17)",
+            "text": "Fitness is very important. Unfit people cannot enjoy life. They get tired very quickly, so they cannot play games. They cannot run. In fact, they cannot even walk without getting tired and out of breath.\nSo, if you want to enjoy life, you should get fit and keep fit.\n\nHow can you get fit?\nYou should take exercise regularly. Games like football, basketball and netball give you plenty of exercise because you have to run all the time. Swimming and cycling are also very good forms of exercise.\nIf you don't like any of these, you can just go walking. You should walk quickly for about 20 minutes every day. Walking slowly will not make you fit, and walking to your bedroom will not either!\nSome people think that taking exercise is boring, but it doesn't have to be. If you take exercise with your friends, you will have fun.\n\nGiving advice with should and shouldn't:\n• You need to get fit. You should take some exercise.\n• You're always tired. You shouldn't go to bed late.\n\nWhich of these people is fit?\n1. Zaid: \"They won't let me play. I get tired quickly.\" ➔ Unfit. (Advice: You should take exercise regularly.)\n2. Sana: \"I watch TV all the time.\" ➔ Unfit. (Advice: You shouldn't watch TV all the time. You should go walking.)\n3. Hanaa: \"I love running.\" ➔ Fit!\n4. Younis: \"I love my car. I drive everywhere.\" ➔ Unfit. (Advice: You shouldn't drive everywhere. You should walk more.)"
           }
         ]
       },
@@ -188,8 +191,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 505,
             "page": 18,
-            "heading": "Unit AB 24-25 Lesson 2: Eat the right food Talk about the foods and drinks in the photographs. Which things are good for you? Which things are not so good for you? flij Now read Layla Ahmed's report in the school magazine and check your ideas. A report of Nurse Janette's talk by Layla Ahmed What did Nurse Janette mean? Before her talk, did not understand, but I do now. This is what she said We all need food and drink, but what kind and how much do we need? Some kinds of food are very good for us, for example, fish, fruit and vegetables. They keep us healthy. We should eat five pieces of fruit and vegetable every day, but we can eat more. We should also drink a lot of water. Meat and cheese are also good, but only if we don't eat too much. They have a lot of fat. We should be very careful about anything that has a lot of fat, salt or sugar in it. This does not mean that we should never eat biscuits, sweets, fries or crisps. It is all right to eat a few. If we eat too many. we will be unhealthy. When Nurse Janette came to our school, I had a bag of crisps, two chocolate bars and a bottle of cola in my school bag. Today, I have water and fruit in my bag. too much too many a little a few a lot of A little sugar is all right, buttoo much is bad for you. A few biscuits are all right, but too many are bad for you. Eating a lot of sweets is bad-for you. 18 Unit 2 Healthy lifestyle You are what you eat.",
-            "text": "Unit AB 24-25 Lesson 2: Eat the right food Talk about the foods and drinks in the photographs. Which things are good for you? Which things are not so good for you? flij Now read Layla Ahmed's report in the school magazine and check your ideas. A report of Nurse Janette's talk by Layla Ahmed What did Nurse Janette mean? Before her talk, did not understand, but I do now. This is what she said We all need food and drink, but what kind and how much do we need? Some kinds of food are very good for us, for example, fish, fruit and vegetables. They keep us healthy. We should eat five pieces of fruit and vegetable every day, but we can eat more. We should also drink a lot of water. Meat and cheese are also good, but only if we don't eat too much. They have a lot of fat. We should be very careful about anything that has a lot of fat, salt or sugar in it. This does not mean that we should never eat biscuits, sweets, fries or crisps. It is all right to eat a few. If we eat too many. we will be unhealthy. When Nurse Janette came to our school, I had a bag of crisps, two chocolate bars and a bottle of cola in my school bag. Today, I have water and fruit in my bag. too much too many a little a few a lot of A little sugar is all right, buttoo much is bad for you. A few biscuits are all right, but too many are bad for you. Eating a lot of sweets is bad-for you. 18 Unit 2 Healthy lifestyle You are what you eat."
+            "heading": "Lesson 2: Eat the right food - Nurse Janette's report (صفحة 18)",
+            "text": "A report of Nurse Janette's talk by Layla Ahmed:\nWhat did Nurse Janette mean? Before her talk, I did not understand, but I do now. This is what she said:\n\n\"We all need food and drink, but what kind and how much do we need?\nSome kinds of food are very good for us, for example, fish, fruit and vegetables. They keep us healthy. We should eat five pieces of fruit and vegetables every day, but we can eat more. We should also drink a lot of water.\nMeat and cheese are also good, but only if we don't eat too much. They have a lot of fat. We should be very careful about anything that has a lot of fat, salt or sugar in it.\nThis does not mean that we should never eat biscuits, sweets, fries or crisps. It is all right to eat a few. If we eat too many, we will be unhealthy.\"\n\nWhen Nurse Janette came to our school, I had a bag of crisps, two chocolate bars and a bottle of cola in my school bag. Today, I have water and fruit in my bag.\n\nQuantifiers:\n• too much / too many / a little / a few / a lot of\n• A little sugar is all right, but too much is bad for you. (Uncountable)\n• A few biscuits are all right, but too many are bad for you. (Countable)\n• Eating a lot of sweets is bad for you.\nYou are what you eat!"
           }
         ]
       },
@@ -201,8 +204,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 506,
             "page": 19,
-            "heading": "AB 26-27 Unit Lesson 3: In a restaurant Look at the menu. Use the definitions to work out any dishes you don't know. Lamb curry Beef curry Fried chicken Burgers Hot dogs etzza Cheese and tomato rase Fried fish Grilled fish Baked potato ocsscats Apple cake Chocolate cake Ice cream Fruit salad Fruit juices Milkshakes Cola Lemonade Tea Coffee Mineral water lamb (n.) the meat of a sheep beef (n.) the meat of a cow fried (adj.) cooked in hot fat or oil grilled (adj.) cooked under strong heat baked (adj.) cooked in an oven Which things on the menu are good for you? Which things are not so good for you? Waleed and Meena are in a restaurant with their father. 1 The waiter speaks first. Which of the things below do you think he will say? 2 Who do you think will reply, and what will he or she say? 1 What do you want? Good evening. Are you ready to order, sir? Can I take your order, sir? •h n Now listen and check your ideas. 2 Good evening. We're not ready. No, sorry, we're not ready. Yes, thank you. Healthy lifestyle Unit 2 19",
-            "text": "AB 26-27 Unit Lesson 3: In a restaurant Look at the menu. Use the definitions to work out any dishes you don't know. Lamb curry Beef curry Fried chicken Burgers Hot dogs etzza Cheese and tomato rase Fried fish Grilled fish Baked potato ocsscats Apple cake Chocolate cake Ice cream Fruit salad Fruit juices Milkshakes Cola Lemonade Tea Coffee Mineral water lamb (n.) the meat of a sheep beef (n.) the meat of a cow fried (adj.) cooked in hot fat or oil grilled (adj.) cooked under strong heat baked (adj.) cooked in an oven Which things on the menu are good for you? Which things are not so good for you? Waleed and Meena are in a restaurant with their father. 1 The waiter speaks first. Which of the things below do you think he will say? 2 Who do you think will reply, and what will he or she say? 1 What do you want? Good evening. Are you ready to order, sir? Can I take your order, sir? •h n Now listen and check your ideas. 2 Good evening. We're not ready. No, sorry, we're not ready. Yes, thank you. Healthy lifestyle Unit 2 19"
+            "heading": "Lesson 3: In a restaurant - The Menu (صفحة 19)",
+            "text": "Look at the restaurant menu:\n\nMain Courses:\n• Lamb curry\n• Beef curry\n• Fried chicken\n• Burgers\n• Hot dogs\n• Pizza (Cheese and tomato)\n• Fried fish\n• Grilled fish\n• Baked potato\n\nDesserts:\n• Apple cake\n• Chocolate cake\n• Ice cream\n• Fruit salad\n\nDrinks:\n• Fruit juices\n• Milkshakes\n• Cola & Lemonade\n• Tea & Coffee\n• Mineral water\n\nVocabulary & Definitions:\n• lamb (n.): the meat of a sheep.\n• beef (n.): the meat of a cow.\n• fried (adj.): cooked in hot fat or oil.\n• grilled (adj.): cooked under strong heat or over a fire.\n• baked (adj.): cooked in an oven.\n\nIn the restaurant:\nWaiter: Good evening. Are you ready to order, sir?\nFather: Yes, thank you. Could I have the grilled fish with a baked potato, please?\nMeena: I would like a fruit salad and mineral water, please."
           }
         ]
       },
@@ -214,8 +217,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 507,
             "page": 20,
-            "heading": "Unit OKA n AB 28-29 Lesson 4: Aches and pains Listen and look at the pictures. Ansam 2 Anas 3 Jameel Aches 4 Noora a b c d Now match the sentences to the pictures. I have a stomach ache. I have an earache. I've got a toothache. I've got a headache. We can say I've got a headache. OR My head aches. They mean the same thing. Listen and read. Then read the conversations aloud. o What's the matter, Ansam? e I've got a toothache. O Oh, dear! You should go to the dentist. Yes, I will. O What's wrong, Anas? I have a stomach ache, and I feel sick. o You shouldn't eat so many crisps in the break. Yes, I think you're right. o o O e O e Are you all right. Jameel? No, my ear hurts. Oh, I'm sorry. You should go to the doctor. I've been to the doctor. He gave me some drops. I have to put them in twice a day. You don't look well, Noora. I've got a bad headache. Oh, dear. Here, take these two pills with some water. Thanks very much. What do you think of the advice the woman gives the children? Now make up your own conversations. 20 Unit 2 Healthy lifestyle",
-            "text": "Unit OKA n AB 28-29 Lesson 4: Aches and pains Listen and look at the pictures. Ansam 2 Anas 3 Jameel Aches 4 Noora a b c d Now match the sentences to the pictures. I have a stomach ache. I have an earache. I've got a toothache. I've got a headache. We can say I've got a headache. OR My head aches. They mean the same thing. Listen and read. Then read the conversations aloud. o What's the matter, Ansam? e I've got a toothache. O Oh, dear! You should go to the dentist. Yes, I will. O What's wrong, Anas? I have a stomach ache, and I feel sick. o You shouldn't eat so many crisps in the break. Yes, I think you're right. o o O e O e Are you all right. Jameel? No, my ear hurts. Oh, I'm sorry. You should go to the doctor. I've been to the doctor. He gave me some drops. I have to put them in twice a day. You don't look well, Noora. I've got a bad headache. Oh, dear. Here, take these two pills with some water. Thanks very much. What do you think of the advice the woman gives the children? Now make up your own conversations. 20 Unit 2 Healthy lifestyle"
+            "heading": "Lesson 4: Aches and pains (صفحة 20)",
+            "text": "Common Aches and Illnesses:\n• I have a stomach ache.\n• I have an earache.\n• I've got a toothache.\n• I've got a headache.\n(Note: We can say \"I've got a headache\" or \"My head aches\". They mean the same thing.)\n\nConversations:\n1. \"What's the matter, Ansam?\" - \"I've got a toothache.\" - \"Oh dear! You should go to the dentist.\" - \"Yes, I will.\"\n2. \"What's wrong, Anas?\" - \"I have a stomach ache, and I feel sick.\" - \"You shouldn't eat so many crisps in the break.\" - \"Yes, I think you're right.\"\n3. \"Are you all right, Jameel?\" - \"No, my ear hurts.\" - \"Oh, I'm sorry. You should go to the doctor.\" - \"I've been to the doctor. He gave me some drops. I have to put them in twice a day.\"\n4. \"You don't look well, Noora.\" - \"I've got a bad headache.\" - \"Oh dear. Here, take these two pills with some water.\" - \"Thanks very much.\""
           }
         ]
       },
@@ -227,8 +230,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 508,
             "page": 21,
-            "heading": "AB 30-31 Unit Lesson 5: Jalal's story O Jalal wrote a story for the school magazine. Read it quickly. A true story I sometimes have to look after my little brother for an hour or so when my parents go out. Ibrahim is ten. He always wants me to play with him, but 5 1 want him to play by himself. One day, when I was playing a computer game, he said again and again, 'Jalal, I feel sick. I've got a pain in my stomach. by Jalal Abdullah and he didn't eat the crisps. That was very unusual. I was shouting at him when my parents came home. They were very angry with me. I was very 20 surprised when my father called an ambulance. 'Something is wrong,' my mother said. 'Can't you see? Ibrahim is 'You always say that, Ibrahim. There's in pain.' 10 nothing wrong with you,' I said angrily. 25 A few hours later, the doctors took 'You haven't got a pain. You are a pain. Sit down and watch that video.' Ibrahim started crying and an hour later, he was still crying loudly. I gave out Ibrahim's appendix. They saved his life. I was very frightened. Ibrahim nearly died, and it was my fault. I learnt a 15 him a bag of crisps, but he didn't stop• 30 lesson that day. MBULANCEO AMBULANCE Which of the lessons do you think Jalal learnt? I You should always believe your brother. 2 You should always listen to your brother. 3 You should always play with your brother. Work it out! You know the meaning of pain, but what do you think Jalal means when he says: You a pain? Healthy lifestyle Unit 2 21",
-            "text": "AB 30-31 Unit Lesson 5: Jalal's story O Jalal wrote a story for the school magazine. Read it quickly. A true story I sometimes have to look after my little brother for an hour or so when my parents go out. Ibrahim is ten. He always wants me to play with him, but 5 1 want him to play by himself. One day, when I was playing a computer game, he said again and again, 'Jalal, I feel sick. I've got a pain in my stomach. by Jalal Abdullah and he didn't eat the crisps. That was very unusual. I was shouting at him when my parents came home. They were very angry with me. I was very 20 surprised when my father called an ambulance. 'Something is wrong,' my mother said. 'Can't you see? Ibrahim is 'You always say that, Ibrahim. There's in pain.' 10 nothing wrong with you,' I said angrily. 25 A few hours later, the doctors took 'You haven't got a pain. You are a pain. Sit down and watch that video.' Ibrahim started crying and an hour later, he was still crying loudly. I gave out Ibrahim's appendix. They saved his life. I was very frightened. Ibrahim nearly died, and it was my fault. I learnt a 15 him a bag of crisps, but he didn't stop• 30 lesson that day. MBULANCEO AMBULANCE Which of the lessons do you think Jalal learnt? I You should always believe your brother. 2 You should always listen to your brother. 3 You should always play with your brother. Work it out! You know the meaning of pain, but what do you think Jalal means when he says: You a pain? Healthy lifestyle Unit 2 21"
+            "heading": "Lesson 5: Jalal's story - A true story (صفحة 21)",
+            "text": "A true story written by Jalal for the school magazine:\n\nI sometimes have to look after my little brother Ibrahim for an hour or so when my parents go out. Ibrahim is eight. He always wants me to play with him, but I want him to play by himself.\nOne evening, I was playing a computer game. \"Jalal,\" Ibrahim said, \"I feel sick. I have a pain in my stomach.\"\n\"You're always saying that,\" I said without looking up. \"Go and sit down.\"\nAn hour later, he began crying loudly. He held his stomach. \"Jalal, it really hurts!\"\n\"Stop making that noise!\" I shouted. \"You're just pretending.\"\nA few minutes later, Ibrahim vomited, and he was very pale.\nJust then, my parents came home. My father saw Ibrahim and knew immediately that something was very wrong. He phoned for an ambulance.\nAt the hospital, the doctor examined Ibrahim. \"He has severe appendicitis,\" the surgeon said. \"We must operate immediately.\"\nThey took out his appendix and saved his life.\nI felt so guilty and cried. I had ignored my little brother when he was in agony. I learned a lesson I will never forget: never ignore someone when they say they are in pain."
           }
         ]
       },
@@ -240,8 +243,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 509,
             "page": 22,
-            "heading": "AB 32-33 unit Lesson 6: Get well' cards Talk about the cards with your partner. I Which words are on all the cards? 2 Do you think any of the cards are funny? 3 When do we send 'Get well' cards to friends? 4 Choose a card for a friend. Why did you choose it? 2 Cet w soon eet well soon. Well Soon Match the cards to the messages inside. Get well soon 6 Well You can play anywhere on our team. Cheer up! You'll be better soon. Fly back to us as soon as you can. unit 2 Healthy lifestyle You leave a big hole in our lives. We miss you very much. D Hurry up and get better. Äere's no .coaour in t//e nouse unen you re away. 22",
-            "text": "AB 32-33 unit Lesson 6: Get well' cards Talk about the cards with your partner. I Which words are on all the cards? 2 Do you think any of the cards are funny? 3 When do we send 'Get well' cards to friends? 4 Choose a card for a friend. Why did you choose it? 2 Cet w soon eet well soon. Well Soon Match the cards to the messages inside. Get well soon 6 Well You can play anywhere on our team. Cheer up! You'll be better soon. Fly back to us as soon as you can. unit 2 Healthy lifestyle You leave a big hole in our lives. We miss you very much. D Hurry up and get better. Äere's no .coaour in t//e nouse unen you re away. 22"
+            "heading": "Lesson 6: Get well cards (صفحة 22)",
+            "text": "When a friend or family member is ill or in hospital, we send them 'Get well' cards to show love and support.\n\nCard 1:\n\"Get well soon!\nThinking of you and wishing you a speedy recovery.\"\n\nCard 2 (Humorous):\n\"Heard you're feeling under the weather!\nDon't worry, the germs will get tired of you soon!\nGet well quickly!\"\n\nCard 3 (Poem):\n\"Sending warm wishes your way,\nTo brighten up your day.\nRest and heal, take it slow,\nWe all miss you so!\nGet well soon!\"\n\nKey questions:\n1. Which words are on all the cards? (\"Get well soon\")\n2. Why do people send funny cards? (To make the patient laugh and lift their spirits)\n3. When do we send 'Get well' cards? (When someone is sick, injured, or in hospital)"
           }
         ]
       },
@@ -253,8 +256,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 510,
             "page": 23,
-            "heading": "AB 34-35 unit Lesson 7: A letter Read the letter. Sara's friend is in hospital. She wrote her a letter and put it inside the card. 411, 36, Baghdad March 2021 Dear ML.crva, I was Very sorry to hear about aoeidev•vt. I hope Lee does hurt too avu that will be able to Leave hospital soon.. We have had av•v week at school. First, we had a visit from a oaLLed Javvette. She gave a talk about food. It was very ivvterestivvg, awd t really it. NOW t eavv tell Which food is good for awd Which is wot so good. Thew, we had a Visit from a vvetbaLl coach. She was fawtastic. We Learwt a Lot from her. She showed us Little thiwgs to make our game better. I wiLL show them to whew are back at school. ALL friervds ivv olass miss sev•vd their best wishes. We ooywe see Friday if are stiLL hospital. cove, sara O Answer the questions with your partner. 2 3 4 5 Why did Nurse Janette visit the school? What advice do you think Nurse Janette gave the students? Why did the netball coach visit the school? Why might Friday be a good day for Muna? Imagine you are Muna. Think of one good thing and one bad thing about being in hospital. Healthy lifestyle Unit 2 23",
-            "text": "AB 34-35 unit Lesson 7: A letter Read the letter. Sara's friend is in hospital. She wrote her a letter and put it inside the card. 411, 36, Baghdad March 2021 Dear ML.crva, I was Very sorry to hear about aoeidev•vt. I hope Lee does hurt too avu that will be able to Leave hospital soon.. We have had av•v week at school. First, we had a visit from a oaLLed Javvette. She gave a talk about food. It was very ivvterestivvg, awd t really it. NOW t eavv tell Which food is good for awd Which is wot so good. Thew, we had a Visit from a vvetbaLl coach. She was fawtastic. We Learwt a Lot from her. She showed us Little thiwgs to make our game better. I wiLL show them to whew are back at school. ALL friervds ivv olass miss sev•vd their best wishes. We ooywe see Friday if are stiLL hospital. cove, sara O Answer the questions with your partner. 2 3 4 5 Why did Nurse Janette visit the school? What advice do you think Nurse Janette gave the students? Why did the netball coach visit the school? Why might Friday be a good day for Muna? Imagine you are Muna. Think of one good thing and one bad thing about being in hospital. Healthy lifestyle Unit 2 23"
+            "heading": "Lesson 7: An informal letter to a sick friend (صفحة 23)",
+            "text": "Sara's friend Marwa was in hospital after an accident. Sara wrote her an informal letter:\n\nAddress and Date:\nFlat 411, Street 36, Baghdad\n14th March 2021\n\nGreeting:\nDear Marwa,\n\nLetter Body:\nI was very sorry to hear about your accident. I hope your leg doesn't hurt too much and that you will be able to leave hospital soon.\nWe have had a busy week at school. In English, we are learning about healthy food and writing articles. Our teacher Mrs Noor asked us to make 'Get well' cards, and everyone made one for you!\nI am sending you our school magazine and some puzzle books so you won't get bored in bed. All the girls in our class send their love and best wishes.\nLet me know when you can have visitors. I would love to come and see you.\n\nSign-off:\nBest wishes,\nSara"
           }
         ]
       },
@@ -266,8 +269,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 511,
             "page": 24,
-            "heading": "AB 36-37 Unit Lesson 8: Limericks a limerick for the school magazine TRY! Listen and read. Then complete the rules below. There once was a girl from Peru Who was trying to paint her roof blue. She felt a bit faint And spilt all the paint, So now she'll be needing shampoo! -4 There was a young man from Tibet Who had an incredible pet. He found out its wings Were held on with strings, And now he is very upset. Rules for limericks A limerick is a short It has lines. The last words on lines I, . rhyme. • The last words on lines 3 and also rhyme. A limerick is always ... . and . O Listen again. Then say the limericks. Correct your partner. 24 Write a limerick for your school magazine. unit 2 Healthy lifestyle",
-            "text": "AB 36-37 Unit Lesson 8: Limericks a limerick for the school magazine TRY! Listen and read. Then complete the rules below. There once was a girl from Peru Who was trying to paint her roof blue. She felt a bit faint And spilt all the paint, So now she'll be needing shampoo! -4 There was a young man from Tibet Who had an incredible pet. He found out its wings Were held on with strings, And now he is very upset. Rules for limericks A limerick is a short It has lines. The last words on lines I, . rhyme. • The last words on lines 3 and also rhyme. A limerick is always ... . and . O Listen again. Then say the limericks. Correct your partner. 24 Write a limerick for your school magazine. unit 2 Healthy lifestyle"
+            "heading": "Lesson 8: Limericks - English Humorous Poetry (صفحة 24)",
+            "text": "A limerick is a short, funny poem that always follows strict rules:\n• It has five lines.\n• Lines 1, 2, and 5 rhyme together (Rhyme A) and have three beats.\n• Lines 3 and 4 rhyme together (Rhyme B) and are shorter with two beats.\n• The rhyme scheme is: A A B B A.\n\nLimerick 1 (The Girl from Peru):\nThere once was a girl from Peru, (A)\nWho was trying to paint her roof blue. (A)\nShe felt a bit faint, (B)\nAnd spilt all the paint, (B)\nSo now she'll be needing shampoo! (A)\n\nLimerick 2 (The Young Man from Tibet):\nThere was a young man from Tibet, (A)\nWho had an incredible pet. (A)\nHe found out its wings, (B)\nWere held on with strings, (B)\nAnd now he is very upset! (A)\n\nLimerick 3 (The Boy from Kuwait):\nThere was a young boy from Kuwait, (A)\nWho got to school every day late. (A)\nWhen his teacher asked \"Why?\", (B)\nHe replied with a cry, (B)\n\"My clock always wakes me at eight!\" (A)\n\nLimerick 4 (The Old Man from Jaipur):\nThere was an old man from Jaipur, (A)\nWhose house had a green and blue door. (A)\nI said, \"I like white.\" (B)\nHe said, \"That's all right, (B)\nBut I think that white is a bore!\" (A)"
           }
         ]
       },
@@ -279,8 +282,8 @@ window.CURRICULUM_DATA = [
           {
             "id": 512,
             "page": 25,
-            "heading": "AB 38 Unit 2 Round up O In this unit, you have practised: Giving advice You should get fit and keep fit You shouldn't watch TV all the time. You should take exercise regularly, 2 Saying how often you do things I play chess twice a week. I go walking three times a week. I take exercise regularly. 3 Using words to show amounts A little salt on your food is all right. Too much sugar is bad for your teeth. A few biscuits are 0K. Too many fries will make you fat. I drink a lot of water every day. 4 Saying what is wrong when you are ill I don't feel well. I've got a headache. I have a pain in my stomach. My arm hurts. 5 Saying how you feel in different situations I feel frightened. I feel excited. 6 Using this pattern: want + pronoun + to + infinitive Your father wants you to help him in his shop. My mother wants me to eat more vegetables and fruit. 7 And you have ordered food from a menu. given advice to friends who feel sick. • learnt about food that is good for you and how to stay healthy. read texts quickly to find out what they are about, then more carefully to work • • • • • • out meaning and understand details. used notes to complete a paragraph. learnt how to improve your writing. made a 'Get well' card. written a limerick. Healthy lifestyle Unit 2 25",
-            "text": "AB 38 Unit 2 Round up O In this unit, you have practised: Giving advice You should get fit and keep fit You shouldn't watch TV all the time. You should take exercise regularly, 2 Saying how often you do things I play chess twice a week. I go walking three times a week. I take exercise regularly. 3 Using words to show amounts A little salt on your food is all right. Too much sugar is bad for your teeth. A few biscuits are 0K. Too many fries will make you fat. I drink a lot of water every day. 4 Saying what is wrong when you are ill I don't feel well. I've got a headache. I have a pain in my stomach. My arm hurts. 5 Saying how you feel in different situations I feel frightened. I feel excited. 6 Using this pattern: want + pronoun + to + infinitive Your father wants you to help him in his shop. My mother wants me to eat more vegetables and fruit. 7 And you have ordered food from a menu. given advice to friends who feel sick. • learnt about food that is good for you and how to stay healthy. read texts quickly to find out what they are about, then more carefully to work • • • • • • out meaning and understand details. used notes to complete a paragraph. learnt how to improve your writing. made a 'Get well' card. written a limerick. Healthy lifestyle Unit 2 25"
+            "heading": "Unit 2 Round Up - مراجعة الوحدة الثانية (صفحة 25)",
+            "text": "In Unit 2, you have practised:\n1. Giving advice with should and shouldn't:\n   • You should get fit and keep fit.\n   • You shouldn't watch TV all the time.\n   • You should take exercise regularly.\n\n2. Saying how often you do things (Frequency):\n   • I play chess twice a week.\n   • I go walking three times a week.\n   • I take exercise regularly.\n\n3. Using words to show amounts (Quantifiers):\n   • A little salt on your food is all right.\n   • Too much sugar is bad for your teeth.\n   • A few biscuits are OK.\n   • Too many fries will make you unhealthy.\n   • I drink a lot of water every day.\n\n4. Saying what is wrong when you are ill:\n   • I don't feel well.\n   • I've got a headache / stomach ache / toothache / earache.\n   • My arm hurts.\n\n5. Expressing feelings in different situations:\n   • I feel frightened / excited / bored / sick.\n\n6. Using the pattern: want + pronoun/noun + to + infinitive:\n   • Your father wants you to help him in his shop.\n   • My mother wants me to eat more vegetables and fruit.\n\n7. Key skills:\n   • Ordering food politely from a restaurant menu.\n   • Giving advice to friends who feel sick.\n   • Writing an informal letter and making a 'Get well' card.\n   • Reading and writing 5-line limericks with AABBA rhyme."
           }
         ]
       },
@@ -292,33 +295,27 @@ window.CURRICULUM_DATA = [
           {
             "id": 513,
             "page": 26,
-            "heading": "Story time Jad and Johnny - Camping at Stonehenge O u Listen, read and find out. 1 Where are the boys? 2 Which new characters are introduced? 26 3 What happens to Jad? The other winners of the competition arrived in London the next morning. There was me, Jad and three other boys - Paolo from Italy, Marcus from the USA and Aziz from Algeria. We all got into a minibus to start our trip. We didn't know where we were going. The leader of the trip was called Tom, and he was driving. After a few hours, the minibus stopped. We were next to a group of very large stones in a circle. 'Welcome to Stonehenge!' said Tom. 'Wow!' said Jad. 'It's beautiful! But ... what is it?' *That's a very good question,' said a woman who had joined us. Her name was Clara, and she was a tour guide at Stonehenge. 'Nobody knows because it's over four thousand years Unit 2 Healthy lifestyle old. Come for a walk with me, and I'll tell you more about it,' she said. 'We think people came here a long time ago to study the sky,' Clara said as we walked around the stones. 'They watched the way the Sun, the Moon and the stars moved.' 'So, it was for astronomy,' Aziz said. 'Exactly,' said Clara. 'But the stones are so big and heavy, the question is - how did people build it?' 'Did they use trucks and cranes?' asked Marcus. 'Trucks and cranes?' I laughed. 'It was four thousand years ago!' 'Some people think they were built by giants,' said Clara. 'Or by magic.' 'Maybe aliens put them here,' Jad joked. 'Well,' said Clara. 'Some people think that, too. They believe",
-            "text": "Story time Jad and Johnny - Camping at Stonehenge O u Listen, read and find out. 1 Where are the boys? 2 Which new characters are introduced? 26 3 What happens to Jad? The other winners of the competition arrived in London the next morning. There was me, Jad and three other boys - Paolo from Italy, Marcus from the USA and Aziz from Algeria. We all got into a minibus to start our trip. We didn't know where we were going. The leader of the trip was called Tom, and he was driving. After a few hours, the minibus stopped. We were next to a group of very large stones in a circle. 'Welcome to Stonehenge!' said Tom. 'Wow!' said Jad. 'It's beautiful! But ... what is it?' *That's a very good question,' said a woman who had joined us. Her name was Clara, and she was a tour guide at Stonehenge. 'Nobody knows because it's over four thousand years Unit 2 Healthy lifestyle old. Come for a walk with me, and I'll tell you more about it,' she said. 'We think people came here a long time ago to study the sky,' Clara said as we walked around the stones. 'They watched the way the Sun, the Moon and the stars moved.' 'So, it was for astronomy,' Aziz said. 'Exactly,' said Clara. 'But the stones are so big and heavy, the question is - how did people build it?' 'Did they use trucks and cranes?' asked Marcus. 'Trucks and cranes?' I laughed. 'It was four thousand years ago!' 'Some people think they were built by giants,' said Clara. 'Or by magic.' 'Maybe aliens put them here,' Jad joked. 'Well,' said Clara. 'Some people think that, too. They believe"
+            "heading": "Story Time: Jad and Johnny - Camping at Stonehenge (Part 1 - صفحة 26)",
+            "text": "The other winners of the international competition arrived in London the next morning. There was me (Johnny), Jad from Iraq, and three other boys: Paolo from Italy, Marcus from the USA, and Aziz from Algeria.\nWe all got into a minibus to start our trip across England. The leader of the trip was called Tom, and he was driving.\nAfter a few hours, the minibus stopped. We were next to a group of very large, prehistoric stones standing in a giant circle.\n\"Welcome to Stonehenge!\" said Tom.\n\"Wow!\" said Jad. \"It's beautiful! But ... what is it?\"\n\"That's a very good question,\" said a woman who had joined us. Her name was Clara, and she was a tour guide at Stonehenge. \"Nobody knows for certain because it's over four thousand years old. Come for a walk with me, and I'll tell you more about it.\"\n\"We think people came here a long time ago to study the sky,\" Clara said as we walked around the massive stones. \"They watched the way the Sun, the Moon and the stars moved.\"\n\"So, it was for astronomy,\" Aziz said.\n\"Exactly,\" said Clara. \"But the stones are so big and heavy, the big mystery is: how did ancient people build it without modern machines?\"\n\"Did they use trucks and cranes?\" asked Marcus.\n\"Trucks and cranes?\" I laughed. \"It was four thousand years ago!\"\n\"Some legends say they were built by giants,\" said Clara, \"or by ancient magic.\"\n\"Maybe aliens put them here,\" Jad joked."
           },
           {
             "id": 514,
             "page": 27,
-            "heading": "AB39 Story Jad and Johnny - Camping at Stonehenge time Stonehenge is a landing place for alien spaceships.' The other boys laughed at that idea, but I wasn't laughing. 'l think this place is scary,' I said. 'Oh, I don't think it's scary,' said Clara. 'It's beautiful. Especially first thing in the morning.' 'And I've got some good news,' said Tom. 'We're going to camp here tonight so you can see the sunrise tomorrow morning ... at 5:15.' 'Camp here?' I asked. I was scared. '5:15?' Jad said. 'That's too early!' In the evening, we made a fire and sat in a circle. We toasted marshmallows and drank hot chocolate. The other boys took turns to tell scary stories. They were all having fun and laughing, but I was still scared. 'I don't feel well,' I said. 'You should go to bed,' said Jad. During the night, I woke up in my tent because there was a strange nose. 'What was that?' I shouted. The strange noise happened again. There was something outside our tent. 'It could be ... aliens,' I said. 'Or maybe it's a giant!' said Aziz. He was scared now, too. Marcus opened the tent and laughed. There was a sheep, and it was eating our marshmallows. Tom woke us up early the next morning. It was still dark as we walked to the stones. We stood in the centre of the circle and waited. At exactly 5:00, the sun started to rise. 'That is beautiful,' said Paolo. 'It's amazing!' said Marcus. He had his camera, and he was taking a lot of photographs. 'Aren't you happy you got up early, Jad?' I said. But there was no answer. I turned around and saw him sitting against one of the stones. His eyes were closed, and he was fast asleep! I picked up his camera and took a photograph of him. 'Now it's my turn to take a funny photograph!' I laughed. Healthy lifestyle unit 2 27",
-            "text": "AB39 Story Jad and Johnny - Camping at Stonehenge time Stonehenge is a landing place for alien spaceships.' The other boys laughed at that idea, but I wasn't laughing. 'l think this place is scary,' I said. 'Oh, I don't think it's scary,' said Clara. 'It's beautiful. Especially first thing in the morning.' 'And I've got some good news,' said Tom. 'We're going to camp here tonight so you can see the sunrise tomorrow morning ... at 5:15.' 'Camp here?' I asked. I was scared. '5:15?' Jad said. 'That's too early!' In the evening, we made a fire and sat in a circle. We toasted marshmallows and drank hot chocolate. The other boys took turns to tell scary stories. They were all having fun and laughing, but I was still scared. 'I don't feel well,' I said. 'You should go to bed,' said Jad. During the night, I woke up in my tent because there was a strange nose. 'What was that?' I shouted. The strange noise happened again. There was something outside our tent. 'It could be ... aliens,' I said. 'Or maybe it's a giant!' said Aziz. He was scared now, too. Marcus opened the tent and laughed. There was a sheep, and it was eating our marshmallows. Tom woke us up early the next morning. It was still dark as we walked to the stones. We stood in the centre of the circle and waited. At exactly 5:00, the sun started to rise. 'That is beautiful,' said Paolo. 'It's amazing!' said Marcus. He had his camera, and he was taking a lot of photographs. 'Aren't you happy you got up early, Jad?' I said. But there was no answer. I turned around and saw him sitting against one of the stones. His eyes were closed, and he was fast asleep! I picked up his camera and took a photograph of him. 'Now it's my turn to take a funny photograph!' I laughed. Healthy lifestyle unit 2 27"
+            "heading": "Story Time: Jad and Johnny - Camping at Stonehenge (Part 2 - صفحة 27)",
+            "text": "\"Stonehenge is a landing place for alien spaceships,\" Jad joked. The other boys laughed, but I wasn't laughing.\n\"I think this place is scary,\" I said.\n\"Oh, I don't think it's scary,\" said Clara. \"It's beautiful, especially first thing in the morning.\"\n\"And I've got some good news,\" said Tom. \"We're going to camp here tonight so you can see the sunrise tomorrow morning ... at 5:15 AM!\"\n\"Camp here?\" I asked. I was nervous.\n\"5:15?\" Jad complained. \"That's too early!\"\n\nIn the evening, we built a campfire and sat in a circle. We toasted marshmallows and drank hot chocolate. The other boys took turns telling spooky stories. They were all having fun, but I was still uneasy.\nDuring the night, I woke up in my tent because there was a strange, rustling noise outside.\n\"What was that?\" I whispered.\nThe noise happened again. Something was right outside our tent canvas!\n\"It could be ... aliens,\" I whispered.\n\"Or maybe it's a giant!\" said Aziz, scared now too.\nMarcus opened the tent flap and burst out laughing. It wasn't an alien or a giant at all - it was a fluffy sheep calmly chewing on our marshmallows!\n\nTom woke us up early the next morning. It was still dark as we walked to the stones. We stood in the centre of the circle and waited. At exactly 5:00 AM, the glorious golden sun started to rise over the horizon.\n\"That is breathtaking,\" said Paolo.\n\"It's amazing!\" said Marcus, clicking photographs with his camera.\n\"Aren't you happy you got up early, Jad?\" I turned to ask.\nThere was no answer. I turned around and saw him sitting against one of the ancient stones. His eyes were closed, and he was fast asleep!\nI picked up his camera and took a photograph of him. \"Now it's my turn to take a funny photograph!\" I laughed."
           }
         ]
       },
       {
         "id": 282,
-        "title": "Project 2: Healthy Living Poster",
-        "summary": "صفحة 28 - 29",
+        "title": "Project 2: Healthy Living Poster (مشروع: ملصق نمط الحياة الصحي)",
+        "summary": "مشروع تطبيقي لإعداد دليل وملصق الحياة الصحية واللياقة (صفحات 17 - 25)",
         "chunks": [
           {
             "id": 515,
-            "page": 28,
-            "heading": "Unit AB ao-a Lesson 1: The sports centre Listen and point. Repeat the names of the sports. Come to the sports centre and get fit! You can choose from last year's old favourites: And, from the beginning of this year, we can give you lessons in these sports: Call us on 952841 for more information. Verbs and sports play football, tennis, etc. We go swimming, horse riding, etc. We do judo, karate, etc. Ask and answer. What sports would you like to do? Can you work out the rules? I'd like to play volleyball. I'd like to do gymnastics. And I'd like to go horse riding. 28 Unit 3 Sports",
-            "text": "Unit AB ao-a Lesson 1: The sports centre Listen and point. Repeat the names of the sports. Come to the sports centre and get fit! You can choose from last year's old favourites: And, from the beginning of this year, we can give you lessons in these sports: Call us on 952841 for more information. Verbs and sports play football, tennis, etc. We go swimming, horse riding, etc. We do judo, karate, etc. Ask and answer. What sports would you like to do? Can you work out the rules? I'd like to play volleyball. I'd like to do gymnastics. And I'd like to go horse riding. 28 Unit 3 Sports"
-          },
-          {
-            "id": 516,
-            "page": 29,
-            "heading": "AB 42-43 Unit Lesson 2: The timetable Dave phoned the sports centre and heard a message. Listen to the message. What does Dave have to leave? Listen and repeat the words. beginners advanced team practice The sports centre sent Dave this leaflet. Ask and answer questions about it. When is the volleyball beginners' class? On Monday, from five o'clock to seven o'clock. Men's and boys' lessons: Tuesday, Thursday and Saturday Women's and girls' lessons: Monday, Wednesday and Friday Volleyball Beginners: Mon. Team practice: Mon. 7—9 Athletics Start now/ Wed. and Thur. Swimming Team practice: Thur. 7—9 and Fri. Tennis Beginners: Mon. and Tue. 7-9 Advanced: Fri. 5-7 and sat. 3-5 Gymnastics Beginners: Tue. and Wed. 7—9 Advanced: Thur. and Fri. Basketball Beginners: Tue. 5—7 Team practice: Sat _ 3—5 Karate team a new sport! Mon. 5-7 and Thur. 5-7 Call 952841 to book a class and for information about other sports. Ask and answer questions. What sports do you want to do? I'm quite good at volleyball, but I want to practise. How good are you at volleyball? I've never played volleyball. I'd like to learn how to play it. Sports Unit 3 29",
-            "text": "AB 42-43 Unit Lesson 2: The timetable Dave phoned the sports centre and heard a message. Listen to the message. What does Dave have to leave? Listen and repeat the words. beginners advanced team practice The sports centre sent Dave this leaflet. Ask and answer questions about it. When is the volleyball beginners' class? On Monday, from five o'clock to seven o'clock. Men's and boys' lessons: Tuesday, Thursday and Saturday Women's and girls' lessons: Monday, Wednesday and Friday Volleyball Beginners: Mon. Team practice: Mon. 7—9 Athletics Start now/ Wed. and Thur. Swimming Team practice: Thur. 7—9 and Fri. Tennis Beginners: Mon. and Tue. 7-9 Advanced: Fri. 5-7 and sat. 3-5 Gymnastics Beginners: Tue. and Wed. 7—9 Advanced: Thur. and Fri. Basketball Beginners: Tue. 5—7 Team practice: Sat _ 3—5 Karate team a new sport! Mon. 5-7 and Thur. 5-7 Call 952841 to book a class and for information about other sports. Ask and answer questions. What sports do you want to do? I'm quite good at volleyball, but I want to practise. How good are you at volleyball? I've never played volleyball. I'd like to learn how to play it. Sports Unit 3 29"
+            "page": 25,
+            "heading": "Project 2: Healthy Living Poster (مشروع: ملصق نمط الحياة الصحي)",
+            "text": "Unit 2 Capstone Project: Design a Healthy Living Poster & Campaign\n\nProject Overview:\nUsing everything you learned in Unit 2 (pages 17 to 25), work individually or in groups to design an eye-catching, informative poster encouraging healthy lifestyle choices among students in your school.\n\nKey Sections to Include in Your Poster:\n1. Catchy Slogans:\n   • \"Keep Fit, Live Well!\"\n   • \"You Are What You Eat!\"\n   • \"Move Every Day: 20 Minutes Makes a Difference!\"\n\n2. The Fitness Guide (Page 17):\n   • Encourage regular exercise: football, swimming, cycling, brisk walking.\n   • Use 'should' and 'shouldn't': \"You should take exercise with friends; you shouldn't sit on the sofa all day.\"\n\n3. The Healthy Plate (Page 18):\n   • Explain the balance: 5 portions of fruit and vegetables every day.\n   • Water hydration: drink plenty of fresh water.\n   • Use quantifiers correctly: \"A little salt/sugar is enough. Avoid too much fat. A few treats are OK, but too many will make you unhealthy.\"\n\n4. First Aid & Health Care (Pages 20 & 21):\n   • How to describe aches (headache, toothache, stomach ache).\n   • When to see a doctor or dentist, and the importance of never ignoring severe pain.\n\n5. Cheering Up Friends (Pages 22 & 23):\n   • Designing 'Get well soon' messages and sending kindness to sick friends.\n\nPresentation:\nPresent your poster to the class, explain your advice, and answer questions using should, shouldn't, and frequency expressions!"
           }
         ]
       }
@@ -1539,9 +1536,224 @@ window.GRAMMAR_RULES = [
       "correct": 0,
       "explanation": "نستخدم might للتعبير عن إمكانية واحتمالية هطول المطر."
     }
+  },
+  {
+    "id": "quantifiers_too_much_many",
+    "unit": 2,
+    "title": "محددات الكمية: Too much, Too many, A few, A little, A lot of",
+    "level": "الوحدة 2",
+    "page": 18,
+    "formula": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
+    "explanation": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة.",
+    "examples": [
+      {
+        "en": "Too much sugar is bad for your teeth.",
+        "ar": "الكثير جداً من السكر ضار بأسنانك (اسم غير معدود)."
+      },
+      {
+        "en": "You shouldn't eat too many crisps and sweets.",
+        "ar": "لا ينبغي أن تأكل الكثير جداً من المقرمشات والحلويات (اسم معدود جمع)."
+      },
+      {
+        "en": "A few biscuits are all right, but not too many.",
+        "ar": "بضع بسكويتات لا بأس بها، ولكن ليس الكثير جداً."
+      },
+      {
+        "en": "Add a little salt to your soup.",
+        "ar": "أضف القليل من الملح إلى حسائك."
+      },
+      {
+        "en": "We should drink a lot of water every day.",
+        "ar": "ينبغي علينا شرب الكثير من الماء يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "Eating too _______ sweets is bad for your health.",
+      "options": [
+        "much",
+        "many",
+        "little",
+        "few"
+      ],
+      "correct": 1,
+      "explanation": "كلمة sweets اسم معدود جمع، لذا نستخدم معه too many."
+    }
+  },
+  {
+    "id": "expressing_aches_illnesses",
+    "unit": 2,
+    "title": "التعبير عن الأوجاع والأمراض (Aches and Pains)",
+    "level": "الوحدة 2",
+    "page": 20,
+    "formula": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
+    "explanation": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers).",
+    "examples": [
+      {
+        "en": "I've got a terrible headache. My head aches.",
+        "ar": "أعاني من صداع فظيع. رأسي يؤلمني."
+      },
+      {
+        "en": "Jameel has got a toothache. He should see a dentist.",
+        "ar": "جميل لديه ألم أسنان، ينبغي عليه مراجعة طبيب الأسنان."
+      },
+      {
+        "en": "My right ear hurts badly.",
+        "ar": "أذني اليمنى تؤلمني بشدة."
+      },
+      {
+        "en": "Take these two painkillers with water.",
+        "ar": "تناول هذين المسكنين مع الماء."
+      }
+    ],
+    "quiz": {
+      "question": "Anas has got a stomach ache. His stomach _______.",
+      "options": [
+        "hurts",
+        "aches",
+        "hurting",
+        "both hurts and aches are correct"
+      ],
+      "correct": 3,
+      "explanation": "يمكن القول His stomach hurts أو His stomach aches فكلاهما صحيح بالمعنى ذاته."
+    }
+  },
+  {
+    "id": "verbs_of_preference_unit2",
+    "unit": 2,
+    "title": "أفعال التفضيل والمشاعر: like, enjoy, hate, dislike, avoid",
+    "level": "الوحدة 2",
+    "page": 111,
+    "formula": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
+    "explanation": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية.",
+    "examples": [
+      {
+        "en": "He enjoys cycling in the park.",
+        "ar": "هو يستمتع بركوب الدراجة في الحديقة (Verb + -ing)."
+      },
+      {
+        "en": "She dislikes fast games.",
+        "ar": "هي لا تحب الألعاب السريعة (Adjective + noun)."
+      },
+      {
+        "en": "You should avoid eating too much fat.",
+        "ar": "ينبغي عليك تجنب تناول الكثير من الدهون."
+      },
+      {
+        "en": "I love running in the morning.",
+        "ar": "أنا أحب الجري في الصباح."
+      }
+    ],
+    "quiz": {
+      "question": "Zaid avoids _______ exercise because he gets tired quickly.",
+      "options": [
+        "take",
+        "taking",
+        "took",
+        "takes"
+      ],
+      "correct": 1,
+      "explanation": "الفعل avoid يتبعه الفعل بصيغة -ing (Gerund)."
+    }
+  },
+  {
+    "id": "want_pattern_unit2",
+    "unit": 2,
+    "title": "صيغة الرغبة والتوجيه: Want + Pronoun + to + Infinitive",
+    "level": "الوحدة 2",
+    "page": 25,
+    "formula": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
+    "explanation": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد.",
+    "examples": [
+      {
+        "en": "My mother wants me to eat more vegetables.",
+        "ar": "تريدني والدتي أن آكل المزيد من الخضار."
+      },
+      {
+        "en": "Your father wants you to help him in his shop.",
+        "ar": "يريدك والدك أن تساعده في دكانه."
+      },
+      {
+        "en": "The coach wants us to take exercise regularly.",
+        "ar": "يريد منا المدرب أن نتدرب بانتظام."
+      }
+    ],
+    "quiz": {
+      "question": "The teacher wants the students _______ arrive on time.",
+      "options": [
+        "to",
+        "for",
+        "in",
+        "at"
+      ],
+      "correct": 0,
+      "explanation": "التركيب الصحيح هو want + someone + to + infinitive."
+    }
+  },
+  {
+    "id": "frequency_expressions_unit2",
+    "unit": 2,
+    "title": "تعبيرات وظروف التكرار (Expressions of Frequency: How often...?)",
+    "level": "الوحدة 2",
+    "page": 17,
+    "formula": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
+    "explanation": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً).",
+    "examples": [
+      {
+        "en": "How often do you take exercise? - I go walking every day.",
+        "ar": "كم مرة تمارس الرياضة؟ - أذهب للمشي كل يوم."
+      },
+      {
+        "en": "I play football twice a week with my friends.",
+        "ar": "ألعب كرة القدم مرتين في الأسبوع مع أصدقائي."
+      },
+      {
+        "en": "You should put these drops in your ear twice a day.",
+        "ar": "ينبغي أن تضع هذه القطرات في أذنك مرتين يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "\"_______ do you go swimming?\" - \"Twice a week.\"",
+      "options": [
+        "How long",
+        "How often",
+        "How much",
+        "How many"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم How often للسؤال عن معدل تكرار الحدث."
+    }
+  },
+  {
+    "id": "limericks_rules_unit2",
+    "unit": 2,
+    "title": "قواعد وهيكل قصائد الليمريك (Limerick Poetry: AABBA)",
+    "level": "الوحدة 2",
+    "page": 24,
+    "formula": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
+    "explanation": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان).",
+    "examples": [
+      {
+        "en": "Lines 1, 2, and 5 rhyme (Peru / blue / shampoo).",
+        "ar": "الأسطر 1 و 2 و 5 تشترك في القافية الأولى A."
+      },
+      {
+        "en": "Lines 3 and 4 rhyme together (faint / paint).",
+        "ar": "السطران 3 و 4 يشتركان في القافية الثانية B."
+      }
+    ],
+    "quiz": {
+      "question": "What is the rhyme scheme of a limerick?",
+      "options": [
+        "ABAB A",
+        "AABBA",
+        "AABB B",
+        "ABBA A"
+      ],
+      "correct": 1,
+      "explanation": "قافية الليمريك هي دائماً AABBA."
+    }
   }
 ];
-
 
 // بطاقات المفاهيم والرسوم التوضيحية المصممة للدروس والمواضيع
 window.TOPIC_CARDS = {
@@ -2178,6 +2390,772 @@ window.TOPIC_CARDS = {
         {
           "en": "I will never forget my first day at intermediate school.",
           "ar": "لن أنسى أبداً يومي الأول في المدرسة المتوسطة."
+        }
+      ]
+    }
+  },
+  "272": {
+    "unit": 2,
+    "lessonNumber": 1,
+    "pages": [
+      17
+    ],
+    "titleAr": "الحفاظ على اللياقة البدنية وممارسة الرياضة",
+    "titleEn": "Keep Fit & Exercise Regularly",
+    "themeColor": "#10b981",
+    "icon": "🏃‍♂️",
+    "sections": [
+      {
+        "name": "Fitness Importance",
+        "ar": "أهمية اللياقة",
+        "icon": "💪",
+        "def": "Fitness is very important. Unfit people cannot enjoy life and get tired quickly."
+      },
+      {
+        "name": "Regular Exercise",
+        "ar": "التمارين المنتظمة",
+        "icon": "⚽",
+        "def": "Games like football, basketball and netball give you plenty of exercise."
+      },
+      {
+        "name": "Brisk Walking",
+        "ar": "المشي السريع",
+        "icon": "🚶",
+        "def": "You should walk quickly for about 20 minutes every day to get fit."
+      },
+      {
+        "name": "Swimming & Cycling",
+        "ar": "السباحة وركوب الدراجة",
+        "icon": "🚴",
+        "def": "Very good forms of exercise to build stamina and strong muscles."
+      },
+      {
+        "name": "Out of Breath",
+        "ar": "ضيق التنفس",
+        "icon": "😮‍💨",
+        "def": "Unfit people cannot run or walk without getting tired and out of breath."
+      },
+      {
+        "name": "Exercise with Friends",
+        "ar": "الرياضة مع الأصدقاء",
+        "icon": "🤝",
+        "def": "Taking exercise with friends makes it fun, exciting and never boring."
+      }
+    ],
+    "grammarFocus": {
+      "title": "إعطاء النصيحة (Giving Advice: Should / Shouldn't)",
+      "rule": "Subject + should / shouldn't + base verb (مصدر مجرد)",
+      "examples": [
+        {
+          "en": "You should take exercise regularly.",
+          "ar": "ينبغي عليك ممارسة الرياضة بانتظام."
+        },
+        {
+          "en": "You shouldn't watch TV all the time.",
+          "ar": "لا ينبغي عليك مشاهدة التلفاز طوال الوقت."
+        },
+        {
+          "en": "You should walk quickly for 20 minutes.",
+          "ar": "ينبغي عليك المشي السريع لمدة 20 دقيقة."
+        },
+        {
+          "en": "You shouldn't go to bed late.",
+          "ar": "لا ينبغي عليك الذهاب إلى النوم متأخراً."
+        }
+      ]
+    }
+  },
+  "273": {
+    "unit": 2,
+    "lessonNumber": 2,
+    "pages": [
+      18
+    ],
+    "titleAr": "الغذاء الصحي وتوصيات الممرضة جانيت",
+    "titleEn": "Eat the Right Food & Nurse Janette's Advice",
+    "themeColor": "#14b8a6",
+    "icon": "🥗",
+    "sections": [
+      {
+        "name": "Fruit & Vegetables",
+        "ar": "الخضار والفواكه",
+        "icon": "🍎",
+        "def": "Keep us healthy. We should eat at least five pieces every day."
+      },
+      {
+        "name": "Water Intake",
+        "ar": "شرب الماء",
+        "icon": "💧",
+        "def": "We should drink plenty of water every day to keep our bodies hydrated."
+      },
+      {
+        "name": "Meat & Cheese",
+        "ar": "اللحوم والأجبان",
+        "icon": "🧀",
+        "def": "Good for protein, but eat in moderation because they have a lot of fat."
+      },
+      {
+        "name": "Fat, Salt & Sugar",
+        "ar": "الدهون والأملاح والسكريات",
+        "icon": "⚠️",
+        "def": "We must be very careful about food with too much fat, salt, or sugar."
+      },
+      {
+        "name": "Crisps & Sweets",
+        "ar": "المقرمشات والحلويات",
+        "icon": "🍬",
+        "def": "A few are all right, but too many will make you unhealthy and cause weight gain."
+      },
+      {
+        "name": "Balanced Diet",
+        "ar": "النظام المتوازن",
+        "icon": "⚖️",
+        "def": "You are what you eat: healthy variety gives energy and strong immunity."
+      }
+    ],
+    "grammarFocus": {
+      "title": "محددات الكمية مع المعدود وغير المعدود (Quantifiers)",
+      "rule": "(too much / a little) لغير المعدود | (too many / a few) للمعدود | (a lot of) للاثنين",
+      "examples": [
+        {
+          "en": "Too much sugar is bad for your teeth.",
+          "ar": "الكثير جداً من السكر ضار بأسنانك (غير معدود)."
+        },
+        {
+          "en": "Too many crisps will make you unhealthy.",
+          "ar": "الكثير جداً من المقرمشات سيجعلك غير صحي (معدود)."
+        },
+        {
+          "en": "A few biscuits are all right.",
+          "ar": "بضع بسكويتات لا بأس بها (قليل للمعدود)."
+        },
+        {
+          "en": "A little salt on your food is enough.",
+          "ar": "القليل من الملح كافٍ (قليل لغير المعدود)."
+        }
+      ]
+    }
+  },
+  "274": {
+    "unit": 2,
+    "lessonNumber": 3,
+    "pages": [
+      19
+    ],
+    "titleAr": "في المطعم: قوائم الطعام وأساليب الطهي",
+    "titleEn": "In a Restaurant: Menu & Cooking Methods",
+    "themeColor": "#f59e0b",
+    "icon": "🍽️",
+    "sections": [
+      {
+        "name": "Starters",
+        "ar": "المقبلات والشوربات",
+        "icon": "🥣",
+        "def": "Small light dishes served before the main course."
+      },
+      {
+        "name": "Main Courses",
+        "ar": "الأطباق الرئيسية",
+        "icon": "🍛",
+        "def": "Hearty dishes like lamb curry, beef curry, fried chicken, and pizza."
+      },
+      {
+        "name": "Desserts",
+        "ar": "أطباق التحلية",
+        "icon": "🍰",
+        "def": "Sweet treats served at the end, like chocolate cake and fruit salad."
+      },
+      {
+        "name": "Cooking Methods",
+        "ar": "طرق الطهي",
+        "icon": "🍳",
+        "def": "fried (مقلي بالزيت), grilled (مشوي بالنار), baked (مخبوز بالفرن), boiled (مسلوق)."
+      },
+      {
+        "name": "Meats",
+        "ar": "أنواع اللحوم",
+        "icon": "🥩",
+        "def": "lamb = the meat of a sheep; beef = the meat of a cow."
+      },
+      {
+        "name": "Polite Ordering",
+        "ar": "الطلب المهذب",
+        "icon": "🛎️",
+        "def": "Could I have grilled fish, please? / I would like some mineral water."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ الطلب المؤدب (Polite Requests & Offers)",
+      "rule": "Could I have + noun, please? / I'd like + noun / to + verb",
+      "examples": [
+        {
+          "en": "Could I have the menu, please?",
+          "ar": "هل يمكنني الحصول على القائمة من فضلك؟"
+        },
+        {
+          "en": "I'd like grilled chicken with baked potato.",
+          "ar": "أود الحصول على دجاج مشوي مع بطاطا مخبوزة."
+        },
+        {
+          "en": "Are you ready to order, sir?",
+          "ar": "هل أنت جاهز لتسجيل الطلب يا سيدي؟"
+        },
+        {
+          "en": "Could we have the bill, please?",
+          "ar": "هل بإمكاننا الحصول على الحساب لو سمحت؟"
+        }
+      ]
+    }
+  },
+  "275": {
+    "unit": 2,
+    "lessonNumber": 4,
+    "pages": [
+      20
+    ],
+    "titleAr": "الأوجاع والشكاوى الصحية الشائعة",
+    "titleEn": "Aches, Pains & Health Complaints",
+    "themeColor": "#ef4444",
+    "icon": "🩹",
+    "sections": [
+      {
+        "name": "Headache",
+        "ar": "صداع الرأس",
+        "icon": "🤕",
+        "def": "A continuous ache in your head. Take two painkillers and rest."
+      },
+      {
+        "name": "Stomach ache",
+        "ar": "ألم ومغص المعدة",
+        "icon": "🤢",
+        "def": "Pain in the stomach, often caused by eating too many crisps or sweets."
+      },
+      {
+        "name": "Toothache",
+        "ar": "ألم الأسنان",
+        "icon": "🦷",
+        "def": "Sharp pain in a tooth. You should visit the dentist immediately."
+      },
+      {
+        "name": "Earache",
+        "ar": "ألم الأذن",
+        "icon": "👂",
+        "def": "Infection or pain in the ear. The doctor prescribes ear drops twice daily."
+      },
+      {
+        "name": "Cold & Sore Throat",
+        "ar": "الزكام والتهاب الحلق",
+        "icon": "🤧",
+        "def": "Sneezing, fever, and pain when swallowing. Drink warm fluids."
+      },
+      {
+        "name": "Painkillers & Medicine",
+        "ar": "المسكنات والعلاج",
+        "icon": "💊",
+        "def": "Pills, tablets, or drops taken with water to relieve pain and aches."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التعبير عن الألم والمرض (Describing Pain and Aches)",
+      "rule": "I've got a [headache / toothache / earache / stomach ache] OR My [ear / head / arm] hurts",
+      "examples": [
+        {
+          "en": "I've got a bad headache. My head aches.",
+          "ar": "أعاني من صداع شديد. رأسي يؤلمني."
+        },
+        {
+          "en": "My right ear hurts. I need ear drops.",
+          "ar": "أذني اليمنى تؤلمني. أنا بحاجة لقطرات الأذن."
+        },
+        {
+          "en": "You have a toothache; you should see a dentist.",
+          "ar": "لديك ألم أسنان، ينبغي عليك زيارة طبيب الأسنان."
+        },
+        {
+          "en": "Take these two pills with some water.",
+          "ar": "تناول هاتين الحبتين مع بعض الماء."
+        }
+      ]
+    }
+  },
+  "276": {
+    "unit": 2,
+    "lessonNumber": 5,
+    "pages": [
+      21
+    ],
+    "titleAr": "قصة جلال: المسؤولية وأهمية الاهتمام بالآخرين",
+    "titleEn": "Jalal's Story: Responsibility & Care",
+    "themeColor": "#8b5cf6",
+    "icon": "📖",
+    "sections": [
+      {
+        "name": "Looking After Ibrahim",
+        "ar": "رعاية إبراهيم",
+        "icon": "👦",
+        "def": "Jalal was asked to look after his 8-year-old brother while parents were out."
+      },
+      {
+        "name": "Ignored Complaint",
+        "ar": "تجاهل الشكوى",
+        "icon": "🎮",
+        "def": "Jalal was busy playing computer games and thought Ibrahim was pretending."
+      },
+      {
+        "name": "Severe Pain",
+        "ar": "الألم الحاد والتدهور",
+        "icon": "😭",
+        "def": "Ibrahim cried, held his stomach, vomited, and became very pale."
+      },
+      {
+        "name": "Ambulance Call",
+        "ar": "طلب الإسعاف",
+        "icon": "🚑",
+        "def": "Parents returned, recognized the emergency immediately, and called an ambulance."
+      },
+      {
+        "name": "Appendicitis Operation",
+        "ar": "جراحة الزائدة الدودية",
+        "icon": "🏥",
+        "def": "Surgeons operated at the hospital and removed Ibrahim's inflamed appendix."
+      },
+      {
+        "name": "The Unforgettable Lesson",
+        "ar": "الدرس الأخلاقي",
+        "icon": "💡",
+        "def": "Never ignore someone in pain. Be responsible, caring, and attentive."
+      }
+    ],
+    "grammarFocus": {
+      "title": "السرد القصصي بالماضي المستمر والماضي البسيط",
+      "rule": "Past Continuous (خلفية الحدث) + When + Past Simple (الحدث المفاجئ)",
+      "examples": [
+        {
+          "en": "I was playing a computer game when Ibrahim started crying.",
+          "ar": "كنت ألعب لعبة كمبيوتر عندما بدأ إبراهيم بالبكاء."
+        },
+        {
+          "en": "He held his stomach and cried because it really hurt.",
+          "ar": "أمسك ببطنه وبكى لأنه كان يتألم حقاً."
+        },
+        {
+          "en": "The surgeons operated and saved his life.",
+          "ar": "أجرى الجراحون العملية وأنقذوا حياته."
+        }
+      ]
+    }
+  },
+  "277": {
+    "unit": 2,
+    "lessonNumber": 6,
+    "pages": [
+      22
+    ],
+    "titleAr": "بطاقات التمني بالشفاء العاجل",
+    "titleEn": "Get Well Cards & Sympathy Messages",
+    "themeColor": "#ec4899",
+    "icon": "💌",
+    "sections": [
+      {
+        "name": "Get Well Soon",
+        "ar": "تمني الشفاء العاجل",
+        "icon": "🌸",
+        "def": "The universal caring greeting sent to sick friends and family."
+      },
+      {
+        "name": "Humorous Cards",
+        "ar": "البطاقات الطريفة",
+        "icon": "😄",
+        "def": "Funny messages to make the patient laugh and lift their spirits."
+      },
+      {
+        "name": "Rhyming Verses",
+        "ar": "أشعار التضامن الدافئة",
+        "icon": "📜",
+        "def": "Short rhyming verses sending love, hope, and speedy recovery wishes."
+      },
+      {
+        "name": "Hospital Support",
+        "ar": "المؤازرة في المستشفى",
+        "icon": "🏥",
+        "def": "Sending cards, letters, and flowers when friends have accidents or illness."
+      },
+      {
+        "name": "Emotional Boost",
+        "ar": "الأثر النفسي الإيجابي",
+        "icon": "💖",
+        "def": "Kind thoughts and prayers help patients heal and feel less lonely."
+      },
+      {
+        "name": "Signatures & Names",
+        "ar": "توقيعات الزملاء",
+        "icon": "✍️",
+        "def": "Classmates signing their names with 'With lots of love' and 'Best wishes'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ التمني والدعاء بالشفاء (Wishes and Recovery)",
+      "rule": "Wishing you + noun phrase / Hope + subject + verb",
+      "examples": [
+        {
+          "en": "Wishing you a speedy and complete recovery.",
+          "ar": "أتمنى لك شفاءً عاجلاً وتاماً."
+        },
+        {
+          "en": "Hope you feel better and stronger every day!",
+          "ar": "أتمنى أن تشعر بتحسن وقوة يوماً بعد يوم!"
+        },
+        {
+          "en": "We all miss you at school, get well soon!",
+          "ar": "جميعنا نفتقدك في المدرسة، نتمنى لك الشفاء العاجل!"
+        }
+      ]
+    }
+  },
+  "278": {
+    "unit": 2,
+    "lessonNumber": 7,
+    "pages": [
+      23
+    ],
+    "titleAr": "كتابة رسالة غير رسمية لصديق مريض",
+    "titleEn": "Writing an Informal Letter to a Sick Friend",
+    "themeColor": "#3b82f6",
+    "icon": "✉️",
+    "sections": [
+      {
+        "name": "Address & Date",
+        "ar": "العنوان والتاريخ",
+        "icon": "📍",
+        "def": "Written in the top right-hand corner (e.g., Flat 411, Street 36, Baghdad - March 2021)."
+      },
+      {
+        "name": "Informal Salutation",
+        "ar": "التحية الودية",
+        "icon": "👋",
+        "def": "Starting warmly with 'Dear [Friend's Name],' followed by a comma."
+      },
+      {
+        "name": "Sympathy Opening",
+        "ar": "مقدمة التعاطف",
+        "icon": "💐",
+        "def": "I was very sorry to hear about your accident. Hope your leg doesn't hurt too much."
+      },
+      {
+        "name": "School & Class News",
+        "ar": "أخبار الصف والمدرسة",
+        "icon": "🏫",
+        "def": "Sharing updates about lessons, projects, homework, and classmates' regards."
+      },
+      {
+        "name": "Gifts & Visiting",
+        "ar": "الهدايا وموعد الزيارة",
+        "icon": "🎁",
+        "def": "Sending puzzle books or magazines, and asking when visiting is permitted."
+      },
+      {
+        "name": "Warm Sign-off",
+        "ar": "خاتمة الرسالة",
+        "icon": "🖋️",
+        "def": "Closing with 'Best wishes,' or 'With love,' followed by the writer's name."
+      }
+    ],
+    "grammarFocus": {
+      "title": "هيكل الرسالة غير الرسمية (Layout of an Informal Letter)",
+      "rule": "Top right: Address & Date ➔ Dear [Name], ➔ Body paragraphs ➔ Best wishes, [Name]",
+      "examples": [
+        {
+          "en": "Dear Marwa, I was very sorry to hear about your accident.",
+          "ar": "عزيزتي مروة، حزنت جداً لسماع نبأ الحادث الذي تعرضتِ له."
+        },
+        {
+          "en": "Everyone in class sends their love and wants you to get well soon.",
+          "ar": "الجميع في الصف يرسلون محبتهم ويريدون لك الشفاء العاجل."
+        },
+        {
+          "en": "Best wishes, Sara.",
+          "ar": "مع أطيب التمنيات، سارة."
+        }
+      ]
+    }
+  },
+  "279": {
+    "unit": 2,
+    "lessonNumber": 8,
+    "pages": [
+      24
+    ],
+    "titleAr": "قصائد الليمريك الفكاهية ونظم القوافي",
+    "titleEn": "English Limericks & Rhyme Patterns",
+    "themeColor": "#84cc16",
+    "icon": "🎭",
+    "sections": [
+      {
+        "name": "What is a Limerick?",
+        "ar": "ما هو الليمريك؟",
+        "icon": "📜",
+        "def": "A short, funny, 5-line poem with a distinctive rhythm and rhyming structure."
+      },
+      {
+        "name": "Rhyme Scheme AABBA",
+        "ar": "نمط القافية AABBA",
+        "icon": "🎵",
+        "def": "Lines 1, 2, and 5 rhyme (A). Lines 3 and 4 rhyme together (B)."
+      },
+      {
+        "name": "Rhythm & Beats",
+        "ar": "الوزن والإيقاع",
+        "icon": "🥁",
+        "def": "Lines 1, 2, 5 have three beats (longer); lines 3 and 4 have two beats (shorter)."
+      },
+      {
+        "name": "The Girl from Peru",
+        "ar": "فتاة بيرو",
+        "icon": "🇵🇪",
+        "def": "Painted her roof blue, spilt all the paint, so now needs shampoo!"
+      },
+      {
+        "name": "The Boy from Kuwait",
+        "ar": "فتى الكويت",
+        "icon": "🇰🇼",
+        "def": "Got to school late every day because his clock always wakes him at eight!"
+      },
+      {
+        "name": "Humor & Nonsense",
+        "ar": "الفكاهة والغرابة",
+        "icon": "😂",
+        "def": "Limericks always feature absurd twists, playful rhymes, and funny endings."
+      }
+    ],
+    "grammarFocus": {
+      "title": "قواعد وبنية قصيدة الليمريك (Limerick Rules)",
+      "rule": "5 lines | Rhyme: AABBA | Beats: 3-3-2-2-3 | Humorous and light-hearted",
+      "examples": [
+        {
+          "en": "There once was a girl from Peru (Line 1: Rhyme A)",
+          "ar": "كان هناك ذات مرة فتاة من بيرو (السطر 1 - قافية A)"
+        },
+        {
+          "en": "Who was trying to paint her roof blue. (Line 2: Rhyme A)",
+          "ar": "كانت تحاول صبغ سقفها باللون الأزرق (السطر 2 - قافية A)"
+        },
+        {
+          "en": "She felt a bit faint / And spilt all the paint, (Lines 3 & 4: Rhyme B)",
+          "ar": "شعرت ببعض الدوار / فسكبت كل الدهان (السطران 3 و 4 - قافية B)"
+        },
+        {
+          "en": "So now she'll be needing shampoo! (Line 5: Rhyme A)",
+          "ar": "والآن هي بحاجة ماسة للشامبو! (السطر 5 - قافية A)"
+        }
+      ]
+    }
+  },
+  "280": {
+    "unit": 2,
+    "lessonNumber": 9,
+    "pages": [
+      25
+    ],
+    "titleAr": "المراجعة الشاملة لكفايات وقواعد الوحدة الثانية",
+    "titleEn": "Unit 2 Round Up: Comprehensive Review",
+    "themeColor": "#0284c7",
+    "icon": "🏆",
+    "sections": [
+      {
+        "name": "Giving Advice",
+        "ar": "إعطاء النصيحة",
+        "icon": "💡",
+        "def": "You should get fit and keep fit. You shouldn't watch TV all the time."
+      },
+      {
+        "name": "Expressions of Frequency",
+        "ar": "تعبيرات التكرار",
+        "icon": "🔄",
+        "def": "every day, twice a week, three times a week, regularly."
+      },
+      {
+        "name": "Quantifiers Mastery",
+        "ar": "إتقان محددات الكمية",
+        "icon": "⚖️",
+        "def": "too much / a little (uncountable); too many / a few (countable); a lot of."
+      },
+      {
+        "name": "Explaining Illness",
+        "ar": "وصف الأمراض والأعراض",
+        "icon": "🩺",
+        "def": "I've got a headache. My stomach hurts. Take two painkillers."
+      },
+      {
+        "name": "Expressing Feelings",
+        "ar": "التعبير عن المشاعر",
+        "icon": "😃",
+        "def": "I feel frightened, I feel excited, I feel sick."
+      },
+      {
+        "name": "The Want Pattern",
+        "ar": "قاعدة الفعل Want",
+        "icon": "🎯",
+        "def": "want + pronoun/noun + to + infinitive: My mother wants me to eat vegetables."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغة الرغبة والتوجيه (Want + Object + To + Verb)",
+      "rule": "Subject + want/wants + (me/you/him/her/us/them) + to + base verb",
+      "examples": [
+        {
+          "en": "My mother wants me to eat more fruit.",
+          "ar": "تريدني والدتي أن آكل المزيد من الفواكه."
+        },
+        {
+          "en": "Your father wants you to help him in his shop.",
+          "ar": "يريدك والدك أن تساعده في دكانه."
+        },
+        {
+          "en": "The doctor wants him to rest in bed.",
+          "ar": "يريده الطبيب أن يرتاح في السرير."
+        },
+        {
+          "en": "I want you to take exercise regularly.",
+          "ar": "أريدك أن تمارس الرياضة بانتظام."
+        }
+      ]
+    }
+  },
+  "281": {
+    "unit": 2,
+    "lessonNumber": 10,
+    "pages": [
+      26,
+      27
+    ],
+    "titleAr": "وقت القصة: جاد وجوني - التخييم في ستونهنج",
+    "titleEn": "Story Time: Jad and Johnny - Camping at Stonehenge",
+    "themeColor": "#7c3aed",
+    "icon": "🏕️",
+    "sections": [
+      {
+        "name": "Stonehenge Mystery",
+        "ar": "لغز آثار ستونهنج",
+        "icon": "🗿",
+        "def": "Over 4,000 years old stone circle in England used for studying the sky and astronomy."
+      },
+      {
+        "name": "The Campfire Evening",
+        "ar": "سهرة النار والمارشميلو",
+        "icon": "🔥",
+        "def": "Roasting marshmallows, drinking hot chocolate, and telling scary stories."
+      },
+      {
+        "name": "Night Terror",
+        "ar": "رعب منتصف الليل",
+        "icon": "👻",
+        "def": "A strange noise outside the tent! The boys thought it was aliens or a giant."
+      },
+      {
+        "name": "The Funny Sheep",
+        "ar": "المفاجأة الطريفة: الخروف",
+        "icon": "🐑",
+        "def": "Marcus opened the tent to find a harmless sheep eating their marshmallows!"
+      },
+      {
+        "name": "5:00 AM Sunrise",
+        "ar": "شروق الشمس 5:00 فجراً",
+        "icon": "🌅",
+        "def": "Breathtaking golden sunrise over the prehistoric stones at 5:00 in the morning."
+      },
+      {
+        "name": "Jad's Sleepy Photo",
+        "ar": "صورة جاد النائم المضحكة",
+        "icon": "📸",
+        "def": "Jad was fast asleep against a stone, so Johnny took a funny revenge photograph!"
+      }
+    ],
+    "grammarFocus": {
+      "title": "السرد القصصي والماضي المستمر (Narrative Past Continuous)",
+      "rule": "was / were + verb-ing (للأفعال المستمرة في خلفية القصة)",
+      "examples": [
+        {
+          "en": "We were toasting marshmallows and drinking hot chocolate.",
+          "ar": "كنا نشوي قطع المارشميلو ونشرب الشوكولاتة الساخنة."
+        },
+        {
+          "en": "A sheep was eating our marshmallows outside the tent!",
+          "ar": "كان هناك خروف يأكل قطع المارشميلو خارج الخيمة!"
+        },
+        {
+          "en": "Jad was sleeping against the ancient stone at sunrise.",
+          "ar": "كان جاد نائماً مسنداً ظهره للحجر العريق عند شروق الشمس."
+        }
+      ]
+    }
+  },
+  "282": {
+    "unit": 2,
+    "lessonNumber": 11,
+    "pages": [
+      17,
+      18,
+      19,
+      20,
+      25
+    ],
+    "titleAr": "مشروع الوحدة: تصميم ملصق ودليل الحياة الصحية",
+    "titleEn": "Project 2: Healthy Living Poster & Campaign",
+    "themeColor": "#059669",
+    "icon": "📊",
+    "sections": [
+      {
+        "name": "Project Objective",
+        "ar": "هدف المشروع",
+        "icon": "🎯",
+        "def": "Design an informative poster encouraging students to live a healthy, active life."
+      },
+      {
+        "name": "Fitness Rules",
+        "ar": "إرشادات اللياقة",
+        "icon": "🏃",
+        "def": "20 minutes brisk walking daily, sports with friends, avoiding sitting too long."
+      },
+      {
+        "name": "Nutrition Plate",
+        "ar": "الطبق الغذائي الصحي",
+        "icon": "🥗",
+        "def": "5 portions of fruit/veg daily, plenty of water, cutting down salt, sugar, and fat."
+      },
+      {
+        "name": "Health & First Aid",
+        "ar": "الإسعافات والوقاية",
+        "icon": "🩺",
+        "def": "Describing symptoms properly and advising when to visit a doctor or dentist."
+      },
+      {
+        "name": "Motivational Slogans",
+        "ar": "الشعارات التحفيزية",
+        "icon": "📣",
+        "def": "'Eat Well, Keep Fit, Live Strong!' and 'You Are What You Eat!'"
+      },
+      {
+        "name": "Class Presentation",
+        "ar": "العرض والمناقشة",
+        "icon": "🎤",
+        "def": "Presenting recommendations to classmates and practicing advice with should/shouldn't."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صياغة التوصيات والشعارات التحفيزية (Recommendations & Slogans)",
+      "rule": "Imperatives (أفعال الأمر) + Should / Shouldn't + Quantifiers",
+      "examples": [
+        {
+          "en": "Drink plenty of water and eat five portions of fruit and vegetables.",
+          "ar": "اشرب الكثير من الماء وتناول خمس حصص من الفواكه والخضار."
+        },
+        {
+          "en": "You should choose active sports instead of watching TV.",
+          "ar": "ينبغي عليك اختيار الرياضات النشطة بدلاً من مشاهدة التلفاز."
+        },
+        {
+          "en": "A little healthy habit every day creates a lifetime of fitness.",
+          "ar": "عادة صحية بسيطة يومياً تصنع حياة مفعمة باللياقة."
         }
       ]
     }
