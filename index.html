@@ -795,7 +795,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.0</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge">v2.3.2</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -828,6 +828,11 @@
         </button>
       </nav>
 
+      <!-- زر استوديو الصوت البشري المتقدم -->
+      <button class="btn btn-sm" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;" title="استوديو ضبط ومعاينة الصوت البشري المتقدم">
+        <span>🎙️</span> استوديو الصوت
+      </button>
+
       <!-- زر تثبيت تطبيق PWA -->
       <button class="btn btn-sm" id="pwaInstallBtn" onclick="installPWA()" style="display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700;">
         📲 تثبيت التطبيق
@@ -848,7 +853,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.0</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.3.2</span>
         </div>
         <h2>نظامك التعليمي التفاعلي الشخصي</h2>
         <p>
@@ -963,6 +968,9 @@
               </button>
               <button class="audio-btn danger" onclick="audioPlayer.stop()">
                 <span>⏹️</span> إيقاف
+              </button>
+              <button class="audio-btn" onclick="openVoiceStudioModal()" style="background: rgba(99, 102, 241, 0.45); border: 1px solid rgba(165, 180, 252, 0.5);" title="استوديو ضبط ومعاينة الصوت البشري المتقدم">
+                <span>⚙️</span> استوديو الصوت
               </button>
             </div>
             
@@ -1159,7 +1167,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.0</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.3.2</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1168,7 +1176,8 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
-                        <div>• <strong style="color: var(--primary);">v2.3.0 (أكتوبر 2026):</strong> إنجاز متطلبات الوحدة الثانية بالكامل (نمط الحياة الصحي - Healthy Lifestyle: الصفحات 17 إلى 27)، وتزويد كافة دروسها الـ 11 بالمعرض البصري لصفحات الكتاب المعتمدة وبطاقات المفاهيم المصورة، و7 قواعد نحوية تفصيلية مع اختبارات تفاعلية فورية ومحرك إجابة ذكي معتمد بالصفحات - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v2.3.2 (أكتوبر 2026):</strong> استوديو ضبط ومعاينة الصوت البشري المتقدم (Voice Studio)، ومحرك المحادثات التبادلية متعددة الشخصيات (Multi-Speaker Dialogue Engine) بتبديل الأصوات والنبرات والوقفات الحوارية الطبيعية تلقائياً دون الحاجة لملفات صوتية خارجية - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v2.3.0 (أكتوبر 2026):</strong> إنجاز متطلبات الوحدة الثانية بالكامل (نمط الحياة الصحي - Healthy Lifestyle: الصفحات 17 إلى 27)، وتزويد كافة دروسها الـ 11 بالمعرض البصري لصفحات الكتاب المعتمدة وبطاقات المفاهيم المصورة، و7 قواعد نحوية تفصيلية مع اختبارات تفاعلية فورية ومحرك إجابة ذكي معتمد بالصفحات - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.2.0 (أكتوبر 2026):</strong> تقسيم خطة العمل إلى وحدات دراسية وتطويرية مستقلة (Unit-by-Unit)، ودعم الدروس بالصور التوضيحية لصفحات الكتاب المدرسي المعتمد (120 صفحة مدمجة)، وميزة التكبير (Modal Lightbox)، وتصميم بطاقات المفاهيم البصرية الشاملة لجميع دروس الوحدة الأولى (11 درساً) بإشراف إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong>v2.1.0:</strong> النشر السحابي بصيغة PWA تقدمية، والقارئ الصوتي التفاعلي بمخارج إنجليزية طبيعية، وبنك القواعد النحوية (11 قاعدة مع التمارين الفورية).</div>
             <div>• <strong>v2.0.0:</strong> إعادة هيكلة مناهج وزارة التربية إلى 10 وحدات و 53 درساً نظامياً وربط نصوص كتاب الطالب الأصلية.</div>
@@ -1187,7 +1196,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.3.0</span>
+        <span class="version-badge">v2.3.2</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1265,10 +1274,122 @@
     </div>
   </div>
 
+  <!-- نافذة مودال: استوديو ضبط ومعاينة الصوت البشري المتقدم -->
+  <div class="modal-overlay hidden" id="voiceStudioModal">
+    <div class="modal-box" style="max-width: 650px; width: 95vw; max-height: 90vh; overflow-y: auto; padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: #e0e7ff; color: #4338ca; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+            🎙️
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--slate-900); margin: 0;">استوديو ضبط ومعاينة الصوت البشري</h3>
+            <span style="font-size: 0.75rem; color: var(--primary); font-weight: 700;">تحكم صوتي مدمج بدون ملفات خارجية - إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <button onclick="closeVoiceStudioModal()" style="border: none; background: transparent; font-size: 1.3rem; cursor: pointer; color: var(--slate-400);">✕</button>
+      </div>
+
+      <!-- بطاقة حالة المحرك المدمج -->
+      <div style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; border: 1px solid #334155;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.4rem;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
+            <strong style="font-size: 0.85rem; color: #f8fafc;">محرك النطق العصبي المدمج (Web Speech Neural Engine)</strong>
+          </div>
+          <span id="studioVoicesCount" style="font-size: 0.75rem; background: rgba(255,255,255,0.15); padding: 0.15rem 0.5rem; border-radius: 6px; color: #93c5fd;">جارِ فحص الأصوات...</span>
+        </div>
+        <p style="font-size: 0.75rem; color: #cbd5e1; margin: 0; line-height: 1.5;">
+          يعمل النظام بتقنية المعالجة الصوتية الطبيعية من خلال أصوات جهازك ومتصفحك مباشرة بدون الحاجة لرفع أي ملفات صوتية مسجلة، ويحاكي المتحدثين البشريين تلقائياً.
+        </p>
+      </div>
+
+      <!-- أدوات التحكم الصوتي -->
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.35rem; display: block;">
+            🎙️ الصوت البشري الأساسي (Voice Accent):
+          </label>
+          <select id="studioVoiceSelect" class="form-input" style="font-size: 0.85rem; padding: 0.5rem; width: 100%; border: 1px solid var(--slate-300); border-radius: 8px;" onchange="audioPlayer.setSelectedVoice(this.value)">
+            <option value="auto">✨ طبيعي ذكي (الأفضل تلقائياً حسب المتصفح)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">
+                ⚡ سرعة النطق (Speed):
+              </label>
+              <span id="studioSpeedVal" style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">0.82x</span>
+            </div>
+            <input type="range" id="studioSpeedSlider" min="0.70" max="1.15" step="0.02" value="0.82" style="width: 100%;" oninput="audioPlayer.setSpeed(this.value)">
+            <span style="font-size: 0.7rem; color: var(--slate-500);">الموصى به: 0.82x (هادئ ومتأنٍ للشرح)</span>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">
+                🎵 طبقة الصوت (Pitch):
+              </label>
+              <span id="studioPitchVal" style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">1.00</span>
+            </div>
+            <input type="range" id="studioPitchSlider" min="0.80" max="1.20" step="0.05" value="1.00" style="width: 100%;" oninput="audioPlayer.setPitch(this.value)">
+            <span style="font-size: 0.7rem; color: var(--slate-500);">الموصى به: 1.00 (نبرة طبيعية معتدلة)</span>
+          </div>
+        </div>
+
+        <!-- تفعيل المحادثات التبادلية -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800);">👥 محاكاة المحادثات التبادلية (Multi-Speaker Dialogue)</div>
+            <div style="font-size: 0.72rem; color: var(--slate-500);">تبديل نبرة وصوت المتحدثين تلقائياً بين السؤال والجواب في الحوارات</div>
+          </div>
+          <input type="checkbox" id="studioMultiSpeakerSwitch" checked style="width: 20px; height: 20px; cursor: pointer; accent-color: var(--primary);" onchange="audioPlayer.setMultiSpeaker(this.checked)">
+        </div>
+      </div>
+
+      <!-- مختبر المعاينة والتجربة الفورية -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <strong style="font-size: 0.85rem; color: var(--slate-800);">🧪 مختبر التجربة الحية الفورية (Live Voice Test):</strong>
+          <span id="studioTestStatus" style="font-size: 0.75rem; color: var(--slate-500);">جاهز للاختبار</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem;">
+          <button class="btn btn-secondary btn-sm" onclick="testStudioSample('word')" style="justify-content: center; font-size: 0.75rem; padding: 0.5rem;">
+            <span>💬</span> تجربة جملة
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="testStudioSample('question')" style="justify-content: center; font-size: 0.75rem; padding: 0.5rem;">
+            <span>❓</span> تجربة سؤال
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="testStudioSample('dialogue')" style="justify-content: center; font-size: 0.75rem; padding: 0.5rem; background: #e0e7ff; color: #3730a3; border-color: #c7d2fe;">
+            <span>👥</span> تجربة محادثة حية
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="audioPlayer.stop()" style="justify-content: center; font-size: 0.75rem; padding: 0.5rem; background: #fee2e2; color: #991b1b; border-color: #fecaca;">
+            <span>⏹️</span> إيقاف التجربة
+          </button>
+        </div>
+      </div>
+
+      <!-- أزرار الإجراءات -->
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; border-top: 1px solid var(--slate-200); padding-top: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-secondary btn-sm" onclick="resetStudioDefaults()" style="font-size: 0.75rem;">
+          🔄 استعادة الافتراضي
+        </button>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-secondary btn-sm" onclick="closeVoiceStudioModal()">إلغاء</button>
+          <button class="btn btn-primary btn-sm" onclick="saveStudioSettings()" style="font-weight: 700;">
+            💾 حفظ الإعدادات واعتمادها للنظام
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const SYSTEM_VERSION = 'v2.3.0';
+    const SYSTEM_VERSION = 'v2.3.2';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     
     // حالة النظام
@@ -1285,14 +1406,17 @@
 
     // ----------------------------------------------------
     // محرك القراءة الصوتية الفصيحة البشرية (Natural Human-like TTS)
+    // إصدار متقدم v2.3.2 يدعم المحادثات التبادلية والاستوديو التفاعلي
+    // إعداد المهندس أسامة خليل هاشم
     // ----------------------------------------------------
     const audioPlayer = {
       synth: window.speechSynthesis,
       isPlaying: false,
       isPaused: false,
-      speed: 0.82, // سرعة هادئة ومتأنية ومناسبة للتعلم وفهم النطق
-      pitch: 1.0,  // نبرة طبيعية معتدلة
+      speed: parseFloat(localStorage.getItem('preferred_speech_speed')) || 0.82, // سرعة هادئة متأنية
+      pitch: parseFloat(localStorage.getItem('preferred_speech_pitch')) || 1.0,  // نبرة طبيعية معتدلة
       selectedVoiceName: localStorage.getItem('preferred_voice_name') || 'auto',
+      multiSpeaker: localStorage.getItem('preferred_multispeaker') !== 'false', // مفعل افتراضياً
       voicesList: [],
       chunks: [],
       currentChunkIdx: 0,
@@ -1303,12 +1427,8 @@
         if (this.synth.onvoiceschanged !== undefined) {
           this.synth.onvoiceschanged = () => this.loadVoices();
         }
-        const savedSpeed = localStorage.getItem('preferred_speech_speed');
-        if (savedSpeed) {
-          this.speed = parseFloat(savedSpeed);
-          const sel = document.getElementById('audioSpeedSelect');
-          if (sel) sel.value = savedSpeed;
-        }
+        const sel = document.getElementById('audioSpeedSelect');
+        if (sel) sel.value = this.speed.toString();
       },
 
       loadVoices() {
@@ -1319,26 +1439,28 @@
 
       populateVoiceSelect() {
         const sel = document.getElementById('audioVoiceSelect');
-        if (!sel) return;
+        const studioSel = document.getElementById('studioVoiceSelect');
+        if (!sel && !studioSel) return;
 
-        // تصفية الأصوات الإنجليزية المتاحة
+        // تصفية وترتيب الأصوات الإنجليزية المتاحة
         const enVoices = this.voicesList.filter(v => v.lang.startsWith('en'));
         if (enVoices.length === 0) return;
 
-        // ترتيب الأصوات بحيث تظهر الأصوات الطبيعية والبشرية في البداية
         enVoices.sort((a, b) => this.rateVoiceNaturalness(b) - this.rateVoiceNaturalness(a));
 
-        sel.innerHTML = '<option value="auto">✨ طبيعي ذكي (الأفضل تلقائياً)</option>';
+        let html = '<option value="auto">✨ طبيعي ذكي (الأفضل تلقائياً حسب المتصفح)</option>';
         enVoices.forEach(v => {
-          const opt = document.createElement('option');
-          opt.value = v.name;
           const isNatural = v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online');
-          opt.innerText = (isNatural ? '🌟 ' : '') + `${v.name} (${v.lang})`;
-          if (v.name === this.selectedVoiceName) {
-            opt.selected = true;
-          }
-          sel.appendChild(opt);
+          const icon = isNatural ? '🌟 ' : '';
+          const selected = v.name === this.selectedVoiceName ? 'selected' : '';
+          html += `<option value="${v.name}" ${selected}>${icon}${v.name} (${v.lang})</option>`;
         });
+
+        if (sel) sel.innerHTML = html;
+        if (studioSel) studioSel.innerHTML = html;
+
+        const countEl = document.getElementById('studioVoicesCount');
+        if (countEl) countEl.innerText = `${enVoices.length} أصوات إنجليزية مكتشفة`;
       },
 
       rateVoiceNaturalness(voice) {
@@ -1398,6 +1520,31 @@
         return null;
       },
 
+      getSecondaryVoice(primaryVoice) {
+        if (!this.voicesList || this.voicesList.length === 0) return null;
+        const enVoices = this.voicesList.filter(v => v.lang.startsWith('en'));
+        if (enVoices.length <= 1) return null;
+
+        const pName = (primaryVoice ? primaryVoice.name : '').toLowerCase();
+        const isFemale = pName.includes('female') || pName.includes('libby') || pName.includes('sonia') || pName.includes('jenny') || pName.includes('zira') || pName.includes('aria') || pName.includes('samantha');
+
+        if (isFemale) {
+          const maleVoice = enVoices.find(v => {
+            const n = v.name.toLowerCase();
+            return (n.includes('male') || n.includes('ryan') || n.includes('guy') || n.includes('daniel') || n.includes('david')) && v.name !== (primaryVoice ? primaryVoice.name : '');
+          });
+          if (maleVoice) return maleVoice;
+        } else {
+          const femaleVoice = enVoices.find(v => {
+            const n = v.name.toLowerCase();
+            return (n.includes('female') || n.includes('sonia') || n.includes('libby') || n.includes('jenny') || n.includes('serena')) && v.name !== (primaryVoice ? primaryVoice.name : '');
+          });
+          if (femaleVoice) return femaleVoice;
+        }
+
+        return enVoices.find(v => v.name !== (primaryVoice ? primaryVoice.name : '')) || null;
+      },
+
       cleanTextForSpeech(text) {
         if (!text) return '';
         return text
@@ -1423,6 +1570,156 @@
           .trim();
       },
 
+      parseDialogueTurns(rawText) {
+        if (!rawText) return [];
+        const lines = rawText.split('\n');
+        const turns = [];
+
+        // النمط 1: أسماء الشخصيات متبوعة بنقطتين (Samir: ... / Hilal: ... / Doctor: ...)
+        const namedRegex = /^([A-Z][a-zA-Z\s]{1,15}):\s*(.+)$/;
+        let hasNamed = false;
+        for (const line of lines) {
+          if (namedRegex.test(line.trim())) {
+            hasNamed = true;
+            break;
+          }
+        }
+
+        if (hasNamed) {
+          const speakerMap = {};
+          let speakerCount = 0;
+          for (const line of lines) {
+            const tr = line.trim();
+            const m = tr.match(namedRegex);
+            if (m) {
+              const name = m[1].trim();
+              const speech = m[2].trim();
+              if (speakerMap[name] === undefined) {
+                speakerMap[name] = speakerCount % 2;
+                speakerCount++;
+              }
+              turns.push({ speaker: speakerMap[name], speakerName: name, text: speech });
+            } else if (tr.length > 0) {
+              turns.push({ speaker: 0, speakerName: '', text: tr });
+            }
+          }
+          if (turns.some(t => t.speaker === 1)) return turns;
+        }
+
+        // النمط 2: حوارات الاقتباسات المتقابلة مثل ("What's the matter?" - "I've got a toothache.")
+        if (rawText.includes('" - "') || rawText.includes('"- "') || rawText.includes('" -"')) {
+          for (const line of lines) {
+            const tr = line.trim();
+            if (!tr) continue;
+            const quoteMatches = [...tr.matchAll(/"([^"]+)"/g)];
+            if (quoteMatches.length >= 2) {
+              quoteMatches.forEach((m, qIdx) => {
+                turns.push({
+                  speaker: qIdx % 2,
+                  speakerName: qIdx % 2 === 0 ? 'Person 1' : 'Person 2',
+                  text: m[1].trim()
+                });
+              });
+            } else {
+              turns.push({ speaker: 0, speakerName: '', text: tr });
+            }
+          }
+          if (turns.some(t => t.speaker === 1)) return turns;
+        }
+
+        return [];
+      },
+
+      speakSmart(text, lang = 'en', onDone = null) {
+        if (!this.synth) {
+          alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
+          return;
+        }
+        this.synth.cancel();
+
+        // فحص وإطلاق محاكاة المحادثات التبادلية
+        if (lang === 'en' && this.multiSpeaker) {
+          const turns = this.parseDialogueTurns(text);
+          if (turns && turns.length > 1) {
+            this.playDialogueTurns(turns, onDone);
+            return;
+          }
+        }
+
+        // قراءة عادية بنبرة واحدة
+        this.speakText(text, lang, onDone);
+      },
+
+      playDialogueTurns(turns, onDone = null) {
+        let idx = 0;
+        this.isPlaying = true;
+        this.isPaused = false;
+        this.updateButtons();
+
+        const playNextTurn = () => {
+          if (!this.isPlaying || idx >= turns.length) {
+            this.isPlaying = false;
+            this.isPaused = false;
+            this.updateButtons();
+            if (onDone) onDone();
+            return;
+          }
+
+          const turn = turns[idx];
+          const cleanTurn = this.cleanTextForSpeech(turn.text);
+          if (!cleanTurn) {
+            idx++;
+            playNextTurn();
+            return;
+          }
+
+          const utt = new SpeechSynthesisUtterance(cleanTurn);
+          utt.rate = this.speed;
+          utt.volume = 1.0;
+
+          const primaryVoice = this.getBestVoice('en');
+          const secondaryVoice = this.getSecondaryVoice(primaryVoice);
+
+          if (turn.speaker === 0) {
+            if (primaryVoice) {
+              utt.voice = primaryVoice;
+              utt.lang = primaryVoice.lang;
+            }
+            utt.pitch = this.pitch;
+          } else {
+            if (secondaryVoice) {
+              utt.voice = secondaryVoice;
+              utt.lang = secondaryVoice.lang;
+              utt.pitch = this.pitch;
+            } else {
+              // تعديل ذكي لطبقة الصوت لصنع متحدث ثانٍ مميز تماماً حتى بدون صوت ثانٍ
+              if (primaryVoice) utt.voice = primaryVoice;
+              utt.pitch = Math.max(0.75, this.pitch * 0.88);
+            }
+          }
+
+          const label = turn.speakerName ? ` (${turn.speakerName})` : ` (المتحدث ${turn.speaker + 1})`;
+          this.updateStatus(`حوار جارٍ${label}... 🎙️`);
+
+          utt.onend = () => {
+            idx++;
+            setTimeout(() => {
+              if (this.isPlaying) playNextTurn();
+            }, 380); // وقفة حوارية طبيعية بين المتحدثين
+          };
+
+          utt.onerror = (e) => {
+            console.warn('Dialogue turn error', e);
+            idx++;
+            playNextTurn();
+          };
+
+          this.synth.speak(utt);
+        };
+
+        playNextTurn();
+      },
+
       speakText(text, lang = 'en', onDone = null) {
         if (!this.synth) {
           alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
@@ -1437,8 +1734,8 @@
         }
 
         const utt = new SpeechSynthesisUtterance(cleanText);
-        utt.rate = this.speed;   // السرعة الهادئة المتأنية (افتراضياً 0.82)
-        utt.pitch = this.pitch;  // النبرة الطبيعية المعتدلة 1.0
+        utt.rate = this.speed;   // السرعة الهادئة المتأنية
+        utt.pitch = this.pitch;  // النبرة الطبيعية المعتدلة
         utt.volume = 1.0;
 
         const voice = this.getBestVoice(lang);
@@ -1504,9 +1801,8 @@
         this.updateButtons();
 
         const isEnglish = /[a-zA-Z]{3,}/.test(current.text);
-        this.speakText(current.text, isEnglish ? 'en' : 'ar', () => {
+        this.speakSmart(current.text, isEnglish ? 'en' : 'ar', () => {
           this.currentChunkIdx++;
-          // مهلة بسيطة ومريحة بين المقاطع لمحاكاة التوقف البشري
           setTimeout(() => {
             if (this.isPlaying) {
               this.readNextChunk();
@@ -1547,6 +1843,11 @@
       setSelectedVoice(voiceName) {
         this.selectedVoiceName = voiceName;
         localStorage.setItem('preferred_voice_name', voiceName);
+        const sel = document.getElementById('audioVoiceSelect');
+        if (sel) sel.value = voiceName;
+        const studioSel = document.getElementById('studioVoiceSelect');
+        if (studioSel) studioSel.value = voiceName;
+
         if (this.isPlaying) {
           this.stop();
           this.playCurrentLesson();
@@ -1556,11 +1857,33 @@
       setSpeed(val) {
         this.speed = parseFloat(val);
         localStorage.setItem('preferred_speech_speed', val);
+        const sel = document.getElementById('audioSpeedSelect');
+        if (sel) sel.value = val;
+        const slider = document.getElementById('studioSpeedSlider');
+        if (slider) slider.value = val;
+        const valText = document.getElementById('studioSpeedVal');
+        if (valText) valText.innerText = `${val}x`;
+      },
+
+      setPitch(val) {
+        this.pitch = parseFloat(val);
+        localStorage.setItem('preferred_speech_pitch', val);
+        const slider = document.getElementById('studioPitchSlider');
+        if (slider) slider.value = val;
+        const valText = document.getElementById('studioPitchVal');
+        if (valText) valText.innerText = `${val}`;
+      },
+
+      setMultiSpeaker(val) {
+        this.multiSpeaker = !!val;
+        localStorage.setItem('preferred_multispeaker', this.multiSpeaker.toString());
       },
 
       updateStatus(msg) {
         const el = document.getElementById('audioPlayerStatus');
         if (el) el.innerText = msg;
+        const studioStatus = document.getElementById('studioTestStatus');
+        if (studioStatus) studioStatus.innerText = msg;
       },
 
       updateButtons() {
@@ -1582,7 +1905,94 @@
 
     function speakSnippet(text, lang = 'en') {
       audioPlayer.stop();
-      audioPlayer.speakText(text, lang);
+      audioPlayer.speakSmart(text, lang);
+    }
+
+    // ----------------------------------------------------
+    // دوال نافذة استوديو ضبط ومعاينة الصوت البشري
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    function openVoiceStudioModal() {
+      const modal = document.getElementById('voiceStudioModal');
+      if (!modal) return;
+
+      audioPlayer.populateVoiceSelect();
+
+      const studioVoiceSel = document.getElementById('studioVoiceSelect');
+      if (studioVoiceSel) studioVoiceSel.value = audioPlayer.selectedVoiceName;
+
+      const studioSpeedSlider = document.getElementById('studioSpeedSlider');
+      if (studioSpeedSlider) studioSpeedSlider.value = audioPlayer.speed;
+      const studioSpeedVal = document.getElementById('studioSpeedVal');
+      if (studioSpeedVal) studioSpeedVal.innerText = `${audioPlayer.speed}x`;
+
+      const studioPitchSlider = document.getElementById('studioPitchSlider');
+      if (studioPitchSlider) studioPitchSlider.value = audioPlayer.pitch;
+      const studioPitchVal = document.getElementById('studioPitchVal');
+      if (studioPitchVal) studioPitchVal.innerText = `${audioPlayer.pitch}`;
+
+      const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
+      if (multiSwitch) multiSwitch.checked = audioPlayer.multiSpeaker;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeVoiceStudioModal() {
+      audioPlayer.stop();
+      const modal = document.getElementById('voiceStudioModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function testStudioSample(sampleType) {
+      audioPlayer.stop();
+      let text = '';
+      if (sampleType === 'word') {
+        text = 'Welcome to the English for Iraq educational system. Learning English with Engineer Osama is inspiring and easy.';
+      } else if (sampleType === 'question') {
+        text = "What's the matter, Ansam? Do you have a headache? You should go to the doctor this afternoon.";
+      } else if (sampleType === 'dialogue') {
+        text = 'Samir: That was awful! How did we lose?\nHilal: What? You won more points than I did.\nSamir: At least you won a few points.\nHilal: Let\'s face it. We\'re not very fit.\nSamir: Good idea! We will have a 100-metre race next weekend.';
+      }
+      audioPlayer.speakSmart(text, 'en');
+    }
+
+    function saveStudioSettings() {
+      const studioVoiceSel = document.getElementById('studioVoiceSelect');
+      if (studioVoiceSel) audioPlayer.setSelectedVoice(studioVoiceSel.value);
+
+      const studioSpeedSlider = document.getElementById('studioSpeedSlider');
+      if (studioSpeedSlider) audioPlayer.setSpeed(studioSpeedSlider.value);
+
+      const studioPitchSlider = document.getElementById('studioPitchSlider');
+      if (studioPitchSlider) audioPlayer.setPitch(studioPitchSlider.value);
+
+      const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
+      if (multiSwitch) audioPlayer.setMultiSpeaker(multiSwitch.checked);
+
+      alert('تم حفظ إعدادات الصوت البشري بنجاح واعتمادها للنظام بالكامل ✅\n- إعداد المهندس أسامة خليل هاشم');
+      closeVoiceStudioModal();
+    }
+
+    function resetStudioDefaults() {
+      audioPlayer.setSelectedVoice('auto');
+      audioPlayer.setSpeed(0.82);
+      audioPlayer.setPitch(1.0);
+      audioPlayer.setMultiSpeaker(true);
+
+      const studioVoiceSel = document.getElementById('studioVoiceSelect');
+      if (studioVoiceSel) studioVoiceSel.value = 'auto';
+      const studioSpeedSlider = document.getElementById('studioSpeedSlider');
+      if (studioSpeedSlider) studioSpeedSlider.value = '0.82';
+      const studioSpeedVal = document.getElementById('studioSpeedVal');
+      if (studioSpeedVal) studioSpeedVal.innerText = '0.82x';
+      const studioPitchSlider = document.getElementById('studioPitchSlider');
+      if (studioPitchSlider) studioPitchSlider.value = '1.0';
+      const studioPitchVal = document.getElementById('studioPitchVal');
+      if (studioPitchVal) studioPitchVal.innerText = '1.0';
+      const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
+      if (multiSwitch) multiSwitch.checked = true;
+
+      alert('تمت استعادة الإعدادات الصوتية الافتراضية الموصى بها (0.82x سرعة هادئة - نبرة 1.0 معتدلة).');
     }
 
     // تهيئة التطبيق عند بدء التشغيل
