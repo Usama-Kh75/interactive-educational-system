@@ -2,6 +2,7 @@
   "name": "النظام التعليمي التفاعلي - إعداد المهندس أسامة خليل هاشم",
   "short_name": "النظام التعليمي",
   "description": "النظام التعليمي التفاعلي مع القارئ الصوتي المسموع وبنك القواعد والمعلم الذكي الموثق. إعداد المهندس أسامة خليل هاشم",
+  "id": "/interactive-educational-system/index.html",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

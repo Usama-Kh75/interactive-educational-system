@@ -27,7 +27,8 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
+          // المخازن مشتركة بين كل تطبيقات usama-kh75.github.io: يُحذف القديم من مخازن هذا التطبيق وحده
+          if (cache.startsWith('interactive-edu-pwa-') && cache !== CACHE_NAME) {
             console.log('[Service Worker] Removing old cache:', cache);
             return caches.delete(cache);
           }
