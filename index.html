@@ -557,6 +557,87 @@
       white-space: nowrap;
     }
 
+    /* Study Atmosphere & Visual Cards */
+    .study-atmosphere-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.35rem;
+      margin-bottom: 2rem;
+    }
+
+    .atmosphere-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .atmosphere-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(99, 102, 241, 0.25);
+    }
+
+    .atmosphere-visual {
+      height: 185px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--slate-100);
+    }
+
+    .atmosphere-body {
+      padding: 1.35rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .atmosphere-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 0 0 0.25rem;
+    }
+
+    .atmosphere-tagline {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 0.55rem;
+    }
+
+    .atmosphere-desc {
+      font-size: 0.84rem;
+      color: var(--slate-600);
+      line-height: 1.65;
+      margin: 0 0 1rem;
+    }
+
+    .atmosphere-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .atmosphere-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -2090,7 +2171,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.4 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.5 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2100,10 +2181,6 @@
         <button class="tab-btn active" onclick="switchTab('dashboard')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           الرئيسية
-        </button>
-        <button class="tab-btn" id="navBtnEnglish" onclick="openSubjectTab(3)" title="تبويب المنهج المعتمد: مادة اللغة الإنجليزية للصف الثاني متوسط">
-          <span style="font-size: 1.05rem; line-height: 1;">🇬🇧</span>
-          <span>مادة اللغة الإنجليزية (الثاني متوسط)</span>
         </button>
         <button class="tab-btn" onclick="switchTab('curriculums')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
@@ -2144,29 +2221,26 @@
           <!-- العمود الأيمن: نصوص ورؤية المنظومة الشاملة -->
           <div class="hero-text-col">
             <div class="hero-author-badge">
-              <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span>الإصدار v2.8.4 ✨</span>
+              <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span>الإصدار v2.8.5 ✨</span>
             </div>
             <h2>المنظومة التعليمية التفاعلية الشاملة</h2>
             <p>
-              بيئة رقمية ذكية ومتكاملة مصممة بأحدث المعايير العالمية؛ لدعم مختلف المواد والمراحل الدراسية بتجربة تفاعلية تجمع بين رقمنة المناهج المعتمدة، القراءة بالصوت البشري الفصيح، بنوك القواعد والوظائف اللغوية، ونماذج الامتحانات الموزونة وحلولها النموذجية.
+              بيئة رقمية ذكية ومتكاملة مصممة بأحدث المعايير؛ لدعم مختلف المواد والمراحل الدراسية بتجربة تفاعلية تجمع بين رقمنة المناهج المعتمدة، القراءة بالصوت البشري الفصيح، بنوك القواعد والوظائف اللغوية، ونماذج الامتحانات الموزونة وحلولها النموذجية.
             </p>
             <div class="hero-actions">
-              <button class="btn-hero-primary" onclick="openSubjectTab(3)">
-                <span>🇬🇧</span> مادة اللغة الإنجليزية (الثاني متوسط) ⮞
-              </button>
-              <button class="btn-hero-secondary" onclick="scrollToSubjectsSection()">
-                <span>🎓</span> استعراض المناهج المعتمدة
-              </button>
-              <button class="btn-hero-secondary" onclick="switchTab('curriculums')">
-                <span>📚</span> مكتبة المناهج والكتب
+              <button class="btn-hero-primary" onclick="switchTab('curriculums')">
+                <span>📚</span> استعراض المناهج والمواد الدراسية ⮞
               </button>
               <button class="btn-hero-secondary" onclick="switchTab('settings')">
-                <span>⚙️</span> إعدادات المنصة
+                <span>⚙️</span> إعدادات المنظومة وملف الطالب
+              </button>
+              <button class="btn-hero-secondary" onclick="installPWA()">
+                <span>📲</span> تثبيت تطبيق PWA أوفلاين
               </button>
             </div>
           </div>
 
-          <!-- العمود الأيسر: مجسم الهوية البصرية للمنظومة الشاملة (أجواء أكاديمية متعددة التخصصات) -->
+          <!-- العمود الأيسر: مجسم الهوية البصرية للمنظومة الشاملة -->
           <div class="hero-visual-col">
             <div class="platform-visual-card">
               <div class="platform-visual-icon-orb">
@@ -2193,6 +2267,398 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. ركائز المنظومة التعليمية الشاملة -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="card" style="padding: 1.25rem; border-radius: 16px; border: 1px solid var(--slate-200); background: #ffffff; box-shadow: var(--shadow);">
+          <div style="width: 46px; height: 46px; border-radius: 12px; background: #eef2ff; color: #4338ca; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.75rem;">
+            📚
+          </div>
+          <h4 style="margin: 0 0 0.35rem; font-size: 1rem; font-weight: 800; color: var(--slate-900);">مناهج وزارية معتمدة</h4>
+          <p style="margin: 0; font-size: 0.8rem; color: var(--slate-600); line-height: 1.6;">
+            تطابق كامل بنسبة 100% مع نصوص وصفحات كتب وزارة التربية الرسمية ورسومها الأصلية، مفهرسة فصلاً فصلاً ودرساً درساً.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border-radius: 16px; border: 1px solid var(--slate-200); background: #ffffff; box-shadow: var(--shadow);">
+          <div style="width: 46px; height: 46px; border-radius: 12px; background: #ecfdf5; color: #065f46; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.75rem;">
+            🎧
+          </div>
+          <h4 style="margin: 0 0 0.35rem; font-size: 1rem; font-weight: 800; color: var(--slate-900);">صوت بشري فصيح وتتبع</h4>
+          <p style="margin: 0; font-size: 0.8rem; color: var(--slate-600); line-height: 1.6;">
+            نطق بشري فصيح ومخارج حروف متقنة، مع محرك تتبع صوتي يظلل الكلمات لحظة بلحظة لترسيخ مهارات الاستماع والنطق.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border-radius: 16px; border: 1px solid var(--slate-200); background: #ffffff; box-shadow: var(--shadow);">
+          <div style="width: 46px; height: 46px; border-radius: 12px; background: #fef3c7; color: #92400e; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.75rem;">
+            📝
+          </div>
+          <h4 style="margin: 0 0 0.35rem; font-size: 1rem; font-weight: 800; color: var(--slate-900);">امتحانات وأسئلة وزارية</h4>
+          <p style="margin: 0; font-size: 0.8rem; color: var(--slate-600); line-height: 1.6;">
+            نماذج امتحانات وزارية وشهرية معتمدة مع إمكانية الطباعة الورقية النقية أو الحل التفاعلي والتصحيح الذاتي المباشر.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border-radius: 16px; border: 1px solid var(--slate-200); background: #ffffff; box-shadow: var(--shadow);">
+          <div style="width: 46px; height: 46px; border-radius: 12px; background: #f1f5f9; color: #334155; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 0.75rem;">
+            ⚡
+          </div>
+          <h4 style="margin: 0 0 0.35rem; font-size: 1rem; font-weight: 800; color: var(--slate-900);">أوفلاين بالكامل (PWA)</h4>
+          <p style="margin: 0; font-size: 0.8rem; color: var(--slate-600); line-height: 1.6;">
+            تطبيق ويب تقدمي قابل للتثبيت على الحاسوب أو الهاتف، يعمل بكامل طاقته ومحتواه الصوتي والصفحي دون اتصال بالإنترنت.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. بيئة وأجواء دراسية ملهمة (تصميم الواجهة العامة) -->
+      <div style="margin-bottom: 2rem;">
+        <div style="margin-bottom: 1.25rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary-light); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.4rem;">
+            <span>🎓</span> أجواء دراسية وبيئة تعليمية تفاعلية
+          </div>
+          <h3 style="font-size: 1.35rem; font-weight: 900; color: var(--slate-900); margin: 0 0 0.35rem;">
+            بيئة تعليمية متكاملة تواكب أرقى معايير التعلم الرقمي الحديث
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--slate-600); line-height: 1.6; margin: 0; max-width: 820px;">
+            تصميم مدروس يجمع بين حيوية وتفاعل قاعة الصف الدراسي، دقة المطالعة في المكتبة الرقمية، وجاهزية قاعات الامتحانات الرسمية لتوفير تجربة تعليمية مشوقة ومثمرة.
+          </p>
+        </div>
+
+        <div class="study-atmosphere-grid">
+          <!-- بطاقة 1: قاعة الصف الدراسي التفاعلي -->
+          <div class="atmosphere-card">
+            <div class="atmosphere-visual">
+              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+  <defs>
+    <linearGradient id="bgClass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="60%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="185" fill="url(#bgClass)"/>
+  <line x1="0" y1="145" x2="400" y2="145" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <line x1="50" y1="145" x2="0" y2="185" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <line x1="350" y1="145" x2="400" y2="185" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <rect x="75" y="15" width="250" height="110" rx="10" fill="url(#boardGrad)" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="85" y="23" width="230" height="94" rx="6" fill="#090d16"/>
+  <path d="M 105 45 Q 145 35 185 45 T 265 45" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="105" cy="45" r="4" fill="#38bdf8"/>
+  <circle cx="185" cy="45" r="4" fill="#818cf8"/>
+  <circle cx="265" cy="45" r="4" fill="#34d399"/>
+  <line x1="185" y1="49" x2="150" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="185" y1="49" x2="220" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <rect x="130" y="68" width="40" height="16" rx="4" fill="#4338ca"/>
+  <text x="150" y="80" fill="#e0e7ff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">الفصل</text>
+  <rect x="200" y="68" width="40" height="16" rx="4" fill="#059669"/>
+  <text x="220" y="80" fill="#d1fae5" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">الدرس</text>
+  <text x="110" y="103" fill="#fbbf24" font-size="9" font-family="monospace">Subject + Verb + Obj</text>
+  <path d="M 235 101 Q 245 93 255 101 T 275 101" fill="none" stroke="#f472b6" stroke-width="2"/>
+  <polygon points="175,125 225,125 220,155 180,155" fill="#1e293b" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <rect x="185" y="120" width="30" height="7" rx="2" fill="#6366f1"/>
+  <polygon points="25,150 115,150 100,185 10,185" fill="#1e1b4b" stroke="#4338ca" stroke-width="1.5"/>
+  <rect x="40" y="142" width="28" height="16" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <polygon points="75,145 95,142 98,148 78,151" fill="#38bdf8"/>
+  <circle cx="65" cy="170" r="14" fill="#475569" opacity="0.8"/>
+  <g transform="translate(60, 108)">
+    <rect width="32" height="18" rx="6" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+    <polygon points="12,18 16,23 20,18" fill="#ffffff"/>
+    <text x="16" y="13" font-size="11" text-anchor="middle">💡</text>
+  </g>
+  <polygon points="285,150 375,150 390,185 300,185" fill="#1e1b4b" stroke="#4338ca" stroke-width="1.5"/>
+  <rect x="330" y="142" width="28" height="16" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <polygon points="305,145 325,142 328,148 308,151" fill="#34d399"/>
+  <circle cx="335" cy="170" r="14" fill="#475569" opacity="0.8"/>
+  <g transform="translate(308, 108)">
+    <rect width="32" height="18" rx="6" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+    <polygon points="12,18 16,23 20,18" fill="#ffffff"/>
+    <text x="16" y="13" font-size="11" text-anchor="middle">✍️</text>
+  </g>
+  <circle cx="50" cy="35" r="2" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="345" cy="40" r="2.5" fill="#a78bfa" opacity="0.8"/>
+  <circle cx="360" cy="80" r="1.5" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="35" cy="90" r="1.5" fill="#34d399" opacity="0.8"/>
+</svg>
+            </div>
+            <div class="atmosphere-body">
+              <div>
+                <h4 class="atmosphere-title">قاعة الصف والمحاضرات التفاعلية</h4>
+                <div class="atmosphere-tagline">محاكاة ذكية لأجواء الفصل الدراسي الواقعي</div>
+                <p class="atmosphere-desc">
+                  تفكيك الدروس المنهجية إلى وحدات معرفية مركزة ومترابطة، مدعومة بالشروحات المرئية والبطاقات المفاهيمية التي تسهل استيعاب المفاهيم والموضوعات وتثبيتها ذهنياً.
+                </p>
+              </div>
+              <div class="atmosphere-tags">
+                <span class="atmosphere-tag">✨ تقسيم منهجي متسلسل</span>
+                <span class="atmosphere-tag">👥 تفاعل دراسي حي</span>
+                <span class="atmosphere-tag">💡 ربط النظري بالتطبيقي</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- بطاقة 2: المكتبة الرقمية والمطالعة المفتوحة -->
+          <div class="atmosphere-card">
+            <div class="atmosphere-visual">
+              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+  <defs>
+    <linearGradient id="bgLib" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="60%" stop-color="#065f46" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="20%" cy="15%" r="70%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pageLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="pageRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="15%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="185" fill="url(#bgLib)"/>
+  <rect width="400" height="185" fill="url(#lampGlow)"/>
+  <polygon points="0,135 400,135 400,185 0,185" fill="#022c22"/>
+  <line x1="0" y1="135" x2="400" y2="135" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <path d="M 50 145 L 60 70 L 95 60" fill="none" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="85,50 115,40 120,70 90,75" fill="#ca8a04"/>
+  <circle cx="102" cy="62" r="5" fill="#fef08a"/>
+  <g transform="translate(130, 48)">
+    <ellipse cx="75" cy="88" rx="85" ry="12" fill="rgba(0,0,0,0.4)"/>
+    <path d="M 5 15 Q 40 5 75 15 L 75 80 Q 40 70 5 80 Z" fill="url(#pageLeft)" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M 75 15 Q 110 5 145 15 L 145 80 Q 110 70 75 80 Z" fill="url(#pageRight)" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="75" y1="15" x2="75" y2="80" stroke="#64748b" stroke-width="2.5"/>
+    <line x1="16" y1="28" x2="65" y2="28" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="16" y1="38" x2="60" y2="38" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="48" x2="68" y2="48" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="14" y="55" width="54" height="7" fill="#fde047" opacity="0.6" rx="2"/>
+    <line x1="16" y1="58" x2="66" y2="58" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="68" x2="52" y2="68" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="85" y1="28" x2="135" y2="28" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <rect x="85" y="34" width="50" height="20" rx="3" fill="#e0e7ff" stroke="#818cf8" stroke-width="0.75"/>
+    <line x1="89" y1="42" x2="128" y2="42" stroke="#4338ca" stroke-width="1.5"/>
+    <line x1="89" y1="48" x2="120" y2="48" stroke="#6366f1" stroke-width="1.5"/>
+    <line x1="85" y1="60" x2="135" y2="60" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="85" y1="69" x2="125" y2="69" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 75 16 Q 80 40 70 88 L 65 92 L 67 85 Z" fill="#ef4444"/>
+  </g>
+  <g transform="translate(305, 55)">
+    <path d="M 15 45 C 15 15, 65 15, 65 45" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <rect x="8" y="42" width="14" height="24" rx="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="58" y="42" width="14" height="24" rx="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M 0 54 Q -6 50 -10 54" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <path d="M -2 46 Q -10 40 -16 46" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 78 54 Q 84 50 88 54" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 80 46 Q 88 40 94 46" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(295, 120)">
+    <rect width="70" height="42" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="5" y="5" width="60" height="32" rx="2" fill="#1e293b"/>
+    <rect x="10" y="18" width="4" height="10" fill="#38bdf8" rx="1"/>
+    <rect x="16" y="14" width="4" height="15" fill="#34d399" rx="1"/>
+    <rect x="22" y="10" width="4" height="22" fill="#fbbf24" rx="1"/>
+    <rect x="28" y="16" width="4" height="12" fill="#34d399" rx="1"/>
+    <rect x="34" y="12" width="4" height="18" fill="#38bdf8" rx="1"/>
+    <rect x="40" y="19" width="4" height="8" fill="#a78bfa" rx="1"/>
+    <polygon points="54,17 62,22 54,27" fill="#ffffff"/>
+  </g>
+  <g transform="translate(60, 135)">
+    <ellipse cx="25" cy="18" rx="12" ry="6" fill="#f1f5f9"/>
+    <rect x="13" y="18" width="24" height="20" rx="3" fill="#e2e8f0"/>
+    <ellipse cx="25" cy="38" rx="12" ry="5" fill="#cbd5e1"/>
+    <path d="M 36 22 Q 44 26 36 32" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
+    <ellipse cx="25" cy="18" rx="10" ry="4" fill="#78350f"/>
+    <path d="M 23 12 Q 21 6 25 2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <path d="M 27 12 Q 29 6 27 2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  </g>
+</svg>
+            </div>
+            <div class="atmosphere-body">
+              <div>
+                <h4 class="atmosphere-title">المكتبة الرقمية والمطالعة المفتوحة</h4>
+                <div class="atmosphere-tagline">صفحات الكتاب الأصلي مع الصوت البشري الفصيح</div>
+                <p class="atmosphere-desc">
+                  استعراض صفحات الكتاب المعتمد بجودة عالية كما طبعتها وزارة التربية، مع محرك قراءة صوتي بشري فائق الدقة يظلل الكلمات لحظة بلحظة لترسيخ النطق والمفردات.
+                </p>
+              </div>
+              <div class="atmosphere-tags">
+                <span class="atmosphere-tag">📘 صفحات أصلية 100%</span>
+                <span class="atmosphere-tag">🎧 تتبع الكلمات الصوتي المباشر</span>
+                <span class="atmosphere-tag">🔍 نافذة التكبير (Lightbox)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- بطاقة 3: قاعة الامتحانات والتقييم الذاتي -->
+          <div class="atmosphere-card">
+            <div class="atmosphere-visual">
+              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+  <defs>
+    <linearGradient id="bgExam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="60%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="185" fill="url(#bgExam)"/>
+  <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <polygon points="0,140 400,140 400,185 0,185" fill="#451a03"/>
+  <g transform="translate(110, 16)">
+    <rect x="4" y="6" width="180" height="145" rx="6" fill="rgba(0,0,0,0.35)"/>
+    <rect x="0" y="0" width="180" height="145" rx="6" fill="url(#paperGrad)" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="18" y="10" width="144" height="18" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="0.8"/>
+    <text x="90" y="22" font-size="8" font-family="sans-serif" font-weight="900" fill="#92400e" text-anchor="middle">الامتحان الوزاري المعتمد • النموذج الموزون</text>
+    <text x="20" y="42" font-size="8" font-weight="bold" fill="#1e293b">Q1: Reading Comprehension</text>
+    <circle cx="160" cy="40" r="6" fill="#dcfce7"/>
+    <text x="160" y="43" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
+    <line x1="20" y1="48" x2="145" y2="48" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="20" y1="54" x2="130" y2="54" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="20" y="70" font-size="8" font-weight="bold" fill="#1e293b">Q2: Grammar &amp; Structure</text>
+    <circle cx="160" cy="68" r="6" fill="#dcfce7"/>
+    <text x="160" y="71" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
+    <line x1="20" y1="76" x2="140" y2="76" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="20" y1="82" x2="115" y2="82" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="20" y="98" font-size="8" font-weight="bold" fill="#1e293b">Q3: Vocabulary &amp; Spelling</text>
+    <circle cx="160" cy="96" r="6" fill="#dcfce7"/>
+    <text x="160" y="99" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
+    <line x1="20" y1="104" x2="135" y2="104" stroke="#cbd5e1" stroke-width="1.5"/>
+    <g transform="translate(130, 105)">
+      <circle cx="18" cy="18" r="18" fill="#dc2626"/>
+      <circle cx="18" cy="18" r="15" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="18" y="17" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">A+</text>
+      <text x="18" y="27" font-size="7" font-weight="bold" fill="#fef08a" text-anchor="middle">100%</text>
+    </g>
+  </g>
+  <g transform="translate(35, 60)">
+    <circle cx="28" cy="36" r="26" fill="rgba(0,0,0,0.3)"/>
+    <rect x="24" y="2" width="8" height="8" rx="2" fill="#cbd5e1"/>
+    <circle cx="28" cy="34" r="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
+    <circle cx="28" cy="34" r="20" fill="#f8fafc" stroke="#94a3b8" stroke-width="0.8"/>
+    <line x1="28" y1="16" x2="28" y2="20" stroke="#0f172a" stroke-width="1.5"/>
+    <line x1="28" y1="52" x2="28" y2="48" stroke="#0f172a" stroke-width="1.5"/>
+    <line x1="10" y1="34" x2="14" y2="34" stroke="#0f172a" stroke-width="1.5"/>
+    <line x1="46" y1="34" x2="42" y2="34" stroke="#0f172a" stroke-width="1.5"/>
+    <line x1="28" y1="34" x2="28" y2="22" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+    <line x1="28" y1="34" x2="38" y2="38" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="28" cy="34" r="3" fill="#dc2626"/>
+    <text x="28" y="70" font-size="8" font-weight="bold" fill="#fef3c7" text-anchor="middle">مؤقت الامتحان</text>
+  </g>
+  <g transform="translate(315, 60)">
+    <rect width="65" height="70" rx="6" fill="#1e293b" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="32" y="14" font-size="7.5" font-weight="bold" fill="#93c5fd" text-anchor="middle">مؤشر الإتقان</text>
+    <rect x="10" y="42" width="8" height="20" rx="2" fill="#60a5fa"/>
+    <rect x="22" y="32" width="8" height="30" rx="2" fill="#38bdf8"/>
+    <rect x="34" y="24" width="8" height="38" rx="2" fill="#34d399"/>
+    <rect x="46" y="18" width="8" height="44" rx="2" fill="#fbbf24"/>
+    <path d="M 14 42 Q 26 30 38 22 T 50 17" fill="none" stroke="#f43f5e" stroke-width="2"/>
+  </g>
+</svg>
+            </div>
+            <div class="atmosphere-body">
+              <div>
+                <h4 class="atmosphere-title">قاعة الامتحانات والتقييم الذاتي</h4>
+                <div class="atmosphere-tagline">نماذج وزارية موثقة وتصحيح تفاعلي فوري</div>
+                <p class="atmosphere-desc">
+                  تدريب مكثف على الأسئلة الوزارية والشهرية السابقة وحلولها النموذجية، مع إمكانية طباعة الورقة الامتحانية بيضاء خالية من الحلول للاختبار المنزلي الواقعي.
+                </p>
+              </div>
+              <div class="atmosphere-tags">
+                <span class="atmosphere-tag">📑 نماذج امتحانية حقيقية</span>
+                <span class="atmosphere-tag">⏱️ مؤقت تدريبي للاختبار</span>
+                <span class="atmosphere-tag">🖨️ طباعة الورقة بيضاء</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. إحصائيات المنصة الشاملة -->
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin: 0 0 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📊</span> إحصائيات المنظومة التعليمية الشاملة
+        </h4>
+        <div class="stats-grid">
+          <div class="card stat-item">
+            <div>
+              <div class="lbl">المناهج المعتمدة</div>
+              <div class="val" id="statCurriculums">1</div>
+            </div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="card stat-item">
+            <div>
+              <div class="lbl">الوحدات والفصول</div>
+              <div class="val" id="statChapters">10</div>
+            </div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="card stat-item">
+            <div>
+              <div class="lbl">الدروس التفاعلية</div>
+              <div class="val" id="statLessons">53</div>
+            </div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="card stat-item">
+            <div>
+              <div class="lbl">المفاهيم والقواعد الموثقة</div>
+              <div class="val" style="color: var(--success);" id="statGrammar">25+ قاعدة ومفهوماً</div>
+            </div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. بانر الدعوة والانطلاق لبوابة المناهج -->
+      <div class="card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%); color: white; border-radius: 20px; padding: 1.75rem 2rem; margin-top: 1rem; margin-bottom: 2rem; text-align: center; box-shadow: 0 12px 32px rgba(30, 27, 75, 0.3); border: 1px solid rgba(255,255,255,0.2);">
+        <div style="max-width: 680px; margin: 0 auto;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📚✨</div>
+          <h3 style="font-size: 1.4rem; font-weight: 900; margin: 0 0 0.5rem; color: #ffffff;">
+            ابدأ رحلتك التعليمية التفاعلية الآن
+          </h3>
+          <p style="font-size: 0.9rem; color: #c7d2fe; line-height: 1.65; margin: 0 0 1.35rem;">
+            تصفح المواد والمناهج المقررة في النظام، واختر مادتك لمباشرة قاعات المذاكرة الذكية، الاستماع الصوتي الفصيح، وحل نماذج الامتحانات الوزارية السابقة.
+          </p>
+          <button class="btn btn-primary" onclick="switchTab('curriculums')" style="background: #ffffff; color: #312e81; font-weight: 900; font-size: 0.98rem; padding: 0.8rem 2rem; border-radius: 12px; border: none; box-shadow: 0 6px 20px rgba(0,0,0,0.25); cursor: pointer; transition: transform 0.2s ease;">
+            <span>📚</span> فتح بوابة المناهج والمواد الدراسية ⮞
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. تبويب المناهج والمواد الدراسية -->
+    <section id="tab-curriculums" class="hidden">
+      <!-- بانر بوابة المناهج والمواد -->
+      <div class="card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; border-radius: 20px; padding: 1.5rem 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(30, 27, 75, 0.25); border: 1px solid rgba(255, 255, 255, 0.15);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.18); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.5rem; border: 1px solid rgba(255,255,255,0.25);">
+              <span>🎓</span> بوابة المواد والمناهج الدراسية المعتمدة
+            </div>
+            <h2 style="font-size: 1.5rem; font-weight: 900; margin: 0 0 0.35rem; color: #ffffff;">مكتبة المناهج والمواد الدراسية</h2>
+            <p style="font-size: 0.85rem; color: #c7d2fe; margin: 0; max-width: 650px;">
+              اختر المادة الدراسية المطلوبة من القائمة أدناه للدخول إلى قاعات المذاكرة التفاعلية، نماذج الامتحانات، وبنك القواعد النحوية.
+            </p>
+          </div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; padding: 0.45rem 1rem; border-radius: 9999px; font-weight: 800; font-size: 0.82rem;">
+            <span>🌟</span> 1 مقرر وزاري معتمد ومكتمل 100%
           </div>
         </div>
       </div>
@@ -2225,6 +2691,16 @@
         <!-- Rendered dynamically by renderActiveSubjectShowcase() -->
       </div>
 
+      <!-- شبكة بطاقات المناهج والمواد المتاحة -->
+      <div style="margin-top: 2rem; margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> بطاقات المواد والمناهج المتاحة
+        </h3>
+        <div class="curriculums-grid" id="curriculumsContainer">
+          <!-- يتم توليد البطاقات ديناميكياً -->
+        </div>
+      </div>
+
       <!-- خارطة التوسع الأكاديمي المعتمد للمنصة -->
       <div class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid var(--slate-200); border-radius: 18px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; box-shadow: var(--shadow);">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
@@ -2236,7 +2712,7 @@
               منظومة أكاديمية متوسعة وموثقة بإشراف المهندس أسامة خليل هاشم
             </h3>
             <p style="font-size: 0.85rem; color: var(--slate-600); line-height: 1.6; max-width: 820px; margin: 0;">
-              تعتمد المنصة معايير عالمية دقيقة في رقمنة المناهج المدرسية (نصوص أصلية، تدقيق صوتي بشري، صفحات الكتاب المصورة، بنك قواعد متخصص، وامتحانات وزارية نموذجية). وتجري إضافة المواد والمراحل الدراسية تباعاً وفق الجدول المعتمد:
+              تعتمد المنصة معايير دقيقة في رقمنة المناهج المدرسية (نصوص أصلية، تدقيق صوتي بشري، صفحات الكتاب المصورة، بنك قواعد متخصص، وامتحانات وزارية نموذجية). وتجري إضافة المواد والمراحل الدراسية تباعاً وفق الجدول المعتمد:
             </p>
           </div>
           <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.4rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 800;">
@@ -2248,7 +2724,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-top: 1rem;">
           <div style="background: #ffffff; border: 2px solid #4f46e5; border-radius: 12px; padding: 0.85rem 1rem; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-              <span style="font-size: 1.3rem;">🇬🇧</span>
+              <span style="font-size: 1.3rem;">📘</span>
               <span style="background: #ecfdf5; color: #065f46; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 6px;">جاهز ومكتمل 100%</span>
             </div>
             <div style="font-weight: 800; font-size: 0.95rem; color: var(--slate-900);">اللغة الإنجليزية (English for Iraq)</div>
@@ -2275,61 +2751,13 @@
 
           <div style="background: #ffffff; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.85rem 1rem; opacity: 0.9;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-              <span style="font-size: 1.3rem;">📖</span>
+              <span style="font-size: 1.3rem;">📙</span>
               <span style="background: #fef3c7; color: #92400e; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 6px;">قيد الإعداد والبرمجة</span>
             </div>
             <div style="font-weight: 800; font-size: 0.95rem; color: var(--slate-800);">اللغة العربية</div>
             <div style="font-size: 0.75rem; color: var(--slate-500); margin-top: 0.2rem;">الصف الثاني متوسط • ضمن خطة التوسع</div>
           </div>
         </div>
-      </div>
-
-      <div class="stats-grid">
-        <div class="card stat-item">
-          <div>
-            <div class="lbl">المناهج المعتمدة</div>
-            <div class="val" id="statCurriculums">1</div>
-          </div>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <div class="card stat-item">
-          <div>
-            <div class="lbl">الوحدات والفصول</div>
-            <div class="val" id="statChapters">10</div>
-          </div>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="card stat-item">
-          <div>
-            <div class="lbl">الدروس التفاعلية</div>
-            <div class="val" id="statLessons">53</div>
-          </div>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <div class="card stat-item">
-          <div>
-            <div class="lbl">المفاهيم والقواعد الموثقة</div>
-            <div class="val" style="color: var(--success);" id="statGrammar">23 قاعدة ومفهوماً</div>
-          </div>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. تبويب المناهج والمحتوى -->
-    <section id="tab-curriculums" class="hidden">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-        <div>
-          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--slate-900);">مكتبة المناهج والكتب المعتمدة</h2>
-          <p style="font-size: 0.8rem; color: var(--slate-500);">استعراض المناهج الدراسية المعتمدة ومباشرة التعلم والتقييم</p>
-        </div>
-        <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary-light); color: var(--primary); font-weight: 800; font-size: 0.78rem; padding: 0.35rem 0.85rem; border-radius: 9999px; border: 1px solid #c7d2fe;">
-          <span>📚</span> 1 مقرر وزاري مكتمل 100%
-        </div>
-      </div>
-
-      <div class="curriculums-grid" id="curriculumsContainer">
-        <!-- يتم توليد البطاقات ديناميكياً -->
       </div>
     </section>
 
@@ -2394,7 +2822,7 @@
       <!-- شريط سياق المادة الدراسية الحالية -->
       <div class="subject-context-bar">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
-          <span style="font-size: 1.5rem;" id="studyActiveSubjectIcon">🇬🇧</span>
+          <span style="font-size: 1.5rem;" id="studyActiveSubjectIcon">📘</span>
           <div>
             <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة حالياً:</span>
             <strong style="color: var(--slate-800); font-size: 0.95rem;" id="studyActiveSubjectTitle">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
@@ -2602,7 +3030,7 @@
       <!-- شريط سياق المادة الدراسية الحالية -->
       <div class="subject-context-bar">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
-          <span style="font-size: 1.5rem;" id="grammarActiveSubjectIcon">🇬🇧</span>
+          <span style="font-size: 1.5rem;" id="grammarActiveSubjectIcon">📘</span>
           <div>
             <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة حالياً:</span>
             <strong style="color: var(--slate-800); font-size: 0.95rem;" id="grammarActiveSubjectTitle">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
@@ -2658,7 +3086,7 @@
       <!-- شريط سياق المادة الدراسية الحالية -->
       <div class="subject-context-bar">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
-          <span style="font-size: 1.5rem;" id="examsActiveSubjectIcon">🇬🇧</span>
+          <span style="font-size: 1.5rem;" id="examsActiveSubjectIcon">📘</span>
           <div>
             <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة:</span>
             <strong style="color: var(--slate-800); font-size: 0.95rem;" id="examsActiveSubjectTitle">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
@@ -3187,7 +3615,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.4؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.5؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3241,9 +3669,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '2.8.4';
-    const CURRENT_VERSION_LABEL = 'v2.8.4';
-    const SYSTEM_VERSION = 'v2.8.4';
+    const CURRENT_VERSION = '2.8.5';
+    const CURRENT_VERSION_LABEL = 'v2.8.5';
+    const SYSTEM_VERSION = 'v2.8.5';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -4406,7 +4834,7 @@
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         const oc = btn.getAttribute('onclick') || '';
-        if (oc.includes("'" + tabId + "'") || (tabId === 'study' && (oc.includes('openSubjectTab') || oc.includes('selectCurriculumForStudy')))) {
+        if (oc.includes("'" + tabId + "'") || ((tabId === 'study' || tabId === 'grammar' || tabId === 'exams') && oc.includes("'curriculums'"))) {
           btn.classList.add('active');
         }
       });
@@ -4415,6 +4843,10 @@
         renderStudyView();
       } else if (tabId === 'grammar') {
         renderGrammarRules();
+      } else if (tabId === 'curriculums') {
+        renderCurriculumsList();
+        renderCurriculumsSelectorBar();
+        renderActiveSubjectShowcase();
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -7405,8 +7837,8 @@
         const isActive = c.id === appData.currentCurriculumId;
         const sLower = (c.subject || '').toLowerCase() + ' ' + (c.name || '').toLowerCase();
         let icon = '📘';
-        if (sLower.includes('eng') || sLower.includes('انجل')) icon = '🇬🇧';
-        else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '🇸🇦';
+        if (sLower.includes('eng') || sLower.includes('انجل')) icon = '📘';
+        else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '📙';
         else if (sLower.includes('scien') || sLower.includes('علوم')) icon = '🔬';
         else if (sLower.includes('math') || sLower.includes('رياض')) icon = '📐';
         else if (sLower.includes('comp') || sLower.includes('حاسوب')) icon = '💻';
@@ -7446,8 +7878,8 @@
       const sLower = (curr.subject || '').toLowerCase() + ' ' + (curr.name || '').toLowerCase();
       let icon = '📘';
       let themeColor = '#4338ca';
-      if (sLower.includes('eng') || sLower.includes('انجل')) { icon = '🇬🇧'; themeColor = '#4338ca'; }
-      else if (sLower.includes('arab') || sLower.includes('عرب')) { icon = '🇸🇦'; themeColor = '#059669'; }
+      if (sLower.includes('eng') || sLower.includes('انجل')) { icon = '📘'; themeColor = '#4338ca'; }
+      else if (sLower.includes('arab') || sLower.includes('عرب')) { icon = '📙'; themeColor = '#059669'; }
       else if (sLower.includes('scien') || sLower.includes('علوم')) { icon = '🔬'; themeColor = '#0284c7'; }
       else if (sLower.includes('math') || sLower.includes('رياض')) { icon = '📐'; themeColor = '#d97706'; }
       else if (sLower.includes('comp') || sLower.includes('حاسوب')) { icon = '💻'; themeColor = '#7c3aed'; }
@@ -7481,7 +7913,7 @@
                   </span>
                 </div>
                 <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.4rem; letter-spacing: -0.01em;">
-                  <span style="font-size: 1.8rem;">🇬🇧</span>
+                  <span style="font-size: 1.8rem;">📘</span>
                   <span>اللغة الإنجليزية - الصف الثاني متوسط (English for Iraq)</span>
                 </h3>
                 <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.65; max-width: 850px; margin: 0 0 1rem;">
@@ -7492,7 +7924,7 @@
               <!-- أزرار الإجراءات السريعة للمقرر -->
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
                 <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);">
-                  📖 الانتقال إلى تبويب مادة اللغة الإنجليزية (الثاني متوسط) ⮞
+                  📖 دخول قاعة المذاكرة والدروس ⮞
                 </button>
                 <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
                   📝 نماذج الامتحانات والأسئلة وحلولها
@@ -7623,8 +8055,8 @@
       if (!curr) return;
       const sLower = (curr.subject || '').toLowerCase() + ' ' + (curr.name || '').toLowerCase();
       let icon = '📘';
-      if (sLower.includes('eng') || sLower.includes('انجل')) icon = '🇬🇧';
-      else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '🇸🇦';
+        if (sLower.includes('eng') || sLower.includes('انجل')) icon = '📘';
+        else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '📙';
       else if (sLower.includes('scien') || sLower.includes('علوم')) icon = '🔬';
       else if (sLower.includes('math') || sLower.includes('رياض')) icon = '📐';
       else if (sLower.includes('comp') || sLower.includes('حاسوب')) icon = '💻';
