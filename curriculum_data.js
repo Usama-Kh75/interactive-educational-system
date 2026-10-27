@@ -1188,6 +1188,7 @@ window.GRAMMAR_RULES = [
   {
     "id": "for_and_since",
     "unit": 1,
+    "category": "tenses",
     "title": "المضارع التام مع For و Since",
     "level": "قاعدة أساسية - الوحدة 1",
     "page": 7,
@@ -1370,6 +1371,7 @@ window.GRAMMAR_RULES = [
   {
     "id": "used_to",
     "unit": 3,
+    "category": "tenses",
     "title": "الاعتياد في الماضي (Used to)",
     "level": "الوحدة 3",
     "page": 36,
@@ -1404,6 +1406,7 @@ window.GRAMMAR_RULES = [
   {
     "id": "passive_voice",
     "unit": 5,
+    "category": "tenses",
     "title": "المبني للمجهول (Passive Voice)",
     "level": "الوحدة 5",
     "page": 51,
@@ -1442,6 +1445,7 @@ window.GRAMMAR_RULES = [
   {
     "id": "future_going_to",
     "unit": 6,
+    "category": "tenses",
     "title": "المستقبل المخطط له (Future with: be going to)",
     "level": "الوحدة 6",
     "page": 63,
@@ -1751,6 +1755,240 @@ window.GRAMMAR_RULES = [
       ],
       "correct": 1,
       "explanation": "قافية الليمريك هي دائماً AABBA."
+    }
+  },
+  {
+    "id": "present_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن المضارع البسيط (Present Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
+    "explanation": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week.",
+    "examples": [
+      {
+        "en": "The sun rises in the east.",
+        "ar": "الشمس تشرق من الشرق (حقيقة علمية ثابتة)."
+      },
+      {
+        "en": "Muna usually walks to school every morning.",
+        "ar": "منى عادةً تمشي إلى المدرسة كل صباح (عادة وروتين مع ظرف التكرار usually)."
+      },
+      {
+        "en": "They don't eat junk food on weekdays.",
+        "ar": "هم لا يتناولون الوجبات السريعة خلال أيام الأسبوع (نفي مع don't)."
+      },
+      {
+        "en": "Does Ali play tennis on Fridays?",
+        "ar": "هل يلعب علي التنس في أيام الجمعة؟ (سؤال يبدأ بـ Does والفاعل مفرد)."
+      }
+    ],
+    "quiz": {
+      "question": "Ali always _______ his homework before dinner.",
+      "options": [
+        "finish",
+        "finishes",
+        "finished",
+        "finishing"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل المفرد الغائب (Ali) نضيف s/es إلى نهاية الفعل في المضارع البسيط (finishes)."
+    }
+  },
+  {
+    "id": "past_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي البسيط (Past Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
+    "explanation": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020.",
+    "examples": [
+      {
+        "en": "We visited the national museum in Baghdad yesterday.",
+        "ar": "زرنا المتحف الوطني في بغداد بالأمس (فعل منتظم ينتهي بـ ed)."
+      },
+      {
+        "en": "Zaid went to the market and bought some fruit.",
+        "ar": "ذهب زيد إلى السوق واشترى بعض الفاكهة (أفعال شاذة: went و bought)."
+      },
+      {
+        "en": "I didn't watch television last night.",
+        "ar": "لم أشاهد التلفاز الليلة الماضية (في النفي مع didn't يعود الفعل لمصدره watch)."
+      },
+      {
+        "en": "Did you see Noor at the library?",
+        "ar": "هل رأيت نور في المكتبة؟ (سؤال في الماضي يبدأ بـ Did يليه مجرد see)."
+      }
+    ],
+    "quiz": {
+      "question": "My brother _______ a new bicycle two days ago.",
+      "options": [
+        "buy",
+        "bought",
+        "buys",
+        "buying"
+      ],
+      "correct": 1,
+      "explanation": "وجود دلالة الماضي (two days ago) يقتضي استخدام صيغة الماضي الشاذ للفعل buy وهي (bought)."
+    }
+  },
+  {
+    "id": "present_continuous_tense",
+    "unit": 2,
+    "category": "tenses",
+    "title": "زمن المضارع المستمر (Present Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
+    "explanation": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم).",
+    "examples": [
+      {
+        "en": "The students are studying English in the classroom now.",
+        "ar": "الطلاب يدرسون اللغة الإنجليزية في الصف الآن (حدث يقع في هذه اللحظة)."
+      },
+      {
+        "en": "Listen! The baby is crying.",
+        "ar": "استمع! الطفل يبكي (تنبيه لحدث يقع حالياً Listen)."
+      },
+      {
+        "en": "I am not playing video games at the moment.",
+        "ar": "أنا لا ألعب ألعاب الفيديو في الوقت الحالي (نفي المضارع المستمر)."
+      },
+      {
+        "en": "Is Sarah preparing her school project today?",
+        "ar": "هل سارة تعد مشروعها المدرسي اليوم؟"
+      }
+    ],
+    "quiz": {
+      "question": "Look! It _______ heavily outside.",
+      "options": [
+        "rains",
+        "rained",
+        "is raining",
+        "rain"
+      ],
+      "correct": 2,
+      "explanation": "كلمة التنبيه (!Look) تدل على حدث يقع الآن في هذه اللحظة، فنستخدم المضارع المستمر (is raining)."
+    }
+  },
+  {
+    "id": "past_continuous_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي المستمر (Past Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
+    "explanation": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They).",
+    "examples": [
+      {
+        "en": "I was doing my homework at 8 o'clock yesterday evening.",
+        "ar": "كنت أحل واجبي في تمام الساعة الثامنة مساء أمس (فعل استمر في وقت محدد بالماضي)."
+      },
+      {
+        "en": "The boys were playing football in the park all afternoon.",
+        "ar": "كان الأولاد يلعبون كرة القدم في المنتزه طوال فترة بعد الظهر."
+      },
+      {
+        "en": "She wasn't sleeping when I called her.",
+        "ar": "لم تكن نائمة عندما اتصلتُ بها (نفي الماضي المستمر مع wasn't)."
+      },
+      {
+        "en": "What were you doing at this time yesterday?",
+        "ar": "ماذا كنت تفعل في مثل هذا الوقت بالأمس؟"
+      }
+    ],
+    "quiz": {
+      "question": "They _______ for the bus when the rain started.",
+      "options": [
+        "was waiting",
+        "were waiting",
+        "is waiting",
+        "are waiting"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل الجمع (They) في زمن الماضي المستمر نستخدم (were waiting)."
+    }
+  },
+  {
+    "id": "past_simple_continuous_when_while",
+    "unit": 1,
+    "category": "tenses",
+    "title": "الربط بين الماضي البسيط والمستمر (When & While)",
+    "level": "مهم جداً للامتحانات - صفحة 112",
+    "page": 112,
+    "formula": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
+    "explanation": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث.",
+    "examples": [
+      {
+        "en": "While we were having lunch, a bird flew into the kitchen.",
+        "ar": "بينما كنا نتناول الغداء (مستمر طويل)، طار طائر إلى المطبخ (بسيط قاطع بعد While)."
+      },
+      {
+        "en": "Ahmed was riding his bicycle when he fell over.",
+        "ar": "كان أحمد يقود دراجته (مستمر) عندما سقط أرضاً (بسيط قاطع بعد when)."
+      },
+      {
+        "en": "While she was reading a story, the doorbell rang.",
+        "ar": "بينما كانت تقرأ قصة، رن جرس الباب."
+      },
+      {
+        "en": "What were they doing when the teacher entered the classroom?",
+        "ar": "ماذا كانوا يفعلون عندما دخل المعلم الصف؟"
+      }
+    ],
+    "quiz": {
+      "question": "While I _______ to school, I met my best friend.",
+      "options": [
+        "was walking",
+        "walked",
+        "walk",
+        "am walking"
+      ],
+      "correct": 0,
+      "explanation": "بعد أداة While يأتي دائماً ماضٍ مستمر، ومع الضمير I نختار (was walking)."
+    }
+  },
+  {
+    "id": "future_simple_will",
+    "unit": 6,
+    "category": "tenses",
+    "title": "المستقبل البسيط والتنبؤات (Future Simple with: Will)",
+    "level": "الوحدة 6 - صفحة 113",
+    "page": 113,
+    "formula": "Subject + will ('ll) + مصدر الفعل (مجرد)\nالنفي: Subject + will not (won't) + مصدر الفعل (مجرد)\nالسؤال: Will + Subject + مصدر الفعل (مجرد)؟",
+    "explanation": "يُستخدم المستقبل مع will للتعبير عن:\n1) التنبؤات المستقبلية بناءً على الرأي والتخمين (غالباً مع I think, I hope, probably).\n2) اتخاذ قرار فوري وسريع في لحظة التحدث.\n3) تقديم الوعود والعروض.\nالفرق: will للتخمين والقرارات الفورية، بينما be going to للخطط والنوايا المسبقة.",
+    "examples": [
+      {
+        "en": "I think it will be sunny tomorrow.",
+        "ar": "أعتقد أن الجو سيكون مشمساً غداً (تنبؤ مستقبلي مع I think)."
+      },
+      {
+        "en": "The phone is ringing. I will answer it.",
+        "ar": "الهاتف يرن. سأجيب عليه (قرار فوري وسريع في لحظة التحدث)."
+      },
+      {
+        "en": "Don't worry, I won't tell anyone your secret.",
+        "ar": "لا تقلق، لن أخبر أحداً بسرك (وعد بالنفي won't)."
+      },
+      {
+        "en": "Will people travel to Mars in the future?",
+        "ar": "هل سيسافر البشر إلى المريخ في المستقبل؟"
+      }
+    ],
+    "quiz": {
+      "question": "I think our football team _______ the final match next week.",
+      "options": [
+        "will win",
+        "wins",
+        "won",
+        "is winning"
+      ],
+      "correct": 0,
+      "explanation": "مع التعبير (I think) وتوقع شيء في المستقبل، نستخدم المستقبل البسيط مع will والمجرد (will win)."
     }
   }
 ];
