@@ -1330,6 +1330,341 @@
       to { transform: rotate(360deg); }
     }
 
+    /* تصميم معرض المواد الدراسية وبوابة المنصة Subject Hub */
+    .subject-hub-section {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .subject-hub-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .subject-hub-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subject-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .subject-card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 1.35rem;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .subject-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .subject-card.featured {
+      border: 2px solid #6366f1;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.15);
+    }
+
+    .subject-card.featured::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    }
+
+    .subject-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .subject-card-badge.gold {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .subject-card-badge.gray {
+      background: var(--slate-100);
+      color: var(--slate-600);
+      border: 1px solid var(--slate-200);
+    }
+
+    .subject-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subject-card-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .subject-card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .subject-feature-pill {
+      font-size: 0.73rem;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid var(--slate-200);
+    }
+
+    .subject-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    /* شريط سياق المادة الحالي Active Subject Context Bar */
+    .subject-context-bar {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 0.75rem 1.1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    /* نماذج الامتحانات الوزارية والشهرية السابقة Past Exams */
+    .past-exams-subnav {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      background: var(--slate-100);
+      padding: 0.4rem;
+      border-radius: 10px;
+    }
+
+    .past-exams-subnav-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      color: var(--slate-600);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .past-exams-subnav-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+
+    .exam-paper-container {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .exam-official-header {
+      border: 2px dashed var(--slate-300);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      background: var(--slate-50);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .exam-header-item {
+      font-size: 0.82rem;
+      color: var(--slate-700);
+      font-weight: 700;
+    }
+
+    .exam-q-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .exam-q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .exam-q-title {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .exam-q-marks {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    .exam-passage-box {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      direction: ltr;
+      text-align: left;
+      font-family: inherit;
+      color: var(--slate-800);
+    }
+
+    .exam-questions-list {
+      direction: ltr;
+      text-align: left;
+      font-size: 0.86rem;
+      line-height: 1.8;
+      color: var(--slate-800);
+      margin-bottom: 0.85rem;
+    }
+
+    .exam-model-answer-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 0.85rem;
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: #065f46;
+      animation: updateSlideIn 0.3s ease;
+    }
+
+    .exam-toggle-sol-btn {
+      background: #f1f5f9;
+      color: var(--slate-700);
+      border: 1px solid var(--slate-300);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .exam-toggle-sol-btn:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: #c7d2fe;
+    }
+
+    .exam-listen-btn {
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .exam-listen-btn:hover {
+      background: #e0e7ff;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printableExamArea, #printableExamArea * {
+        visibility: visible;
+      }
+      #printableExamArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0;
+      }
+      .exam-model-answer-box, .exam-toggle-sol-btn, .exam-listen-btn, .past-exams-subnav, header, footer, .floating-audio-player {
+        display: none !important;
+      }
+    }
+
     .hidden {
       display: none !important;
     }
@@ -1348,7 +1683,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.6.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.7.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -1373,7 +1708,7 @@
         </button>
         <button class="tab-btn" onclick="switchTab('exams')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          الاختبارات والتقييم
+          📝 نماذج الامتحانات والتقييم
         </button>
         <button class="tab-btn" onclick="switchTab('settings')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
@@ -1411,25 +1746,164 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.6.0</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.7.0</span>
         </div>
-        <h2>نظامك التعليمي التفاعلي الشخصي</h2>
+        <h2>المنصة التعليمية التفاعلية الشاملة</h2>
         <p>
-          تطبيق متكامل لعرض المنهج الدراسي، قراءته بصوت مسموع وواضح، الاستفسار من المعلم الذكي مع توثيق المصادر، والاطلاع على بنك القواعد النحوية واللغوية واختبارات قياس الفهم.
+          بوابة تعليمية موحدة لكافة المواد والمناهج الدراسية، تبدأ بمنهج اللغة الإنجليزية المعتمد كنموذج رائد، وتتيح القراءة الصوتية الفصيحة، بنك القواعد النحوية، ونماذج الامتحانات الوزارية والشهرية السابقة مع الحلول النموذجية والتدريب التفاعلي.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <button class="btn btn-primary" onclick="switchTab('study')" style="background: white; color: var(--primary);">
-            📖 فتح المذاكرة والقراءة الصوتية
+          <button class="btn btn-primary" onclick="selectCurriculumForStudy(3)" style="background: white; color: var(--primary); font-weight: 800;">
+            🇬🇧 دخول مادة اللغة الإنجليزية
           </button>
-          <button class="btn btn-primary" onclick="switchTab('grammar')" style="background: #fbbf24; color: #78350f;">
-            💡 استكشاف القواعد المهمة
+          <button class="btn btn-primary" onclick="openPastExamsTab()" style="background: #10b981; color: white; border: none; font-weight: 700;">
+            📝 نماذج الامتحانات السابقة وحلولها
+          </button>
+          <button class="btn btn-primary" onclick="switchTab('grammar')" style="background: #fbbf24; color: #78350f; font-weight: 700;">
+            💡 استكشاف بنك القواعد
           </button>
           <button class="btn btn-secondary" onclick="openAddModal()" style="background: rgba(255,255,255,0.2); color: white; border: none;">
-            + إضافة منهج دراسي
+            ➕ إضافة مادة أو منهج جديد
           </button>
           <button class="btn btn-secondary" id="heroPwaBtn" onclick="installPWA()" style="display: none; background: rgba(255,255,255,0.25); color: white; border: 1px solid rgba(255,255,255,0.4);">
             📲 تثبيت كتطبيق PWA
           </button>
+        </div>
+      </div>
+
+      <!-- معرض المواد والمناهج الدراسية - بوابة المنصة -->
+      <div class="subject-hub-section">
+        <div class="subject-hub-header">
+          <div>
+            <h3 class="subject-hub-title">
+              <span>📚</span>
+              <span>بوابة المواد والمناهج الدراسية</span>
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--slate-500); margin: 0.2rem 0 0;">
+              اختر المادة الدراسية للانتقال مباشرة إلى وحداتها المقررة، القراءة الصوتية، بنك القواعد، ونماذج الامتحانات السابقة
+            </p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openAddModal()">
+            <span>➕</span> إضافة مادة / مقرر جديد
+          </button>
+        </div>
+
+        <div class="subject-cards-grid">
+          
+          <!-- بطاقة مادة اللغة الإنجليزية المعتمدة (المادة الأساسية المكتملة) -->
+          <div class="subject-card featured">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <span class="subject-card-badge gold">
+                  <span>🌟</span> المادة المعتمدة الأولى (مكتملة 100%)
+                </span>
+                <span style="font-size: 1.6rem;" title="اللغة الإنجليزية">🇬🇧</span>
+              </div>
+              <h4 class="subject-card-title">اللغة الإنجليزية (English for Iraq)</h4>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">
+                الصف الثاني متوسط • وزارة التربية العراقية
+              </div>
+              <p class="subject-card-desc">
+                منهاج متكامل يشمل قراءة نصوص كتاب الطالب والنشاط بصوت بشري طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (23 قاعدة)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية.
+              </p>
+
+              <div class="subject-card-features">
+                <span class="subject-feature-pill">📘 10 وحدات كاملة</span>
+                <span class="subject-feature-pill">🔊 تتبع صوتي فصيح</span>
+                <span class="subject-feature-pill">💡 23 قاعدة نحوية</span>
+                <span class="subject-feature-pill" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 700;">📑 نماذج امتحانات سابقة وحلولها</span>
+              </div>
+            </div>
+
+            <div class="subject-card-actions">
+              <button class="btn btn-primary" onclick="selectCurriculumForStudy(3)" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 800;">
+                <span>📖</span> دخول قاعة مذاكرة اللغة الإنجليزية ⮞
+              </button>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem;">
+                  <span>📝</span> نماذج الامتحانات
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem;">
+                  <span>💡</span> بنك القواعد
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- بطاقة استكشافية: مادة اللغة العربية -->
+          <div class="subject-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <span class="subject-card-badge gray">
+                  <span>⏳</span> متاح للإضافة والتجهيز
+                </span>
+                <span style="font-size: 1.6rem;" title="اللغة العربية">🇸🇦</span>
+              </div>
+              <h4 class="subject-card-title">اللغة العربية (القواعد والأدب)</h4>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.5rem;">
+                الصف الثاني متوسط • المقرر الوطني
+              </div>
+              <p class="subject-card-desc">
+                منصة مجهزة لاستيعاب قواعد اللغة العربية، نصوص المطالعة، القصائد الأدبية، مع إمكانية القراءة الآلية وتحليل النصوص وتوليد الاختبارات الفورية.
+              </p>
+              <div class="subject-card-features">
+                <span class="subject-feature-pill">📖 قواعد وإعراب</span>
+                <span class="subject-feature-pill">📜 نصوص وأدب</span>
+                <span class="subject-feature-pill">📝 بنك تقييمات</span>
+              </div>
+            </div>
+
+            <div class="subject-card-actions">
+              <button class="btn btn-secondary" onclick="openAddModalWithPreset('اللغة العربية', 'Arabic')" style="width: 100%; border: 1px dashed var(--primary); color: var(--primary); font-weight: 700;">
+                <span>➕</span> تجهيز أو رفع كتاب اللغة العربية
+              </button>
+            </div>
+          </div>
+
+          <!-- بطاقة استكشافية: مادة العلوم العامة -->
+          <div class="subject-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <span class="subject-card-badge gray">
+                  <span>⏳</span> متاح للإضافة والتجهيز
+                </span>
+                <span style="font-size: 1.6rem;" title="العلوم">🔬</span>
+              </div>
+              <h4 class="subject-card-title">العلوم (الأحياء والكيمياء والفيزياء)</h4>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.5rem;">
+                الصف الثاني متوسط • مفاهيم وتجارب
+              </div>
+              <p class="subject-card-desc">
+                شروحات المفاهيم العلمية المصورة، التلخيصات المركزة، والمصطلحات مع أسئلة امتحانية واختبارات فحص الفهم الذكي.
+              </p>
+              <div class="subject-card-features">
+                <span class="subject-feature-pill">🧫 أحياء وبيئة</span>
+                <span class="subject-feature-pill">⚡ فيزياء وحركة</span>
+                <span class="subject-feature-pill">🧪 كيمياء ومواد</span>
+              </div>
+            </div>
+
+            <div class="subject-card-actions">
+              <button class="btn btn-secondary" onclick="openAddModalWithPreset('العلوم العامة', 'Science')" style="width: 100%; border: 1px dashed var(--secondary); color: var(--secondary); font-weight: 700;">
+                <span>➕</span> تجهيز أو رفع كتاب العلوم
+              </button>
+            </div>
+          </div>
+
+          <!-- بطاقة إضافة منهج / مادة جديدة مخصصة -->
+          <div class="subject-card" style="border: 2px dashed var(--slate-300); background: var(--slate-50); justify-content: center; align-items: center; text-align: center; cursor: pointer; min-height: 240px;" onclick="openAddModal()">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.15);">
+              ➕
+            </div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--slate-800); margin-bottom: 0.35rem;">إضافة مادة أو كتاب دراسي جديد</h4>
+            <p style="font-size: 0.8rem; color: var(--slate-500); max-width: 250px; margin-bottom: 1rem;">
+              يمكنك رفع أو فهرسة أي كتاب دراسي جديد لينضم إلى المنصة مباشرة مع ميزات المذاكرة والتقييم.
+            </p>
+            <span class="btn btn-primary btn-sm" style="pointer-events: none;">
+              إنشاء مادة جديدة الآن
+            </span>
+          </div>
+
         </div>
       </div>
 
@@ -1484,6 +1958,29 @@
 
     <!-- 3. تبويب قاعة المذاكرة والمساعد الصوتي -->
     <section id="tab-study" class="hidden">
+      
+      <!-- شريط سياق المادة الدراسية الحالية -->
+      <div class="subject-context-bar">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <span style="font-size: 1.5rem;">🇬🇧</span>
+          <div>
+            <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة حالياً:</span>
+            <strong style="color: var(--slate-800); font-size: 0.95rem;" id="studyActiveSubjectTitle">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.78rem;">
+            <span>⇄</span> تغيير المادة
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-size: 0.78rem; font-weight: 700;">
+            <span>📝</span> نماذج الامتحانات السابقة
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-size: 0.78rem; font-weight: 700;">
+            <span>💡</span> بنك القواعد
+          </button>
+        </div>
+      </div>
+
       <div class="study-layout">
         
         <!-- اللوحة اليمنى: شجرة الفصول والدروس -->
@@ -1666,6 +2163,29 @@
 
     <!-- 4. تبويب القواعد المهمة (Grammar & Rules) -->
     <section id="tab-grammar" class="hidden">
+      
+      <!-- شريط سياق المادة الدراسية الحالية -->
+      <div class="subject-context-bar">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <span style="font-size: 1.5rem;">🇬🇧</span>
+          <div>
+            <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة حالياً:</span>
+            <strong style="color: var(--slate-800); font-size: 0.95rem;">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.78rem;">
+            <span>⇄</span> تغيير المادة
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="font-size: 0.78rem;">
+            <span>📖</span> فتح قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-size: 0.78rem; font-weight: 700;">
+            <span>📝</span> نماذج الامتحانات السابقة
+          </button>
+        </div>
+      </div>
+
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
         <div>
           <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--slate-900);">💡 المرجع الشامل للقواعد والوظائف اللغوية</h2>
@@ -1694,12 +2214,97 @@
       </div>
     </section>
 
-    <!-- 5. تبويب الاختبارات والتقييم -->
+    <!-- 5. تبويب نماذج الامتحانات والتقييم -->
     <section id="tab-exams" class="hidden">
-      <div style="max-width: 750px; margin: 0 auto;">
+      
+      <!-- شريط سياق المادة الدراسية الحالية -->
+      <div class="subject-context-bar">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <span style="font-size: 1.5rem;">🇬🇧</span>
+          <div>
+            <span style="font-size: 0.72rem; color: var(--slate-500); display: block; font-weight: 700;">المادة الدراسية النشطة:</span>
+            <strong style="color: var(--slate-800); font-size: 0.95rem;">اللغة الإنجليزية (English for Iraq - الثاني متوسط)</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.78rem;">
+            <span>⇄</span> تغيير المادة
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="font-size: 0.78rem;">
+            <span>📖</span> فتح المذاكرة والقراءة
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-size: 0.78rem; font-weight: 700;">
+            <span>💡</span> بنك القواعد
+          </button>
+        </div>
+      </div>
+
+      <!-- رأس مركز الامتحانات -->
+      <div style="background: white; border: 1px solid var(--slate-200); border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary-light); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.4rem;">
+              <span>📝</span> بنك الامتحانات والتدريب الوزاري المعتمد
+            </div>
+            <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--slate-900); margin: 0;">مركز الامتحانات ونماذج الأسئلة السابقة</h2>
+            <p style="font-size: 0.82rem; color: var(--slate-500); margin: 0.25rem 0 0;">
+              تدرب على النماذج الامتحانية الوزارية والشهرية الحقيقية مع الحلول النموذجية وتوزيع الدرجات والشرح
+            </p>
+          </div>
+          
+          <!-- أزرار التبديل بين نماذج الامتحانات السابقة والاختبار التفاعلي -->
+          <div class="past-exams-subnav" style="margin-bottom: 0;">
+            <button class="past-exams-subnav-btn active" id="btnSubtabPastExams" onclick="switchExamSubtab('past-exams')">
+              <span>📑</span> نماذج الامتحانات السابقة وحلولها
+            </button>
+            <button class="past-exams-subnav-btn" id="btnSubtabInteractive" onclick="switchExamSubtab('interactive')">
+              <span>⚡</span> الاختبار التدريبي الفوري
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- العرض الأول: نماذج الامتحانات الوزارية والشهرية السابقة -->
+      <div id="pastExamsViewContainer">
+        <!-- شريط أدوات وفلاتر الامتحانات السابقة -->
+        <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.85rem 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--slate-600); margin-inline-end: 0.35rem;">اختر النموذج:</span>
+            <button class="btn btn-sm btn-primary" id="examFilter_midyear" onclick="selectPastExam('midyear')">
+              🌟 نصف السنة الشامل (100 درجة)
+            </button>
+            <button class="btn btn-sm btn-secondary" id="examFilter_m1" onclick="selectPastExam('m1')">
+              📘 الشهر الأول (الوحدة 1)
+            </button>
+            <button class="btn btn-sm btn-secondary" id="examFilter_m2" onclick="selectPastExam('m2')">
+              📗 الشهر الثاني (الوحدة 2)
+            </button>
+            <button class="btn btn-sm btn-secondary" id="examFilter_u34" onclick="selectPastExam('u34')">
+              📙 الوحدات 3 و 4
+            </button>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <button class="exam-toggle-sol-btn" id="toggleAllSolutionsBtn" onclick="toggleAllExamSolutions()">
+              <span>👁️</span> إظهار كافة الحلول النموذجية
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="printExamPaper()" style="font-size: 0.78rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+              <span>🖨️</span> طباعة ورقة الامتحان
+            </button>
+          </div>
+        </div>
+
+        <!-- ورقة الامتحان الرسمية المحددة -->
+        <div id="printableExamArea" class="exam-paper-container">
+          <!-- يتم توليد محتوى ورقة الامتحان المحددة ديناميكياً -->
+        </div>
+      </div>
+
+      <!-- العرض الثاني: الاختبار التدريبي الذاتي الفوري -->
+      <div id="interactiveQuizViewContainer" class="hidden" style="max-width: 750px; margin: 0 auto;">
         <div class="card" style="margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <h2 style="font-size: 1.15rem; font-weight: 800;">الاختبار التدريبي</h2>
+            <h2 style="font-size: 1.15rem; font-weight: 800;">الاختبار التدريبي الفوري</h2>
             <p style="font-size: 0.8rem; color: var(--slate-500);" id="examSubtitle">اختبار تدريبي على الدرس المختار</p>
           </div>
           <button class="btn btn-secondary btn-sm" onclick="generateQuizForCurrentLesson()">
@@ -1782,7 +2387,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v2.6.0</span>
+            <span class="version-badge" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v2.7.0</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -1807,7 +2412,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.6.0</span>
+            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.7.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1816,6 +2421,8 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v2.7.0 (أكتوبر 2026):</strong> تدشين بوابة المواد والمناهج الدراسية الشاملة (Subject Hub) وسياق المادة الدراسية النشطة في كافة الشاشات مع ميزة التبديل الفوري، وتدشين مركز نماذج الامتحانات الوزارية والشهرية السابقة (امتحان نصف السنة الشامل 100 درجة، امتحان الشهر الأول، امتحان الشهر الثاني، وامتحان الوحدات 3 و4) مع الحلول النموذجية المفصلة، شروحات القواعد وتوزيع الدرجات، الاستماع الصوتي للقطع، وطباعة ورقة الامتحان نظيفة للتدرب الورقي - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v2.6.0 (أكتوبر 2026):</strong> تدشين الوحدة الرابعة: المراجعة الشاملة 1 (Unit 4: Review 1) بالكامل (الصفحات 43 إلى 46) وتزويدها بالمعرض البصري وبطاقات المفاهيم واستراتيجيات الاستماع وتدوين الملاحظات وقواعد Question Intonation و Topic Sentences - إعداد المهندس أسامة خليل هاشم.</div>
                         <div>• <strong style="color: var(--primary);">v2.5.0 (أكتوبر 2026):</strong> تدشين الوحدة الثالثة: الرياضة والألعاب (Unit 3: Sports and Games) بالكامل (الصفحات 28 إلى 42) عبر 11 درساً شاملاً وتزويدها بالمعرض البصري والبطاقات المفاهيمية، وإعادة هيكلة وتوزيع بنك القواعد والأزمنة تسلسلياً حسب الوحدات الدراسية (من الأولى إلى الأخيرة) مع فواصل بصرية وشارات إحصائية، وقواعد أفعال الرياضات (Play, Go, Do) وقاعدة الاعتياد في الماضي (Used to) ومصطلحات الفوز والخسارة والألعاب الأولمبية وقصة جاد وجوني في ميونيخ وبنك اختبارات فوري - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.4.0 (أكتوبر 2026):</strong> تدشين نظام الكشف والاستقبال التلقائي للتحديثات الفورية (Live PWA Update System) مع إشعار التحديث العائم، ونافذة «ما الجديد في هذا التحديث» التفاعلية وسجل الإصدارات الكامل، وخيار الفحص اللحظي في الإعدادات، والنقر المباشر على رقم الإصدار لاستعراض التحديثات - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.3.9 (أكتوبر 2026):</strong> تدشين بنك قواعد الأزمنة الشامل التفاعلي (Tenses Master Bank) الذي يضم شروحات وصيغ وتمارين فورية لجميع أزمنة اللغة الإنجليزية المقررة (المضارع البسيط، الماضي البسيط، المضارع المستمر، الماضي المستمر، أدوات الربط When/While، المستقبل بـ Will و be going to، والمضارع التام مع For/Since، والاعتياد في الماضي Used to، والمبني للمجهول) مع فلتر مخصص ⏱️ ونطق صوتي مباشر للأمثلة - إعداد المهندس أسامة خليل هاشم.</div>
@@ -1845,7 +2452,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.6.0</span>
+        <span class="version-badge">v2.7.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -2111,7 +2718,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v2.6.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v2.7.0</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -2139,13 +2746,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.6.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.7.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.6.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.7.0</span>
         </div>
       </div>
 
@@ -2154,7 +2761,7 @@
         <div class="whatsnew-card" style="background: #eef2ff; border-color: #c7d2fe;">
           <div style="font-weight: 800; color: var(--primary); font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>🚀</span>
-            <span id="whatsNewReleaseSummaryTitle">نظام الكشف والاستقبال التلقائي للتحديثات الفورية (Live PWA Update System)</span>
+            <span id="whatsNewReleaseSummaryTitle">بوابة المواد والمناهج الدراسية المتعددة وبنك نماذج الامتحانات السابقة وحلولها</span>
           </div>
           <div id="whatsNewFeatureList">
             <!-- تتولد ديناميكياً من version.json أو القائمة الافتراضية -->
@@ -2193,9 +2800,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '2.6.0';
-    const CURRENT_VERSION_LABEL = 'v2.6.0';
-    const SYSTEM_VERSION = 'v2.6.0';
+    const CURRENT_VERSION = '2.7.0';
+    const CURRENT_VERSION_LABEL = 'v2.7.0';
+    const SYSTEM_VERSION = 'v2.7.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -3235,6 +3842,7 @@
       renderCurriculumsList();
       populateStudyCurriculumSelect();
       renderGrammarRules();
+      renderPastExam('midyear');
       renderStudyView();
       initAiChatPanelState();
       checkBackendConnection();
@@ -5524,6 +6132,7 @@
 
       renderQuizQuestions();
       switchTab('exams');
+      switchExamSubtab('interactive');
     }
 
     function renderQuizQuestions() {
@@ -5595,6 +6204,707 @@
       document.getElementById('quizScoreText').innerText = `درجتك: ${score} من ${total} (${pct}%)`;
 
       document.getElementById('submitQuizBtn').classList.add('hidden');
+    }
+
+    // =========================================================================
+    // بنك نماذج الامتحانات الوزارية والشهرية السابقة مع الحلول النموذجية
+    // إعداد المهندس أسامة خليل هاشم
+    // =========================================================================
+    let currentSelectedPastExamId = 'midyear';
+    let allExamSolutionsVisible = false;
+
+    const PAST_EXAMS_DATABASE = {
+      midyear: {
+        id: 'midyear',
+        title: 'نموذج امتحان نصف السنة الشامل (Mid-Year Comprehensive Exam)',
+        stage: 'الصف الثاني متوسط (Second Intermediate)',
+        subject: 'اللغة الإنجليزية (English for Iraq)',
+        year: '2025 - 2026',
+        time: 'ساعتان ونصف (2.5 Hours)',
+        totalMarks: '100 درجة (100 Marks)',
+        notes: 'ملاحظة: أجب عن جميع الأسئلة الآتية. Note: Answer all the following questions.',
+        badge: '🌟 النموذج الوزاري الشامل',
+        questions: [
+          {
+            id: 'my_q1',
+            number: 'Q1',
+            title: 'Reading Comprehension (استيعاب المقروء - القطعة الخارجية)',
+            marks: '15 Marks',
+            instructions: 'Read the following passage carefully, then answer (5) of the questions below: (15 Marks / 3 marks each)',
+            passage: `Tariq is a second-intermediate student from Baghdad who loves writing and sports. Last year, he was often tired and got out of breath when walking up the stairs because he was unfit. His doctor and physical education teacher advised him to exercise regularly and eat healthy food. Tariq decided to change his lifestyle. He stopped eating too many crisps and sweets, and started eating fresh fruits, vegetables, and fish. Every afternoon, he plays basketball with his school team or goes swimming at the local sports centre. Now, Tariq feels full of energy and very fit. Moreover, he wrote an inspiring article titled "How to Keep Fit" for his school magazine, and his English teacher praised his excellent writing.`,
+            items: [
+              '1. Why was Tariq often tired last year?',
+              '2. What kind of food did Tariq start eating to become healthy?',
+              '3. Tariq plays basketball with his school team every afternoon. (True / False)',
+              '4. What was the title of the article Tariq wrote for the school magazine?',
+              '5. Tariq still eats lots of crisps and sweets every day. (True / False)',
+              '6. Give the passage a suitable title.'
+            ],
+            solution: `
+              <strong>الحل النموذجي وتوزيع الدرجات (15 درجة - 3 درجات لكل نقطة):</strong><br>
+              <strong>1.</strong> Because he was unfit / he didn't exercise regularly. (لأنه كان غير لائق بدنياً).<br>
+              <strong>2.</strong> Fresh fruits, vegetables, and fish. (الفواكه الطازجة، الخضروات، والسمك).<br>
+              <strong>3.</strong> <strong>True</strong> (صح).<br>
+              <strong>4.</strong> "How to Keep Fit" (عنوان المقالة: كيف تحافظ على رشاقتك وصحتك).<br>
+              <strong>5.</strong> <strong>False</strong> (خطأ، لأنه توقف عن ذلك واستبدله بالطعام الصحي).<br>
+              <strong>6.</strong> "A Healthy Student" / "Tariq's Healthy Lifestyle" / "Keeping Fit". (أي عنوان ملائم يُقبل).
+            `
+          },
+          {
+            id: 'my_q2',
+            number: 'Q2',
+            title: 'Textbook Passages & Stories (قطع ونصوص وقصص الكتاب المقررة)',
+            marks: '10 Marks',
+            instructions: 'Answer (5) of the following questions using information from your textbook: (10 Marks / 2 marks each)',
+            passage: null,
+            items: [
+              '1. Why did the students in Unit 1 decide to create a school magazine? (Unit 1)',
+              '2. What does an "editor" do in a magazine team? (Unit 1)',
+              '3. In Unit 2, what does the word "unfit" mean? (Unit 2)',
+              '4. Why did people laugh at Bob in the ice cream shop? (Bob and Basim Story)',
+              '5. How many boys were selected for the World Youth Camp in the story? (Bob and Basim Story)',
+              '6. Which sport uses a racket and a small yellow ball? (Unit 3)'
+            ],
+            solution: `
+              <strong>الحل النموذجي وتوزيع الدرجات (10 درجات - درجتان لكل نقطة):</strong><br>
+              <strong>1.</strong> To write interesting articles, reports, and tell school news. (لكتابة المقالات والتقارير ونقل أخبار المدرسة).<br>
+              <strong>2.</strong> An editor decides what goes into the magazine and checks/edits the articles. (المحرر هو من يراجع المقالات ويقرر ما يُنشر).<br>
+              <strong>3.</strong> It means someone who cannot run or walk easily and gets out of breath quickly. (الشخص غير اللائق الذي لا يستطيع المشي أو الجري بسهولة وينقطع نفسه).<br>
+              <strong>4.</strong> Because his huge ice cream scoop fell off onto his shirt and shoes! (لأن كرة المثلجات الكبيرة سقطت على قميصه وحذائه).<br>
+              <strong>5.</strong> Four boys: Bob, Basim, Aziz, and Gareth. (أربعة فتيان: بوب، باسم، عزيز، وغاريث).<br>
+              <strong>6.</strong> Tennis. (كرة المضرب / التنس).
+            `
+          },
+          {
+            id: 'my_q3',
+            number: 'Q3',
+            title: 'Grammar and Functions (القواعد والوظائف اللغوية)',
+            marks: '20 Marks',
+            instructions: 'Answer both branches: (A) Choices (10 Marks) & (B) Do as required (10 Marks):',
+            passage: null,
+            branchA: {
+              title: 'Branch (A) - Choose the correct word between brackets: (10 Marks / 2 marks each - Answer 5)',
+              items: [
+                '1. I have lived in Basra (since / for) 2018.',
+                '2. You have a very bad toothache. You (should / shouldn\'t) see a dentist.',
+                '3. While Noor (was cooking / cooked) dinner, the electricity went out.',
+                '4. When I was young, I (used to / use to) play football in the street.',
+                '5. You must not put (too much / too many) sugar in your tea.',
+                '6. Mazin is interested in (read / reading) historical books.'
+              ]
+            },
+            branchB: {
+              title: 'Branch (B) - Do as required between brackets: (10 Marks / 2 marks each - Answer 5)',
+              items: [
+                '1. "Let\'s go to the sports club this evening." (Accept the suggestion)',
+                '2. Zaid (play) computer games when his father arrived. (Correct the verb)',
+                '3. My brother drinks lots of fizzy drinks. (Give advice using: shouldn\'t)',
+                '4. This is the (teacher) room. (Add the possessive apostrophe for one teacher)',
+                '5. Sami likes swimming. (Make the sentence negative)',
+                '6. How often do you play football? (Answer using: twice a week)'
+              ]
+            },
+            solution: `
+              <strong>الحل النموذجي للفرع (A) - الاختيارات مع القاعدة (10 درجات):</strong><br>
+              <strong>1. since</strong> (لأن 2018 نقطة بداية زمنية محددة في الماضي).<br>
+              <strong>2. should</strong> (نصيحة إيجابية بضرورة مراجعة طبيب الأسنان).<br>
+              <strong>3. was cooking</strong> (بعد While يأتي ماضٍ مستمر Past Continuous).<br>
+              <strong>4. used to</strong> (للتعبير عن عادة أو حالة سابقة في الماضي وانتهت).<br>
+              <strong>5. too much</strong> (لأن السكر sugar اسم غير معدود).<br>
+              <strong>6. reading</strong> (حرف الجر in يتبعه فعل مضاف له ing).<br><br>
+              <strong>الحل النموذجي للفرع (B) - التطبيق والمطلوب (10 درجات):</strong><br>
+              <strong>1.</strong> That's a good idea! / Yes, let's. (قبول الاقتراح).<br>
+              <strong>2.</strong> was playing. (الماضي المستمر لوجود when والماضي البسيط arrived).<br>
+              <strong>3.</strong> You shouldn't drink too many fizzy drinks. (تقديم النصيحة بـ shouldn't).<br>
+              <strong>4.</strong> This is the <strong>teacher's</strong> room. (فارزة التملك للمفرد قبل الـ s).<br>
+              <strong>5.</strong> Sami <strong>does not like</strong> swimming. (النفي في المضارع البسيط بـ does not + المصدر المجرد).<br>
+              <strong>6.</strong> I play football twice a week. (الإجابة بمعدل التكرار).
+            `
+          },
+          {
+            id: 'my_q4',
+            number: 'Q4',
+            title: 'Vocabulary, Spelling and Punctuation (المفردات والإملاء والتنقيط)',
+            marks: '20 Marks',
+            instructions: 'Answer all branches: (A) Vocabulary (10 M), (B) Spelling (5 M), (C) Punctuation (5 M):',
+            passage: null,
+            branchA: {
+              title: 'Branch (A) - Complete the sentences using words from the box below: (10 Marks / 2 marks each)',
+              boxWords: ['embarrassing', 'fit', 'headache', 'team', 'puzzles', 'article'],
+              items: [
+                '1. You need to exercise at least three times a week to keep ______.',
+                '2. I wrote an interesting ______ about our town museum for the school magazine.',
+                '3. Mona took some medicine because she had a severe ______.',
+                '4. It was very ______ when I slipped and fell in front of all my classmates.',
+                '5. Basim scored the winning goal for his school football ______.'
+              ]
+            },
+            branchB: {
+              title: 'Branch (B) - Spelling: Complete the following with the correct forms: (5 Marks / 1 mark each)',
+              items: [
+                '1. play, played ; see, ______',
+                '2. fit, unfit ; happy, ______',
+                '3. good, better ; bad, ______',
+                '4. tooth, teeth ; foot, ______',
+                '5. write, writing ; lie, ______'
+              ]
+            },
+            branchC: {
+              title: 'Branch (C) - Punctuation: Re-write the sentence using capital letters and correct punctuation marks: (5 Marks)',
+              items: [
+                'ali and ahmed didn t travel to erbil last friday'
+              ]
+            },
+            solution: `
+              <strong>الحل النموذجي للفرع (A) - المفردات (10 درجات):</strong><br>
+              1. <strong>fit</strong> (لائق بدنياً).<br>
+              2. <strong>article</strong> (مقالة).<br>
+              3. <strong>headache</strong> (صداع).<br>
+              4. <strong>embarrassing</strong> (مُحرج).<br>
+              5. <strong>team</strong> (فريق).<br><br>
+              <strong>الحل النموذجي للفرع (B) - الإملاء والتحويلات (5 درجات):</strong><br>
+              1. <strong>saw</strong> (ماضي شاذ للفعل see).<br>
+              2. <strong>unhappy</strong> (المعاكس بإضافة البادئة un).<br>
+              3. <strong>worse</strong> (مقارنة شاذة للصفة bad).<br>
+              4. <strong>feet</strong> (جمع شاذ لكلمة foot).<br>
+              5. <strong>lying</strong> (تحويل ie إلى y عند إضافة ing).<br><br>
+              <strong>الحل النموذجي للفرع (C) - التنقيط (5 درجات):</strong><br>
+              <strong>Ali and Ahmed didn't travel to Erbil last Friday.</strong><br>
+              (توزيع الدرجات: حرف A كبير في Ali، وحرف A كبير في Ahmed، والفارزة العليا في didn't، وحرف E كبير في Erbil، وحرف F كبير في Friday، ونقطة النهاية .).
+            `
+          },
+          {
+            id: 'my_q5',
+            number: 'Q5',
+            title: 'Written Composition (الإنشاء والتعبير التحريري)',
+            marks: '15 Marks',
+            instructions: 'Choose either (A) or (B) to write a complete, coherent paragraph with a title: (15 Marks)',
+            passage: null,
+            items: [
+              'Topic (A): Write a paragraph about "An Embarrassing Moment" in your life. (الوحدة الأولى)',
+              'Topic (B): Write a paragraph about "How to Stay Healthy and Fit". (الوحدة الثانية)'
+            ],
+            solution: `
+              <strong>النموذج الكامل للإنشاء الأول Topic (A): An Embarrassing Moment:</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.85rem; border-radius: 8px; border: 1px solid #cbd5e1; margin: 0.5rem 0;">
+                <strong>An Embarrassing Moment</strong><br>
+                Last Tuesday, I had one of the most embarrassing moments of my life. During the school break, I was in a hurry to buy a cold orange juice from the canteen. I took my tray and turned around quickly to talk to my friend Ahmed. Suddenly, I did not notice a bag on the floor, so I tripped and fell down heavily. My orange juice and sandwich flew across the hall and splashed on my teacher's clean jacket! Everyone stopped talking and looked at me. My face went bright red with embarrassment. Luckily, my teacher was very kind, smiled warmly, and helped me get up.
+              </div>
+              <em>الترجمة: (في يوم الثلاثاء الماضي، مررت بأحد أكثر المواقف إحراجاً في حياتي. أثناء الاستراحة المدرسية، كنت على عجلة لشراء عصير برتقال بارد من المقصف. أخذت صينيتي واستدرت بسرعة لأتحدث مع صديقي أحمد. فجأة لم أنتبه لحقيبة على الأرض فتعثرت وسقطت بقوة. طار العصير والشطيرة وسقطا على سترة أستاذي النظيفة! توقف الجميع عن الكلام ونظروا إليّ، واحمرّ وجهي خجلاً. لحسن الحظ كان أستاذي لطيفاً جداً، وابتسم بدفء وساعدني على النهوض).</em><br><br>
+              <strong>النموذج الكامل للإنشاء الثاني Topic (B): How to Stay Healthy:</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.85rem; border-radius: 8px; border: 1px solid #cbd5e1; margin: 0.5rem 0;">
+                <strong>How to Stay Healthy and Fit</strong><br>
+                Health is the most valuable thing in our life, so we should always take care of our bodies. To stay fit, you should exercise regularly, such as playing football, running, or swimming for at least thirty minutes every day. In addition, you should eat a balanced diet containing plenty of fresh fruit, vegetables, and fish. It is very important to avoid eating too many sweets, crisps, and drinking fizzy drinks because they contain too much sugar and fat. Finally, you should sleep at least eight hours every night and drink plenty of water to keep your body active and refreshed.
+              </div>
+              <em>الترجمة: (الصحة هي أثمن ما نملك في حياتنا، لذا يجب علينا دائماً العناية بأجسادنا. للحفاظ على الرشاقة، ينبغي عليك ممارسة التمارين الرياضية بانتظام، مثل لعب كرة القدم أو الجري أو السباحة لمدة لا تقل عن ثلاثين دقيقة يومياً. بالإضافة إلى ذلك، يجب أن تتناول غذاءً متوازناً يحتوي على الكثير من الفواكه الطازجة والخضروات والسمك. من المهم جداً تجنب الإكثار من الحلويات والمقرمشات والمشروبات الغازية لأنها تحتوي على الكثير من السكر والدهون. وأخيراً، يجب أن تنام ثماني ساعات على الأقل كل ليلة وتشرب الكثير من الماء ليبقى جسمك نشيطاً ومنتعشاً).</em>
+            `
+          }
+        ]
+      },
+      m1: {
+        id: 'm1',
+        title: 'نموذج امتحان الشهر الأول (First Month Exam - Unit 1: A School Magazine)',
+        stage: 'الصف الثاني متوسط',
+        subject: 'اللغة الإنجليزية',
+        year: '2025 - 2026',
+        time: 'ساعة واحدة',
+        totalMarks: '50 درجة',
+        notes: 'ملاحظة: امتحان الشهر الأول المخصص للوحدة الأولى (مجلة المدرسة، القواعد، والإملاء).',
+        badge: '📘 امتحان الوحدة الأولى',
+        questions: [
+          {
+            id: 'm1_q1',
+            number: 'Q1',
+            title: 'Reading Comprehension (استيعاب المقروء)',
+            marks: '10 Marks',
+            instructions: 'Read the short text and answer (5) questions: (10 Marks)',
+            passage: `Al-Mustafa Intermediate School started a monthly magazine called "Students' Voice". Four students were chosen for the editorial team: Zaid is the editor, Mazin writes sports articles, and Omar collects jokes and cartoons. Last week, Zaid interviewed Mr. Kareem, the English teacher, about his favourite hobbies. Mr. Kareem said he enjoys reading history books and gardening in his spare time.`,
+            items: [
+              '1. What is the name of the school magazine?',
+              '2. Who is the editor of the magazine team?',
+              '3. What does Mazin write for the magazine?',
+              '4. Mr. Kareem is the Science teacher. (True / False)',
+              '5. What are Mr. Kareem\'s favourite hobbies?'
+            ],
+            solution: `
+              <strong>الحل النموذجي (10 درجات):</strong><br>
+              1. "Students' Voice" (صوت الطلاب).<br>
+              2. Zaid (زيد).<br>
+              3. Sports articles (مقالات رياضية).<br>
+              4. <strong>False</strong> (خطأ، هو معلم اللغة الإنجليزية).<br>
+              5. Reading history books and gardening (قراءة كتب التاريخ والاعتناء بالحديقة).
+            `
+          },
+          {
+            id: 'm1_q2',
+            number: 'Q2',
+            title: 'Grammar and Functions (القواعد والوظائف اللغوية)',
+            marks: '15 Marks',
+            instructions: 'Answer all items: (15 Marks)',
+            passage: null,
+            items: [
+              '1. I haven\'t seen Huda (since / for) last Monday. (Choose)',
+              '2. We (walk) to school when the rain started. (Correct the verb)',
+              '3. This is the (boys) classroom. There are thirty boys in it. (Add apostrophe)',
+              '4. "Shall we write a poem for the magazine?" (Accept the suggestion)',
+              '5. He has worked in this shop (since / for) five years. (Choose)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              1. <strong>since</strong> (لأن last Monday نقطة زمنية محددة).<br>
+              2. <strong>were walking</strong> (ماضٍ مستمر لوجود when).<br>
+              3. the <strong>boys'</strong> classroom (فارزة التملك بعد الـ s لأن الاسم جمع ينتهي بـ s).<br>
+              4. <strong>Yes, let's. / Good idea!</strong> (قبول الاقتراح).<br>
+              5. <strong>for</strong> (لأن five years فترة زمنية ممتدة).
+            `
+          },
+          {
+            id: 'm1_q3',
+            number: 'Q3',
+            title: 'Vocabulary & Spelling (المفردات والإملاء)',
+            marks: '15 Marks',
+            instructions: 'Complete with suitable words from the box and correct forms: (15 Marks)',
+            passage: null,
+            items: [
+              'A) Fill in the blanks with: [article, cartoon, editor, report]:<br>1. An ______ is someone who checks and decides what to publish.<br>2. A ______ is a funny drawing with a joke.<br>3. I wrote a ______ about the football match.',
+              'B) Spelling:<br>1. look, looked ; buy, ______ (bought)<br>2. happy, unhappy ; polite, ______ (impolite)<br>3. one, first ; two, ______ (second)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              A) 1. <strong>editor</strong> | 2. <strong>cartoon</strong> | 3. <strong>report</strong>.<br>
+              B) 1. <strong>bought</strong> | 2. <strong>impolite</strong> | 3. <strong>second</strong>.
+            `
+          },
+          {
+            id: 'm1_q4',
+            number: 'Q4',
+            title: 'Written Composition (الإنشاء)',
+            marks: '10 Marks',
+            instructions: 'Write a short paragraph about an embarrassing moment you had at school: (10 Marks)',
+            passage: null,
+            items: ['Write about: What happened, when, where, and how you felt.'],
+            solution: `
+              <strong>نموذج الإنشاء المعتمد (10 درجات):</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.75rem; border-radius: 8px; border: 1px solid #cbd5e1;">
+                One day last month, I arrived at school in a rush. When I entered the classroom and took off my jacket, all my friends began laughing. I looked down and realised I was wearing one black shoe and one brown shoe! I felt so embarrassed, but soon I laughed with my friends too.
+              </div>
+            `
+          }
+        ]
+      },
+      m2: {
+        id: 'm2',
+        title: 'نموذج امتحان الشهر الثاني (Second Month Exam - Unit 2: Healthy Lifestyle)',
+        stage: 'الصف الثاني متوسط',
+        subject: 'اللغة الإنجليزية',
+        year: '2025 - 2026',
+        time: 'ساعة واحدة',
+        totalMarks: '50 درجة',
+        notes: 'ملاحظة: امتحان الشهر الثاني المخصص للوحدة الثانية (نمط الحياة الصحي، النصائح بـ Should، والكميات).',
+        badge: '📗 امتحان الوحدة الثانية',
+        questions: [
+          {
+            id: 'm2_q1',
+            number: 'Q1',
+            title: 'Reading Comprehension (استيعاب المقروء)',
+            marks: '10 Marks',
+            instructions: 'Read and answer: (10 Marks)',
+            passage: `Doctor Huda gave a lecture about health at our school. She explained that exercising for 30 minutes every day makes our hearts stronger. She warned us against eating too much junk food, salt, and sugar. Instead, she advised having at least five portions of vegetables and fresh fruits daily. Water is the best drink for our body.`,
+            items: [
+              '1. How long should we exercise every day according to Dr. Huda?',
+              '2. What does daily exercise do for our hearts?',
+              '3. We should eat lots of salt and sugar. (True / False)',
+              '4. How many portions of fruits and vegetables should we eat daily?',
+              '5. What is the best drink for our body?'
+            ],
+            solution: `
+              <strong>الحل النموذجي (10 درجات):</strong><br>
+              1. 30 minutes (ثلاثون دقيقة).<br>
+              2. It makes our hearts stronger (يجعل قلوبنا أقوى).<br>
+              3. <strong>False</strong> (خطأ، حذرت من الإكثار منهما).<br>
+              4. At least five portions (خمس حصص على الأقل).<br>
+              5. Water (الماء).
+            `
+          },
+          {
+            id: 'm2_q2',
+            number: 'Q2',
+            title: 'Grammar and Functions (القواعد والوظائف اللغوية)',
+            marks: '15 Marks',
+            instructions: 'Answer all items: (15 Marks)',
+            passage: null,
+            items: [
+              '1. You look pale and tired. You (should / shouldn\'t) go to bed early. (Choose)',
+              '2. There are (too much / too many) cars on the road today. (Choose)',
+              '3. My brother eats (too much / too many) sugar in his tea. (Choose)',
+              '4. Ahmed has a stomach ache. (Give advice using: should / shouldn\'t)',
+              '5. How often do you brush your teeth? (Answer using: twice a day)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              1. <strong>should</strong> (نصيحة إيجابية بالراحة والنوم مبكراً).<br>
+              2. <strong>too many</strong> (لأن cars اسم جمع معدود).<br>
+              3. <strong>too much</strong> (لأن sugar اسم غير معدود).<br>
+              4. <strong>You shouldn't eat too much junk food. / You should see a doctor.</strong> (نصيحة مناسبة لألم المعدة).<br>
+              5. <strong>I brush my teeth twice a day.</strong> (مرتين في اليوم).
+            `
+          },
+          {
+            id: 'm2_q3',
+            number: 'Q3',
+            title: 'Vocabulary & Aches (المفردات والأمراض)',
+            marks: '15 Marks',
+            instructions: 'Complete with correct words: (15 Marks)',
+            passage: null,
+            items: [
+              'A) Complete the phrases: [stomach ache, toothache, headache, earache]:<br>1. When my head hurts, I have a ______.<br>2. When I eat too much candy and my tooth hurts, I have a ______.<br>3. After eating bad food, Jalal had a severe ______.',
+              'B) Opposites & Plurals:<br>1. fit x ______ (unfit)<br>2. healthy x ______ (unhealthy)<br>3. foot -> ______ (feet)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              A) 1. <strong>headache</strong> | 2. <strong>toothache</strong> | 3. <strong>stomach ache</strong>.<br>
+              B) 1. <strong>unfit</strong> | 2. <strong>unhealthy</strong> | 3. <strong>feet</strong>.
+            `
+          },
+          {
+            id: 'm2_q4',
+            number: 'Q4',
+            title: 'Written Composition (الإنشاء)',
+            marks: '10 Marks',
+            instructions: 'Write a paragraph on "How to Stay Healthy": (10 Marks)',
+            passage: null,
+            items: ['Include advice about exercise, food, water, and sleep.'],
+            solution: `
+              <strong>نموذج الإنشاء المعتمد (10 درجات):</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.75rem; border-radius: 8px; border: 1px solid #cbd5e1;">
+                To keep your body fit and healthy, you should exercise for half an hour every day. Also, eat healthy foods like fresh fruit, vegetables, and fish, and avoid eating too many sweets or fatty foods. Do not forget to drink eight glasses of water daily and sleep well at night.
+              </div>
+            `
+          }
+        ]
+      },
+      u34: {
+        id: 'u34',
+        title: 'نموذج امتحان شامل للوحدة 3 والوحدة 4 (Sports, Games & Review 1)',
+        stage: 'الصف الثاني متوسط',
+        subject: 'اللغة الإنجليزية',
+        year: '2025 - 2026',
+        time: 'ساعة ونصف',
+        totalMarks: '50 درجة',
+        notes: 'ملاحظة: امتحان مخصص للوحدة 3 (الرياضة والألعاب) والوحدة 4 (المراجعة الشاملة الأولى).',
+        badge: '📙 امتحان الوحدات 3 و 4',
+        questions: [
+          {
+            id: 'u34_q1',
+            number: 'Q1',
+            title: 'Reading Comprehension (استيعاب المقروء)',
+            marks: '10 Marks',
+            instructions: 'Read and answer: (10 Marks)',
+            passage: `Last month, our school held an exciting Sports Day. Students took part in running races, high jump, volleyball, and gymnastics. Mustafa won the gold medal in the 100-metre race because he used to train every morning with his coach. The headmaster presented medals to all winners, and everyone enjoyed the day.`,
+            items: [
+              '1. What event did the school hold last month?',
+              '2. In which race did Mustafa win the gold medal?',
+              '3. Why was Mustafa able to win the race?',
+              '4. The headmaster gave prizes to the winners. (True / False)',
+              '5. Who did Mustafa train with every morning?'
+            ],
+            solution: `
+              <strong>الحل النموذجي (10 درجات):</strong><br>
+              1. A Sports Day (اليوم الرياضي).<br>
+              2. The 100-metre race (سباق 100 متر).<br>
+              3. Because he used to train every morning (لأنه كان يتدرب كل صباح).<br>
+              4. <strong>True</strong> (صح).<br>
+              5. With his coach (مع مدربه).
+            `
+          },
+          {
+            id: 'u34_q2',
+            number: 'Q2',
+            title: 'Grammar and Functions (القواعد والوظائف اللغوية)',
+            marks: '15 Marks',
+            instructions: 'Answer all items: (15 Marks)',
+            passage: null,
+            items: [
+              '1. We usually (play / go / do) judo on Saturdays. (Choose)',
+              '2. My brother likes to (play / go / do) swimming in summer. (Choose)',
+              '3. I (used to be / am) shy when I was seven, but now I am confident. (Choose)',
+              '4. "Do you like football?" (Does this question have a rising or falling intonation?) (Answer)',
+              '5. They (play) tennis yesterday afternoon. (Correct the verb)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              1. <strong>do</strong> (مع رياضات الفنون القتالية مثل judo و karate نستخدم do).<br>
+              2. <strong>go</strong> (مع الرياضات المنتهية بـ ing مثل swimming نستخدم go).<br>
+              3. <strong>used to be</strong> (عادة سابقة في الماضي تغيرت الآن).<br>
+              4. <strong>Rising intonation</strong> (نبرة صاعدة ↗ لأن السؤال يبدأ بفعل مساعد Yes/No question).<br>
+              5. <strong>played</strong> (ماضٍ بسيط لوجود yesterday).
+            `
+          },
+          {
+            id: 'u34_q3',
+            number: 'Q3',
+            title: 'Vocabulary & Sports Terms (المفردات والمصطلحات)',
+            marks: '15 Marks',
+            instructions: 'Complete with correct sports words: (15 Marks)',
+            passage: null,
+            items: [
+              'A) Match sport with equipment: [racket, net, goggles, ball]:<br>1. Swimming needs ______.<br>2. Tennis needs a ball and a ______.<br>3. Volleyball needs a ball and a high ______.',
+              'B) Spelling and verb changes:<br>1. win -> ______ (won)<br>2. lose -> ______ (lost)<br>3. beat -> ______ (beat)'
+            ],
+            solution: `
+              <strong>الحل النموذجي (15 درجة):</strong><br>
+              A) 1. <strong>goggles</strong> | 2. <strong>racket</strong> | 3. <strong>net</strong>.<br>
+              B) 1. <strong>won</strong> | 2. <strong>lost</strong> | 3. <strong>beat</strong>.
+            `
+          },
+          {
+            id: 'u34_q4',
+            number: 'Q4',
+            title: 'Written Composition (الإنشاء)',
+            marks: '10 Marks',
+            instructions: 'Write a paragraph about your favourite sport: (10 Marks)',
+            passage: null,
+            items: ['Mention: Name of sport, why you like it, where you play it, and who you play with.'],
+            solution: `
+              <strong>نموذج الإنشاء المعتمد (10 درجات):</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.75rem; border-radius: 8px; border: 1px solid #cbd5e1;">
+                My favourite sport is football because it is exciting and keeps me fit and healthy. I play it twice a week at the school playground with my friends. Football teaches us teamwork and cooperation. My favourite team is the Iraqi national team, and I dream of becoming a famous player one day.
+              </div>
+            `
+          }
+        ]
+      }
+    };
+
+    function selectPastExam(examId) {
+      currentSelectedPastExamId = examId;
+      allExamSolutionsVisible = false;
+
+      // تحديث حالة أزرار الفلترة
+      ['midyear', 'm1', 'm2', 'u34'].forEach(id => {
+        const btn = document.getElementById(`examFilter_${id}`);
+        if (btn) {
+          if (id === examId) {
+            btn.className = 'btn btn-sm btn-primary';
+          } else {
+            btn.className = 'btn btn-sm btn-secondary';
+          }
+        }
+      });
+
+      renderPastExam(examId);
+    }
+
+    function renderPastExam(examId) {
+      const container = document.getElementById('printableExamArea');
+      if (!container) return;
+      const exam = PAST_EXAMS_DATABASE[examId] || PAST_EXAMS_DATABASE['midyear'];
+
+      container.innerHTML = `
+        <!-- الترويسة الرسمية لورقة الامتحان -->
+        <div class="exam-official-header">
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800);">جمهورية العراق - وزارة التربية</div>
+            <div style="font-size: 0.8rem; color: var(--slate-600);">${exam.stage} • ${exam.subject}</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 1.05rem; font-weight: 800; color: var(--primary);">${exam.title}</div>
+            <div style="font-size: 0.75rem; color: var(--slate-500);">العام الدراسي: ${exam.year}</div>
+          </div>
+          <div style="text-align: left; font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">
+            <div>الوقت: ${exam.time}</div>
+            <div style="color: var(--primary);">الدرجة الكلية: ${exam.totalMarks}</div>
+          </div>
+        </div>
+
+        <div style="background: var(--slate-100); padding: 0.5rem 0.85rem; border-radius: 8px; font-size: 0.8rem; color: var(--slate-700); font-weight: 700; margin-bottom: 1.25rem;">
+          ${exam.notes}
+        </div>
+
+        <!-- قائمة الأسئلة الرسمية -->
+        <div class="exam-questions-container">
+          ${exam.questions.map((q, idx) => `
+            <div class="exam-q-card" id="card_${q.id}">
+              <div class="exam-q-header">
+                <div class="exam-q-title">
+                  <span style="color: var(--primary); font-weight: 800;">${q.number}:</span>
+                  <span>${q.title}</span>
+                </div>
+                <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+                  <span class="exam-q-marks">${q.marks}</span>
+                  ${q.passage ? `
+                    <button class="exam-listen-btn" onclick="speakExamPassage(this.getAttribute('data-passage'))" data-passage="${q.passage.replace(/"/g, '&quot;')}" title="استمع لنص القطعة بالصوت البشري">
+                      <span>🔊</span> استمع للنص
+                    </button>
+                  ` : ''}
+                  <button class="exam-toggle-sol-btn" id="solBtn_${q.id}" onclick="toggleExamSolution('${q.id}')">
+                    <span>👁️</span> الحل النموذجي
+                  </button>
+                </div>
+              </div>
+
+              ${q.instructions ? `
+                <div style="font-size: 0.82rem; color: var(--slate-600); margin-bottom: 0.75rem; font-weight: 600; direction: ltr; text-align: left;">
+                  ${q.instructions}
+                </div>
+              ` : ''}
+
+              ${q.passage ? `
+                <div class="exam-passage-box">
+                  ${q.passage}
+                </div>
+              ` : ''}
+
+              ${q.branchA ? `
+                <div style="margin-bottom: 0.85rem;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                    ${q.branchA.title}
+                  </div>
+                  ${q.branchA.boxWords ? `
+                    <div style="background: white; border: 1px dashed var(--slate-300); border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; direction: ltr; text-align: center; font-weight: 700; color: var(--primary);">
+                      [ ${q.branchA.boxWords.join('  •  ')} ]
+                    </div>
+                  ` : ''}
+                  <div class="exam-questions-list">
+                    ${q.branchA.items.map(it => `<div>${it}</div>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              ${q.branchB ? `
+                <div style="margin-bottom: 0.85rem;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                    ${q.branchB.title}
+                  </div>
+                  <div class="exam-questions-list">
+                    ${q.branchB.items.map(it => `<div>${it}</div>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              ${q.branchC ? `
+                <div style="margin-bottom: 0.85rem;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                    ${q.branchC.title}
+                  </div>
+                  <div class="exam-questions-list">
+                    ${q.branchC.items.map(it => `<div>${it}</div>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              ${q.items ? `
+                <div class="exam-questions-list">
+                  ${q.items.map(it => `<div>${it}</div>`).join('')}
+                </div>
+              ` : ''}
+
+              <!-- صندوق الحل النموذجي المفصل -->
+              <div class="exam-model-answer-box hidden" id="solBox_${q.id}">
+                ${q.solution}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--slate-200); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--slate-500); flex-wrap: wrap; gap: 0.5rem;">
+          <div>✨ تمنياتنا لجميع طلبتنا الأعزاء بالنجاح والتفوق الباهر في الامتحانات الوزارية</div>
+          <div style="font-weight: 700; color: var(--primary);">النظام التعليمي التفاعلي • إعداد المهندس أسامة خليل هاشم</div>
+        </div>
+      `;
+    }
+
+    function speakExamPassage(text) {
+      if (audioPlayer && audioPlayer.speakText && text) {
+        audioPlayer.speakText(text, 'en');
+      }
+    }
+
+    function toggleExamSolution(qId) {
+      const box = document.getElementById(`solBox_${qId}`);
+      const btn = document.getElementById(`solBtn_${qId}`);
+      if (!box) return;
+
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        if (btn) btn.innerHTML = '<span>🙈</span> إخفاء الحل';
+      } else {
+        box.classList.add('hidden');
+        if (btn) btn.innerHTML = '<span>👁️</span> الحل النموذجي';
+      }
+    }
+
+    function toggleAllExamSolutions() {
+      allExamSolutionsVisible = !allExamSolutionsVisible;
+      const btn = document.getElementById('toggleAllSolutionsBtn');
+      const exam = PAST_EXAMS_DATABASE[currentSelectedPastExamId];
+      if (!exam) return;
+
+      exam.questions.forEach(q => {
+        const box = document.getElementById(`solBox_${q.id}`);
+        const solBtn = document.getElementById(`solBtn_${q.id}`);
+        if (box) {
+          if (allExamSolutionsVisible) {
+            box.classList.remove('hidden');
+            if (solBtn) solBtn.innerHTML = '<span>🙈</span> إخفاء الحل';
+          } else {
+            box.classList.add('hidden');
+            if (solBtn) solBtn.innerHTML = '<span>👁️</span> الحل النموذجي';
+          }
+        }
+      });
+
+      if (btn) {
+        btn.innerHTML = allExamSolutionsVisible
+          ? '<span>🙈</span> إخفاء كافة الحلول النموذجية'
+          : '<span>👁️</span> إظهار كافة الحلول النموذجية';
+      }
+    }
+
+    function printExamPaper() {
+      // إخفاء كل الحلول أولاً لتكون الورقة نظيفة وجاهزة للاختبار الورقي
+      const exam = PAST_EXAMS_DATABASE[currentSelectedPastExamId];
+      if (exam) {
+        exam.questions.forEach(q => {
+          const box = document.getElementById(`solBox_${q.id}`);
+          if (box) box.classList.add('hidden');
+        });
+      }
+      window.print();
+    }
+
+    function switchExamSubtab(subtab) {
+      const pastContainer = document.getElementById('pastExamsViewContainer');
+      const quizContainer = document.getElementById('interactiveQuizViewContainer');
+      const btnPast = document.getElementById('btnSubtabPastExams');
+      const btnQuiz = document.getElementById('btnSubtabInteractive');
+
+      if (subtab === 'past-exams') {
+        if (pastContainer) pastContainer.classList.remove('hidden');
+        if (quizContainer) quizContainer.classList.add('hidden');
+        if (btnPast) btnPast.classList.add('active');
+        if (btnQuiz) btnQuiz.classList.remove('active');
+        renderPastExam(currentSelectedPastExamId);
+      } else {
+        if (pastContainer) pastContainer.classList.add('hidden');
+        if (quizContainer) quizContainer.classList.remove('hidden');
+        if (btnPast) btnPast.classList.remove('active');
+        if (btnQuiz) btnQuiz.classList.add('active');
+      }
+    }
+
+    function openPastExamsTab(examId = 'midyear') {
+      switchTab('exams');
+      switchExamSubtab('past-exams');
+      if (examId) selectPastExam(examId);
+    }
+
+    function openAddModalWithPreset(name, subject) {
+      openAddModal();
+      if (name) document.getElementById('newCurrName').value = name;
+      if (subject) document.getElementById('newCurrSubject').value = subject;
+      const gradeInput = document.getElementById('newCurrGrade');
+      if (gradeInput) gradeInput.value = 'الثاني متوسط';
     }
 
     // إدارة إضافة المناهج والمودال
