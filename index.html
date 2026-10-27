@@ -1330,106 +1330,73 @@
       to { transform: rotate(360deg); }
     }
 
-    /* أشرطة وأزرار المراحل والمواد الدراسية (المظهر العام للمنصة) */
-    .stages-bar-wrapper {
-      background: white;
-      border: 1px solid var(--slate-200);
-      border-radius: 16px;
-      padding: 1.1rem 1.25rem;
+    /* شريط أزرار المناهج والمواد المعتمدة في النظام (ديناميكي) */
+    .curriculums-selector-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
       margin-bottom: 1.25rem;
+    }
+
+    .curr-selector-pill {
+      background: white;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 0.75rem 1.15rem;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+      text-align: right;
+    }
+
+    .curr-selector-pill:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
       box-shadow: var(--shadow);
     }
 
-    .stages-pills-list {
-      display: flex;
-      gap: 0.45rem;
-      overflow-x: auto;
-      padding-bottom: 0.25rem;
-      flex-wrap: wrap;
-    }
-
-    .stage-pill-btn {
-      padding: 0.45rem 0.95rem;
-      border-radius: 9999px;
-      border: 1px solid var(--slate-200);
-      background: var(--slate-50);
-      color: var(--slate-700);
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      white-space: nowrap;
-    }
-
-    .stage-pill-btn:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: var(--primary-light);
-    }
-
-    .stage-pill-btn.active {
+    .curr-selector-pill.active {
       background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
       color: white;
       border-color: #4338ca;
-      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+      box-shadow: 0 8px 18px -4px rgba(79, 70, 229, 0.35);
     }
 
-    /* أزرار المواد الدراسية */
-    .subjects-buttons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
+    .curr-selector-pill.active .curr-pill-title {
+      color: white;
     }
 
-    .subject-selector-btn {
-      background: white;
-      border: 1px solid var(--slate-200);
-      border-radius: 14px;
-      padding: 0.9rem 1rem;
-      text-align: right;
-      cursor: pointer;
-      transition: all 0.22s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      position: relative;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    .curr-selector-pill.active .curr-pill-sub {
+      color: #e0e7ff;
     }
 
-    .subject-selector-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-      border-color: var(--primary);
+    .curr-selector-pill.active .curr-pill-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
     }
 
-    .subject-selector-btn.active {
-      background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%);
-      border: 2px solid var(--primary);
-      box-shadow: 0 8px 18px -4px rgba(79, 70, 229, 0.25);
-    }
-
-    .subject-btn-icon {
-      font-size: 1.6rem;
-      margin-bottom: 0.2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .subject-btn-name {
+    .curr-pill-title {
       font-weight: 800;
       font-size: 0.92rem;
       color: var(--slate-900);
     }
 
-    .subject-btn-status {
-      font-size: 0.72rem;
+    .curr-pill-sub {
+      font-size: 0.75rem;
       color: var(--slate-500);
-      font-weight: 600;
+    }
+
+    .curr-pill-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ecfdf5;
+      color: #065f46;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      white-space: nowrap;
     }
 
     .subject-showcase-card {
@@ -1839,7 +1806,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -1904,13 +1871,13 @@
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
           <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.8.0</span>
         </div>
-        <h2>المنصة التعليمية الوطنية التفاعلية لكافة المواد والمراحل الدراسية</h2>
+        <h2>المنصة التعليمية التفاعلية الشاملة</h2>
         <p>
-          بوابة تعليمية موحدة وشاملة لمختلف المراحل الدراسية والمقررات الوطنية، تتيح تنظيم المذاكرة الذكية، استكشاف بنوك القواعد والمفاهيم العلمية، التدريب على نماذج الامتحانات الوزارية والشهرية السابقة مع الحلول النموذجية، والاستماع الصوتي الفصيح.
+          بوابة تعليمية عامة متكاملة صُممت لتستوعب مختلف المواد والمراحل الدراسية تدريجياً، تبدأ بالمادة المعتمدة الأولى: مادة اللغة الإنجليزية للصف الثاني المتوسط بكامل وحداتها المقررة، مع إتاحة إضافة أي مناهج ومواد ومراحل جديدة لتنضم إلى النظام خطوة بخطوة فور إدراجها.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <button class="btn btn-primary" onclick="scrollToSubjectsSection()" style="background: white; color: var(--primary); font-weight: 800;">
-            🎓 استكشاف المواد والمراحل الدراسية
+            🎓 المناهج والمواد المتاحة في النظام
           </button>
           <button class="btn btn-primary" onclick="openPastExamsTab()" style="background: #10b981; color: white; border: none; font-weight: 700;">
             📝 نماذج الامتحانات السابقة وحلولها
@@ -1927,122 +1894,50 @@
         </div>
       </div>
 
-      <!-- شريط المراحل الدراسية -->
-      <div class="stages-bar-wrapper" id="stagesSection">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="font-size: 1.25rem;">🏫</span>
-            <span style="font-weight: 800; font-size: 0.95rem; color: var(--slate-800);">اختر المرحلة الدراسية:</span>
-            <span style="font-size: 0.75rem; color: var(--slate-500);">(تصفح مناهج مختلف الصفوف التعليمية)</span>
-          </div>
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); background: var(--primary-light); padding: 0.2rem 0.65rem; border-radius: 9999px;" id="currentActiveStageBadge">المرحلة النشطة: الثاني متوسط</span>
-        </div>
-        <div class="stages-pills-list">
-          <button class="stage-pill-btn" onclick="selectStudyStage('السادس الابتدائي', this)">🎒 السادس الابتدائي</button>
-          <button class="stage-pill-btn" onclick="selectStudyStage('الأول متوسط', this)">📚 الأول متوسط</button>
-          <button class="stage-pill-btn active" onclick="selectStudyStage('الثاني متوسط', this)">⭐ الثاني متوسط (المقرر المعتمد النشط)</button>
-          <button class="stage-pill-btn" onclick="selectStudyStage('الثالث متوسط', this)">🎓 الثالث متوسط (وزاري)</button>
-          <button class="stage-pill-btn" onclick="selectStudyStage('الرابع إعدادي', this)">📐 الرابع الإعدادي</button>
-          <button class="stage-pill-btn" onclick="selectStudyStage('الخامس إعدادي', this)">🔬 الخامس الإعدادي</button>
-          <button class="stage-pill-btn" onclick="selectStudyStage('السادس إعدادي', this)">🏆 السادس الإعدادي (وزاري)</button>
-        </div>
-      </div>
-
-      <!-- شبكة أزرار المواد الدراسية العامة -->
+      <!-- شريط المواد والمناهج الدراسية المسجلة في النظام (ديناميكي) -->
       <div id="subjectsSection" style="margin-bottom: 1.25rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
           <div>
-            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
+            <h3 style="margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
               <span>📚</span>
-              <span>المواد والمقررات الدراسية</span>
+              <span>المواد والمناهج الدراسية في النظام</span>
             </h3>
             <p style="font-size: 0.8rem; color: var(--slate-500); margin: 0.2rem 0 0;">
-              انقر على أي مادة لاستعراض مقرراتها، المفاهيم والقواعد، والامتحانات المخصصة لها
+              المناهج المعتمدة والنشطة حالياً، وتضاف إليها المواد والمراحل تدريجياً خطوة بخطوة
             </p>
           </div>
           <button class="btn btn-secondary btn-sm" onclick="openAddModal()" style="border: 1px dashed var(--primary); color: var(--primary); font-weight: 700;">
-            <span>➕</span> إضافة مادة جديدة
+            <span>➕</span> إضافة مادة أو منهج جديد
           </button>
         </div>
 
-        <div class="subjects-buttons-grid">
-          <button class="subject-selector-btn active" id="subBtn_english" onclick="selectSubject('english')">
-            <div class="subject-btn-icon">
-              <span>🇬🇧</span>
-              <span style="background: #10b981; color: white; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">مكتمل 100%</span>
-            </div>
-            <div class="subject-btn-name">اللغة الإنجليزية</div>
-            <div class="subject-btn-status">English for Iraq • 10 وحدات مقررة</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_arabic" onclick="selectSubject('arabic')">
-            <div class="subject-btn-icon">
-              <span>🇸🇦</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">اللغة العربية</div>
-            <div class="subject-btn-status">القواعد والمطالعة والنصوص الأدبية</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_science" onclick="selectSubject('science')">
-            <div class="subject-btn-icon">
-              <span>🔬</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">العلوم العامة</div>
-            <div class="subject-btn-status">الأحياء والكيمياء والفيزياء والتجارب</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_math" onclick="selectSubject('math')">
-            <div class="subject-btn-icon">
-              <span>📐</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">الرياضيات</div>
-            <div class="subject-btn-status">الجبر، الهندسة، الإحصاء، والمسائل</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_computer" onclick="selectSubject('computer')">
-            <div class="subject-btn-icon">
-              <span>💻</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">الحاسوب وتكنولوجيا المعلومات</div>
-            <div class="subject-btn-status">البرمجة، الخوارزميات، وشبكات الاتصال</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_islamic" onclick="selectSubject('islamic')">
-            <div class="subject-btn-icon">
-              <span>🕌</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">التربية الإسلامية</div>
-            <div class="subject-btn-status">القرآن الكريم، الأحاديث، والتهذيب</div>
-          </button>
-
-          <button class="subject-selector-btn" id="subBtn_social" onclick="selectSubject('social')">
-            <div class="subject-btn-icon">
-              <span>🌍</span>
-              <span style="background: #e0f2fe; color: #0369a1; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">متاح للدراسة</span>
-            </div>
-            <div class="subject-btn-name">الاجتماعيات</div>
-            <div class="subject-btn-status">التاريخ، الجغرافيا، والتربية الوطنية</div>
-          </button>
-
-          <button class="subject-selector-btn" onclick="openAddModal()" style="border-style: dashed; background: #fafafa;">
-            <div class="subject-btn-icon">
-              <span>➕</span>
-              <span style="background: var(--primary-light); color: var(--primary); font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">مادة مخصصة</span>
-            </div>
-            <div class="subject-btn-name" style="color: var(--primary);">إضافة مادة أخرى</div>
-            <div class="subject-btn-status">رفع أو إدراج أي مقرر دراسي جديد</div>
-          </button>
+        <!-- حاوية أزرار المناهج الديناميكية المتولدة من appData.curriculums -->
+        <div class="curriculums-selector-bar" id="curriculumsSelectorBar">
+          <!-- يتولد ديناميكياً بواسطة renderCurriculumsSelectorBar() -->
         </div>
       </div>
 
       <!-- بطاقة العرض التفاعلية الديناميكية للمادة النشطة المحددّة -->
       <div id="activeSubjectShowcase" class="subject-showcase-card">
         <!-- Rendered dynamically by renderActiveSubjectShowcase() -->
+      </div>
+
+      <!-- بطاقة الرؤية العامة والتوسع التدريجي للمنصة -->
+      <div class="card" style="background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="max-width: 800px;">
+            <div style="font-weight: 800; font-size: 1rem; color: #3730a3; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🌐</span>
+              <span>رؤية النظام للتوسع التدريجي (بناء المواد والمراحل خطوة بخطوة):</span>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin: 0;">
+              صُمم النظام كمنصة تعليمية عامة ومفتوحة تستوعب مختلف المواد والمراحل الدراسية تدريجياً. تبدأ المنصة اليوم بمقرر <strong>اللغة الإنجليزية للصف الثاني متوسط</strong> كأول مادة نموذجية مكتملة 100%، وعند تدشين أو رفع أي مادة أو منهج جديد يُدرج زره تلقائياً في شريط المواد أعلاه ليتاح للطلبة والمعلمين فورياً.
+            </p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openAddModal()" style="font-weight: 700; white-space: nowrap;">
+            <span>➕</span> تسجيل منهج / مرحلة جديدة
+          </button>
+        </div>
       </div>
 
       <div class="stats-grid">
@@ -2876,44 +2771,6 @@
     </div>
   </div>
 
-  <!-- نافذة استعراض مفاهيم وقواعد المادة الدراسية Subject Concepts Modal -->
-  <div class="modal-overlay hidden" id="subjectConceptsModal" onclick="if(event.target === this) closeSubjectConceptsModal()">
-    <div class="modal-box" style="max-width: 760px; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden; padding: 0;">
-      <!-- رأس النافذة -->
-      <div style="background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%); color: white; padding: 1.25rem 1.5rem; position: relative;" id="conceptModalHeader">
-        <button onclick="closeSubjectConceptsModal()" style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.2); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="إغلاق">✕</button>
-        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;">
-          <span style="font-size: 1.6rem;" id="conceptModalIcon">📚</span>
-          <h3 style="margin: 0; font-size: 1.2rem; font-weight: 800; color: white;" id="conceptModalTitle">بنك المفاهيم والقواعد المقررة</h3>
-        </div>
-        <div style="font-size: 0.8rem; color: #e0e7ff; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-          <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
-          <span>•</span>
-          <span id="conceptModalStage">الصف الثاني متوسط</span>
-          <span>•</span>
-          <span style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.5rem; border-radius: 9999px; font-weight: 700;">المقرر المعتمد</span>
-        </div>
-      </div>
-
-      <!-- محتوى النافذة -->
-      <div style="padding: 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 1.25rem;" id="conceptModalBody">
-        <!-- تتولد ديناميكياً -->
-      </div>
-
-      <!-- تذييل النافذة -->
-      <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--slate-200); background: var(--slate-50); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <div style="font-size: 0.78rem; color: var(--slate-500); font-weight: 700;">
-          النظام التعليمي التفاعلي • إعداد المهندس أسامة خليل هاشم
-        </div>
-        <div style="display: flex; gap: 0.5rem;" id="conceptModalFooterActions">
-          <button class="btn btn-primary btn-sm" onclick="closeSubjectConceptsModal()">
-            إغلاق المعاينة
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- نافذة ما الجديد في هذا التحديث What's New Modal -->
   <div class="modal-overlay hidden" id="whatsNewModal" onclick="if(event.target === this) closeWhatsNewModal()">
     <div class="modal-box whatsnew-box">
@@ -2922,7 +2779,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.7.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -4169,6 +4026,9 @@
       document.getElementById('statChapters').innerText = chaps.length || 10;
       document.getElementById('statLessons').innerText = lessCount || 53;
       document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 23) + ' قاعدة ومفهوماً';
+
+      renderCurriculumsSelectorBar();
+      renderActiveSubjectShowcase();
     }
 
     // عرض بطاقات المناهج
@@ -7076,658 +6936,287 @@
       if (examId) selectPastExam(examId);
     }
 
-    function openAddModalWithPreset(name, subject) {
+    function openAddModalWithPreset(name, subject, grade) {
       openAddModal();
       if (name) document.getElementById('newCurrName').value = name;
       if (subject) document.getElementById('newCurrSubject').value = subject;
       const gradeInput = document.getElementById('newCurrGrade');
-      if (gradeInput) gradeInput.value = currentActiveStage || 'الثاني متوسط';
+      if (gradeInput) gradeInput.value = grade || 'الثاني متوسط';
     }
 
     // ==========================================
-    // إدارة المراحل والمواد الدراسية (المظهر العام للمنصة)
+    // إدارة المناهج والمواد المسجلة في النظام (نمو تدريجي)
     // إعداد المهندس أسامة خليل هاشم
     // ==========================================
-    let currentActiveStage = 'الثاني متوسط';
-    let currentActiveSubjectKey = 'english';
-
-    const SUBJECTS_DATA = {
-      english: {
-        key: 'english',
-        name: 'اللغة الإنجليزية',
-        officialTitle: 'اللغة الإنجليزية (English for Iraq)',
-        icon: '🇬🇧',
-        themeColor: '#4f46e5',
-        badgeText: 'المادة المعتمدة الأولى • مكتملة 100%',
-        badgeType: 'gold',
-        stage: 'الصف الثاني متوسط • وزارة التربية العراقية',
-        summary: 'منهاج متكامل يشمل قراءة نصوص كتاب الطالب والنشاط بصوت بشري فصيح طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (23 قاعدة)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية مع ميزة الطباعة الورقية والتدريب التفاعلي.',
-        stats: [
-          { label: 'الوحدات المقررة', val: '10 وحدات كاملة' },
-          { label: 'الدروس التفاعلية', val: '53 درساً شاملاً' },
-          { label: 'القواعد والوظائف', val: '23 قاعدة نحوية' },
-          { label: 'نماذج الامتحانات', val: '4 امتحانات سابقة وحلولها' }
-        ],
-        features: [
-          '🎧 قراءة نصوص كتاب الطالب والنشاط بصوت بشري فصيح طبيعي مع التتبع اللحظي',
-          '💡 بنك قواعد شامل يغطي الأزمنة العشرة، صيغ المقارنة، والوظائف اللغوية',
-          '📝 نماذج امتحانات رسمية (نصف السنة والشهريات) مع حلول نموذجية وشروح تفصيلية',
-          '🖨️ طباعة نماذج الامتحانات نظيفة بدون حلول للتدريب الورقي والامتحاني',
-          '🤖 مساعد ذكي تفاعلي يشرح ويدرب الطالب فورياً على أسئلة كل وحدة'
-        ],
-        primaryAction: {
-          text: '📖 دخول قاعة مذاكرة اللغة الإنجليزية ⮞',
-          fn: 'selectCurriculumForStudy(3)'
-        },
-        actions: [
-          { text: '📝 نماذج الامتحانات السابقة وحلولها', fn: "openPastExamsTab('midyear')", color: '#ecfdf5', textColor: '#065f46', border: '#a7f3d0' },
-          { text: '💡 بنك القواعد النحوية واللغوية', fn: "switchTab('grammar')", color: '#fef3c7', textColor: '#92400e', border: '#fde68a' },
-          { text: '📚 فهرس الوحدات والدروس', fn: "switchTab('curriculums')", color: '#eef2ff', textColor: '#4338ca', border: '#c7d2fe' }
-        ],
-        sampleTopics: [
-          { title: 'Unit 1: A School Magazine', desc: 'مجلة المدرسة، كفايات التحرير وكتابة المقالات وإعطاء الآراء واقتراحات الطلاب.' },
-          { title: 'Unit 2: Healthy Lifestyle', desc: 'نمط الحياة الصحي، التغذية السليمة، اللياقة البدنية، وإرشادات الطبيب.' },
-          { title: 'Unit 3: Sports and Games', desc: 'الرياضة والألعاب، قواعد أفعال الرياضة (play/go/do)، واستخدام used to.' },
-          { title: 'Unit 4: Review 1', desc: 'المراجعة الشاملة لكفايات الاستماع والقراءة وتدوين الملاحظات للكورس الأول.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'قواعد أفعال الرياضة: Play vs Go vs Do',
-            category: 'Grammar & Functions',
-            explanation: 'نستخدم Play للرياضات التي تتضمن كرة وتنافس (مثل football, tennis). ونستخدم Go مع الأنشطة المنتهية بـ -ing (مثل swimming, running). ونستخدم Do مع رياضات الفنون القتالية والتمارين الفردية (مثل judo, karate, gymnastics).',
-            example: 'He plays basketball. / She goes swimming. / They do judo.',
-            question: 'I usually (go / play / do) gymnastics on Tuesday afternoons.',
-            answer: 'do',
-            explanationDetails: 'لأن gymnastics من الرياضات الفردية وحركات الرشاقة بدون كرة، فيناسبها الفعل do.'
-          },
-          {
-            title: 'قاعدة الاعتياد في الماضي: Used to',
-            category: 'Past Habit',
-            explanation: 'تُستعمل used to للتعبير عن عادة أو حالة كانت موجودة في الماضي وتغيرت الآن. قاعدتها الإيجابية: Subject + used to + Verb (infinitive). والنفي: Subject + didn’t use to + Verb.',
-            example: 'I used to be shy, but now I have many friends.',
-            question: 'They (use to / used to) live in Basra when they were children.',
-            answer: 'used to',
-            explanationDetails: 'الجملة مثبتة في الماضي فنستخدم used to متبوعة بالمصدر live.'
-          }
-        ]
-      },
-
-      arabic: {
-        key: 'arabic',
-        name: 'اللغة العربية',
-        officialTitle: 'اللغة العربية (القواعد والمطالعة والنصوص والأدب)',
-        icon: '🇸🇦',
-        themeColor: '#059669',
-        badgeText: 'مقرر وطني معتمد • متاح للمذاكرة والتحضير',
-        badgeType: 'green',
-        stage: 'الصف الثاني متوسط • المقرر الوطني',
-        summary: 'منصة مهيأة وشاملة لمقرر اللغة العربية، تضم شروح قواعد النحو والصرف (الفاعل ونائبه، المفاعيل، كان وأخواتها، إن وأخواتها، أسلوب الاستفهام)، نصوص المطالعة الهادفة، القصائد المقررة، والإملاء والتعبير الكتابي.',
-        stats: [
-          { label: 'أقسام المقرر', val: 'قواعد • نصوص • إملاء' },
-          { label: 'القواعد الأساسية', val: '14 موضوعاً نحوياً' },
-          { label: 'النصوص والقصائد', val: 'مختارات الحفظ والمطالعة' },
-          { label: 'التقييم', val: 'إعراب وتحليل نصوص' }
-        ],
-        features: [
-          '📖 شروحات قواعد النحو والصرف مدعمة بجداول الإعراب والشواهد القرآنية والشعرية',
-          '📜 نصوص المطالعة والقصائد الأدبية المقررة مع معاني المفردات والأسئلة التحليلية',
-          '✍️ قواعد الإملاء العربي (الهمزات والتنوين وعلامات الترقيم) وتطوير التعبير والإنشاء',
-          '📝 نماذج أسئلة تدريبية واختبارات قياس الفهم والاستيعاب مع الحلول الإعرابية'
-        ],
-        primaryAction: {
-          text: '💡 استعراض مفاهيم وقواعد اللغة العربية ⮞',
-          fn: "openSubjectConceptsModal('arabic')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب اللغة العربية', fn: "openAddModalWithPreset('اللغة العربية - الثاني متوسط', 'Arabic')", color: '#ecfdf5', textColor: '#065f46', border: '#a7f3d0' },
-          { text: '📝 تدريب على أسئلة الإعراب', fn: "openSubjectConceptsModal('arabic')", color: '#fef3c7', textColor: '#92400e', border: '#fde68a' }
-        ],
-        sampleTopics: [
-          { title: 'نائب الفاعل وأحكامه', desc: 'اسم مرفوع يحل محل الفاعل بعد حذفه، مع تغيير صيغة الفعل الماضي بضم أوله وكسر ما قبل آخره، والمضارع بضم أوله وفتح ما قبل آخره.' },
-          { title: 'المفعول المطلق وأنواعه', desc: 'مصدر منصوب يأتي لتوكيد الفعل، أو بيان نوعه، أو بيان عدد مراته (مثل: نجحتُ نجاحاً باهراً).' },
-          { title: 'علامات الإعراب الأصلية والفرعية', desc: 'الضمة والفتحة والكسرة والسكون مقابل الواو والألف والياء وثبوت وحذف النون.' },
-          { title: 'الأسماء الخمسة وإعرابها', desc: 'أبو، أخو، حمو، فو، ذو (ترفع بالواو وتنصب بالألف وتجر بالياء بشرط أن تضاف لغير ياء المتكلم).' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'نائب الفاعل وصياغة الفعل المبني للمجهول',
-            category: 'النحو والإعراب',
-            explanation: 'عند بناء الفعل للمجهول يحذف الفاعل ويأتي المفعول به فيأخذ حكمه الرفعي ويسمى نائب فاعل. يُضم أول الفعل الماضي ويُكسر ما قبل آخره (كَتَبَ ⮞ كُتِبَ)، ويُضم أول المضارع ويُفتح ما قبل آخره (يَكْتُبُ ⮞ يُكْتَبُ).',
-            example: 'قَرَأَ الطالبُ الدرسَ ⮞ قُرِئَ الدرسُ (الدرسُ: نائب فاعل مرفوع بالضمة الظاهرة).',
-            question: 'اضبط بالشكل نائب الفاعل في الجملة: (كُرِّمَ المتفوقُ في الاحتفال).',
-            answer: 'المتفوقُ (بالضمة على آخره)',
-            explanationDetails: 'لأنه نائب فاعل مرفوع وعلامة رفعه الضمة الظاهرة على آخره بعد الفعل المبني للمجهول (كُرِّمَ).'
-          },
-          {
-            title: 'المفعول المطلق وأنواعه الثلاثة',
-            category: 'المنصوبات',
-            explanation: 'اسم منصوب موافق للفعل في لفظه ومعناه. أنواعه: 1) مؤكد لفعله (صبرتُ صبراً)، 2) مبين لنوعه (قاتلوا قتالَ الأبطالِ)، 3) مبين لعدده (دقت الساعة دقتينِ).',
-            example: 'ورتّل القرآنَ ترتيلاً (ترتيلاً: مفعول مطلق مؤكد لفعله منصوب بالفتحة).',
-            question: 'ما نوع المفعول المطلق في: (سرتُ سيراً حثيثاً)؟',
-            answer: 'مبين لنوع الفعل',
-            explanationDetails: 'لأنه تبع بصفة تبين كيفية ونوع السير (حثيثاً).'
-          }
-        ]
-      },
-
-      science: {
-        key: 'science',
-        name: 'العلوم العامة',
-        officialTitle: 'العلوم العامة (الأحياء والكيمياء والفيزياء)',
-        icon: '🔬',
-        themeColor: '#0284c7',
-        badgeText: 'مقرر علمي تفاعلي • متاح للمذاكرة والتجارب',
-        badgeType: 'blue',
-        stage: 'الصف الثاني متوسط • العلوم العامة المطورة',
-        summary: 'يغطي منهج العلوم فروع الأحياء (عالم الخلية والأنسجة، التصنيف، والبيئة)، الكيمياء (الذرة والجدول الدوري، الروابط الكيميائية، والصيغ والتفاعلات)، والفيزياء (الحركة والقوى، الطاقة، الضغط، والموجات والصوت).',
-        stats: [
-          { label: 'الفروع العلمية', val: 'أحياء • كيمياء • فيزياء' },
-          { label: 'المفاهيم المقررة', val: '36 مفهوماً وقانوناً' },
-          { label: 'التجارب والرسوم', val: 'رسوم توضيحية وتطبيقات' },
-          { label: 'التعليلات العلمية', val: 'بنك أسئلة فسر وعلل' }
-        ],
-        features: [
-          '🧫 علم الأحياء: فحص تراكيب الخلية الحية ووظائف العضيات والوراثة والبيئة',
-          '🧪 الكيمياء: دراسة مكونات الذرة والتوزيع الإلكتروني وتكوين الروابط الأيونية والتساهمية',
-          '⚡ الفيزياء: قوانين نيوتن الثلاثة للحركة، مفاهيم الشغل والقدرة والطاقة الميكانيكية',
-          '📊 بنك التعليلات والتعاريف والمقارنات العلمية الشاملة للامتحانات'
-        ],
-        primaryAction: {
-          text: '💡 استعراض مفاهيم وقوانين العلوم العامة ⮞',
-          fn: "openSubjectConceptsModal('science')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب العلوم', fn: "openAddModalWithPreset('العلوم العامة - الثاني متوسط', 'Science')", color: '#e0f2fe', textColor: '#0369a1', border: '#bae6fd' },
-          { text: '🧪 بنك التعليلات والمسائل الفيزيائية', fn: "openSubjectConceptsModal('science')", color: '#fef3c7', textColor: '#92400e', border: '#fde68a' }
-        ],
-        sampleTopics: [
-          { title: 'قوانين نيوتن في الحركة', desc: 'القانون الأول (الاستمرارية)، القانون الثاني (القوة = الكتلة × التعجيل F = m×a)، والقانون الثالث (لكل فعل رد فعل).' },
-          { title: 'الروابط الكيميائية والذرة', desc: 'الرابطة الأيونية الناتجة من التجاذب الكهروستاتيكي بين الأيونات، والرابطة التساهمية بالمشاركة الإلكترونية بين اللافلزات.' },
-          { title: 'تركيب الخلية المجهرية', desc: 'النواة الحاملة للمادة الوراثية، السيتوبلازم، الغشاء البلازمي، الميتوكوندريا لإنتاج الطاقة، والرايبوسومات لصنع البروتين.' },
-          { title: 'الحركة والسرعة والتعجيل', desc: 'السرعة المنتظمة وغير المنتظمة، ومعدل تغير السرعة بالنسبة للزمن ومخطط الحركة.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'قانون نيوتن الثاني: القوة والتعجيل (F = m × a)',
-            category: 'الفيزياء والميكانيكا',
-            explanation: 'إذا أثرت قوة محصلة في جسم فإنها تكسبه تعجيلاً (تسارعاً) يتناسب طردياً مع القوة المؤثرة ويكون باتجاهها، وعكسياً مع كتلته. وحدة القوة هي النيوتن (Newton) حيث 1N = 1 kg·m/s².',
-            example: 'جسم كتلته 5kg يتحرك بتعجيل 2m/s² فإن القوة المحصلة المؤثرة = 5 × 2 = 10N.',
-            question: 'احسب القوة اللازمة لتحريك سيارة كتلتها 1000kg بتعجيل مقداره 3m/s²؟',
-            answer: '3000 نيوتن (N)',
-            explanationDetails: 'بتطبيق القانون: F = m × a = 1000kg × 3m/s² = 3000N.'
-          },
-          {
-            title: 'مقارنة بين الرابطة الأيونية والرابطة التساهمية',
-            category: 'الكيمياء والروابط',
-            explanation: 'الرابطة الأيونية تنشأ بين فلز يفقد إلكترونات (يتحول لأيون موجب) ولافلز يكتسب إلكترونات (أيون سالب) مثل ملح الطعام NaCl. أما التساهمية فتنشأ بين ذرات لافلزية تشترك بالأزواج الإلكترونية مثل جزيء الماء H2O وغاز الأكسجين O2.',
-            example: 'NaCl أيوني، بينما H2O و CH4 تساهمية.',
-            question: 'ما نوع الرابطة المتكونة بين ذرة الصوديوم (Na) وذرة الكلور (Cl)؟',
-            answer: 'رابطة أيونية (Ionic Bond)',
-            explanationDetails: 'لأن ذرة الصوديوم تفقد إلكترون غلافها الخارجي وتتحول إلى Na+، وتكتسبه ذرة الكلور لتتحول إلى Cl-، فيحدث بينهما تجاذب كهروستاتيكي قوي.'
-          }
-        ]
-      },
-
-      math: {
-        key: 'math',
-        name: 'الرياضيات',
-        officialTitle: 'الرياضيات (الجبر والهندسة والقياس والإحصاء)',
-        icon: '📐',
-        themeColor: '#d97706',
-        badgeText: 'منهج التفكير الرياضي • متاح للمسائل والحلول',
-        badgeType: 'amber',
-        stage: 'الصف الثاني متوسط • المنهج الرياضي المطور',
-        summary: 'يركز على بناء التفكير المنطقي والرياضي عبر دراسة الأعداد النسبية والعمليات عليها، الحدود والمقادير الجبرية وتحليلها، المعادلات والمتباينات، الهندسة الإحداثية، وخواص المجسمات والإحصاء.',
-        stats: [
-          { label: 'فصول المقرر', val: '6 فصول متسلسلة' },
-          { label: 'القوانين والنظريات', val: 'مبرهنات وقوانين المساحات' },
-          { label: 'المسائل التطبيقية', val: 'مسائل حياتية وتمارين' },
-          { label: 'الحلول النموذجية', val: 'خطوات برهان وحل جبري' }
-        ],
-        features: [
-          '🔢 الأعداد النسبية: الجمع والطرح والضرب والقسمة مع خصائص القوى والصورة العلمية',
-          '📐 المقادير الجبرية: جمع وطرح وضرب المقادير والتحليل بالعامل المشترك الأكبر',
-          '📏 الهندسة والقياس: مبرهنة فيثاغورس، خواص المثلثات والأسطوانة والكرة والمساحات',
-          '📈 الإحصاء والاحتمالات: المدى، الوسيط، المنوال، والمخطط الساق والورقة'
-        ],
-        primaryAction: {
-          text: '💡 استعراض نظريات وقوانين الرياضيات ⮞',
-          fn: "openSubjectConceptsModal('math')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب الرياضيات', fn: "openAddModalWithPreset('الرياضيات - الثاني متوسط', 'Math')", color: '#fef3c7', textColor: '#92400e', border: '#fde68a' },
-          { text: '📐 استعراض القوانين الهندسية والجبرية', fn: "openSubjectConceptsModal('math')", color: '#e0f2fe', textColor: '#0369a1', border: '#bae6fd' }
-        ],
-        sampleTopics: [
-          { title: 'مبرهنة فيثاغورس وتطبيقاتها', desc: 'في أي مثلث قائم الزاوية: مربع طول الوتر يساوي مجموع مربعي طولي الضلعين القائمين (c² = a² + b²).' },
-          { title: 'خصائص القوى والأسس الصحيحة', desc: 'عند الضرب تجمع الأسس للأساسات المتشابهة (a^m × a^n = a^(m+n))، وعند القسمة تطرح الأسس.' },
-          { title: 'حل المعادلات الخطية ذات الخطوتين', desc: 'عزل المتغير في طرف وثوابت الأعداد في الطرف الآخر باستخدام النظير الجمعي والضربي.' },
-          { title: 'حجم ومساحة الأسطوانة والكرة', desc: 'حجم الأسطوانة (V = π r² h)، وحجم الكرة (V = 4/3 π r³)، والمساحات الجانبية والكلية.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'مبرهنة فيثاغورس (Pythagorean Theorem)',
-            category: 'الهندسة والقياس',
-            explanation: 'تطبق على المثلثات قائمة الزاوية فقط. تنص على أن مساحة المربع المنشأ على الوتر تساوي مجموع مساحتي المربعين المنشأين على الضلعين الآخرين: c² = a² + b²، حيث c هو الوتر المقابل للزاوية القائمة.',
-            example: 'إذا كان الضلعان 6cm و 8cm، فإن c² = 6² + 8² = 36 + 64 = 100، إذن الوتر c = √100 = 10cm.',
-            question: 'مثلث قائم طولا ضلعيه القائمين 3cm و 4cm، فما طول وتره؟',
-            answer: '5 cm',
-            explanationDetails: 'c² = 3² + 4² = 9 + 16 = 25 ⮞ c = √25 = 5 cm.'
-          },
-          {
-            title: 'خصائص الأسس وقواعد القوى',
-            category: 'الجبر والأعداد',
-            explanation: '1) ضرب الأساسات المتشابهة: a^m × a^n = a^(m+n). 2) قسمة الأساسات المتشابهة: a^m ÷ a^n = a^(m-n). 3) رفع القوة إلى قوة: (a^m)^n = a^(m×n). 4) الأس الصفري: a^0 = 1 (لأي a ≠ 0).',
-            example: '2^3 × 2^4 = 2^(3+4) = 2^7 = 128.',
-            question: 'بسط المقدار: (5^6 ÷ 5^2)؟',
-            answer: '5^4 = 625',
-            explanationDetails: 'عند القسمة تطرح الأسس: 6 - 2 = 4، فتصبح 5^4 وتساوي 625.'
-          }
-        ]
-      },
-
-      computer: {
-        key: 'computer',
-        name: 'الحاسوب وتكنولوجيا المعلومات',
-        officialTitle: 'الحاسوب وتكنولوجيا المعلومات والاتصالات',
-        icon: '💻',
-        themeColor: '#7c3aed',
-        badgeText: 'المهارات الرقمية • متاح للمذاكرة والتطبيق',
-        badgeType: 'purple',
-        stage: 'الصف الثاني متوسط • الثقافة الرقمية',
-        summary: 'تزويد الطالب بمهارات العصر الرقمي: فهم بنية الخوارزميات، المخططات الانسيابية، البرمجة المرئية، مهارات برنامج الجداول الإلكترونية، وشبكات الحاسوب والإنترنت والأمن السيبراني.',
-        stats: [
-          { label: 'الوحدات العملية', val: '4 وحدات تطبيقية' },
-          { label: 'المفاهيم البرمجية', val: 'خوارزميات ومخططات' },
-          { label: 'البرامج التطبيقية', val: 'Excel وجداول البيانات' },
-          { label: 'الأمان الرقمي', val: 'حماية وأمن معلومات' }
-        ],
-        features: [
-          '⌨️ الخوارزميات والمخططات الانسيابية: تسلسل العمليات واتخاذ القرار والتكرار',
-          '📊 برامج الجداول الإلكترونية: المعادلات الرياضية، الدوال الجاهزة (SUM/AVERAGE)، وتنسيق البيانات',
-          '🌐 شبكات الحاسوب: أنواع الشبكات (LAN/WAN)، عناوين IP، ووسائط النقل السلكية واللاسلكية',
-          '🔒 الأمن السيبراني: كلمات المرور القوية، مكافحة الفيروسات، وحماية الخصوصية الرقمية'
-        ],
-        primaryAction: {
-          text: '💡 استعراض مفاهيم وخوارزميات الحاسوب ⮞',
-          fn: "openSubjectConceptsModal('computer')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب الحاسوب', fn: "openAddModalWithPreset('الحاسوب - الثاني متوسط', 'Computer')", color: '#f3e8ff', textColor: '#6b21a8', border: '#e9d5ff' }
-        ],
-        sampleTopics: [
-          { title: 'المخططات الانسيابية (Flowcharts)', desc: 'أشكال هندسية قياسية لتمثيل تسلسل الخطوات المنطقية لحل أي مسألة حاسوبية (بيضاوي للبداية، مستطيل للعملية، ومعين للقرار).' },
-          { title: 'الدوال الحسابية في جداول البيانات', desc: 'دوال الجمع SUM، والمتوسط الحسابي AVERAGE، وحساب العدد COUNT، وأعلى قيمة MAX، وأقل قيمة MIN.' },
-          { title: 'أنواع شبكات الحاسوب (LAN & WAN)', desc: 'الشبكة المحلية LAN في مساحة جغرافية محدودة، والشبكة الواسعة WAN عبر المدن والقارات مثل شبكة الإنترنت.' },
-          { title: 'إرشادات الأمن السيبراني والسلامة', desc: 'الحماية من الاصطياد الإلكتروني Phishing، تحديث أنظمة التشغيل، وتشفير البيانات والنسخ الاحتياطي.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'الرموز القياسية للمخططات الانسيابية (Flowchart Symbols)',
-            category: 'الخوارزميات والبرمجة',
-            explanation: '1) الشكل البيضاوي (Oval): البداية أو النهاية (Start/End). 2) متوازي الأضلاع (Parallelogram): الإدخال والإخراج (Input/Output). 3) المستطيل (Rectangle): المعالجة أو العملية الحسابية (Process). 4) المعين (Diamond): القرار أو الشرط (Decision) وله مخرجان (نعم/لا).',
-            example: 'إدخال درجتين، جمعهما في مستطيل، ثم فحص شرط النجاح في معين (الدرجة >= 50).',
-            question: 'ما الشكل الهندسي المعتمد لاتخاذ القرار والشرط في المخطط الانسيابي؟',
-            answer: 'المعين (Diamond)',
-            explanationDetails: 'لأنه يحتوي على سؤال منطقي يتفرع منه مساران: نعم (Yes) أو لا (No).'
-          }
-        ]
-      },
-
-      islamic: {
-        key: 'islamic',
-        name: 'التربية الإسلامية',
-        officialTitle: 'التربية الإسلامية والقرآن الكريم',
-        icon: '🕌',
-        themeColor: '#0d9488',
-        badgeText: 'التربية والقيم • متاح للمدارسة والتلاوة',
-        badgeType: 'teal',
-        stage: 'الصف الثاني متوسط • التربية الأخلاقية',
-        summary: 'تلاوة وحفظ وتفسير السور المقررة، شروحات الأحاديث النبوية الشريفة وأحكام التلاوة (المد العارض للسكون ومد اللين)، أركان الإيمان، سير الأنبياء والصحابة، والآداب والتهذيب السلوكي.',
-        stats: [
-          { label: 'الوحدات المقررة', val: '5 وحدات متكاملة' },
-          { label: 'السور الكريمة', val: 'حفظ وتفسير وتدبر' },
-          { label: 'الأحاديث النبوية', val: 'أحاديث نبوية شريفة' },
-          { label: 'أحكام التلاوة', val: 'قواعد التجويد والمد' }
-        ],
-        features: [
-          '📖 السور القرآنية المقررة حفظاً وتفسيراً مع المعاني والدلالات التربوية',
-          '📜 الأحاديث النبوية الشريفة مع بيان أسباب ورودها والدروس المستفادة منها',
-          '🕋 أحكام التلاوة والتجويد: المد العارض للسكون ومد اللين ومخارج الحروف',
-          '🤝 التربية والتهذيب: التكافل الاجتماعي، الصدق، الأمانة، وبر الوالدين'
-        ],
-        primaryAction: {
-          text: '💡 استعراض أحكام وسور التربية الإسلامية ⮞',
-          fn: "openSubjectConceptsModal('islamic')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب التربية الإسلامية', fn: "openAddModalWithPreset('التربية الإسلامية - الثاني متوسط', 'Islamic')", color: '#ccfbf1', textColor: '#115e59', border: '#99f6e4' }
-        ],
-        sampleTopics: [
-          { title: 'أحكام التلاوة: المد العارض للسكون', desc: 'أن يأتي بعد حرف المد حرف ساكن سكوناً عارضاً بسبب الوقف عليه، ومقداره حركتان أو أربع أو ست حركات.' },
-          { title: 'الحديث الشريف في الصدق والأمانة', desc: 'الحث النبوي على فضائل الأخلاق وأثر الصدق في استقامة الفرد وبناء مجتمع متماسك.' },
-          { title: 'تفسير الآيات المقررة', desc: 'بيان معاني المفردات القرآنية وأسباب النزول والعبر الإيمانية والدروس العملية.' },
-          { title: 'أركان العقيدة وسير الصحابة', desc: 'ترسيخ الإيمان بالله واليوم الآخر، والتأسي بأخلاق النبي الأكرم والصحابة الأجلاء.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'أحكام التلاوة: المد العارض للسكون ومد اللين',
-            category: 'التجويد وأحكام التلاوة',
-            explanation: 'المد العارض للسكون: هو أن يأتي بعد أحد حروف المد الثلاثة (الألف الساكنة المفتوح ما قبلها، الواو الساكنة المضموم ما قبلها، الياء الساكنة المكسور ما قبلها) حرف ساكن سكوناً عارضاً لأجل الوقف. حكمه: يجوز مده حركتين أو أربعاً أو ستاً.',
-            example: 'قوله تعالى: {الرَّحْمَٰنِ الرَّحِيمِ} عند الوقف على (الرحيم).',
-            question: 'ما حكم المد في كلمة (العالَمِين) عند الوقف عليها في سورة الفاتحة؟',
-            answer: 'مد عارض للسكون (يمد 2 أو 4 أو 6 حركات)',
-            explanationDetails: 'لأن حرف المد الياء جاء بعده حرف النون وسكن سكوناً عارضاً بسبب الوقف عليه.'
-          }
-        ]
-      },
-
-      social: {
-        key: 'social',
-        name: 'الاجتماعيات',
-        officialTitle: 'الاجتماعيات (الجغرافيا والتاريخ والوطنية)',
-        icon: '🌍',
-        themeColor: '#b45309',
-        badgeText: 'الوطن والحضارة • متاح للمذاكرة والخرائط',
-        badgeType: 'amber',
-        stage: 'الصف الثاني متوسط • العالم العربي والتاريخ',
-        summary: 'دراسة شاملة لجغرافية العالم العربي (الموقع الجغرافي والفلكي، التضاريس، المناخ، النبات الطبيعي، والموارد المائية)، وتاريخ الدولة العربية الإسلامية، ومبادئ التربية الوطنية والمواطنة والدستور.',
-        stats: [
-          { label: 'أقسام المادة', val: 'جغرافيا • تاريخ • وطنية' },
-          { label: 'الخرائط الجغرافية', val: 'تضاريس ومواقع مائية' },
-          { label: 'المحطات التاريخية', val: 'الدولة العربية الإسلامية' },
-          { label: 'المفاهيم الوطنية', val: 'المواطنة والدستور والحقوق' }
-        ],
-        features: [
-          '🗺️ جغرافية العالم العربي: دراسة الهضاب والسهول والجبال، والأقاليم المناخية والنباتية',
-          '💧 الموارد المائية: أنهار دجلة والفرات والنيل، والبحيرات والمياه الجوفية وأهميتها الاستراتيجية',
-          '🏛️ التاريخ العربي الإسلامي: نشأة الدولة، الفتوحات، الحضارة والعلوم والإدارة',
-          '🇮🇶 التربية الوطنية: سيادة القانون، الحقوق والواجبات الدستورية، وقيم التسامح والانتماء'
-        ],
-        primaryAction: {
-          text: '💡 استعراض مفاهيم وخرائط الاجتماعيات ⮞',
-          fn: "openSubjectConceptsModal('social')"
-        },
-        actions: [
-          { text: '➕ تجهيز أو رفع كتاب الاجتماعيات', fn: "openAddModalWithPreset('الاجتماعيات - الثاني متوسط', 'Social')", color: '#fef3c7', textColor: '#92400e', border: '#fde68a' }
-        ],
-        sampleTopics: [
-          { title: 'الموقع الجغرافي والفلكي للعالم العربي', desc: 'يقع في قلب قارات العالم القديم (آسيا وأفريقيا)، وإشرافه على أهم الممرات المائية والمضايق البحرية الدولية.' },
-          { title: 'التضاريس والموارد المائية الرئيسية', desc: 'السلاسل الجبلية الشمالية والشرقية، الهضاب الممتدة، وأحواض الأنهار العظيمة دجلة والفرات والنيل.' },
-          { title: 'الدولة العربية الإسلامية وحضارتها', desc: 'تأسيس النظام الإداري والقضائي، وازدهار حركة الترجمة والعلوم والفنون والصنائع.' },
-          { title: 'حقوق المواطن وواجباته الدستورية', desc: 'حق التعلم والعمل والرعاية الصحية والمساواة، مقابل احترام القانون والدفاع عن الوطن.' }
-        ],
-        detailedConcepts: [
-          {
-            title: 'الأهمية الاستراتيجية لموقع العالم العربي',
-            category: 'الجغرافيا والخرائط',
-            explanation: '1) يقع في مركز العالم القديم بين آسيا وأفريقيا وأوروبا. 2) يشرف على أهم البحار والمحيطات (المحيط الأطلسي، الهندي، البحر المتوسط، الأحمر، والخليج العربي). 3) يتحكم بأهم المضايق والممرات المائية الاستراتيجية: مضيق هرمز، باب المندب، مضيق جبل طارق، وقناة السويس.',
-            example: 'قناة السويس ومضيق هرمز يمثلان عصب التجارة ونقل الطاقة العالمي.',
-            question: 'اذكر اثنين من المضايق البحرية التي يتحكم بها العالم العربي؟',
-            answer: 'مضيق هرمز، مضيق باب المندب، ومضيق جبل طارق (وقناة السويس)',
-            explanationDetails: 'هذه الممرات تعطي العالم العربي مكانة جيوسياسية وتجارية عالمية كبرى.'
-          }
-        ]
-      }
-    };
-
-    function selectSubject(subjectKey) {
-      if (!SUBJECTS_DATA[subjectKey]) return;
-      currentActiveSubjectKey = subjectKey;
-
-      // تحديث حالة الأزرار
-      document.querySelectorAll('.subject-selector-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      const activeBtn = document.getElementById('subBtn_' + subjectKey);
-      if (activeBtn) activeBtn.classList.add('active');
-
-      renderActiveSubjectShowcase();
-    }
-
-    function selectStudyStage(stageName, btnEl) {
-      currentActiveStage = stageName;
-      document.querySelectorAll('.stage-pill-btn').forEach(b => b.classList.remove('active'));
-      if (btnEl) btnEl.classList.add('active');
-
-      const badge = document.getElementById('currentActiveStageBadge');
-      if (badge) {
-        badge.innerText = `المرحلة النشطة: ${stageName}`;
-      }
-
-      renderActiveSubjectShowcase();
-    }
 
     function scrollToSubjectsSection() {
-      const el = document.getElementById('stagesSection');
+      const el = document.getElementById('subjectsSection');
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     }
 
+    function selectCurriculumInDashboard(currId) {
+      appData.currentCurriculumId = currId;
+      saveData();
+      renderCurriculumsSelectorBar();
+      renderActiveSubjectShowcase();
+    }
+
+    function renderCurriculumsSelectorBar() {
+      const container = document.getElementById('curriculumsSelectorBar');
+      if (!container) return;
+
+      const currs = appData.curriculums || [];
+      let html = '';
+
+      currs.forEach(c => {
+        const isActive = c.id === appData.currentCurriculumId;
+        const sLower = (c.subject || '').toLowerCase() + ' ' + (c.name || '').toLowerCase();
+        let icon = '📘';
+        if (sLower.includes('eng') || sLower.includes('انجل')) icon = '🇬🇧';
+        else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '🇸🇦';
+        else if (sLower.includes('scien') || sLower.includes('علوم')) icon = '🔬';
+        else if (sLower.includes('math') || sLower.includes('رياض')) icon = '📐';
+        else if (sLower.includes('comp') || sLower.includes('حاسوب')) icon = '💻';
+        else if (sLower.includes('islam') || sLower.includes('إسلام')) icon = '🕌';
+        else if (sLower.includes('social') || sLower.includes('اجتماع')) icon = '🌍';
+
+        const badgeText = c.id === 3 ? 'مكتمل 100%' : 'منهج مسجل';
+
+        html += `
+          <div class="curr-selector-pill ${isActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(${c.id})">
+            <span style="font-size: 1.5rem;">${icon}</span>
+            <div>
+              <div class="curr-pill-title">${c.name}</div>
+              <div class="curr-pill-sub">${c.grade || 'مرحلة دراسية'} • ${c.subject || 'مقرر دراسي'}</div>
+            </div>
+            <span class="curr-pill-badge">${badgeText}</span>
+          </div>
+        `;
+      });
+
+      // زر إضافة منهج جديد
+      html += `
+        <button class="curr-selector-pill" onclick="openAddModal()" style="border-style: dashed; background: #fafafa; border-color: var(--primary);">
+          <span style="font-size: 1.4rem; color: var(--primary);">➕</span>
+          <div style="text-align: right;">
+            <div class="curr-pill-title" style="color: var(--primary);">إضافة منهج / مادة جديدة</div>
+            <div class="curr-pill-sub">تسجيل مقرر جديد لينضم إلى المنصة</div>
+          </div>
+        </button>
+      `;
+
+      container.innerHTML = html;
+    }
+
     function renderActiveSubjectShowcase() {
       const container = document.getElementById('activeSubjectShowcase');
       if (!container) return;
-      const sub = SUBJECTS_DATA[currentActiveSubjectKey] || SUBJECTS_DATA['english'];
-      const isCustomStage = currentActiveStage !== 'الثاني متوسط';
 
-      let statsHtml = sub.stats.map(st => `
-        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
-          <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">${st.label}</div>
-          <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">${st.val}</div>
-        </div>
-      `).join('');
+      const currs = appData.curriculums || [];
+      const curr = currs.find(c => c.id === appData.currentCurriculumId) || currs[0];
+      if (!curr) {
+        container.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 1.5rem;">لا يوجد منهج محدد حالياً.</div>';
+        return;
+      }
 
-      let featuresHtml = sub.features.map(f => `
-        <span class="subject-feature-pill" style="font-size: 0.78rem;">${f}</span>
-      `).join('');
+      const isEnglishDefault = curr.id === 3 || (curr.subject && curr.subject.toLowerCase().includes('eng'));
 
-      let actionsHtml = sub.actions.map(act => `
-        <button class="btn btn-secondary btn-sm" onclick="${act.fn}" style="background: ${act.color}; color: ${act.textColor}; border-color: ${act.border}; font-weight: 700;">
-          ${act.text}
-        </button>
-      `).join('');
+      const sLower = (curr.subject || '').toLowerCase() + ' ' + (curr.name || '').toLowerCase();
+      let icon = '📘';
+      let themeColor = '#4f46e5';
+      if (sLower.includes('eng') || sLower.includes('انجل')) { icon = '🇬🇧'; themeColor = '#4f46e5'; }
+      else if (sLower.includes('arab') || sLower.includes('عرب')) { icon = '🇸🇦'; themeColor = '#059669'; }
+      else if (sLower.includes('scien') || sLower.includes('علوم')) { icon = '🔬'; themeColor = '#0284c7'; }
+      else if (sLower.includes('math') || sLower.includes('رياض')) { icon = '📐'; themeColor = '#d97706'; }
+      else if (sLower.includes('comp') || sLower.includes('حاسوب')) { icon = '💻'; themeColor = '#7c3aed'; }
+      else if (sLower.includes('islam') || sLower.includes('إسلام')) { icon = '🕌'; themeColor = '#0d9488'; }
+      else if (sLower.includes('social') || sLower.includes('اجتماع')) { icon = '🌍'; themeColor = '#b45309'; }
 
-      let sampleTopicsHtml = (sub.sampleTopics || []).map(tp => `
-        <div class="concept-card">
-          <div style="font-weight: 800; font-size: 0.88rem; color: var(--slate-800); margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.4rem;">
-            <span style="color: ${sub.themeColor};">📌</span> ${tp.title}
-          </div>
-          <div style="font-size: 0.78rem; color: var(--slate-600); line-height: 1.5;">${tp.desc}</div>
-        </div>
-      `).join('');
+      const chaps = curr.chapters || [];
+      let totalLessons = 0;
+      chaps.forEach(ch => { totalLessons += (ch.lessons || []).length; });
 
-      let stageAlertHtml = isCustomStage ? `
-        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 0.65rem 0.9rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #92400e;">
-            <span>ℹ️</span>
-            <span>تصفح مقررات مرحلة <strong>«${currentActiveStage}»</strong>. يمكنك رفع وتجهيز كتاب المادة المعتمد لهذا الصف مباشرة.</span>
-          </div>
-          <button class="btn btn-primary btn-sm" onclick="openAddModalWithPreset('${sub.name} - ${currentActiveStage}', '${sub.name}')" style="background: #d97706; border: none; font-size: 0.75rem;">
-            ➕ رفع كتاب ${sub.name} (${currentActiveStage})
-          </button>
-        </div>
-      ` : '';
-
-      container.innerHTML = `
-        ${stageAlertHtml}
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
-              <span class="subject-card-badge ${sub.badgeType || 'gold'}">
-                <span>🌟</span> ${sub.badgeText}
-              </span>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--slate-600); background: var(--slate-100); padding: 0.2rem 0.55rem; border-radius: 9999px;">
-                ${currentActiveStage} • المنهج الوطني المعتمد
-              </span>
+      if (isEnglishDefault) {
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                <span class="subject-card-badge gold">
+                  <span>🌟</span> المادة المعتمدة الأولى • مكتملة 100%
+                </span>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--slate-600); background: var(--slate-100); padding: 0.2rem 0.6rem; border-radius: 9999px;">
+                  الصف الثاني متوسط • المقرر المعتمد
+                </span>
+              </div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.35rem;">
+                <span style="font-size: 1.8rem;">🇬🇧</span>
+                <span>اللغة الإنجليزية - الصف الثاني متوسط (English for Iraq)</span>
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--slate-600); max-width: 850px; line-height: 1.6; margin: 0;">
+                منهاج متكامل يشمل قراءة نصوص كتاب الطالب وكتاب النشاط بصوت بشري فصيح طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (23 قاعدة)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية مع ميزة الطباعة الورقية والتدريب التفاعلي.
+              </p>
             </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.35rem;">
-              <span style="font-size: 1.8rem;">${sub.icon}</span>
-              <span>${sub.officialTitle}</span>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--slate-600); max-width: 850px; line-height: 1.6; margin: 0;">
-              ${sub.summary}
-            </p>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 0.45rem; min-width: 220px;">
-            <button class="btn btn-primary" onclick="${sub.primaryAction.fn}" style="background: ${sub.themeColor}; border: none; font-weight: 800; padding: 0.75rem 1.25rem; font-size: 0.95rem; box-shadow: 0 4px 12px ${sub.themeColor}40;">
-              ${sub.primaryAction.text}
-            </button>
-            <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-              ${actionsHtml}
+            <div style="display: flex; flex-direction: column; gap: 0.45rem; min-width: 230px;">
+              <button class="btn btn-primary" onclick="selectCurriculumForStudy(${curr.id})" style="background: ${themeColor}; border: none; font-weight: 800; padding: 0.75rem 1.25rem; font-size: 0.95rem; box-shadow: 0 4px 12px ${themeColor}40;">
+                📖 دخول قاعة مذاكرة اللغة الإنجليزية ⮞
+              </button>
+              <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 700;">
+                  📝 نماذج الامتحانات السابقة وحلولها
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 700;">
+                  💡 بنك القواعد النحوية واللغوية (23 قاعدة)
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 700;">
+                  📚 فهرس الفصول والوحدات المقررة
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- شبكة الإحصائيات والأرقام -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
-          ${statsHtml}
-        </div>
-
-        <!-- الميزات البارزة -->
-        <div style="margin-bottom: 1.25rem;">
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.4rem;">الميزات وكفايات التعلم التفاعلية:</div>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
-            ${featuresHtml}
-          </div>
-        </div>
-
-        <!-- أهم مفاهيم ومقررات المادة -->
-        <div style="border-top: 1px solid var(--slate-200); padding-top: 1rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-            <div style="font-weight: 800; font-size: 0.92rem; color: var(--slate-800); display: flex; align-items: center; gap: 0.4rem;">
-              <span>💡</span> أبرز المفاهيم والوحدات المقررة لمادة ${sub.name}:
+          <!-- شبكة الإحصائيات والأرقام -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الوحدات المقررة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">10 وحدات كاملة</div>
             </div>
-            <button class="btn btn-secondary btn-sm" onclick="openSubjectConceptsModal('${sub.key}')" style="font-size: 0.75rem; font-weight: 700; border-color: ${sub.themeColor}; color: ${sub.themeColor};">
-              <span>🔍</span> معاينة تفاصيل ومفاهيم ${sub.name}
-            </button>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الدروس التفاعلية</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">53 درساً شاملاً</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">القواعد والوظائف</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">23 قاعدة نحوية</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">نماذج الامتحانات</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">4 امتحانات سابقة وحلولها</div>
+            </div>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem;">
-            ${sampleTopicsHtml}
-          </div>
-        </div>
-      `;
 
-      updateGlobalSubjectContextBars(sub);
+          <!-- الميزات البارزة -->
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.4rem;">الميزات وكفايات التعلم التفاعلية المتاحة للمنهج:</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+              <span class="subject-feature-pill">🎧 قراءة نصوص كتاب الطالب والنشاط بصوت بشري فصيح مع التتبع</span>
+              <span class="subject-feature-pill">💡 بنك قواعد شامل يغطي الأزمنة العشرة وصيغ المقارنة</span>
+              <span class="subject-feature-pill">📝 نماذج امتحانات رسمية (نصف السنة والشهريات) مع حلول وشروح</span>
+              <span class="subject-feature-pill">🖨️ طباعة نماذج الامتحانات نظيفة بدون حلول للتدريب الورقي</span>
+              <span class="subject-feature-pill">🤖 مساعد ذكي تفاعلي يشرح ويدرب الطالب فورياً</span>
+            </div>
+          </div>
+
+          <!-- نظرة على الوحدات المنجزة -->
+          <div style="border-top: 1px solid var(--slate-200); padding-top: 1rem;">
+            <div style="font-weight: 800; font-size: 0.92rem; color: var(--slate-800); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span>📘</span> محطات المنهج المنجزة حتى الآن:
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.65rem;">
+              <div class="concept-card">
+                <div style="font-weight: 800; font-size: 0.86rem; color: var(--slate-800); margin-bottom: 0.2rem;">📌 Unit 1: A School Magazine</div>
+                <div style="font-size: 0.76rem; color: var(--slate-600); line-height: 1.5;">مجلة المدرسة، كفايات التحرير وكتابة المقالات وإعطاء الآراء واقتراحات الطلاب.</div>
+              </div>
+              <div class="concept-card">
+                <div style="font-weight: 800; font-size: 0.86rem; color: var(--slate-800); margin-bottom: 0.2rem;">📌 Unit 2: Healthy Lifestyle</div>
+                <div style="font-size: 0.76rem; color: var(--slate-600); line-height: 1.5;">نمط الحياة الصحي، التغذية السليمة، اللياقة البدنية، وإرشادات الطبيب.</div>
+              </div>
+              <div class="concept-card">
+                <div style="font-weight: 800; font-size: 0.86rem; color: var(--slate-800); margin-bottom: 0.2rem;">📌 Unit 3: Sports and Games</div>
+                <div style="font-size: 0.76rem; color: var(--slate-600); line-height: 1.5;">الرياضة والألعاب، قواعد أفعال الرياضة (play/go/do)، واستخدام used to.</div>
+              </div>
+              <div class="concept-card">
+                <div style="font-weight: 800; font-size: 0.86rem; color: var(--slate-800); margin-bottom: 0.2rem;">📌 Unit 4: Review 1</div>
+                <div style="font-size: 0.76rem; color: var(--slate-600); line-height: 1.5;">المراجعة الشاملة لكفايات الاستماع والقراءة وتدوين الملاحظات للكورس الأول.</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // منهج مضاف أو مقرر جديد
+        container.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                <span class="subject-card-badge green">
+                  <span>📗</span> منهج مضاف ومسجل في النظام
+                </span>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--slate-600); background: var(--slate-100); padding: 0.2rem 0.6rem; border-radius: 9999px;">
+                  ${curr.grade || 'مرحلة دراسية'} • ${curr.subject || 'مقرر'}
+                </span>
+              </div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.35rem;">
+                <span style="font-size: 1.8rem;">${icon}</span>
+                <span>${curr.name}</span>
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--slate-600); max-width: 850px; line-height: 1.6; margin: 0;">
+                ${curr.description || 'منهج مسجل في النظام التعليمي التفاعلي الشامل، متاح للمذاكرة والقراءة والاستماع.'}
+              </p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem; min-width: 220px;">
+              <button class="btn btn-primary" onclick="selectCurriculumForStudy(${curr.id})" style="background: ${themeColor}; border: none; font-weight: 800; padding: 0.75rem 1.25rem; font-size: 0.95rem; box-shadow: 0 4px 12px ${themeColor}40;">
+                📖 فتح قاعة المذاكرة والاستماع ⮞
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="font-weight: 700;">
+                📚 استعراض الفصول في المكتبة
+              </button>
+            </div>
+          </div>
+
+          <!-- شبكة الإحصائيات والأرقام -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الفصول المستخرجة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">${chaps.length} فصل</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الدروس المتاحة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">${totalLessons} درس</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">حالة المنهج</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: #166534;">جاهز للمذاكرة</div>
+            </div>
+          </div>
+        `;
+      }
+
+      updateGlobalSubjectContextBars(curr);
     }
 
-    function updateGlobalSubjectContextBars(sub) {
+    function updateGlobalSubjectContextBars(curr) {
+      if (!curr) return;
+      const sLower = (curr.subject || '').toLowerCase() + ' ' + (curr.name || '').toLowerCase();
+      let icon = '📘';
+      if (sLower.includes('eng') || sLower.includes('انجل')) icon = '🇬🇧';
+      else if (sLower.includes('arab') || sLower.includes('عرب')) icon = '🇸🇦';
+      else if (sLower.includes('scien') || sLower.includes('علوم')) icon = '🔬';
+      else if (sLower.includes('math') || sLower.includes('رياض')) icon = '📐';
+      else if (sLower.includes('comp') || sLower.includes('حاسوب')) icon = '💻';
+      else if (sLower.includes('islam') || sLower.includes('إسلام')) icon = '🕌';
+      else if (sLower.includes('social') || sLower.includes('اجتماع')) icon = '🌍';
+
+      const titleText = `${curr.name} (${curr.grade || 'مرحلة دراسية'})`;
+
       // قاعة المذاكرة
       const studyTitle = document.getElementById('studyActiveSubjectTitle');
       const studyIcon = document.getElementById('studyActiveSubjectIcon');
-      if (studyTitle) studyTitle.innerText = `${sub.officialTitle} - ${currentActiveStage}`;
-      if (studyIcon) studyIcon.innerText = sub.icon;
+      if (studyTitle) studyTitle.innerText = titleText;
+      if (studyIcon) studyIcon.innerText = icon;
 
       // القواعد
       const grammarTitle = document.getElementById('grammarActiveSubjectTitle');
       const grammarIcon = document.getElementById('grammarActiveSubjectIcon');
-      if (grammarTitle) grammarTitle.innerText = `${sub.officialTitle} - ${currentActiveStage}`;
-      if (grammarIcon) grammarIcon.innerText = sub.icon;
+      if (grammarTitle) grammarTitle.innerText = titleText;
+      if (grammarIcon) grammarIcon.innerText = icon;
 
       // الامتحانات
       const examsTitle = document.getElementById('examsActiveSubjectTitle');
       const examsIcon = document.getElementById('examsActiveSubjectIcon');
-      if (examsTitle) examsTitle.innerText = `${sub.officialTitle} - ${currentActiveStage}`;
-      if (examsIcon) examsIcon.innerText = sub.icon;
+      if (examsTitle) examsTitle.innerText = titleText;
+      if (examsIcon) examsIcon.innerText = icon;
     }
-
-    // إدارة نافذة المفاهيم والقواعد للمواد
-    function openSubjectConceptsModal(subjectKey) {
-      const sub = SUBJECTS_DATA[subjectKey] || SUBJECTS_DATA['english'];
-      const modal = document.getElementById('subjectConceptsModal');
-      if (!modal) return;
-
-      document.getElementById('conceptModalIcon').innerText = sub.icon;
-      document.getElementById('conceptModalTitle').innerText = 'بنك المفاهيم والقواعد: ' + sub.officialTitle;
-      document.getElementById('conceptModalStage').innerText = currentActiveStage;
-      
-      const headerEl = document.getElementById('conceptModalHeader');
-      if (headerEl) {
-        headerEl.style.background = `linear-gradient(135deg, ${sub.themeColor} 0%, #1e1b4b 100%)`;
-      }
-
-      const bodyEl = document.getElementById('conceptModalBody');
-      const concepts = sub.detailedConcepts || [];
-
-      let conceptsHtml = concepts.map((c, idx) => `
-        <div class="card" style="border: 1px solid var(--slate-200); padding: 1.15rem; background: white; border-radius: 14px; box-shadow: var(--shadow);">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
-            <h4 style="margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--slate-900); display: flex; align-items: center; gap: 0.4rem;">
-              <span style="color: ${sub.themeColor};">📌</span> ${c.title}
-            </h4>
-            <span style="background: var(--slate-100); color: var(--slate-600); font-size: 0.72rem; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;">
-              ${c.category}
-            </span>
-          </div>
-
-          <p style="font-size: 0.84rem; color: var(--slate-700); line-height: 1.6; margin-bottom: 0.75rem;">
-            ${c.explanation}
-          </p>
-
-          <div style="background: #f8fafc; border-right: 3px solid ${sub.themeColor}; padding: 0.55rem 0.85rem; border-radius: 6px; font-size: 0.8rem; color: var(--slate-800); margin-bottom: 0.85rem;">
-            <strong>مثال توضيحي:</strong> ${c.example}
-          </div>
-
-          <!-- تمرين تدريبي تفاعلي -->
-          <div style="background: #fefce8; border: 1px dashed #fde047; border-radius: 10px; padding: 0.75rem 0.95rem;">
-            <div style="font-size: 0.8rem; font-weight: 800; color: #854d0e; margin-bottom: 0.35rem;">
-              ✍️ سؤال تدريبي من الامتحانات:
-            </div>
-            <div style="font-size: 0.85rem; color: #713f12; margin-bottom: 0.5rem;">
-              ${c.question}
-            </div>
-            <button class="btn btn-secondary btn-sm" onclick="toggleConceptSolution('conceptSol_${idx}')" style="background: white; border: 1px solid #fde047; font-size: 0.75rem; font-weight: 700; color: #854d0e;">
-              <span>👁️</span> أظهر الحل والتحليل النموذجي
-            </button>
-            <div id="conceptSol_${idx}" class="hidden" style="margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #fef08a; font-size: 0.82rem; color: #166534; font-weight: 700;">
-              <div>الإجابة النموذجية: <span style="background: #dcfce7; padding: 0.1rem 0.45rem; border-radius: 4px;">${c.answer}</span></div>
-              <div style="font-size: 0.76rem; color: #15803d; font-weight: 500; margin-top: 0.25rem;">${c.explanationDetails}</div>
-            </div>
-          </div>
-        </div>
-      `).join('');
-
-      bodyEl.innerHTML = `
-        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 0.85rem 1rem; font-size: 0.82rem; color: #166534; line-height: 1.55;">
-          <strong>🎓 دليل مذاكرة مادة ${sub.name}:</strong> ${sub.summary}
-        </div>
-        <div>
-          <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800); margin: 0 0 0.75rem;">
-            القواعد والمفاهيم الأساسية المقررة لمرحلة ${currentActiveStage}:
-          </h4>
-          <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-            ${conceptsHtml}
-          </div>
-        </div>
-      `;
-
-      const footerEl = document.getElementById('conceptModalFooterActions');
-      if (footerEl) {
-        footerEl.innerHTML = `
-          <button class="btn btn-secondary btn-sm" onclick="openAddModalWithPreset('${sub.name} - ${currentActiveStage}', '${sub.name}'); closeSubjectConceptsModal();" style="border: 1px dashed var(--primary); color: var(--primary); font-weight: 700;">
-            ➕ تجهيز أو رفع كتاب ${sub.name}
-          </button>
-          <button class="btn btn-primary btn-sm" onclick="closeSubjectConceptsModal()">
-            إغلاق المعاينة
-          </button>
-        `;
-      }
-
-      modal.classList.remove('hidden');
-    }
-
-    function closeSubjectConceptsModal() {
-      const modal = document.getElementById('subjectConceptsModal');
-      if (modal) modal.classList.add('hidden');
-    }
-
-    function toggleConceptSolution(solId) {
-      const el = document.getElementById(solId);
-      if (el) {
-        el.classList.toggle('hidden');
-      }
-    }
-
     // إدارة إضافة المناهج والمودال
     function openAddModal() {
       document.getElementById('newCurrName').value = '';
