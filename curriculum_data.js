@@ -1,6 +1,6 @@
 // النظام التعليمي التفاعلي - المنهج الدراسي المعتمد
 // إعداد وتطوير: المهندس أسامة خليل هاشم
-// الإصدار: v2.3.0
+// الإصدار: v2.5.0 (تطوير الوحدة الثالثة: الرياضة والألعاب بالكامل مع البطاقات البصرية التفاعلية)
 
 window.CURRICULUM_DATA = [
   {
@@ -324,125 +324,160 @@ window.CURRICULUM_DATA = [
   {
     "id": 192,
     "title": "الوحدة 3: الرياضة والألعاب (Unit 3: Sports and Games)",
-    "description": "صفحات 30 - 42",
+    "description": "صفحات 28 - 42",
     "lessons": [
       {
         "id": 283,
-        "title": "Lesson 1: Sports and Games (أنواع الرياضات وأفعالها)",
-        "summary": "صفحة 30 - 31",
+        "title": "Lesson 1: The Sports Centre (المركز الرياضي وأنواع الرياضات)",
+        "summary": "صفحة 28 - 28",
         "chunks": [
           {
-            "id": 517,
-            "page": 30,
-            "heading": "AB 44—45 Unit Lesson 3: Booking lessons Liz and Dave called the sports centre to find out about lessons. Listen and read. Fill in part of the timetable in your Activity Book. Liz Sports officer Liz Sports officer Liz Sports officer Liz Sports officer Liz Sports officer Dave Sports officer Dave Sports officer 30 Unit 3 Sports Hello. Is that the sports centre? Yes, Can I help you? Well, I'd like to play volleyball. How good are you at volleyball? Oh, I'm quite good. I'm in the school team, All right. Come on Monday at seven o'clock. It's team practice. Thanks very much. Oh, and I'd like to learn horse riding. We have beginners' lessons on Wednesdays at five o'clock. Thank you very much. Goodbye. Hello. Sports centre. Hello. I'd like to do judo. Are you good at judo, or do you want to learn? I'm a beginner. I want to learn, That's fine. Beginners' lessons are on Tuesdays at five o'clock.",
-            "text": "AB 44—45 Unit Lesson 3: Booking lessons Liz and Dave called the sports centre to find out about lessons. Listen and read. Fill in part of the timetable in your Activity Book. Liz Sports officer Liz Sports officer Liz Sports officer Liz Sports officer Liz Sports officer Dave Sports officer Dave Sports officer 30 Unit 3 Sports Hello. Is that the sports centre? Yes, Can I help you? Well, I'd like to play volleyball. How good are you at volleyball? Oh, I'm quite good. I'm in the school team, All right. Come on Monday at seven o'clock. It's team practice. Thanks very much. Oh, and I'd like to learn horse riding. We have beginners' lessons on Wednesdays at five o'clock. Thank you very much. Goodbye. Hello. Sports centre. Hello. I'd like to do judo. Are you good at judo, or do you want to learn? I'm a beginner. I want to learn, That's fine. Beginners' lessons are on Tuesdays at five o'clock."
-          },
-          {
-            "id": 518,
-            "page": 31,
-            "heading": "Unit O Read and work out the meaning of the words in red. /!S, Opposites This is the result of a basketball game. Babii 60 Kirkuk 54 I Babil won the game. 2 Kirkuk lost the game. 3 Babil beat Kirkuk. 4 Kirkuk lost to Babil. Read the conversation. What does Samir say? Put each phrase (a—O in its place (1—6). Samir D AZ 46-47 Lesson 4: The basketball game Hilai Samir Hilal Samir Hilai Hilal Hilal Hilal Samir. That was awful! How did we lose? You? At least you won a few points. I know, Other people are fitter than us. And they can run faster. They can beat us at anything. Let's have a competition. Just you against me. High jump! But I jumped higher than you last week. Next weekend. Swimming, running and high jump. 0K? Listen and check. a b c d e What did Samir' say? What can we do? We have to get fitter. That wasn't in a competition. When shall we have it? What? You won more points than I did. You always do. Let's face it. We're not very fit. Good idea! We'll have a 100-metre race, a swimming race, and we'll do the high jump. 0K. I'll see you next weekend at the sports centre. It was my fault, Hilal. I was terrible! Listen. Practise the conversation with your partner. How do the students feel? Friendly? Angry? Happy? Sad? unit 3 31",
-            "text": "Unit O Read and work out the meaning of the words in red. /!S, Opposites This is the result of a basketball game. Babii 60 Kirkuk 54 I Babil won the game. 2 Kirkuk lost the game. 3 Babil beat Kirkuk. 4 Kirkuk lost to Babil. Read the conversation. What does Samir say? Put each phrase (a—O in its place (1—6). Samir D AZ 46-47 Lesson 4: The basketball game Hilai Samir Hilal Samir Hilai Hilal Hilal Hilal Samir. That was awful! How did we lose? You? At least you won a few points. I know, Other people are fitter than us. And they can run faster. They can beat us at anything. Let's have a competition. Just you against me. High jump! But I jumped higher than you last week. Next weekend. Swimming, running and high jump. 0K? Listen and check. a b c d e What did Samir' say? What can we do? We have to get fitter. That wasn't in a competition. When shall we have it? What? You won more points than I did. You always do. Let's face it. We're not very fit. Good idea! We'll have a 100-metre race, a swimming race, and we'll do the high jump. 0K. I'll see you next weekend at the sports centre. It was my fault, Hilal. I was terrible! Listen. Practise the conversation with your partner. How do the students feel? Friendly? Angry? Happy? Sad? unit 3 31"
+            "id": 515,
+            "page": 28,
+            "heading": "Lesson 1: The sports centre - Come to the sports centre and get fit! (صفحة 28)",
+            "text": "Come to the sports centre and get fit!\nYou can choose from last year's old favourites:\n• tennis\n• table tennis\n• football\n• basketball\n• netball\n• volleyball\n• running\n• swimming\n• sailing\n• horse riding\n• gymnastics\n• judo\n• karate\n\nAnd, from the beginning of this year, we can give you lessons in these sports:\nkarate, judo, horse riding, tennis, volleyball, gymnastics.\nCall us on 952841 for more information.\n\nVerbs and sports:\n• We play football, tennis, basketball, volleyball (team games and ball games).\n• We go swimming, horse riding, sailing, running (activities ending in -ing).\n• We do judo, karate, gymnastics, athletics (combat sports and individual activities).\n\nAsk and answer:\nWhat sports would you like to do?\n• \"I'd like to play volleyball.\"\n• \"I'd like to do gymnastics.\"\n• \"And I'd like to go horse riding.\""
           }
         ]
       },
       {
         "id": 284,
-        "title": "Lesson 2: Sports Verbs (play, go, do)",
-        "summary": "صفحة 32 - 33",
+        "title": "Lesson 2: The Timetable (جدول المواعيد والمستويات الرياضية)",
+        "summary": "صفحة 29 - 29",
         "chunks": [
           {
-            "id": 519,
-            "page": 32,
-            "heading": "AB 48-49 Unit Lesson 5: The Olympic Games Read about the Olympic Games. The old Olympic Games took place in Greece 2,000 years ago. In 1896, a Frenchman, Pierre de Coubertin, started the modern Olympic Games. They take place every four years, in a different city each time. Pierre de Coubertin thought that everybody should enjoy taking part in the Games. He said, 'The most important thing in the Olympic Games is not to win, but to take part.' More than 200 countries took part in the Rio de Janeiro Olympic Games in 2016. Athletes from 87 countries won medals. The athletes competed in 28 different sports. The athletes who come first, second and third win medals. The winner gets a gold medal, the athlete who comes second gets a silver medal, and the third gets a bronze medal The rings on the Olympic flag show the meeting of athletes from all over the world. The five colours and the white background are the only six colours that were on national flags in 1913, when the Olympic flag was invented. Ask and answer the questions. 32 How many countries took part in the Olympic Games in 2016? What do the athletes who come second get? Who was Pierre de Coubertin? What do the Olympic rings stand for? When were the first modern Olympic Games held? Did de Coubertin think it was important to win in the Olympic Games? How often do the Olympic Games take place? Unit 3 Sports",
-            "text": "AB 48-49 Unit Lesson 5: The Olympic Games Read about the Olympic Games. The old Olympic Games took place in Greece 2,000 years ago. In 1896, a Frenchman, Pierre de Coubertin, started the modern Olympic Games. They take place every four years, in a different city each time. Pierre de Coubertin thought that everybody should enjoy taking part in the Games. He said, 'The most important thing in the Olympic Games is not to win, but to take part.' More than 200 countries took part in the Rio de Janeiro Olympic Games in 2016. Athletes from 87 countries won medals. The athletes competed in 28 different sports. The athletes who come first, second and third win medals. The winner gets a gold medal, the athlete who comes second gets a silver medal, and the third gets a bronze medal The rings on the Olympic flag show the meeting of athletes from all over the world. The five colours and the white background are the only six colours that were on national flags in 1913, when the Olympic flag was invented. Ask and answer the questions. 32 How many countries took part in the Olympic Games in 2016? What do the athletes who come second get? Who was Pierre de Coubertin? What do the Olympic rings stand for? When were the first modern Olympic Games held? Did de Coubertin think it was important to win in the Olympic Games? How often do the Olympic Games take place? Unit 3 Sports"
-          },
-          {
-            "id": 520,
-            "page": 33,
-            "heading": "AB 50-51 Unit Lesson 6: Olympic superstars Read. Which record do you think is the most interesting? Olympic superstars The Olympic Games are a source of inspiration for people around the world. It's a special kind of person who can train for hours every single day and eat a special and controlled diet. Sprinters train for years for a race that might last less than ten seconds. Athletes who take part in the long jump only need six seconds. Not all of us can go to the Olympics (although some of you might), but we can all learn from an Olympian's dedication and hard work. Here are some amazing records to inspire us: Back in 1988, Florence Griffith Joyner, from the USA, ran the fastest women's 100 metres in Olympic history. Her time was 10.62 seconds. Her record has lasted for well over 30 years. Michael Phelps, also from the USA, has the record for the biggest number of Olympic gold medals - 23! However, in total he has won 28 medals. He won them across four Olympic Games, between 2004 and 2016. The youngest person ever to win an Olympic medal in an individual event was Danish swimmer Inge Sørensen, back in 1936. She was only 12 years and 24 days old. 'G On the other hand, the oldest person to win a gold medal was Oscar Swahn from Sweden. He was 64 years and 280 days old when he won his gold medal for shooting. China is the best at table tennis. Since 1988, China has won 28 gold medals. South Korea has won three times and Sweden has won once. No other country has won a gold medal for table tennis at the Olympics. Ma Long won the gold for China at the 2016 Rio de Janeiro Olympics. Serena Williams is probably the greatest tennis player of all time. She has won four gold medals and 23 of the biggest tennis competitions in the world. The Olympic record for the longest jump is held by Bob Beamon. In 1968, in the Mexico City Olympics, he jumped so far (8.90 m) that the judges had to find another- tape measure - the equipment they had was too short! Sports Unit 3 33",
-            "text": "AB 50-51 Unit Lesson 6: Olympic superstars Read. Which record do you think is the most interesting? Olympic superstars The Olympic Games are a source of inspiration for people around the world. It's a special kind of person who can train for hours every single day and eat a special and controlled diet. Sprinters train for years for a race that might last less than ten seconds. Athletes who take part in the long jump only need six seconds. Not all of us can go to the Olympics (although some of you might), but we can all learn from an Olympian's dedication and hard work. Here are some amazing records to inspire us: Back in 1988, Florence Griffith Joyner, from the USA, ran the fastest women's 100 metres in Olympic history. Her time was 10.62 seconds. Her record has lasted for well over 30 years. Michael Phelps, also from the USA, has the record for the biggest number of Olympic gold medals - 23! However, in total he has won 28 medals. He won them across four Olympic Games, between 2004 and 2016. The youngest person ever to win an Olympic medal in an individual event was Danish swimmer Inge Sørensen, back in 1936. She was only 12 years and 24 days old. 'G On the other hand, the oldest person to win a gold medal was Oscar Swahn from Sweden. He was 64 years and 280 days old when he won his gold medal for shooting. China is the best at table tennis. Since 1988, China has won 28 gold medals. South Korea has won three times and Sweden has won once. No other country has won a gold medal for table tennis at the Olympics. Ma Long won the gold for China at the 2016 Rio de Janeiro Olympics. Serena Williams is probably the greatest tennis player of all time. She has won four gold medals and 23 of the biggest tennis competitions in the world. The Olympic record for the longest jump is held by Bob Beamon. In 1968, in the Mexico City Olympics, he jumped so far (8.90 m) that the judges had to find another- tape measure - the equipment they had was too short! Sports Unit 3 33"
+            "id": 516,
+            "page": 29,
+            "heading": "Lesson 2: The timetable - Days, Levels & Schedules (صفحة 29)",
+            "text": "Dave phoned the sports centre and heard a message.\nListen to the message. What does Dave have to leave?\nListen and repeat the words:\n• beginners (المبتدئون)\n• advanced (المتقدمون)\n• team practice (تدريب الفريق)\n\nThe sports centre sent Dave this leaflet. Ask and answer questions about it:\n\"When is the volleyball beginners' class?\"\n\"On Monday, from five o'clock to seven o'clock.\"\n\nSchedule:\n• Men's and boys' lessons: Tuesday, Thursday and Saturday.\n• Women's and girls' lessons: Monday, Wednesday and Friday.\n\nTimetable:\n• Volleyball: Beginners: Mon. 5-7 | Team practice: Mon. 7-9\n• Athletics: Start now! Wed. and Thur. 5-7\n• Swimming: Team practice: Thur. 7-9 and Fri. 5-7\n• Tennis: Beginners: Mon. and Tue. 7-9 | Advanced: Fri. 5-7 and Sat. 3-5\n• Gymnastics: Beginners: Tue. and Wed. 7-9 | Advanced: Thur. and Fri. 5-7\n• Basketball: Beginners: Tue. 5-7 | Team practice: Sat. 3-5\n• Karate: A new sport! Mon. 5-7 and Thur. 5-7\n\nCall 952841 to book a class and for information about other sports.\n\nAsk and answer questions:\n\"What sports do you want to do?\"\n\"How good are you at volleyball?\"\n• \"I'm quite good at volleyball, but I want to practise.\"\n• \"I've never played volleyball. I'd like to learn how to play it.\""
           }
         ]
       },
       {
         "id": 285,
-        "title": "Lesson 3: Booking Lessons (حجز الدروس الرياضية)",
-        "summary": "صفحة 34 - 35",
+        "title": "Lesson 3: Booking Lessons (حجز الدروس في المركز الرياضي)",
+        "summary": "صفحة 30 - 30",
         "chunks": [
           {
-            "id": 521,
-            "page": 34,
-            "heading": "AB 52-53 Unit Lesson 7: Changes Saad does judo. The editor of Saad's school magazine asked him to write a paragraph about it. O Study how Saad planned his paragraph. First, he made some notes. • owe day, do judo for • friewds, wow have Lots • didw't Like oompetitiows, wow Love them • was shy, wow • was weaZ, uvvßt, wow Stroø..ø • sohooLwork was bad, wow good at it I used to be shy by Saad Salih, Year 8 Then, he put his notes in order and added some words. has chaø.ged awd Life. Examples: 2 3 4 5 persowaLitu — was shy, wow oovvßdevvt good for health — was weak + 'Avow strowø, fitter good for schoolwork — was bad, wow good at it friev•vds, Beow have Lots competitions, hate Losiwg day, do judo for Read Saad's article. What did he write that was not in his notes? I started doing judo two years ago, and it has changed my personality and my life. I used to be very shy, but judo has given me confidence. Judo has also been good for my health. I used to be very unhealthy and unfit. I could not run very fast, and I was often ill. Now I am much stronger Find words that mean the following: Talking about changes I used to be shy. but now I'm confident. I used to have no friends, but now I have lots. and fitter. I also used to be lazy, but now I train every day and I enjoy it. My teachers say that my schoolwork is better now. I used to be bad at it, but now I get good marks all the time. Before I started doing judo, I used to have no friends. I don't know why. Now I have lots. I also used to be afraid of competitions and exams. Now I really enjoy competing against other people, and I hate losing. One day, I hope to do judo for Iraq. I what kind of person you are 2 the opposite of 'shyness' 3 practise Talk about things you used to do but don't do anymore. 34 Unit 3 Sports",
-            "text": "AB 52-53 Unit Lesson 7: Changes Saad does judo. The editor of Saad's school magazine asked him to write a paragraph about it. O Study how Saad planned his paragraph. First, he made some notes. • owe day, do judo for • friewds, wow have Lots • didw't Like oompetitiows, wow Love them • was shy, wow • was weaZ, uvvßt, wow Stroø..ø • sohooLwork was bad, wow good at it I used to be shy by Saad Salih, Year 8 Then, he put his notes in order and added some words. has chaø.ged awd Life. Examples: 2 3 4 5 persowaLitu — was shy, wow oovvßdevvt good for health — was weak + 'Avow strowø, fitter good for schoolwork — was bad, wow good at it friev•vds, Beow have Lots competitions, hate Losiwg day, do judo for Read Saad's article. What did he write that was not in his notes? I started doing judo two years ago, and it has changed my personality and my life. I used to be very shy, but judo has given me confidence. Judo has also been good for my health. I used to be very unhealthy and unfit. I could not run very fast, and I was often ill. Now I am much stronger Find words that mean the following: Talking about changes I used to be shy. but now I'm confident. I used to have no friends, but now I have lots. and fitter. I also used to be lazy, but now I train every day and I enjoy it. My teachers say that my schoolwork is better now. I used to be bad at it, but now I get good marks all the time. Before I started doing judo, I used to have no friends. I don't know why. Now I have lots. I also used to be afraid of competitions and exams. Now I really enjoy competing against other people, and I hate losing. One day, I hope to do judo for Iraq. I what kind of person you are 2 the opposite of 'shyness' 3 practise Talk about things you used to do but don't do anymore. 34 Unit 3 Sports"
-          },
-          {
-            "id": 522,
-            "page": 35,
-            "heading": "AB 54-55 Unit Lesson 8: Have fun with words! You practised saying a tongue-twister last year. How fast can you say it now? O,næ Listen and say. seas seasrteas ctt f/t,e seasßre. sags sce sags are seasGJLs, J 'nv sure. It is difficult to say - it twists your tongue - because most of the words begin with 'sh' or 's' sounds. That's what a tongue-twister is - a sentence or two where the words begin with one or two sounds. Listen and try saying another one. Teter 'Piper peckeö a pot of picldeö pepper. Tongue-twisters don't have very much meaning, but they are funny. They are easy to make. This is what you do: I First, choose a sound, for example, Make a list of all the nouns and names you can think of that start with Badria, Bashir, brother, ball, bag, balloon, bakery, banana, bed, Examples: bicycle, bird, boat, book boy, bread. bus 2 Next, make a list of all the verbs you can think of that start with Examples: bought, brought, broke, brushed, began 3 Then, make a list of all the describing words (adjectives and adverbs) you can think of beginning with 'b' Examples: big, brown, bad, blue, black, beautiful, busy, badly 4 Finally, try to make a sentence with five or six of the words. You will probably need to use some words that _don't begin with Examples: the, a, an, and, he, she Sports Unit 3 35",
-            "text": "AB 54-55 Unit Lesson 8: Have fun with words! You practised saying a tongue-twister last year. How fast can you say it now? O,næ Listen and say. seas seasrteas ctt f/t,e seasßre. sags sce sags are seasGJLs, J 'nv sure. It is difficult to say - it twists your tongue - because most of the words begin with 'sh' or 's' sounds. That's what a tongue-twister is - a sentence or two where the words begin with one or two sounds. Listen and try saying another one. Teter 'Piper peckeö a pot of picldeö pepper. Tongue-twisters don't have very much meaning, but they are funny. They are easy to make. This is what you do: I First, choose a sound, for example, Make a list of all the nouns and names you can think of that start with Badria, Bashir, brother, ball, bag, balloon, bakery, banana, bed, Examples: bicycle, bird, boat, book boy, bread. bus 2 Next, make a list of all the verbs you can think of that start with Examples: bought, brought, broke, brushed, began 3 Then, make a list of all the describing words (adjectives and adverbs) you can think of beginning with 'b' Examples: big, brown, bad, blue, black, beautiful, busy, badly 4 Finally, try to make a sentence with five or six of the words. You will probably need to use some words that _don't begin with Examples: the, a, an, and, he, she Sports Unit 3 35"
+            "id": 517,
+            "page": 30,
+            "heading": "Lesson 3: Booking lessons - Phone calls and enquiries (صفحة 30)",
+            "text": "Liz and Dave called the sports centre to find out about lessons.\nListen and read. Fill in part of the timetable in your Activity Book.\n\n[Conversation 1: Liz and the Sports Officer]\nLiz: Hello. Is that the sports centre?\nSports officer: Yes. Can I help you?\nLiz: Well, I'd like to play volleyball.\nSports officer: How good are you at volleyball?\nLiz: Oh, I'm quite good. I'm in the school team.\nSports officer: All right. Come on Monday at seven o'clock. It's team practice.\nLiz: Thanks very much. Oh, and I'd like to learn horse riding.\nSports officer: We have beginners' lessons on Wednesdays at five o'clock.\nLiz: Thank you very much. Goodbye.\n\n[Conversation 2: Dave and the Sports Officer]\nSports officer: Hello. Sports centre.\nDave: Hello. I'd like to do judo.\nSports officer: Are you good at judo, or do you want to learn?\nDave: I'm a beginner. I want to learn.\nSports officer: That's fine. Beginners' lessons are on Tuesdays at five o'clock.\nDave: Thank you. Goodbye."
           }
         ]
       },
       {
         "id": 286,
-        "title": "Lesson 4: How Often? & Using Used to",
-        "summary": "صفحة 36 - 37",
+        "title": "Lesson 4: The Basketball Game (مباراة كرة السلة ومصطلحات الفوز والخسارة)",
+        "summary": "صفحة 31 - 31",
         "chunks": [
           {
-            "id": 523,
-            "page": 36,
-            "heading": "AB 56 Unit 3 Round up In this unit, you have practised: Talking about which sports you would like to do or play What sports would you like to do? I'd like to play tennis. I'd like to do athletics. 2 3 4 5 6 36 Asking and answering questions about a timetable When is the advanced horse riding class? On Saturday, from three o'clock to five o'clock in the afternoon. Asking and answering questions about how good people are at sport How good are you at volleyball? Saying numbers and years I'm quite good, but I'd like to practise. I've never played volleyball. I'd like to learn. 28.28 seconds: 1996: 2015: twenty-eight point two eight seconds nineteen ninety-six two thousand and fifteen Describing changes I used to have no friends, but now I have lots. I used to be lazy, but now I work hard. And you have . used information from conversations to fill in a timetable. performed a conversation. written sentences to make a story. practised finding information quickly in texts. found new words and worked out their meanings as you read. written a paragraph. Unit 3 Sports",
-            "text": "AB 56 Unit 3 Round up In this unit, you have practised: Talking about which sports you would like to do or play What sports would you like to do? I'd like to play tennis. I'd like to do athletics. 2 3 4 5 6 36 Asking and answering questions about a timetable When is the advanced horse riding class? On Saturday, from three o'clock to five o'clock in the afternoon. Asking and answering questions about how good people are at sport How good are you at volleyball? Saying numbers and years I'm quite good, but I'd like to practise. I've never played volleyball. I'd like to learn. 28.28 seconds: 1996: 2015: twenty-eight point two eight seconds nineteen ninety-six two thousand and fifteen Describing changes I used to have no friends, but now I have lots. I used to be lazy, but now I work hard. And you have . used information from conversations to fill in a timetable. performed a conversation. written sentences to make a story. practised finding information quickly in texts. found new words and worked out their meanings as you read. written a paragraph. Unit 3 Sports"
-          },
-          {
-            "id": 524,
-            "page": 37,
-            "heading": "Story Jad and Johnny - The football match time OKA & Listen, read and find out. 1 Where are the boys? 2 Who do they play a football match against? 3 Why do the other boys laugh at Johnny? 'l hope you like football,' said Tom. We were in Munich, in southern Germany. 'l love it!' Aziz shouted. 'I'd like to be a footballer when I'm older.' 'Me too!' said Paolo. 'Good,' Tom said. We got out of the minibus and looked up. We were outside of the Allianz Arena, Bayern Munich's football stadium. 'l don't know anything about football,' said Marcus. 'But that's a strange looking stadium.' 'It can completely change colour!' said Tom. 'When the lights are turned on, you can see it from Austria. Let's take a tour.' -- Allianz@Arena We were standing in front of a big door. Behind the door was Bayern Munich's trophy room. 'So, are Bayern Munich a good team?' asked Marcus. 'Why don't you open the door and see?' suggested Paolo, TROPHY ROOM Marcus opened the door, and his mouth hung open. 'Wow!' he gasped. There were nearly a hundred trophies in the room - league trophies, cups, Champions League trophies. Suddenly, a woman came into the room. She was wearing a Bayern Munich tracksuit. 'Excuse me,' she said. 'But my team are training on the pitch, and they need some more players for a practice match. Do you guys play football?' 'IJm ... not really,' said Marcus. 'l do!' said Aziz. He was very excited. 'Come on guys. Let's do it!' We walked onto the pitch and saw the other team. 'They're young girls!' said Aziz. 'That's right,' said the woman in Sports Unit 3 37",
-            "text": "Story Jad and Johnny - The football match time OKA & Listen, read and find out. 1 Where are the boys? 2 Who do they play a football match against? 3 Why do the other boys laugh at Johnny? 'l hope you like football,' said Tom. We were in Munich, in southern Germany. 'l love it!' Aziz shouted. 'I'd like to be a footballer when I'm older.' 'Me too!' said Paolo. 'Good,' Tom said. We got out of the minibus and looked up. We were outside of the Allianz Arena, Bayern Munich's football stadium. 'l don't know anything about football,' said Marcus. 'But that's a strange looking stadium.' 'It can completely change colour!' said Tom. 'When the lights are turned on, you can see it from Austria. Let's take a tour.' -- Allianz@Arena We were standing in front of a big door. Behind the door was Bayern Munich's trophy room. 'So, are Bayern Munich a good team?' asked Marcus. 'Why don't you open the door and see?' suggested Paolo, TROPHY ROOM Marcus opened the door, and his mouth hung open. 'Wow!' he gasped. There were nearly a hundred trophies in the room - league trophies, cups, Champions League trophies. Suddenly, a woman came into the room. She was wearing a Bayern Munich tracksuit. 'Excuse me,' she said. 'But my team are training on the pitch, and they need some more players for a practice match. Do you guys play football?' 'IJm ... not really,' said Marcus. 'l do!' said Aziz. He was very excited. 'Come on guys. Let's do it!' We walked onto the pitch and saw the other team. 'They're young girls!' said Aziz. 'That's right,' said the woman in Sports Unit 3 37"
+            "id": 518,
+            "page": 31,
+            "heading": "Lesson 4: The basketball game - Results, Opposites & Competitions (صفحة 31)",
+            "text": "Read and work out the meaning of the words in red.\nResult of a basketball game: Babil 60 - Kirkuk 54.\n1. Babil won the game. (فازت بابل بالمباراة)\n2. Kirkuk lost the game. (خسرت كركوك المباراة)\n3. Babil beat Kirkuk. (هزمت بابل كركوك)\n4. Kirkuk lost to Babil. (خسرت كركوك أمام بابل)\n\nRead the conversation between Hilal and Samir:\nHilal: Samir. That was awful! How did we lose?\nSamir: It was my fault, Hilal. I was terrible!\nHilal: You? At least you won a few points.\nSamir: What? You won more points than I did. You always do.\nHilal: I know. Other people are fitter than us. And they can run faster.\nSamir: Let's face it. We're not very fit.\nHilal: They can beat us at anything. What can we do?\nSamir: We have to get fitter.\nHilal: Let's have a competition. Just you against me.\nSamir: Good idea! When shall we have it?\nHilal: High jump!\nSamir: But I jumped higher than you last week.\nHilal: That wasn't in a competition.\nSamir: Next weekend. Swimming, running and high jump. OK?\nHilal: OK. I'll see you next weekend at the sports centre."
           }
         ]
       },
       {
         "id": 287,
-        "title": "Lesson 5: Sports Days (يوم الرياضة والمسابقات)",
-        "summary": "صفحة 38 - 39",
+        "title": "Lesson 5: The Olympic Games (الألعاب الأولمبية: التاريخ والميثاق والميداليات)",
+        "summary": "صفحة 32 - 32",
         "chunks": [
           {
-            "id": 525,
-            "page": 38,
-            "heading": "Story time 38 Jad and Johnny - The football match 4 the tracksuit. 'They are some of the Munich Under-12's girls team.' Aziz smiled at us. 'We're going to win,' he said. 'It's going to be easy!' 'I'm not sure, Aziz,' Jad said as we watched the girls practising. 'I used to play for my school team in Algeria,' he replied. 'I was the best player!' 'I'm quite good at football, too,' I said. 'I'm not very good,' said Marcus. 'I'll be the goalkeeper.' The match started, and Jad passed the ball to me. 'Johnny! Give me the ball!' shouted Aziz. I tried to pass the ball to him, but one of the girls got it first. She went past me, then past Jad and then past Paolo. Then she kicked the ball very hard, and it went past Marcus and into the goal. It was 1-0 to the other team. 'Why didn't you catch it, Marcus?' I shouted. 'Use your hands!' Unit 3 Sports After ten minutes, it was 4-0. The girls were too good. By the end of the match, they won 9-0. We were all very tired and disappointed. 'Never mind,' said Tom. 'l have some good news. I've got tickets to watch the match tonight.' 'Come on, Munich!' I shouted. We were watching Bayern Munich against Real Madrid, and we were very close to the pitch. It was a great match, and Bayern Munich were winning 3-1 'Never mind about the match we lost,' I said to the other boys. 'It's been a great day.' Then the goalkeeper kicked the ball, but it went wrong. The ball left the pitch and went smack - straight into my face. 'Ow!' I cried. 'Why didn't you catch it, Johnny?' asked Marcus. 'Use your hands!' The other boys laughed. My face hurt, but I laughed, too. 'Very funny, Marcus,' I said.",
-            "text": "Story time 38 Jad and Johnny - The football match 4 the tracksuit. 'They are some of the Munich Under-12's girls team.' Aziz smiled at us. 'We're going to win,' he said. 'It's going to be easy!' 'I'm not sure, Aziz,' Jad said as we watched the girls practising. 'I used to play for my school team in Algeria,' he replied. 'I was the best player!' 'I'm quite good at football, too,' I said. 'I'm not very good,' said Marcus. 'I'll be the goalkeeper.' The match started, and Jad passed the ball to me. 'Johnny! Give me the ball!' shouted Aziz. I tried to pass the ball to him, but one of the girls got it first. She went past me, then past Jad and then past Paolo. Then she kicked the ball very hard, and it went past Marcus and into the goal. It was 1-0 to the other team. 'Why didn't you catch it, Marcus?' I shouted. 'Use your hands!' Unit 3 Sports After ten minutes, it was 4-0. The girls were too good. By the end of the match, they won 9-0. We were all very tired and disappointed. 'Never mind,' said Tom. 'l have some good news. I've got tickets to watch the match tonight.' 'Come on, Munich!' I shouted. We were watching Bayern Munich against Real Madrid, and we were very close to the pitch. It was a great match, and Bayern Munich were winning 3-1 'Never mind about the match we lost,' I said to the other boys. 'It's been a great day.' Then the goalkeeper kicked the ball, but it went wrong. The ball left the pitch and went smack - straight into my face. 'Ow!' I cried. 'Why didn't you catch it, Johnny?' asked Marcus. 'Use your hands!' The other boys laughed. My face hurt, but I laughed, too. 'Very funny, Marcus,' I said."
-          },
-          {
-            "id": 526,
-            "page": 39,
-            "heading": "صفحة 39",
-            "text": "p Project 2: Different sports O Look at the photographs and answer the questions about each sport. I Do you know this sport? 3 Would you like to try it? 2 Have you ever done it? Now read about the three sports. Are the sentences true or false? 1 Skateboarding is a very old sport. 3 You can play Ultimate with two people. 5 Surfing is an old sport. 2 4 6 You can only skateboard in skateparks. You need a lot of space to play Ultimate. Surfers always try to win. — Try a new sport! — Skateboarding began in the USA in the 1940s. In skateboarding, you ride a skateboard and do tricks. You can do skateboarding anywhere with a smooth surface to skate on, but many cities have skateparks designed for skateboarding. You can do it with your friends, but you don't play against anyone. You have to be fit and have strong legs. Most people skateboard to have fun and improve, but the sport has recently been added to the Olympics! Ultimate is quite a new sport. It started in the USA in 1967, and it is similar to football or American football. In Ultimate, you throw a round disc called a Frisbee to your teammates. There are seven players on each team. You play on a big field, and when a player catches the Frisbee at the end of the pitch, their team gets a point. Surfing is not new - hundreds of years ago, there were surfers in the Pacific Ocean. Surfers swim into the ocean with a surfboard. When a wave comes, they stand up on their board, and the wave moves them towards the beach. Most people surf for fun, but it is a sport, too. Judges give surfers a score, and the surfer with the highest score wins the competition. Which of the three sports would you like to try? Why? Project 2 Different sports L39.J"
+            "id": 519,
+            "page": 32,
+            "heading": "Lesson 5: The Olympic Games - History, Rings & Medals (صفحة 32)",
+            "text": "Read about the Olympic Games:\nThe old Olympic Games took place in Greece 2,000 years ago.\nIn 1896, a Frenchman, Pierre de Coubertin, started the modern Olympic Games.\nThey take place every four years, in a different city each time.\nPierre de Coubertin thought that everybody should enjoy taking part in the Games. He said:\n\"The most important thing in the Olympic Games is not to win, but to take part.\"\n\nMore than 200 countries took part in the Rio de Janeiro Olympic Games in 2016.\nAthletes from 87 countries won medals. The athletes competed in 28 different sports.\nThe athletes who come first, second and third win medals:\n• The winner gets a gold medal (الميدالية الذهبية).\n• The athlete who comes second gets a silver medal (الميدالية الفضية).\n• The third gets a bronze medal (الميدالية البرونزية).\n\nThe rings on the Olympic flag show the meeting of athletes from all over the world.\nThe five colours and the white background are the only six colours that were on national flags in 1913, when the Olympic flag was invented.\n\nQuestions and Answers:\n1. How many countries took part in the Olympic Games in 2016? More than 200 countries.\n2. What do the athletes who come second get? A silver medal.\n3. Who was Pierre de Coubertin? A Frenchman who started the modern Olympic Games in 1896.\n4. What do the Olympic rings stand for? The meeting of athletes from all over the world (the five continents).\n5. When were the first modern Olympic Games held? In 1896.\n6. Did de Coubertin think it was important to win? No, he thought the most important thing is to take part.\n7. How often do the Olympic Games take place? Every four years."
           }
         ]
       },
       {
         "id": 288,
-        "title": "Unit 3 Round up & Story Time: The Football Match",
-        "summary": "صفحة 40 - 42",
+        "title": "Lesson 6: Olympic Superstars (أساطير وأرقام قياسية أولمبية تاريخية)",
+        "summary": "صفحة 33 - 33",
         "chunks": [
           {
+            "id": 520,
+            "page": 33,
+            "heading": "Lesson 6: Olympic superstars - World Records & Champions (صفحة 33)",
+            "text": "The Olympic Games are a source of inspiration for people around the world.\nIt's a special kind of person who can train for hours every single day and eat a special and controlled diet.\nSprinters train for years for a race that might last less than ten seconds. Athletes who take part in the long jump only need six seconds.\nNot all of us can go to the Olympics, but we can all learn from an Olympian's dedication and hard work.\n\nHere are some amazing records to inspire us:\n1. Florence Griffith Joyner (USA):\nBack in 1988, Florence ran the fastest women's 100 metres in Olympic history. Her time was 10.62 seconds. Her record has lasted for well over 30 years.\n\n2. Michael Phelps (USA):\nMichael Phelps holds the record for the biggest number of Olympic gold medals - 23! In total he has won 28 medals across four Olympic Games between 2004 and 2016.\n\n3. Inge Sørensen (Denmark):\nThe youngest person ever to win an Olympic medal in an individual event was Danish swimmer Inge Sørensen in 1936. She was only 12 years and 24 days old.\n\n4. Oscar Swahn (Sweden):\nOn the other hand, the oldest person to win a gold medal was Oscar Swahn from Sweden. He was 64 years and 280 days old when he won his gold medal for shooting.\n\n5. Table Tennis Dominance (China):\nChina is the best at table tennis. Since 1988, China has won 28 gold medals. Ma Long won the gold for China at the 2016 Rio de Janeiro Olympics.\n\n6. Serena Williams (USA):\nSerena Williams is probably the greatest female tennis player of all time. She has won four Olympic gold medals and 23 Grand Slam singles titles.\n\n7. Bob Beamon (USA):\nThe Olympic record for the longest jump is held by Bob Beamon. In 1968, in Mexico City, he jumped 8.90 metres - so far that the judges had to find another tape measure because their equipment was too short!"
+          }
+        ]
+      },
+      {
+        "id": 289,
+        "title": "Lesson 7: Changes (التغيرات الشخصية والبدنية مع قاعدة Used to)",
+        "summary": "صفحة 34 - 34",
+        "chunks": [
+          {
+            "id": 521,
+            "page": 34,
+            "heading": "Lesson 7: Changes - Saad Salih and Judo (صفحة 34)",
+            "text": "Saad does judo. The editor of Saad's school magazine asked him to write a paragraph about it.\nStudy how Saad planned his paragraph:\nNotes:\n• started judo 2 years ago, changed personality and life\n• personality: was shy, now confident\n• health: was weak and unfit, now strong and fitter\n• schoolwork: was bad, now good at it\n• friends: had no friends, now has lots\n• competitions: hated losing, now enjoys competing\n• dream: one day, do judo for Iraq\n\nSaad's Article: \"I used to be shy\" by Saad Salih, Year 8:\n\"I started doing judo two years ago, and it has changed my personality and my life.\nI used to be very shy, but judo has given me confidence.\nJudo has also been good for my health. I used to be very unhealthy and unfit. I could not run very fast, and I was often ill. Now I am much stronger and fitter.\nI also used to be lazy, but now I train every day and I enjoy it.\nMy teachers say that my schoolwork is better now. I used to be bad at it, but now I get good marks all the time.\nBefore I started doing judo, I used to have no friends. I don't know why. Now I have lots.\nI also used to be afraid of competitions and exams. Now I really enjoy competing against other people, and I hate losing.\nOne day, I hope to do judo for Iraq.\"\n\nTalking about changes with \"used to\":\n• I used to be shy, but now I'm confident.\n• I used to have no friends, but now I have lots.\n• I used to be lazy, but now I train every day.\n\nVocabulary definitions:\n1. What kind of person you are -> personality\n2. The opposite of 'shyness' -> confidence\n3. Practise a sport -> train"
+          }
+        ]
+      },
+      {
+        "id": 290,
+        "title": "Lesson 8: Have Fun with Words! (ألعاب الألفاظ واللسان وتراكيب الأصوات)",
+        "summary": "صفحة 35 - 35",
+        "chunks": [
+          {
+            "id": 522,
+            "page": 35,
+            "heading": "Lesson 8: Have fun with words! - Tongue-twisters & Sound Patterns (صفحة 35)",
+            "text": "You practised saying a tongue-twister last year. How fast can you say it now?\nListen and say:\n\"She sells seashells on the seashore.\nThe shells she sells are seashells, I'm sure.\"\n\nWhy is it difficult to say?\nIt is difficult to say - it twists your tongue - because most of the words begin with 'sh' (/ʃ/) or 's' (/s/) sounds.\nThat's what a tongue-twister is: a sentence or two where the words begin with one or two similar sounds.\n\nListen and try saying another famous one:\n\"Peter Piper picked a peck of pickled pepper.\"\n\nTongue-twisters don't have very much meaning, but they are funny!\nThey are easy to make. This is what you do:\n1. First, choose a sound, for example /b/.\n   Make a list of nouns and names starting with B:\n   Badria, Bashir, brother, ball, bag, balloon, bakery, banana, bed, bicycle, bird, boat, book, boy, bread, bus.\n2. Next, make a list of verbs starting with B:\n   bought, brought, broke, brushed, began.\n3. Then, make a list of describing words (adjectives and adverbs) beginning with B:\n   big, brown, bad, blue, black, beautiful, busy, badly.\n4. Finally, try to make a sentence with five or six of the words:\n   \"Bashir bought big brown balloons and broke them badly!\""
+          }
+        ]
+      },
+      {
+        "id": 291,
+        "title": "Lesson 9: Unit 3 Round Up (المراجعة الشاملة لمهارات وقواعد الوحدة الثالثة)",
+        "summary": "صفحة 36 - 36",
+        "chunks": [
+          {
+            "id": 523,
+            "page": 36,
+            "heading": "Lesson 9: Unit 3 Round up - Skills, Grammar & Review (صفحة 36)",
+            "text": "In Unit 3, you have practised:\n\n1. Talking about which sports you would like to do or play:\n• \"What sports would you like to do?\"\n• \"I'd like to play tennis.\"\n• \"I'd like to do athletics.\"\n• \"I'd like to go horse riding.\"\n\n2. Asking and answering questions about a timetable:\n• \"When is the advanced horse riding class?\"\n• \"On Saturday, from three o'clock to five o'clock in the afternoon.\"\n\n3. Asking and answering questions about how good people are at sport:\n• \"How good are you at volleyball?\"\n• \"I'm quite good, but I'd like to practise.\"\n• \"I've never played volleyball. I'd like to learn.\"\n\n4. Saying numbers and years:\n• 28.28 seconds -> twenty-eight point two eight seconds.\n• 1996 -> nineteen ninety-six.\n• 2015 -> two thousand and fifteen.\n\n5. Describing changes with (used to):\n• \"I used to have no friends, but now I have lots.\"\n• \"I used to be lazy, but now I work hard.\"\n• \"I used to be shy, but now I'm confident.\"\n\n6. And you have:\n• used information from conversations to fill in a timetable.\n• performed a phone booking conversation.\n• written sentences to describe a sports story.\n• practiced finding information quickly in texts.\n• found new sports words and worked out their meanings."
+          }
+        ]
+      },
+      {
+        "id": 292,
+        "title": "Lesson 10: Story Time: Jad and Johnny - The Football Match (قصة جاد وجوني: مباراة ميونيخ)",
+        "summary": "صفحة 37 - 38",
+        "chunks": [
+          {
+            "id": 524,
+            "page": 37,
+            "heading": "Story Time (Part 1): Jad and Johnny - Munich & The Allianz Arena (صفحة 37)",
+            "text": "'I hope you like football,' said Tom. We were in Munich, in southern Germany.\n'I love it!' Aziz shouted. 'I'd like to be a footballer when I'm older.'\n'Me too!' said Paolo. 'Good,' Tom said.\nWe got out of the minibus and looked up. We were outside of the Allianz Arena, Bayern Munich's football stadium.\n'I don't know anything about football,' said Marcus. 'But that's a strange looking stadium.'\n'It can completely change colour!' said Tom. 'When the lights are turned on, you can see it from Austria. Let's take a tour.'\n\nWe were standing in front of a big door. Behind the door was Bayern Munich's trophy room.\n'So, are Bayern Munich a good team?' asked Marcus.\n'Why don't you open the door and see?' suggested Paolo.\nMarcus opened the door, and his mouth hung open. 'Wow!' he gasped.\nThere were nearly a hundred trophies in the room - league trophies, cups, Champions League trophies.\n\nSuddenly, a woman came into the room. She was wearing a Bayern Munich tracksuit.\n'Excuse me,' she said. 'But my team are training on the pitch, and they need some more players for a practice match. Do you guys play football?'\n'Um ... not really,' said Marcus.\n'I do!' said Aziz. He was very excited. 'Come on guys. Let's do it!'\n\nWe walked onto the pitch and saw the other team.\n'They're young girls!' said Aziz.\n'That's right,' said the woman in the tracksuit. 'They are some of the Munich Under-12's girls team.'"
+          },
+          {
+            "id": 525,
+            "page": 38,
+            "heading": "Story Time (Part 2): The Match, Defeat & The Stadium Laugh (صفحة 38)",
+            "text": "Aziz smiled at us. 'We're going to win,' he said. 'It's going to be easy!'\n'I'm not sure, Aziz,' Jad said as we watched the girls practising.\n'I used to play for my school team in Algeria,' he replied. 'I was the best player!'\n'I'm quite good at football, too,' I said.\n'I'm not very good,' said Marcus. 'I'll be the goalkeeper.'\n\nThe match started, and Jad passed the ball to me. 'Johnny! Give me the ball!' shouted Aziz.\nI tried to pass the ball to him, but one of the girls got it first.\nShe went past me, then past Jad and then past Paolo. Then she kicked the ball very hard, and it went past Marcus and into the goal.\nIt was 1-0 to the other team.\n'Why didn't you catch it, Marcus?' I shouted. 'Use your hands!'\n\nAfter ten minutes, it was 4-0. The girls were too good.\nBy the end of the match, they won 9-0! We were all very tired and disappointed.\n'Never mind,' said Tom. 'I have some good news. I've got tickets to watch the match tonight.'\n\n'Come on, Munich!' I shouted. We were watching Bayern Munich against Real Madrid, and we were very close to the pitch.\nIt was a great match, and Bayern Munich were winning 3-1.\n'Never mind about the match we lost,' I said to the other boys. 'It's been a great day.'\nThen the goalkeeper kicked the ball, but it went wrong. The ball left the pitch and went smack - straight into my face!\n'Ow!' I cried.\n'Why didn't you catch it, Johnny?' asked Marcus. 'Use your hands!'\nThe other boys laughed. My face hurt, but I laughed, too. 'Very funny, Marcus,' I said."
+          }
+        ]
+      },
+      {
+        "id": 293,
+        "title": "Lesson 11: Project: Different Sports & Survey (مشروع: رياضات مختلفة واستطلاع رأي)",
+        "summary": "صفحة 39 - 42",
+        "chunks": [
+          {
+            "id": 526,
+            "page": 39,
+            "heading": "Project: Different Sports - Skateboarding, Ultimate & Surfing (صفحات 39-40)",
+            "text": "Try a new sport! Read about three exciting sports:\n\n1. Skateboarding (التزلج على الألواح):\nSkateboarding began in the USA in the 1940s. In skateboarding, you ride a skateboard and do tricks.\nYou can do skateboarding anywhere with a smooth surface to skate on, but many cities have skateparks designed for skateboarding.\nYou can do it with your friends, but you don't play against anyone. You have to be fit and have strong legs.\nMost people skateboard to have fun and improve, and the sport has recently been added to the Olympics!\n\n2. Ultimate Frisbee (الفريسبي التنافسي):\nUltimate is quite a new sport. It started in the USA in 1967, and it is similar to football or American football.\nIn Ultimate, you throw a round disc called a Frisbee to your teammates.\nThere are seven players on each team. You play on a big field, and when a player catches the Frisbee at the end of the pitch, their team gets a point.\n\n3. Surfing (ركوب الأمواج):\nSurfing is not new - hundreds of years ago, there were surfers in the Pacific Ocean.\nSurfers swim into the ocean with a surfboard. When a wave comes, they stand up on their board, and the wave moves them towards the beach.\nMost people surf for fun, but it is a sport, too. Judges give surfers a score, and the surfer with the highest score wins the competition.\n\nStudent Profiles (صفحة 40):\n• Mason (12 years old, England):\n\"My favourite sport is swimming because I love being in the water. I go swimming twice a week, but I'm not very good at it!\"\n• Dania (12 years old, Iraq):\n\"My favourite sport is athletics because I love running. I do athletics three times a week, and I'm quite good at it.\"\n• Otto (13 years old, Germany):\n\"My favourite sport is football because I like playing in a team. I play on the school team. We practise twice a week, and we play a match every Saturday.\""
+          },
+          {
             "id": 527,
-            "page": 40,
-            "heading": "صفحة 40",
-            "text": "p Project 2: Different sports O Read about three people and complete the table. Name Mason Dania Otto Age Country Favourite sport How often? 12 Iraq twice a week football How good? quite good Hello. My name is Mason. I'm 12, and I'm from England. I like lots of different sports, but my favourite sport is swimming. I think it's because I love being in the water. I go swimming twice a week, but I'm not very good at it! Hi there, I'm Dania. I'm from Iraq, and I'm 12 years old. My favourite sport is athletics. I like it because I love running. I do athletics three times a week, and I'm quite good at it. I usually do athletics with my friends, but I sometimes go with my brother. Hi. My name is Otto. I'm 13, and I'm from Germany. My favourite sport is football because I like playing in a team. I'm very good at football, and I play on the school football team. We practise twice a week, and we play a match at three o'clock every Saturday. Which of the sports from the magazine article do you think Mason, Dania and Otto would like to try? Why? 40, Project 2 Different sports"
-          },
-          {
-            "id": 528,
             "page": 41,
-            "heading": "صفحة 41",
-            "text": "p Project 2: The sports survey O Umar and Ali are talking about sport. Listen and answer the questions. I What do they disagree about? 2 What is a survey? Iraq Arabia O Look at Umar and Ali's notes and complete their survey questions. Listen and check. QlM/kaE Umar and Ali have finished their survey. Here are the results of one of their questions. Which question is it? Every dan ThreehS1kåmesa øæeV///L Less +kanoncea Twiceaweek— —Nevervv O Look at the results again and answer the questions. I How many people did they ask? 2 How many people dp sport twice a week? 3 How many people never do sport? Project 2 The sports survey 41"
-          },
-          {
-            "id": 529,
-            "page": 42,
-            "heading": "صفحة 42",
-            "text": "p Project 2: The sports survey Umar and Ali are presenting the results of their survey to the class. Look at the two charts and answer the questions. Listen and check your answers. I What is the most popular sport? 3 How many people want to try surfing? 5 How many people don't want to try any of the new sports? 2 What is the least popular sport? 4 How many people want to try skateboarding? football volleyball swimming basketball karate tennis What is your favourite sport? 20 15 10 5 surfing none Of these Which new sport would you like to try? Now do your own class survey with a partner for the school magazine. Follow the instructions. I 2 3 4 5 6 Decide on three things you want to know about your classmates' interests and habits. Write your three questions. Check the grammar and punctuation. Decide who will ask the questions and who will note down the answers. Ask your three questions to everyone in the class. Note down all the answers. Use charts to show the results of your survey. Present your survey results to the class. 42 Project 2 The sports survey"
+            "heading": "Project: The Sports Survey - Class Questionnaire & Results (صفحات 41-42)",
+            "text": "The Sports Survey by Umar and Ali:\nUmar and Ali created a class sports survey to find out what sports their classmates do and want to try.\n\nSurvey Questions:\n1. Do you do any sports? If yes, which ones?\n2. How often do you do sport each week?\n3. Which of the three new sports (Skateboarding, Ultimate, Surfing) would you like to try?\n4. Why do you enjoy your favourite sport?\n\nSurvey Results (Charts & Data):\n• Football is the most popular sport among the students.\n• Swimming and running are popular choices for staying fit.\n• Surfing is the new sport that most students would love to try during beach holidays.\n• Presenting data: using bar charts and pie charts to display sports habits clearly."
           }
         ]
       }
@@ -454,7 +489,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 43 - 48",
     "lessons": [
       {
-        "id": 289,
+        "id": 294,
         "title": "Review: Reading & Listening Skills",
         "summary": "صفحة 43 - 45",
         "chunks": [
@@ -479,7 +514,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 290,
+        "id": 295,
         "title": "Review: Speaking, Writing & Grammar Consolidation",
         "summary": "صفحة 46 - 48",
         "chunks": [
@@ -511,7 +546,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 49 - 60",
     "lessons": [
       {
-        "id": 291,
+        "id": 296,
         "title": "Lesson 1: History of Communication (تاريخ وسائل الاتصال)",
         "summary": "صفحة 49 - 50",
         "chunks": [
@@ -530,7 +565,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 292,
+        "id": 297,
         "title": "Lesson 2: Telephone Calls & Passive Voice (المبني للمجهول)",
         "summary": "صفحة 51 - 53",
         "chunks": [
@@ -555,7 +590,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 293,
+        "id": 298,
         "title": "Lesson 3: Satellites and the Internet (الأقمار الصناعية والإنترنت)",
         "summary": "صفحة 54 - 56",
         "chunks": [
@@ -580,7 +615,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 294,
+        "id": 299,
         "title": "Story Time: Jad and Johnny - The Gondola Trip",
         "summary": "صفحة 57 - 58",
         "chunks": [
@@ -599,7 +634,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 295,
+        "id": 300,
         "title": "Project 3: A Chat Forum",
         "summary": "صفحة 59 - 60",
         "chunks": [
@@ -625,7 +660,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 61 - 70",
     "lessons": [
       {
-        "id": 296,
+        "id": 301,
         "title": "Lesson 1: What is my job? (المهن والمسارات الوظيفية)",
         "summary": "صفحة 61 - 62",
         "chunks": [
@@ -644,7 +679,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 297,
+        "id": 302,
         "title": "Lesson 2: Future Plans with (be going to)",
         "summary": "صفحة 63 - 65",
         "chunks": [
@@ -669,7 +704,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 298,
+        "id": 303,
         "title": "Lesson 3: Good at / Not good at + V-ing",
         "summary": "صفحة 66 - 68",
         "chunks": [
@@ -694,7 +729,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 299,
+        "id": 304,
         "title": "Story Time: Jad and Johnny - The Alps",
         "summary": "صفحة 69 - 70",
         "chunks": [
@@ -720,7 +755,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 71 - 84",
     "lessons": [
       {
-        "id": 300,
+        "id": 305,
         "title": "Lesson 1: World Problems (مشاكل التلوث والبيئة)",
         "summary": "صفحة 71 - 73",
         "chunks": [
@@ -745,7 +780,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 301,
+        "id": 306,
         "title": "Lesson 2: Rules with (must / mustn't & should / shouldn't)",
         "summary": "صفحة 74 - 76",
         "chunks": [
@@ -770,7 +805,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 302,
+        "id": 307,
         "title": "Lesson 3: Possibility with (may and might)",
         "summary": "صفحة 77 - 79",
         "chunks": [
@@ -795,7 +830,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 303,
+        "id": 308,
         "title": "Story Time: Jad and Johnny - The Eiffel Tower",
         "summary": "صفحة 80 - 82",
         "chunks": [
@@ -820,7 +855,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 304,
+        "id": 309,
         "title": "Project 4: Recycling at Home",
         "summary": "صفحة 83 - 84",
         "chunks": [
@@ -846,7 +881,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 85 - 88",
     "lessons": [
       {
-        "id": 305,
+        "id": 310,
         "title": "Unit 8: Final Review & Strategy Practice",
         "summary": "صفحة 85 - 88",
         "chunks": [
@@ -884,7 +919,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 89 - 109",
     "lessons": [
       {
-        "id": 306,
+        "id": 311,
         "title": "Listening Transcripts: Units 1 - 4",
         "summary": "صفحة 89 - 98",
         "chunks": [
@@ -951,7 +986,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 307,
+        "id": 312,
         "title": "Listening Transcripts: Units 5 - 8",
         "summary": "صفحة 99 - 109",
         "chunks": [
@@ -1031,7 +1066,7 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 110 - 120",
     "lessons": [
       {
-        "id": 308,
+        "id": 313,
         "title": "Grammar Unit 1: Possessive 's', For/Since, Likes & Relatives",
         "summary": "صفحة 110 - 111",
         "chunks": [
@@ -1050,7 +1085,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 309,
+        "id": 314,
         "title": "Grammar Unit 2: Giving Advice (should/shouldn't), Common Ailments",
         "summary": "صفحة 112 - 113",
         "chunks": [
@@ -1069,7 +1104,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 310,
+        "id": 315,
         "title": "Grammar Unit 3: Sports Verbs (do/go/play), Used to",
         "summary": "صفحة 114 - 114",
         "chunks": [
@@ -1082,7 +1117,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 311,
+        "id": 316,
         "title": "Grammar Unit 5: Active & Passive Voice, Passive with Can",
         "summary": "صفحة 115 - 117",
         "chunks": [
@@ -1107,7 +1142,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 312,
+        "id": 317,
         "title": "Grammar Unit 6: Future with (be going to), Good at + V-ing",
         "summary": "صفحة 118 - 118",
         "chunks": [
@@ -1120,7 +1155,7 @@ window.CURRICULUM_DATA = [
         ]
       },
       {
-        "id": 313,
+        "id": 318,
         "title": "Grammar Unit 7: Must / Mustn't vs Should, May & Might",
         "summary": "صفحة 119 - 120",
         "chunks": [
@@ -1297,6 +1332,162 @@ window.GRAMMAR_RULES = [
     }
   },
   {
+    "id": "present_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن المضارع البسيط (Present Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
+    "explanation": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week.",
+    "examples": [
+      {
+        "en": "The sun rises in the east.",
+        "ar": "الشمس تشرق من الشرق (حقيقة علمية ثابتة)."
+      },
+      {
+        "en": "Muna usually walks to school every morning.",
+        "ar": "منى عادةً تمشي إلى المدرسة كل صباح (عادة وروتين مع ظرف التكرار usually)."
+      },
+      {
+        "en": "They don't eat junk food on weekdays.",
+        "ar": "هم لا يتناولون الوجبات السريعة خلال أيام الأسبوع (نفي مع don't)."
+      },
+      {
+        "en": "Does Ali play tennis on Fridays?",
+        "ar": "هل يلعب علي التنس في أيام الجمعة؟ (سؤال يبدأ بـ Does والفاعل مفرد)."
+      }
+    ],
+    "quiz": {
+      "question": "Ali always _______ his homework before dinner.",
+      "options": [
+        "finish",
+        "finishes",
+        "finished",
+        "finishing"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل المفرد الغائب (Ali) نضيف s/es إلى نهاية الفعل في المضارع البسيط (finishes)."
+    }
+  },
+  {
+    "id": "past_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي البسيط (Past Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
+    "explanation": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020.",
+    "examples": [
+      {
+        "en": "We visited the national museum in Baghdad yesterday.",
+        "ar": "زرنا المتحف الوطني في بغداد بالأمس (فعل منتظم ينتهي بـ ed)."
+      },
+      {
+        "en": "Zaid went to the market and bought some fruit.",
+        "ar": "ذهب زيد إلى السوق واشترى بعض الفاكهة (أفعال شاذة: went و bought)."
+      },
+      {
+        "en": "I didn't watch television last night.",
+        "ar": "لم أشاهد التلفاز الليلة الماضية (في النفي مع didn't يعود الفعل لمصدره watch)."
+      },
+      {
+        "en": "Did you see Noor at the library?",
+        "ar": "هل رأيت نور في المكتبة؟ (سؤال في الماضي يبدأ بـ Did يليه مجرد see)."
+      }
+    ],
+    "quiz": {
+      "question": "My brother _______ a new bicycle two days ago.",
+      "options": [
+        "buy",
+        "bought",
+        "buys",
+        "buying"
+      ],
+      "correct": 1,
+      "explanation": "وجود دلالة الماضي (two days ago) يقتضي استخدام صيغة الماضي الشاذ للفعل buy وهي (bought)."
+    }
+  },
+  {
+    "id": "past_continuous_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي المستمر (Past Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
+    "explanation": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They).",
+    "examples": [
+      {
+        "en": "I was doing my homework at 8 o'clock yesterday evening.",
+        "ar": "كنت أحل واجبي في تمام الساعة الثامنة مساء أمس (فعل استمر في وقت محدد بالماضي)."
+      },
+      {
+        "en": "The boys were playing football in the park all afternoon.",
+        "ar": "كان الأولاد يلعبون كرة القدم في المنتزه طوال فترة بعد الظهر."
+      },
+      {
+        "en": "She wasn't sleeping when I called her.",
+        "ar": "لم تكن نائمة عندما اتصلتُ بها (نفي الماضي المستمر مع wasn't)."
+      },
+      {
+        "en": "What were you doing at this time yesterday?",
+        "ar": "ماذا كنت تفعل في مثل هذا الوقت بالأمس؟"
+      }
+    ],
+    "quiz": {
+      "question": "They _______ for the bus when the rain started.",
+      "options": [
+        "was waiting",
+        "were waiting",
+        "is waiting",
+        "are waiting"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل الجمع (They) في زمن الماضي المستمر نستخدم (were waiting)."
+    }
+  },
+  {
+    "id": "past_simple_continuous_when_while",
+    "unit": 1,
+    "category": "tenses",
+    "title": "الربط بين الماضي البسيط والمستمر (When & While)",
+    "level": "مهم جداً للامتحانات - صفحة 112",
+    "page": 112,
+    "formula": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
+    "explanation": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث.",
+    "examples": [
+      {
+        "en": "While we were having lunch, a bird flew into the kitchen.",
+        "ar": "بينما كنا نتناول الغداء (مستمر طويل)، طار طائر إلى المطبخ (بسيط قاطع بعد While)."
+      },
+      {
+        "en": "Ahmed was riding his bicycle when he fell over.",
+        "ar": "كان أحمد يقود دراجته (مستمر) عندما سقط أرضاً (بسيط قاطع بعد when)."
+      },
+      {
+        "en": "While she was reading a story, the doorbell rang.",
+        "ar": "بينما كانت تقرأ قصة، رن جرس الباب."
+      },
+      {
+        "en": "What were they doing when the teacher entered the classroom?",
+        "ar": "ماذا كانوا يفعلون عندما دخل المعلم الصف؟"
+      }
+    ],
+    "quiz": {
+      "question": "While I _______ to school, I met my best friend.",
+      "options": [
+        "was walking",
+        "walked",
+        "walk",
+        "am walking"
+      ],
+      "correct": 0,
+      "explanation": "بعد أداة While يأتي دائماً ماضٍ مستمر، ومع الضمير I نختار (was walking)."
+    }
+  },
+  {
     "id": "giving_advice_should",
     "unit": 2,
     "title": "إعطاء النصيحة (Giving Advice: Should / Shouldn't)",
@@ -1331,29 +1522,284 @@ window.GRAMMAR_RULES = [
     }
   },
   {
+    "id": "frequency_expressions_unit2",
+    "unit": 2,
+    "title": "تعبيرات وظروف التكرار (Expressions of Frequency: How often...?)",
+    "level": "الوحدة 2",
+    "page": 17,
+    "formula": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
+    "explanation": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً).",
+    "examples": [
+      {
+        "en": "How often do you take exercise? - I go walking every day.",
+        "ar": "كم مرة تمارس الرياضة؟ - أذهب للمشي كل يوم."
+      },
+      {
+        "en": "I play football twice a week with my friends.",
+        "ar": "ألعب كرة القدم مرتين في الأسبوع مع أصدقائي."
+      },
+      {
+        "en": "You should put these drops in your ear twice a day.",
+        "ar": "ينبغي أن تضع هذه القطرات في أذنك مرتين يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "\"_______ do you go swimming?\" - \"Twice a week.\"",
+      "options": [
+        "How long",
+        "How often",
+        "How much",
+        "How many"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم How often للسؤال عن معدل تكرار الحدث."
+    }
+  },
+  {
+    "id": "quantifiers_too_much_many",
+    "unit": 2,
+    "title": "محددات الكمية: Too much, Too many, A few, A little, A lot of",
+    "level": "الوحدة 2",
+    "page": 18,
+    "formula": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
+    "explanation": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة.",
+    "examples": [
+      {
+        "en": "Too much sugar is bad for your teeth.",
+        "ar": "الكثير جداً من السكر ضار بأسنانك (اسم غير معدود)."
+      },
+      {
+        "en": "You shouldn't eat too many crisps and sweets.",
+        "ar": "لا ينبغي أن تأكل الكثير جداً من المقرمشات والحلويات (اسم معدود جمع)."
+      },
+      {
+        "en": "A few biscuits are all right, but not too many.",
+        "ar": "بضع بسكويتات لا بأس بها، ولكن ليس الكثير جداً."
+      },
+      {
+        "en": "Add a little salt to your soup.",
+        "ar": "أضف القليل من الملح إلى حسائك."
+      },
+      {
+        "en": "We should drink a lot of water every day.",
+        "ar": "ينبغي علينا شرب الكثير من الماء يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "Eating too _______ sweets is bad for your health.",
+      "options": [
+        "much",
+        "many",
+        "little",
+        "few"
+      ],
+      "correct": 1,
+      "explanation": "كلمة sweets اسم معدود جمع، لذا نستخدم معه too many."
+    }
+  },
+  {
+    "id": "expressing_aches_illnesses",
+    "unit": 2,
+    "title": "التعبير عن الأوجاع والأمراض (Aches and Pains)",
+    "level": "الوحدة 2",
+    "page": 20,
+    "formula": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
+    "explanation": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers).",
+    "examples": [
+      {
+        "en": "I've got a terrible headache. My head aches.",
+        "ar": "أعاني من صداع فظيع. رأسي يؤلمني."
+      },
+      {
+        "en": "Jameel has got a toothache. He should see a dentist.",
+        "ar": "جميل لديه ألم أسنان، ينبغي عليه مراجعة طبيب الأسنان."
+      },
+      {
+        "en": "My right ear hurts badly.",
+        "ar": "أذني اليمنى تؤلمني بشدة."
+      },
+      {
+        "en": "Take these two painkillers with water.",
+        "ar": "تناول هذين المسكنين مع الماء."
+      }
+    ],
+    "quiz": {
+      "question": "Anas has got a stomach ache. His stomach _______.",
+      "options": [
+        "hurts",
+        "aches",
+        "hurting",
+        "both hurts and aches are correct"
+      ],
+      "correct": 3,
+      "explanation": "يمكن القول His stomach hurts أو His stomach aches فكلاهما صحيح بالمعنى ذاته."
+    }
+  },
+  {
+    "id": "limericks_rules_unit2",
+    "unit": 2,
+    "title": "قواعد وهيكل قصائد الليمريك (Limerick Poetry: AABBA)",
+    "level": "الوحدة 2",
+    "page": 24,
+    "formula": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
+    "explanation": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان).",
+    "examples": [
+      {
+        "en": "Lines 1, 2, and 5 rhyme (Peru / blue / shampoo).",
+        "ar": "الأسطر 1 و 2 و 5 تشترك في القافية الأولى A."
+      },
+      {
+        "en": "Lines 3 and 4 rhyme together (faint / paint).",
+        "ar": "السطران 3 و 4 يشتركان في القافية الثانية B."
+      }
+    ],
+    "quiz": {
+      "question": "What is the rhyme scheme of a limerick?",
+      "options": [
+        "ABAB A",
+        "AABBA",
+        "AABB B",
+        "ABBA A"
+      ],
+      "correct": 1,
+      "explanation": "قافية الليمريك هي دائماً AABBA."
+    }
+  },
+  {
+    "id": "want_pattern_unit2",
+    "unit": 2,
+    "title": "صيغة الرغبة والتوجيه: Want + Pronoun + to + Infinitive",
+    "level": "الوحدة 2",
+    "page": 25,
+    "formula": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
+    "explanation": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد.",
+    "examples": [
+      {
+        "en": "My mother wants me to eat more vegetables.",
+        "ar": "تريدني والدتي أن آكل المزيد من الخضار."
+      },
+      {
+        "en": "Your father wants you to help him in his shop.",
+        "ar": "يريدك والدك أن تساعده في دكانه."
+      },
+      {
+        "en": "The coach wants us to take exercise regularly.",
+        "ar": "يريد منا المدرب أن نتدرب بانتظام."
+      }
+    ],
+    "quiz": {
+      "question": "The teacher wants the students _______ arrive on time.",
+      "options": [
+        "to",
+        "for",
+        "in",
+        "at"
+      ],
+      "correct": 0,
+      "explanation": "التركيب الصحيح هو want + someone + to + infinitive."
+    }
+  },
+  {
+    "id": "present_continuous_tense",
+    "unit": 2,
+    "category": "tenses",
+    "title": "زمن المضارع المستمر (Present Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
+    "explanation": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم).",
+    "examples": [
+      {
+        "en": "The students are studying English in the classroom now.",
+        "ar": "الطلاب يدرسون اللغة الإنجليزية في الصف الآن (حدث يقع في هذه اللحظة)."
+      },
+      {
+        "en": "Listen! The baby is crying.",
+        "ar": "استمع! الطفل يبكي (تنبيه لحدث يقع حالياً Listen)."
+      },
+      {
+        "en": "I am not playing video games at the moment.",
+        "ar": "أنا لا ألعب ألعاب الفيديو في الوقت الحالي (نفي المضارع المستمر)."
+      },
+      {
+        "en": "Is Sarah preparing her school project today?",
+        "ar": "هل سارة تعد مشروعها المدرسي اليوم؟"
+      }
+    ],
+    "quiz": {
+      "question": "Look! It _______ heavily outside.",
+      "options": [
+        "rains",
+        "rained",
+        "is raining",
+        "rain"
+      ],
+      "correct": 2,
+      "explanation": "كلمة التنبيه (!Look) تدل على حدث يقع الآن في هذه اللحظة، فنستخدم المضارع المستمر (is raining)."
+    }
+  },
+  {
+    "id": "verbs_of_preference_unit2",
+    "unit": 2,
+    "title": "أفعال التفضيل والمشاعر: like, enjoy, hate, dislike, avoid",
+    "level": "الوحدة 2",
+    "page": 111,
+    "formula": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
+    "explanation": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية.",
+    "examples": [
+      {
+        "en": "He enjoys cycling in the park.",
+        "ar": "هو يستمتع بركوب الدراجة في الحديقة (Verb + -ing)."
+      },
+      {
+        "en": "She dislikes fast games.",
+        "ar": "هي لا تحب الألعاب السريعة (Adjective + noun)."
+      },
+      {
+        "en": "You should avoid eating too much fat.",
+        "ar": "ينبغي عليك تجنب تناول الكثير من الدهون."
+      },
+      {
+        "en": "I love running in the morning.",
+        "ar": "أنا أحب الجري في الصباح."
+      }
+    ],
+    "quiz": {
+      "question": "Zaid avoids _______ exercise because he gets tired quickly.",
+      "options": [
+        "take",
+        "taking",
+        "took",
+        "takes"
+      ],
+      "correct": 1,
+      "explanation": "الفعل avoid يتبعه الفعل بصيغة -ing (Gerund)."
+    }
+  },
+  {
     "id": "sports_verbs",
     "unit": 3,
     "title": "أفعال الرياضات: Play, Go, Do",
     "level": "مهم جداً - الوحدة 3",
     "page": 32,
     "formula": "Play + رياضات الكرة | Go + رياضات تنتهي بـ ing | Do + رياضات فردية وقتالية",
-    "explanation": "1. نستخدم play مع الألعاب التي تستخدم الكرة أو التنافس الجماعي (football, basketball, tennis, chess).\n2. نستخدم go مع الرياضات المنتهية بـ -ing (swimming, cycling, running, riding).\n3. نستخدم do مع الرياضات الفردية، اللياقة والفنون القتالية (karate, judo, yoga, gymnastics).",
+    "explanation": "نستخدم Play مع ألعاب الكرة والألعاب التنافسية (football, tennis, basketball, volleyball). نستخدم Go مع الرياضات والأنشطة الحركية المنتهية بـ -ing (swimming, horse riding, running, sailing). نستخدم Do مع الفنون القتالية والجمباز والأنشطة الفردية (judo, karate, gymnastics, athletics).",
     "examples": [
       {
-        "en": "I play tennis with my brother every Friday.",
-        "ar": "أنا ألعب التنس مع أخي كل جمعة."
+        "en": "I play football with my school team.",
+        "ar": "ألعب كرة القدم مع فريق مدرستي."
       },
       {
-        "en": "We go swimming at the leisure centre.",
-        "ar": "نحن نذهب للسباحة في المركز الترفيهي."
+        "en": "She goes swimming on Fridays.",
+        "ar": "تذهب للسباحة في أيام الجمعة."
       },
       {
-        "en": "My mother does yoga in the morning.",
-        "ar": "والدتي تمارس اليوغا في الصباح."
+        "en": "Saad does judo to get strong and fit.",
+        "ar": "يمارس سعد رياضة الجودو ليصبح قوياً ونشيطاً."
       },
       {
-        "en": "I want to do karate in the holidays.",
-        "ar": "أريد ممارسة الكاراتيه في العطلة."
+        "en": "I'd like to play volleyball.",
+        "ar": "أود لعب كرة الطائرة."
       }
     ],
     "quiz": {
@@ -1375,20 +1821,24 @@ window.GRAMMAR_RULES = [
     "title": "الاعتياد في الماضي (Used to)",
     "level": "الوحدة 3",
     "page": 36,
-    "formula": "الإثبات: Subject + used to + infinitive  |  النفي: Subject + didn't use to + infinitive",
-    "explanation": "تُستخدم used to للحديث عن عادة أو حالة كانت موجودة في الماضي وتغيرت في الحاضر. في حالة النفي والسؤال نحذف حرف الـ d ليصبح use to.",
+    "formula": "Subject + used to + Base Verb (مصدر مجرد) ... but now + Present Simple",
+    "explanation": "تُستخدم صيغة Used to للتعبير عن عادات أو حالات أو صفات كانت موجودة بانتظام في الماضي ولكنها لم تعد موجودة الآن (تغيرت في الحاضر). يتبعها دائماً فعل مصدر مجرد (Base Verb)، وغالباً ما تُربط بـ (but now...) في المضارع البسيط.",
     "examples": [
       {
-        "en": "I used to play tennis, but now I prefer football.",
-        "ar": "كنت معتاداً على لعب التنس، لكن الآن أفضل كرة القدم."
+        "en": "I used to be very shy, but now I am confident.",
+        "ar": "كنت خجولاً جداً في الماضي، لكني الآن واثق من نفسي."
       },
       {
-        "en": "They didn't use to like their English classes. Now they love them!",
-        "ar": "لم يكونوا معتادين على حب دروس الإنجليزية، الآن يحبونها جداً!"
+        "en": "I used to have no friends, but now I have lots.",
+        "ar": "لم يكن لدي أصدقاء في الماضي، أما الآن فلدي الكثير."
       },
       {
-        "en": "Did you use to play video games?",
-        "ar": "هل كنت معتاداً على لعب ألعاب الفيديو؟"
+        "en": "I used to be lazy, but now I train every day.",
+        "ar": "كنت كسولاً في الماضي، لكني الآن أتدرب كل يوم."
+      },
+      {
+        "en": "I used to be bad at schoolwork, but now I get good marks.",
+        "ar": "كنت ضعيفاً في الدراسة، لكني الآن أحصل على درجات ممتازة."
       }
     ],
     "quiz": {
@@ -1478,6 +1928,45 @@ window.GRAMMAR_RULES = [
     }
   },
   {
+    "id": "future_simple_will",
+    "unit": 6,
+    "category": "tenses",
+    "title": "المستقبل البسيط والتنبؤات (Future Simple with: Will)",
+    "level": "الوحدة 6 - صفحة 113",
+    "page": 113,
+    "formula": "Subject + will ('ll) + مصدر الفعل (مجرد)\nالنفي: Subject + will not (won't) + مصدر الفعل (مجرد)\nالسؤال: Will + Subject + مصدر الفعل (مجرد)؟",
+    "explanation": "يُستخدم المستقبل مع will للتعبير عن:\n1) التنبؤات المستقبلية بناءً على الرأي والتخمين (غالباً مع I think, I hope, probably).\n2) اتخاذ قرار فوري وسريع في لحظة التحدث.\n3) تقديم الوعود والعروض.\nالفرق: will للتخمين والقرارات الفورية، بينما be going to للخطط والنوايا المسبقة.",
+    "examples": [
+      {
+        "en": "I think it will be sunny tomorrow.",
+        "ar": "أعتقد أن الجو سيكون مشمساً غداً (تنبؤ مستقبلي مع I think)."
+      },
+      {
+        "en": "The phone is ringing. I will answer it.",
+        "ar": "الهاتف يرن. سأجيب عليه (قرار فوري وسريع في لحظة التحدث)."
+      },
+      {
+        "en": "Don't worry, I won't tell anyone your secret.",
+        "ar": "لا تقلق، لن أخبر أحداً بسرك (وعد بالنفي won't)."
+      },
+      {
+        "en": "Will people travel to Mars in the future?",
+        "ar": "هل سيسافر البشر إلى المريخ في المستقبل؟"
+      }
+    ],
+    "quiz": {
+      "question": "I think our football team _______ the final match next week.",
+      "options": [
+        "will win",
+        "wins",
+        "won",
+        "is winning"
+      ],
+      "correct": 0,
+      "explanation": "مع التعبير (I think) وتوقع شيء في المستقبل، نستخدم المستقبل البسيط مع will والمجرد (will win)."
+    }
+  },
+  {
     "id": "must_vs_should",
     "unit": 7,
     "title": "الإلزام والقوانين مقابل النصيحة (Must vs Should)",
@@ -1540,460 +2029,9 @@ window.GRAMMAR_RULES = [
       "correct": 0,
       "explanation": "نستخدم might للتعبير عن إمكانية واحتمالية هطول المطر."
     }
-  },
-  {
-    "id": "quantifiers_too_much_many",
-    "unit": 2,
-    "title": "محددات الكمية: Too much, Too many, A few, A little, A lot of",
-    "level": "الوحدة 2",
-    "page": 18,
-    "formula": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
-    "explanation": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة.",
-    "examples": [
-      {
-        "en": "Too much sugar is bad for your teeth.",
-        "ar": "الكثير جداً من السكر ضار بأسنانك (اسم غير معدود)."
-      },
-      {
-        "en": "You shouldn't eat too many crisps and sweets.",
-        "ar": "لا ينبغي أن تأكل الكثير جداً من المقرمشات والحلويات (اسم معدود جمع)."
-      },
-      {
-        "en": "A few biscuits are all right, but not too many.",
-        "ar": "بضع بسكويتات لا بأس بها، ولكن ليس الكثير جداً."
-      },
-      {
-        "en": "Add a little salt to your soup.",
-        "ar": "أضف القليل من الملح إلى حسائك."
-      },
-      {
-        "en": "We should drink a lot of water every day.",
-        "ar": "ينبغي علينا شرب الكثير من الماء يومياً."
-      }
-    ],
-    "quiz": {
-      "question": "Eating too _______ sweets is bad for your health.",
-      "options": [
-        "much",
-        "many",
-        "little",
-        "few"
-      ],
-      "correct": 1,
-      "explanation": "كلمة sweets اسم معدود جمع، لذا نستخدم معه too many."
-    }
-  },
-  {
-    "id": "expressing_aches_illnesses",
-    "unit": 2,
-    "title": "التعبير عن الأوجاع والأمراض (Aches and Pains)",
-    "level": "الوحدة 2",
-    "page": 20,
-    "formula": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
-    "explanation": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers).",
-    "examples": [
-      {
-        "en": "I've got a terrible headache. My head aches.",
-        "ar": "أعاني من صداع فظيع. رأسي يؤلمني."
-      },
-      {
-        "en": "Jameel has got a toothache. He should see a dentist.",
-        "ar": "جميل لديه ألم أسنان، ينبغي عليه مراجعة طبيب الأسنان."
-      },
-      {
-        "en": "My right ear hurts badly.",
-        "ar": "أذني اليمنى تؤلمني بشدة."
-      },
-      {
-        "en": "Take these two painkillers with water.",
-        "ar": "تناول هذين المسكنين مع الماء."
-      }
-    ],
-    "quiz": {
-      "question": "Anas has got a stomach ache. His stomach _______.",
-      "options": [
-        "hurts",
-        "aches",
-        "hurting",
-        "both hurts and aches are correct"
-      ],
-      "correct": 3,
-      "explanation": "يمكن القول His stomach hurts أو His stomach aches فكلاهما صحيح بالمعنى ذاته."
-    }
-  },
-  {
-    "id": "verbs_of_preference_unit2",
-    "unit": 2,
-    "title": "أفعال التفضيل والمشاعر: like, enjoy, hate, dislike, avoid",
-    "level": "الوحدة 2",
-    "page": 111,
-    "formula": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
-    "explanation": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية.",
-    "examples": [
-      {
-        "en": "He enjoys cycling in the park.",
-        "ar": "هو يستمتع بركوب الدراجة في الحديقة (Verb + -ing)."
-      },
-      {
-        "en": "She dislikes fast games.",
-        "ar": "هي لا تحب الألعاب السريعة (Adjective + noun)."
-      },
-      {
-        "en": "You should avoid eating too much fat.",
-        "ar": "ينبغي عليك تجنب تناول الكثير من الدهون."
-      },
-      {
-        "en": "I love running in the morning.",
-        "ar": "أنا أحب الجري في الصباح."
-      }
-    ],
-    "quiz": {
-      "question": "Zaid avoids _______ exercise because he gets tired quickly.",
-      "options": [
-        "take",
-        "taking",
-        "took",
-        "takes"
-      ],
-      "correct": 1,
-      "explanation": "الفعل avoid يتبعه الفعل بصيغة -ing (Gerund)."
-    }
-  },
-  {
-    "id": "want_pattern_unit2",
-    "unit": 2,
-    "title": "صيغة الرغبة والتوجيه: Want + Pronoun + to + Infinitive",
-    "level": "الوحدة 2",
-    "page": 25,
-    "formula": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
-    "explanation": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد.",
-    "examples": [
-      {
-        "en": "My mother wants me to eat more vegetables.",
-        "ar": "تريدني والدتي أن آكل المزيد من الخضار."
-      },
-      {
-        "en": "Your father wants you to help him in his shop.",
-        "ar": "يريدك والدك أن تساعده في دكانه."
-      },
-      {
-        "en": "The coach wants us to take exercise regularly.",
-        "ar": "يريد منا المدرب أن نتدرب بانتظام."
-      }
-    ],
-    "quiz": {
-      "question": "The teacher wants the students _______ arrive on time.",
-      "options": [
-        "to",
-        "for",
-        "in",
-        "at"
-      ],
-      "correct": 0,
-      "explanation": "التركيب الصحيح هو want + someone + to + infinitive."
-    }
-  },
-  {
-    "id": "frequency_expressions_unit2",
-    "unit": 2,
-    "title": "تعبيرات وظروف التكرار (Expressions of Frequency: How often...?)",
-    "level": "الوحدة 2",
-    "page": 17,
-    "formula": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
-    "explanation": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً).",
-    "examples": [
-      {
-        "en": "How often do you take exercise? - I go walking every day.",
-        "ar": "كم مرة تمارس الرياضة؟ - أذهب للمشي كل يوم."
-      },
-      {
-        "en": "I play football twice a week with my friends.",
-        "ar": "ألعب كرة القدم مرتين في الأسبوع مع أصدقائي."
-      },
-      {
-        "en": "You should put these drops in your ear twice a day.",
-        "ar": "ينبغي أن تضع هذه القطرات في أذنك مرتين يومياً."
-      }
-    ],
-    "quiz": {
-      "question": "\"_______ do you go swimming?\" - \"Twice a week.\"",
-      "options": [
-        "How long",
-        "How often",
-        "How much",
-        "How many"
-      ],
-      "correct": 1,
-      "explanation": "نستخدم How often للسؤال عن معدل تكرار الحدث."
-    }
-  },
-  {
-    "id": "limericks_rules_unit2",
-    "unit": 2,
-    "title": "قواعد وهيكل قصائد الليمريك (Limerick Poetry: AABBA)",
-    "level": "الوحدة 2",
-    "page": 24,
-    "formula": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
-    "explanation": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان).",
-    "examples": [
-      {
-        "en": "Lines 1, 2, and 5 rhyme (Peru / blue / shampoo).",
-        "ar": "الأسطر 1 و 2 و 5 تشترك في القافية الأولى A."
-      },
-      {
-        "en": "Lines 3 and 4 rhyme together (faint / paint).",
-        "ar": "السطران 3 و 4 يشتركان في القافية الثانية B."
-      }
-    ],
-    "quiz": {
-      "question": "What is the rhyme scheme of a limerick?",
-      "options": [
-        "ABAB A",
-        "AABBA",
-        "AABB B",
-        "ABBA A"
-      ],
-      "correct": 1,
-      "explanation": "قافية الليمريك هي دائماً AABBA."
-    }
-  },
-  {
-    "id": "present_simple_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن المضارع البسيط (Present Simple Tense)",
-    "level": "أساسيات الأزمنة - صفحة 110",
-    "page": 110,
-    "formula": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
-    "explanation": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week.",
-    "examples": [
-      {
-        "en": "The sun rises in the east.",
-        "ar": "الشمس تشرق من الشرق (حقيقة علمية ثابتة)."
-      },
-      {
-        "en": "Muna usually walks to school every morning.",
-        "ar": "منى عادةً تمشي إلى المدرسة كل صباح (عادة وروتين مع ظرف التكرار usually)."
-      },
-      {
-        "en": "They don't eat junk food on weekdays.",
-        "ar": "هم لا يتناولون الوجبات السريعة خلال أيام الأسبوع (نفي مع don't)."
-      },
-      {
-        "en": "Does Ali play tennis on Fridays?",
-        "ar": "هل يلعب علي التنس في أيام الجمعة؟ (سؤال يبدأ بـ Does والفاعل مفرد)."
-      }
-    ],
-    "quiz": {
-      "question": "Ali always _______ his homework before dinner.",
-      "options": [
-        "finish",
-        "finishes",
-        "finished",
-        "finishing"
-      ],
-      "correct": 1,
-      "explanation": "مع الفاعل المفرد الغائب (Ali) نضيف s/es إلى نهاية الفعل في المضارع البسيط (finishes)."
-    }
-  },
-  {
-    "id": "past_simple_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن الماضي البسيط (Past Simple Tense)",
-    "level": "أساسيات الأزمنة - صفحة 111",
-    "page": 111,
-    "formula": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
-    "explanation": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020.",
-    "examples": [
-      {
-        "en": "We visited the national museum in Baghdad yesterday.",
-        "ar": "زرنا المتحف الوطني في بغداد بالأمس (فعل منتظم ينتهي بـ ed)."
-      },
-      {
-        "en": "Zaid went to the market and bought some fruit.",
-        "ar": "ذهب زيد إلى السوق واشترى بعض الفاكهة (أفعال شاذة: went و bought)."
-      },
-      {
-        "en": "I didn't watch television last night.",
-        "ar": "لم أشاهد التلفاز الليلة الماضية (في النفي مع didn't يعود الفعل لمصدره watch)."
-      },
-      {
-        "en": "Did you see Noor at the library?",
-        "ar": "هل رأيت نور في المكتبة؟ (سؤال في الماضي يبدأ بـ Did يليه مجرد see)."
-      }
-    ],
-    "quiz": {
-      "question": "My brother _______ a new bicycle two days ago.",
-      "options": [
-        "buy",
-        "bought",
-        "buys",
-        "buying"
-      ],
-      "correct": 1,
-      "explanation": "وجود دلالة الماضي (two days ago) يقتضي استخدام صيغة الماضي الشاذ للفعل buy وهي (bought)."
-    }
-  },
-  {
-    "id": "present_continuous_tense",
-    "unit": 2,
-    "category": "tenses",
-    "title": "زمن المضارع المستمر (Present Continuous Tense)",
-    "level": "أساسيات الأزمنة - صفحة 110",
-    "page": 110,
-    "formula": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
-    "explanation": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم).",
-    "examples": [
-      {
-        "en": "The students are studying English in the classroom now.",
-        "ar": "الطلاب يدرسون اللغة الإنجليزية في الصف الآن (حدث يقع في هذه اللحظة)."
-      },
-      {
-        "en": "Listen! The baby is crying.",
-        "ar": "استمع! الطفل يبكي (تنبيه لحدث يقع حالياً Listen)."
-      },
-      {
-        "en": "I am not playing video games at the moment.",
-        "ar": "أنا لا ألعب ألعاب الفيديو في الوقت الحالي (نفي المضارع المستمر)."
-      },
-      {
-        "en": "Is Sarah preparing her school project today?",
-        "ar": "هل سارة تعد مشروعها المدرسي اليوم؟"
-      }
-    ],
-    "quiz": {
-      "question": "Look! It _______ heavily outside.",
-      "options": [
-        "rains",
-        "rained",
-        "is raining",
-        "rain"
-      ],
-      "correct": 2,
-      "explanation": "كلمة التنبيه (!Look) تدل على حدث يقع الآن في هذه اللحظة، فنستخدم المضارع المستمر (is raining)."
-    }
-  },
-  {
-    "id": "past_continuous_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن الماضي المستمر (Past Continuous Tense)",
-    "level": "أساسيات الأزمنة - صفحة 111",
-    "page": 111,
-    "formula": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
-    "explanation": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They).",
-    "examples": [
-      {
-        "en": "I was doing my homework at 8 o'clock yesterday evening.",
-        "ar": "كنت أحل واجبي في تمام الساعة الثامنة مساء أمس (فعل استمر في وقت محدد بالماضي)."
-      },
-      {
-        "en": "The boys were playing football in the park all afternoon.",
-        "ar": "كان الأولاد يلعبون كرة القدم في المنتزه طوال فترة بعد الظهر."
-      },
-      {
-        "en": "She wasn't sleeping when I called her.",
-        "ar": "لم تكن نائمة عندما اتصلتُ بها (نفي الماضي المستمر مع wasn't)."
-      },
-      {
-        "en": "What were you doing at this time yesterday?",
-        "ar": "ماذا كنت تفعل في مثل هذا الوقت بالأمس؟"
-      }
-    ],
-    "quiz": {
-      "question": "They _______ for the bus when the rain started.",
-      "options": [
-        "was waiting",
-        "were waiting",
-        "is waiting",
-        "are waiting"
-      ],
-      "correct": 1,
-      "explanation": "مع الفاعل الجمع (They) في زمن الماضي المستمر نستخدم (were waiting)."
-    }
-  },
-  {
-    "id": "past_simple_continuous_when_while",
-    "unit": 1,
-    "category": "tenses",
-    "title": "الربط بين الماضي البسيط والمستمر (When & While)",
-    "level": "مهم جداً للامتحانات - صفحة 112",
-    "page": 112,
-    "formula": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
-    "explanation": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث.",
-    "examples": [
-      {
-        "en": "While we were having lunch, a bird flew into the kitchen.",
-        "ar": "بينما كنا نتناول الغداء (مستمر طويل)، طار طائر إلى المطبخ (بسيط قاطع بعد While)."
-      },
-      {
-        "en": "Ahmed was riding his bicycle when he fell over.",
-        "ar": "كان أحمد يقود دراجته (مستمر) عندما سقط أرضاً (بسيط قاطع بعد when)."
-      },
-      {
-        "en": "While she was reading a story, the doorbell rang.",
-        "ar": "بينما كانت تقرأ قصة، رن جرس الباب."
-      },
-      {
-        "en": "What were they doing when the teacher entered the classroom?",
-        "ar": "ماذا كانوا يفعلون عندما دخل المعلم الصف؟"
-      }
-    ],
-    "quiz": {
-      "question": "While I _______ to school, I met my best friend.",
-      "options": [
-        "was walking",
-        "walked",
-        "walk",
-        "am walking"
-      ],
-      "correct": 0,
-      "explanation": "بعد أداة While يأتي دائماً ماضٍ مستمر، ومع الضمير I نختار (was walking)."
-    }
-  },
-  {
-    "id": "future_simple_will",
-    "unit": 6,
-    "category": "tenses",
-    "title": "المستقبل البسيط والتنبؤات (Future Simple with: Will)",
-    "level": "الوحدة 6 - صفحة 113",
-    "page": 113,
-    "formula": "Subject + will ('ll) + مصدر الفعل (مجرد)\nالنفي: Subject + will not (won't) + مصدر الفعل (مجرد)\nالسؤال: Will + Subject + مصدر الفعل (مجرد)؟",
-    "explanation": "يُستخدم المستقبل مع will للتعبير عن:\n1) التنبؤات المستقبلية بناءً على الرأي والتخمين (غالباً مع I think, I hope, probably).\n2) اتخاذ قرار فوري وسريع في لحظة التحدث.\n3) تقديم الوعود والعروض.\nالفرق: will للتخمين والقرارات الفورية، بينما be going to للخطط والنوايا المسبقة.",
-    "examples": [
-      {
-        "en": "I think it will be sunny tomorrow.",
-        "ar": "أعتقد أن الجو سيكون مشمساً غداً (تنبؤ مستقبلي مع I think)."
-      },
-      {
-        "en": "The phone is ringing. I will answer it.",
-        "ar": "الهاتف يرن. سأجيب عليه (قرار فوري وسريع في لحظة التحدث)."
-      },
-      {
-        "en": "Don't worry, I won't tell anyone your secret.",
-        "ar": "لا تقلق، لن أخبر أحداً بسرك (وعد بالنفي won't)."
-      },
-      {
-        "en": "Will people travel to Mars in the future?",
-        "ar": "هل سيسافر البشر إلى المريخ في المستقبل؟"
-      }
-    ],
-    "quiz": {
-      "question": "I think our football team _______ the final match next week.",
-      "options": [
-        "will win",
-        "wins",
-        "won",
-        "is winning"
-      ],
-      "correct": 0,
-      "explanation": "مع التعبير (I think) وتوقع شيء في المستقبل، نستخدم المستقبل البسيط مع will والمجرد (will win)."
-    }
   }
 ];
 
-// بطاقات المفاهيم والرسوم التوضيحية المصممة للدروس والمواضيع
 window.TOPIC_CARDS = {
   "261": {
     "unit": 1,
@@ -3394,6 +3432,771 @@ window.TOPIC_CARDS = {
         {
           "en": "A little healthy habit every day creates a lifetime of fitness.",
           "ar": "عادة صحية بسيطة يومياً تصنع حياة مفعمة باللياقة."
+        }
+      ]
+    }
+  },
+  "283": {
+    "unit": 3,
+    "lessonNumber": 1,
+    "pages": [
+      28
+    ],
+    "titleAr": "المركز الرياضي وتصنيف الرياضات",
+    "titleEn": "The Sports Centre & Sports Categorization",
+    "themeColor": "#f97316",
+    "icon": "⚽",
+    "sections": [
+      {
+        "name": "Sports Centre",
+        "ar": "المركز الرياضي",
+        "icon": "🏟️",
+        "def": "A community place equipped for different sports, games and fitness workouts."
+      },
+      {
+        "name": "Play (Ball Games)",
+        "ar": "يلعب (ألعاب الكرة والفرق)",
+        "icon": "🏐",
+        "def": "Used with competitive sports and games played with a ball: play football, tennis, volleyball."
+      },
+      {
+        "name": "Go (-ing Sports)",
+        "ar": "يذهب لممارسة (رياضات -ing)",
+        "icon": "🏊‍♂️",
+        "def": "Used with individual sports ending in -ing: go swimming, horse riding, sailing."
+      },
+      {
+        "name": "Do (Martial Arts)",
+        "ar": "يمارس (الفنون القتالية والفردية)",
+        "icon": "🥋",
+        "def": "Used with martial arts and non-team recreational activities: do judo, karate, gymnastics."
+      },
+      {
+        "name": "Get Fit",
+        "ar": "يستعيد اللياقة والنشاط",
+        "icon": "💪",
+        "def": "To become healthy and strong through regular physical exercise."
+      },
+      {
+        "name": "Sports Lessons",
+        "ar": "دروس تدريبية رياضية",
+        "icon": "📋",
+        "def": "Scheduled instructional sessions for learning technique from sports coaches."
+      }
+    ],
+    "grammarFocus": {
+      "title": "أفعال الرياضات: Play, Go, Do",
+      "rule": "Play + Ball/Team games  |  Go + V-ing sports  |  Do + Martial arts & Gym",
+      "examples": [
+        {
+          "en": "I play football with my classmates on Saturday.",
+          "ar": "ألعب كرة القدم مع زملائي يوم السبت."
+        },
+        {
+          "en": "She goes swimming twice a week.",
+          "ar": "تذهب للسباحة مرتين في الأسبوع."
+        },
+        {
+          "en": "Saad does judo at the local sports centre.",
+          "ar": "يمارس سعد رياضة الجودو في المركز الرياضي المحلي."
+        },
+        {
+          "en": "What sports would you like to do? - I'd like to play volleyball.",
+          "ar": "ما الرياضات التي ترغب بممارستها؟ - أود لعب كرة الطائرة."
+        }
+      ]
+    }
+  },
+  "284": {
+    "unit": 3,
+    "lessonNumber": 2,
+    "pages": [
+      29
+    ],
+    "titleAr": "جدول المواعيد ومستويات التدريب",
+    "titleEn": "The Timetable & Training Levels",
+    "themeColor": "#0284c7",
+    "icon": "📅",
+    "sections": [
+      {
+        "name": "Timetable",
+        "ar": "جدول المواعيد",
+        "icon": "🗓️",
+        "def": "A structured schedule showing when classes, sports sessions and events take place."
+      },
+      {
+        "name": "Beginners",
+        "ar": "المبتدئون",
+        "icon": "🌱",
+        "def": "Students who have never practiced the sport before and are learning the fundamentals."
+      },
+      {
+        "name": "Advanced",
+        "ar": "المتقدمون",
+        "icon": "⭐",
+        "def": "Athletes with high skill levels wanting intensive and competitive training."
+      },
+      {
+        "name": "Team Practice",
+        "ar": "تدريب الفريق",
+        "icon": "👥",
+        "def": "Coordinated training for members representing a school or club team."
+      },
+      {
+        "name": "How good are you at...?",
+        "ar": "ما مدى براعتك في...؟",
+        "icon": "🎯",
+        "def": "Question used to inquire about someone's proficiency or skill level in a sport."
+      },
+      {
+        "name": "Leaflet",
+        "ar": "منشور / مطوية تعريفية",
+        "icon": "📄",
+        "def": "A printed informative booklet containing the sports timetable and contact details."
+      }
+    ],
+    "grammarFocus": {
+      "title": "السؤال عن المواعيد ومستوى المهارة (Timetable & Skill Enquiries)",
+      "rule": "When is [class]? On [Day], from [Time] to [Time]  |  How good are you at + [Noun/V-ing]?",
+      "examples": [
+        {
+          "en": "When is the volleyball beginners' class? - On Monday, from 5:00 to 7:00.",
+          "ar": "متى حصة كرة الطائرة للمبتدئين؟ - يوم الاثنين، من الخامسة إلى السابعة."
+        },
+        {
+          "en": "How good are you at basketball? - I'm quite good, but I want to practise.",
+          "ar": "ما مدى براعتك في كرة السلة؟ - أنا جيد إلى حد ما، لكني أريد التدرب."
+        },
+        {
+          "en": "I've never played volleyball. I'd like to learn.",
+          "ar": "لم ألعب كرة الطائرة من قبل. أود تعلمها."
+        }
+      ]
+    }
+  },
+  "285": {
+    "unit": 3,
+    "lessonNumber": 3,
+    "pages": [
+      30
+    ],
+    "titleAr": "حجز الدروس والمكالمات الرسمية",
+    "titleEn": "Booking Lessons & Phone Etiquette",
+    "themeColor": "#0d9488",
+    "icon": "📞",
+    "sections": [
+      {
+        "name": "Sports Officer",
+        "ar": "موظف المركز الرياضي",
+        "icon": "👨‍💼",
+        "def": "The official who answers enquiries, manages registrations and schedules lessons."
+      },
+      {
+        "name": "Book a Lesson",
+        "ar": "يحجز درساً تدريبياً",
+        "icon": "📝",
+        "def": "To reserve a place in a coaching session or group practice."
+      },
+      {
+        "name": "School Team",
+        "ar": "فريق المدرسة",
+        "icon": "🏅",
+        "def": "The selected group of students who compete against other schools."
+      },
+      {
+        "name": "Horse Riding",
+        "ar": "ركوب الخيل والفروسية",
+        "icon": "🐎",
+        "def": "The activity or sport of riding horses; uses the verb 'go' (go horse riding)."
+      },
+      {
+        "name": "Judo Practice",
+        "ar": "تدريب الجودو",
+        "icon": "🥋",
+        "def": "Martial art training session focusing on balance, throws and self-discipline."
+      },
+      {
+        "name": "Can I help you?",
+        "ar": "هل يمكنني مساعدتك؟",
+        "icon": "🤝",
+        "def": "Standard polite telephone greeting used by service staff."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التعبير عن الرغبة وطلب الحجز (I'd like to + Infinitive)",
+      "rule": "Subject + would like to ('d like to) + base verb (مصدر مجرد)",
+      "examples": [
+        {
+          "en": "I'd like to play volleyball in the school team.",
+          "ar": "أود لعب كرة الطائرة في فريق المدرسة."
+        },
+        {
+          "en": "Dave would like to do judo on Tuesdays.",
+          "ar": "يود ديف ممارسة الجودو يوم الثلاثاء."
+        },
+        {
+          "en": "Liz would like to learn horse riding.",
+          "ar": "تود ليز تعلم ركوب الخيل."
+        }
+      ]
+    }
+  },
+  "286": {
+    "unit": 3,
+    "lessonNumber": 4,
+    "pages": [
+      31
+    ],
+    "titleAr": "مباراة كرة السلة ومصطلحات الفوز والخسارة",
+    "titleEn": "The Basketball Game & Match Outcomes",
+    "themeColor": "#ea580c",
+    "icon": "🏀",
+    "sections": [
+      {
+        "name": "Won the game",
+        "ar": "فاز بالمباراة (win/won)",
+        "icon": "🏆",
+        "def": "Achieved victory in a match: Babil won the game."
+      },
+      {
+        "name": "Lost the game",
+        "ar": "خسر المباراة (lose/lost)",
+        "icon": "📉",
+        "def": "Suffered defeat in a sporting event: Kirkuk lost the game."
+      },
+      {
+        "name": "Beat (Defeated)",
+        "ar": "هزم المنافس (beat/beat)",
+        "icon": "🥊",
+        "def": "Defeated an opposing team or player: Babil beat Kirkuk (60-54)."
+      },
+      {
+        "name": "Lost to",
+        "ar": "خسر أمام (lost to)",
+        "icon": "🤝",
+        "def": "Was defeated by an opponent: Kirkuk lost to Babil."
+      },
+      {
+        "name": "Fitter & Faster",
+        "ar": "أكثر لياقة وأسرع",
+        "icon": "⚡",
+        "def": "Comparative adjectives describing superior physical condition and running speed."
+      },
+      {
+        "name": "High Jump",
+        "ar": "الوثب العالي",
+        "icon": "🦘",
+        "def": "Athletics field event where competitors jump over a horizontal bar."
+      }
+    ],
+    "grammarFocus": {
+      "title": "أفعال النتائج والمقارنة (Win, Lose, Beat & Comparatives)",
+      "rule": "Win/Lose + Game/Match  |  Beat + Opponent  |  Adj + -er + than",
+      "examples": [
+        {
+          "en": "Babil beat Kirkuk by six points.",
+          "ar": "هزمت بابل كركوك بفارق ست نقاط."
+        },
+        {
+          "en": "Kirkuk lost to Babil in the final minutes.",
+          "ar": "خسرت كركوك أمام بابل في الدقائق الأخيرة."
+        },
+        {
+          "en": "Other players are fitter and run faster than us.",
+          "ar": "اللاعبون الآخرون أكثر لياقة ويركضون أسرع منا."
+        },
+        {
+          "en": "Samir jumped higher than Hilal last week.",
+          "ar": "قفز سمير أعلى من هلال الأسبوع الماضي."
+        }
+      ]
+    }
+  },
+  "287": {
+    "unit": 3,
+    "lessonNumber": 5,
+    "pages": [
+      32
+    ],
+    "titleAr": "الألعاب الأولمبية: التاريخ والميثاق والميداليات",
+    "titleEn": "The Olympic Games: History, Charter & Medals",
+    "themeColor": "#eab308",
+    "icon": "🥇",
+    "sections": [
+      {
+        "name": "Olympic Games",
+        "ar": "الألعاب الأولمبية",
+        "icon": "🏛️",
+        "def": "The foremost international multi-sport event held every four years in a different host city."
+      },
+      {
+        "name": "Pierre de Coubertin",
+        "ar": "بيير دي كوبرتان",
+        "icon": "🎩",
+        "def": "French educator who founded the International Olympic Committee and revived modern Games in 1896."
+      },
+      {
+        "name": "Olympic Creed",
+        "ar": "الميثاق الأولمبي",
+        "icon": "📜",
+        "def": "'The most important thing in the Olympic Games is not to win, but to take part.'"
+      },
+      {
+        "name": "Gold, Silver, Bronze",
+        "ar": "ذهب، فضة، برونز",
+        "icon": "🎖️",
+        "def": "Medals awarded to first (gold), second (silver), and third (bronze) place podium finishers."
+      },
+      {
+        "name": "Olympic Rings",
+        "ar": "الحلقات الأولمبية",
+        "icon": "⭕",
+        "def": "Five interlocking rings representing the union of the world's five continents in friendly competition."
+      },
+      {
+        "name": "Take part (Compete)",
+        "ar": "يشارك في المنافسات",
+        "icon": "🏃",
+        "def": "To participate actively in sporting contests alongside global athletes."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الماضي البسيط والترتيب العددي (Past Events & Ordinal Numbers)",
+      "rule": "Past Simple (took place, started, competed)  |  Ordinals: first, second, third",
+      "examples": [
+        {
+          "en": "The ancient Olympic Games took place in Greece 2,000 years ago.",
+          "ar": "أقيمت الألعاب الأولمبية القديمة في اليونان قبل 2000 عام."
+        },
+        {
+          "en": "Pierre de Coubertin started the modern Games in 1896.",
+          "ar": "أسس بيير دي كوبرتان الألعاب الحديثة عام 1896."
+        },
+        {
+          "en": "The athlete who comes second gets a silver medal.",
+          "ar": "الرياضي الذي يحل ثانياً يحصل على الميدالية الفضية."
+        }
+      ]
+    }
+  },
+  "288": {
+    "unit": 3,
+    "lessonNumber": 6,
+    "pages": [
+      33
+    ],
+    "titleAr": "أساطير وأرقام قياسية أولمبية تاريخية",
+    "titleEn": "Olympic Superstars & World Records",
+    "themeColor": "#8b5cf6",
+    "icon": "⭐",
+    "sections": [
+      {
+        "name": "Olympic Record",
+        "ar": "رقم قياسي أولمبي",
+        "icon": "⏱️",
+        "def": "The best historic performance registered in an Olympic event worldwide."
+      },
+      {
+        "name": "Sprinter",
+        "ar": "عدّاء المسافات القصيرة",
+        "icon": "👟",
+        "def": "An athlete who runs short distances (like the 100m) at top speed."
+      },
+      {
+        "name": "Florence Griffith Joyner",
+        "ar": "فلورنس غريفيث جوينر",
+        "icon": "🏃‍♀️",
+        "def": "Legendary US sprinter who set the 100m world record (10.62s) in 1988."
+      },
+      {
+        "name": "Michael Phelps",
+        "ar": "مايكل فيلبس",
+        "icon": "🏊‍♂️",
+        "def": "US swimming superstar who holds the record with 23 Olympic gold medals."
+      },
+      {
+        "name": "Long Jump (Bob Beamon)",
+        "ar": "الوثب الطويل (بوب بيمون)",
+        "icon": "📐",
+        "def": "Athletics jumping event; Beamon jumped 8.90m in Mexico City 1968."
+      },
+      {
+        "name": "Dedication & Hard Work",
+        "ar": "التفاني والجهد المضني",
+        "icon": "🔥",
+        "def": "The unwavering commitment required to train daily and overcome athletic limits."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ التفضيل العليا وقراءة الأرقام (Superlatives & Decimals)",
+      "rule": "The + Adj + -est (the fastest, youngest, oldest)  |  The most + Adj (the most interesting)",
+      "examples": [
+        {
+          "en": "Florence ran the fastest women's 100 metres in history (10.62 seconds).",
+          "ar": "ركضت فلورنس أسرع 100 متر للسيدات في التاريخ (10.62 ثانية)."
+        },
+        {
+          "en": "Michael Phelps has the biggest number of gold medals (23 golds).",
+          "ar": "يمتلك مايكل فيلبس أكبر عدد من الميداليات الذهبية (23 ذهبية)."
+        },
+        {
+          "en": "Inge Sørensen was the youngest individual medal winner (12 years old).",
+          "ar": "كانت إنجي سورنسن أصغر فائزة بميدالية فردية (بعمر 12 عاماً)."
+        }
+      ]
+    }
+  },
+  "289": {
+    "unit": 3,
+    "lessonNumber": 7,
+    "pages": [
+      34
+    ],
+    "titleAr": "التغيرات الشخصية والبدنية مع قاعدة Used to",
+    "titleEn": "Personal Changes & Used to Structure",
+    "themeColor": "#059669",
+    "icon": "🥋",
+    "sections": [
+      {
+        "name": "Personality",
+        "ar": "الشخصية والطباع",
+        "icon": "🧠",
+        "def": "A person's distinctive character, attitudes and emotional patterns."
+      },
+      {
+        "name": "Confidence",
+        "ar": "الثقة بالنفس",
+        "icon": "🦁",
+        "def": "Belief in one's own abilities, strength and judgment; opposite of shyness."
+      },
+      {
+        "name": "Shyness",
+        "ar": "الخجل والانطوائية",
+        "icon": "🙈",
+        "def": "The state of feeling nervous, hesitant or timid around other people."
+      },
+      {
+        "name": "Train (Practise)",
+        "ar": "يتدرب بانتظام",
+        "icon": "🏋️",
+        "def": "To exercise and practice disciplined skills to prepare for athletic performance."
+      },
+      {
+        "name": "Schoolwork",
+        "ar": "الواجبات والتحصيل المدرسي",
+        "icon": "📚",
+        "def": "Academic studies, homework assignments and classroom performance."
+      },
+      {
+        "name": "Judo for Iraq",
+        "ar": "تمثيل العراق في الجودو",
+        "icon": "🇮🇶",
+        "def": "Saad's ultimate patriotic dream to compete internationally for his country."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الاعتياد في الماضي والتغير للحاضر (Used to vs Now)",
+      "rule": "Subject + used to + base verb ... but now + Present Simple",
+      "examples": [
+        {
+          "en": "I used to be very shy, but judo has given me confidence.",
+          "ar": "كنت خجولاً جداً في الماضي، لكن الجودو منحتني الثقة بالنفس."
+        },
+        {
+          "en": "I used to have no friends, but now I have lots.",
+          "ar": "لم يكن لدي أصدقاء في الماضي، أما الآن فلدي الكثير منهم."
+        },
+        {
+          "en": "Saad used to be unhealthy and unfit, but now he is strong and fit.",
+          "ar": "كان سعد غير لائق بدنياً في الماضي، لكنه الآن قوي ونشيط."
+        },
+        {
+          "en": "I used to be bad at schoolwork, but now I get good marks.",
+          "ar": "كنت ضعيفاً في الدراسة في الماضي، لكني الآن أحصل على درجات ممتازة."
+        }
+      ]
+    }
+  },
+  "290": {
+    "unit": 3,
+    "lessonNumber": 8,
+    "pages": [
+      35
+    ],
+    "titleAr": "ألعاب الألفاظ واللسان وتراكيب الأصوات",
+    "titleEn": "Tongue-Twisters & Sound Patterns",
+    "themeColor": "#d97706",
+    "icon": "👅",
+    "sections": [
+      {
+        "name": "Tongue-twister",
+        "ar": "ألعوبة لسانية / جملة صعبة النطق",
+        "icon": "🔄",
+        "def": "A phrase or sentence designed to be difficult to articulate properly due to repetitive sounds."
+      },
+      {
+        "name": "Alliteration",
+        "ar": "الجناس الاستهلالي للأصوات",
+        "icon": "🔤",
+        "def": "The repetition of the same letter or sound at the beginning of adjacent words."
+      },
+      {
+        "name": "Seashells & Seashore",
+        "ar": "أصداف البحر والشاطئ",
+        "icon": "🐚",
+        "def": "Classic /s/ and /ʃ/ tongue-twister: 'She sells seashells on the seashore'."
+      },
+      {
+        "name": "Peter Piper",
+        "ar": "بيتر بايبر (صوت P)",
+        "icon": "🌶️",
+        "def": "Famous English alliterative rhyme: 'Peter Piper picked a peck of pickled pepper'."
+      },
+      {
+        "name": "Word Categories",
+        "ar": "أصناف الكلمات (أسماء/أفعال/صفات)",
+        "icon": "🏷️",
+        "def": "Grouping words by parts of speech (nouns, verbs, adjectives) to compose sentences."
+      },
+      {
+        "name": "Pronunciation Practice",
+        "ar": "التدريب على سلامة النطق",
+        "icon": "🎙️",
+        "def": "Exercising mouth and tongue muscles for clear and confident English speaking."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صياغة التراكيب الصوتية وتصنيف الكلمات (Word Classes in Sentences)",
+      "rule": "Noun + Verb + Adjective + Object (all sharing the same initial consonant sound)",
+      "examples": [
+        {
+          "en": "She sells seashells on the seashore.",
+          "ar": "هي تبيع أصداف البحر على شاطئ البحر."
+        },
+        {
+          "en": "Peter Piper picked a peck of pickled pepper.",
+          "ar": "التقط بيتر بايبر كيلاً من الفلفل المخلل."
+        },
+        {
+          "en": "Bashir bought big brown balloons and broke them badly.",
+          "ar": "اشترى بشير بالونات بنية كبيرة وفجّرها بقوة."
+        }
+      ]
+    }
+  },
+  "291": {
+    "unit": 3,
+    "lessonNumber": 9,
+    "pages": [
+      36
+    ],
+    "titleAr": "المراجعة الشاملة لمهارات وقواعد الوحدة الثالثة",
+    "titleEn": "Unit 3 Comprehensive Round Up & Review",
+    "themeColor": "#4f46e5",
+    "icon": "🎯",
+    "sections": [
+      {
+        "name": "Sports Preferences",
+        "ar": "تفضيلات الرياضة المطلوبة",
+        "icon": "💬",
+        "def": "Expressing sporting interests using 'I'd like to play / do / go'."
+      },
+      {
+        "name": "Timetable Queries",
+        "ar": "الاستفسار عن جداول التوقيت",
+        "icon": "⏰",
+        "def": "Asking when classes occur (On [Day], from [X] to [Y])."
+      },
+      {
+        "name": "Expressing Changes",
+        "ar": "التعبير عن التغيرات",
+        "icon": "🔄",
+        "def": "Contrasting past habits with present reality using 'used to ... but now'."
+      },
+      {
+        "name": "Reading Years & Decimals",
+        "ar": "قراءة السنوات والكسور العشرية",
+        "icon": "🔢",
+        "def": "Pronouncing years (1996, 2015) and record times (28.28 seconds)."
+      },
+      {
+        "name": "Skill Proficiency",
+        "ar": "بيان مستوى الكفاءة الرياضية",
+        "icon": "📊",
+        "def": "Stating ability: 'I'm quite good, but I want to practise'."
+      },
+      {
+        "name": "Paragraph Writing",
+        "ar": "كتابة فقرة وصفية متكاملة",
+        "icon": "✍️",
+        "def": "Structuring notes and turning ideas into a well-sequenced descriptive text."
+      }
+    ],
+    "grammarFocus": {
+      "title": "ملخص وظائف وقواعد الوحدة الثالثة (Unit 3 Functions Bank)",
+      "rule": "Used to (الاعتياد في الماضي) + Sports Verbs (play/go/do) + Polite Requests ('d like to)",
+      "examples": [
+        {
+          "en": "What sports would you like to do? - I'd like to do gymnastics.",
+          "ar": "ما الرياضات التي تود ممارستها؟ - أود ممارسة الجمباز."
+        },
+        {
+          "en": "When is the advanced horse riding class? - On Saturday, from 3:00 to 5:00.",
+          "ar": "متى حصة الفروسية للمتقدمين؟ - يوم السبت، من 3:00 إلى 5:00."
+        },
+        {
+          "en": "I used to be lazy, but now I work hard.",
+          "ar": "كنت كسولاً في الماضي، لكني الآن أعمل بجد."
+        },
+        {
+          "en": "Florence's time was twenty-eight point two eight seconds.",
+          "ar": "كان توقيت فلورنس ثمانية وعشرين فاصل ثمانية وعشرين ثانية."
+        }
+      ]
+    }
+  },
+  "292": {
+    "unit": 3,
+    "lessonNumber": 10,
+    "pages": [
+      37,
+      38
+    ],
+    "titleAr": "قصة جاد وجوني: مباراة كرة القدم في ميونيخ",
+    "titleEn": "Story Time: The Football Match in Munich",
+    "themeColor": "#dc2626",
+    "icon": "🏟️",
+    "sections": [
+      {
+        "name": "Allianz Arena",
+        "ar": "ملعب أليانز أرينا",
+        "icon": "🏟️",
+        "def": "The iconic Munich stadium whose exterior luminous panels can completely change colour."
+      },
+      {
+        "name": "Bayern Munich",
+        "ar": "نادي بايرن ميونيخ",
+        "icon": "⚽",
+        "def": "Legendary German football club with hundreds of national and European championship trophies."
+      },
+      {
+        "name": "Trophy Room",
+        "ar": "غرفة الكؤوس والبطولات",
+        "icon": "🏆",
+        "def": "The club hall displaying cups, league shields and UEFA Champions League silverware."
+      },
+      {
+        "name": "Munich Under-12s",
+        "ar": "فريق فتيات ميونيخ تحت 12",
+        "icon": "👧",
+        "def": "The skilled youth girls' football team that defeated the boys 9-0 through exceptional teamwork."
+      },
+      {
+        "name": "Goalkeeper",
+        "ar": "حارس المرمى",
+        "icon": "🧤",
+        "def": "The player defending the goal; Marcus volunteered as keeper with humorous results."
+      },
+      {
+        "name": "Sportsmanship & Humour",
+        "ar": "الروح الرياضية والمرح",
+        "icon": "😄",
+        "def": "Accepting defeat gracefully and sharing laughs together after an exciting day."
+      }
+    ],
+    "grammarFocus": {
+      "title": "السرد القصصي في الماضي والحوارات المباشرة (Narrative Past Tense)",
+      "rule": "Past Simple (went past, kicked, scored)  |  Direct Speech ('Why didn't you catch it?')",
+      "examples": [
+        {
+          "en": "She went past me, then past Jad, and kicked the ball into the goal.",
+          "ar": "راوغتني ثم راوغت جاد وركلت الكرة بقوة داخل المرمى."
+        },
+        {
+          "en": "Aziz said: 'I used to play for my school team in Algeria.'",
+          "ar": "قال عزيز: 'كنت ألعب لفريق مدرستي في الجزائر في الماضي'."
+        },
+        {
+          "en": "The girls were too good. By the end of the match, they won 9-0.",
+          "ar": "كانت الفتيات بارعات للغاية، ومع نهاية المباراة فزن بنتيجة 9-0."
+        },
+        {
+          "en": "'Why didn't you catch it, Johnny? Use your hands!' laughed Marcus.",
+          "ar": "'لماذا لم تمسكها يا جوني؟ استخدم يديك!' قالها ماركوس ضاحكاً."
+        }
+      ]
+    }
+  },
+  "293": {
+    "unit": 3,
+    "lessonNumber": 11,
+    "pages": [
+      39,
+      40,
+      41,
+      42
+    ],
+    "titleAr": "مشروع: رياضات مختلفة واستطلاع رأي الطلاب",
+    "titleEn": "Project: Different Sports & The Sports Survey",
+    "themeColor": "#0891b2",
+    "icon": "🛹",
+    "sections": [
+      {
+        "name": "Skateboarding",
+        "ar": "التزلج على الألواح",
+        "icon": "🛹",
+        "def": "Action sport on a wheeled board involving tricks and agility; now an official Olympic event."
+      },
+      {
+        "name": "Ultimate Frisbee",
+        "ar": "الفريسبي التنافسي (ألتميت)",
+        "icon": "🥏",
+        "def": "Non-contact team sport played with a flying disc between two squads of seven players."
+      },
+      {
+        "name": "Surfing",
+        "ar": "ركوب الأمواج بالمحيط",
+        "icon": "🏄‍♂️",
+        "def": "Water sport where the rider catches an ocean wave on a surfboard toward the shore."
+      },
+      {
+        "name": "Sports Survey",
+        "ar": "استطلاع الرأي الرياضي",
+        "icon": "📊",
+        "def": "A questionnaire designed by Umar and Ali to gather class data on sporting preferences."
+      },
+      {
+        "name": "Twice a week",
+        "ar": "مرتان أسبوعياً (التكرار)",
+        "icon": "🔄",
+        "def": "Adverbial expression of frequency denoting an activity practiced two times every week."
+      },
+      {
+        "name": "Bar Chart Presentation",
+        "ar": "عرض البيانات برسم بياني",
+        "icon": "📈",
+        "def": "Visual graphical representation of survey findings presented clearly to the class."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التعبير عن تكرار الأنشطة وإبداء الرأي (Frequency & Preferences)",
+      "rule": "Once / twice / three times a week  |  Would like to try + [Sport]",
+      "examples": [
+        {
+          "en": "Mason goes swimming twice a week because he loves the water.",
+          "ar": "يذهب ميسون للسباحة مرتين في الأسبوع لأنه يحب الماء."
+        },
+        {
+          "en": "Dania does athletics three times a week with her friends.",
+          "ar": "تمارس دانية ألعاب القوى ثلاث مرات أسبوعياً مع صديقاتها."
+        },
+        {
+          "en": "Otto plays on the school team and has a football match every Saturday.",
+          "ar": "يلعب أوتو في فريق المدرسة ويخوض مباراة كرة قدم كل يوم سبت."
+        },
+        {
+          "en": "Which of the three new sports would you like to try?",
+          "ar": "أي من الرياضات الثلاث الجديدة تود تجربتها؟"
         }
       ]
     }
