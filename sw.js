@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v2.3.9';
+const CACHE_NAME = 'interactive-edu-pwa-v2.4.0';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -15,10 +15,32 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching core PWA assets v2.3.9');
+      console.log('[Service Worker] Caching core PWA assets v2.4.0');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
+});
+
+// رسائل الصفحة لعامل الخدمة: التحديث اللحظي وتجاوز الانتظار
+self.addEventListener('message', (event) => {
+  if (event.data === 'skipWaiting') {
+    self.skipWaiting();
+  }
+  if (event.data === 'refresh-shell' && event.ports && event.ports[0]) {
+    event.waitUntil((async () => {
+      let ok = false;
+      try {
+        const res = await fetch('./index.html', { cache: 'reload' });
+        if (res.ok) {
+          const c = await caches.open(CACHE_NAME);
+          await c.put('./index.html', res.clone());
+          await c.put('./', res);
+          ok = true;
+        }
+      } catch { }
+      event.ports[0].postMessage(ok);
+    })());
+  }
 });
 
 // تفعيل وإزالة الكاش القديم فوراً دون انتظار إغلاق التبويبات
@@ -38,9 +60,17 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// استراتيجية التعامل مع الطلبات: Network-First لصفحات HTML لضمان التحديث اللحظي
+// استراتيجية التعامل مع الطلبات
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
+
+  // ملف version.json يُجلب دائماً من الشبكة بدون تخزين مؤقت لضمان كشف التحديثات فوراً
+  if (url.pathname.endsWith('/version.json') || url.pathname.endsWith('version.json')) {
+    event.respondWith(
+      fetch(event.request, { cache: 'no-store' }).catch(() => caches.match(event.request))
+    );
+    return;
+  }
 
   // إذا كان طلب API للخادم المحلي
   if (url.pathname.startsWith('/api/')) {
