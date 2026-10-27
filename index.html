@@ -1806,7 +1806,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.1 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -1869,7 +1869,7 @@
     <section id="tab-dashboard">
       <div class="hero-banner">
         <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.35); padding: 0.35rem 0.9rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.85rem; backdrop-filter: blur(4px);">
-          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.8.0</span>
+          <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span style="background: rgba(255,255,255,0.25); padding: 0.1rem 0.5rem; border-radius: 6px;">الإصدار v2.8.1</span>
         </div>
         <h2>المنصة التعليمية التفاعلية الشاملة</h2>
         <p>
@@ -1877,19 +1877,13 @@
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <button class="btn btn-primary" onclick="scrollToSubjectsSection()" style="background: white; color: var(--primary); font-weight: 800;">
-            🎓 المناهج والمواد المتاحة في النظام
+            🎓 استعراض المناهج والمواد المتاحة
           </button>
-          <button class="btn btn-primary" onclick="openPastExamsTab()" style="background: #10b981; color: white; border: none; font-weight: 700;">
-            📝 نماذج الامتحانات السابقة وحلولها
-          </button>
-          <button class="btn btn-primary" onclick="switchTab('grammar')" style="background: #fbbf24; color: #78350f; font-weight: 700;">
-            💡 استكشاف بنك القواعد والمفاهيم
-          </button>
-          <button class="btn btn-secondary" onclick="openAddModal()" style="background: rgba(255,255,255,0.2); color: white; border: none;">
+          <button class="btn btn-secondary" onclick="openAddModal()" style="background: rgba(255,255,255,0.25); color: white; border: 1px solid rgba(255,255,255,0.4); font-weight: 700;">
             ➕ إضافة مادة أو منهج جديد
           </button>
-          <button class="btn btn-secondary" id="heroPwaBtn" onclick="installPWA()" style="display: none; background: rgba(255,255,255,0.25); color: white; border: 1px solid rgba(255,255,255,0.4);">
-            📲 تثبيت كتطبيق PWA
+          <button class="btn btn-secondary" onclick="switchTab('curriculums')" style="background: rgba(255,255,255,0.18); color: white; border: 1px solid rgba(255,255,255,0.3); font-weight: 700;">
+            📚 مكتبة المناهج والمحتوى
           </button>
         </div>
       </div>
@@ -2779,13 +2773,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.1؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.8.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.8.1</span>
         </div>
       </div>
 
@@ -2833,9 +2827,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '2.8.0';
-    const CURRENT_VERSION_LABEL = 'v2.8.0';
-    const SYSTEM_VERSION = 'v2.8.0';
+    const CURRENT_VERSION = '2.8.1';
+    const CURRENT_VERSION_LABEL = 'v2.8.1';
+    const SYSTEM_VERSION = 'v2.8.1';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -7769,15 +7763,13 @@
       });
     }
 
-    // إدارة تثبيت تطبيق PWA
+    // إدارة تثبيت تطبيق PWA (الزر المعتمد الموحد في شريط العنوان العلوي)
     let deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
       const navBtn = document.getElementById('pwaInstallBtn');
       if (navBtn) navBtn.style.display = 'inline-flex';
-      const heroBtn = document.getElementById('heroPwaBtn');
-      if (heroBtn) heroBtn.style.display = 'inline-flex';
     });
 
     async function installPWA() {
@@ -7790,8 +7782,6 @@
       if (outcome === 'accepted') {
         const navBtn = document.getElementById('pwaInstallBtn');
         if (navBtn) navBtn.style.display = 'none';
-        const heroBtn = document.getElementById('heroPwaBtn');
-        if (heroBtn) heroBtn.style.display = 'none';
       }
       deferredPrompt = null;
     }
@@ -7800,8 +7790,6 @@
       console.log('PWA installed successfully');
       const navBtn = document.getElementById('pwaInstallBtn');
       if (navBtn) navBtn.style.display = 'none';
-      const heroBtn = document.getElementById('heroPwaBtn');
-      if (heroBtn) heroBtn.style.display = 'none';
       alert('تم تثبيت التطبيق بنجاح على جهازك!');
     });
 
