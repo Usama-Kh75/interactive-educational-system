@@ -1,6 +1,6 @@
-// النظام التعليمي التفاعلي - المنهج الدراسي المعتمد
-// إعداد وتطوير: المهندس أسامة خليل هاشم
-// الإصدار: v2.5.0 (تطوير الوحدة الثالثة: الرياضة والألعاب بالكامل مع البطاقات البصرية التفاعلية)
+// curriculum_data.js
+// بيانات المنهج الكاملة لنظام التعليم التفاعلي
+// إعداد وتطوير: إعداد المهندس أسامة خليل هاشم
 
 window.CURRICULUM_DATA = [
   {
@@ -486,55 +486,70 @@ window.CURRICULUM_DATA = [
   {
     "id": 193,
     "title": "الوحدة 4: المراجعة الشاملة 1 (Unit 4: Review 1)",
-    "description": "صفحات 43 - 48",
+    "description": "صفحات 43 - 46",
     "lessons": [
       {
         "id": 294,
-        "title": "Review: Reading & Listening Skills",
-        "summary": "صفحة 43 - 45",
+        "title": "Lesson 1: Review - Listening Skills & Strategies (مهارات واستراتيجيات الاستماع الفعال وتدوين الملاحظات)",
+        "summary": "صفحة 43 - 43",
         "chunks": [
           {
             "id": 530,
             "page": 43,
-            "heading": "Unit AB58 Lesson 1: Listening -i Remember! Listening can be hard work. You have to do it yourself. Nobody else can do it for you. Read the Listening tips. Listening tip 1 — Look and listen for clues. Think about what you have to listen for. Are there any clues in the title, in the pictures, in the questions? If not, listen for clues in the text itself. Listen to two conversations. Where are the people in each conversation? What are they doing? 9)) Listening tip 2 — Keep listening! If you don't understand a word or miss something, keep listening. Perhaps you can guess the word. Perhaps you don't need to know the meaning. • You want to know the score in a football match between Iraq and Bahrain. Listen to the radio. 9)) Listening tip 3 - Write notes. 'And now. sport. At the end of an exciting game at the new National Stadium, the score was When you have to listen and write answers, you don't have time to write sentences. You need to write notes first and write the complete answer later. Make your own abbreviations. Make sure you can understand them later! Work out the student notes below. Then listen and check. I What did Mr Andrews order? fm chick. - r. + sal. — choc. c. — app.ju. 2 What did Mrs Andrews order? gr. -fish - Frs. sal. — fru. sal. - min. wa+. Review unit 4 43",
-            "text": "Unit AB58 Lesson 1: Listening -i Remember! Listening can be hard work. You have to do it yourself. Nobody else can do it for you. Read the Listening tips. Listening tip 1 — Look and listen for clues. Think about what you have to listen for. Are there any clues in the title, in the pictures, in the questions? If not, listen for clues in the text itself. Listen to two conversations. Where are the people in each conversation? What are they doing? 9)) Listening tip 2 — Keep listening! If you don't understand a word or miss something, keep listening. Perhaps you can guess the word. Perhaps you don't need to know the meaning. • You want to know the score in a football match between Iraq and Bahrain. Listen to the radio. 9)) Listening tip 3 - Write notes. 'And now. sport. At the end of an exciting game at the new National Stadium, the score was When you have to listen and write answers, you don't have time to write sentences. You need to write notes first and write the complete answer later. Make your own abbreviations. Make sure you can understand them later! Work out the student notes below. Then listen and check. I What did Mr Andrews order? fm chick. - r. + sal. — choc. c. — app.ju. 2 What did Mrs Andrews order? gr. -fish - Frs. sal. — fru. sal. - min. wa+. Review unit 4 43"
-          },
-          {
-            "id": 531,
-            "page": 44,
-            "heading": "Unit AB 59 Lesson 2: Reading O Read the Reading tips. Use them next time you read something. Reading tip 2 — Before you read Before you start reading, look at the title of the text. Ask yourself: What do I know about this topic? Example: This is the title of an article. What do you know about it? Cleaner streets Reading tip 3 - Finding different kinds of information 44 Read the question or questions very carefully and ask yourself: What kind of information do I need from this text? If you are looking for general meaning: • read the whole text quickly. VI Reading tip 4 — New words Don't be afraid of new words. Perhaps you won't need to understand them. Perhaps you can work out the meaning. Look for clues in the same sentence or in other sentences. Reading tip 5 — Collecting words Collect words in groups in your notebook: • nouns: the names of food, buildings, sports • adjectives: to describe feelings, places, people • adverbs: to describe how people do things, or how often 4 Review • don't stop at words you don't know. • look for topic sentences. If you have to find facts and figures quickly, ask yourself: Am I looking for an adjective, a name, a number, a time? Examples: I am very, very shy. I am afraid to speak to the other students. When the teacher asks me a question, I go red. I have to share a computer with my brother. He always wants it when I need it. You will read more easily if you: • practise all the words you have learnt in class regularly and • if you learn more words by yourself. Try to learn five new words a day.",
-            "text": "Unit AB 59 Lesson 2: Reading O Read the Reading tips. Use them next time you read something. Reading tip 2 — Before you read Before you start reading, look at the title of the text. Ask yourself: What do I know about this topic? Example: This is the title of an article. What do you know about it? Cleaner streets Reading tip 3 - Finding different kinds of information 44 Read the question or questions very carefully and ask yourself: What kind of information do I need from this text? If you are looking for general meaning: • read the whole text quickly. VI Reading tip 4 — New words Don't be afraid of new words. Perhaps you won't need to understand them. Perhaps you can work out the meaning. Look for clues in the same sentence or in other sentences. Reading tip 5 — Collecting words Collect words in groups in your notebook: • nouns: the names of food, buildings, sports • adjectives: to describe feelings, places, people • adverbs: to describe how people do things, or how often 4 Review • don't stop at words you don't know. • look for topic sentences. If you have to find facts and figures quickly, ask yourself: Am I looking for an adjective, a name, a number, a time? Examples: I am very, very shy. I am afraid to speak to the other students. When the teacher asks me a question, I go red. I have to share a computer with my brother. He always wants it when I need it. You will read more easily if you: • practise all the words you have learnt in class regularly and • if you learn more words by yourself. Try to learn five new words a day."
-          },
-          {
-            "id": 532,
-            "page": 45,
-            "heading": "Unit ABSO S Lesson 3: Speaking Practice makes perfect. You will only improve your speaking if you practise. When you practise, try to remember the following tips. Read the Speaking tips. Speaking tip 3 — Reading aloud When you read aloud, remember the following: • You want someone to hear you, so always speak clearly. Try to pronounce words as you have heard them on the audio. • Don't stop after each word. We say words in groups, so when you are saying a word, your eyes need to be on the words that come after it. Listen and read the sentences aloud. It's very hot today. 2 It was very hot and windy yesterday. 3 It was very hot and windy when we went to the beach last weekend. Speaking tip 4 — Asking questions When you ask questions beginning with question words, your voice goes down at the end. Question words are: What? Why? Who? When? How? Which? When you ask other questions, your voice goes up at the end. Listen to the conversations. Then read them aloud. The strongest parts of the sentences are underlined. The arrows show where your voice goes up or down. How are you? You look tired. I feel awful, and I have a headache. Have you been to the doctor? No. I'll go this afternoon. o Can I help you? When do you have swimming lessons? Are you good at swimming? No. I'm a beginner. The beginners' class is at ten o'clock on Saturday morning. Review Unit 4 45",
-            "text": "Unit ABSO S Lesson 3: Speaking Practice makes perfect. You will only improve your speaking if you practise. When you practise, try to remember the following tips. Read the Speaking tips. Speaking tip 3 — Reading aloud When you read aloud, remember the following: • You want someone to hear you, so always speak clearly. Try to pronounce words as you have heard them on the audio. • Don't stop after each word. We say words in groups, so when you are saying a word, your eyes need to be on the words that come after it. Listen and read the sentences aloud. It's very hot today. 2 It was very hot and windy yesterday. 3 It was very hot and windy when we went to the beach last weekend. Speaking tip 4 — Asking questions When you ask questions beginning with question words, your voice goes down at the end. Question words are: What? Why? Who? When? How? Which? When you ask other questions, your voice goes up at the end. Listen to the conversations. Then read them aloud. The strongest parts of the sentences are underlined. The arrows show where your voice goes up or down. How are you? You look tired. I feel awful, and I have a headache. Have you been to the doctor? No. I'll go this afternoon. o Can I help you? When do you have swimming lessons? Are you good at swimming? No. I'm a beginner. The beginners' class is at ten o'clock on Saturday morning. Review Unit 4 45"
+            "heading": "Unit 4 Lesson 1: Review - Listening Skills & Strategies (صفحة 43)",
+            "text": "Remember! Listening can be hard work. You have to do it yourself. Nobody else can do it for you.\nRead the Listening tips carefully:\n\n★ Listening Tip 1 — Look and listen for clues:\n• Think about what you have to listen for before the audio starts.\n• Look for clues in the title, pictures, diagram, and questions.\n• If there are no pictures or titles, listen for clues in the first few sentences of the audio.\n• Example: Hearing words like 'order', 'bill', 'menu' tells you the speakers are in a restaurant.\n\n★ Listening Tip 2 — Keep listening!:\n• If you do not understand a single word or miss a detail, do NOT stop listening! Keep following the conversation.\n• You can often guess the meaning of unfamiliar words from context.\n• Often, you do not even need to know every single word to understand the main message.\n• Example: Listening to sports news on the radio to find out a match score:\n  'And now, sport. At the end of an exciting game at the new National Stadium, the score was Iraq 3, Bahrain 3.'\n\n★ Listening Tip 3 — Write notes & make your own abbreviations:\n• When you listen and have to write answers, you do NOT have time to write full sentences.\n• Write short notes and use abbreviations first, then write out complete sentences later.\n• Make sure your abbreviations are clear so you can decode them afterwards!\n\nWorked examples of student abbreviations (Restaurant Orders):\n1. What did Mr Andrews order?\n   Notes: fm chick. - r. + sal. — choc. c. — app.ju.\n   Decoded full answer: Fried chicken with rice and salad, chocolate cake for dessert, and an apple juice to drink.\n2. What did Mrs Andrews order?\n   Notes: gr.-fish - Frs. + sal. — fru. sal. - min. wa+.\n   Decoded full answer: Grilled fish with French fries and salad, fruit salad for dessert, and mineral water to drink.\n\nListening Audio Transcripts (نصوص الاستماع المعتمدة للدرس):\n[Conversation 1: In the Doctor's Waiting Room]\nMan 1: Can you pass me a magazine, please?\nMan 2: This one? Yeah. Thanks. How long have you been here?\nMan 1: Half an hour. I came in just five minutes before you. Why do we always have to wait so long?\nMan 2: I don't have time to sit here. I came in with an earache. Now I have a headache as well. What about you?\nMan 1: Pain in my back. Sitting on chairs like these doesn't help! The doctor will probably give us pills and tell us to rest.\n\n[Conversation 2: In a Restaurant - The Andrews Family]\nWaiter: Are you ready to order now, sir?\nMr Andrews: Yes, we are. I'd like fried chicken with rice, please.\nWaiter: Salad?\nMr Andrews: Yes, please.\nWaiter: Madam?\nMrs Andrews: Grilled fish, please, with fries. And I'll have salad, too.\nWaiter: Grilled fish, fries and salad. And for dessert?\nMrs Andrews: Fruit salad, please.\nMr Andrews: And chocolate cake for me.\nWaiter: One chocolate cake and one fruit salad. Anything to drink?\nMr Andrews: Apple juice for me.\nMrs Andrews: And mineral water for me.\nWaiter: Apple juice and mineral water. Thank you, madam, sir.\n\n[Conversation 3: Radio Sports News]\nAnnouncer: And now, sport. At the end of an exciting game at the new National Stadium, the score was Iraq 3, Bahrain 3.\n\n[Conversation 4: Wendy and the Teacher Consultation]\nTeacher: Come in, Wendy. Don't be shy. Sit down. What is the matter?\nWendy: Well, I can't sleep at night, and I get headaches all the time.\nTeacher: Are you worried about exams?\nWendy: No, I'm doing very well at school and never worry about exams. It's just that I can't sleep, and every morning I have a headache.\nTeacher: Have you seen a doctor? Do you take pills?\nWendy: No, pills give me a stomach ache.\nTeacher: What time do you eat in the evening?\nWendy: We have dinner at 7:30, and then I have a glass of lemonade and a packet of crisps just before going to bed at 10:00.\nTeacher: That's the problem! You shouldn't have lemonade or crisps just before bed. Have a glass of warm milk or water instead.\nWendy: And what about my headaches?\nTeacher: You live only one kilometre away, but your father drives you. You should walk to school and walk home! Regular exercise will make your headaches go away."
           }
         ]
       },
       {
         "id": 295,
-        "title": "Review: Speaking, Writing & Grammar Consolidation",
-        "summary": "صفحة 46 - 48",
+        "title": "Lesson 2: Review - Reading Strategies & Vocabulary Building (استراتيجيات القراءة وتنمية وتصنيف الحصيلة اللغوية)",
+        "summary": "صفحة 44 - 44",
+        "chunks": [
+          {
+            "id": 531,
+            "page": 44,
+            "heading": "Unit 4 Lesson 2: Review - Reading Strategies & Vocabulary Building (صفحة 44)",
+            "text": "Read the Reading tips. Use them every time you read English texts!\n\n★ Reading Tip 2 — Before you read:\n• Before you start reading, look at the title and any subheadings or pictures.\n• Ask yourself: 'What do I already know about this topic?'\n• Activating your prior knowledge makes reading and understanding new information much easier.\n• Example: If the title of an article is 'Cleaner streets', think about street rubbish, recycling bins, city cleaners, and public cleanliness campaigns.\n\n★ Reading Tip 3 — Finding different kinds of information:\nAlways read the questions carefully and decide what kind of information you need:\n1. Skimming (القراءة السريعة للمعنى العام):\n   • When looking for general meaning, read the whole text quickly without stopping at difficult words.\n   • Look for Topic Sentences (usually the first sentence of each paragraph) which summarize the main point.\n2. Scanning (القراءة المسحية لاستخراج الحقائق والأرقام):\n   • When looking for specific facts, ask yourself: Am I searching for a name, a number, a date, a place, an adjective, or a time?\n   • Move your eyes across the page quickly until you locate the target keyword.\n\n★ Reading Tip 4 — Dealing with new words:\n• Don't be afraid of new or difficult words!\n• Often, you do not need to understand every single word to comprehend the text.\n• Look for context clues in the same sentence or surrounding sentences.\n• Example: 'I am very, very shy. When the teacher asks me a question, I go red.' -> The clue 'I go red' helps explain that 'shy' means feeling nervous and embarrassed in front of others.\n• Example: 'I have to share a computer with my brother. He always wants it when I need it.' -> Clues show 'share' means dividing usage between two people.\n\n★ Reading Tip 5 — Collecting words in your notebook (Word Groups):\nOrganize your vocabulary notebook by categorizing words into grammatical groups:\n1. Nouns (الأسماء):\n   • Names of food: burger, fries, rice, salad, chocolate cake, lemonade, mineral water.\n   • Names of buildings & facilities: sports centre, stadium, clinic, hospital, printing press.\n   • Names of sports: football, volleyball, karate, judo, gymnastics, swimming.\n2. Adjectives (الصفات):\n   • Describing feelings: shy, embarrassed, afraid, worried, fit, unfit.\n   • Describing places and things: delicious, interesting, exciting, crowded, fantastic, awful.\n3. Adverbs (الظروف):\n   • Describing how people do things (manner): quickly, slowly, clearly, well, easily.\n   • Describing frequency: always, usually, often, sometimes, never, regularly.\n\n★ Golden Habit for Language Mastery:\n• Practise all the words you have learnt in class regularly.\n• Expand your independent vocabulary: 'Try to learn five new words every day!'"
+          }
+        ]
+      },
+      {
+        "id": 2951,
+        "title": "Lesson 3: Review - Speaking Fluency & Question Intonation (مهارات التحدث وطلاقة النطق ونبرات الاستفهام)",
+        "summary": "صفحة 45 - 45",
+        "chunks": [
+          {
+            "id": 532,
+            "page": 45,
+            "heading": "Unit 4 Lesson 3: Review - Speaking Fluency & Question Intonation (صفحة 45)",
+            "text": "\"Practice makes perfect.\"\nYou will only improve your speaking fluency if you practise speaking aloud regularly.\n\n★ Speaking Tip 3 — Reading aloud in chunks (Word Groups):\n• Always speak clearly and loudly enough for listeners to hear you.\n• Pronounce words accurately as you heard them on the audio recordings.\n• Do NOT stop awkwardly after each single word! In English, words are spoken in connected groups (chunks).\n• Keep your eyes moving ahead: while saying one word, your eyes should already look at the words following it!\n\nPractice reading these sentences aloud smoothly:\n1. \"It's very hot today.\" (4 words, 1 smooth chunk)\n2. \"It was very hot / and windy yesterday.\" (2 connected chunks)\n3. \"It was very hot and windy / when we went to the beach / last weekend.\" (3 rhythmic chunks)\n\n★ Speaking Tip 4 — Asking Questions & Intonation (تنغيم ونبرة الصوت):\nIntonation is the way your voice rises and falls when speaking:\n\n1. Wh- Questions (Voice goes DOWN ➘ - Falling Intonation):\n   • When asking questions that begin with question words: What? Why? Who? When? How? Which?, your voice goes DOWN at the end.\n   • Examples:\n     - \"How are you? ➘\" (نبرة هابطة)\n     - \"When do you have swimming lessons? ➘\" (نبرة هابطة)\n     - \"What would you like to drink? ➘\" (نبرة هابطة)\n     - \"Where did you go at the weekend? ➘\" (نبرة هابطة)\n\n2. Yes/No and Auxiliary Questions (Voice goes UP ➚ - Rising Intonation):\n   • When asking questions that begin with auxiliary or modal verbs: Is, Are, Do, Does, Did, Have, Has, Can, Would, your voice goes UP at the end.\n   • Examples:\n     - \"Have you been to the doctor? ➚\" (نبرة صاعدة)\n     - \"Can I help you? ➚\" (نبرة صاعدة)\n     - \"Are you good at swimming? ➚\" (نبرة صاعدة)\n     - \"Do you like playing tennis? ➚\" (نبرة صاعدة)\n\n★ Interactive Dialogues for Speaking Practice:\n[Dialogue 1: Checking on a Sick Friend]\nGirl 1: How are you? ➘ You look tired.\nGirl 2: I feel awful, and I have a headache.\nGirl 1: Have you been to the doctor? ➚\nGirl 2: No. I'll go this afternoon.\n\n[Dialogue 2: Inquiring at the Sports Centre]\nReceptionist: Can I help you? ➚\nBoy: When do you have swimming lessons? ➘\nReceptionist: Are you good at swimming? ➚\nBoy: No, I'm a beginner.\nReceptionist: The beginners' class is at ten o'clock on Saturday morning."
+          }
+        ]
+      },
+      {
+        "id": 2952,
+        "title": "Lesson 4: Review - Writing Skills & Paragraph Planning (خطوات كتابة المسودة ومخطط الأفكار وتدقيق المقال)",
+        "summary": "صفحة 46 - 46",
         "chunks": [
           {
             "id": 533,
             "page": 46,
-            "heading": "Unit AB61 Lesson 4: Writing O Read the Writing tips. Then make notes. Writing tip 3 — Check your writing. After you have written a draft, check the following: • spelling • punctuation • wrong words • missing words Then write a final, correct copy in your best handwriting. Writing tip 4 — Paint a picture. When you write a story, try to paint a picture. Use adjectives and adverbs so that the reader can see what happened. Choose your words carefully. Writing tip 5 - Make your writing interesting. When you write a story, a postcard or a letter, try to make it interesting for the reader. How can you do this? Try to think of things that will be interesting to the reader. Write about your own feelings. Try to make your reader laugh or smile. Writing tip 6 — Organize and plan each paragraph. Topic sentences It is a good idea to begin a paragraph with a topic sentence - a sentence that says what the paragraph is about. Example: My weekend 46 Topic sentence: I did lots of nice things at the weekend. Make notes about what you did at the weekend in a diagram like this: I did 10+5 of noe +hngs af +he weekend. Write notes about each thing you did on a separate arm. Of course, if you did more than three things, draw more arms. Next, number the notes in the best order, for example, in the order you did the things. Then, write your draft. Unit 4 Review",
-            "text": "Unit AB61 Lesson 4: Writing O Read the Writing tips. Then make notes. Writing tip 3 — Check your writing. After you have written a draft, check the following: • spelling • punctuation • wrong words • missing words Then write a final, correct copy in your best handwriting. Writing tip 4 — Paint a picture. When you write a story, try to paint a picture. Use adjectives and adverbs so that the reader can see what happened. Choose your words carefully. Writing tip 5 - Make your writing interesting. When you write a story, a postcard or a letter, try to make it interesting for the reader. How can you do this? Try to think of things that will be interesting to the reader. Write about your own feelings. Try to make your reader laugh or smile. Writing tip 6 — Organize and plan each paragraph. Topic sentences It is a good idea to begin a paragraph with a topic sentence - a sentence that says what the paragraph is about. Example: My weekend 46 Topic sentence: I did lots of nice things at the weekend. Make notes about what you did at the weekend in a diagram like this: I did 10+5 of noe +hngs af +he weekend. Write notes about each thing you did on a separate arm. Of course, if you did more than three things, draw more arms. Next, number the notes in the best order, for example, in the order you did the things. Then, write your draft. Unit 4 Review"
-          },
+            "heading": "Unit 4 Lesson 4: Review - Writing Skills & Paragraph Planning (صفحة 46)",
+            "text": "Writing is a creative and structured process. Follow these expert tips to write excellent paragraphs and stories:\n\n★ Writing Tip 3 — Check your writing (Editing & Proofreading):\nAfter writing your first draft, always review it with a critical eye. Check four vital elements:\n1. Spelling (الإملاء): Verify difficult words and silent letters.\n2. Punctuation (علامات الترقيم): Capital letters at start of sentences and names, commas in lists, full stops at ends, question marks for questions.\n3. Wrong words (الكلمات غير المناسبة): Replace awkward words with accurate vocabulary.\n4. Missing words (الكلمات الناقصة): Ensure articles (a, an, the), prepositions (in, on, at), and auxiliary verbs are not dropped.\n-> After editing, write a final, polished copy in your cleanest handwriting!\n\n★ Writing Tip 4 — Paint a picture with words:\n• When writing a story, help the reader visualize what is happening.\n• Use vivid adjectives (e.g. delicious, awful, exhausting, magnificent) and descriptive adverbs (e.g. nervously, cheerfully, rapidly).\n• Example: Instead of 'The car went down the road', write: 'The noisy red sports car sped rapidly down the dusty road.'\n\n★ Writing Tip 5 — Make your writing interesting:\n• Think about what will entertain, inform, or surprise your reader.\n• Include your personal thoughts and emotions ('I was so excited that I couldn't sleep!').\n• Make your reader smile or laugh with humorous observations.\n\n★ Writing Tip 6 — Organize and plan each paragraph:\n1. Topic Sentences (جملة الموضوع الافتتاحية):\n   • Always begin each paragraph with a clear Topic Sentence stating what the whole paragraph is about.\n   • Example topic: 'My Weekend'\n     Topic sentence: 'I did lots of exciting things at the weekend.'\n\n2. The Spidergram / Mind Map (المخطط العنكبوتي للعصف الذهني):\n   • Write your central topic in the middle box: 'I did lots of nice things at the weekend.'\n   • Draw radiating branches (arms) for each activity:\n     - Branch 1: Visited grandmother in the morning.\n     - Branch 2: Played football match with friends in the park.\n     - Branch 3: Watched an action movie and ate pizza with family.\n   • Number the notes in logical chronological order (1, 2, 3).\n   • Expand each branch into connected sentences to produce your first paragraph draft!"
+          }
+        ]
+      },
+      {
+        "id": 2953,
+        "title": "Lesson 5: Unit 4 Round Up - Semester 1 Comprehensive Review (المراجعة الشاملة وتطبيقات قواعد الفصل الأول)",
+        "summary": "صفحات 43 - 46",
+        "chunks": [
           {
-            "id": 534,
-            "page": 47,
-            "heading": "Unit AB66-67 Lesson 1: Old ways of sending information Read and use the photographs to work out the meanings of the words from the box. drum flag horse 2 lighthouse pigeon signal 3 smoke In the Arab world, men used to ride for hours, carrying messages. When one horse was tired. they got another one. This messenger service started In parts of Africa, people used to use drums to send messages. People used to build lighthouses near the sea. The lighthouses warned ships of danger. used to light fires on the tops of mountains and send messages using smoke signals. People used to send messages using flags. to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping. 0 Now talk about the questions. I When was the best time to use lighthouses - day or night? Why? 2 How did pigeons know where to take their messages? 3 Which of these methods was ... the fastest? the slowest? the safest? 4 How many modern ways of sending information can you think of? Getting and sending information Unit 5",
-            "text": "Unit AB66-67 Lesson 1: Old ways of sending information Read and use the photographs to work out the meanings of the words from the box. drum flag horse 2 lighthouse pigeon signal 3 smoke In the Arab world, men used to ride for hours, carrying messages. When one horse was tired. they got another one. This messenger service started In parts of Africa, people used to use drums to send messages. People used to build lighthouses near the sea. The lighthouses warned ships of danger. used to light fires on the tops of mountains and send messages using smoke signals. People used to send messages using flags. to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping. 0 Now talk about the questions. I When was the best time to use lighthouses - day or night? Why? 2 How did pigeons know where to take their messages? 3 Which of these methods was ... the fastest? the slowest? the safest? 4 How many modern ways of sending information can you think of? Getting and sending information Unit 5"
-          },
-          {
-            "id": 535,
-            "page": 48,
-            "heading": "n 68-69 Unit Lesson 2: Accessing information O Answer the questions with a partner. I How often do you use a library? 2 What was the last book you used from a library? 3 How often do you use the internet? 4 How do you usually access the internet? Read and choose the best summary. owadays, we have access to huge amounts of information. You can use an encyclopedia in the library if you want to find out about Saladdin. If you want to know what the capital of Madagascar is, you can look it up in an atlas. (Do you know the answer?) Or you can go straight to the internet for all the answers. There is an incredible amount of information On the internet. However, remember a-Joc-of information does not always mean geed information. We need to think critically about what we're reading. Who wrote the information? And most importantly, why did they write it? Can we find the Same information in different sources? Are there any references we can check? Many websites check all the details carefully to make sure they're correct. Sadly, many websites aren't interested in the truth and just want as many readers as possible. 1 The information in books is always correct. 2 The information on the internet is always correct. 3 It's good to ask questions about everything we read. What information can you get from the following? newspaper dictionary radio Discuss in pairs. You need information about the things in the box. Where can you find it? • the population of India • when the museum is open • the meaning of 'encyclopedia' 48/ • how to grow plants • a big world event • the time of sunset Unit 5 Getting and sending information",
-            "text": "n 68-69 Unit Lesson 2: Accessing information O Answer the questions with a partner. I How often do you use a library? 2 What was the last book you used from a library? 3 How often do you use the internet? 4 How do you usually access the internet? Read and choose the best summary. owadays, we have access to huge amounts of information. You can use an encyclopedia in the library if you want to find out about Saladdin. If you want to know what the capital of Madagascar is, you can look it up in an atlas. (Do you know the answer?) Or you can go straight to the internet for all the answers. There is an incredible amount of information On the internet. However, remember a-Joc-of information does not always mean geed information. We need to think critically about what we're reading. Who wrote the information? And most importantly, why did they write it? Can we find the Same information in different sources? Are there any references we can check? Many websites check all the details carefully to make sure they're correct. Sadly, many websites aren't interested in the truth and just want as many readers as possible. 1 The information in books is always correct. 2 The information on the internet is always correct. 3 It's good to ask questions about everything we read. What information can you get from the following? newspaper dictionary radio Discuss in pairs. You need information about the things in the box. Where can you find it? • the population of India • when the museum is open • the meaning of 'encyclopedia' 48/ • how to grow plants • a big world event • the time of sunset Unit 5 Getting and sending information"
+            "id": 5331,
+            "page": 46,
+            "heading": "Unit 4 Lesson 5: Semester 1 Master Grammar & Skills Consolidation (صفحات 43 - 46)",
+            "text": "Comprehensive Master Review of Semester 1 (Units 1, 2, 3 and 4):\n\nThis master review consolidates the essential grammar, vocabulary, and macro-skills mastered across the first four units:\n\n1. Unit 1 Grammar Essentials:\n• Possessive 's:\n  - Singular noun: The boy's bag (one boy).\n  - Regular plural ending in s: The boys' bags (more than one boy).\n  - Irregular plural: The children's books, the men's cars.\n• Present Perfect with For & Since:\n  - Since + specific point in time: since Monday, since 2018, since 8 o'clock.\n  - For + duration of time: for three hours, for ten years, for a long time.\n• Preferences and Feelings:\n  - like, love, enjoy, hate, dislike + Verb-ing (e.g. I enjoy reading stories).\n• Relative Pronouns:\n  - Who connects descriptive information about people: 'He is the reporter who wrote the article.'\n\n2. Unit 2 Grammar Essentials:\n• Giving Advice with Should and Shouldn't:\n  - You should eat plenty of fruit and vegetables.\n  - You shouldn't drink too much fizzy lemonade before sleeping.\n• Quantifiers with Countable vs Uncountable Nouns:\n  - Uncountable nouns: too much, a little (water, sugar, sleep).\n  - Countable plural nouns: too many, a few (crisps, apples, hours).\n  - Both countable & uncountable: a lot of, plenty of.\n• Aches and Health Complaints:\n  - I have got a headache / stomach ache / toothache / earache.\n• English Limerick Form:\n  - 5-line humorous poem with AABBA rhyme scheme and bouncy rhythm.\n\n3. Unit 3 Grammar Essentials:\n• Sports Verbs:\n  - Play + Ball sports and team games: play football, play tennis, play volleyball.\n  - Go + Activities ending in -ing: go swimming, go horse riding, go sailing.\n  - Do + Martial arts and individual exercise: do judo, do karate, do gymnastics.\n• Used to + Infinitive:\n  - Expresses habits or states in the past that are no longer true today:\n    'I used to be shy, but now I am confident.'\n    'He used to play computer games all day, but now he does athletics.'\n\n4. Unit 4 Communication Strategies:\n• Question Intonation:\n  - Wh- questions -> Falling tone ➘ at the end ('What is your favourite sport? ➘').\n  - Yes/No questions -> Rising tone ➚ at the end ('Are you ready to order? ➚').\n• Four Steps of Paragraph Writing:\n  - Brainstorm with Spidergram -> Number notes in order -> Draft with Topic Sentence -> Edit draft for spelling and punctuation."
           }
         ]
       }
@@ -543,13 +558,25 @@ window.CURRICULUM_DATA = [
   {
     "id": 194,
     "title": "الوحدة 5: تلقي وإرسال المعلومات (Unit 5: Getting & Sending Info)",
-    "description": "صفحات 49 - 60",
+    "description": "صفحات 47 - 59",
     "lessons": [
       {
         "id": 296,
-        "title": "Lesson 1: History of Communication (تاريخ وسائل الاتصال)",
-        "summary": "صفحة 49 - 50",
+        "title": "Lesson 1: History of Communication & Old Ways of Sending Info (تاريخ وسائل الاتصال والوسائل القديمة)",
+        "summary": "صفحة 47 - 50",
         "chunks": [
+          {
+            "id": 534,
+            "page": 47,
+            "heading": "Unit 5 Lesson 1: Old ways of sending information (صفحة 47)",
+            "text": "Read and use the photographs to work out the meanings of the words:\ndrum, flag, horse, lighthouse, pigeon, signal, smoke.\n\n1. In the Arab world, men used to ride for hours, carrying messages. When one horse was tired, they got another one. This messenger service started in 670. It was called Al-Barid.\n2. In parts of Africa, people used to use drums to send messages.\n3. People used to build lighthouses near the sea. The lighthouses warned ships of danger.\n4. People used to light fires on the tops of mountains and send messages using smoke signals.\n5. People used to send messages using flags.\n6. People used to use pigeons to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping."
+          },
+          {
+            "id": 535,
+            "page": 48,
+            "heading": "Unit 5 Lesson 2: Accessing information (صفحة 48)",
+            "text": "Nowadays, we have access to huge amounts of information.\n• You can use an encyclopedia in the library if you want to find out about history.\n• If you want to know what the capital of Madagascar is, you can look it up in an atlas.\n• Or you can go straight to the internet for all the answers.\n\nCritical Reading:\nRemember, a lot of information does not always mean good information! We need to think critically about what we are reading:\n• Who wrote the information?\n• Why did they write it?\n• Can we find the same information in different sources?\n• Are there references we can check?"
+          },
           {
             "id": 536,
             "page": 49,
@@ -2028,6 +2055,74 @@ window.GRAMMAR_RULES = [
       ],
       "correct": 0,
       "explanation": "نستخدم might للتعبير عن إمكانية واحتمالية هطول المطر."
+    }
+  },
+  {
+    "id": "question-intonation",
+    "title": "نبرات الصوت عند طرح الأسئلة (Question Intonation: Falling & Rising Tone)",
+    "unit": 4,
+    "badge": "الوحدة 4 (مراجعة)",
+    "category": "Functions & Phonology",
+    "summary": "قاعدة انخفاض أو ارتفاع نبرة الصوت في نهاية الأسئلة باللغة الإنجليزية حسب نوع السؤال.",
+    "rule": "1) أسئلة Wh (What, Why, Who, When, How, Which): تنخفض نبرة الصوت في نهاية السؤال (Voice goes DOWN ➘ - Falling Intonation).\n2) أسئلة Yes/No والأفعال المساعدة (Are, Is, Do, Have, Can): ترتفع نبرة الصوت في نهاية السؤال (Voice goes UP ➚ - Rising Intonation).",
+    "examples": [
+      {
+        "en": "How are you? ➘",
+        "ar": "كيف حالك؟ (نبرة هابطة لأن السؤال يبدأ بأداة استفهام Wh)."
+      },
+      {
+        "en": "When do you have swimming lessons? ➘",
+        "ar": "متى تبدأ دروس السباحة لديك؟ (نبرة هابطة)."
+      },
+      {
+        "en": "Have you been to the doctor? ➚",
+        "ar": "هل ذهبت إلى الطبيب؟ (نبرة صاعدة لأن السؤال يبدأ بفعل مساعد Have)."
+      },
+      {
+        "en": "Are you good at swimming? ➚",
+        "ar": "هل تجيد السباحة؟ (نبرة صاعدة)."
+      }
+    ],
+    "quiz": {
+      "question": "What is the intonation pattern for the question: 'Can I help you?'",
+      "options": [
+        "Voice goes UP at the end (Rising Intonation)",
+        "Voice goes DOWN at the end (Falling Intonation)",
+        "Voice stays flat with no change",
+        "Voice goes down then up"
+      ],
+      "correct": 0,
+      "explanation": "'Can I help you?' is an auxiliary/modal Yes-No question, so the voice goes UP at the end (Rising Intonation)."
+    }
+  },
+  {
+    "id": "topic-sentence-paragraph",
+    "title": "تنظيم الفقرة الإنشائية وجملة الموضوع (Topic Sentences & Spidergrams)",
+    "unit": 4,
+    "badge": "الوحدة 4 (مراجعة)",
+    "category": "Writing Skills",
+    "summary": "منهجية كتابة وتنظيم الفقرة الإنشائية باللغة الإنجليزية باستخدام جملة الموضوع ومخطط العصف الذهني.",
+    "rule": "تبدأ الفقرة الإنشائية دائماً بجملة الموضوع (Topic Sentence) التي تلخص الفكرة الرئيسية، ويتم التخطيط لها برسم مخطط عنكبوتي (Spidergram) لتفريغ الأفكار وترتيبها زمنياً قبل كتابة المسودة ومراجعة الإملاء وعلامات الترقيم.",
+    "examples": [
+      {
+        "en": "Topic Sentence: I did lots of exciting things at the weekend.",
+        "ar": "جملة الموضوع: قمت بالكثير من الأشياء الممتعة في عطلة نهاية الأسبوع."
+      },
+      {
+        "en": "Proofreading check: Check spelling, punctuation, wrong words and missing words.",
+        "ar": "مراجعة المسودة: فحص الإملاء وعلامات الترقيم والكلمات الخاطئة والناقصة."
+      }
+    ],
+    "quiz": {
+      "question": "What is the purpose of a 'Topic Sentence' at the beginning of a paragraph?",
+      "options": [
+        "It states what the whole paragraph is about",
+        "It lists the dictionary definitions of new words",
+        "It is always the longest sentence in the story",
+        "It ends the paragraph with a question mark"
+      ],
+      "correct": 0,
+      "explanation": "A topic sentence begins a paragraph and clearly tells the reader the main idea of that paragraph."
     }
   }
 ];
@@ -4197,6 +4292,318 @@ window.TOPIC_CARDS = {
         {
           "en": "Which of the three new sports would you like to try?",
           "ar": "أي من الرياضات الثلاث الجديدة تود تجربتها؟"
+        }
+      ]
+    }
+  },
+  "294": {
+    "unit": 4,
+    "lessonNumber": 1,
+    "pages": [
+      43
+    ],
+    "titleAr": "استراتيجيات الاستماع وتدوين الملاحظات والاختصارات",
+    "titleEn": "Listening Skills, Strategies & Note-Taking",
+    "themeColor": "#0284c7",
+    "icon": "🎧",
+    "sections": [
+      {
+        "name": "Look & Listen for Clues",
+        "ar": "البحث عن الدلائل والمفاتيح",
+        "icon": "🔍",
+        "def": "Checking titles, pictures and context clues before and during listening to anticipate meaning."
+      },
+      {
+        "name": "Keep Listening!",
+        "ar": "المتابعة وعدم التوقف",
+        "icon": "⏩",
+        "def": "Never stopping if you miss a word; continue listening to understand the overall message."
+      },
+      {
+        "name": "Write Notes & Abbreviations",
+        "ar": "تدوين الملاحظات والاختصارات",
+        "icon": "📝",
+        "def": "Writing quick abbreviations (e.g. fm chick, r. + sal.) instead of slow full sentences."
+      },
+      {
+        "name": "Doctor's Consultation",
+        "ar": "استشارة الطبيب والمشاكل الصحية",
+        "icon": "🩺",
+        "def": "Listening to dialogue between Wendy and her teacher about sleep, headaches and walking exercise."
+      },
+      {
+        "name": "Radio Match Score",
+        "ar": "نتيجة المباراة في إذاعة الراديو",
+        "icon": "📻",
+        "def": "Listening for specific sports facts: 'At the new National Stadium, Iraq 3, Bahrain 3'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "استراتيجية تدوين الملاحظات أثناء الاستماع",
+      "rule": "fm chick. = fried chicken | r. + sal. = rice and salad | choc. c. = chocolate cake | app.ju. = apple juice",
+      "examples": [
+        {
+          "en": "What did Mr Andrews order? - fm chick., r. + sal., choc. c., app.ju.",
+          "ar": "ماذا طلب السيد أندروز؟ - دجاج مقلي، أرز وسلطة، كعكة شوكولاتة، وعصير تفاح."
+        },
+        {
+          "en": "You shouldn't drink lemonade before bed. You should walk to school.",
+          "ar": "لا ينبغي أن تشربي الليمونادة قبل النوم. يجب أن تمشي إلى المدرسة."
+        }
+      ]
+    }
+  },
+  "295": {
+    "unit": 4,
+    "lessonNumber": 2,
+    "pages": [
+      44
+    ],
+    "titleAr": "استراتيجيات القراءة السريعة وبناء وتصنيف المفردات",
+    "titleEn": "Reading Strategies & Vocabulary Categorization",
+    "themeColor": "#0d9488",
+    "icon": "📖",
+    "sections": [
+      {
+        "name": "Skimming",
+        "ar": "القراءة السريعة للمعنى العام",
+        "icon": "⚡",
+        "def": "Reading a whole text quickly to catch main ideas and topic sentences without stopping at words."
+      },
+      {
+        "name": "Scanning",
+        "ar": "القراءة المسحية للحقائق والأرقام",
+        "icon": "🎯",
+        "def": "Glancing quickly through text searching for a specific name, number, time or adjective."
+      },
+      {
+        "name": "Context Clues",
+        "ar": "دلائل السياق للكلمات الجديدة",
+        "icon": "💡",
+        "def": "Deducing meanings of new words from surrounding sentences (e.g. 'I go red' means shy)."
+      },
+      {
+        "name": "Word Groups Notebook",
+        "ar": "دفتر تصنيف مجموعات الكلمات",
+        "icon": "📓",
+        "def": "Classifying vocabulary into Nouns (food, sports), Adjectives (feelings), and Adverbs (frequency)."
+      },
+      {
+        "name": "5 Words a Day",
+        "ar": "عادة تعلم 5 كلمات يومياً",
+        "icon": "🌟",
+        "def": "A daily golden learning habit to independently grow active vocabulary and reading fluency."
+      }
+    ],
+    "grammarFocus": {
+      "title": "تصنيف أقسام الكلام (Parts of Speech Groups)",
+      "rule": "Nouns (Food, Buildings, Sports) | Adjectives (Feelings, Places) | Adverbs (Manner, Frequency)",
+      "examples": [
+        {
+          "en": "Nouns: burger, stadium, gymnastics, newspaper, hospital.",
+          "ar": "أسماء: برغر، ملعب، جمباز، جريدة، مستشفى."
+        },
+        {
+          "en": "Adjectives: shy, afraid, delicious, fantastic, awful, tired.",
+          "ar": "صفات: خجول، خائف، لذيذ، رائع، سيء، متعب."
+        },
+        {
+          "en": "Adverbs: quickly, slowly, regularly, easily, always.",
+          "ar": "ظروف: بسرعة، ببطء، بانتظام، بسهولة، دائماً."
+        }
+      ]
+    }
+  },
+  "2951": {
+    "unit": 4,
+    "lessonNumber": 3,
+    "pages": [
+      45
+    ],
+    "titleAr": "طلاقة التحدث والقراءة بمجموعات الكلمات ونبرات الصوت",
+    "titleEn": "Speaking Fluency, Word Chunks & Question Intonation",
+    "themeColor": "#8b5cf6",
+    "icon": "🗣️",
+    "sections": [
+      {
+        "name": "Reading Aloud in Chunks",
+        "ar": "القراءة الجهرية في مجموعات مترابطة",
+        "icon": "📢",
+        "def": "Speaking in smooth rhythmic word groups rather than stopping word-by-word."
+      },
+      {
+        "name": "Falling Intonation ➘",
+        "ar": "النبرة الهابطة مع أدوات Wh",
+        "icon": "↘️",
+        "def": "Voice goes DOWN at the end of questions starting with What, Why, Who, When, How, Which."
+      },
+      {
+        "name": "Rising Intonation ➚",
+        "ar": "النبرة الصاعدة مع أسئلة Yes/No",
+        "icon": "↗️",
+        "def": "Voice goes UP at the end of questions starting with Are, Is, Do, Have, Can, Would."
+      },
+      {
+        "name": "Health Dialogue",
+        "ar": "حوار الاستفسار عن الصحة",
+        "icon": "💬",
+        "def": "Practising conversational exchanges: 'How are you? - I feel awful, and I have a headache.'"
+      },
+      {
+        "name": "Sports Desk Booking",
+        "ar": "حوار حجز دروس السباحة",
+        "icon": "🏊",
+        "def": "Enquiring about timetable and beginner levels: 'When do you have swimming lessons?'"
+      }
+    ],
+    "grammarFocus": {
+      "title": "قاعدة تنغيم ونبرة الأسئلة (Question Intonation)",
+      "rule": "Wh- Questions ➔ Voice goes DOWN ➘  |  Yes/No & Auxiliary Questions ➔ Voice goes UP ➚",
+      "examples": [
+        {
+          "en": "How are you? ➘",
+          "ar": "نبرة هابطة (سؤال يبدأ بأداة How)."
+        },
+        {
+          "en": "When do you have swimming lessons? ➘",
+          "ar": "نبرة هابطة (سؤال يبدأ بأداة When)."
+        },
+        {
+          "en": "Have you been to the doctor? ➚",
+          "ar": "نبرة صاعدة (سؤال يبدأ بفعل مساعد Have)."
+        },
+        {
+          "en": "Can I help you? ➚",
+          "ar": "نبرة صاعدة (سؤال يبدأ بفعل ناقص Can)."
+        }
+      ]
+    }
+  },
+  "2952": {
+    "unit": 4,
+    "lessonNumber": 4,
+    "pages": [
+      46
+    ],
+    "titleAr": "خطوات الكتابة ومراجعة المسودة ومخطط الأفكار",
+    "titleEn": "Writing Process, Topic Sentences & Spidergrams",
+    "themeColor": "#e11d48",
+    "icon": "✍️",
+    "sections": [
+      {
+        "name": "Proofreading Drafts",
+        "ar": "تدقيق ومراجعة المسودة الأولى",
+        "icon": "🔍",
+        "def": "Checking 4 core aspects: spelling, punctuation, wrong words, and missing words."
+      },
+      {
+        "name": "Paint a Picture",
+        "ar": "رسم صورة حية بالكلمات",
+        "icon": "🎨",
+        "def": "Using descriptive adjectives and adverbs so the reader can vividly visualize what happened."
+      },
+      {
+        "name": "Make it Interesting",
+        "ar": "إضفاء الحيوية والتشويق والمشاعر",
+        "icon": "✨",
+        "def": "Sharing personal reactions, feelings, humor and details that keep the reader engaged."
+      },
+      {
+        "name": "Topic Sentence",
+        "ar": "جملة الموضوع الافتتاحية للفقرة",
+        "icon": "📌",
+        "def": "The opening sentence of a paragraph stating clearly what the paragraph is about."
+      },
+      {
+        "name": "Spidergram Mind Map",
+        "ar": "المخطط العنكبوتي للعصف الذهني",
+        "icon": "🕸️",
+        "def": "Drawing radiating branches for activities and numbering them chronologically before drafting."
+      }
+    ],
+    "grammarFocus": {
+      "title": "مراحل كتابة الفقرة الإنشائية الناجحة",
+      "rule": "Spidergram Brainstorm ➔ Number Chronologically ➔ Draft with Topic Sentence ➔ Edit 4 Errors",
+      "examples": [
+        {
+          "en": "Topic Sentence: I did lots of exciting things at the weekend.",
+          "ar": "جملة الموضوع: قمت بالكثير من الأشياء الممتعة في عطلة نهاية الأسبوع."
+        },
+        {
+          "en": "Checklist: 1. Spelling | 2. Punctuation | 3. Wrong words | 4. Missing words.",
+          "ar": "قائمة التدقيق: 1. الإملاء | 2. علامات الترقيم | 3. الكلمات الخاطئة | 4. الكلمات الناقصة."
+        }
+      ]
+    }
+  },
+  "2953": {
+    "unit": 4,
+    "lessonNumber": 5,
+    "pages": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "titleAr": "المراجعة الشاملة وتطبيقات قواعد الفصل الدراسي الأول",
+    "titleEn": "Semester 1 Master Review & Grammar Consolidation",
+    "themeColor": "#3b82f6",
+    "icon": "🏆",
+    "sections": [
+      {
+        "name": "Unit 1: 's, For/Since, Likes",
+        "ar": "الوحدة 1: s التملك، for و since، والتفضيل",
+        "icon": "📰",
+        "def": "Consolidating possessive 's (boy's vs boys'), present perfect with for/since, and like + V-ing."
+      },
+      {
+        "name": "Unit 2: Advice, Quantifiers",
+        "ar": "الوحدة 2: النصيحة والمحددات والأمراض",
+        "icon": "🥗",
+        "def": "Reviewing should/shouldn't, too much/too many/a few/a little, and health complaint expressions."
+      },
+      {
+        "name": "Unit 3: Sports Verbs, Used to",
+        "ar": "الوحدة 3: أفعال الرياضة والاعتياد في الماضي",
+        "icon": "🏅",
+        "def": "Mastering play/go/do verbs and Used to + infinitive for past states vs present habits."
+      },
+      {
+        "name": "Unit 4: Intonation & Writing",
+        "ar": "الوحدة 4: نبرات الأسئلة وتنظيم الفقرات",
+        "icon": "🎯",
+        "def": "Applying falling/rising intonation rules and topic sentence paragraph structures."
+      },
+      {
+        "name": "Exam Preparation",
+        "ar": "الجاهزية للامتحانات المدرسية والوزارية",
+        "icon": "📊",
+        "def": "Practising multiple-choice, decoding notes, and grammar transformations with full instant feedback."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الخلاصة الذهبية لقواعد الفصل الأول (Semester 1 Summary)",
+      "rule": "Unit 1: 's & for/since | Unit 2: should & quantifiers | Unit 3: play/go/do & used to | Unit 4: Intonation",
+      "examples": [
+        {
+          "en": "The boy's bag (singular) vs The boys' bags (plural).",
+          "ar": "حقيبة الولد (مفرد) مقابل حقائب الأولاد (جمع)."
+        },
+        {
+          "en": "I have lived here since 2020 / for four years.",
+          "ar": "عشت هنا منذ عام 2020 / لمدة أربع سنوات."
+        },
+        {
+          "en": "You should walk to school. You shouldn't drink too much cola.",
+          "ar": "عليك المشي للمدرسة. لا ينبغي أن تشرب الكثير من الكولا."
+        },
+        {
+          "en": "Saad plays basketball, goes swimming and does judo.",
+          "ar": "سعد يلعب كرة السلة، يذهب للسباحة، ويمارس الجودو."
+        },
+        {
+          "en": "I used to be shy, but now I am confident.",
+          "ar": "كنت في الماضي خجولاً، لكني الآن واثق من نفسي."
         }
       ]
     }

@@ -43,36 +43,44 @@ def clean_structure():
         },
         {
             'title': 'الوحدة 3: الرياضة والألعاب (Unit 3: Sports and Games)',
-            'start_page': 30,
+            'start_page': 28,
             'end_page': 42,
             'lessons': [
-                {'title': 'Lesson 1: Sports and Games (أنواع الرياضات وأفعالها)', 'start': 30, 'end': 31},
-                {'title': 'Lesson 2: Sports Verbs (play, go, do)', 'start': 32, 'end': 33},
-                {'title': 'Lesson 3: Booking Lessons (حجز الدروس الرياضية)', 'start': 34, 'end': 35},
-                {'title': 'Lesson 4: How Often? & Using Used to', 'start': 36, 'end': 37},
-                {'title': 'Lesson 5: Sports Days (يوم الرياضة والمسابقات)', 'start': 38, 'end': 39},
-                {'title': 'Unit 3 Round up & Story Time: The Football Match', 'start': 40, 'end': 42}
+                {'title': 'Lesson 1: The Sports Centre (المركز الرياضي وأنواع الرياضات)', 'start': 28, 'end': 28},
+                {'title': 'Lesson 2: The Timetable (جدول المواعيد والمستويات الرياضية)', 'start': 29, 'end': 29},
+                {'title': 'Lesson 3: Booking Lessons (حجز الدروس في المركز الرياضي)', 'start': 30, 'end': 30},
+                {'title': 'Lesson 4: The Basketball Game (مباراة كرة السلة ومصطلحات الفوز والخسارة)', 'start': 31, 'end': 31},
+                {'title': 'Lesson 5: The Olympic Games (الألعاب الأولمبية: التاريخ والميثاق والميداليات)', 'start': 32, 'end': 32},
+                {'title': 'Lesson 6: Olympic Superstars (أساطير وأرقام قياسية أولمبية تاريخية)', 'start': 33, 'end': 33},
+                {'title': 'Lesson 7: Changes (التغيرات الشخصية والبدنية مع قاعدة Used to)', 'start': 34, 'end': 34},
+                {'title': 'Lesson 8: Have Fun with Words! (ألعاب الألفاظ واللسان وتراكيب الأصوات)', 'start': 35, 'end': 35},
+                {'title': 'Lesson 9: Unit 3 Round Up (المراجعة الشاملة لمهارات وقواعد الوحدة الثالثة)', 'start': 36, 'end': 36},
+                {'title': 'Lesson 10: Story Time: Jad and Johnny - The Football Match (قصة مباراة كرة القدم في ميونيخ)', 'start': 37, 'end': 38},
+                {'title': 'Lesson 11: Project: Different Sports & Survey (مشروع: رياضات مختلفة واستطلاع رأي الطلاب)', 'start': 39, 'end': 42}
             ]
         },
         {
             'title': 'الوحدة 4: المراجعة الشاملة 1 (Unit 4: Review 1)',
             'start_page': 43,
-            'end_page': 48,
+            'end_page': 46,
             'lessons': [
-                {'title': 'Review: Reading & Listening Skills', 'start': 43, 'end': 45},
-                {'title': 'Review: Speaking, Writing & Grammar Consolidation', 'start': 46, 'end': 48}
+                {'title': 'Lesson 1: Review - Listening Skills & Strategies (مهارات واستراتيجيات الاستماع الفعال وتدوين الملاحظات)', 'start': 43, 'end': 43},
+                {'title': 'Lesson 2: Review - Reading Strategies & Vocabulary Building (استراتيجيات القراءة وتنمية وتصنيف الحصيلة اللغوية)', 'start': 44, 'end': 44},
+                {'title': 'Lesson 3: Review - Speaking Fluency & Question Intonation (مهارات التحدث وطلاقة النطق ونبرات الاستفهام)', 'start': 45, 'end': 45},
+                {'title': 'Lesson 4: Review - Writing Skills & Paragraph Planning (خطوات كتابة المسودة ومخطط الأفكار وتدقيق المقال)', 'start': 46, 'end': 46},
+                {'title': 'Lesson 5: Unit 4 Round Up - Semester 1 Comprehensive Review (المراجعة الشاملة وتطبيقات قواعد الفصل الأول)', 'start': 43, 'end': 46}
             ]
         },
         {
             'title': 'الوحدة 5: تلقي وإرسال المعلومات (Unit 5: Getting & Sending Info)',
-            'start_page': 49,
-            'end_page': 60,
+            'start_page': 47,
+            'end_page': 59,
             'lessons': [
-                {'title': 'Lesson 1: History of Communication (تاريخ وسائل الاتصال)', 'start': 49, 'end': 50},
+                {'title': 'Lesson 1: History of Communication & Old Ways of Sending Info (تاريخ وسائل الاتصال والوسائل القديمة)', 'start': 47, 'end': 50},
                 {'title': 'Lesson 2: Telephone Calls & Passive Voice (المبني للمجهول)', 'start': 51, 'end': 53},
                 {'title': 'Lesson 3: Satellites and the Internet (الأقمار الصناعية والإنترنت)', 'start': 54, 'end': 56},
                 {'title': 'Story Time: Jad and Johnny - The Gondola Trip', 'start': 57, 'end': 58},
-                {'title': 'Project 3: A Chat Forum', 'start': 59, 'end': 60}
+                {'title': 'Project 3: A Chat Forum', 'start': 59, 'end': 59}
             ]
         },
         {
