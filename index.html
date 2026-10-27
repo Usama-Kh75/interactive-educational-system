@@ -4616,7 +4616,7 @@
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.35rem;">
               <div style="display: flex; gap: 0.35rem; align-items: center;">
                 ${rule.category === 'tenses' ? '<span class="curr-badge" style="background: #e0e7ff; color: #3730a3; font-weight: 800; border: 1px solid #c7d2fe;">⏱️ زمن</span>' : ''}
-                <span class="curr-badge" style="background: #fef3c7; color: #92400e;">الوحدة ${rule.unit} - صفحة ${rule.page}</span>
+                <span class="curr-badge" style="background: #fef3c7; color: #92400e;">${rule.page >= 110 ? `الوحدة ${rule.unit} • مرجع القواعد (ص ${rule.page})` : `الوحدة ${rule.unit} • صفحة ${rule.page}`}</span>
               </div>
               <span style="font-size: 0.72rem; color: var(--slate-400); font-weight: 700;">${rule.level}</span>
             </div>
