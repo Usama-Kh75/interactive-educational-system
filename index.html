@@ -480,6 +480,83 @@
       border-left: 3px solid #6366f1;
     }
 
+    /* Platform Hero Visual Card */
+    .platform-visual-card {
+      width: 280px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 1.35rem 1.2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .platform-visual-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .platform-visual-icon-orb {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 0.75rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 20px rgba(99, 102, 241, 0.4);
+      animation: orbPulse 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbPulse {
+      0% { transform: scale(1); box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 15px rgba(99, 102, 241, 0.3); }
+      100% { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.35), 0 0 30px rgba(139, 92, 246, 0.6); }
+    }
+
+    .platform-visual-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .platform-visual-sub {
+      font-size: 0.72rem;
+      color: #c7d2fe;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    .platform-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+    }
+
+    .platform-feature-badge {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 0.35rem 0.45rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -2013,7 +2090,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.3 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.4 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2023,6 +2100,10 @@
         <button class="tab-btn active" onclick="switchTab('dashboard')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           الرئيسية
+        </button>
+        <button class="tab-btn" id="navBtnEnglish" onclick="openSubjectTab(3)" title="تبويب المنهج المعتمد: مادة اللغة الإنجليزية للصف الثاني متوسط">
+          <span style="font-size: 1.05rem; line-height: 1;">🇬🇧</span>
+          <span>مادة اللغة الإنجليزية (الثاني متوسط)</span>
         </button>
         <button class="tab-btn" onclick="switchTab('curriculums')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
@@ -2057,21 +2138,21 @@
 
     <!-- 1. تبويب الرئيسية -->
     <section id="tab-dashboard">
-      <!-- 1. البانر الرئيسي العالمي وأجواء الدراسة التفاعلية -->
-      <div class="hero-banner">
+      <!-- 1. البانر الرئيسي العام للمنظومة التعليمية الشاملة -->
+      <div class="hero-banner platform-hero-banner">
         <div class="hero-content-grid">
-          <!-- العمود الأيمن: النصوص وإجراءات الدراسة المباشرة -->
+          <!-- العمود الأيمن: نصوص ورؤية المنظومة الشاملة -->
           <div class="hero-text-col">
             <div class="hero-author-badge">
-              <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span>الإصدار v2.8.3 ✨</span>
+              <span>👨‍💻</span> إعداد المهندس أسامة خليل هاشم &nbsp;|&nbsp; <span>الإصدار v2.8.4 ✨</span>
             </div>
             <h2>المنظومة التعليمية التفاعلية الشاملة</h2>
             <p>
-              بيئة تعليمية ذكية وتفاعلية متكاملة تواكب أحدث المعايير العالمية؛ تبدأ بالمنهاج النموذجي المعتمد لـ <strong>مادة اللغة الإنجليزية للصف الثاني متوسط</strong> المكتمل بنسبة 100% بنصوصه المسموعة، صفحاته الأصلية، بنك قواعده، ونماذج امتحاناته الوزارية المحلولة.
+              بيئة رقمية ذكية ومتكاملة مصممة بأحدث المعايير العالمية؛ لدعم مختلف المواد والمراحل الدراسية بتجربة تفاعلية تجمع بين رقمنة المناهج المعتمدة، القراءة بالصوت البشري الفصيح، بنوك القواعد والوظائف اللغوية، ونماذج الامتحانات الموزونة وحلولها النموذجية.
             </p>
             <div class="hero-actions">
-              <button class="btn-hero-primary" onclick="selectCurriculumForStudy(3)">
-                <span>📖</span> ابدأ المذاكرة الآن (اللغة الإنجليزية) ⮞
+              <button class="btn-hero-primary" onclick="openSubjectTab(3)">
+                <span>🇬🇧</span> مادة اللغة الإنجليزية (الثاني متوسط) ⮞
               </button>
               <button class="btn-hero-secondary" onclick="scrollToSubjectsSection()">
                 <span>🎓</span> استعراض المناهج المعتمدة
@@ -2079,21 +2160,37 @@
               <button class="btn-hero-secondary" onclick="switchTab('curriculums')">
                 <span>📚</span> مكتبة المناهج والكتب
               </button>
+              <button class="btn-hero-secondary" onclick="switchTab('settings')">
+                <span>⚙️</span> إعدادات المنصة
+              </button>
             </div>
           </div>
 
-          <!-- العمود الأيسر: مجسم الكتاب ثلاثي الأبعاد وأجواء التعلم -->
+          <!-- العمود الأيسر: مجسم الهوية البصرية للمنظومة الشاملة (أجواء أكاديمية متعددة التخصصات) -->
           <div class="hero-visual-col">
-            <div class="hero-book-wrapper">
-              <div class="hero-floating-chip chip-top">
-                <span>🎧</span> صوت بشري فصيح مع التتبع
+            <div class="platform-visual-card">
+              <div class="platform-visual-icon-orb">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
               </div>
-              <div class="hero-book-3d" onclick="selectCurriculumForStudy(3)" title="انقر لفتح كتاب الطالب ومباشرة المذاكرة فوراً">
-                <img src="./book_images/page_1.jpeg" alt="غلاف كتاب اللغة الإنجليزية - الثاني متوسط">
-                <div class="book-spine-shine"></div>
-              </div>
-              <div class="hero-floating-chip chip-bottom">
-                <span>📝</span> نماذج امتحانات وزارية محلولة
+              <div class="platform-visual-title">النظام التعليمي التفاعلي</div>
+              <div class="platform-visual-sub">منظومة أكاديمية متكاملة لجميع المراحل والمواد</div>
+              
+              <div class="platform-features-grid">
+                <div class="platform-feature-badge">
+                  <span>🎧</span> صوت بشري وتتبع
+                </div>
+                <div class="platform-feature-badge">
+                  <span>📚</span> مناهج معتمدة 100%
+                </div>
+                <div class="platform-feature-badge">
+                  <span>📝</span> امتحانات وحلولها
+                </div>
+                <div class="platform-feature-badge">
+                  <span>⚡</span> يعمل دون إنترنت PWA
+                </div>
               </div>
             </div>
           </div>
@@ -2236,9 +2333,64 @@
       </div>
     </section>
 
-    <!-- 3. تبويب قاعة المذاكرة والمساعد الصوتي -->
+    <!-- 3. تبويب مادة اللغة الإنجليزية وقاعة المذاكرة التفاعلية -->
     <section id="tab-study" class="hidden">
       
+      <!-- بانر مادة اللغة الإنجليزية التفاعلي المتميز مع مجسم الكتاب 3D -->
+      <div class="hero-banner subject-hero-banner" id="studySubjectHeroBanner" style="margin-bottom: 1.25rem;">
+        <div class="hero-content-grid">
+          <!-- العمود الأيمن: نصوص وتفاصيل منهج اللغة الإنجليزية -->
+          <div class="hero-text-col">
+            <div class="hero-author-badge">
+              <span>🌟</span> المنهج الوزاري المعتمد • مكتمل 100% &nbsp;|&nbsp; <span>إعداد المهندس أسامة خليل هاشم</span>
+            </div>
+            <h2>اللغة الإنجليزية - الصف الثاني متوسط</h2>
+            <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+              <span style="background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3); padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800;">📖 English for Iraq</span>
+              <span style="background: rgba(16, 185, 129, 0.25); border: 1px solid rgba(16, 185, 129, 0.5); color: #a7f3d0; padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800;">✅ 10 وحدات و 53 درساً</span>
+              <span style="background: rgba(245, 158, 11, 0.25); border: 1px solid rgba(245, 158, 11, 0.5); color: #fde68a; padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800;">💡 23 قاعدة ومفهوماً</span>
+              <span style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800;">📝 4 امتحانات وزارية محلولة</span>
+            </div>
+            <p style="margin-bottom: 1.15rem;">
+              منهاج تفاعلي متكامل يشمل قراءة نصوص كتاب الطالب وكتاب النشاط بصوت بشري فصيح طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (23 قاعدة)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية مع ميزة الطباعة الورقية والتدريب التفاعلي.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-hero-primary" onclick="scrollToStudyContent()">
+                <span>📖</span> ابدأ مذاكرة الدرس الحالي ⮞
+              </button>
+              <button class="btn-hero-secondary" onclick="openPastExamsTab('midyear')">
+                <span>📝</span> نماذج الامتحانات والأسئلة وحلولها
+              </button>
+              <button class="btn-hero-secondary" onclick="switchTab('grammar')">
+                <span>💡</span> بنك القواعد النحوية
+              </button>
+              <button class="btn-hero-secondary" onclick="openVoiceStudioModal()">
+                <span>🎙️</span> استوديو الصوت
+              </button>
+              <button class="btn-hero-secondary" onclick="switchTab('dashboard')">
+                <span>🏠</span> العودة للرئيسية
+              </button>
+            </div>
+          </div>
+
+          <!-- العمود الأيسر: مجسم الكتاب ثلاثي الأبعاد لكتاب English for Iraq -->
+          <div class="hero-visual-col">
+            <div class="hero-book-wrapper">
+              <div class="hero-floating-chip chip-top">
+                <span>🎧</span> صوت بشري فصيح مع التتبع
+              </div>
+              <div class="hero-book-3d" onclick="openBookPageModal(1, 'غلاف كتاب الطالب المعتمد')" title="انقر لمعاينة وتكبير صفحة غلاف كتاب الطالب الرسمي">
+                <img src="./book_images/page_1.jpeg" alt="غلاف كتاب اللغة الإنجليزية - الثاني متوسط">
+                <div class="book-spine-shine"></div>
+              </div>
+              <div class="hero-floating-chip chip-bottom">
+                <span>📝</span> نماذج امتحانات وزارية محلولة
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- شريط سياق المادة الدراسية الحالية -->
       <div class="subject-context-bar">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -3035,13 +3187,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.3؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.4؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.8.3</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.8.4</span>
         </div>
       </div>
 
@@ -3089,9 +3241,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '2.8.3';
-    const CURRENT_VERSION_LABEL = 'v2.8.3';
-    const SYSTEM_VERSION = 'v2.8.3';
+    const CURRENT_VERSION = '2.8.4';
+    const CURRENT_VERSION_LABEL = 'v2.8.4';
+    const SYSTEM_VERSION = 'v2.8.4';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -4253,7 +4405,8 @@
 
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+        const oc = btn.getAttribute('onclick') || '';
+        if (oc.includes("'" + tabId + "'") || (tabId === 'study' && (oc.includes('openSubjectTab') || oc.includes('selectCurriculumForStudy')))) {
           btn.classList.add('active');
         }
       });
@@ -4352,6 +4505,17 @@
     function selectCurriculumForStudy(currId) {
       onCurriculumSelectChange(currId);
       switchTab('study');
+    }
+
+    function openSubjectTab(currId = 3) {
+      selectCurriculumForStudy(currId);
+    }
+
+    function scrollToStudyContent() {
+      const el = document.getElementById('lessonChunksContainerWrapper') || document.querySelector('.study-layout');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     // عرض شاشة المذاكرة المتكاملة
@@ -7327,8 +7491,8 @@
 
               <!-- أزرار الإجراءات السريعة للمقرر -->
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-                <button class="btn btn-primary" onclick="selectCurriculumForStudy(${curr.id})" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);">
-                  📖 دخول قاعة مذاكرة اللغة الإنجليزية ⮞
+                <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);">
+                  📖 الانتقال إلى تبويب مادة اللغة الإنجليزية (الثاني متوسط) ⮞
                 </button>
                 <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
                   📝 نماذج الامتحانات والأسئلة وحلولها
