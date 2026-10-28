@@ -16,7 +16,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching core PWA assets v3.2.0');
+      console.log('[Service Worker] Caching core PWA assets v3.3.1');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
