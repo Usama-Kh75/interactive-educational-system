@@ -2171,7 +2171,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.1.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.2.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3403,7 +3403,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.1.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.2.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3458,8 +3458,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '2.8.6';
-    const CURRENT_VERSION_LABEL = 'v3.1.0';
-    const SYSTEM_VERSION = 'v3.1.0';
+    const CURRENT_VERSION_LABEL = 'v3.2.0';
+    const SYSTEM_VERSION = 'v3.2.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -6182,7 +6182,7 @@
         5: { title: 'الوحدة الخامسة: تلقي وإرسال المعلومات', titleEn: 'Unit 5: Getting & Sending Info', icon: '📡', color: '#7c3aed', bg: '#f5f3ff' },
         6: { title: 'الوحدة السادسة: المهن والوظائف', titleEn: 'Unit 6: Jobs and Occupations', icon: '💼', color: '#dc2626', bg: '#fef2f2' },
         7: { title: 'الوحدة السابعة: العالم من حولنا والبيئة', titleEn: 'Unit 7: The World Around Us', icon: '🌍', color: '#16a34a', bg: '#f0fdf4' },
-        8: { title: 'الوحدة الثامنة: المراجعة الشاملة 2', titleEn: 'Unit 8: Review 2', icon: '🎯', color: '#4b5563', bg: '#f3f4f6' }
+        8: { title: 'الوحدة الثامنة: المراجعة الشاملة 2', titleEn: 'Unit 8: Review 2', icon: '🎯', color: '#7c3aed', bg: '#f5f3ff' }
       };
 
       let lastRenderedUnit = null;
@@ -6353,6 +6353,281 @@
 
       // خريطة الأسئلة التدريبية المتخصصة حسب الدرس المختار
       const LESSON_QUIZZES = {
+        // الوحدة 8: المراجعة الشاملة 2 (Unit 8: Review 2)
+        3021: [
+          {
+            "id": 30211,
+            "question": "What mistake did Susan make when she tried to call Liz at six o'clock (Page 86)?",
+            "options": [
+              "She wrote down the wrong telephone number (432147)",
+              "She called at six in the morning instead of evening",
+              "She forgot how to dial a telephone",
+              "She spoke to Liz but forgot what to say"
+            ],
+            "correct": 0,
+            "explanation": "Page 86 & 106: Susan dialed 432147, but a woman answered saying no one named Liz lived there; Susan had written down the wrong number."
+          },
+          {
+            "id": 30212,
+            "question": "Why was Jalal stranded outside a dark house in England late at night (Page 86)?",
+            "options": [
+              "He wrote down the wrong street address (West Street instead of West Road or Drive)",
+              "His flight to England was delayed by four days",
+              "The taxi driver refused to let him out of the cab",
+              "His friend Dave had emigrated to another country"
+            ],
+            "correct": 0,
+            "explanation": "Page 86 & 106: Jalal gave the taxi driver 24 West Street, but the house was pitch dark; his friend Dave had given him a different street suffix or number."
+          },
+          {
+            "id": 30213,
+            "question": "What happened to Jane Smith when she arrived at 4:00 PM for her job interview (Page 86)?",
+            "options": [
+              "Her interview was scheduled for yesterday, so she missed it and wrote the wrong day",
+              "Miss Brown offered her the job instantly without asking any questions",
+              "The office was closed for summer vacation",
+              "She arrived two hours early and waited in the canteen"
+            ],
+            "correct": 0,
+            "explanation": "Page 86 & 106: The receptionist explained that the interview was yesterday; Jane had mistakenly written it down on the wrong day in her diary."
+          },
+          {
+            "id": 30214,
+            "question": "What is the best listening practice to avoid making note-taking errors like Susan and Jalal?",
+            "options": [
+              "Write notes with clear abbreviations and read them back to confirm with the speaker",
+              "Rely entirely on memory without writing anything down",
+              "Assume you know the information without checking",
+              "Hang up immediately after hearing the first digit"
+            ],
+            "correct": 0,
+            "explanation": "Page 86 Listening Strategy: Always note down specific numbers/addresses clearly and read them back to verify."
+          }
+        ],
+        3022: [
+          {
+            "id": 30221,
+            "question": "What is the golden rule for reading aloud fluently in English (Page 87)?",
+            "options": [
+              "Say words in connected thought groups and keep your eyes on the words ahead",
+              "Stop and take a breath after every single individual word",
+              "Read as quickly as possible without pausing for commas or full stops",
+              "Keep your eyes focused only on the current letter being pronounced"
+            ],
+            "correct": 0,
+            "explanation": "Page 87: When reading aloud, don't stop after each word. Say words in connected groups, keeping your eyes looking ahead."
+          },
+          {
+            "id": 30222,
+            "question": "What emotional tone of voice should you use when reading: 'The food was bad, and the waiters were very slow. Worst of all, they weren't even polite'?",
+            "options": [
+              "Disappointed, critical, and dissatisfied tone",
+              "Excited and jubilant tone with loud laughter",
+              "Whispering as if telling a secret",
+              "Singing with a joyful cheerful melody"
+            ],
+            "correct": 0,
+            "explanation": "Page 87: Speech bubble 1 expresses extreme disappointment with an awful restaurant, requiring an unhappy, complaining voice tone."
+          },
+          {
+            "id": 30223,
+            "question": "In the cumulative memory game 'Going on holiday', what must players do?",
+            "options": [
+              "Repeat all previous items in order before adding a new item with correct list intonation",
+              "Invent a completely new game rule each round",
+              "Translate every item into five different languages",
+              "Say only items that start with the letter Z"
+            ],
+            "correct": 0,
+            "explanation": "Page 87: Each player recites the accumulated list ('toothbrush, toothpaste, sunglasses...') before adding their own item."
+          },
+          {
+            "id": 30224,
+            "question": "Which opening phrase is polite and appropriate when making a telephone call to apply for an advertised job (Page 87)?",
+            "options": [
+              "Hello, I am calling about the advertisement for garden help",
+              "Hey you, give me that job right now",
+              "Why did you put an advertisement in the paper?",
+              "Guess who is calling you today!"
+            ],
+            "correct": 0,
+            "explanation": "Page 87 & 54: Polite telephone convention requires greeting, introducing oneself, and stating the specific reason for calling."
+          }
+        ],
+        3023: [
+          {
+            "id": 30231,
+            "question": "What is a 'Topic Sentence' and where is it usually located in an English paragraph (Page 88)?",
+            "options": [
+              "The sentence that gives the main idea, usually at the beginning of the paragraph",
+              "The last word of the paragraph written in capital letters",
+              "A footnote found at the bottom of the page",
+              "A sentence containing only numbers and dates"
+            ],
+            "correct": 0,
+            "explanation": "Page 88: Topic sentences summarize the core theme and typically appear as the first sentence of each paragraph."
+          },
+          {
+            "id": 30232,
+            "question": "Why did Muhammad study Maths and English especially hard at school (Page 88)?",
+            "options": [
+              "Because he needed both subjects to become a pilot, and English is the 'language of the air'",
+              "Because his parents forced him to become a school teacher",
+              "Because there were no other subjects taught in his school",
+              "Because he wanted to become a bank manager"
+            ],
+            "correct": 0,
+            "explanation": "Page 88: Muhammad knew English is the international language of aviation and Maths is essential for navigation and flight calculations."
+          },
+          {
+            "id": 30233,
+            "question": "Where did Muhammad travel to complete his professional pilot training (Page 88)?",
+            "options": [
+              "To an aviation college in Germany",
+              "To a language institute in Canada",
+              "To a sports club in Australia",
+              "To an art academy in Italy"
+            ],
+            "correct": 0,
+            "explanation": "Page 88: With top school marks, Muhammad was accepted into an aviation college in Germany."
+          },
+          {
+            "id": 30234,
+            "question": "What does a 'solo flight' mean in pilot training (Page 88)?",
+            "options": [
+              "Flying an aeroplane completely alone without an instructor on board",
+              "Flying a plane with 200 passengers across the Atlantic",
+              "Flying a toy remote-controlled helicopter",
+              "Sitting inside a parked aircraft without turning the engine on"
+            ],
+            "correct": 0,
+            "explanation": "Page 88: A solo flight is a crucial pilot milestone where the trainee takes off and flies the aircraft entirely by themselves."
+          }
+        ],
+        3024: [
+          {
+            "id": 30241,
+            "question": "According to Writing Tip 7, what is an effective daily method to master spelling (Page 89)?",
+            "options": [
+              "Study five words every night: spell them aloud, cover and write them, and test yourself",
+              "Read an entire 500-page dictionary in one sitting",
+              "Never write down any word unless looking directly at the book",
+              "Avoid using any words with more than four letters"
+            ],
+            "correct": 0,
+            "explanation": "Page 89 Writing Tip 7: Consistent study of five words a night with spelling aloud and testing is the most effective approach."
+          },
+          {
+            "id": 30242,
+            "question": "Which of the following sentences has 100% accurate punctuation according to Writing Tip 8 (Page 89)?",
+            "options": [
+              "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+              "Youve done well in maths english and arabic my mother said but what about history your mark is very bad.",
+              "\"You've done well in maths, english and arabic\" my mother said, \"but what about history. your mark is very bad\"",
+              "\"You've done well in Maths, English and Arabic\" my mother said but what about History? your mark is very bad."
+            ],
+            "correct": 0,
+            "explanation": "Page 89: Capitalization of school subjects (Maths, English, Arabic, History), speech marks for direct quotes, apostrophe in You've, and question mark after History."
+          },
+          {
+            "id": 30243,
+            "question": "In the story on Page 89, what are the correct verb forms for: 'When we ______ (climb), a little boy ______ (go) to the edge'?",
+            "options": [
+              "were climbing / went",
+              "climbed / was going",
+              "climb / goes",
+              "are climbing / will go"
+            ],
+            "correct": 0,
+            "explanation": "Page 89 Writing Tip 9: 'When we were climbing' (past continuous for the continuous activity) interrupted by 'went' (past simple)."
+          },
+          {
+            "id": 30244,
+            "question": "Why should writers use adjectives and adverbs in their descriptions (Writing Tip 11, Page 89)?",
+            "options": [
+              "To paint vivid mental pictures and make writing engaging and interesting",
+              "To make sentences longer so they fill up more pages",
+              "Because nouns and verbs are forbidden in English essays",
+              "To confuse the teacher when grading the composition"
+            ],
+            "correct": 0,
+            "explanation": "Page 89 Writing Tip 11: Adjectives and adverbs enrich descriptions and paint vivid imagery for the reader."
+          }
+        ],
+        3025: [
+          {
+            "id": 30251,
+            "question": "Which of the following is the correct Present Simple Passive transformation of: 'They print the newspaper in Baghdad'?",
+            "options": [
+              "The newspaper is printed in Baghdad",
+              "The newspaper was printed in Baghdad",
+              "The newspaper are printed in Baghdad",
+              "The newspaper will printed in Baghdad"
+            ],
+            "correct": 0,
+            "explanation": "Unit 5 & 8: Present Simple Passive uses Object + is + Past Participle ('The newspaper is printed')."
+          },
+          {
+            "id": 30252,
+            "question": "Which sentence demonstrates the correct Manner-Place-Time (M-P-T) order of adverbs?",
+            "options": [
+              "The boy ran quickly (M) in the park (P) yesterday (T)",
+              "The boy ran yesterday (T) in the park (P) quickly (M)",
+              "The boy ran in the park (P) quickly (M) yesterday (T)",
+              "The boy quickly (M) yesterday (T) ran in the park (P)"
+            ],
+            "correct": 0,
+            "explanation": "Unit 7 & 8: The universal English adverb order is Manner (quickly) + Place (in the park) + Time (yesterday)."
+          },
+          {
+            "id": 30253,
+            "question": "Complete the sentence with the correct relative pronoun: 'A pilot is a professional person ______ flies aeroplanes.'",
+            "options": [
+              "who",
+              "which",
+              "where",
+              "whose"
+            ],
+            "correct": 0,
+            "explanation": "Unit 6 & 8: 'Who' is used as a defining relative pronoun for people."
+          },
+          {
+            "id": 30254,
+            "question": "What is the correct future form for a planned intention: 'Muhammad ______ (train) to be a pilot next month'?",
+            "options": [
+              "is going to train",
+              "trained",
+              "has trained",
+              "was training"
+            ],
+            "correct": 0,
+            "explanation": "Unit 6 & 8: 'be going to + verb' expresses planned future intentions and decisions."
+          },
+          {
+            "id": 30255,
+            "question": "Which modal verb expresses strong moral/legal prohibition in environmental rules?",
+            "options": [
+              "mustn't",
+              "might",
+              "can",
+              "should"
+            ],
+            "correct": 0,
+            "explanation": "Unit 7 & 8: 'Mustn't' expresses strict obligation not to do something (e.g., 'You mustn't drop litter in the river')."
+          },
+          {
+            "id": 30256,
+            "question": "Transform into the Past Simple Passive: 'Fire ruined a house in Castle Street.'",
+            "options": [
+              "A house in Castle Street was ruined by fire",
+              "A house in Castle Street is ruined by fire",
+              "A house in Castle Street were ruined by fire",
+              "A house in Castle Street will be ruined by fire"
+            ],
+            "correct": 0,
+            "explanation": "Unit 5 & 8: Past Simple Passive uses singular was + past participle ruined: 'was ruined by fire'."
+          }
+        ],
         // الوحدة 7: العالم من حولنا والبيئة (Unit 7: The World Around Us)
         3001: [
           {
@@ -8695,6 +8970,183 @@
     let allExamSolutionsVisible = false;
 
     const PAST_EXAMS_DATABASE = {
+      final: {
+        id: 'final',
+        title: 'الامتحان الوزاري النهائي الشامل للكورس الثاني ونهاية العام (Final Comprehensive Examination)',
+        stage: 'الصف الثاني متوسط (Second Intermediate)',
+        subject: 'اللغة الإنجليزية (English for Iraq - Units 5 to 8)',
+        year: '2025 - 2026',
+        time: 'ساعتان ونصف (2.5 Hours)',
+        totalMarks: '100 درجة (100 Marks)',
+        notes: 'ملاحظة: أجب عن جميع الأسئلة الآتية. Note: Answer all the following questions.',
+        badge: '🏆 الامتحان النهائي الشامل',
+        questions: [
+          {
+            id: 'fe_q1',
+            number: 'Q1',
+            title: 'Reading Comprehension (استيعاب المقروء - القطعة الخارجية)',
+            marks: '15 Marks',
+            instructions: 'Read the following passage carefully, then answer (5) of the questions below: (15 Marks / 3 marks each)',
+            passage: 'Muhammad is a determined young student from Baghdad who has dreamed of becoming a pilot since early childhood. When he was young, he loved playing with toy aeroplanes and watching planes soar across the sky. At school, he worked exceptionally hard at all his subjects, especially Maths and English, because he knew that English is the universal "language of the air". After passing his final exams with top marks, Muhammad earned a place at an aviation college in Germany. He was nervous on his first solo flight, but he flew successfully and safely. Muhammad passed all difficult theoretical and practical exams and proudly received his commercial pilot certificate, calling it the best day of his life.',
+            items: [
+              '1. What has Muhammad always wanted to be since childhood?',
+              '2. Why did Muhammad work especially hard at English?',
+              '3. Where was the aviation college where Muhammad trained to be a pilot?',
+              '4. How did Muhammad feel when he took off on his first solo flight?',
+              '5. What was the best day of Muhammad\'s life?',
+              '6. Give the passage a suitable title.'
+            ],
+            solution: `
+              <strong>الحل النموذجي وتوزيع الدرجات (15 درجة - 3 درجات لكل نقطة):</strong><br>
+              <strong>1.</strong> He has always wanted to be a pilot. (أراد دائماً أن يصبح طياراً).<br>
+              <strong>2.</strong> Because he knew that English is the 'language of the air' needed by pilots. (لأن الإنجليزية هي لغة الطيران الدولية).<br>
+              <strong>3.</strong> In Germany. (في ألمانيا).<br>
+              <strong>4.</strong> He was a little nervous, but also excited to be flying a plane by himself. (كان متوتراً قليلاً ومتحمساً جداً للطيران بمفرده).<br>
+              <strong>5.</strong> The day he got his pilot's certificate. (يوم حصوله على شهادة ورخصة الطيران).<br>
+              <strong>6.</strong> "A High-Flying Job" / "Muhammad the Pilot" / "A Boy's Dream". (أي عنوان ملائم).
+            `
+          },
+          {
+            id: 'fe_q2',
+            number: 'Q2',
+            title: 'Textbook Passages & Stories (قطع ونصوص وقصص الكتاب المقررة)',
+            marks: '15 Marks',
+            instructions: 'Answer (5) of the following questions from your textbook units: (15 Marks / 3 marks each)',
+            passage: null,
+            items: [
+              '1. Why are elephants in Kenya killed by poachers? (Unit 7)',
+              '2. What causes the desert to move (desertification) in Iraq? (Unit 7)',
+              '3. What can students make using two empty plastic bottles and a fastener? (Project 4 / Unit 7)',
+              '4. In Unit 8, what information did Susan get wrong when phoning Liz? (Unit 8)',
+              '5. Why was Jalal standing outside a dark house at 24 West Street in England? (Unit 8)',
+              '6. Why did Jane Smith miss her interview for the secretary job? (Unit 8)'
+            ],
+            solution: `
+              <strong>الحل النموذجي وتوزيع الدرجات (15 درجة - 3 درجات لكل نقطة):</strong><br>
+              <strong>1.</strong> They are illegally killed for their ivory tusks. (يُقتلون لسرقة العاج).<br>
+              <strong>2.</strong> Sandstorms, lack of rain, cutting down trees, and overgrazing. (العواصف الرملية وقلة الأمطار وقطع الأشجار والرعي الجائر).<br>
+              <strong>3.</strong> A useful zip-up pencil case. (مقلمة مدرسية مفيدة بسحاب).<br>
+              <strong>4.</strong> She wrote down the wrong telephone number (432147). (كتبت الرقم الخطأ).<br>
+              <strong>5.</strong> He had the wrong address (street name or suffix) from his friend Dave. (كان العنوان غير دقيق).<br>
+              <strong>6.</strong> She wrote down the interview on the wrong day in her diary (it was yesterday). (سجلت المقابلة في اليوم الخطأ).
+            `
+          },
+          {
+            id: 'fe_q3',
+            number: 'Q3',
+            title: 'Grammar and Functions (القواعد والوظائف اللغوية)',
+            marks: '25 Marks',
+            instructions: 'Answer both branches: (A) Choices (15 Marks) & (B) Do as required (10 Marks):',
+            passage: null,
+            branchA: {
+              title: 'Branch (A) - Choose the correct word between brackets: (15 Marks / 3 marks each - Answer 5)',
+              items: [
+                '1. The articles (are written / wrote) in Cairo and printed in Baghdad.',
+                '2. A house in Castle Street (was ruined / were ruined) by fire last night.',
+                '3. Sami ran (yesterday fast in the race / fast in the race yesterday).',
+                '4. This is the pilot (who / which) flew the aeroplane on his first solo flight.',
+                '5. Look at those dark clouds! It (is going to rain / rained) soon.',
+                '6. You (mustn\'t / may) throw rubbish into the river; it is against the law.'
+              ]
+            },
+            branchB: {
+              title: 'Branch (B) - Do as required between brackets: (10 Marks / 2 marks each - Answer 5)',
+              items: [
+                '1. Fire destroyed the house. (Change into Past Simple Passive)',
+                '2. She (live) in Baghdad, but her family (move) to Erbil last year. (Correct the verbs)',
+                '3. "When do you have flying lessons?" (Does this question have a rising or falling intonation?) (Answer)',
+                '4. What are you going to do when you (finish) school? (Correct the verb)',
+                '5. I\'ll help you clean the classroom. (What language function is this?) (Answer)',
+                '6. Mazin sang (well / in the hall / beautifully). (Arrange: Manner + Place)'
+              ]
+            },
+            solution: `
+              <strong>الحل النموذجي للفرع (A) - الاختيارات (15 درجة):</strong><br>
+              <strong>1. are written</strong> (مبني للمجهول في المضارع البسيط لأن articles جمع).<br>
+              <strong>2. was ruined</strong> (مبني للمجهول في الماضي البسيط لأن house مفرد).<br>
+              <strong>3. fast in the race yesterday</strong> (ترتيب الظروف: حال Manner ثم مكان Place ثم زمان Time: M-P-T).<br>
+              <strong>4. who</strong> (ضمير وصل للعاقل pilot).<br>
+              <strong>5. is going to rain</strong> (مستقبل مخطط/تنبؤ مبني على دليل حاضر).<br>
+              <strong>6. mustn't</strong> (نهي وإلزام صارم لمنع تلوث النهر).<br><br>
+              <strong>الحل النموذجي للفرع (B) - المطلوب (10 درجات):</strong><br>
+              <strong>1.</strong> The house <strong>was destroyed</strong> by fire. (مبني للمجهول في الماضي).<br>
+              <strong>2.</strong> <strong>lives / moved</strong> (مضارع بسيط للمعتاد، وماضٍ بسيط لوجود last year).<br>
+              <strong>3.</strong> <strong>Falling intonation</strong> (نبرة هابطة ➘ لأن السؤال يبدأ بأداة استفهام Wh).<br>
+              <strong>4.</strong> <strong>finish</strong> (مضارع بسيط بعد أداة الربط when).<br>
+              <strong>5.</strong> <strong>Making an offer</strong> (تقديم عرض مساعدة تطوعي).<br>
+              <strong>6.</strong> beautifully in the hall (حال ثم مكان).
+            `
+          },
+          {
+            id: 'fe_q4',
+            number: 'Q4',
+            title: 'Vocabulary, Spelling and Punctuation (المفردات، الإملاء وعلامات الترقيم)',
+            marks: '25 Marks',
+            instructions: 'Answer all branches: (A) Vocabulary (10 M), (B) Spelling (5 M), (C) Punctuation (10 M):',
+            passage: null,
+            branchA: {
+              title: 'Branch (A) - Complete the sentences using words from the box below: (10 Marks / 2 marks each)',
+              boxWords: ['language of the air', 'solo', 'aviation college', 'certificate', 'especially', 'poaching'],
+              items: [
+                '1. Muhammad went to Germany to train at an ______.',
+                '2. He was nervous on his first ______ flight because he was alone in the plane.',
+                '3. English is known globally as the ______ for pilots and flight towers.',
+                '4. He worked hard at all school subjects, ______ Maths and English.',
+                '5. Muhammad proudly received his official pilot\'s ______ after passing his exams.'
+              ]
+            },
+            branchB: {
+              title: 'Branch (B) - Spelling: Complete with the correct forms: (5 Marks / 1 mark each)',
+              items: [
+                '1. slow, slowly ; fast, ______',
+                '2. good, well ; hard, ______',
+                '3. fly, flying ; climb, ______',
+                '4. write, written ; ruin, ______',
+                '5. f _ _ _ n d (person you like and trust: spell the word)'
+              ]
+            },
+            branchC: {
+              title: 'Branch (C) - Punctuation: Punctuate the following sentence correctly: (10 Marks)',
+              items: [
+                'youve done well in maths english and arabic my mother said but what about history your mark is very bad'
+              ]
+            },
+            solution: `
+              <strong>الحل النموذجي للفرع (A) - المفردات (10 درجات):</strong><br>
+              1. <strong>aviation college</strong> | 2. <strong>solo</strong> | 3. <strong>language of the air</strong> | 4. <strong>especially</strong> | 5. <strong>certificate</strong>.<br><br>
+              <strong>الحل النموذجي للفرع (B) - الإملاء (5 درجات):</strong><br>
+              1. <strong>fast</strong> (ظرف شاذ) | 2. <strong>hard</strong> (ظرف شاذ) | 3. <strong>climbing</strong> | 4. <strong>ruined</strong> | 5. <strong>friend</strong>.<br><br>
+              <strong>الحل النموذجي للفرع (C) - التنقيط الكامل (10 درجات):</strong><br>
+              <div style="direction: ltr; text-align: left; font-weight: 700; color: var(--primary);">
+                "You've done well in Maths, English and Arabic," my mother said, "but what about History? Your mark is very bad."
+              </div>
+            `
+          },
+          {
+            id: 'fe_q5',
+            number: 'Q5',
+            title: 'Written Composition (الإنشاء والتعبير الكتابي)',
+            marks: '20 Marks',
+            instructions: 'Choose either Topic (A) or Topic (B): (20 Marks)',
+            passage: null,
+            items: [
+              'Topic A: Write a paragraph of about 60-80 words on "How to protect the environment and keep rivers clean in Iraq". Mention practical steps, recycling, and what students can do.',
+              'Topic B: Write a paragraph of about 60-80 words on "My dream job and future career". Mention what job you want to do, why, which school subjects you need, and what you plan to do after high school.'
+            ],
+            solution: `
+              <strong>نموذج موضوع الإنشاء المعتمد (20 درجة):</strong><br>
+              <strong>Topic A: Keeping Our Environment and Rivers Clean:</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.75rem; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 0.5rem;">
+                Protecting our environment is everyone's responsibility in Iraq. First, we must keep the Tigris and Euphrates rivers clean. Do not throw plastic bottles or rubbish into the water because pollution harms fish and human health. Second, we should plant green belts around towns to stop the moving desert. Finally, we can recycle materials at home, such as plastic bottles and paper. If we work together, our beloved country will stay green, healthy, and beautiful.
+              </div>
+              <strong>Topic B: My Dream Job (A Pilot):</strong><br>
+              <div style="direction: ltr; text-align: left; background: white; padding: 0.75rem; border-radius: 8px; border: 1px solid #cbd5e1;">
+                In the future, I am going to become an airline pilot because I have always loved aeroplanes and flying across different countries. At school, I work hard at Maths, Physics, and English because English is the international language of the air. After finishing school with top marks, I am going to enter an aviation academy to train on modern aircraft. Being a pilot is an exciting and responsible career that serves my nation.
+              </div>
+            `
+          }
+        ]
+      },
       midyear: {
         id: 'midyear',
         title: 'نموذج امتحان نصف السنة الشامل (Mid-Year Comprehensive Exam)',
@@ -9162,7 +9614,7 @@
       allExamSolutionsVisible = false;
 
       // تحديث حالة أزرار الفلترة
-      ['midyear', 'm1', 'm2', 'u34'].forEach(id => {
+      ['midyear', 'm1', 'm2', 'u34', 'final'].forEach(id => {
         const btn = document.getElementById(`examFilter_${id}`);
         if (btn) {
           if (id === examId) {

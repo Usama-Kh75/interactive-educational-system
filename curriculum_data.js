@@ -1,6 +1,6 @@
 // Curriculum Data for English for Iraq - 2nd Intermediate
 // Comprehensive Educational System - إعداد المهندس أسامة خليل هاشم
-// Updated for Unit 7 Complete Delivery (v3.1.0)
+// Updated for Unit 8 Complete Delivery (v3.2.0)
 
 window.CURRICULUM_DATA = [
   {
@@ -1020,36 +1020,70 @@ window.CURRICULUM_DATA = [
   {
     "id": 197,
     "title": "الوحدة 8: المراجعة الشاملة 2 (Unit 8: Review 2)",
-    "description": "صفحات 85 - 88",
+    "description": "صفحات 86 - 89 (كتاب الطالب) | صفحات 120 - 125 (كتاب النشاط)",
     "lessons": [
       {
-        "id": 310,
-        "title": "Unit 8: Final Review & Strategy Practice",
-        "summary": "صفحة 85 - 88",
+        "id": 3021,
+        "title": "Lesson 1: Review - Listening Skills & Accurate Note-Taking (مهارات الاستماع الدقيق والتقاط التفاصيل وتدوين الملاحظات)",
+        "summary": "صفحة 86 من كتاب الطالب (SB) وصفحة 120 من كتاب النشاط (AB 120) مع نصوص الاستماع الكاملة من صفحة 106.",
         "chunks": [
           {
-            "id": 572,
-            "page": 85,
-            "heading": "صفحة 85",
-            "text": "p Project 4: Recycling at home o Read the instructions for a recycling project. Vou can reuse plastic bottles to make a new pencil case! Why not make your own? You will need: two plastic bottles a fastener scissors glue O Use the scissors to cut the top off each bottle so that one stays long and the other is short. O Glue the other part of the fastener to the inside of the other bottle. Look at the photograph. What has the O plastic bottle been used to make? Write your own set of instructions to make one. Get together with your classmates and O think of something else you can make. Write about how you would make it and draw pictures. Then make it at home if you can! Use glue to stick the fastener inside the edge of one of the bottles. O Put your pencils in your new pencil case! Nov, add your pieces of vriäng to the school Project 4 Recycling at home 85"
-          },
-          {
-            "id": 573,
+            "id": 30211,
             "page": 86,
-            "heading": "Unit u AB 120 Lesson 1: Listening Sometimes we need to listen very carefully for particular information. If we don't hear the information, or if we don't note it down correctly, we may have lots of problems - like the people in the pictures below. Look at the pictures. Try to guess what information each person got wrong. Make notes of your ideas. 2 There's nobody at home, What can I do? Jalal 86 Susan 3 I don't think so. Unit 8 Review What? She must be there! She gave me her number and told me to phone at six o'clock. My name's Jane Smith. I have an interview at four o'clock. Now listen and check your ideas. What have you learnt about listening from this exercise? Susan wrote down the wrong number. I think she should have",
-            "text": "Unit u AB 120 Lesson 1: Listening Sometimes we need to listen very carefully for particular information. If we don't hear the information, or if we don't note it down correctly, we may have lots of problems - like the people in the pictures below. Look at the pictures. Try to guess what information each person got wrong. Make notes of your ideas. 2 There's nobody at home, What can I do? Jalal 86 Susan 3 I don't think so. Unit 8 Review What? She must be there! She gave me her number and told me to phone at six o'clock. My name's Jane Smith. I have an interview at four o'clock. Now listen and check your ideas. What have you learnt about listening from this exercise? Susan wrote down the wrong number. I think she should have"
-          },
+            "heading": "Unit 8 Lesson 1: Review - Listening Skills & Accurate Note-Taking (صفحة 86)",
+            "text": "Unit 8 Review - Lesson 1: Listening Skills & Strategy Practice (صفحة 86 من كتاب الطالب و 120 من كتاب النشاط AB 120):\n\n★ Key Learning Strategy: Listening for Particular Information:\nSometimes we need to listen very carefully for particular information (names, telephone numbers, addresses, appointment dates and times).\nIf we don't hear the information, or if we don't note it down correctly, we may have lots of serious problems - like the people in the pictures below.\n\nLook at the pictures and situations on page 86:\n1. Susan:\n   - Susan is phoning a friend: \"What? She must be there! She gave me her number and told me to phone at six o'clock.\"\n   - What did Susan get wrong?\n     Susan wrote down the wrong telephone number! She dialled 432147, but a stranger answered saying no one named Liz lives there.\n   - Recommended strategy for Susan:\n     She should have checked the number with Liz when writing it down, or read it back aloud: \"Is that 432147?\"\n\n2. Jalal:\n   - Jalal has just arrived in England in a taxi at night: \"There's nobody at home. What can I do?\"\n   - What did Jalal get wrong?\n     Jalal wrote down the wrong address! He gave the taxi driver \"24 West Street\", but the house was dark and empty. His friend Dave might live on West Road, West Drive, or a different number.\n   - Recommended strategy for Jalal:\n     He should have written down the full, precise address including the street suffix (Road / Street / Drive) and postcode, and kept Dave's phone number as backup.\n\n3. Jane Smith:\n   - Jane Smith arrives at an office reception: \"My name's Jane Smith. I have an interview at four o'clock.\"\n   - Receptionist: \"I don't think so, Miss Smith. It's true you had an interview, but it was yesterday! Miss Brown has already hired another secretary.\"\n   - What did Jane get wrong?\n     Jane wrote down the appointment on the wrong day in her diary!\n   - Recommended strategy for Jane:\n     She should have written the appointment carefully in her diary and confirmed both the day of the week and date (e.g. \"Tuesday, 14th May at 4:00 PM\").\n\n★ Complete Listening Audio Transcripts (نصوص الاستماع المعتمدة من صفحة 106):\n[Part 1: What did Susan get wrong?]\nSusan: Hello, this is Susan. Can I speak to Liz, please?\nWoman: Liz! There's nobody here called Liz.\nSusan: What? She must be there! She gave me her number and told me to phone at six o'clock. It's very important. I have to...\nWoman: Hold on, hold on! I've told you, there's nobody.\nSusan: But she gave me this number - 432147 - and I wrote it down.\nWoman: Well, I'm afraid you wrote down the wrong number. 432147 is my number, and I'm not Liz. I can't help you. Goodbye.\nSusan: But... Oh, dear! Now what can I do?\n\n[Part 2: What did Jalal get wrong?]\nJalal: There's nobody at home. What can I do?\nTaxi driver: Ring the bell again.\nJalal: I rang it and rang it. The house is completely dark.\nTaxi driver: There must be somebody there. You've come to stay with them for a holiday, you told me.\nJalal: Yes, I have.\nTaxi driver: Are you sure this is the correct address - 24 West Street?\nJalal: Of course it is. My friend Dave phoned me, and I wrote it down on this piece of paper.\nTaxi driver: Perhaps it's the wrong number. Or perhaps it's West Road - or Drive or...\nJalal: What can I do? I don't know anyone else in England!\nTaxi driver: Well, let's see. You can...\n\n[Part 3: What did Jane Smith get wrong?]\nReceptionist: Can I help you?\nJane: Oh, yes. My name's Jane Smith. I have an interview at four o'clock. With Miss Brown.\nReceptionist: I don't think so, Miss Smith.\nJane: What do you mean?\nReceptionist: I don't think you have an interview with Miss Brown at four o'clock.\nJane: But I have! It's about a job as a secretary.\nReceptionist: Yes, Miss Brown was looking for a new secretary. And she's found one, I'm pleased to say.\nJane: She can't do that! What about my interview? I want that job. I'm a really good secretary. I'm...\nReceptionist: Miss Smith. Please calm down. It's true, you did have an interview. But it was yesterday. You didn't come for it.\nJane: It wasn't yesterday. It's today.\nReceptionist: I'm afraid you're wrong. Look at my diary. I phoned you and told you the day and the time. You said it was all right.\nJane: Oh, dear! I must have written it down on the wrong day!\n\n★ Summary of Essential Listening Rules:\n1. Always listen for specific details: numbers, times, dates, and locations.\n2. Read back phone numbers and dates to verify them with the speaker before concluding the conversation.\n3. Keep essential backup details (e.g. emergency phone contacts, email confirmation)."
+          }
+        ]
+      },
+      {
+        "id": 3022,
+        "title": "Lesson 2: Review - Speaking Fluency, Expression & Telephone Skills (طلاقة التحدث والقراءة التعبيرية ولعبة الذاكرة والمكالمات الهاتفية)",
+        "summary": "صفحة 87 من كتاب الطالب (SB) وصفحة 121 من كتاب النشاط (AB 121).",
+        "chunks": [
           {
-            "id": 574,
+            "id": 30221,
             "page": 87,
-            "heading": "Unit Lesson 2: Speaking G) Reading aloud Remember: • When you're reading aloud, don't stop after each word. We say words in groups, so when you are saying a word, your eyes need to be on the words that come after it. Try to show how the speaker feels. Practise reading the speech bubbles aloud. Then listen carefully. DO you 59 need to practise saying them again? I went to a new restaurant last night. but it was awful. The food was bad, and the waiters were very slow. Worst of all, they weren't even polite. I went to a new restaurant last night, and it was fantastic! The food was delicious, and the waiters were really good, They were helpful and friendlv Listen. Then play a game: Going on holiday. I'm going to take a toothbrush. I'm going to take a toothbrush and toothpaste. 3 I'm going to take a toothbrush, toothpaste and sunglasses. I'm going to take a toothbrush, toothpaste, sunglasses and a guidebook. 5 I'm going to take a toothbrush, toothpaste, sunglasses and a pair of shoes. You forgot the guidebook, so we have to start again. Imagine you want one of the jobs. Make phone calls. Look back at Making telephone calls on page 54 first. Garden help wanted. Schoolgirl or schoolboy once a week for 2 or 3 hours. Tel: 327 444 Play with my children! Mother wants afternoon help with children aged 5, 7 and 9. Lovely garden and lots of toys. Tel: 596 369 Review Unit 8 , 87",
-            "text": "Unit Lesson 2: Speaking G) Reading aloud Remember: • When you're reading aloud, don't stop after each word. We say words in groups, so when you are saying a word, your eyes need to be on the words that come after it. Try to show how the speaker feels. Practise reading the speech bubbles aloud. Then listen carefully. DO you 59 need to practise saying them again? I went to a new restaurant last night. but it was awful. The food was bad, and the waiters were very slow. Worst of all, they weren't even polite. I went to a new restaurant last night, and it was fantastic! The food was delicious, and the waiters were really good, They were helpful and friendlv Listen. Then play a game: Going on holiday. I'm going to take a toothbrush. I'm going to take a toothbrush and toothpaste. 3 I'm going to take a toothbrush, toothpaste and sunglasses. I'm going to take a toothbrush, toothpaste, sunglasses and a guidebook. 5 I'm going to take a toothbrush, toothpaste, sunglasses and a pair of shoes. You forgot the guidebook, so we have to start again. Imagine you want one of the jobs. Make phone calls. Look back at Making telephone calls on page 54 first. Garden help wanted. Schoolgirl or schoolboy once a week for 2 or 3 hours. Tel: 327 444 Play with my children! Mother wants afternoon help with children aged 5, 7 and 9. Lovely garden and lots of toys. Tel: 596 369 Review Unit 8 , 87"
-          },
+            "heading": "Unit 8 Lesson 2: Review - Speaking Fluency, Expression & Telephone Skills (صفحة 87)",
+            "text": "Unit 8 Review - Lesson 2: Speaking Fluency & Communication Practice (صفحة 87 من كتاب الطالب و 121 من كتاب النشاط AB 121):\n\n★ Part 1 — Reading Aloud with Expression (القراءة الجهرية التعبيرية):\nRemember:\n• When you're reading aloud, don't stop after each single word! We say words in connected groups (chunks / thought units).\n• When you are saying a word, your eyes need to be looking ahead at the words that come after it.\n• Always try to show how the speaker feels using your tone of voice!\n\nPractise reading the two speech bubbles with appropriate emotional intonation:\nBubble 1 (Negative Emotion — Disappointment & Dissatisfaction):\n\"I went to a new restaurant last night, but it was awful. The food was bad, and the waiters were very slow. Worst of all, they weren't even polite.\"\n-> Voice tone: Low, disappointed, complaining, emphasizing \"awful\", \"bad\", \"very slow\", and \"weren't even polite\".\n\nBubble 2 (Positive Emotion — Delight & Satisfaction):\n\"I went to a new restaurant last night, and it was fantastic! The food was delicious, and the waiters were really good. They were helpful and friendly.\"\n-> Voice tone: High, lively, cheerful, smiling tone, emphasizing \"fantastic!\", \"delicious\", \"really good\", \"helpful and friendly\".\n\n★ Part 2 — Memory and Vocabulary Game: 'Going on Holiday' (لعبة الذاكرة وتراكم القائمة):\nIn this game, players practise pronunciation, memory recall, and list intonation (rising tone ➚ on items, falling tone ➘ on the last item):\n1. Player 1: \"I'm going to take a toothbrush.\"\n2. Player 2: \"I'm going to take a toothbrush and toothpaste.\"\n3. Player 3: \"I'm going to take a toothbrush, toothpaste and sunglasses.\"\n4. Player 4: \"I'm going to take a toothbrush, toothpaste, sunglasses and a guidebook.\"\n5. Player 5: \"I'm going to take a toothbrush, toothpaste, sunglasses, a guidebook and a pair of shoes.\"\nRule: If a player forgets any item from the list (e.g. forgets the guidebook), they lose that turn and the group starts again!\n\n★ Part 3 — Role-play: Making Job Inquiries by Telephone (المكالمات الهاتفية للتقديم على الوظائف المعروضة):\nReview telephone language from Unit 5 (page 54). Imagine you want one of the following advertised jobs:\n\nJob Advertisement 1:\n\"Garden help wanted. Schoolgirl or schoolboy once a week for 2 or 3 hours. Tel: 327 444\"\n\nJob Advertisement 2:\n\"Play with my children! Mother wants afternoon help with children aged 5, 7 and 9. Lovely garden and lots of toys. Tel: 596 369\"\n\nModel Telephone Dialogue for Job Application:\nEmployer: Hello, 327 444.\nStudent: Hello. My name is Ali. I'm calling about the advertisement for garden help in the newspaper.\nEmployer: Hello, Ali. Thank you for calling. Are you a schoolboy?\nStudent: Yes, I am. I am in the second intermediate class.\nEmployer: Have you got any experience of gardening?\nStudent: Yes, I often help my father in our garden. I know how to water plants, cut grass, and weed flower beds.\nEmployer: That sounds wonderful. We need help on Saturday mornings for three hours. Can you come then?\nStudent: Yes, Saturday morning suits me perfectly.\nEmployer: Excellent! Can you come for a short meeting this Friday at 4 o'clock?\nStudent: Yes, of course. Thank you very much!\nEmployer: You're welcome, Ali. Goodbye."
+          }
+        ]
+      },
+      {
+        "id": 3023,
+        "title": "Lesson 3: Review - Reading Comprehension & Topic Sentences: A High-Flying Job (استيعاب المقروء واستراتيجيات القراءة وتحديد جمل الموضوع: وظيفة التحليق عالياً)",
+        "summary": "صفحة 88 من كتاب الطالب (SB) وصفحة 122 من كتاب النشاط (AB 122).",
+        "chunks": [
           {
-            "id": 575,
+            "id": 30231,
             "page": 88,
-            "heading": "i AB 122 Unit Lesson 3: Reading Read the text quickly and find out what each paragraph is about. 6) Topic sentences Remember to look for topic sentences. A UIGU-FLY/\"G JOB Muhammad has always wanted to be a pilot. When he was a little boy, he played with toy planes when other boys played with their cars and trains. He used to sit in the garden and look up at the sky, waiting for a plane to pass over his head. His father sometimes took him to the airport to see the planes. Muhammad did very well at school. He worked hard at everything, but O Now read more carefully and work out the meaning of the words and phrases: especially • language of the air extra aviation college solo pilot's certificate especially at Maths and English because he needed these subjects to be a pilot. He knew that English is the 'language of the air', so he did a lot of extra work on English in his spare time. Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to bea pilot. Muhammad will never forget his time at the college or the people he met there. On the day when he took off on his first solo flight, he was a little nervous, but he was also excited to be flying a plane by himself. 'It was really exciting.' he told his friends afterwards. Muhammad also had to take written exams, which were very difficult. However, he passed them all. 'The day I got my pilot's certificate was the best day of my life,' he said. Remember to look for clues in the sentence or in other sentences. I think 'aviation college' must mean because 88 Unit 8 Review",
-            "text": "i AB 122 Unit Lesson 3: Reading Read the text quickly and find out what each paragraph is about. 6) Topic sentences Remember to look for topic sentences. A UIGU-FLY/\"G JOB Muhammad has always wanted to be a pilot. When he was a little boy, he played with toy planes when other boys played with their cars and trains. He used to sit in the garden and look up at the sky, waiting for a plane to pass over his head. His father sometimes took him to the airport to see the planes. Muhammad did very well at school. He worked hard at everything, but O Now read more carefully and work out the meaning of the words and phrases: especially • language of the air extra aviation college solo pilot's certificate especially at Maths and English because he needed these subjects to be a pilot. He knew that English is the 'language of the air', so he did a lot of extra work on English in his spare time. Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to bea pilot. Muhammad will never forget his time at the college or the people he met there. On the day when he took off on his first solo flight, he was a little nervous, but he was also excited to be flying a plane by himself. 'It was really exciting.' he told his friends afterwards. Muhammad also had to take written exams, which were very difficult. However, he passed them all. 'The day I got my pilot's certificate was the best day of my life,' he said. Remember to look for clues in the sentence or in other sentences. I think 'aviation college' must mean because 88 Unit 8 Review"
+            "heading": "Unit 8 Lesson 3: Review - Reading Comprehension & Topic Sentences (صفحة 88)",
+            "text": "Unit 8 Review - Lesson 3: Reading Skills & Topic Sentences (صفحة 88 من كتاب الطالب و 122 من كتاب النشاط AB 122):\n\n★ Reading Strategy: Topic Sentences (جمل الموضوع الافتتاحية):\n• A topic sentence is usually the first sentence of a paragraph.\n• It tells the reader what the entire paragraph is going to be about.\n• When reading quickly (skimming), looking at topic sentences allows you to understand the structure and main ideas of the text in seconds.\n\n★ Full Reading Text: A HIGH-FLYING JOB (وظيفة التحليق عالياً):\n\nParagraph 1:\n\"Muhammad has always wanted to be a pilot. When he was a little boy, he played with toy planes when other boys played with their cars and trains. He used to sit in the garden and look up at the sky, waiting for a plane to pass over his head. His father sometimes took him to the airport to see the planes.\"\n-> Topic Sentence: \"Muhammad has always wanted to be a pilot.\"\n-> Main Idea: Muhammad's lifelong passion and childhood ambition to fly.\n\nParagraph 2:\n\"Muhammad did very well at school. He worked hard at everything, but especially at Maths and English because he needed these subjects to be a pilot. He knew that English is the 'language of the air', so he did a lot of extra work on English in his spare time.\"\n-> Topic Sentence: \"Muhammad did very well at school.\"\n-> Main Idea: Academic diligence and focus on Maths and English as essential pilot requirements.\n\nParagraph 3:\n\"Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to be a pilot.\"\n-> Topic Sentence: \"Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to be a pilot.\"\n-> Main Idea: High exam scores leading to acceptance at an international aviation academy.\n\nParagraph 4:\n\"Muhammad will never forget his time at the college or the people he met there. On the day when he took off on his first solo flight, he was a little nervous, but he was also excited to be flying a plane by himself. 'It was really exciting,' he told his friends afterwards.\"\n-> Topic Sentence: \"Muhammad will never forget his time at the college or the people he met there.\"\n-> Main Idea: Unforgettable training memories and the thrilling experience of his first solo flight.\n\nParagraph 5:\n\"Muhammad also had to take written exams, which were very difficult. However, he passed them all. 'The day I got my pilot's certificate was the best day of my life,' he said.\"\n-> Topic Sentence: \"Muhammad also had to take written exams, which were very difficult.\"\n-> Main Idea: Rigorous written aeronautical assessments and obtaining his official pilot's license.\n\n★ Key Vocabulary & Contextual Deductions (المفردات التخصصية واستنتاج المعاني من السياق):\n1. especially: particularly; more than all other things (خصوصاً / لاسيما).\n   - Muhammad worked hard at all school subjects, especially Maths and English.\n2. language of the air: the international standard language used globally by pilots and air traffic controllers (English) (لغة الطيران الدولية).\n   - All international aviation communications and airport tower controls must be conducted in English.\n3. extra: additional; beyond what is normally required (إضافي).\n   - Muhammad did extra English practice in his spare time.\n4. aviation college: a specialised higher education academy that trains students in aerodynamics, flight control, and navigation to become professional pilots (كلية الطيران).\n5. solo flight: a flight where a pilot trainee flies an aircraft completely alone, without a flight instructor on board (طيران منفرد).\n6. pilot's certificate: official formal license and accreditation awarded to a person certifying they have mastered all theoretical and practical requirements to operate an aircraft safely (شهادة / رخصة الطيران)."
+          }
+        ]
+      },
+      {
+        "id": 3024,
+        "title": "Lesson 4: Review - Writing Mastery & Editing Strategies: The 5 Golden Writing Tips (إتقان مهارات التحرير والكتابة والنصائح الذهبية الخمس)",
+        "summary": "صفحة 89 من كتاب الطالب (SB) وصفحة 123 من كتاب النشاط (AB 123).",
+        "chunks": [
+          {
+            "id": 30241,
+            "page": 89,
+            "heading": "Unit 8 Lesson 4: Review - Writing Mastery & Editing Strategies (صفحة 89)",
+            "text": "Unit 8 Review - Lesson 4: Writing Skills & Editing Strategies (صفحة 89 من كتاب الطالب و 123 من كتاب النشاط AB 123):\n\n★ Self-Reflection at the End of the Year:\n\"At the end of the year, is your writing better than it was at the beginning? Do you have any problems? What are you doing about them?\"\nTo become an accomplished, confident writer in English, master the five golden writing tips:\n\n★ Writing Tip 7 — Spelling (إتقان الإملاء):\nYou have to learn how to spell words for yourself. Try this proven routine:\n• Look at five words in a list every night.\n• Spell them aloud letter by letter.\n• Cover them and write them down from memory.\n• Ask a classmate or family member to test you.\n• Practise writing difficult words (e.g. friend, Wednesday, because, beautiful, daughter, scissors, environment).\n\n★ Writing Tip 8 — Punctuation (علامات الترقيم الأساسية):\nMaster when to use each essential punctuation mark:\n1. Capital Letters:\n   - Beginning of every sentence (e.g. \"She went home.\").\n   - Proper nouns: names of people (Muhammad, Sarah), countries (Iraq, England), cities (Baghdad, Erbil), languages/school subjects (Arabic, English, Maths), days of the week (Monday, Friday), months (April, October).\n   - The pronoun \"I\" is ALWAYS capitalized, even in the middle of a sentence.\n2. Full Stops (.):\n   - At the end of every complete affirmative or negative statement.\n3. Question Marks (?):\n   - At the end of every direct question (e.g. \"What time is it?\").\n4. Apostrophes ('):\n   - Contractions: where letters are omitted (you've = you have, don't = do not, I'm = I am, it's = it is).\n   - Possession: after singular nouns (the boy's bag) or regular plurals (the boys' bags).\n5. Speech Marks (\"...\"):\n   - To enclose the exact direct words spoken by a person.\n6. Commas (,):\n   - To separate items in a list of three or more items (e.g. \"apples, bananas, oranges and pears\").\n   - To separate direct speech from reporting verbs (e.g. \"I love flying,\" he said.).\n   - Before coordinating conjunctions joining two main clauses (e.g. \"..., but what about...\").\n\n★ Worked Punctuation Exercise from Student's Book:\nUnpunctuated text:\n\"youve done well in maths english and arabic my mother said but what about history your mark is very bad\"\n\nCorrectly punctuated sentence:\n\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"\n\nDetailed breakdown:\n• Capital 'Y' in \"You've\" (start of direct speech) + apostrophe in \"You've\" (contraction of you have).\n• Capital 'M' in \"Maths\", capital 'E' in \"English\", comma after \"Maths\", capital 'A' in \"Arabic\".\n• Comma after \"Arabic\" inside closing quotation mark.\n• Speech resumed: opening quotation mark before \"but\", comma before \"but\", capital 'H' in \"History\".\n• Question mark after \"History?\" (it is a question).\n• Capital 'Y' in \"Your\" (new sentence), and full stop after \"bad.\"\n\n★ Writing Tip 9 — Grammar & Tense Checking in Drafts (تدقيق القواعد والأزمنة):\nWhen checking your draft, examine all verbs and ask yourself:\n1. Am I writing about the present, the past, or the future? Check time markers:\n   - Past: yesterday, last week, last Friday, last year, two days ago, when I was young.\n   - Present: now, currently, at the moment, every day, usually.\n   - Future: tomorrow, next week, next year, soon.\n2. Is this the right form of the verb (subject-verb agreement, irregular past tense, past continuous)?\n\n★ Worked Grammar Exercise from Student's Book:\nComplete the text with the correct form of the verbs in brackets:\n\"I live in Ranya, but my best friend lives in Sulaymaniyah. His family moved there last year. We like to meet at weekends. Last Friday, we went to the mountains with my friend's parents. When we were climbing, a little boy went to the edge of the cliff and nearly fell. My father saved him. The little boy said, 'I must be more careful.'\"\n\nAnalysis of verb forms:\n• live: Present simple habitual for speaker (\"I live\").\n• lives: Present simple with 3rd person singular subject (\"my best friend lives\").\n• moved: Past simple triggered by past time marker \"last year\".\n• like: Present simple expressing general preference (\"We like to meet\").\n• went: Irregular past simple triggered by \"Last Friday\".\n• were climbing: Past continuous background action interrupted while climbing (\"When we were climbing...\").\n• went & fell: Past simple completed actions (\"went to the edge and nearly fell\").\n• saved: Past simple completed action (\"My father saved him\").\n\n★ Writing Tip 10 — Joining Words (أدوات الربط والتماسك النصي):\nUse connectors to show logical relationships between ideas:\n• Addition: and, also, furthermore.\n• Contrast: but, however, although.\n• Cause and effect: because, so, as a result.\n• Time sequence: first, then, after that, when, while, finally.\n\n★ Writing Tip 11 — Adjectives & Adverbs (الصفات والظروف لإثراء التعبير):\nUse vivid descriptive adjectives and adverbs to paint a mental picture for the reader:\n• Weak sentence: \"We went on a walk. The view was nice.\"\n• Enriched sentence: \"We went on an exhilarating mountain hike, and the panoramic view across the snow-capped peaks was absolutely breathtaking.\""
+          }
+        ]
+      },
+      {
+        "id": 3025,
+        "title": "Lesson 5: Unit 8 Round Up - Semester 2 Master Grammar & Comprehensive Review (المراجعة الشاملة وتطبيقات وخلاصة قواعد الفصل الدراسي الثاني)",
+        "summary": "صفحات 86 - 89 من كتاب الطالب (SB) وصفحات 120 - 125 من كتاب النشاط (AB 120-125) - المراجعة الختامية الكبرى لمنهج اللغة الإنجليزية للصف الثاني متوسط.",
+        "chunks": [
+          {
+            "id": 30251,
+            "page": 86,
+            "heading": "Unit 8 Lesson 5: Semester 2 Master Grammar & Skills Consolidation (صفحات 86 - 89)",
+            "text": "Unit 8 Lesson 5: Semester 2 Master Grammar & Comprehensive Review (المراجعة الختامية الكبرى لقواعد وكفايات الفصل الدراسي الثاني - إعداد المهندس أسامة خليل هاشم):\n\n★ Consolidating Semester 2 Grammar Essentials (الوحدات 5 و 6 و 7 و 8):\n\n1. Unit 5 Master Grammar — Passive Voice (صيغ المبني للمجهول):\nWe use the passive voice when the action is more important than who or what did it, or when the agent is unknown.\n• Present Simple Passive:\n  Rule: Object + am / is / are + Past Participle (p.p.)\n  - Active: \"Reporters write articles in Cairo.\"\n  - Passive: \"Articles are written in Cairo.\"\n  - \"The newspaper is printed in Baghdad every morning.\"\n• Past Simple Passive:\n  Rule: Object + was / were + Past Participle (p.p.)\n  - Active: \"Fire ruined a house in Castle Street.\"\n  - Passive: \"A house in Castle Street was ruined by fire.\"\n  - \"The telephone was invented by Alexander Graham Bell.\"\n• Modal Passive with Can / Cannot:\n  Rule: Object + can / cannot + be + Past Participle (p.p.)\n  - \"Mobile phones can be recycled to protect nature.\"\n• Dictionary Abbreviations:\n  - n. = noun | v. = verb | adj. = adjective | adv. = adverb | prep. = preposition | pron. = pronoun | conj. = conjunction.\n\n2. Unit 6 Master Grammar — Future Intentions & Defining Relative Clauses:\n• Future with 'be going to' (المستقبل المخطط له مسبقاً والتنبؤ بدليل):\n  Rule: Subject + am / is / are + going to + Base Verb\n  - \"Muhammad is going to study aviation in Germany.\"\n  - \"Look at those dark clouds! It is going to rain.\"\n• Future with 'will' (القرارات الفورية، الوعود، والتنبؤات العامة):\n  Rule: Subject + will ('ll) + Base Verb\n  - \"I'll help you carry those heavy bags.\"\n• Future with Time Clause (When):\n  Rule: Future Clause (going to / will) + when + Present Simple Clause\n  - \"What are you going to do when you leave school?\"\n  - \"When I finish my exams, I am going to relax.\"\n• Defining Relative Pronouns:\n  - Who: for people (\"He is the pilot who flew across the ocean.\").\n  - Which / That: for things and animals (\"This is the aeroplane which broke the speed record.\").\n• Obligation:\n  - have to / has to: present necessity (\"Pilots have to speak English fluently.\").\n  - had to: past necessity (\"He had to take very difficult written exams.\").\n\n3. Unit 7 Master Grammar — Adverbs, Word Order & Environmental Directives:\n• Adverbs of Manner:\n  - Regular: Adjective + -ly (slow -> slowly, careful -> carefully, polite -> politely).\n  - Irregular: fast -> fast, hard -> hard, good -> well.\n• Order of Adverbs Formula (M - P - T):\n  Rule: Manner (كيف؟) + Place (أين؟) + Time (متى؟)\n  - Example: \"Sami ran fast (M) in the race (P) yesterday (T).\"\n  - Example: \"They worked hard (M) at school (P) all year (T).\"\n• Modals of Possibility:\n  - May / Might + Base Verb: expressing possibility in present or future.\n  - \"The climate may get warmer if we don't reduce pollution.\"\n• Environmental Directives (Imperatives):\n  - Do: \"Recycle your plastic bottles.\"\n  - Don't: \"Don't drop litter in the river.\"\n  - Must / Mustn't: legal/moral necessity (\"You mustn't hunt endangered animals.\").\n• Present Perfect Continuous:\n  Rule: have / has been + Verb-ing\n  - \"Scientists have been studying climate change for many years.\"\n\n4. Unit 8 Master Macro-skills & Exam Success Blueprint:\n• Listening: Always listen for key nouns and numbers; verify by repeating back.\n• Speaking: Speak in thought groups; vary voice tone to reflect emotions; practice telephone formality.\n• Reading: Skim topic sentences to get the main ideas quickly; deduce unknown words from sentence clues.\n• Writing: Use the editing checklist:\n  - Did I start with capital letters and end with punctuation?\n  - Are all verb tenses consistent with time markers?\n  - Did I use connectors (and, but, so, because) to link thoughts?\n  - Did I enrich the description with vivid adjectives and adverbs?"
           }
         ]
       }
@@ -1065,12 +1099,6 @@ window.CURRICULUM_DATA = [
         "title": "Listening Transcripts: Units 1 - 4",
         "summary": "صفحة 89 - 98",
         "chunks": [
-          {
-            "id": 576,
-            "page": 89,
-            "heading": "Unit AB 123 Lesson 4: Writing At the end of the year, is your writing better than it was at the beginning? Do you have any problems? What are you doing about them? O Read Writing tips 7 and 8. Writing tip 7 — Spelling You have to learn how to spell words for yourself. Try this: • Look at five words in a list every night. • Spell them aloud. • Ask somebody to test you. Practise writing difficult words: Example: friend Writing tip 8 — Punctuation Can you answer the questions easily and correctly? 2 When do you need to use these? • capital letters • full stops • question marks • apostrophes • speech marks You also need to use commas sometimes. When? A B Write the sentence with the correct punctuation. youve done well in maths english and arabic my mother said but what about history your mark is very bad Writing tip 9 — Grammar When you are checking your draft, look at the verbs and ask yourself these questions: I Am I writing about the present, the past or the future? Use these words and phrases to check: yesterday, last week, tomorrow, now 2 Is this the right part of the verb? Writing tip IO — Joining words Use joining words to show how your thoughts fit together. A B Complete the text. Use the correct form of the verbs in brackets. I (live) We in Ranya, but my best friend (live) ... in Sulaymaniyah. His family (move) there last year. We (like) to meet at weekends. Last Friday, we (go) to the mountains with my friend's parents. When we (climb) .... a little boy (go) ... to the edge of the cliff and nearly (fall) . My father (save) him. The little boy said, 'l must be more careful.' Writing tip 1 1 — Adjectives and adverbs Use adjectives and adverbs to paint a picture. This will make your writing more interesting. Review Unit 8 89",
-            "text": "Unit AB 123 Lesson 4: Writing At the end of the year, is your writing better than it was at the beginning? Do you have any problems? What are you doing about them? O Read Writing tips 7 and 8. Writing tip 7 — Spelling You have to learn how to spell words for yourself. Try this: • Look at five words in a list every night. • Spell them aloud. • Ask somebody to test you. Practise writing difficult words: Example: friend Writing tip 8 — Punctuation Can you answer the questions easily and correctly? 2 When do you need to use these? • capital letters • full stops • question marks • apostrophes • speech marks You also need to use commas sometimes. When? A B Write the sentence with the correct punctuation. youve done well in maths english and arabic my mother said but what about history your mark is very bad Writing tip 9 — Grammar When you are checking your draft, look at the verbs and ask yourself these questions: I Am I writing about the present, the past or the future? Use these words and phrases to check: yesterday, last week, tomorrow, now 2 Is this the right part of the verb? Writing tip IO — Joining words Use joining words to show how your thoughts fit together. A B Complete the text. Use the correct form of the verbs in brackets. I (live) We in Ranya, but my best friend (live) ... in Sulaymaniyah. His family (move) there last year. We (like) to meet at weekends. Last Friday, we (go) to the mountains with my friend's parents. When we (climb) .... a little boy (go) ... to the edge of the cliff and nearly (fall) . My father (save) him. The little boy said, 'l must be more careful.' Writing tip 1 1 — Adjectives and adverbs Use adjectives and adverbs to paint a picture. This will make your writing more interesting. Review Unit 8 89"
-          },
           {
             "id": 577,
             "page": 90,
@@ -2650,6 +2678,198 @@ window.GRAMMAR_RULES = [
       ],
       "correct": 0,
       "explanation": "نستخدم will bring (أو I'll bring) لتقديم عرض عفوي وتطوعي للمساعدة (Making an offer)."
+    }
+  },
+  {
+    "id": "active-listening-verification",
+    "title": "استراتيجية تدوين الملاحظات والتحقق من التفاصيل (Active Listening & Note Verification)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Listening & Study Skills",
+    "summary": "قواعد الاستماع الفعال وتدوين الأرقام والعناوين والتواريخ والتحقق منها لتفادي الأخطاء الكارثية.",
+    "rule": "1) عند الاستماع لمعلومات دقيقة (أرقام هواتف، عناوين، مواعيد): استخدم اختصارات واضحة ولا تحاول كتابة جمل كاملة.\n2) أعد قراءة الأرقام والتفاصيل على المتحدث فوراً للتأكد (Verification) قبل إنهاء المكالمة أو اللقاء.\n3) احتفظ دائماً ببيانات بديلة للتواصل عند الطوارئ.",
+    "examples": [
+      {
+        "en": "Susan dialled 432147 because she wrote down the wrong number. She should have confirmed with Liz.",
+        "ar": "اتصلت سوزان بالرقم 432147 لأنها سجلت رقماً خاطئاً. كان ينبغي عليها تأكيد الرقم مع ليز."
+      },
+      {
+        "en": "Jalal had the wrong address (24 West Street instead of Road or Drive) and arrived at an empty house.",
+        "ar": "كان لدى جلال عنوان خاطئ (شارع ويست بدلاً من طريق ويست) فوصل إلى منزل مظلم وخالٍ."
+      },
+      {
+        "en": "Jane Smith wrote her job interview in her diary on the wrong day, so she missed the secretary post.",
+        "ar": "كتبت جين سميث موعد المقابلة في يوم خاطئ ففاتتها وظيفة السكرتيرة."
+      }
+    ],
+    "quiz": {
+      "question": "What is the most reliable way to prevent mistakes when taking down a telephone number?",
+      "options": [
+        "Repeat the number back to the speaker to confirm it",
+        "Trust your memory and write it down hours later",
+        "Hang up quickly so you do not waste telephone credit",
+        "Only write down the first three digits"
+      ],
+      "correct": 0,
+      "explanation": "Page 86 & 106: Always repeat back numbers and details to confirm accuracy before hanging up."
+    }
+  },
+  {
+    "id": "expressive-reading-intonation",
+    "title": "القراءة الجهرية التعبيرية ونبرة المشاعر (Expressive Reading Aloud & Emotional Intonation)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Speaking & Phonology",
+    "summary": "مهارات القراءة بطلاقة عبر تجميع الكلمات في وحدات دلالية وإظهار المشاعر بنبرة الصوت.",
+    "rule": "1) لا تتوقف بعد كل كلمة منفردة، بل اقرأ الكلمات في مجموعات ذات معنى (Thought Groups).\n2) حرّك عينيك للأمام على الكلمات التالية أثناء نطقك للكلمات الحالية (Eye-Voice Span).\n3) غيّر نبرة صوتك لتعكس مشاعر المتحدث:\n   - نبرة الإحباط والاستياء: نبرة منخفضة متباطئة مع كلمات مثل awful, bad, slow.\n   - نبرة الحماس والبهجة: نبرة عالية مفعمة بالحيوية مع كلمات مثل fantastic, delicious, wonderful.",
+    "examples": [
+      {
+        "en": "Disappointment: 'The food was bad, and the waiters were very slow. Worst of all, they weren't polite.'",
+        "ar": "نبرة استياء: كان الطعام سيئاً والنوادل بطيئين ولم يكونوا مهذبين."
+      },
+      {
+        "en": "Enthusiasm: 'I went to a new restaurant last night, and it was fantastic! The food was delicious.'",
+        "ar": "نبرة بهجة وحماس: ذهبت إلى مطعم جديد وكانت تجربة رائعة! الطعام كان لذيذاً جداً."
+      }
+    ],
+    "quiz": {
+      "question": "When reading aloud in English, why shouldn't you pause after every word?",
+      "options": [
+        "Because words are spoken in connected groups, and pausing breaks meaning and fluency",
+        "Because English grammar forbids pausing under any circumstance",
+        "Because the listener will think you are reading too slowly",
+        "Because punctuation only exists in writing, not speaking"
+      ],
+      "correct": 0,
+      "explanation": "Page 87: We say words in connected groups; pausing after every word damages natural speech rhythm and comprehension."
+    }
+  },
+  {
+    "id": "topic-sentences-reading",
+    "title": "جمل الموضوع واستنتاج المعاني من السياق (Topic Sentences & Contextual Vocabulary)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Reading & Vocabulary",
+    "summary": "استراتيجية تحديد جملة الموضوع الافتتاحية لكل فقرة واستنتاج معاني الكلمات التخصصية من السياق.",
+    "rule": "1) جملة الموضوع (Topic Sentence): هي أول جملة في الفقرة عادة، وتقدم الفكرة الرئيسية لها.\n2) قراءة جمل الموضوع فقط (Skimming) تمكّنك من معرفة هيكل النص ومضمونه في ثوانٍ.\n3) استنتاج المعاني: ابحث عن الدلائل في نفس الجملة أو الجمل المحيطة لتخمين معنى المفردات الصعبة.",
+    "examples": [
+      {
+        "en": "Topic sentence: 'Muhammad has always wanted to be a pilot.' (Introduces his boyhood ambition).",
+        "ar": "جملة موضوع: كان محمد يرغب دائماً في أن يصبح طياراً (تلخص الفقرة الأولى)."
+      },
+      {
+        "en": "Context deduction: 'aviation college' = college that trains people to fly aeroplanes and become pilots.",
+        "ar": "استنتاج من السياق: كلية الطيران تعني كلية متخصصة لتدريب وتخريج الطيارين."
+      },
+      {
+        "en": "English is the 'language of the air' because all international flight communications use English.",
+        "ar": "الإنجليزية هي لغة الطيران الدولية لأن كل اتصالات الطيارين وأبراج المراقبة تعتمدها حصراً."
+      }
+    ],
+    "quiz": {
+      "question": "What is the primary function of a 'Topic Sentence' in an English paragraph?",
+      "options": [
+        "It expresses the main idea of the paragraph, usually at the beginning",
+        "It provides the final concluding remark of the whole essay",
+        "It is always the shortest sentence with no adjectives",
+        "It contains the names of all characters in the text"
+      ],
+      "correct": 0,
+      "explanation": "Page 88: The topic sentence introduces the core subject of the paragraph to guide the reader."
+    }
+  },
+  {
+    "id": "master-punctuation-rules",
+    "title": "علامات الترقيم الشاملة وقواعد كتابة الجمل الإنجليزية (Comprehensive Punctuation & Sentence Mechanics)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Writing Mechanics",
+    "summary": "القواعد الكاملة لاستخدام الحروف الكبيرة، النقطة، الفواصل، علامات الاستفهام، الفاصلة العليا وعلامات الاقتباس.",
+    "rule": "1) الحروف الكبيرة (Capital Letters): بداية الجمل، أسماء العلم، اللغات والمواد الدراسية (Maths, English, Arabic)، الدول والمدن، والضمير I.\n2) النقطة (.): نهاية الجمل الخبرية التامة.\n3) علامة الاستفهام (?): نهاية الأسئلة المباشرة.\n4) الفاصلة العليا ('): للاختصارات (You've, don't, I'm) والتملك (boy's, boys').\n5) الفاصلة (,): لفصل عناصر القائمة، وبعد الجمل الظرفية التمهيدية، وقبل أدوات الربط (but, so)، وفصل الكلام المباشر.\n6) علامات الاقتباس (\"...\"): لإحاطة الكلمات المنقولة نصياً.",
+    "examples": [
+      {
+        "en": "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+        "ar": "جملة ترقيم نموذجية شاملة لكل علامات الترقيم من كتاب الطالب صفحة 89."
+      },
+      {
+        "en": "I live in Ranya, but my friend lives in Sulaymaniyah.",
+        "ar": "حرف كبير لأسماء المدن والضمير I، وفاصلة قبل أداة الربط but."
+      }
+    ],
+    "quiz": {
+      "question": "Which sentence has the 100% correct punctuation according to Page 89 of the textbook?",
+      "options": [
+        "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+        "youve done well in maths english and arabic my mother said but what about history your mark is very bad.",
+        "\"Youve done well in maths, english and arabic\" my mother said \"but what about History. Your mark is very bad\"",
+        "You've done well in Maths English and Arabic my mother said, but what about History, your mark is very bad."
+      ],
+      "correct": 0,
+      "explanation": "Page 89 Writing Tip 8: Proper capitalization of subjects (Maths, English, Arabic, History), speech marks around direct dialogue, apostrophe in You've, and question mark after History."
+    }
+  },
+  {
+    "id": "proofreading-tenses-connectors",
+    "title": "تدقيق الأزمنة وأدوات الربط والصفات والظروف في المسودة (Proofreading: Tenses, Connectors, Adjectives & Adverbs)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Writing & Grammar",
+    "summary": "خطوات مراجعة المسودة وتدقيق تطابق أزمنة الأفعال مع الدلالات الزمنية واستخدام أدوات الربط والصفات والظروف.",
+    "rule": "1) تدقيق الأفعال: حدد هل تكتب عن الماضي أو الحاضر أو المستقبل؟ استخدم دلالات الوقت (yesterday, last Friday, now, tomorrow) لتصحيح صيغة الفعل.\n2) أدوات الربط (Joining words): استخدم and للإضافة، but للتباين، because للسبب، so للنتيجة، when و while للروابط الزمنية.\n3) إثراء النص بالصفات والظروف: أضف صفات جذابة وظروف حال لترسم صورة ممتعة في ذهن القارئ.",
+    "examples": [
+      {
+        "en": "Last Friday, we went to the mountains. When we were climbing, a little boy went to the edge and nearly fell.",
+        "ar": "تدقيق الأزمنة: went (ماضي بسيط مع Last Friday) و were climbing (ماضي مستمر أثناء الحدث)."
+      },
+      {
+        "en": "My father saved him heroically, and the boy said, 'I must be more careful.'",
+        "ar": "استخدام ظرف الحال heroically وأداة الربط and."
+      }
+    ],
+    "quiz": {
+      "question": "In the sentence: 'When we ______ (climb), a little boy ______ (go) to the edge of the cliff', what are the correct verb forms?",
+      "options": [
+        "were climbing / went",
+        "climbed / was going",
+        "are climbing / goes",
+        "climb / will go"
+      ],
+      "correct": 0,
+      "explanation": "Page 89 Writing Tip 9: When + past continuous ('were climbing') for the background ongoing action, and past simple ('went') for the interrupting event."
+    }
+  },
+  {
+    "id": "semester-2-master-grammar",
+    "title": "الخلاصة الكبرى لقواعد الفصل الدراسي الثاني (Semester 2 Master Grammar Consolidation)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة شاملة)",
+    "category": "Grammar Master Bank",
+    "summary": "الموسوعة الختامية لقواعد الكورس الثاني: المبني للمجهول، المستقبل، ترتيب الظروف، والوصل.",
+    "rule": "1) المبني للمجهول (Passive Voice):\n   - مضارع بسيط: Object + is / are + p.p. (e.g. The articles are written in Cairo).\n   - ماضي بسيط: Object + was / were + p.p. (e.g. A house was ruined by fire).\n   - أفعال ناقصة: Object + can be + p.p. (e.g. Plastic bottles can be recycled).\n2) المستقبل (Future Forms):\n   - be going to + verb: للنوايا والخطط والتنبؤ بدليل.\n   - will + verb: للوعود والقرارات الفورية.\n   - Future + when + Present Simple: (e.g. What are you going to do when you leave school?).\n3) ترتيب الظروف (Order of Adverbs - M-P-T):\n   - Manner (حال) + Place (مكان) + Time (زمان).\n   - مثال: He played well (M) in the stadium (P) yesterday (T).\n4) ضمائر الوصل (Relative Pronouns):\n   - who: للعاقل (e.g. The pilot who flew the plane).\n   - which / that: لغير العاقل والحيوان (e.g. The aeroplane which landed safely).",
+    "examples": [
+      {
+        "en": "The letter was delivered yesterday (Past Passive).",
+        "ar": "تم تسليم الرسالة يوم أمس (مبني للمجهول في الماضي البسيط)."
+      },
+      {
+        "en": "Ali drove carefully (Manner) on the highway (Place) this morning (Time).",
+        "ar": "ترتيب الظروف الثلاثي: حال (carefully) ثم مكان (on the highway) ثم زمان (this morning)."
+      },
+      {
+        "en": "She is going to study medicine when she finishes high school.",
+        "ar": "مستقبل مخطط مع جملة الوصل الزمنية when + مضارع بسيط finishes."
+      }
+    ],
+    "quiz": {
+      "question": "Which of the following sentences correctly follows the Manner-Place-Time (M-P-T) adverb order rule?",
+      "options": [
+        "Mazin sang beautifully (M) in the concert (P) last night (T)",
+        "Mazin sang last night (T) in the concert (P) beautifully (M)",
+        "Mazin sang in the concert (P) beautifully (M) last night (T)",
+        "Mazin beautifully (M) last night (T) sang in the concert (P)"
+      ],
+      "correct": 0,
+      "explanation": "Page 73 & 88: The Golden Adverb Rule is M-P-T: Manner (beautifully) + Place (in the concert) + Time (last night)."
     }
   }
 ];
@@ -6998,6 +7218,300 @@ window.TOPIC_CARDS = {
         {
           "en": "This pencil case is made from two recycled plastic bottles and a zipper fastener.",
           "ar": "هذه الحافظة مصنوعة من زجاجتين بلاستيكيتين معاد تدويرهما وسحاب."
+        }
+      ]
+    }
+  },
+  "3021": {
+    "unit": 8,
+    "lessonNumber": 1,
+    "pages": [
+      86
+    ],
+    "titleAr": "استراتيجيات الاستماع وتدوين الملاحظات والتحقق من التفاصيل",
+    "titleEn": "Listening Skills, Accurate Note-Taking & Fact Verification",
+    "themeColor": "#0284c7",
+    "icon": "🎧",
+    "sections": [
+      {
+        "name": "Susan's Phone Call",
+        "ar": "اتصال سوزان الهاتفي",
+        "icon": "📞",
+        "def": "Susan dialed the wrong number (432147 instead of Liz) because she noted it down incorrectly."
+      },
+      {
+        "name": "Jalal's England Arrival",
+        "ar": "وصول جلال ومغامرة العنوان",
+        "icon": "🚕",
+        "def": "Jalal arrived at a dark empty house in 24 West Street because he wrote the street suffix or number wrong."
+      },
+      {
+        "name": "Jane Smith's Job Interview",
+        "ar": "مقابلة عمل جين سميث",
+        "icon": "📅",
+        "def": "Jane missed her secretary interview because she noted the appointment on the wrong day in her diary."
+      },
+      {
+        "name": "Note-Taking & Abbreviations",
+        "ar": "تدوين الملاحظات والاختصارات",
+        "icon": "📝",
+        "def": "Writing clear abbreviations for numbers, dates and addresses rather than attempting full sentences."
+      },
+      {
+        "name": "Verification & Repetition",
+        "ar": "التحقق وإعادة التأكيد",
+        "icon": "🔄",
+        "def": "Reading back critical phone numbers and appointment details aloud to confirm accuracy before ending calls."
+      }
+    ],
+    "grammarFocus": {
+      "title": "استراتيجيات تدوين الملاحظات وتجنب الأخطاء",
+      "rule": "عند تدوين المعلومات الصوتية: اسمع بدقة، اكتب الأرقام والعناوين باختصارات واضحة، وأعد قراءتها على المتحدث للتأكد.",
+      "examples": [
+        {
+          "en": "Susan wrote down the wrong number. She should have repeated it to check: 'Is that 432147?'",
+          "ar": "كتبت سوزان الرقم الخاطئ. كان ينبغي عليها إعادة قراءته للتأكد: هل الرقم هو 432147؟"
+        },
+        {
+          "en": "Jane noted the interview on Wednesday instead of Tuesday, so she missed the secretary job.",
+          "ar": "سجلت جين المقابلة في يوم الأربعاء بدلاً من الثلاثاء، ففاتتها فرصة الحصول على وظيفة السكرتيرة."
+        }
+      ]
+    }
+  },
+  "3022": {
+    "unit": 8,
+    "lessonNumber": 2,
+    "pages": [
+      87
+    ],
+    "titleAr": "طلاقة التحدث والقراءة التعبيرية ولعبة الذاكرة والمكالمات الهاتفية",
+    "titleEn": "Speaking Fluency, Expressive Reading & Telephone Role-play",
+    "themeColor": "#7c3aed",
+    "icon": "🗣️",
+    "sections": [
+      {
+        "name": "Reading in Thought Groups",
+        "ar": "القراءة في مجموعات كلامية",
+        "icon": "📖",
+        "def": "Reading words together in meaningful semantic phrases without pausing unnaturally after each single word."
+      },
+      {
+        "name": "Eye-Voice Span",
+        "ar": "حركة العين الاستباقية",
+        "icon": "👁️",
+        "def": "Looking ahead at upcoming words while vocalizing current words to maintain unbroken fluency."
+      },
+      {
+        "name": "Emotional Intonation",
+        "ar": "التنغيم والتعبير عن المشاعر",
+        "icon": "🎭",
+        "def": "Adapting voice pitch to convey disappointment ('it was awful...') or enthusiasm ('it was fantastic!')."
+      },
+      {
+        "name": "Going on Holiday Game",
+        "ar": "لعبة تراكم القائمة والعطلة",
+        "icon": "🧳",
+        "def": "Cumulative memory game practicing pronunciation and list intonation with 'I'm going to take...'."
+      },
+      {
+        "name": "Job Inquiries by Phone",
+        "ar": "المكالمات الهاتفية للتوظيف",
+        "icon": "☎️",
+        "def": "Applying formal phone etiquette from page 54 to enquire politely about garden and childcare jobs."
+      }
+    ],
+    "grammarFocus": {
+      "title": "القراءة الجهرية التعبيرية وآداب المكالمات الهاتفية",
+      "rule": "عدم التوقف بعد كل كلمة، والتعبير عن المشاعر بنبرة الصوت، واستخدام العبارات الرسمية عند الاتصال لطلب وظيفة.",
+      "examples": [
+        {
+          "en": "Negative tone: 'The food was bad, and the waiters were very slow. Worst of all, they weren't polite.'",
+          "ar": "نبرة مستاءة: كان الطعام سيئاً، والنوادل بطيئين جداً، والأسوأ من ذلك أنهم لم يكونوا مهذبين."
+        },
+        {
+          "en": "Phone enquiry: 'Hello, I'm calling about the advertisement for garden help in the newspaper.'",
+          "ar": "استفسار هاتفي مهذب: مرحباً، أنا اتصل بخصوص الإعلان عن المساعدة في الحديقة المنشور في الجريدة."
+        }
+      ]
+    }
+  },
+  "3023": {
+    "unit": 8,
+    "lessonNumber": 3,
+    "pages": [
+      88
+    ],
+    "titleAr": "استيعاب المقروء وجمل الموضوع: وظيفة التحليق عالياً",
+    "titleEn": "Reading Comprehension & Topic Sentences: A High-Flying Job",
+    "themeColor": "#059669",
+    "icon": "✈️",
+    "sections": [
+      {
+        "name": "Boyhood Aviation Dream",
+        "ar": "حلم الطفولة والشغف بالطيران",
+        "icon": "👦",
+        "def": "Muhammad playing with toy planes and watching aircraft in the garden with his father."
+      },
+      {
+        "name": "School Dedication",
+        "ar": "التفوق في الرياضيات والإنجليزية",
+        "icon": "📚",
+        "def": "Focusing heavily on Maths and English, knowing English is the universal 'language of the air'."
+      },
+      {
+        "name": "Aviation College in Germany",
+        "ar": "كلية الطيران في ألمانيا",
+        "icon": "🎓",
+        "def": "Achieving top school marks and earning acceptance into professional pilot flight training abroad."
+      },
+      {
+        "name": "First Solo Flight",
+        "ar": "أول رحلة طيران منفردة",
+        "icon": "🛫",
+        "def": "Overcoming initial nervous anxiety and feeling thrilled when flying an aircraft completely alone."
+      },
+      {
+        "name": "Pilot's Certificate & Exams",
+        "ar": "شهادة الطيران والامتحانات",
+        "icon": "📜",
+        "def": "Passing difficult aeronautical written exams and celebrating receiving his official pilot's license."
+      },
+      {
+        "name": "Topic Sentences Mastery",
+        "ar": "إتقان جمل الموضوع الافتتاحية",
+        "icon": "🔍",
+        "def": "Identifying the opening sentence of each paragraph that summarizes its core central theme."
+      }
+    ],
+    "grammarFocus": {
+      "title": "جمل الموضوع واستنتاج معاني الكلمات من السياق",
+      "rule": "جملة الموضوع (Topic Sentence) تلخص فكرة الفقرة وتأتي في بدايتها. معاني المفردات تُفهم من سياق الجملة.",
+      "examples": [
+        {
+          "en": "Topic Sentence: 'Muhammad has always wanted to be a pilot.' (Summarizes paragraph 1).",
+          "ar": "جملة الموضوع: كان محمد يريد دائماً أن يصبح طياراً (تلخص فكرة الفقرة الأولى بالكامل)."
+        },
+        {
+          "en": "Context deduction: 'solo flight' = flying an aeroplane completely alone without an instructor.",
+          "ar": "استنتاج من السياق: طيران منفرد = قيادة الطائرة بمفرده تماماً دون مدرب طيران."
+        }
+      ]
+    }
+  },
+  "3024": {
+    "unit": 8,
+    "lessonNumber": 4,
+    "pages": [
+      89
+    ],
+    "titleAr": "النصائح الذهبية الخمس لإتقان التحرير والكتابة",
+    "titleEn": "The 5 Golden Writing Tips & Proofreading Strategies",
+    "themeColor": "#d97706",
+    "icon": "✍️",
+    "sections": [
+      {
+        "name": "Tip 7 — Spelling Mastery",
+        "ar": "النصيحة 7: إتقان الإملاء",
+        "icon": "🔤",
+        "def": "Look-Say-Cover-Write-Check technique for memorizing difficult words (friend, because, Wednesday)."
+      },
+      {
+        "name": "Tip 8 — Punctuation Rules",
+        "ar": "النصيحة 8: قواعد علامات الترقيم",
+        "icon": "✏️",
+        "def": "Using capital letters, full stops, question marks, apostrophes, commas and speech marks accurately."
+      },
+      {
+        "name": "Tip 9 — Tense Consistency",
+        "ar": "النصيحة 9: تدقيق الأزمنة والقواعد",
+        "icon": "⏱️",
+        "def": "Verifying time markers (yesterday, last Friday, now) and checking subject-verb agreement in drafts."
+      },
+      {
+        "name": "Tip 10 — Joining Words",
+        "ar": "النصيحة 10: أدوات الربط والتماسك",
+        "icon": "🔗",
+        "def": "Using connectors (and, but, because, so, when, while, although) to link ideas seamlessly."
+      },
+      {
+        "name": "Tip 11 — Adjectives & Adverbs",
+        "ar": "النصيحة 11: الصفات والظروف التعبيرية",
+        "icon": "🎨",
+        "def": "Painting vivid mental pictures for the reader using descriptive vocabulary and adverbs of manner."
+      }
+    ],
+    "grammarFocus": {
+      "title": "قواعد الترقيم وتدقيق الأزمنة في المسودة",
+      "rule": "تبدأ الجملة بحرف كبير، تُحاط العبارات المباشرة بعلامات اقتباس، وتُطابق أفعال القصة مع الدلالات الزمنية.",
+      "examples": [
+        {
+          "en": "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+          "ar": "ترقيم كامل: علامات اقتباس، فاصلة بعد Arabic، علامة استفهام بعد History، ونقطة في نهاية الجملة."
+        },
+        {
+          "en": "Last Friday, we went to the mountains. When we were climbing, a little boy went to the cliff edge.",
+          "ar": "تطابق الأزمنة: went (ماضي بسيط مع Last Friday) و were climbing (ماضي مستمر للحدث المستمر أثناء التسلق)."
+        }
+      ]
+    }
+  },
+  "3025": {
+    "unit": 8,
+    "lessonNumber": 5,
+    "pages": [
+      86,
+      87,
+      88,
+      89
+    ],
+    "titleAr": "المراجعة الشاملة وخلاصة قواعد الفصل الدراسي الثاني",
+    "titleEn": "Semester 2 Master Grammar & Comprehensive Review",
+    "themeColor": "#4338ca",
+    "icon": "🏆",
+    "sections": [
+      {
+        "name": "Unit 5 — Passive Voice",
+        "ar": "الوحدة 5: المبني للمجهول الكامل",
+        "icon": "📡",
+        "def": "Present Passive (is/are + p.p.), Past Passive (was/were + p.p.), and Modal Passive (can/cannot be + p.p.)."
+      },
+      {
+        "name": "Unit 6 — Future & Relative Clauses",
+        "ar": "الوحدة 6: المستقبل وضمائر الوصل",
+        "icon": "💼",
+        "def": "Future with 'be going to' vs 'will', time clauses with 'when', and relative pronouns ('who' and 'which')."
+      },
+      {
+        "name": "Unit 7 — Adverbs & Ecology",
+        "ar": "الوحدة 7: الظروف وقضايا البيئة",
+        "icon": "🌍",
+        "def": "Adverbs of manner, M-P-T word order rule, imperatives (Do/Don't), modals (may/might), and Present Perfect Continuous."
+      },
+      {
+        "name": "Unit 8 — Four Core Macro Skills",
+        "ar": "الوحدة 8: المهارات الأربع الكبرى",
+        "icon": "🎯",
+        "def": "Active listening & note taking, speaking fluency, reading for topic sentences, and 5 golden writing tips."
+      },
+      {
+        "name": "Ministerial Exam Strategies",
+        "ar": "استراتيجيات الامتحان الوزاري النهائي",
+        "icon": "📝",
+        "def": "Time allocation, reading comprehension tactics, error analysis, and mastering full marks across all sections."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الخلاصة الكبرى لقواعد الكورس الثاني (Semester 2 Synthesis)",
+      "rule": "Passive (am/is/are/was/were + p.p.) | Future (going to / will) | Adverbs order: Manner + Place + Time (M-P-T) | Relative (who/which).",
+      "examples": [
+        {
+          "en": "Articles are written in Cairo and printed in Baghdad. Mobile phones can be recycled.",
+          "ar": "مبني للمجهول في المضارع ومع can: تُكتب المقالات في القاهرة وتُطبع في بغداد. يمكن تدوير الهواتف."
+        },
+        {
+          "en": "Sami played wonderfully (Manner) in the stadium (Place) yesterday (Time).",
+          "ar": "ترتيب الظروف الثلاثي: كيف لعب؟ wonderfully، أين؟ in the stadium، متى؟ yesterday."
         }
       ]
     }
