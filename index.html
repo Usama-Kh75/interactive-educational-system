@@ -2296,7 +2296,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.3.2 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.3.3 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2436,7 +2436,7 @@
           </div>
 
           <!-- بطاقة 2: المكتبة الرقمية والمطالعة المفتوحة -->
-          <div class="atmosphere-card" onclick="openSubjectTab(3); setTimeout(scrollToStudyContent, 250);" title="انقر لفتح صفحات الكتاب المدرسي والمطالعة الصوتية">
+          <div class="atmosphere-card" onclick="openDigitalLibraryReader(3, 4)" title="انقر لفتح المكتبة الرقمية وتصفح صفحات الكتاب المدرسي الأصلية مع القراءة الصوتية">
             <div class="atmosphere-visual">
               <img src="./book_images/atmosphere_library.jpeg" alt="المكتبة الرقمية والمطالعة المفتوحة مع الصوت البشري الفصيح" class="atmosphere-img" loading="lazy">
               <div class="atmosphere-overlay"></div>
@@ -2456,10 +2456,10 @@
                 <div class="atmosphere-tags">
                   <span class="atmosphere-tag">📘 صفحات أصلية 100%</span>
                   <span class="atmosphere-tag">🎧 تتبع الكلمات الصوتي المباشر</span>
-                  <span class="atmosphere-tag">🔍 نافذة التكبير (Lightbox)</span>
+                  <span class="atmosphere-tag">🔍 تقليب وتكبير وتصفح الصفحات</span>
                 </div>
                 <div class="atmosphere-action-btn">
-                  <span>📚 فتح الكتاب والمطالعة الصوتية</span>
+                  <span>📚 فتح المكتبة الرقمية وتصفح الكتب</span>
                   <span>⮞</span>
                 </div>
               </div>
@@ -3014,7 +3014,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v2.7.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.3.3</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3039,7 +3039,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v2.7.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.3.3</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3048,6 +3048,15 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v3.3.3 (أكتوبر 2026):</strong> تخصيص قارئ تفاعلي مستقل للمكتبة الرقمية وتصفح الكتب المدرسية مع القراءة الصوتية الفصيحة، والمزامنة الشاملة لشارات الإصدار في كامل واجهات النظام - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.3.2 (أكتوبر 2026):</strong> تدشين اللوحات الفوتوغرافية الواقعية المعبرة عن بيئة التعلم وشعار «العلم نور»، وإطلاق قارئ المكتبة الرقمية وتصفح الكتب المدرسية مع الاستماع الفوري، وتطهير قائمة المناهج من التكرار - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.3.1 (أكتوبر 2026):</strong> إعادة هيكلة واجهة اختيار منهج اللغة العربية لتكون بمفتاح موحد يتفرع منه الجزء الأول والجزء الثاني بسلاسة وأناقة تامة - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.3.0 (أكتوبر 2026):</strong> تدشين وإدراج مادة اللغة العربية للصف الثاني المتوسط بالكامل بجزأيها الأول والثاني مع 80 درساً شاملاً و 272 صفحة أصلية وبنك القواعد النحوية والصرفية - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.2.0 (أكتوبر 2026):</strong> تدشين الوحدة الثامنة المراجعة الشاملة 2 والامتحان الوزاري النهائي الشامل 100 درجة.</div>
+            <div>• <strong style="color: var(--primary);">v3.1.0 (أكتوبر 2026):</strong> تدشين وإنجاز الوحدة السابعة بالكامل: العالم من حولنا والبيئة (11 درساً شاملاً).</div>
+            <div>• <strong style="color: var(--primary);">v3.0.0 (أكتوبر 2026):</strong> تدشين وإنجاز الوحدة السادسة بالكامل: المهن والوظائف (11 درساً شاملاً).</div>
+            <div>• <strong style="color: var(--primary);">v2.9.0 (أكتوبر 2026):</strong> تدشين وإنجاز الوحدة الخامسة بالكامل: تلقي وإرسال المعلومات (11 درساً شاملاً).</div>
+            <div>• <strong style="color: var(--primary);">v2.8.6 (أكتوبر 2026):</strong> تبسيط جذري للواجهة وإزالة تكرار العناوين وتزاحم الأزرار لتوفير بيئة تعليمية هادئة وسهلة الاستخدام.</div>
             <div>• <strong style="color: var(--primary);">v2.7.0 (أكتوبر 2026):</strong> تدشين بوابة المواد والمناهج الدراسية الشاملة (Subject Hub) وسياق المادة الدراسية النشطة في كافة الشاشات مع ميزة التبديل الفوري، وتدشين مركز نماذج الامتحانات الوزارية والشهرية السابقة (امتحان نصف السنة الشامل 100 درجة، امتحان الشهر الأول، امتحان الشهر الثاني، وامتحان الوحدات 3 و4) مع الحلول النموذجية المفصلة، شروحات القواعد وتوزيع الدرجات، الاستماع الصوتي للقطع، وطباعة ورقة الامتحان نظيفة للتدرب الورقي - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v2.6.0 (أكتوبر 2026):</strong> تدشين الوحدة الرابعة: المراجعة الشاملة 1 (Unit 4: Review 1) بالكامل (الصفحات 43 إلى 46) وتزويدها بالمعرض البصري وبطاقات المفاهيم واستراتيجيات الاستماع وتدوين الملاحظات وقواعد Question Intonation و Topic Sentences - إعداد المهندس أسامة خليل هاشم.</div>
                         <div>• <strong style="color: var(--primary);">v2.5.0 (أكتوبر 2026):</strong> تدشين الوحدة الثالثة: الرياضة والألعاب (Unit 3: Sports and Games) بالكامل (الصفحات 28 إلى 42) عبر 11 درساً شاملاً وتزويدها بالمعرض البصري والبطاقات المفاهيمية، وإعادة هيكلة وتوزيع بنك القواعد والأزمنة تسلسلياً حسب الوحدات الدراسية (من الأولى إلى الأخيرة) مع فواصل بصرية وشارات إحصائية، وقواعد أفعال الرياضات (Play, Go, Do) وقاعدة الاعتياد في الماضي (Used to) ومصطلحات الفوز والخسارة والألعاب الأولمبية وقصة جاد وجوني في ميونيخ وبنك اختبارات فوري - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3079,7 +3088,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge">v2.7.0</span>
+        <span class="version-badge" id="footerVersionBadge">v3.3.3</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3132,15 +3141,15 @@
     </div>
   </div>
 
-  <!-- نافذة مودال: تكبير وتصفح صفحات الكتاب المدرسي -->
+  <!-- نافذة مودال: تكبير وتصفح صفحات الكتاب المدرسي (المكتبة الرقمية والمطالعة المفتوحة) -->
   <div class="modal-overlay hidden" id="bookPageModal" onclick="if(event.target === this) closeBookPageModal()">
-    <div class="modal-box" style="max-width: 900px; width: 95vw; max-height: 90vh; display: flex; flex-direction: column; padding: 1.25rem;">
+    <div class="modal-box" style="max-width: 950px; width: 95vw; max-height: 92vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 1.3rem;">📖</span>
+          <span style="font-size: 1.4rem;">📖</span>
           <div>
-            <h3 id="bookPageModalTitle" style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin: 0;">صفحة الكتاب المدرسي</h3>
-            <span id="bookPageModalSubtitle" style="font-size: 0.75rem; color: var(--slate-500);">المنهج المعتمد - إعداد المهندس أسامة خليل هاشم</span>
+            <h3 id="bookPageModalTitle" style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin: 0;">المكتبة الرقمية والمطالعة المفتوحة</h3>
+            <span id="bookPageModalSubtitle" style="font-size: 0.75rem; color: var(--slate-500);">المنهج المعتمد لوزارة التربية - إعداد المهندس أسامة خليل هاشم</span>
             <div id="bookPageAudioStatusBanner" style="display: none; margin-top: 4px; font-size: 0.78rem; color: #166534; font-weight: 700; align-items: center; gap: 6px; background: #dcfce7; padding: 3px 10px; border-radius: 6px; border: 1px solid #86efac;">
               <span style="display: inline-block; width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e;"></span>
               <span>🔊 جارِ القراءة الصوتية لصفحة الكتاب الآن... انقر على (⏹️ إيقاف الصوت) للإيقاف في أي وقت</span>
@@ -3160,6 +3169,36 @@
           <button onclick="closeBookPageModal()" title="إغلاق وإيقاف الصوت فورا" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: var(--slate-600); display: flex; align-items: center; justify-content: center; margin-right: 0.5rem; transition: all 0.2s ease;">✕</button>
         </div>
       </div>
+
+      <!-- شريط تصفح وتقليب صفحات المكتبة الرقمية -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.5rem 0.85rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.6rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span style="font-size: 0.8rem; font-weight: 800; color: var(--slate-700);">📚 الكتاب المدرسي:</span>
+          <select id="modalBookCurrSelect" onchange="switchModalBookCurr(Number(this.value))" style="font-size: 0.82rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 8px; border: 1px solid var(--slate-300); background: white; color: var(--slate-900);">
+            <option value="3">📘 اللغة الإنجليزية (119 صفحة)</option>
+            <option value="4">📙 اللغة العربية - الجزء الأول (136 صفحة)</option>
+            <option value="5">📙 اللغة العربية - الجزء الثاني (136 صفحة)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="navModalBookPage(-1)" title="الانتقال للصفحة السابقة" style="font-weight: 800; padding: 0.3rem 0.75rem; background: white;">
+            ◀ الصفحة السابقة
+          </button>
+          
+          <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 800; color: var(--slate-700);">
+            <span>صفحة:</span>
+            <select id="modalBookPageSelect" onchange="goToModalBookPage(Number(this.value))" style="font-size: 0.82rem; font-weight: 800; padding: 0.25rem 0.5rem; border-radius: 6px; border: 1px solid var(--slate-300); background: white;">
+            </select>
+            <span id="modalBookTotalPagesLbl" style="color: var(--slate-500); font-weight: 700;">/ 119</span>
+          </div>
+
+          <button class="btn btn-secondary btn-sm" onclick="navModalBookPage(1)" title="الانتقال للصفحة التالية" style="font-weight: 800; padding: 0.3rem 0.75rem; background: white;">
+            الصفحة التالية ▶
+          </button>
+        </div>
+      </div>
+
       <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; background: var(--slate-100); border-radius: 8px; padding: 1rem; position: relative;" id="bookPageImgWrapper">
         <img id="bookPageModalImg" src=" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
       </div>
@@ -3345,7 +3384,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v2.7.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.3.3</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -3373,13 +3412,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.3.2؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.3.3؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v2.8.4</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.3.3</span>
         </div>
       </div>
 
@@ -3428,8 +3467,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.3.2';
-    const SYSTEM_VERSION = 'v3.3.2';
+    const CURRENT_VERSION_LABEL = 'v3.3.3';
+    const SYSTEM_VERSION = 'v3.3.3';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -4473,6 +4512,7 @@
       renderPastExam('midyear');
       renderStudyView();
       initAiChatPanelState();
+      syncSystemVersionBadges();
       checkBackendConnection();
 
       // فحص عرض نافذة ما الجديد عند أول تشغيل بعد التحديث
@@ -5281,32 +5321,104 @@
     }
 
     // ----------------------------------------------------
-    // إدارة المعرض البصري وتكبير صفحات الكتاب وبطاقات المفاهيم
+    // إدارة المعرض البصري وقارئ المكتبة الرقمية وتصفح الكتب المدرسية
     // ----------------------------------------------------
     let currentBookZoom = 1;
     let currentPageAudioText = '';
+    let currentModalBookCurrId = 3;
+    let currentModalBookPage = 1;
 
-    function openBookPageModal(pageNum, lessonTitle) {
+    // فتح المكتبة الرقمية العامة وتصفح صفحات الكتب المدرسية المعتمدة
+    function openDigitalLibraryReader(currId = 3, pageNum = 4) {
+      currentModalBookCurrId = Number(currId) || 3;
+      currentModalBookPage = Number(pageNum) || 1;
+      renderDigitalLibraryPage();
+      const modal = document.getElementById('bookPageModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function switchModalBookCurr(currId) {
+      if (audioPlayer.isPlaying) audioPlayer.stop();
+      currentModalBookCurrId = Number(currId);
+      currentModalBookPage = 1;
+      renderDigitalLibraryPage();
+    }
+
+    function navModalBookPage(delta) {
+      if (audioPlayer.isPlaying) audioPlayer.stop();
+      const maxPages = currentModalBookCurrId === 3 ? 119 : 136;
+      let nextP = currentModalBookPage + delta;
+      if (nextP < 1) nextP = 1;
+      if (nextP > maxPages) nextP = maxPages;
+      currentModalBookPage = nextP;
+      renderDigitalLibraryPage();
+    }
+
+    function goToModalBookPage(p) {
+      if (audioPlayer.isPlaying) audioPlayer.stop();
+      const maxPages = currentModalBookCurrId === 3 ? 119 : 136;
+      let targetP = Number(p);
+      if (isNaN(targetP) || targetP < 1) targetP = 1;
+      if (targetP > maxPages) targetP = maxPages;
+      currentModalBookPage = targetP;
+      renderDigitalLibraryPage();
+    }
+
+    function renderDigitalLibraryPage(lessonTitle = '') {
       const modal = document.getElementById('bookPageModal');
       const img = document.getElementById('bookPageModalImg');
       const title = document.getElementById('bookPageModalTitle');
+      const subtitle = document.getElementById('bookPageModalSubtitle');
+      const currSelect = document.getElementById('modalBookCurrSelect');
+      const pageSelect = document.getElementById('modalBookPageSelect');
+      const totalLbl = document.getElementById('modalBookTotalPagesLbl');
 
-      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
-      const isP1 = curr.id === 4 || curr.image_folder === 'arabic_p1';
-      const isP2 = curr.id === 5 || curr.image_folder === 'arabic_p2';
+      if (!modal || !img) return;
+
+      const currId = currentModalBookCurrId;
+      const pageNum = currentModalBookPage;
+      const isP1 = currId === 4;
+      const isP2 = currId === 5;
 
       let folder = '';
       let bookName = 'كتاب اللغة الإنجليزية (English for Iraq)';
-      if (isP1) { folder = 'arabic_p1/'; bookName = 'كتاب اللغة العربية (الجزء الأول)'; }
-      else if (isP2) { folder = 'arabic_p2/'; bookName = 'كتاب اللغة العربية (الجزء الثاني)'; }
+      let maxPages = 119;
 
-      title.innerText = `📖 ${bookName} - صفحة (${pageNum}) - ${lessonTitle || ''}`;
+      if (isP1) {
+        folder = 'arabic_p1/';
+        bookName = 'كتاب اللغة العربية (الجزء الأول)';
+        maxPages = 136;
+      } else if (isP2) {
+        folder = 'arabic_p2/';
+        bookName = 'كتاب اللغة العربية (الجزء الثاني)';
+        maxPages = 136;
+      }
+
+      if (title) title.innerText = `📖 المكتبة الرقمية: ${bookName}`;
+      if (subtitle) {
+        subtitle.innerText = lessonTitle 
+          ? `صفحة (${pageNum} من ${maxPages}) • ${lessonTitle} - إعداد المهندس أسامة خليل هاشم`
+          : `صفحة (${pageNum} من ${maxPages}) • المنهج المعتمد لوزارة التربية - إعداد المهندس أسامة خليل هاشم`;
+      }
+
       img.src = `book_images/${folder}page_${pageNum}.jpeg`;
       resetBookPageZoom();
 
-      // جمع نص الصفحة للاستماع مع دعم البحث التلقائي في المنهج النشط
+      if (currSelect) currSelect.value = currId;
+      if (totalLbl) totalLbl.innerText = `/ ${maxPages}`;
+
+      if (pageSelect) {
+        let optHtml = '';
+        for (let p = 1; p <= maxPages; p++) {
+          optHtml += `<option value="${p}" ${p === pageNum ? 'selected' : ''}>صفحة ${p}</option>`;
+        }
+        pageSelect.innerHTML = optHtml;
+      }
+
+      // جمع نص الصفحة للاستماع الصوتي
       let pageText = '';
-      const activeChapters = getCurriculumChapters(curr);
+      const currObj = (appData.curriculums || []).find(c => c.id === currId) || { id: currId };
+      const activeChapters = getCurriculumChapters(currObj);
       for (const ch of activeChapters) {
         for (const l of (ch.lessons || [ch])) {
           if (l.chunks) {
@@ -5322,7 +5434,14 @@
       currentPageAudioText = pageText;
 
       updateBookPageAudioUI(audioPlayer.isPlaying);
-      modal.classList.remove('hidden');
+    }
+
+    function openBookPageModal(pageNum, lessonTitle) {
+      currentModalBookCurrId = appData.currentCurriculumId || 3;
+      currentModalBookPage = Number(pageNum) || 1;
+      renderDigitalLibraryPage(lessonTitle);
+      const modal = document.getElementById('bookPageModal');
+      if (modal) modal.classList.remove('hidden');
     }
 
     function updateBookPageAudioUI(isPlaying) {
