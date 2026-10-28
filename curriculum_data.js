@@ -1,6 +1,7 @@
 // ----------------------------------------------------
 // قاعدة بيانات المنهج الدراسي وقواعد اللغة والبطاقات المصورة
 // النظام التعليمي التفاعلي الشامل (Comprehensive Interactive Educational System)
+// الإصدار المعتمد: v3.0.0 - إنجاز وتدشين الوحدة السادسة (المهن والوظائف)
 // إعداد وتطوير: المهندس أسامة خليل هاشم
 // ----------------------------------------------------
 
@@ -725,96 +726,145 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 60 - 70",
     "lessons": [
       {
-        "id": 301,
-        "title": "Lesson 1: What do they do? (المهن والمسارات الوظيفية)",
-        "summary": "صفحة 60 - 62",
+        "id": 2981,
+        "title": "Lesson 1: What do they do? (المهن والمسارات الوظيفية وأماكن العمل)",
+        "summary": "صفحة 60",
         "chunks": [
           {
             "id": 547,
             "page": 60,
-            "heading": "Unit 6 Lesson 1: What do they do? (صفحة 60)",
+            "heading": "Unit 6 Lesson 1: What do they do? - المهن والوظائف الأساسية (صفحة 60)",
             "text": "Unit 6 Jobs - Lesson 1: What do they do?\nListen and read the descriptions. Then match them to the photographs:\n• A businesswoman works in an office and runs a business. She is very good at working with money.\n• A mechanic works in a workshop or a garage and repairs people's cars.\n• A pilot flies a plane and takes people to different countries. They have to wear a uniform.\n• An architect plans and designs buildings. They work in an office.\n• An engineer works outside or in an office. They design, build or repair machines, roads and bridges.\n• A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop.\n• A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes."
-          },
-          {
-            "id": 548,
-            "page": 61,
-            "heading": "AB 86-87 Unit Lesson 2: Two jobs B Read the two paragraphs. Find the words 1—5 and match them to their meanings a—e. 2 3 4 5 hard-working university, college to study subjects a b c d e things you learn at school places to study the opposite of 'lazy' to spend time learning about something quick to learn and understand Dr Salwa works in a hospital. She takes care of sick people and makes them better. She is very hard-working. She usually works eight hours a day, but she sometimes has to work 12 hours. At school, she was very clever and good in all subjects. After school, she went to university. She had to study for six years. She likes being a doctor because in this job she can help people. Hanan is an office manager, She answers phone calls, and she sends and receives emails on a computer. She usually works every day from 8 a.m. to 2 p.m., but she sometimes has to work in the afternoon. Sometimes she has to go to different countries. Her best subjects at school were Maths and English, After school, she went to college to study Business Administration. She had to study for four years. She enjoys her job because she meets a lot of different people. She also enjoys travelling. Jobs Unit 6 61",
-            "text": "AB 86-87 Unit Lesson 2: Two jobs B Read the two paragraphs. Find the words 1—5 and match them to their meanings a—e. 2 3 4 5 hard-working university, college to study subjects a b c d e things you learn at school places to study the opposite of 'lazy' to spend time learning about something quick to learn and understand Dr Salwa works in a hospital. She takes care of sick people and makes them better. She is very hard-working. She usually works eight hours a day, but she sometimes has to work 12 hours. At school, she was very clever and good in all subjects. After school, she went to university. She had to study for six years. She likes being a doctor because in this job she can help people. Hanan is an office manager, She answers phone calls, and she sends and receives emails on a computer. She usually works every day from 8 a.m. to 2 p.m., but she sometimes has to work in the afternoon. Sometimes she has to go to different countries. Her best subjects at school were Maths and English, After school, she went to college to study Business Administration. She had to study for four years. She enjoys her job because she meets a lot of different people. She also enjoys travelling. Jobs Unit 6 61"
-          },
-          {
-            "id": 549,
-            "page": 62,
-            "heading": "AB 88-89 unit Lesson 3: A day in the life of a firefighter Firefighter Mazin talked about a day in his life. He began like this: When I arrived at the fire station yesterday morning, Use the pictures to tell the rest of the story of his day. 2 10:05 I checked my equipment. 10:00 The supermarket is on fire! Come quickly! 3 People are O trapped inside. 7 14:00 Accident on the ring road! We went into the building. on fire We saved all the people. upside down 62 What do you think happened next? unit 6 Jobs",
-            "text": "AB 88-89 unit Lesson 3: A day in the life of a firefighter Firefighter Mazin talked about a day in his life. He began like this: When I arrived at the fire station yesterday morning, Use the pictures to tell the rest of the story of his day. 2 10:05 I checked my equipment. 10:00 The supermarket is on fire! Come quickly! 3 People are O trapped inside. 7 14:00 Accident on the ring road! We went into the building. on fire We saved all the people. upside down 62 What do you think happened next? unit 6 Jobs"
           }
         ]
       },
       {
-        "id": 302,
-        "title": "Lesson 2: Future Plans with (be going to)",
-        "summary": "صفحة 63 - 65",
+        "id": 2982,
+        "title": "Lesson 2: Two Jobs - Dr Salwa & Hanan (المقارنة بين مهنتين: الطب وإدارة الأعمال)",
+        "summary": "صفحة 61",
+        "chunks": [
+          {
+            "id": 548,
+            "page": 61,
+            "heading": "Unit 6 Lesson 2: Two jobs - د. سلوى وحنان ومقارنة متطلبات المهن (صفحة 61)",
+            "text": "Unit 6 Lesson 2: Two jobs (صفحة 61)\nRead the two paragraphs and study the vocabulary:\n• Dr Salwa works in a hospital. She takes care of sick people and makes them better. She is very hard-working. She usually works eight hours a day, but she sometimes has to work 12 hours. At school, she was very clever and good in all subjects. After school, she went to university. She had to study for six years. She likes being a doctor because in this job she can help people.\n• Hanan is an office manager. She answers phone calls, and she sends and receives emails on a computer. She usually works every day from 8 a.m. to 2 p.m., but she sometimes has to work in the afternoon. Sometimes she has to go to different countries. Her best subjects at school were Maths and English. After school, she went to college to study Business Administration. She had to study for four years. She enjoys her job because she meets a lot of different people. She also enjoys travelling.\n\nKey Vocabulary:\n1. hard-working: the opposite of 'lazy' (مجتهد / مثابر).\n2. university, college: places to study higher education (جامعة / كلية).\n3. to study: to spend time learning about something (يدرس / يذاكر).\n4. subjects: things you learn at school like Maths, English, Science (مواد دراسية).\n5. clever: quick to learn and understand (ذكي / سريع الفهم)."
+          }
+        ]
+      },
+      {
+        "id": 2983,
+        "title": "Lesson 3: A Day in the Life of a Firefighter (يوم في حياة رجل إطفاء - قصة مازن البطولية)",
+        "summary": "صفحة 62",
+        "chunks": [
+          {
+            "id": 549,
+            "page": 62,
+            "heading": "Unit 6 Lesson 3: A day in the life of a firefighter - يوميات رجل الإطفاء مازن (صفحة 62)",
+            "text": "Unit 6 Lesson 3: A day in the life of a firefighter (صفحة 62)\nFirefighter Mazin talked about a day in his life. He began like this:\n'When I arrived at the fire station yesterday morning, I checked my equipment at 10:05.\nAt 10:00, an urgent call arrived: \"The supermarket is on fire! Come quickly! People are trapped inside!\"\nWe drove the fire engines fast with sirens on. When we arrived, the supermarket was blazing with thick smoke. We went bravely into the building. We put out the fire and we saved all the people trapped inside.\nAt 14:00 (2:00 p.m.), another call came: \"Accident on the ring road!\"\nWe rushed to the ring road and found a terrible car crash. A car was upside down and on fire! The driver was trapped inside. We fought the flames, used special cutting equipment, and safely pulled the driver out alive.'\n\nMazin showed bravery, teamwork, and readiness in dangerous emergency situations."
+          }
+        ]
+      },
+      {
+        "id": 2984,
+        "title": "Lesson 4: What's My Job? (ما هي مهنتي؟ وموسوعة المهن والوظائف الـ 23)",
+        "summary": "صفحة 63",
         "chunks": [
           {
             "id": 550,
             "page": 63,
-            "heading": "AB 90-91 Unit Lesson 4: What's my job? Read the instructions for playing games. Game A Student 1: Think of a job, but don't tell anyone what it is. Student 2: Ask your partner up to five •yes' or •no' questions to try to find out what the job is. * Game B * Student 1: Write the name of a job on a piece of paper and put it on your partner's back. Student 2: Ask questions to try to find out what the job is. Game C Student 1: Think of a job and five things you can say about it. Student 2: After each sentence, try to guess what the job is. Do you help people? You're a doctor. Do I work at night? Is my job dangerous? I'm a firefighter. I work outside. No. I don't wear Yes. No. Wrong. Sometimes. Yes. Yes. Correct. You're a police officer. 0 Listen and answer the questions. a uniform. architect cook engineer mechanic artist doctor farmer bus driver editor firefighter 2 3 Which of the three games do you hear? Which of the jobs in the box do you hear? Which ones are not in the box? Now play the games. nurse park-keeper photographer pilot police officer reporter secretary shepherd shop assistant singer teacher Jobs Unit 6 63",
-            "text": "AB 90-91 Unit Lesson 4: What's my job? Read the instructions for playing games. Game A Student 1: Think of a job, but don't tell anyone what it is. Student 2: Ask your partner up to five •yes' or •no' questions to try to find out what the job is. * Game B * Student 1: Write the name of a job on a piece of paper and put it on your partner's back. Student 2: Ask questions to try to find out what the job is. Game C Student 1: Think of a job and five things you can say about it. Student 2: After each sentence, try to guess what the job is. Do you help people? You're a doctor. Do I work at night? Is my job dangerous? I'm a firefighter. I work outside. No. I don't wear Yes. No. Wrong. Sometimes. Yes. Yes. Correct. You're a police officer. 0 Listen and answer the questions. a uniform. architect cook engineer mechanic artist doctor farmer bus driver editor firefighter 2 3 Which of the three games do you hear? Which of the jobs in the box do you hear? Which ones are not in the box? Now play the games. nurse park-keeper photographer pilot police officer reporter secretary shepherd shop assistant singer teacher Jobs Unit 6 63"
-          },
-          {
-            "id": 551,
-            "page": 64,
-            "heading": "AB92-93 i unit Lesson 5: A train timetable Look at the timetable and answer the question. You have tickets for a football match in Paris! The match starts at 3 p.m. on Tuesday. You are travelling from London. Which is the best train to catch? ST PRNCRRS 0855 09:30 11:30 r-.nN — RSHFORO {8.30 CRLR\\S 11:30 eo:os ee:oo PRRIS 'B:ss 23'.æs Listen to three passengers in London. Write the letter next to the topic. I A passenger wants to catch the same train as his daughter. 2 A passenger doesn't want to be late. 3 A passenger has forgotten something. Listen to some passengers and look at the timetable. Where do they want to go? Which trains do they catch? Now ask and answer questions. I want to be in Paris before four o'clock. Which train should I catch? The 12:55 train. What time is the first train to Paris? 64 unit 6 Jobs The first train leaves at 06:55. What time is the next train to Calais?",
-            "text": "AB92-93 i unit Lesson 5: A train timetable Look at the timetable and answer the question. You have tickets for a football match in Paris! The match starts at 3 p.m. on Tuesday. You are travelling from London. Which is the best train to catch? ST PRNCRRS 0855 09:30 11:30 r-.nN — RSHFORO {8.30 CRLR\\S 11:30 eo:os ee:oo PRRIS 'B:ss 23'.æs Listen to three passengers in London. Write the letter next to the topic. I A passenger wants to catch the same train as his daughter. 2 A passenger doesn't want to be late. 3 A passenger has forgotten something. Listen to some passengers and look at the timetable. Where do they want to go? Which trains do they catch? Now ask and answer questions. I want to be in Paris before four o'clock. Which train should I catch? The 12:55 train. What time is the first train to Paris? 64 unit 6 Jobs The first train leaves at 06:55. What time is the next train to Calais?"
-          },
-          {
-            "id": 552,
-            "page": 65,
-            "heading": "AB 94—95 Unit Lesson 6: What are they going to be? Read about Firas and Halla. Ask and answer the questions. 1 What do they do in their spare time? 2 What are they going to be when they finish school? Firas is 17. His favourite school subjects are History. Geography and Art. He loves animals. Every Friday, he goes to the zoo. He takes photographs of birds and animals. Sometimes he has to wait for a long time to take a good photograph, but he is very patient. His favourite animal is the peacock. Next year, he is going to take his last school exam. If he passes. he is going to go to university to study animals. He wants to be a zoologist. Clues Remember to look at the photographs first. What do you think the answers will be? Halla is 18. Her favourite school subjects are Biology and Chemistry. She is also very good at English and Physics. She is interested in helping people. She is very kind and friendly. Sometimes she visits a hospital. Some patients have no visitors. Halla takes flowers to these patients and sits and talks with them. At school, she works hard because she does not want to fail her final school exam. When she finishes school, she is going to be a doctor. Work with words. 1 Look at the dictionary entry. Which meanings of 'patient' can you find in the texts? 2 What do you think it means to 'take', 'pass' and 'fail' an exam? be + going to + infinitive Halla is going to work in a hospital. patient (n.) somebody who is taken care of by a doctor. patient (adj.) able to wait for a long time and Stay calm without getting angry. She is very patient with young children. -+ patiently (adv.) He waited patiently for the bus. We use be + going to + infinitive to talk about the future when we know for certain what is going to happen. Jobs Unit 6 065",
-            "text": "AB 94—95 Unit Lesson 6: What are they going to be? Read about Firas and Halla. Ask and answer the questions. 1 What do they do in their spare time? 2 What are they going to be when they finish school? Firas is 17. His favourite school subjects are History. Geography and Art. He loves animals. Every Friday, he goes to the zoo. He takes photographs of birds and animals. Sometimes he has to wait for a long time to take a good photograph, but he is very patient. His favourite animal is the peacock. Next year, he is going to take his last school exam. If he passes. he is going to go to university to study animals. He wants to be a zoologist. Clues Remember to look at the photographs first. What do you think the answers will be? Halla is 18. Her favourite school subjects are Biology and Chemistry. She is also very good at English and Physics. She is interested in helping people. She is very kind and friendly. Sometimes she visits a hospital. Some patients have no visitors. Halla takes flowers to these patients and sits and talks with them. At school, she works hard because she does not want to fail her final school exam. When she finishes school, she is going to be a doctor. Work with words. 1 Look at the dictionary entry. Which meanings of 'patient' can you find in the texts? 2 What do you think it means to 'take', 'pass' and 'fail' an exam? be + going to + infinitive Halla is going to work in a hospital. patient (n.) somebody who is taken care of by a doctor. patient (adj.) able to wait for a long time and Stay calm without getting angry. She is very patient with young children. -+ patiently (adv.) He waited patiently for the bus. We use be + going to + infinitive to talk about the future when we know for certain what is going to happen. Jobs Unit 6 065"
+            "heading": "Unit 6 Lesson 4: What's my job? - لعبة تخمين المهن وموسوعة الوظائف (صفحة 63)",
+            "text": "Unit 6 Lesson 4: What's my job? (صفحة 63)\nRead the instructions for playing job guessing games:\n• Game A: Student 1 thinks of a job without saying it. Student 2 asks up to five 'yes' or 'no' questions (e.g., Do you work outside? Do you wear a uniform? Is your job dangerous?).\n• Game B: Student 1 writes a job title and sticks it on partner's back. Partner asks questions to guess.\n• Game C: Student 1 gives five clues one by one until the other guesses the profession.\n\nThe 23 Professions Encyclopedia:\narchitect (مهندس معماري), artist (فنان), astronaut (رائد فضاء), author (مؤلف/كاتب), baker (خباز), builder (بناء), bus driver (سائق حافلة), businesswoman (سيدة أعمال), dentist (طبيب أسنان), doctor (طبيب), editor (محرر صحفي), engineer (مهندس), farmer (مزارع), firefighter (إطفائي), mechanic (ميكانيكي), nurse (ممرض/ممرضة), park-keeper (حارس حديقة), photographer (مصور), pilot (طيار), police officer (ضابط شرطة), reporter (مراسل صحفي), secretary (سكرتير), shepherd (راعي أغنام), shop assistant (مساعد بائع), singer (مغني), teacher (معلم)."
           }
         ]
       },
       {
-        "id": 303,
-        "title": "Lesson 3: Good at / Not good at + V-ing",
-        "summary": "صفحة 66 - 68",
+        "id": 2985,
+        "title": "Lesson 5: A Train Timetable & Travel Plans (جدول مواعيد القطار والاستفسار عن الرحلات)",
+        "summary": "صفحة 64",
+        "chunks": [
+          {
+            "id": 551,
+            "page": 64,
+            "heading": "Unit 6 Lesson 5: A train timetable - جدول مواعيد القطارات ونظام الـ 24 ساعة (صفحة 64)",
+            "text": "Unit 6 Lesson 5: A train timetable (صفحة 64)\nStudy the Eurostar train timetable from London to Paris:\n• Stations: London St Pancras -> Ashford -> Calais -> Paris Gare du Nord.\n• Departures & Arrivals:\n  - Train 1: Dep London 06:55 | Calais 09:30 | Arr Paris 11:30\n  - Train 2: Dep London 08:30 | Arr Paris 12:55\n  - Train 3: Dep London 12:55 | Arr Paris 18:35\n  - Train 4: Dep London 18:30 | Calais 20:05 | Arr Paris 22:00\n  - Train 5: Dep London 20:00 | Arr Paris 23:25\n\nPractical Travel Situations:\n1. If a football match starts at 3:00 p.m. in Paris, you must arrive before 15:00, so the 06:55 train (arriving 11:30) is the best choice!\n2. Useful Polite Enquiries:\n   • 'Excuse me, can you help me, please?'\n   • 'What time is the first train to Paris? - The first train leaves at 06:55.'\n   • 'Which train should I catch to arrive before four o'clock? - The 08:30 train.'"
+          }
+        ]
+      },
+      {
+        "id": 2986,
+        "title": "Lesson 6: What are they going to be? (التخطيط المستقبلي مع be going to - فراس وهالة)",
+        "summary": "صفحة 65",
+        "chunks": [
+          {
+            "id": 552,
+            "page": 65,
+            "heading": "Unit 6 Lesson 6: What are they going to be? - فراس وهالة والتخطيط المهني (صفحة 65)",
+            "text": "Unit 6 Lesson 6: What are they going to be? (صفحة 65)\nRead about Firas and Halla and study the future plans:\n• Firas is 17. His favourite school subjects are History, Geography and Art. He loves animals. Every Friday, he goes to the zoo and takes photographs of birds and animals. Sometimes he has to wait for a long time to take a good photograph, but he is very patient. Next year, he is going to take his final school exam. If he passes, he is going to go to university to study animals. He wants to be a zoologist.\n• Halla is 18. Her favourite school subjects are Biology and Chemistry. She is also very good at English and Physics. She is interested in helping people. She is very kind and friendly. Sometimes she visits a hospital where some patients have no visitors; Halla brings them flowers and sits and talks with them. At school, she works hard because she does not want to fail her exams. When she finishes school, she is going to be a doctor.\n\nWork with Words:\n• patient (n.): somebody who is taken care of by a doctor (مريض).\n• patient (adj.): able to wait for a long time without getting angry (صبور).\n• patiently (adv.): He waited patiently for the train (بصبر).\n• take an exam (يؤدي الامتحان) | pass an exam (ينجح) | fail an exam (يرسب)."
+          }
+        ]
+      },
+      {
+        "id": 2987,
+        "title": "Lesson 7: Career Plans - Part A: Sara & Adel (الخطط المهنية والصفات الشخصية والميول)",
+        "summary": "صفحة 66",
         "chunks": [
           {
             "id": 553,
             "page": 66,
-            "heading": "AB96-97 Unit Lesson 7: Career plans (Part A) O Read Sara and Adel's plans and answer the questions. I Who thinks they are 2 Who is good at a friendly? b hard-working? c patient? a Biology? b French? c English? 66 3 What job do you think Sara and Adel want to do when they're older? Sara I'm 14 years old. I think I'm quite friendly and hard-working. I passed all my exams last year. At school, I'm good at languages. I'm very good at English and French. I'm not very good at Science. When I finish school, mel I'm very hard-working and patient. I have two little brothers, and they never make me angry. At the weekend, I always go and help on a friend's farm because I love working with animals. I enjoy working with horses most. At school, I'm good at Biology. I'm going to take my last school exam next year. If I get good marks, . Unit 6 Jobs",
-            "text": "AB96-97 Unit Lesson 7: Career plans (Part A) O Read Sara and Adel's plans and answer the questions. I Who thinks they are 2 Who is good at a friendly? b hard-working? c patient? a Biology? b French? c English? 66 3 What job do you think Sara and Adel want to do when they're older? Sara I'm 14 years old. I think I'm quite friendly and hard-working. I passed all my exams last year. At school, I'm good at languages. I'm very good at English and French. I'm not very good at Science. When I finish school, mel I'm very hard-working and patient. I have two little brothers, and they never make me angry. At the weekend, I always go and help on a friend's farm because I love working with animals. I enjoy working with horses most. At school, I'm good at Biology. I'm going to take my last school exam next year. If I get good marks, . Unit 6 Jobs"
-          },
-          {
-            "id": 554,
-            "page": 67,
-            "heading": "; AB 98-99 Unit Lesson 8: Career plans (Part B) Read Khalid and Dania's plans and answer the questions. 2 Who thinks they are a friendly? b fit and healthy? c good at making things? What job do you think Khalid and Dania want to do when they're older? I think I'm quite friendly. At school, I'm good at Maths, but I'm not very good at the other subjects. I'm very good at making things. We have a lesson in Woodwork twice a week, and I love it. I make things at home as well - tables, shelves and cupboards. Dal)ia I'm very hard-working. I'm also very fit and healthy because I do a lot of sport My favourite school subjects are Science and IT. I'm also very good at Geography and English. After school, I'm going to study Science at university. When I finish studying, I'm going to fly to the Moon in a spacecraft. Talking about the future with when What are you going to do when you finish school? Nfutu present This sentence is about the future. but we always use the present tense in the when part of the sentence. Talk to your partner about your career plans. Jobs Unit 6 67",
-            "text": "; AB 98-99 Unit Lesson 8: Career plans (Part B) Read Khalid and Dania's plans and answer the questions. 2 Who thinks they are a friendly? b fit and healthy? c good at making things? What job do you think Khalid and Dania want to do when they're older? I think I'm quite friendly. At school, I'm good at Maths, but I'm not very good at the other subjects. I'm very good at making things. We have a lesson in Woodwork twice a week, and I love it. I make things at home as well - tables, shelves and cupboards. Dal)ia I'm very hard-working. I'm also very fit and healthy because I do a lot of sport My favourite school subjects are Science and IT. I'm also very good at Geography and English. After school, I'm going to study Science at university. When I finish studying, I'm going to fly to the Moon in a spacecraft. Talking about the future with when What are you going to do when you finish school? Nfutu present This sentence is about the future. but we always use the present tense in the when part of the sentence. Talk to your partner about your career plans. Jobs Unit 6 67"
-          },
-          {
-            "id": 555,
-            "page": 68,
-            "heading": "AB 100 Unit 6 e' Round up In this unit, you have practised: Saying what jobs people do He's a mechanic. Talking about timetables She's an architect. 2 3 4 Excuse me, can you help me, please? What time is the last train to Paris? Describing future events and plans that are certain When I finish school, I'm going to be a nurse. You've done no work. You're going to fail the exam. And you have . played guessing games. used pictures to tell a story. found information on a train timetable. When I finish school, I'm going to go to college. It's going to rain soon. practised scanning - finding information in texts very quickly. talked and written about your career plans. Unit 6 Jobs",
-            "text": "AB 100 Unit 6 e' Round up In this unit, you have practised: Saying what jobs people do He's a mechanic. Talking about timetables She's an architect. 2 3 4 Excuse me, can you help me, please? What time is the last train to Paris? Describing future events and plans that are certain When I finish school, I'm going to be a nurse. You've done no work. You're going to fail the exam. And you have . played guessing games. used pictures to tell a story. found information on a train timetable. When I finish school, I'm going to go to college. It's going to rain soon. practised scanning - finding information in texts very quickly. talked and written about your career plans. Unit 6 Jobs"
+            "heading": "Unit 6 Lesson 7: Career plans (Part A) - سارة وعادل: الميول والصفات الشخصية (صفحة 66)",
+            "text": "Unit 6 Lesson 7: Career plans (Part A) (صفحة 66)\nRead Sara and Adel's career plans and analyze their personality traits:\n• Sara (aged 14): 'I think I'm quite friendly and hard-working. At school, I'm good at Biology, Chemistry and English. I love animals very much. In my spare time, I volunteer at an animal shelter. When I finish school, I'm going to university to study Veterinary Medicine. I want to be a vet and take care of sick animals.'\n• Adel (aged 15): 'I'm calm, quiet and patient. I'm very good at French, English and Information Technology (IT). I'm not very good at Geography. I love computers and learning languages. Next year, I'm going to take my final secondary exams. If I get high marks, I'm going to study Computer Science and Artificial Intelligence.'\n\nCore Personality Adjectives:\nfriendly (ودود), hard-working (مجتهد), patient (صبور), quiet (هادئ), polite (مهذب), helpful (متعاون)."
           }
         ]
       },
       {
-        "id": 304,
-        "title": "Story Time: Jad and Johnny - The Alps",
-        "summary": "صفحة 69 - 70",
+        "id": 2988,
+        "title": "Lesson 8: Career Plans - Part B: Khalid & Dania (المستقبل مع when والتعبير عن المهارات)",
+        "summary": "صفحة 67",
+        "chunks": [
+          {
+            "id": 554,
+            "page": 67,
+            "heading": "Unit 6 Lesson 8: Career plans (Part B) - خالد ودانية وقاعدة when (صفحة 67)",
+            "text": "Unit 6 Lesson 8: Career plans (Part B) (صفحة 67)\nRead Khalid and Dania's plans and study the grammar of 'when':\n• Khalid: 'I think I'm quite friendly. At school, I'm good at Maths, but I'm not very good at the other subjects. However, I'm very good at making things with my hands. We have a lesson in Woodwork twice a week, and I love it! I make things at home as well: tables, shelves and cupboards. When I finish school, I'm going to be a carpenter and furniture maker.'\n• Dania: 'I'm very hard-working. I'm also very fit and healthy because I do a lot of sport. My favourite school subjects are Science and IT. I'm also very good at Geography and English. After school, I'm going to study Science at university. When I finish studying, I'm going to fly to the Moon in a spacecraft as an astronaut!'\n\nGrammar Focus: Talking about the future with 'when':\n• Form: When + Subject + Present Simple, Subject + be going to + infinitive.\n• Example: When I finish school, I am going to study Science at university.\n• Notice: Even though the whole sentence refers to future time, we must use the Present Simple tense in the 'when' clause!"
+          }
+        ]
+      },
+      {
+        "id": 2989,
+        "title": "Lesson 9: Unit 6 Round Up (المراجعة الشاملة لقواعد ومفردات ومهارات الوحدة السادسة)",
+        "summary": "صفحة 68",
+        "chunks": [
+          {
+            "id": 555,
+            "page": 68,
+            "heading": "Unit 6 Lesson 9: Round Up - مراجعة الوحدة السادسة الشاملة (صفحة 68)",
+            "text": "Unit 6 Lesson 9: Round Up (صفحة 68)\nIn Unit 6, you have practiced:\n1. Saying what jobs people do and defining them:\n   • He's a mechanic. She's an architect.\n   • An architect is someone who designs buildings.\n2. Talking about timetables and asking polite travel questions:\n   • 'Excuse me, can you help me, please?'\n   • 'What time is the first train to Paris? It leaves at 06:55.'\n   • 'Which train should I catch to arrive before four o'clock?'\n3. Describing planned future events with (be going to):\n   • When I finish school, I'm going to be a nurse.\n   • If he passes his exams, he is going to study zoology.\n4. Making predictions based on present evidence:\n   • Look at those dark clouds! It's going to rain.\n   • You haven't done any revision; you're going to fail the exam!\n5. Expressing ability and academic strengths:\n   • I'm good at Maths and Biology, but I'm not good at Geography.\n   • She is very good at working with money.\n6. Reading skills:\n   • Skimming for the main idea and scanning quickly for specific details (like train times and phone numbers)."
+          }
+        ]
+      },
+      {
+        "id": 2990,
+        "title": "Lesson 10: Story Time: Jad & Johnny in the Alps - Part 1 (وقت القصة: جاد وجوني في جبال الألب - الصعود والتحدي)",
+        "summary": "صفحة 69",
         "chunks": [
           {
             "id": 556,
             "page": 69,
-            "heading": "Story time Jad and Johnny - The Alps Listen, read and find out. 1 What are the boys talking about in the minibus? 2 Why doesn't Jad get off the ski lift? 3 What happens to Johnny? 'Tom! Can you drive slowly, please?' shouted Marcus. 'Don't worry,' said Tom. 'I know what I'm doing.' We were all in the minibus. and we were driving through the Alps, the biggest mountain range in Europe. We were very high up. There were tall mountains on one side of the road and a huge drop on the other side. 'This is so cool,' said Aziz. 'Maybe I'm going to be a bus driver when I'm older.' Jad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said. 'What are we doing here anyway, Tom?' asked Marcus. 'We're all going to go skiing,' Tom replied. 'Yes! I'm good at skiing,' said Marcus. 'Me too!' said Paolo. 'I'm going to be a ski instructor when I'm older.' 'What are you going to be when you're older, Johnny?' asked Jad. 'I don't know,' I said. 'Just remember, Johnny,' said Tom, 'you're going to go down a blue route. That's the one for beginners.' 'Paolo and I are going to ski down the red route,' said Marcus. That's more difficult.' And nobody is going to go down a black route,' said Tom. 'They are the most difficult.' 'Blue, red, black I said to myself, 'that's confusing.' We got on the lift that takes people up the mountain. I was sitting next to Jad. Jobs unit 6",
-            "text": "Story time Jad and Johnny - The Alps Listen, read and find out. 1 What are the boys talking about in the minibus? 2 Why doesn't Jad get off the ski lift? 3 What happens to Johnny? 'Tom! Can you drive slowly, please?' shouted Marcus. 'Don't worry,' said Tom. 'I know what I'm doing.' We were all in the minibus. and we were driving through the Alps, the biggest mountain range in Europe. We were very high up. There were tall mountains on one side of the road and a huge drop on the other side. 'This is so cool,' said Aziz. 'Maybe I'm going to be a bus driver when I'm older.' Jad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said. 'What are we doing here anyway, Tom?' asked Marcus. 'We're all going to go skiing,' Tom replied. 'Yes! I'm good at skiing,' said Marcus. 'Me too!' said Paolo. 'I'm going to be a ski instructor when I'm older.' 'What are you going to be when you're older, Johnny?' asked Jad. 'I don't know,' I said. 'Just remember, Johnny,' said Tom, 'you're going to go down a blue route. That's the one for beginners.' 'Paolo and I are going to ski down the red route,' said Marcus. That's more difficult.' And nobody is going to go down a black route,' said Tom. 'They are the most difficult.' 'Blue, red, black I said to myself, 'that's confusing.' We got on the lift that takes people up the mountain. I was sitting next to Jad. Jobs unit 6"
-          },
+            "heading": "Unit 6 Lesson 10: Story Time - جاد وجوني في جبال الألب (الجزء الأول: رحلة التلفريك) (صفحة 69)",
+            "text": "Unit 6 Lesson 10: Story Time - Jad and Johnny in the Alps (Part 1 - صفحة 69)\nListen, read and find out:\n'Tom! Can you drive slowly, please?' shouted Marcus. 'Don't worry,' said Tom. 'I know what I'm doing.'\nWe were all in the minibus, and we were driving through the Alps, the biggest mountain range in Europe. We were very high up. There were tall mountains on one side of the road and a huge drop on the other side.\n'This is so cool,' said Aziz. 'Maybe I'm going to be a bus driver when I'm older.'\nJad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said.\n'What are we doing here anyway, Tom?' asked Marcus. 'We're all going to go skiing,' Tom replied.\n'Yes! I'm good at skiing,' said Marcus. 'Me too!' said Paolo. 'I'm going to be a ski instructor when I'm older.'\n'What are you going to be when you're older, Johnny?' asked Jad. 'I don't know,' I said.\n'Just remember, Johnny,' said Tom, 'you're going to go down a blue route. That's the one for beginners.'\n'Paolo and I are going to ski down the red route,' said Marcus. 'That's more difficult.'\n'And nobody is going to go down a black route,' said Tom. 'They are the most difficult.'\n'Blue, red, black...' I said to myself, 'that's confusing.'\nWe got on the chairlift that takes people up the mountain. I was sitting next to Jad."
+          }
+        ]
+      },
+      {
+        "id": 2991,
+        "title": "Lesson 11: Story Time: Jad & Johnny in the Alps - Part 2 (وقت القصة: مغامرة جوني وفوزه بسباق الألب غير المقصود)",
+        "summary": "صفحة 70",
+        "chunks": [
           {
             "id": 557,
             "page": 70,
-            "heading": "Story timc 70 Jad and Johnny - The Alps 'This is so beautiful,' he said. 'I'm going to take lots of photographs.' He took out his camera and started taking photographs. After a few minutes, I saw the sign telling us to get off the lift. 'Jad,' I said. 'We're going to get off here.' 'Yeah, 0K,' he replied. 'I just need to take one more photograph'. I got off the lift and it kept on moving. I looked up and Jad was still sitting down. 'Jad! You need to get off!' Jad took his photograph and tried to slide off the lift. But it was too high, and he landed on his back. He wasn't hurt, but he was covered in snow. 'This is not a very good start,' he said. We started to ski down the mountain, and we were having lots of fun. We sometimes fell over, but it wasn't steep, and we weren't going very fast. 'Let's race,' said Jad suddenly, and he skied past me. 'Wait!' I shouted. I wasn't fast enough. and Jad disappeared down the mountain. After a few minutes, Unit 6 Jobs I reached a sign. It showed a blue route to the left and a black route to the right. I tried to remember what Tom had said about the colours. 'I think Tom said the black routes are easy,' I said to myself, and I started skiing again. Aaaaarggghhh!' I screamed. Suddenly, I was skiing down a very steep hill, and there were trees everywhere. I was going so fast, I was overtaking lots of other skiers. I wanted to stop, but I didn't know how. Then I saw a sign that said 'FINISH'. Tom and the other boys were standing next to the sign, and they looked very surprised when I skied past them. Finally, I stopped. Amazing!' said Paolo. 'You won the race, Johnny!' said Marcus. 'What race?' I said. 'Congratulations!' said a man, and he put a gold medal around my neck. 'I think I know what you're going to be when you're older, Johnny ...,' said Jad. A professional skier!'",
-            "text": "Story timc 70 Jad and Johnny - The Alps 'This is so beautiful,' he said. 'I'm going to take lots of photographs.' He took out his camera and started taking photographs. After a few minutes, I saw the sign telling us to get off the lift. 'Jad,' I said. 'We're going to get off here.' 'Yeah, 0K,' he replied. 'I just need to take one more photograph'. I got off the lift and it kept on moving. I looked up and Jad was still sitting down. 'Jad! You need to get off!' Jad took his photograph and tried to slide off the lift. But it was too high, and he landed on his back. He wasn't hurt, but he was covered in snow. 'This is not a very good start,' he said. We started to ski down the mountain, and we were having lots of fun. We sometimes fell over, but it wasn't steep, and we weren't going very fast. 'Let's race,' said Jad suddenly, and he skied past me. 'Wait!' I shouted. I wasn't fast enough. and Jad disappeared down the mountain. After a few minutes, Unit 6 Jobs I reached a sign. It showed a blue route to the left and a black route to the right. I tried to remember what Tom had said about the colours. 'I think Tom said the black routes are easy,' I said to myself, and I started skiing again. Aaaaarggghhh!' I screamed. Suddenly, I was skiing down a very steep hill, and there were trees everywhere. I was going so fast, I was overtaking lots of other skiers. I wanted to stop, but I didn't know how. Then I saw a sign that said 'FINISH'. Tom and the other boys were standing next to the sign, and they looked very surprised when I skied past them. Finally, I stopped. Amazing!' said Paolo. 'You won the race, Johnny!' said Marcus. 'What race?' I said. 'Congratulations!' said a man, and he put a gold medal around my neck. 'I think I know what you're going to be when you're older, Johnny ...,' said Jad. A professional skier!'"
+            "heading": "Unit 6 Lesson 11: Story Time - جاد وجوني في جبال الألب (الجزء الثاني: الفوز بالسباق والميدالية الذهبية) (صفحة 70)",
+            "text": "Unit 6 Lesson 11: Story Time - Jad and Johnny in the Alps (Part 2 - صفحة 70)\n'This is so beautiful,' Jad said. 'I'm going to take lots of photographs.' He took out his camera and kept clicking.\nAfter a few minutes, I saw the sign telling us to get off the lift. 'Jad,' I said. 'We're going to get off here.'\n'Yeah, OK,' he replied. 'I just need to take one more photograph.'\nI got off the lift, and it kept on moving. I looked up and Jad was still sitting down! 'Jad! You need to get off!'\nJad took his photograph and tried to slide off the lift. But it was too high, and he landed on his back! He wasn't hurt, but he was covered from head to toe in white snow. 'This is not a very good start,' he laughed.\nWe started to ski down the mountain, and we were having lots of fun. We sometimes fell over, but it wasn't steep, and we weren't going very fast. 'Let's race!' said Jad suddenly, and he skied past me.\n'Wait!' I shouted. I wasn't fast enough, and Jad disappeared down the mountain.\nAfter a few minutes, I reached a fork in the path with a signpost. It showed a blue route to the left and a black route to the right. I tried to remember what Tom had said about the colours.\n'I think Tom said the black routes are easy,' I mistakenly said to myself, and I started skiing down the black route!\n'Aaaaarggghhh!' I screamed. Suddenly, I was skiing down a terribly steep slope, weaving between trees at lightning speed! I was going so fast, I was overtaking dozens of experienced skiers. I wanted to stop, but I didn't know how!\nThen I saw a big sign that said 'FINISH'. Tom and the other boys were standing next to the sign, and their jaws dropped in astonishment when I zoomed past them across the finish line! Finally, I fell into a soft snowdrift and stopped.\n'Amazing!' said Paolo. 'You won the race, Johnny!' cheered Marcus. 'What race?!' I asked, bewildered.\n'Congratulations, young man!' said an official, and he placed a glittering gold medal around my neck.\nJad walked over with a broad grin: 'I think I know what you're going to be when you're older, Johnny... A professional skier!'"
           }
         ]
       }
@@ -2114,80 +2164,6 @@ window.GRAMMAR_RULES = [
     }
   },
   {
-    "id": "future_going_to",
-    "unit": 6,
-    "category": "tenses",
-    "title": "المستقبل المخطط له (Future with: be going to)",
-    "level": "الوحدة 6",
-    "page": 63,
-    "formula": "Subject + (am / is / are) + going to + مصدر الفعل (Infinitive)",
-    "explanation": "تُستخدم be going to للتعبير عن الخطط المستقبلية المؤكدة والنوايا المسبقة.",
-    "examples": [
-      {
-        "en": "I am going to be a doctor.",
-        "ar": "أنا أنوي أن أصبح طبيباً في المستقبل."
-      },
-      {
-        "en": "He is going to study architecture in Baghdad.",
-        "ar": "هو يخطط لدراسة الهندسة المعمارية في بغداد."
-      },
-      {
-        "en": "Are you going to join the sports club?",
-        "ar": "هل تخطط للانضمام للنادي الرياضي؟"
-      }
-    ],
-    "quiz": {
-      "question": "Look at the clouds! It _______ rain soon.",
-      "options": [
-        "is going to",
-        "goes to",
-        "will to",
-        "is going"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم is going to بوجود دليل حاضر على حدوث الفعل (الغيوم)."
-    }
-  },
-  {
-    "id": "future_simple_will",
-    "unit": 6,
-    "category": "tenses",
-    "title": "المستقبل البسيط والتنبؤات (Future Simple with: Will)",
-    "level": "الوحدة 6 - صفحة 113",
-    "page": 113,
-    "formula": "Subject + will ('ll) + مصدر الفعل (مجرد)\nالنفي: Subject + will not (won't) + مصدر الفعل (مجرد)\nالسؤال: Will + Subject + مصدر الفعل (مجرد)؟",
-    "explanation": "يُستخدم المستقبل مع will للتعبير عن:\n1) التنبؤات المستقبلية بناءً على الرأي والتخمين (غالباً مع I think, I hope, probably).\n2) اتخاذ قرار فوري وسريع في لحظة التحدث.\n3) تقديم الوعود والعروض.\nالفرق: will للتخمين والقرارات الفورية، بينما be going to للخطط والنوايا المسبقة.",
-    "examples": [
-      {
-        "en": "I think it will be sunny tomorrow.",
-        "ar": "أعتقد أن الجو سيكون مشمساً غداً (تنبؤ مستقبلي مع I think)."
-      },
-      {
-        "en": "The phone is ringing. I will answer it.",
-        "ar": "الهاتف يرن. سأجيب عليه (قرار فوري وسريع في لحظة التحدث)."
-      },
-      {
-        "en": "Don't worry, I won't tell anyone your secret.",
-        "ar": "لا تقلق، لن أخبر أحداً بسرك (وعد بالنفي won't)."
-      },
-      {
-        "en": "Will people travel to Mars in the future?",
-        "ar": "هل سيسافر البشر إلى المريخ في المستقبل؟"
-      }
-    ],
-    "quiz": {
-      "question": "I think our football team _______ the final match next week.",
-      "options": [
-        "will win",
-        "wins",
-        "won",
-        "is winning"
-      ],
-      "correct": 0,
-      "explanation": "مع التعبير (I think) وتوقع شيء في المستقبل، نستخدم المستقبل البسيط مع will والمجرد (will win)."
-    }
-  },
-  {
     "id": "must_vs_should",
     "unit": 7,
     "title": "الإلزام والقوانين مقابل النصيحة (Must vs Should)",
@@ -2317,6 +2293,206 @@ window.GRAMMAR_RULES = [
       ],
       "correct": 0,
       "explanation": "A topic sentence begins a paragraph and clearly tells the reader the main idea of that paragraph."
+    }
+  },
+  {
+    "id": "future_going_to",
+    "unit": 6,
+    "category": "future",
+    "isTense": true,
+    "title": "المستقبل المخطط له والتنبؤ بدليل (Future with: be going to)",
+    "level": "الوحدة 6 - صفحة 65 و 118",
+    "page": 65,
+    "formula": "Subject + am / is / are + going to + Base Verb (المصدر المجرد)",
+    "explanation": "نستخدم صيغة (be going to) في حالتين أساسيتين:\n1. التعبير عن النوايا والخطط المستقبلية المؤكدة التي قررنا القيام بها مسبقاً:\n   • I am going to study medicine.\n   • She is going to be a doctor.\n2. التنبؤ بحدث مستقبلي بناءً على دليل مرئي أو ملموس في الوقت الحاضر:\n   • Look at those dark clouds! It is going to rain.\n   • You haven't done any revision. You are going to fail!\n\nفي النفي: نضع not بعد فعل be:\n   • I am not going to write books.\n   • She is not going to fail.\n\nفي السؤال: نقدم فعل be على الفاعل:\n   • Are you going to go to university?\n   • What is he going to be?",
+    "examples": [
+      {
+        "en": "Firas is going to go to university to study animals.",
+        "ar": "فراس سوف يذهب إلى الجامعة لدراسة الحيوانات (خطة مؤكدة)."
+      },
+      {
+        "en": "Look at those dark clouds! It is going to rain soon.",
+        "ar": "انظر إلى تلك الغيوم الداكنة! إنها ستمطر قريباً (تنبؤ استناداً إلى دليل مرئي)."
+      },
+      {
+        "en": "What are you going to be when you finish school?",
+        "ar": "ماذا سوف تصبح عندما تنهي المدرسة؟"
+      }
+    ],
+    "quiz": {
+      "question": "Look at the dark clouds! It ________ rain soon.",
+      "options": [
+        "is going to",
+        "was",
+        "has",
+        "goes to"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم is going to للتنبؤ بحدوث شيء في المستقبل لوجود دليل واضح في الحاضر (dark clouds)."
+    }
+  },
+  {
+    "id": "future_going_to_when",
+    "unit": 6,
+    "category": "future",
+    "isTense": true,
+    "title": "المستقبل مع جملة الوصل الزمنية (Future with be going to + When)",
+    "level": "الوحدة 6 - صفحة 67 و 118",
+    "page": 67,
+    "formula": "When + Subject + Present Simple (مضارع بسيط) , Subject + be going to + Base Verb",
+    "explanation": "عند التحدث عن المستقبل باستخدام (be going to) وأداة الربط الزمنية (when) في نفس الجملة:\n• نستخدم دائماً زمن المضارع البسيط (Present Simple) في الشق الذي يلي when مباشرةً، حتى وإن كان المعنى دالاً على المستقبل بالكامل.\n• بينما يحتوي الشق الآخر على صيغة المستقبل (be going to + infinitive).\n\nأمثلة على الصيغة:\n• When I finish school, I am going to be a nurse.\n• What are you going to do when you leave university?\n• When she grows up, she is going to be a businesswoman.",
+    "examples": [
+      {
+        "en": "When I finish school, I'm going to study Science at university.",
+        "ar": "عندما أنهي المدرسة (مضارع بسيط)، سأدرس العلوم في الجامعة (مستقبل بـ going to)."
+      },
+      {
+        "en": "She is going to be a businesswoman when she grows up.",
+        "ar": "ستكون سيدة أعمال عندما تكبر (استخدام المضارع البسيط grows up بعد when)."
+      }
+    ],
+    "quiz": {
+      "question": "What are you going to do when you ________ school?",
+      "options": [
+        "finish",
+        "finished",
+        "are finishing",
+        "will finish"
+      ],
+      "correct": 0,
+      "explanation": "في الجمل التي تعبر عن المستقبل باستخدام when، نستخدم زمن المضارع البسيط (finish) بعد when دائماً."
+    }
+  },
+  {
+    "id": "good_at_ability",
+    "unit": 6,
+    "category": "functions",
+    "isTense": false,
+    "title": "التعبير عن المهارة والبراعة (Expressing Ability: good at / not good at)",
+    "level": "الوحدة 6 - صفحة 66 و 118",
+    "page": 66,
+    "formula": "Subject + am / is / are + (very / quite) good at / not good at + [Noun أو Verb-ing]",
+    "explanation": "نستخدم التركيب (be + good at / not good at) للتحدث عن الأشياء والمهام التي نجيدها أو لا نجيدها:\n1. متبوعة باسم مادة دراسية أو مجال (Noun):\n   • I'm good at Maths and Biology.\n   • She is not good at Geography.\n2. متبوعة بفعل مضاف إليه -ing (Gerund) للتعبير عن نشاط أو مهارة:\n   • He is very good at working with money.\n   • I'm good at running and swimming.\n   • He is not good at playing computer games.\n\nيمكن إضافة ظروف التقوية والتلطيف:\n• very good at (بارع جداً في)\n• quite good at (جيد إلى حد ما في)\n• not very good at (ليس جيداً كثيراً في)",
+    "examples": [
+      {
+        "en": "A businesswoman is very good at working with money.",
+        "ar": "سيدة الأعمال بارعة جداً في التعامل مع الأموال (فعل مضاف له ing)."
+      },
+      {
+        "en": "Sara is very good at Biology and Chemistry.",
+        "ar": "سارة ممتازة جداً في الأحياء والكيمياء (متبوعة باسم مادة علمية)."
+      },
+      {
+        "en": "Are the art students good at drawing and painting?",
+        "ar": "هل طلاب الفنون بارعون في الرسم والتلوين؟"
+      }
+    ],
+    "quiz": {
+      "question": "Adel is very good at ________ foreign languages.",
+      "options": [
+        "learning",
+        "learn",
+        "learned",
+        "to learn"
+      ],
+      "correct": 0,
+      "explanation": "حرف الجر at في التركيب good at يجب أن يتبعه اسم أو فعل ينتهي بـ -ing (learning)."
+    }
+  },
+  {
+    "id": "relative_clauses_who",
+    "unit": 6,
+    "category": "relative_clauses",
+    "isTense": false,
+    "title": "ضمائر الوصل لتعريف المهن والأشخاص (Defining Jobs with: who)",
+    "level": "الوحدة 6 - صفحة 60 و 68",
+    "page": 60,
+    "formula": "A / An + Job Title + is someone who + verb in singular (s / es)",
+    "explanation": "نستخدم ضمير الوصل (who) لربط الجمل وإعطاء تعريف وتوصيف دقيق للمهن والأشخاص:\n• who تعود على العاقل (People / Person / Someone).\n• يليها فعل بصيغة المفرد (مع s الشخص الثالث) لأننا نعرف مهنة مفردة:\n  - A mechanic is someone who repairs cars.\n  - An architect is someone who designs buildings.\n  - A pilot is someone who flies planes.\n  - A firefighter is someone who puts out fires.",
+    "examples": [
+      {
+        "en": "An architect is someone who plans and designs buildings.",
+        "ar": "المهندس المعماري هو شخص يصمم ويخطط المباني."
+      },
+      {
+        "en": "A shop assistant is someone who helps customers in a shop.",
+        "ar": "مساعد البائع هو شخص يساعد الزبائن في المتجر."
+      }
+    ],
+    "quiz": {
+      "question": "A mechanic is someone ________ repairs people's cars.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم ضمير الوصل who للإشارة إلى العاقل وتوصيف المهن (A mechanic is someone who...)."
+    }
+  },
+  {
+    "id": "obligation_have_to",
+    "unit": 6,
+    "category": "modals",
+    "isTense": false,
+    "title": "التعبير عن الالتزام والواجب المهني (Obligation with: have to / has to / had to)",
+    "level": "الوحدة 6 - صفحة 61 و 68",
+    "page": 61,
+    "formula": "Subject + have to / has to + infinitive (الحاضر) | had to + infinitive (الماضي)",
+    "explanation": "نستخدم (have to / has to / had to) للتعبير عن الضرورة والإلزام المفروض بقوانين العمل والمهنة أو الظروف الخارجية:\n• في الحاضر:\n  - المفرد (He / She / It) يأخذ has to + infinitive:\n    * A pilot has to wear a uniform.\n    * She has to work 12 hours sometimes.\n  - الجمع و I (I / We / They / You) تأخذ have to + infinitive:\n    * Firefighters have to be very brave.\n• في الماضي: نستخدم had to مع جميع الضمائر:\n  - Dr Salwa had to study for six years at university.\n  - Mazin had to check his equipment.",
+    "examples": [
+      {
+        "en": "Pilots have to wear an official uniform.",
+        "ar": "يجب على الطيارين ارتداء زي رسمي (إلزام بقواعد المهنة)."
+      },
+      {
+        "en": "Dr Salwa had to study for six years to become a doctor.",
+        "ar": "كان على د. سلوى أن تدرس لمدة ست سنوات لتصبح طبيبة (ضرورة في الماضي)."
+      }
+    ],
+    "quiz": {
+      "question": "Hanan ________ study for four years at college to earn her degree.",
+      "options": [
+        "had to",
+        "has",
+        "having",
+        "have to"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم had to للحديث عن الضرورة والالتزام الذي تم في الماضي (فترة دراستها بالكلية)."
+    }
+  },
+  {
+    "id": "asking_timetables",
+    "unit": 6,
+    "category": "functions",
+    "isTense": false,
+    "title": "الاستفسار عن المواعيد والقطارات (Asking about Timetables & 24-Hour Time)",
+    "level": "الوحدة 6 - صفحة 64 و 68",
+    "page": 64,
+    "formula": "What time does the train leave / arrive? | Which train should I catch?",
+    "explanation": "عند قراءة جداول الرحلات والتنقل في محطات القطار والمطارات:\n1. عبارات الاستفسار والطلب المهذب:\n   • Excuse me, can you help me, please?\n   • What time is the next train to Paris?\n   • What time does the first train leave?\n   • Which train should I catch to arrive before 4 o'clock?\n2. نظام التوقيت الـ 24 ساعة (24-Hour System):\n   • 06:55 = Six fifty-five a.m. (five to seven)\n   • 14:00 = Two o'clock in the afternoon (2 p.m.)\n   • 22:00 = Ten o'clock at night (10 p.m.)",
+    "examples": [
+      {
+        "en": "What time is the first train to Paris? - It leaves at 06:55.",
+        "ar": "في أي وقت يغادر أول قطار إلى باريس؟ - يغادر في تمام الساعة 06:55."
+      },
+      {
+        "en": "Which train should I catch? - You should catch the 08:30 train.",
+        "ar": "أي قطار ينبغي أن أستقل؟ - ينبغي أن تستقل قطار الساعة 08:30."
+      }
+    ],
+    "quiz": {
+      "question": "Excuse me, what time ________ the first train leave for Paris?",
+      "options": [
+        "does",
+        "is",
+        "do",
+        "has"
+      ],
+      "correct": 0,
+      "explanation": "في السؤال في زمن المضارع البسيط عن المواعيد المجدولة مع الفاعل المفرد (the first train) نستخدم الفعل المساعد does."
     }
   }
 ];
@@ -5383,6 +5559,639 @@ window.TOPIC_CARDS = {
         {
           "en": "Friends, family and good health are the things that make people truly happy.",
           "ar": "الأصدقاء والعائلة والصحة الجيدة هي الأشياء التي تجعل الناس سعداء حقاً."
+        }
+      ]
+    }
+  },
+  "2981": {
+    "unit": 6,
+    "lessonNumber": 1,
+    "pages": [
+      60
+    ],
+    "titleAr": "المهن والوظائف الأساسية وأماكن العمل",
+    "titleEn": "Occupations & Work Environments",
+    "themeColor": "#0284c7",
+    "icon": "💼",
+    "sections": [
+      {
+        "name": "Businesswoman",
+        "ar": "سيدة أعمال",
+        "icon": "💼",
+        "def": "Works in an office and runs a business; she is very good at working with money."
+      },
+      {
+        "name": "Mechanic",
+        "ar": "ميكانيكي سيارات",
+        "icon": "🔧",
+        "def": "Works in a workshop or a garage and repairs people's cars."
+      },
+      {
+        "name": "Pilot",
+        "ar": "طيار مدني",
+        "icon": "✈️",
+        "def": "Flies aeroplanes, takes passengers to different countries, and wears a uniform."
+      },
+      {
+        "name": "Architect",
+        "ar": "مهندس معماري",
+        "icon": "📐",
+        "def": "Plans and designs new buildings, houses, and schools in an office."
+      },
+      {
+        "name": "Engineer",
+        "ar": "مهندس",
+        "icon": "⚙️",
+        "def": "Works outside or in an office; designs, builds, and repairs machines, roads, and bridges."
+      },
+      {
+        "name": "Firefighter",
+        "ar": "رجل إطفاء وإنقاذ",
+        "icon": "🚒",
+        "def": "Does very dangerous work, puts out fires, saves people, and wears special protective clothes."
+      }
+    ],
+    "grammarFocus": {
+      "title": "تعريف المهن باستخدام ضمير الوصل (who)",
+      "rule": "A / An + Job title + is someone who + verb in singular (s/es)",
+      "examples": [
+        {
+          "en": "An architect is someone who designs buildings.",
+          "ar": "المهندس المعماري هو شخص يصمم المباني."
+        },
+        {
+          "en": "A firefighter is someone who puts out fires and saves people.",
+          "ar": "رجل الإطفاء هو شخص يخمد الحرائق وينقذ الناس."
+        }
+      ]
+    }
+  },
+  "2982": {
+    "unit": 6,
+    "lessonNumber": 2,
+    "pages": [
+      61
+    ],
+    "titleAr": "المقارنة بين مهنتين: الطب وإدارة الأعمال",
+    "titleEn": "Comparing Careers: Medicine vs Business Management",
+    "themeColor": "#0d9488",
+    "icon": "🩺",
+    "sections": [
+      {
+        "name": "Dr Salwa (Doctor)",
+        "ar": "د. سلوى (طبيبة المشفى)",
+        "icon": "🩺",
+        "def": "Takes care of sick people, works 8 to 12 hours a day, studied 6 years at university."
+      },
+      {
+        "name": "Hanan (Office Manager)",
+        "ar": "حنان (مديرة المكتب)",
+        "icon": "💻",
+        "def": "Answers calls, manages computer emails, travels abroad, studied 4 years at college."
+      },
+      {
+        "name": "Hard-working",
+        "ar": "مجتهد / دؤوب",
+        "icon": "⚡",
+        "def": "The exact opposite of 'lazy'; spends long hours dedicated to career duties."
+      },
+      {
+        "name": "University & College",
+        "ar": "الجامعة والكلية",
+        "icon": "🏛️",
+        "def": "Institutions of higher learning after secondary school where professionals earn degrees."
+      },
+      {
+        "name": "School Subjects",
+        "ar": "المواد الدراسية",
+        "icon": "📚",
+        "def": "Topics learned at school such as Maths, English, Biology, and Chemistry."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التعبير عن الإلزام والضرورة (have to / had to)",
+      "rule": "Subject + has to / have to + infinitive (Present) | had to + infinitive (Past)",
+      "examples": [
+        {
+          "en": "Dr Salwa had to study for six years at university.",
+          "ar": "كان على د. سلوى أن تدرس لست سنوات في الجامعة."
+        },
+        {
+          "en": "A pilot has to wear an official uniform.",
+          "ar": "يجب على الطيار أن يرتدي زياً رسمياً."
+        }
+      ]
+    }
+  },
+  "2983": {
+    "unit": 6,
+    "lessonNumber": 3,
+    "pages": [
+      62
+    ],
+    "titleAr": "يوم في حياة رجل إطفاء - قصة مازن",
+    "titleEn": "A Day in the Life of a Firefighter",
+    "themeColor": "#dc2626",
+    "icon": "🚒",
+    "sections": [
+      {
+        "name": "Emergency Alarm",
+        "ar": "إنذار الطوارئ",
+        "icon": "🚨",
+        "def": "A sudden siren alerting firefighters to immediate disasters and fire outbreaks."
+      },
+      {
+        "name": "Supermarket Fire",
+        "ar": "حريق المتجر الكبير",
+        "icon": "🔥",
+        "def": "A blazing building at 10:00 where shoppers were trapped inside by smoke and flames."
+      },
+      {
+        "name": "Rescue Operation",
+        "ar": "عملية الإنقاذ البطولية",
+        "icon": "🦺",
+        "def": "Entering dangerous blazing structures with hoses to extinguish fires and save lives."
+      },
+      {
+        "name": "Ring Road Accident",
+        "ar": "حادث الطريق الحلقي",
+        "icon": "🛣️",
+        "def": "A vehicle crash at 14:00 where an overturned car caught fire with the driver trapped inside."
+      },
+      {
+        "name": "Equipment Check",
+        "ar": "فحص وصيانة المعدات",
+        "icon": "🧯",
+        "def": "Inspecting hoses, ladders, axes, breathing tanks, and protective suits every morning."
+      }
+    ],
+    "grammarFocus": {
+      "title": "السرد القصصي بالماضي البسيط والمستمر (Past Simple & Continuous)",
+      "rule": "When + Past Simple (الحدث المفاجئ) , Past Continuous / Past Simple (الحدث الرئيسي)",
+      "examples": [
+        {
+          "en": "When I arrived at the fire station, I checked my equipment.",
+          "ar": "عندما وصلت لمحطة الإطفاء، فحصت معداتي."
+        },
+        {
+          "en": "The supermarket was burning when we arrived.",
+          "ar": "كان المتجر يحترق عندما وصلنا."
+        }
+      ]
+    }
+  },
+  "2984": {
+    "unit": 6,
+    "lessonNumber": 4,
+    "pages": [
+      63
+    ],
+    "titleAr": "موسوعة المهن والوظائف الـ 23 ولعبة التخمين",
+    "titleEn": "The 23 Jobs Encyclopedia & Guessing Games",
+    "themeColor": "#4f46e5",
+    "icon": "🎮",
+    "sections": [
+      {
+        "name": "Healthcare & Safety",
+        "ar": "الرعاية الصحية والسلامة",
+        "icon": "🛡️",
+        "def": "Doctor, dentist, nurse, firefighter, and police officer who protect lives."
+      },
+      {
+        "name": "Creative & Cultural",
+        "ar": "الفنون والثقافة والإعلام",
+        "icon": "🎨",
+        "def": "Artist, author, editor, photographer, reporter, and singer."
+      },
+      {
+        "name": "Outdoor & Agriculture",
+        "ar": "الزراعة والأجواء المفتوحة",
+        "icon": "🌾",
+        "def": "Farmer, shepherd, park-keeper, and builder who work outdoors."
+      },
+      {
+        "name": "Engineering & Business",
+        "ar": "الهندسة وإدارة الأعمال",
+        "icon": "📐",
+        "def": "Architect, engineer, businesswoman, office secretary, and mechanic."
+      },
+      {
+        "name": "Transportation & Space",
+        "ar": "المواصلات والنقل والفضاء",
+        "icon": "🚀",
+        "def": "Pilot, bus driver, and astronaut exploring roads, skies, and galaxies."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صياغة أسئلة التخمين والاستنتاج (Job Deduction Questions)",
+      "rule": "Do you + base verb...? | Is your job + adjective...?",
+      "examples": [
+        {
+          "en": "Do you work outside? - Yes, I work outdoors.",
+          "ar": "هل تعمل في الخارج؟ - نعم، أعمل في الهواء الطلق."
+        },
+        {
+          "en": "Is your job dangerous? - No, it is safe.",
+          "ar": "هل وظيفتك خطيرة؟ - لا، إنها آمنة."
+        }
+      ]
+    }
+  },
+  "2985": {
+    "unit": 6,
+    "lessonNumber": 5,
+    "pages": [
+      64
+    ],
+    "titleAr": "جدول مواعيد القطار والاستفسار عن السفر",
+    "titleEn": "Train Timetable & Travel Enquiries",
+    "themeColor": "#059669",
+    "icon": "🚆",
+    "sections": [
+      {
+        "name": "Eurostar Routes",
+        "ar": "مسارات قطار يوروستار",
+        "icon": "🚆",
+        "def": "High-speed rail line connecting London St Pancras, Ashford, Calais, and Paris."
+      },
+      {
+        "name": "24-Hour Time System",
+        "ar": "نظام التوقيت بـ 24 ساعة",
+        "icon": "⏱️",
+        "def": "Standard transport scheduling (e.g. 06:55 = morning, 14:00 = 2 p.m., 22:00 = 10 p.m.)."
+      },
+      {
+        "name": "Departure & Arrival",
+        "ar": "المغادرة والوصول",
+        "icon": "🚉",
+        "def": "Timetable listings specifying platform departure and station arrival times."
+      },
+      {
+        "name": "Polite Travel Inquiry",
+        "ar": "الاستفسار المهذب عن الرحلات",
+        "icon": "🎫",
+        "def": "Polite questions used at ticket offices to find train connections and buy tickets."
+      },
+      {
+        "name": "Catching the Train",
+        "ar": "اللحاق بالقطار في الوقت المحدد",
+        "icon": "🏃",
+        "def": "Reaching the platform on time so as not to miss the train or be late for events."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ الاستفسار عن المواعيد (Polite Travel Inquiries)",
+      "rule": "Excuse me, what time does the train leave? | Which train should I catch?",
+      "examples": [
+        {
+          "en": "What time is the first train to Paris? - It leaves at 06:55.",
+          "ar": "في أي وقت يغادر أول قطار إلى باريس؟ - يغادر في تمام الساعة 06:55."
+        },
+        {
+          "en": "Which train should I catch to arrive before 4 o'clock?",
+          "ar": "أي قطار ينبغي أن أستقل لأصل قبل الساعة الرابعة؟"
+        }
+      ]
+    }
+  },
+  "2986": {
+    "unit": 6,
+    "lessonNumber": 6,
+    "pages": [
+      65
+    ],
+    "titleAr": "التخطيط للمستقبل مع فراس وهالة",
+    "titleEn": "Future Aspirations: Firas & Halla",
+    "themeColor": "#7c3aed",
+    "icon": "🎓",
+    "sections": [
+      {
+        "name": "Firas the Zoologist",
+        "ar": "فراس وعلم الحيوان",
+        "icon": "🦁",
+        "def": "Loves animals, visits the zoo every Friday, takes photos patiently, wants to be a zoologist."
+      },
+      {
+        "name": "Halla the Doctor",
+        "ar": "هالة وطب المشافي",
+        "icon": "👩‍⚕️",
+        "def": "Visits lonely hospital patients with flowers, loves Biology, plans to become a doctor."
+      },
+      {
+        "name": "Polysemy of 'Patient'",
+        "ar": "معاني كلمة Patient المتعددة",
+        "icon": "⚖️",
+        "def": "Adjective: able to wait calmly without anger; Noun: a sick person treated in hospital."
+      },
+      {
+        "name": "Exam Collocations",
+        "ar": "مصطلحات الامتحانات المدرسية",
+        "icon": "📝",
+        "def": "take an exam (يؤدي الامتحان), pass an exam (ينجح), fail an exam (يرسب)."
+      },
+      {
+        "name": "University Ambition",
+        "ar": "الطموح والدراسة الجامعية",
+        "icon": "🏛️",
+        "def": "Working hard in school subjects to qualify for specialized university degrees."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المستقبل المخطط له باستخدام (be going to + infinitive)",
+      "rule": "Subject + am / is / are + going to + Base Verb",
+      "examples": [
+        {
+          "en": "Firas is going to study animals at university.",
+          "ar": "فراس سوف يدرس علوم الحيوان في الجامعة."
+        },
+        {
+          "en": "When she finishes school, Halla is going to be a doctor.",
+          "ar": "عندما تكمل هالة المدرسة، ستصبح طبيبة."
+        }
+      ]
+    }
+  },
+  "2987": {
+    "unit": 6,
+    "lessonNumber": 7,
+    "pages": [
+      66
+    ],
+    "titleAr": "الخطط المهنية والصفات الشخصية: سارة وعادل",
+    "titleEn": "Career Plans & Personal Traits: Sara & Adel",
+    "themeColor": "#ea580c",
+    "icon": "🌱",
+    "sections": [
+      {
+        "name": "Sara (Future Vet)",
+        "ar": "سارة (طبيبة بيطرية مستقبلية)",
+        "icon": "🐾",
+        "def": "Friendly and hard-working; excels in Biology and English; volunteers at animal shelters."
+      },
+      {
+        "name": "Adel (Tech Specialist)",
+        "ar": "عادل (متخصص تقنية المعلومات)",
+        "icon": "💻",
+        "def": "Quiet and patient; loves computers, French, and Information Technology."
+      },
+      {
+        "name": "Personality Traits",
+        "ar": "سمات الشخصية الإيجابية",
+        "icon": "✨",
+        "def": "Friendly (ودود), hard-working (دؤوب), patient (صبور), quiet (هادئ), helpful (متعاون)."
+      },
+      {
+        "name": "School Strengths",
+        "ar": "نقاط القوة الأكاديمية",
+        "icon": "📊",
+        "def": "Sciences, languages, and technical subjects that guide students to suitable careers."
+      },
+      {
+        "name": "Volunteer Experience",
+        "ar": "الخبرة المكتسبة من التطوع",
+        "icon": "🤝",
+        "def": "Offering free help to shelters or charities to build practical life experience."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التعبير عن المهارة باستخدام (good at / not good at)",
+      "rule": "Subject + am / is / are + (very / quite) good at + [Noun / Verb-ing]",
+      "examples": [
+        {
+          "en": "Sara is very good at Biology and Chemistry.",
+          "ar": "سارة ممتازة جداً في مادتي الأحياء والكيمياء."
+        },
+        {
+          "en": "Adel is good at learning foreign languages.",
+          "ar": "عادل بارع في تعلم اللغات الأجنبية."
+        }
+      ]
+    }
+  },
+  "2988": {
+    "unit": 6,
+    "lessonNumber": 8,
+    "pages": [
+      67
+    ],
+    "titleAr": "الخطط المهنية والمستقبل مع when: خالد ودانية",
+    "titleEn": "Career Plans & Future with 'When': Khalid & Dania",
+    "themeColor": "#b45309",
+    "icon": "🚀",
+    "sections": [
+      {
+        "name": "Khalid the Craftsman",
+        "ar": "خالد (حرفي الأثاث والنجارة)",
+        "icon": "🪚",
+        "def": "Talented at woodwork; builds tables, shelves, and cupboards; plans to be a carpenter."
+      },
+      {
+        "name": "Dania the Astronaut",
+        "ar": "دانية (رائدة الفضاء المستقبلية)",
+        "icon": "🚀",
+        "def": "Athletic, hard-working, top marks in Science and IT, dreams of flying to the Moon."
+      },
+      {
+        "name": "Woodwork & Design",
+        "ar": "الأعمال اليدوية والنجارة",
+        "icon": "🔨",
+        "def": "Practical lessons teaching students how to craft and assemble wooden items."
+      },
+      {
+        "name": "Spacecraft & Astronomy",
+        "ar": "المركبات الفضائية وعلوم الكون",
+        "icon": "🪐",
+        "def": "Advanced scientific ambition to pilot spacecraft and explore the lunar surface."
+      },
+      {
+        "name": "Future Milestones",
+        "ar": "المحطات المستقبلية والربط بـ when",
+        "icon": "⏳",
+        "def": "Connecting career achievements to completing high school and university degrees."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المستقبل مع جملة الوصل الزمنية (When + Present Simple)",
+      "rule": "When + Subject + Present Simple , Subject + be going to + infinitive",
+      "examples": [
+        {
+          "en": "When I finish school, I am going to study Science at university.",
+          "ar": "عندما أنهي المدرسة، سأدرس العلوم في الجامعة."
+        },
+        {
+          "en": "What are you going to do when you finish school?",
+          "ar": "ماذا سوف تفعل عندما تنهي دراستك المدرسية؟"
+        }
+      ]
+    }
+  },
+  "2989": {
+    "unit": 6,
+    "lessonNumber": 9,
+    "pages": [
+      68
+    ],
+    "titleAr": "المراجعة الشاملة لمهارات وقواعد الوحدة السادسة",
+    "titleEn": "Unit 6 Comprehensive Round Up",
+    "themeColor": "#2563eb",
+    "icon": "🎯",
+    "sections": [
+      {
+        "name": "Jobs & Roles",
+        "ar": "توصيف وتصنيف المهن",
+        "icon": "📋",
+        "def": "Describing jobs, duties, workplaces, and uniforms accurately."
+      },
+      {
+        "name": "Timetables & Transit",
+        "ar": "جداول الرحلات والمواصلات",
+        "icon": "🚆",
+        "def": "Reading 24-hour timetables and using polite travel inquiries."
+      },
+      {
+        "name": "Planned Intentions",
+        "ar": "الخطط المستقبلية المؤكدة",
+        "icon": "📅",
+        "def": "Expressing firm career goals using 'be going to + infinitive'."
+      },
+      {
+        "name": "Evidence Predictions",
+        "ar": "التنبؤ بالأدلة الحاضرة",
+        "icon": "🌧️",
+        "def": "Forecasting events based on clear present evidence (e.g. dark clouds, no revision)."
+      },
+      {
+        "name": "Expressing Strengths",
+        "ar": "التعبير عن المهارات والميول",
+        "icon": "🏆",
+        "def": "Using 'good at' and 'not good at' followed by nouns or gerunds (verb-ing)."
+      }
+    ],
+    "grammarFocus": {
+      "title": "التنبؤ بالأحداث استناداً إلى أدلة حاضرة (Predictions with Evidence)",
+      "rule": "Present Visible Clue -> Subject + be going to + infinitive",
+      "examples": [
+        {
+          "en": "Look at those dark clouds! It is going to rain.",
+          "ar": "انظر لتلك الغيوم الداكنة! إنها ستمطر."
+        },
+        {
+          "en": "You have done no revision. You are going to fail the exam!",
+          "ar": "أنت لم تقم بأي مراجعة. سوف ترسب في الامتحان!"
+        }
+      ]
+    }
+  },
+  "2990": {
+    "unit": 6,
+    "lessonNumber": 10,
+    "pages": [
+      69
+    ],
+    "titleAr": "وقت القصة: جاد وجوني في جبال الألب - الجزء الأول",
+    "titleEn": "Story Time: Jad & Johnny in the Alps - Part 1",
+    "themeColor": "#0891b2",
+    "icon": "🏔️",
+    "sections": [
+      {
+        "name": "The Alps",
+        "ar": "سلسلة جبال الألب",
+        "icon": "🏔️",
+        "def": "The biggest and highest mountain range in Europe, covered in snow and ski slopes."
+      },
+      {
+        "name": "Minibus Journey",
+        "ar": "رحلة الحافلة الجبلية",
+        "icon": "🚐",
+        "def": "Travelling along steep mountain roads with dramatic cliff drops on one side."
+      },
+      {
+        "name": "Career Aspirations",
+        "ar": "طموحات الفتية المستقبلية",
+        "icon": "🎿",
+        "def": "Aziz wants to be a bus driver, Jad a photographer, and Paolo a ski instructor."
+      },
+      {
+        "name": "Ski Route Colors",
+        "ar": "تصنيف مسارات التزلج بالألوان",
+        "icon": "🚩",
+        "def": "Blue = beginners (easy), Red = intermediate (difficult), Black = expert (most difficult)."
+      },
+      {
+        "name": "Chairlift Ride",
+        "ar": "ركوب التلفريك المعلق",
+        "icon": "🚡",
+        "def": "The mechanical lift carrying skiers high up to the summit snowfields."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغ التفضيل العليا للصفات (Superlative Adjectives)",
+      "rule": "the + short adjective + -est | the most + long adjective",
+      "examples": [
+        {
+          "en": "The Alps are the biggest mountain range in Europe.",
+          "ar": "جبال الألب هي أكبر سلسلة جبال في أوروبا."
+        },
+        {
+          "en": "The black routes are the most difficult of all.",
+          "ar": "المسارات السوداء هي الأكثر صعوبة على الإطلاق."
+        }
+      ]
+    }
+  },
+  "2991": {
+    "unit": 6,
+    "lessonNumber": 11,
+    "pages": [
+      70
+    ],
+    "titleAr": "وقت القصة: جاد وجوني في جبال الألب - الجزء الثاني",
+    "titleEn": "Story Time: Jad & Johnny in the Alps - Part 2",
+    "themeColor": "#f59e0b",
+    "icon": "🥇",
+    "sections": [
+      {
+        "name": "Jad's Mishap",
+        "ar": "سقوط جاد في الثلج",
+        "icon": "📸",
+        "def": "Delayed getting off the lift to take one more photo and fell into deep white snow."
+      },
+      {
+        "name": "Trail Fork Signpost",
+        "ar": "شاخصة مفترق الطرق",
+        "icon": "🪧",
+        "def": "A sign showing blue route to left and black route to right."
+      },
+      {
+        "name": "Accidental Black Run",
+        "ar": "النزول السريع في المسار الأسود",
+        "icon": "⛷️",
+        "def": "Johnny mistakenly taking the dangerous black route, racing downhill at furious speed."
+      },
+      {
+        "name": "The Finish Line",
+        "ar": "اجتياز خط النهاية",
+        "icon": "🏁",
+        "def": "Zooming past spectators and crossing the finish banner before crashing into snow."
+      },
+      {
+        "name": "Gold Medal Winner",
+        "ar": "الميدالية الذهبية للبطل",
+        "icon": "🥇",
+        "def": "Awarded first place in the ski race; Jad calls Johnny 'a professional skier'!"
+      }
+    ],
+    "grammarFocus": {
+      "title": "روابط تتابع الأحداث القصصية (Narrative Sequence Markers)",
+      "rule": "After a few minutes... | Suddenly... | Finally...",
+      "examples": [
+        {
+          "en": "After a few minutes, I saw the sign telling us to get off the lift.",
+          "ar": "بعد بضع دقائق، رأيت الإشارة التي تطلب منا النزول من التلفريك."
+        },
+        {
+          "en": "Suddenly, I was skiing down a terribly steep slope!",
+          "ar": "وفجأة، كنت أتزلج هابطاً منحدراً شديد الوعورة!"
         }
       ]
     }

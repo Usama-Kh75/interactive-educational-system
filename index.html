@@ -2171,7 +2171,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.9.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.0.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3403,7 +3403,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.9.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.0.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3458,8 +3458,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '2.8.6';
-    const CURRENT_VERSION_LABEL = 'v2.9.0';
-    const SYSTEM_VERSION = 'v2.9.0';
+    const CURRENT_VERSION_LABEL = 'v3.0.0';
+    const SYSTEM_VERSION = 'v3.0.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -4531,7 +4531,7 @@
       });
     }
 
-    // ضمان وجود منهج اللغة الإنجليزية المعتمد المكتمل
+    // تنقية وضمان وجود منهج اللغة الإنجليزية المعتمد المكتمل وتوحيده وحذف وثائق المواصفات والتكرارات
     function ensureDefaultEnglishCurriculum() {
       const embeddedChapters = window.CURRICULUM_DATA || [];
       const englishCurr = {
@@ -4544,21 +4544,48 @@
         chapters: embeddedChapters
       };
 
-      if (!appData.curriculums || appData.curriculums.length === 0) {
-        appData.curriculums = [englishCurr];
-        appData.currentCurriculumId = 3;
+      // 1. تنقية المناهج واستبعاد أي وثائق مواصفات داخلية للنظام (مثل دليل وثيقة متطلبات النظام أو هندسة النظم)
+      if (Array.isArray(appData.curriculums)) {
+        appData.curriculums = appData.curriculums.filter(c => {
+          if (!c) return false;
+          if (c.id === 1) return false;
+          const nameStr = (c.name || '').toString();
+          const subjStr = (c.subject || '').toString();
+          if (nameStr.includes('دليل وثيقة') || nameStr.includes('وثيقة النظام') || nameStr.includes('هندسة النظم')) return false;
+          if (subjStr.includes('هندسة النظم') || subjStr.includes('وثيقة')) return false;
+          return true;
+        });
       } else {
-        const exists = appData.curriculums.find(c => c.id === 3 || c.name.includes('الانجليزية'));
-        if (!exists) {
-          appData.curriculums.unshift(englishCurr);
-        } else {
-          // مزامنة فصول المنهج دائماً بأحدث بيانات مضمنة لضمان استلام كل وحدة جديدة فوراً
-          if (embeddedChapters && embeddedChapters.length > 0) {
-            exists.chapters = embeddedChapters;
-          }
-        }
-        appData.currentCurriculumId = exists ? exists.id : 3;
+        appData.curriculums = [];
       }
+
+      // 2. توحيد منهج اللغة الإنجليزية وحذف أي تكرار له
+      const existingEngIndex = appData.curriculums.findIndex(c => 
+        c.id === 3 || 
+        (c.name && c.name.includes('الانجليزية')) || 
+        (c.subject && c.subject.toLowerCase().includes('eng'))
+      );
+
+      if (existingEngIndex >= 0) {
+        appData.curriculums[existingEngIndex] = {
+          ...appData.curriculums[existingEngIndex],
+          ...englishCurr,
+          id: 3,
+          chapters: (embeddedChapters && embeddedChapters.length > 0) ? embeddedChapters : (appData.curriculums[existingEngIndex].chapters || [])
+        };
+        // تنقية أي تكرار إضافي للغة الإنجليزية إن وجد
+        appData.curriculums = appData.curriculums.filter((c, idx) => {
+          if (idx === existingEngIndex) return true;
+          const isEng = (c.id === 3) || 
+                        (c.name && c.name.includes('الانجليزية')) || 
+                        (c.subject && c.subject.toLowerCase().includes('eng'));
+          return !isEng;
+        });
+      } else {
+        appData.curriculums.unshift(englishCurr);
+      }
+
+      appData.currentCurriculumId = 3;
       saveData();
     }
 
@@ -4590,16 +4617,25 @@
           if (currsRes.ok) {
             const serverCurrs = await currsRes.json();
             if (serverCurrs && serverCurrs.length > 0) {
-              // دمج الفصول من بيانات المنهج
-              serverCurrs.forEach(sc => {
+              // فلترة وثائق المواصفات الداخلية غير الدراسية
+              const filtered = serverCurrs.filter(sc => 
+                sc && 
+                sc.id !== 1 && 
+                !(sc.name && (sc.name.includes('دليل وثيقة') || sc.name.includes('وثيقة النظام'))) && 
+                !(sc.subject && (sc.subject.includes('هندسة النظم') || sc.subject.includes('وثيقة')))
+              );
+              filtered.forEach(sc => {
                 if (!sc.chapters || sc.chapters.length === 0) {
                   sc.chapters = window.CURRICULUM_DATA || [];
                 }
               });
-              appData.curriculums = serverCurrs;
-              renderDashboard();
-              renderCurriculumsList();
-              populateStudyCurriculumSelect();
+              if (filtered.length > 0) {
+                appData.curriculums = filtered;
+                ensureDefaultEnglishCurriculum();
+                renderDashboard();
+                renderCurriculumsList();
+                populateStudyCurriculumSelect();
+              }
             }
           }
         }
@@ -4641,7 +4677,11 @@
 
     // تحديث إحصائيات لوحة التحكم
     function renderDashboard() {
-      const currs = appData.curriculums || [];
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
       document.getElementById('statCurriculums').innerText = currs.length || 1;
       
       const curr = currs.find(c => c.id === appData.currentCurriculumId) || currs[0];
@@ -4654,7 +4694,7 @@
 
       document.getElementById('statChapters').innerText = chaps.length || 10;
       document.getElementById('statLessons').innerText = lessCount || 53;
-      document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 23) + ' قاعدة ومفهوماً';
+      document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 25) + ' قاعدة ومفهوماً';
 
       renderCurriculumsSelectorBar();
       renderActiveSubjectShowcase();
@@ -4666,51 +4706,111 @@
       if (!container) return;
       container.innerHTML = '';
 
-      const currs = appData.curriculums || [];
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
+
       currs.forEach(curr => {
+        const isEnglish = (curr.id === 3) || 
+                          (curr.subject && curr.subject.toLowerCase().includes('eng')) || 
+                          (curr.name && curr.name.includes('الانجليزية'));
+
         const div = document.createElement('div');
         div.className = 'card curr-card';
         div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--slate-200); box-shadow: var(--shadow); transition: transform 0.25s ease, box-shadow 0.25s ease; grid-column: 1 / -1; margin-bottom: 1.5rem;';
-        div.innerHTML = `
-          <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); flex-wrap: wrap;">
-            <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06); background: #1e1b4b; cursor: pointer; transition: transform 0.3s ease;" onclick="openSubjectTab(${curr.id})" title="انقر للدخول إلى قاعة المذاكرة والدروس">
-              <img src="./book_images/page_1.jpeg" alt="${curr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
-            </div>
-            <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                  <span class="curr-badge" style="background: var(--primary-light); color: var(--primary); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">${curr.subject || 'English for Iraq'}</span>
-                  <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • مكتمل 100%</span>
-                  <span style="background: var(--slate-100); color: var(--slate-700); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: ${curr.grade || 'الثاني متوسط'}</span>
+        
+        if (isEnglish) {
+          div.innerHTML = `
+            <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); flex-wrap: wrap;">
+              <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06); background: #1e1b4b; cursor: pointer; transition: transform 0.3s ease;" onclick="openSubjectTab(${curr.id})" title="انقر للدخول إلى قاعة المذاكرة والدروس">
+                <img src="./book_images/page_1.jpeg" alt="${curr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
+              </div>
+              <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span class="curr-badge" style="background: var(--primary-light); color: var(--primary); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">English for Iraq</span>
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • مكتمل 100%</span>
+                    <span style="background: var(--slate-100); color: var(--slate-700); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: ${curr.grade || 'الثاني متوسط'}</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.4rem; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📘</span>
+                    <span>${curr.name}</span>
+                  </h3>
+                  <p style="font-size: 0.86rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 0.85rem;">
+                    منهاج تفاعلي متكامل يشمل قراءة نصوص كتاب الطالب وكتاب النشاط بصوت بشري فصيح طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (25 قاعدة ومفهوماً)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية مع ميزة الطباعة الورقية والتدريب التفاعلي.
+                  </p>
+                  <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <span style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📚 10 وحدات و 53 درساً</span>
+                    <span style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">💡 25 قاعدة ومفهوماً</span>
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📝 4 امتحانات وزارية محلولة</span>
+                  </div>
                 </div>
-                <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.4rem; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
-                  <span>📘</span>
-                  <span>${curr.name}</span>
-                </h3>
-                <p style="font-size: 0.86rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 0.85rem;">
-                  منهاج تفاعلي متكامل يشمل قراءة نصوص كتاب الطالب وكتاب النشاط بصوت بشري فصيح طبيعي، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (25 قاعدة ومفهوماً)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية مع ميزة الطباعة الورقية والتدريب التفاعلي.
-                </p>
-                <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                  <span style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📚 10 وحدات و 53 درساً</span>
-                  <span style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">💡 25 قاعدة ومفهوماً</span>
-                  <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📝 4 امتحانات وزارية محلولة</span>
+                
+                <div style="display: flex; gap: 0.6rem; border-top: 1px solid var(--slate-100); padding-top: 0.85rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="font-weight: 800; background: linear-gradient(135deg, #4338ca, #6366f1); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    📝 نماذج الامتحانات والأسئلة
+                  </button>
+                  <button class="btn btn-secondary" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    💡 بنك القواعد النحوية
+                  </button>
                 </div>
               </div>
-              
-              <div style="display: flex; gap: 0.6rem; border-top: 1px solid var(--slate-100); padding-top: 0.85rem; margin-top: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="font-weight: 800; background: linear-gradient(135deg, #4338ca, #6366f1); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);">
-                  📖 دخول قاعة المذاكرة والدروس ⮞
-                </button>
-                <button class="btn btn-secondary" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-                  📝 نماذج الامتحانات والأسئلة
-                </button>
-                <button class="btn btn-secondary" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-                  💡 بنك القواعد النحوية
-                </button>
+            </div>
+          `;
+        } else {
+          // منهج آخر مضاف ومسجل
+          const sLower = (curr.subject || '').toLowerCase() + ' ' + (curr.name || '').toLowerCase();
+          let icon = '📘';
+          let themeColor = '#4338ca';
+          if (sLower.includes('arab') || sLower.includes('عرب')) { icon = '📙'; themeColor = '#059669'; }
+          else if (sLower.includes('scien') || sLower.includes('علوم')) { icon = '🔬'; themeColor = '#0284c7'; }
+          else if (sLower.includes('math') || sLower.includes('رياض')) { icon = '📐'; themeColor = '#d97706'; }
+          else if (sLower.includes('comp') || sLower.includes('حاسوب')) { icon = '💻'; themeColor = '#7c3aed'; }
+
+          const chaps = curr.chapters || [];
+          let lessCount = 0;
+          chaps.forEach(ch => { lessCount += (ch.lessons || []).length; });
+
+          div.innerHTML = `
+            <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); flex-wrap: wrap;">
+              <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(0,0,0,0.14); background: linear-gradient(135deg, ${themeColor}, #1e293b); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; cursor: pointer;" onclick="openSubjectTab(${curr.id})" title="انقر للدخول إلى قاعة المذاكرة والدروس">
+                <span style="font-size: 3rem; margin-bottom: 0.5rem;">${icon}</span>
+                <span style="font-size: 0.75rem; font-weight: 800; text-align: center; padding: 0 0.5rem;">${curr.name}</span>
+              </div>
+              <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span class="curr-badge" style="background: var(--slate-100); color: var(--slate-800); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">${curr.subject || 'مقرر دراسي'}</span>
+                    <span style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">منهج مسجل في النظام</span>
+                    <span style="background: var(--slate-100); color: var(--slate-700); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: ${curr.grade || 'مرحلة دراسية'}</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.4rem; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>${icon}</span>
+                    <span>${curr.name}</span>
+                  </h3>
+                  <p style="font-size: 0.86rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 0.85rem;">
+                    ${curr.description || 'منهج مسجل في النظام التعليمي التفاعلي الشامل، متاح للمذاكرة والقراءة والاستماع والتدريب.'}
+                  </p>
+                  <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <span style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📚 ${chaps.length} فصول / وحدات</span>
+                    <span style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📝 ${lessCount} درساً</span>
+                  </div>
+                </div>
+                
+                <div style="display: flex; gap: 0.6rem; border-top: 1px solid var(--slate-100); padding-top: 0.85rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="font-weight: 800; background: linear-gradient(135deg, ${themeColor}, #334155); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        `;
+          `;
+        }
         container.appendChild(div);
       });
 
@@ -4748,8 +4848,14 @@
 
     function populateStudyCurriculumSelect() {
       const select = document.getElementById('studyCurrSelect');
+      if (!select) return;
       select.innerHTML = '';
-      (appData.curriculums || []).forEach(c => {
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
+      currs.forEach(c => {
         const opt = document.createElement('option');
         opt.value = c.id;
         opt.innerText = c.name;
@@ -6247,6 +6353,557 @@
 
       // خريطة الأسئلة التدريبية المتخصصة حسب الدرس المختار
       const LESSON_QUIZZES = {
+        // الوحدة 6: المهن والوظائف (Unit 6: Jobs and Occupations)
+        2981: [
+          {
+                    "id": 29811,
+                    "question": "What does an architect do as their main job?",
+                    "options": [
+                              "Plans and designs buildings in an office",
+                              "Repairs car engines in a garage",
+                              "Puts out fires and saves people",
+                              "Flies planes to different countries"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 60 states: 'An architect plans and designs buildings. They work in an office.'"
+          },
+          {
+                    "id": 29812,
+                    "question": "Where does a mechanic usually work and what do they do?",
+                    "options": [
+                              "Works in a workshop or garage and repairs people's cars",
+                              "Works in a hospital and takes care of sick people",
+                              "Works on an airplane and serves meals",
+                              "Works in a classroom and teaches English"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 60 states: 'A mechanic works in a workshop or a garage and repairs people's cars.'"
+          },
+          {
+                    "id": 29813,
+                    "question": "What is a businesswoman described as being very good at?",
+                    "options": [
+                              "Working with money and running a business",
+                              "Designing large suspension bridges",
+                              "Planting crops on a farm",
+                              "Cooking food in a busy restaurant"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 60 states: 'A businesswoman works in an office and runs a business. She is very good at working with money.'"
+          },
+          {
+                    "id": 29814,
+                    "question": "Why is a firefighter's job described as very dangerous?",
+                    "options": [
+                              "They put out fires, save people, and wear special clothes",
+                              "They fly through stormy clouds in planes",
+                              "They count large sums of coins all day",
+                              "They travel to different countries on trains"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 60 states: 'A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes.'"
+          }
+],
+        2982: [
+          {
+                    "id": 29821,
+                    "question": "How long did Dr Salwa have to study at university to become a doctor?",
+                    "options": [
+                              "For six years",
+                              "For four years",
+                              "For two years",
+                              "For eight years"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 61 states: 'After school, she went to university. She had to study for six years.'"
+          },
+          {
+                    "id": 29822,
+                    "question": "What is the textbook definition of the word 'hard-working'?",
+                    "options": [
+                              "The opposite of 'lazy'",
+                              "Somebody who works only at night",
+                              "Quick to get angry with others",
+                              "Unable to learn school subjects"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 61 vocabulary matching: 'hard-working: the opposite of lazy'."
+          },
+          {
+                    "id": 29823,
+                    "question": "What were Hanan's best subjects at school before she studied Business Administration?",
+                    "options": [
+                              "Maths and English",
+                              "Physics and Chemistry",
+                              "History and Geography",
+                              "Biology and Art"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 61 states: 'Her best subjects at school were Maths and English. After school, she went to college to study Business Administration.'"
+          },
+          {
+                    "id": 29824,
+                    "question": "Why does Dr Salwa like being a doctor in the hospital?",
+                    "options": [
+                              "Because in this job she can help people",
+                              "Because she enjoys travelling abroad",
+                              "Because she works only two hours a day",
+                              "Because she does not like studying"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 61 states: 'She likes being a doctor because in this job she can help people.'"
+          }
+],
+        2983: [
+          {
+                    "id": 29831,
+                    "question": "What emergency message came in at 10:00 when firefighter Mazin was on duty?",
+                    "options": [
+                              "'The supermarket is on fire! People are trapped inside!'",
+                              "'A cat is stuck in a tall pine tree!'",
+                              "'The fire station roof is leaking water!'",
+                              "'A bus has run out of petrol in town!'"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 62 states: '10:00 The supermarket is on fire! Come quickly! People are trapped inside.'"
+          },
+          {
+                    "id": 29832,
+                    "question": "What was Mazin doing at 10:05 before rushing out to emergencies?",
+                    "options": [
+                              "He checked his equipment",
+                              "He was eating breakfast",
+                              "He was sleeping in the dormitory",
+                              "He was driving back home"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 62 states: 'When I arrived at the fire station yesterday morning, I checked my equipment at 10:05.'"
+          },
+          {
+                    "id": 29833,
+                    "question": "What second incident occurred at 14:00 (2:00 p.m.)?",
+                    "options": [
+                              "An accident on the ring road where a car was upside down and on fire",
+                              "A small bonfire in a school playground",
+                              "A fire alarm test at the city airport",
+                              "A thunderstorm over the Alps"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 62 states: '14:00 Accident on the ring road! A car was upside down and on fire.'"
+          },
+          {
+                    "id": 29834,
+                    "question": "What was the final outcome of the supermarket rescue operation?",
+                    "options": [
+                              "The firefighters saved all the trapped people",
+                              "The building could not be entered at all",
+                              "The fire put itself out naturally",
+                              "Only the shopkeeper escaped"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 62 states: 'We went into the building... We saved all the people.'"
+          }
+],
+        2984: [
+          {
+                    "id": 29841,
+                    "question": "In Game A of 'What's my job?', how many questions can Student 2 ask?",
+                    "options": [
+                              "Up to five 'yes' or 'no' questions",
+                              "Ten open essay questions",
+                              "Only one single question",
+                              "As many questions as they want without limit"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 63 states: 'Ask your partner up to five 'yes' or 'no' questions to try to find out what the job is.'"
+          },
+          {
+                    "id": 29842,
+                    "question": "Which profession from the unit 6 vocabulary looks after sheep in pastures?",
+                    "options": [
+                              "A shepherd",
+                              "A park-keeper",
+                              "An architect",
+                              "A secretary"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 63 includes 'shepherd' (راعي أغنام) in the core professions vocabulary."
+          },
+          {
+                    "id": 29843,
+                    "question": "Which of these professions is typically required to wear a formal uniform at work?",
+                    "options": [
+                              "A pilot and a police officer",
+                              "An author and an artist",
+                              "A novelist and a poet",
+                              "A website designer"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pages 60 and 63 highlight that pilots, police officers, and firefighters wear official uniforms and special clothes."
+          },
+          {
+                    "id": 29844,
+                    "question": "If you ask: 'Do you work in an office and plan buildings?', what is the correct answer?",
+                    "options": [
+                              "You're an architect",
+                              "You're a mechanic",
+                              "You're a firefighter",
+                              "You're a bus driver"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 60 and 63 state: 'An architect plans and designs buildings. They work in an office.'"
+          }
+],
+        2985: [
+          {
+                    "id": 29851,
+                    "question": "According to the Eurostar timetable, what time does the first train leave London St Pancras for Paris?",
+                    "options": [
+                              "At 06:55",
+                              "At 08:30",
+                              "At 11:30",
+                              "At 14:00"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 64 states: 'The first train leaves at 06:55.'"
+          },
+          {
+                    "id": 29852,
+                    "question": "If a football match in Paris starts at 3:00 p.m. (15:00), which train arriving at 11:30 is the safest to catch?",
+                    "options": [
+                              "The 06:55 train",
+                              "The 12:55 train",
+                              "The 18:30 train",
+                              "The 20:00 train"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 64 notes that the 06:55 train arrives in Paris at 11:30, well before the 3 p.m. kickoff."
+          },
+          {
+                    "id": 29853,
+                    "question": "How do you express 14:00 in standard 12-hour conversational English?",
+                    "options": [
+                              "Two o'clock in the afternoon (2:00 p.m.)",
+                              "Four o'clock in the morning",
+                              "Ten o'clock at night",
+                              "Midnight"
+                    ],
+                    "correct": 0,
+                    "explanation": "In the 24-hour clock, 14:00 minus 12 equals 2:00 p.m."
+          },
+          {
+                    "id": 29854,
+                    "question": "Which of the following is the most polite phrase to ask for train schedule information at a station?",
+                    "options": [
+                              "'Excuse me, can you help me, please? What time does the next train leave?'",
+                              "'Tell me the train time now!'",
+                              "'Give me a ticket fast!'",
+                              "'Where is the train going today?'"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 64 highlights polite travel communication: 'Excuse me, can you help me, please? What time is the first train to Paris?'"
+          }
+],
+        2986: [
+          {
+                    "id": 29861,
+                    "question": "What is Firas planning to be when he finishes school and goes to university?",
+                    "options": [
+                              "A zoologist",
+                              "A dentist",
+                              "A pilot",
+                              "An architect"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 65 states: 'If he passes, he is going to go to university to study animals. He wants to be a zoologist.'"
+          },
+          {
+                    "id": 29862,
+                    "question": "What kind deed does Halla do when she visits the hospital?",
+                    "options": [
+                              "She takes flowers to patients who have no visitors and talks with them",
+                              "She cleans the hospital operating rooms",
+                              "She drives patients home in an ambulance",
+                              "She cooks meals for doctors"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 65 states: 'Some patients have no visitors. Halla takes flowers to these patients and sits and talks with them.'"
+          },
+          {
+                    "id": 29863,
+                    "question": "What does the word 'patient' mean when used as an adjective (adj)?",
+                    "options": [
+                              "Able to wait for a long time calmly without getting angry",
+                              "A sick person in a hospital bed",
+                              "A machine that takes photographs",
+                              "A difficult examination test"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 65 dictionary entry: 'patient (adj.): able to wait for a long time and stay calm without getting angry.'"
+          },
+          {
+                    "id": 29864,
+                    "question": "Which verb means the opposite of 'to pass an exam'?",
+                    "options": [
+                              "To fail an exam",
+                              "To take an exam",
+                              "To study an exam",
+                              "To write an exam"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 65 Work with Words explains: 'pass an exam' (ينجح) vs 'fail an exam' (يرسب)."
+          }
+],
+        2987: [
+          {
+                    "id": 29871,
+                    "question": "What is Sara's future career goal, and why?",
+                    "options": [
+                              "She wants to be a vet because she loves animals and excels in Biology",
+                              "She wants to be a pilot because she loves flying",
+                              "She wants to be an architect because she likes drawing buildings",
+                              "She wants to be a secretary because she likes typing emails"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 66 notes that Sara is friendly, hard-working, good at Biology and Chemistry, and wants to study veterinary medicine to help animals."
+          },
+          {
+                    "id": 29872,
+                    "question": "What are Adel's strongest school subjects according to his career plan?",
+                    "options": [
+                              "French, English and IT",
+                              "Geography and History",
+                              "Art and Music",
+                              "Woodwork and Physical Education"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 66 highlights that Adel is calm, patient, and excels in French, English, and Information Technology (IT)."
+          },
+          {
+                    "id": 29873,
+                    "question": "Choose the correct preposition: 'Sara is very good ________ Biology.'",
+                    "options": [
+                              "at",
+                              "in",
+                              "on",
+                              "with"
+                    ],
+                    "correct": 0,
+                    "explanation": "We always use the preposition 'at' after good / not good: 'good at Biology'."
+          },
+          {
+                    "id": 29874,
+                    "question": "Which personality adjective means someone who is pleasant, kind, and easy to talk to?",
+                    "options": [
+                              "Friendly",
+                              "Lazy",
+                              "Impatient",
+                              "Noisy"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 66 highlights 'friendly' as a key personality trait for career success."
+          }
+],
+        2988: [
+          {
+                    "id": 29881,
+                    "question": "What does Khalid enjoy crafting in his Woodwork lessons and at home?",
+                    "options": [
+                              "Tables, shelves and cupboards",
+                              "Planes and jet engines",
+                              "Gold medals and trophies",
+                              "Cars and motorbikes"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 67 states: 'I make things at home as well - tables, shelves and cupboards.'"
+          },
+          {
+                    "id": 29882,
+                    "question": "What is Dania's future aspiration when she finishes her Science degree?",
+                    "options": [
+                              "To fly to the Moon in a spacecraft as an astronaut",
+                              "To open a restaurant in London",
+                              "To become a bus driver in the Alps",
+                              "To work as a shop assistant in town"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 67 states: 'When I finish studying, I'm going to fly to the Moon in a spacecraft.'"
+          },
+          {
+                    "id": 29883,
+                    "question": "Which verb form correctly completes the sentence: 'When I ________ school, I am going to study Science.'?",
+                    "options": [
+                              "finish",
+                              "finished",
+                              "will finish",
+                              "am finishing"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 67 grammar rule: We always use the Present Simple tense in the 'when' clause when talking about the future."
+          },
+          {
+                    "id": 29884,
+                    "question": "Why is Dania described as very fit and healthy?",
+                    "options": [
+                              "Because she does a lot of sport",
+                              "Because she sleeps 14 hours a day",
+                              "Because she eats lots of chocolates",
+                              "Because she never walks"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 67 states: 'I'm also very fit and healthy because I do a lot of sport.'"
+          }
+],
+        2989: [
+          {
+                    "id": 29891,
+                    "question": "Which of the following sentences shows a prediction based on clear present evidence?",
+                    "options": [
+                              "'Look at those black clouds! It is going to rain.'",
+                              "'I might travel tomorrow maybe.'",
+                              "'I visited Paris two years ago.'",
+                              "'He often plays football on Sundays.'"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 68 Round Up illustrates predictions with evidence: 'Look at the clouds, it's going to rain.'"
+          },
+          {
+                    "id": 29892,
+                    "question": "What reading skill is defined as finding specific information in texts very quickly?",
+                    "options": [
+                              "Scanning",
+                              "Writing",
+                              "Translating",
+                              "Memorizing"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 68 Round Up states: 'practised scanning - finding information in texts very quickly.'"
+          },
+          {
+                    "id": 29893,
+                    "question": "Choose the correct relative clause pronoun: 'An architect is someone ________ designs buildings.'",
+                    "options": [
+                              "who",
+                              "which",
+                              "where",
+                              "when"
+                    ],
+                    "correct": 0,
+                    "explanation": "We use 'who' for people and professions: 'someone who designs buildings'."
+          },
+          {
+                    "id": 29894,
+                    "question": "Complete the warning: 'You have done no revision. You ________ fail the exam!'",
+                    "options": [
+                              "are going to",
+                              "did",
+                              "were",
+                              "shall"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 68 states: 'You've done no work. You're going to fail the exam.'"
+          }
+],
+        2990: [
+          {
+                    "id": 29901,
+                    "question": "What are the boys travelling to do in the Alps?",
+                    "options": [
+                              "They are all going to go skiing",
+                              "They are going to swim in the sea",
+                              "They are going to buy cars in Paris",
+                              "They are looking for lost treasure"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 69 states: 'What are we doing here anyway, Tom?' - 'We're all going to go skiing,' Tom replied."
+          },
+          {
+                    "id": 29902,
+                    "question": "According to Tom's instructions, which ski route was intended for beginners?",
+                    "options": [
+                              "The blue route",
+                              "The black route",
+                              "The red route",
+                              "The yellow route"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 69 states: 'you're going to go down a blue route. That's the one for beginners.'"
+          },
+          {
+                    "id": 29903,
+                    "question": "What did Tom warn the boys about the black ski routes?",
+                    "options": [
+                              "'Nobody is going to go down a black route; they are the most difficult.'",
+                              "'Black routes are the easiest slopes for children.'",
+                              "'Black routes are painted green in summer.'",
+                              "'Black routes are closed for repairs.'"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 69 states: 'And nobody is going to go down a black route,' said Tom. 'They are the most difficult.'"
+          },
+          {
+                    "id": 29904,
+                    "question": "What was Jad doing in the minibus while they drove along the steep alpine mountains?",
+                    "options": [
+                              "Holding his camera and taking photographs of the mountains",
+                              "Sleeping in the back seat",
+                              "Singing loud pop songs",
+                              "Reading a train timetable"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 69 states: 'Jad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said.'"
+          }
+],
+        2991: [
+          {
+                    "id": 29911,
+                    "question": "Why didn't Jad get off the ski chairlift when Johnny told him to?",
+                    "options": [
+                              "Because he wanted to take just one more photograph",
+                              "Because he fell asleep",
+                              "Because his skis were stuck to the chair",
+                              "Because he wanted to ride back down"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 70 states: 'Yeah, OK,' he replied. 'I just need to take one more photograph.' I got off the lift and Jad was still sitting down.'"
+          },
+          {
+                    "id": 29912,
+                    "question": "What catastrophic mistake did Johnny make at the trail fork signpost?",
+                    "options": [
+                              "He misremembered Tom's advice and thought black routes were easy",
+                              "He broke both of his ski poles",
+                              "He lost his map in the river",
+                              "He took off his skis and walked"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 70 states: 'I think Tom said the black routes are easy,' I said to myself, and I started skiing... down the black route!'"
+          },
+          {
+                    "id": 29913,
+                    "question": "What unexpected event happened when Johnny crossed the FINISH line banner?",
+                    "options": [
+                              "He won the ski race and received a gold medal around his neck",
+                              "He was disqualified for arriving late",
+                              "He was told to restart from the beginning",
+                              "He lost his camera in the trees"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 70 states: 'You won the race, Johnny!... 'Congratulations!' said a man, and he put a gold medal around my neck.'"
+          },
+          {
+                    "id": 29914,
+                    "question": "What did Jad joke that Johnny was going to be when he grows older?",
+                    "options": [
+                              "A professional skier",
+                              "An airline pilot",
+                              "A fire station chief",
+                              "A bus driver in Paris"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page 70 concludes with Jad's words: 'I think I know what you're going to be when you're older, Johnny... A professional skier!'"
+          }
+],
         // الوحدة 5: تلقي وإرسال المعلومات (Unit 5: Getting & Sending Info)
         2961: [
           {
@@ -8335,7 +8992,11 @@
       const container = document.getElementById('curriculumsSelectorBar');
       if (!container) return;
 
-      const currs = appData.curriculums || [];
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
       let html = '';
 
       currs.forEach(c => {
@@ -8371,7 +9032,11 @@
       const container = document.getElementById('activeSubjectShowcase');
       if (!container) return;
 
-      const currs = appData.curriculums || [];
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
       const curr = currs.find(c => c.id === appData.currentCurriculumId) || currs[0];
       if (!curr) {
         container.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 1.5rem;">لا يوجد منهج محدد حالياً.</div>';
