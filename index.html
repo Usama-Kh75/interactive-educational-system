@@ -572,24 +572,86 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
       display: flex;
       flex-direction: column;
+      cursor: pointer;
+      position: relative;
     }
 
     .atmosphere-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(99, 102, 241, 0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 32px -8px rgba(15, 23, 42, 0.18), 0 0 0 2px var(--primary-light);
+      border-color: #a5b4fc;
+    }
+
+    .atmosphere-card:hover .atmosphere-img {
+      transform: scale(1.07);
+    }
+
+    .atmosphere-card:hover .atmosphere-action-btn {
+      color: #312e81;
+      transform: translateX(-4px);
     }
 
     .atmosphere-visual {
-      height: 185px;
+      height: 195px;
       position: relative;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #0f172a;
       border-bottom: 1px solid var(--slate-100);
+    }
+
+    .atmosphere-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .atmosphere-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.55) 100%);
+      pointer-events: none;
+    }
+
+    .atmosphere-motto-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 0.32rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+      z-index: 2;
+      letter-spacing: 0.02em;
+    }
+
+    .atmosphere-action-btn {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--slate-100);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.84rem;
+      transition: transform 0.25s ease, color 0.25s ease;
     }
 
     .atmosphere-body {
@@ -2234,7 +2296,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.3.1 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.3.2 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2342,64 +2404,14 @@
         </div>
 
         <div class="study-atmosphere-grid">
-          <!-- بطاقة 1: قاعة الصف الدراسي التفاعلي -->
-          <div class="atmosphere-card">
+          <!-- بطاقة 1: قاعة الصف الدراسي والمحاضرات التفاعلية -->
+          <div class="atmosphere-card" onclick="openSubjectTab(3)" title="انقر للدخول إلى قاعة الصف والمذاكرة التفاعلية">
             <div class="atmosphere-visual">
-              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-  <defs>
-    <linearGradient id="bgClass" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1b4b" />
-      <stop offset="60%" stop-color="#312e81" />
-      <stop offset="100%" stop-color="#4338ca" />
-    </linearGradient>
-    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e293b" />
-    </linearGradient>
-  </defs>
-  <rect width="400" height="185" fill="url(#bgClass)"/>
-  <line x1="0" y1="145" x2="400" y2="145" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
-  <line x1="50" y1="145" x2="0" y2="185" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-  <line x1="350" y1="145" x2="400" y2="185" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
-  <rect x="75" y="15" width="250" height="110" rx="10" fill="url(#boardGrad)" stroke="#4f46e5" stroke-width="2.5"/>
-  <rect x="85" y="23" width="230" height="94" rx="6" fill="#090d16"/>
-  <path d="M 105 45 Q 145 35 185 45 T 265 45" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3"/>
-  <circle cx="105" cy="45" r="4" fill="#38bdf8"/>
-  <circle cx="185" cy="45" r="4" fill="#818cf8"/>
-  <circle cx="265" cy="45" r="4" fill="#34d399"/>
-  <line x1="185" y1="49" x2="150" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-  <line x1="185" y1="49" x2="220" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-  <rect x="130" y="68" width="40" height="16" rx="4" fill="#4338ca"/>
-  <text x="150" y="80" fill="#e0e7ff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">الفصل</text>
-  <rect x="200" y="68" width="40" height="16" rx="4" fill="#059669"/>
-  <text x="220" y="80" fill="#d1fae5" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">الدرس</text>
-  <text x="110" y="103" fill="#fbbf24" font-size="9" font-family="monospace">Subject + Verb + Obj</text>
-  <path d="M 235 101 Q 245 93 255 101 T 275 101" fill="none" stroke="#f472b6" stroke-width="2"/>
-  <polygon points="175,125 225,125 220,155 180,155" fill="#1e293b" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-  <rect x="185" y="120" width="30" height="7" rx="2" fill="#6366f1"/>
-  <polygon points="25,150 115,150 100,185 10,185" fill="#1e1b4b" stroke="#4338ca" stroke-width="1.5"/>
-  <rect x="40" y="142" width="28" height="16" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
-  <polygon points="75,145 95,142 98,148 78,151" fill="#38bdf8"/>
-  <circle cx="65" cy="170" r="14" fill="#475569" opacity="0.8"/>
-  <g transform="translate(60, 108)">
-    <rect width="32" height="18" rx="6" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
-    <polygon points="12,18 16,23 20,18" fill="#ffffff"/>
-    <text x="16" y="13" font-size="11" text-anchor="middle">💡</text>
-  </g>
-  <polygon points="285,150 375,150 390,185 300,185" fill="#1e1b4b" stroke="#4338ca" stroke-width="1.5"/>
-  <rect x="330" y="142" width="28" height="16" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
-  <polygon points="305,145 325,142 328,148 308,151" fill="#34d399"/>
-  <circle cx="335" cy="170" r="14" fill="#475569" opacity="0.8"/>
-  <g transform="translate(308, 108)">
-    <rect width="32" height="18" rx="6" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
-    <polygon points="12,18 16,23 20,18" fill="#ffffff"/>
-    <text x="16" y="13" font-size="11" text-anchor="middle">✍️</text>
-  </g>
-  <circle cx="50" cy="35" r="2" fill="#fbbf24" opacity="0.8"/>
-  <circle cx="345" cy="40" r="2.5" fill="#a78bfa" opacity="0.8"/>
-  <circle cx="360" cy="80" r="1.5" fill="#38bdf8" opacity="0.8"/>
-  <circle cx="35" cy="90" r="1.5" fill="#34d399" opacity="0.8"/>
-</svg>
+              <img src="./book_images/atmosphere_classroom.jpeg" alt="قاعة الصف الدراسي التفاعلي - طلاب العلم نور" class="atmosphere-img" loading="lazy">
+              <div class="atmosphere-overlay"></div>
+              <div class="atmosphere-motto-badge">
+                <span>🌟</span> العِلْمُ نُـورٌ • قاعة الدرس الذكية
+              </div>
             </div>
             <div class="atmosphere-body">
               <div>
@@ -2409,95 +2421,28 @@
                   تفكيك الدروس المنهجية إلى وحدات معرفية مركزة ومترابطة، مدعومة بالشروحات المرئية والبطاقات المفاهيمية التي تسهل استيعاب المفاهيم والموضوعات.
                 </p>
               </div>
-              <div class="atmosphere-tags">
-                <span class="atmosphere-tag">✨ تقسيم منهجي متسلسل</span>
-                <span class="atmosphere-tag">👥 تفاعل دراسي حي</span>
-                <span class="atmosphere-tag">💡 ربط النظري بالتطبيقي</span>
+              <div>
+                <div class="atmosphere-tags">
+                  <span class="atmosphere-tag">✨ تقسيم منهجي متسلسل</span>
+                  <span class="atmosphere-tag">👥 تفاعل دراسي حي</span>
+                  <span class="atmosphere-tag">💡 ربط النظري بالتطبيقي</span>
+                </div>
+                <div class="atmosphere-action-btn">
+                  <span>📖 دخول قاعة الصف والمذاكرة</span>
+                  <span>⮞</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- بطاقة 2: المكتبة الرقمية والمطالعة المفتوحة -->
-          <div class="atmosphere-card">
+          <div class="atmosphere-card" onclick="openSubjectTab(3); setTimeout(scrollToStudyContent, 250);" title="انقر لفتح صفحات الكتاب المدرسي والمطالعة الصوتية">
             <div class="atmosphere-visual">
-              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-  <defs>
-    <linearGradient id="bgLib" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#064e3b" />
-      <stop offset="60%" stop-color="#065f46" />
-      <stop offset="100%" stop-color="#047857" />
-    </linearGradient>
-    <radialGradient id="lampGlow" cx="20%" cy="15%" r="70%">
-      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.35"/>
-      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="pageLeft" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#e2e8f0"/>
-    </linearGradient>
-    <linearGradient id="pageRight" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#cbd5e1"/>
-      <stop offset="15%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#ffffff"/>
-    </linearGradient>
-  </defs>
-  <rect width="400" height="185" fill="url(#bgLib)"/>
-  <rect width="400" height="185" fill="url(#lampGlow)"/>
-  <polygon points="0,135 400,135 400,185 0,185" fill="#022c22"/>
-  <line x1="0" y1="135" x2="400" y2="135" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
-  <path d="M 50 145 L 60 70 L 95 60" fill="none" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="85,50 115,40 120,70 90,75" fill="#ca8a04"/>
-  <circle cx="102" cy="62" r="5" fill="#fef08a"/>
-  <g transform="translate(130, 48)">
-    <ellipse cx="75" cy="88" rx="85" ry="12" fill="rgba(0,0,0,0.4)"/>
-    <path d="M 5 15 Q 40 5 75 15 L 75 80 Q 40 70 5 80 Z" fill="url(#pageLeft)" stroke="#94a3b8" stroke-width="1"/>
-    <path d="M 75 15 Q 110 5 145 15 L 145 80 Q 110 70 75 80 Z" fill="url(#pageRight)" stroke="#94a3b8" stroke-width="1"/>
-    <line x1="75" y1="15" x2="75" y2="80" stroke="#64748b" stroke-width="2.5"/>
-    <line x1="16" y1="28" x2="65" y2="28" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
-    <line x1="16" y1="38" x2="60" y2="38" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="16" y1="48" x2="68" y2="48" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
-    <rect x="14" y="55" width="54" height="7" fill="#fde047" opacity="0.6" rx="2"/>
-    <line x1="16" y1="58" x2="66" y2="58" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="16" y1="68" x2="52" y2="68" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="85" y1="28" x2="135" y2="28" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
-    <rect x="85" y="34" width="50" height="20" rx="3" fill="#e0e7ff" stroke="#818cf8" stroke-width="0.75"/>
-    <line x1="89" y1="42" x2="128" y2="42" stroke="#4338ca" stroke-width="1.5"/>
-    <line x1="89" y1="48" x2="120" y2="48" stroke="#6366f1" stroke-width="1.5"/>
-    <line x1="85" y1="60" x2="135" y2="60" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="85" y1="69" x2="125" y2="69" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 75 16 Q 80 40 70 88 L 65 92 L 67 85 Z" fill="#ef4444"/>
-  </g>
-  <g transform="translate(305, 55)">
-    <path d="M 15 45 C 15 15, 65 15, 65 45" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <rect x="8" y="42" width="14" height="24" rx="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
-    <rect x="58" y="42" width="14" height="24" rx="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
-    <path d="M 0 54 Q -6 50 -10 54" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-    <path d="M -2 46 Q -10 40 -16 46" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-    <path d="M 78 54 Q 84 50 88 54" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-    <path d="M 80 46 Q 88 40 94 46" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-  </g>
-  <g transform="translate(295, 120)">
-    <rect width="70" height="42" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-    <rect x="5" y="5" width="60" height="32" rx="2" fill="#1e293b"/>
-    <rect x="10" y="18" width="4" height="10" fill="#38bdf8" rx="1"/>
-    <rect x="16" y="14" width="4" height="15" fill="#34d399" rx="1"/>
-    <rect x="22" y="10" width="4" height="22" fill="#fbbf24" rx="1"/>
-    <rect x="28" y="16" width="4" height="12" fill="#34d399" rx="1"/>
-    <rect x="34" y="12" width="4" height="18" fill="#38bdf8" rx="1"/>
-    <rect x="40" y="19" width="4" height="8" fill="#a78bfa" rx="1"/>
-    <polygon points="54,17 62,22 54,27" fill="#ffffff"/>
-  </g>
-  <g transform="translate(60, 135)">
-    <ellipse cx="25" cy="18" rx="12" ry="6" fill="#f1f5f9"/>
-    <rect x="13" y="18" width="24" height="20" rx="3" fill="#e2e8f0"/>
-    <ellipse cx="25" cy="38" rx="12" ry="5" fill="#cbd5e1"/>
-    <path d="M 36 22 Q 44 26 36 32" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
-    <ellipse cx="25" cy="18" rx="10" ry="4" fill="#78350f"/>
-    <path d="M 23 12 Q 21 6 25 2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-    <path d="M 27 12 Q 29 6 27 2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-  </g>
-</svg>
+              <img src="./book_images/atmosphere_library.jpeg" alt="المكتبة الرقمية والمطالعة المفتوحة مع الصوت البشري الفصيح" class="atmosphere-img" loading="lazy">
+              <div class="atmosphere-overlay"></div>
+              <div class="atmosphere-motto-badge">
+                <span>🎧</span> القراءة حياة • استمع واقرأ
+              </div>
             </div>
             <div class="atmosphere-body">
               <div>
@@ -2507,82 +2452,28 @@
                   استعراض صفحات الكتاب المعتمد بجودة عالية كما طبعتها وزارة التربية، مع محرك قراءة صوتي بشري فائق الدقة يظلل الكلمات لحظة بلحظة لترسيخ النطق والمفردات.
                 </p>
               </div>
-              <div class="atmosphere-tags">
-                <span class="atmosphere-tag">📘 صفحات أصلية 100%</span>
-                <span class="atmosphere-tag">🎧 تتبع الكلمات الصوتي المباشر</span>
-                <span class="atmosphere-tag">🔍 نافذة التكبير (Lightbox)</span>
+              <div>
+                <div class="atmosphere-tags">
+                  <span class="atmosphere-tag">📘 صفحات أصلية 100%</span>
+                  <span class="atmosphere-tag">🎧 تتبع الكلمات الصوتي المباشر</span>
+                  <span class="atmosphere-tag">🔍 نافذة التكبير (Lightbox)</span>
+                </div>
+                <div class="atmosphere-action-btn">
+                  <span>📚 فتح الكتاب والمطالعة الصوتية</span>
+                  <span>⮞</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- بطاقة 3: قاعة الامتحانات والتقييم الذاتي -->
-          <div class="atmosphere-card">
+          <div class="atmosphere-card" onclick="openPastExamsTab('midyear')" title="انقر لبدء الاختبار والتدريب على النماذج الوزارية">
             <div class="atmosphere-visual">
-              <svg viewBox="0 0 400 185" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-  <defs>
-    <linearGradient id="bgExam" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#78350f" />
-      <stop offset="60%" stop-color="#92400e" />
-      <stop offset="100%" stop-color="#b45309" />
-    </linearGradient>
-    <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f8fafc" />
-    </linearGradient>
-  </defs>
-  <rect width="400" height="185" fill="url(#bgExam)"/>
-  <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
-  <polygon points="0,140 400,140 400,185 0,185" fill="#451a03"/>
-  <g transform="translate(110, 16)">
-    <rect x="4" y="6" width="180" height="145" rx="6" fill="rgba(0,0,0,0.35)"/>
-    <rect x="0" y="0" width="180" height="145" rx="6" fill="url(#paperGrad)" stroke="#e2e8f0" stroke-width="1"/>
-    <rect x="18" y="10" width="144" height="18" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="0.8"/>
-    <text x="90" y="22" font-size="8" font-family="sans-serif" font-weight="900" fill="#92400e" text-anchor="middle">الامتحان الوزاري المعتمد • النموذج الموزون</text>
-    <text x="20" y="42" font-size="8" font-weight="bold" fill="#1e293b">Q1: Reading Comprehension</text>
-    <circle cx="160" cy="40" r="6" fill="#dcfce7"/>
-    <text x="160" y="43" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
-    <line x1="20" y1="48" x2="145" y2="48" stroke="#cbd5e1" stroke-width="1.5"/>
-    <line x1="20" y1="54" x2="130" y2="54" stroke="#e2e8f0" stroke-width="1.5"/>
-    <text x="20" y="70" font-size="8" font-weight="bold" fill="#1e293b">Q2: Grammar &amp; Structure</text>
-    <circle cx="160" cy="68" r="6" fill="#dcfce7"/>
-    <text x="160" y="71" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
-    <line x1="20" y1="76" x2="140" y2="76" stroke="#cbd5e1" stroke-width="1.5"/>
-    <line x1="20" y1="82" x2="115" y2="82" stroke="#e2e8f0" stroke-width="1.5"/>
-    <text x="20" y="98" font-size="8" font-weight="bold" fill="#1e293b">Q3: Vocabulary &amp; Spelling</text>
-    <circle cx="160" cy="96" r="6" fill="#dcfce7"/>
-    <text x="160" y="99" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="bold">✓</text>
-    <line x1="20" y1="104" x2="135" y2="104" stroke="#cbd5e1" stroke-width="1.5"/>
-    <g transform="translate(130, 105)">
-      <circle cx="18" cy="18" r="18" fill="#dc2626"/>
-      <circle cx="18" cy="18" r="15" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,2"/>
-      <text x="18" y="17" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">A+</text>
-      <text x="18" y="27" font-size="7" font-weight="bold" fill="#fef08a" text-anchor="middle">100%</text>
-    </g>
-  </g>
-  <g transform="translate(35, 60)">
-    <circle cx="28" cy="36" r="26" fill="rgba(0,0,0,0.3)"/>
-    <rect x="24" y="2" width="8" height="8" rx="2" fill="#cbd5e1"/>
-    <circle cx="28" cy="34" r="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-    <circle cx="28" cy="34" r="20" fill="#f8fafc" stroke="#94a3b8" stroke-width="0.8"/>
-    <line x1="28" y1="16" x2="28" y2="20" stroke="#0f172a" stroke-width="1.5"/>
-    <line x1="28" y1="52" x2="28" y2="48" stroke="#0f172a" stroke-width="1.5"/>
-    <line x1="10" y1="34" x2="14" y2="34" stroke="#0f172a" stroke-width="1.5"/>
-    <line x1="46" y1="34" x2="42" y2="34" stroke="#0f172a" stroke-width="1.5"/>
-    <line x1="28" y1="34" x2="28" y2="22" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
-    <line x1="28" y1="34" x2="38" y2="38" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="28" cy="34" r="3" fill="#dc2626"/>
-    <text x="28" y="70" font-size="8" font-weight="bold" fill="#fef3c7" text-anchor="middle">مؤقت الامتحان</text>
-  </g>
-  <g transform="translate(315, 60)">
-    <rect width="65" height="70" rx="6" fill="#1e293b" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-    <text x="32" y="14" font-size="7.5" font-weight="bold" fill="#93c5fd" text-anchor="middle">مؤشر الإتقان</text>
-    <rect x="10" y="42" width="8" height="20" rx="2" fill="#60a5fa"/>
-    <rect x="22" y="32" width="8" height="30" rx="2" fill="#38bdf8"/>
-    <rect x="34" y="24" width="8" height="38" rx="2" fill="#34d399"/>
-    <rect x="46" y="18" width="8" height="44" rx="2" fill="#fbbf24"/>
-    <path d="M 14 42 Q 26 30 38 22 T 50 17" fill="none" stroke="#f43f5e" stroke-width="2"/>
-  </g>
-</svg>
+              <img src="./book_images/atmosphere_exam.jpeg" alt="قاعة الامتحانات والتقييم الذاتي - نماذج وزارية معتمدة" class="atmosphere-img" loading="lazy">
+              <div class="atmosphere-overlay"></div>
+              <div class="atmosphere-motto-badge">
+                <span>📝</span> ثمرة التعلم • اختبار الكفايات
+              </div>
             </div>
             <div class="atmosphere-body">
               <div>
@@ -2592,10 +2483,16 @@
                   تدريب مكثف على الأسئلة الوزارية والشهرية السابقة وحلولها النموذجية، مع إمكانية طباعة الورقة الامتحانية بيضاء خالية من الحلول للاختبار المنزلي الواقعي.
                 </p>
               </div>
-              <div class="atmosphere-tags">
-                <span class="atmosphere-tag">📑 نماذج امتحانية حقيقية</span>
-                <span class="atmosphere-tag">⏱️ مؤقت تدريبي للاختبار</span>
-                <span class="atmosphere-tag">🖨️ طباعة الورقة بيضاء</span>
+              <div>
+                <div class="atmosphere-tags">
+                  <span class="atmosphere-tag">📑 نماذج امتحانية حقيقية</span>
+                  <span class="atmosphere-tag">⏱️ مؤقت تدريبي للاختبار</span>
+                  <span class="atmosphere-tag">🖨️ طباعة الورقة بيضاء</span>
+                </div>
+                <div class="atmosphere-action-btn">
+                  <span>📝 بدء الاختبار والتقييم الذاتي</span>
+                  <span>⮞</span>
+                </div>
               </div>
             </div>
           </div>
@@ -3476,7 +3373,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.3.1؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.3.2؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3530,9 +3427,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '2.8.6';
-    const CURRENT_VERSION_LABEL = 'v3.3.1';
-    const SYSTEM_VERSION = 'v3.3.1';
+    const CURRENT_VERSION = '3.3.2';
+    const CURRENT_VERSION_LABEL = 'v3.3.2';
+    const SYSTEM_VERSION = 'v3.3.2';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
