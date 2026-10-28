@@ -18,6 +18,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 
   <script src="curriculum_data.js"></script>
+  <script src="curriculum_data_arabic.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -4531,7 +4532,17 @@
       });
     }
 
-    // تنقية وضمان وجود منهج اللغة الإنجليزية المعتمد المكتمل وتوحيده وحذف وثائق المواصفات والتكرارات
+    // تنقية وضمان وجود المناهج المعتمدة (الإنجليزية، والعربية بجزأيها الأول والثاني)
+        // الدالة المساعدة لاسترجاع فصول المنهج النشط بذكاء ودقة
+    function getCurriculumChapters(currOrId) {
+      const id = typeof currOrId === 'object' ? (currOrId ? currOrId.id : null) : currOrId;
+      const curr = (typeof currOrId === 'object' && currOrId) ? currOrId : (appData.curriculums || []).find(c => c.id === id);
+      if (curr && Array.isArray(curr.chapters) && curr.chapters.length > 0) return curr.chapters;
+      if (id === 4) return window.ARABIC_CURRICULUM_P1 || [];
+      if (id === 5) return window.ARABIC_CURRICULUM_P2 || [];
+      return window.CURRICULUM_DATA || [];
+    }
+
     function ensureDefaultEnglishCurriculum() {
       const embeddedChapters = window.CURRICULUM_DATA || [];
       const englishCurr = {
@@ -4540,11 +4551,36 @@
         subject: 'English',
         grade: 'الثاني متوسط',
         status: 'approved',
+        image_folder: '',
         description: 'المنهج الرسمي المعتمد لوزارة التربية متضمناً كافة الوحدات والقصص والقواعد والنصوص مع القراءة الصوتية.',
         chapters: embeddedChapters
       };
 
-      // 1. تنقية المناهج واستبعاد أي وثائق مواصفات داخلية للنظام (مثل دليل وثيقة متطلبات النظام أو هندسة النظم)
+      const arabicP1Chapters = window.ARABIC_CURRICULUM_P1 || [];
+      const arabicP1Curr = {
+        id: 4,
+        name: 'اللغة العربية (الجزء الأول) - الثاني متوسط',
+        subject: 'اللغة العربية',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'arabic_p1',
+        description: 'المنهج الرسمي المعتمد لكتاب اللغة العربية (الجزء الأول): المطالعة والنصوص القرآنية والأدبية، قواعد اللغة العربية، الإملاء، والخط والتعبير مع القراءة الصوتية وعارض الصفحات الأصلية.',
+        chapters: arabicP1Chapters
+      };
+
+      const arabicP2Chapters = window.ARABIC_CURRICULUM_P2 || [];
+      const arabicP2Curr = {
+        id: 5,
+        name: 'اللغة العربية (الجزء الثاني) - الثاني متوسط',
+        subject: 'اللغة العربية',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'arabic_p2',
+        description: 'المنهج الرسمي المعتمد لكتاب اللغة العربية (الجزء الثاني): نصوص الفداء والإحسان والربيع وإرادة الحياة، وقواعد النداء والاستفهام والمضارع والجموع والميزان الصرفي.',
+        chapters: arabicP2Chapters
+      };
+
+      // 1. تنقية المناهج واستبعاد أي وثائق مواصفات داخلية للنظام
       if (Array.isArray(appData.curriculums)) {
         appData.curriculums = appData.curriculums.filter(c => {
           if (!c) return false;
@@ -4559,7 +4595,7 @@
         appData.curriculums = [];
       }
 
-      // 2. توحيد منهج اللغة الإنجليزية وحذف أي تكرار له
+      // 2. تحديث وتثبيت منهج اللغة الإنجليزية
       const existingEngIndex = appData.curriculums.findIndex(c => 
         c.id === 3 || 
         (c.name && c.name.includes('الانجليزية')) || 
@@ -4573,19 +4609,48 @@
           id: 3,
           chapters: (embeddedChapters && embeddedChapters.length > 0) ? embeddedChapters : (appData.curriculums[existingEngIndex].chapters || [])
         };
-        // تنقية أي تكرار إضافي للغة الإنجليزية إن وجد
-        appData.curriculums = appData.curriculums.filter((c, idx) => {
-          if (idx === existingEngIndex) return true;
-          const isEng = (c.id === 3) || 
-                        (c.name && c.name.includes('الانجليزية')) || 
-                        (c.subject && c.subject.toLowerCase().includes('eng'));
-          return !isEng;
-        });
       } else {
-        appData.curriculums.unshift(englishCurr);
+        appData.curriculums.push(englishCurr);
       }
 
-      appData.currentCurriculumId = 3;
+      // 3. تحديث وتثبيت منهج اللغة العربية (الجزء الأول)
+      const existingArP1Index = appData.curriculums.findIndex(c => 
+        c.id === 4 || 
+        (c.name && c.name.includes('الجزء الأول'))
+      );
+
+      if (existingArP1Index >= 0) {
+        appData.curriculums[existingArP1Index] = {
+          ...appData.curriculums[existingArP1Index],
+          ...arabicP1Curr,
+          id: 4,
+          chapters: (arabicP1Chapters && arabicP1Chapters.length > 0) ? arabicP1Chapters : (appData.curriculums[existingArP1Index].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(arabicP1Curr);
+      }
+
+      // 4. تحديث وتثبيت منهج اللغة العربية (الجزء الثاني)
+      const existingArP2Index = appData.curriculums.findIndex(c => 
+        c.id === 5 || 
+        (c.name && c.name.includes('الجزء الثاني'))
+      );
+
+      if (existingArP2Index >= 0) {
+        appData.curriculums[existingArP2Index] = {
+          ...appData.curriculums[existingArP2Index],
+          ...arabicP2Curr,
+          id: 5,
+          chapters: (arabicP2Chapters && arabicP2Chapters.length > 0) ? arabicP2Chapters : (appData.curriculums[existingArP2Index].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(arabicP2Curr);
+      }
+
+      // ضمان اختيار منهج صالح
+      if (!appData.currentCurriculumId || ![3, 4, 5].includes(appData.currentCurriculumId)) {
+        appData.currentCurriculumId = 3;
+      }
       saveData();
     }
 
@@ -4685,16 +4750,20 @@
       document.getElementById('statCurriculums').innerText = currs.length || 1;
       
       const curr = currs.find(c => c.id === appData.currentCurriculumId) || currs[0];
-      const chaps = (curr && curr.chapters) ? curr.chapters : (window.CURRICULUM_DATA || []);
+      const chaps = getCurriculumChapters(curr);
       
       let lessCount = 0;
       chaps.forEach(ch => {
         lessCount += (ch.lessons || []).length;
       });
 
-      document.getElementById('statChapters').innerText = chaps.length || 10;
-      document.getElementById('statLessons').innerText = lessCount || 53;
-      document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 25) + ' قاعدة ومفهوماً';
+      document.getElementById('statChapters').innerText = chaps.length || (curr && (curr.id === 4 || curr.id === 5) ? 10 : 8);
+      document.getElementById('statLessons').innerText = lessCount || (curr && (curr.id === 4 || curr.id === 5) ? 40 : 76);
+      if (curr && (curr.id === 4 || curr.id === 5)) {
+        document.getElementById('statGrammar').innerText = (window.ARABIC_GRAMMAR_RULES ? window.ARABIC_GRAMMAR_RULES.length : 18) + ' قاعدة نحوية وإملائية';
+      } else {
+        document.getElementById('statGrammar').innerText = (window.GRAMMAR_RULES ? window.GRAMMAR_RULES.length : 43) + ' قاعدة لغوية';
+      }
 
       renderCurriculumsSelectorBar();
       renderActiveSubjectShowcase();
@@ -4716,6 +4785,8 @@
         const isEnglish = (curr.id === 3) || 
                           (curr.subject && curr.subject.toLowerCase().includes('eng')) || 
                           (curr.name && curr.name.includes('الانجليزية'));
+        const isArabicP1 = (curr.id === 4) || (curr.name && curr.name.includes('الجزء الأول'));
+        const isArabicP2 = (curr.id === 5) || (curr.name && curr.name.includes('الجزء الثاني'));
 
         const div = document.createElement('div');
         div.className = 'card curr-card';
@@ -4756,6 +4827,82 @@
                     📝 نماذج الامتحانات والأسئلة
                   </button>
                   <button class="btn btn-secondary" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    💡 بنك القواعد النحوية
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (isArabicP1) {
+          div.innerHTML = `
+            <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); flex-wrap: wrap;">
+              <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(5,150,105,0.22), 0 0 0 1px rgba(0,0,0,0.06); background: #064e3b; cursor: pointer; transition: transform 0.3s ease;" onclick="openSubjectTab(${curr.id})" title="انقر للدخول إلى قاعة المذاكرة والدروس">
+                <img src="./book_images/arabic_p1/page_1.jpeg" alt="${curr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
+              </div>
+              <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span class="curr-badge" style="background: #ecfdf5; color: #065f46; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">كتاب اللغة العربية - الجزء الأول</span>
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • مكتمل 100%</span>
+                    <span style="background: var(--slate-100); color: var(--slate-700); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: الثاني متوسط</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.4rem; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📙</span>
+                    <span>${curr.name}</span>
+                  </h3>
+                  <p style="font-size: 0.86rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 0.85rem;">
+                    منهاج تفاعلي متكامل لكتاب اللغة العربية (الجزء الأول): يشمل المطالعة والنصوص القرآنية والأدبية، قواعد اللغة العربية، الإملاء والخط، والتعبير الشفهي والتحريري، مع القراءة الصوتية الفصيحة وبنك القواعد النحوية الشامل وعارض الصفحات الأصلية بدقة عالية.
+                  </p>
+                  <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📚 10 وحدات و 40 درساً</span>
+                    <span style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">💡 9 قواعد نحوية وصرفية</span>
+                    <span style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">🎙️ قراءة صوتية باللغة العربية الفصحى</span>
+                  </div>
+                </div>
+                
+                <div style="display: flex; gap: 0.6rem; border-top: 1px solid var(--slate-100); padding-top: 0.85rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="font-weight: 800; background: linear-gradient(135deg, #059669, #10b981); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${curr.id}); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    💡 بنك القواعد النحوية
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (isArabicP2) {
+          div.innerHTML = `
+            <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); flex-wrap: wrap;">
+              <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(5,150,105,0.22), 0 0 0 1px rgba(0,0,0,0.06); background: #064e3b; cursor: pointer; transition: transform 0.3s ease;" onclick="openSubjectTab(${curr.id})" title="انقر للدخول إلى قاعة المذاكرة والدروس">
+                <img src="./book_images/arabic_p2/page_1.jpeg" alt="${curr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
+              </div>
+              <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span class="curr-badge" style="background: #ecfdf5; color: #065f46; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">كتاب اللغة العربية - الجزء الثاني</span>
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • مكتمل 100%</span>
+                    <span style="background: var(--slate-100); color: var(--slate-700); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: الثاني متوسط</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.4rem; color: var(--slate-900); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📗</span>
+                    <span>${curr.name}</span>
+                  </h3>
+                  <p style="font-size: 0.86rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 0.85rem;">
+                    منهاج تفاعلي متكامل لكتاب اللغة العربية (الجزء الثاني): يشمل نصوص الفداء والإحسان والربيع وإرادة الحياة، وقواعد النداء والاستفهام والمضارع وجموع المذكر والمؤنث والتكسير والأسماء والميزان الصرفي، مع القراءة الصوتية الفصيحة.
+                  </p>
+                  <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">📚 10 وحدات و 40 درساً</span>
+                    <span style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">💡 9 قواعد نحوية وصرفية</span>
+                    <span style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800;">🎙️ قراءة صوتية باللغة العربية الفصحى</span>
+                  </div>
+                </div>
+                
+                <div style="display: flex; gap: 0.6rem; border-top: 1px solid var(--slate-100); padding-top: 0.85rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="font-weight: 800; background: linear-gradient(135deg, #047857, #059669); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(4, 120, 87, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${curr.id}); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
                     💡 بنك القواعد النحوية
                   </button>
                 </div>
@@ -4818,7 +4965,7 @@
       const upcoming = [
         { title: 'الرياضيات', icon: '📐', grade: 'الصف الثاني متوسط', status: 'المقرر القادم • قيد الإعداد والبرمجة' },
         { title: 'العلوم العامة', icon: '🔬', grade: 'الصف الثاني متوسط', status: 'قيد الإعداد والبرمجة' },
-        { title: 'اللغة العربية', icon: '📙', grade: 'الصف الثاني متوسط', status: 'ضمن خطة التوسع الأكاديمي' }
+        { title: 'التربية الإسلامية', icon: '🕌', grade: 'الصف الثاني متوسط', status: 'ضمن خطة التوسع الأكاديمي' }
       ];
 
       const upcomingHeader = document.createElement('div');
@@ -4911,8 +5058,7 @@
 
       // إذا لم يتصل بالخادم، استخدم المنهج المدمج محلياً
       if (!chapters || chapters.length === 0) {
-        const curr = (appData.curriculums || []).find(c => c.id === currId);
-        chapters = (curr && curr.chapters && curr.chapters.length > 0) ? curr.chapters : (window.CURRICULUM_DATA || []);
+        chapters = getCurriculumChapters(currId);
       }
 
       treeContainer.innerHTML = '';
@@ -5113,46 +5259,33 @@
       const img = document.getElementById('bookPageModalImg');
       const title = document.getElementById('bookPageModalTitle');
 
-      title.innerText = `📖 صفحة الكتاب المدرسي - صفحة (${pageNum}) - ${lessonTitle || ''}`;
-      img.src = `book_images/page_${pageNum}.jpeg`;
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isP1 = curr.id === 4 || curr.image_folder === 'arabic_p1';
+      const isP2 = curr.id === 5 || curr.image_folder === 'arabic_p2';
+
+      let folder = '';
+      let bookName = 'كتاب اللغة الإنجليزية (English for Iraq)';
+      if (isP1) { folder = 'arabic_p1/'; bookName = 'كتاب اللغة العربية (الجزء الأول)'; }
+      else if (isP2) { folder = 'arabic_p2/'; bookName = 'كتاب اللغة العربية (الجزء الثاني)'; }
+
+      title.innerText = `📖 ${bookName} - صفحة (${pageNum}) - ${lessonTitle || ''}`;
+      img.src = `book_images/${folder}page_${pageNum}.jpeg`;
       resetBookPageZoom();
 
-      // جمع نص الصفحة للاستماع مع دعم البحث التلقائي
+      // جمع نص الصفحة للاستماع مع دعم البحث التلقائي في المنهج النشط
       let pageText = '';
-      if (window.CURRICULUM_DATA) {
-        for (const curr of window.CURRICULUM_DATA) {
-          for (const ch of (curr.chapters || curr.lessons || [])) {
-            const lessons = ch.lessons || [ch];
-            for (const l of lessons) {
-              if (l.title === lessonTitle && l.chunks) {
-                const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
-                if (pageChunks.length > 0) {
-                  pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
-                  break;
-                }
-              }
+      const activeChapters = getCurriculumChapters(curr);
+      for (const ch of activeChapters) {
+        for (const l of (ch.lessons || [ch])) {
+          if (l.chunks) {
+            const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
+            if (pageChunks.length > 0) {
+              pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
+              break;
             }
           }
         }
-        // خطة بديلة: في حال لم يتطابق عنوان الدرس بدقة، ابحث عن الصفحة في كل المقاطع
-        if (!pageText) {
-          for (const curr of window.CURRICULUM_DATA) {
-            for (const ch of (curr.chapters || curr.lessons || [])) {
-              const lessons = ch.lessons || [ch];
-              for (const l of lessons) {
-                if (l.chunks) {
-                  const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
-                  if (pageChunks.length > 0) {
-                    pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
-                    break;
-                  }
-                }
-              }
-              if (pageText) break;
-            }
-            if (pageText) break;
-          }
-        }
+        if (pageText) break;
       }
       currentPageAudioText = pageText;
 
@@ -5196,7 +5329,9 @@
       } else {
         if (currentPageAudioText && currentPageAudioText.trim()) {
           audioPlayer.stop();
-          audioPlayer.speakSmart(currentPageAudioText, 'en', () => {
+          const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId);
+          const isEn = curr ? (curr.id === 3 || curr.subject === 'English') : /[a-zA-Z]{3,}/.test(currentPageAudioText);
+          audioPlayer.speakSmart(currentPageAudioText, isEn ? 'en' : 'ar', () => {
             updateBookPageAudioUI(false);
           });
           updateBookPageAudioUI(true);
@@ -5300,9 +5435,18 @@
       const container = document.getElementById('lessonMediaVisualContainer');
       if (!container) return;
 
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isP1 = curr.id === 4 || curr.image_folder === 'arabic_p1';
+      const isP2 = curr.id === 5 || curr.image_folder === 'arabic_p2';
+      let imgFolder = '';
+      let bookLabel = 'كتاب الطالب المعتمد';
+      if (isP1) { imgFolder = 'arabic_p1/'; bookLabel = 'كتاب العربية (الجزء الأول)'; }
+      else if (isP2) { imgFolder = 'arabic_p2/'; bookLabel = 'كتاب العربية (الجزء الثاني)'; }
+
       const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
       const pages = [...new Set(rawPages)];
-      const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : null;
+      const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : 
+                       (window.ARABIC_TOPIC_CARDS && window.ARABIC_TOPIC_CARDS[lesson.id] ? window.ARABIC_TOPIC_CARDS[lesson.id] : null);
 
       // افتراضياً نتركه مخفياً ليكون نص الدرس ومقاطعه أمام عين الطالب فوراً
       container.style.display = 'none';
@@ -5334,12 +5478,12 @@
         html += `
           <div id="bookPagesSec" style="background: white; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.6rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
             <div style="width: 72px; height: 98px; border-radius: 6px; overflow: hidden; background: #e2e8f0; flex-shrink: 0; cursor: pointer; border: 1px solid var(--slate-300);" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`)">
-              <img src="book_images/page_${p}.jpeg" alt="صفحة ${p}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='icons/icon-192.png'">
+              <img src="book_images/${imgFolder}page_${p}.jpeg" alt="صفحة ${p}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='icons/icon-192.png'">
             </div>
             <div style="flex: 1;">
               <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
                 <span class="badge" style="background: var(--primary-light); color: var(--primary); font-size: 0.7rem; font-weight: 700;">صفحة ${p}</span>
-                <span style="font-size: 0.72rem; color: var(--slate-500);">كتاب الطالب المعتمد</span>
+                <span style="font-size: 0.72rem; color: var(--slate-500);">${bookLabel}</span>
               </div>
               <p style="font-size: 0.78rem; font-weight: 700; color: var(--slate-800); margin: 0 0 0.45rem 0; line-height: 1.3;">${lesson.title}</p>
               <button class="btn btn-secondary btn-sm" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`)" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; width: 100%;">
@@ -5358,27 +5502,44 @@
               <div style="display: flex; align-items: center; gap: 0.4rem;">
                 <span style="font-size: 1.35rem;">${cardData.icon || '📌'}</span>
                 <div>
-                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--slate-900);">${cardData.titleAr}</h4>
-                  <span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 600;">${cardData.titleEn}</span>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--slate-900);">${cardData.titleAr || cardData.title}</h4>
+                  ${cardData.titleEn ? `<span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 600;">${cardData.titleEn}</span>` : ''}
                 </div>
               </div>
-              <span class="badge" style="background: ${cardData.themeColor}22; color: ${cardData.themeColor}; font-size: 0.7rem; font-weight: 800;">
-                بطاقة المفاهيم البصرية - الوحدة ${cardData.unit}
+              <span class="badge" style="background: ${cardData.themeColor || '#059669'}22; color: ${cardData.themeColor || '#059669'}; font-size: 0.7rem; font-weight: 800;">
+                بطاقة المفاهيم البصرية
               </span>
             </div>
 
-            <!-- شبكة المفاهيم والمفردات المصورة -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.5rem; margin-bottom: 0.6rem;">
-              ${(cardData.sections || []).map(sec => `
-                <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; padding: 0.45rem 0.6rem;">
-                  <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <span style="font-size: 0.8rem; font-weight: 800; color: var(--slate-900);">${sec.icon || '🔹'} ${sec.name}</span>
-                    <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700;">${sec.ar}</span>
+            ${cardData.summary ? `
+              <div style="background: #f8fafc; border-right: 4px solid ${cardData.themeColor || 'var(--primary)'}; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.8rem; color: var(--slate-700); margin-bottom: 0.6rem; line-height: 1.5;">
+                ${cardData.summary}
+              </div>
+            ` : ''}
+
+            <!-- شبكة المفاهيم أو النقاط التوضيحية -->
+            ${cardData.sections ? `
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.5rem; margin-bottom: 0.6rem;">
+                ${(cardData.sections || []).map(sec => `
+                  <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; padding: 0.45rem 0.6rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                      <span style="font-size: 0.8rem; font-weight: 800; color: var(--slate-900);">${sec.icon || '🔹'} ${sec.name}</span>
+                      <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700;">${sec.ar}</span>
+                    </div>
+                    <p style="margin: 0.2rem 0 0 0; font-size: 0.7rem; color: var(--slate-600); line-height: 1.3;">${sec.def}</p>
                   </div>
-                  <p style="margin: 0.2rem 0 0 0; font-size: 0.7rem; color: var(--slate-600); line-height: 1.3;">${sec.def}</p>
-                </div>
-              `).join('')}
-            </div>
+                `).join('')}
+              </div>
+            ` : (cardData.points ? `
+              <div style="display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.6rem;">
+                ${(cardData.points || []).map(pt => `
+                  <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; color: var(--slate-800); background: #f0fdf4; padding: 0.35rem 0.6rem; border-radius: 6px; border: 1px solid #dcfce7;">
+                    <span style="color: #059669;">✔️</span>
+                    <span>${pt}</span>
+                  </div>
+                `).join('')}
+              </div>
+            ` : '')}
 
             <!-- صندوق القاعدة النحوية المميز -->
             ${cardData.grammarFocus ? `
@@ -5457,6 +5618,42 @@
         matchedRule = 'المستقبل المخطط له (be going to) - صفحة 63';
       } else if (t.includes('world problems') || t.includes('rules')) {
         matchedRule = 'قواعد الإلزام والنصيحة (must vs should) والاحتمالية (may & might) - صفحة 74';
+      } else if (t.includes('علامات الإعراب') || t.includes('العلامات الأصلية')) {
+        matchedRule = 'علامات الإعراب الأصلية (الضمة، الفتحة، الكسرة، السكون) والفرعية (الواو، الألف، الياء، النون، حذف العلة) - الجزء 1 ص 9-16';
+      } else if (t.includes('الأسماء الخمسة')) {
+        matchedRule = 'الأسماء الخمسة (أبو، أخو، حمو، فو، ذو) وإعرابها بالحروف بشرط الإضافة - الجزء 1 ص 26-30';
+      } else if (t.includes('الميزان الصرفي')) {
+        matchedRule = 'الميزان الصرفي (فَعَلَ) وأوزان الكلمات الثلاثية والرباعية والمزيدة والمحذوفة - ص 38-43 و 125-129';
+      } else if (t.includes('اللازم') || t.includes('المتعدي')) {
+        matchedRule = 'الفعل اللازم (يكتفي بفاعله) والفعل المتعدي (ينصب مفعولاً به) - الجزء 1 ص 55-59';
+      } else if (t.includes('نائب الفاعل') || t.includes('المجهول')) {
+        matchedRule = 'نائب الفاعل وبناء الفعل الماضي والمضارع للمجهول - الجزء 1 ص 69-73';
+      } else if (t.includes('المفعول فيه') || t.includes('الزمان') || t.includes('المكان')) {
+        matchedRule = 'المفعول فيه: ظرف الزمان وظرف المكان متضمناً معنى (في) - الجزء 1 ص 85-88';
+      } else if (t.includes('المفعول المطلق')) {
+        matchedRule = 'المفعول المطلق: المؤكد لفعله، المبين لنوعه، المبين لعدد مراته - الجزء 1 ص 98-101';
+      } else if (t.includes('الحال')) {
+        matchedRule = 'الحال: اسم نكرة مشتق منصوب يبين هيئة صاحب الحال المعرفة - الجزء 1 ص 110-114';
+      } else if (t.includes('الاستثناء') || t.includes('إلا')) {
+        matchedRule = 'أسلوب الاستثناء بـ (إلا): التام المتصل والمنقطع والمفرغ - الجزء 1 ص 123-127';
+      } else if (t.includes('الخط القياسي') || t.includes('غير القياسي')) {
+        matchedRule = 'الإملاء والخط: الخط القياسي والخط غير القياسي العثماني في القرآن الكريم - الجزء 1 ص 17-19';
+      } else if (t.includes('النداء') || t.includes('المنادى')) {
+        matchedRule = 'أسلوب النداء وأحكام المنادى: المبني على الضم والمعرب المنصوب - الجزء 2 ص 8-12';
+      } else if (t.includes('الاستفهام')) {
+        matchedRule = 'أسلوب الاستفهام: التصديق (هل والهمزة) والتصور (أسماء الاستفهام) - الجزء 2 ص 23-29';
+      } else if (t.includes('بناء الفعل المضارع') || t.includes('المضارع')) {
+        matchedRule = 'بناء الفعل المضارع على السكون مع نون النسوة وعلى الفتح مع نوني التوكيد - الجزء 2 ص 39-43';
+      } else if (t.includes('المثنى')) {
+        matchedRule = 'المثنى والملحق به (اثنان واثنتان، وكلا وكلتا المضافتان لضمير) - الجزء 2 ص 53-57';
+      } else if (t.includes('جمع المذكر السالم')) {
+        matchedRule = 'جمع المذكر السالم والملحق به وألفاظ العقود (عشرون إلى تسعون) - الجزء 2 ص 66-72';
+      } else if (t.includes('جمع المؤنث السالم')) {
+        matchedRule = 'جمع المؤنث السالم وإعرابه بالكسرة نيابة عن الفتحة والملحق به - الجزء 2 ص 84-88';
+      } else if (t.includes('جمع التكسير')) {
+        matchedRule = 'جمع التكسير: أوزان القلة الأربعة وأوزان الكثرة وصيغ منتهى الجموع - الجزء 2 ص 98-102';
+      } else if (t.includes('المقصور') || t.includes('المنقوص') || t.includes('الممدود')) {
+        matchedRule = 'الأسماء المقصور والمنقوص والممدود وأحكام إعرابها بالحركات المقدرة والظاهرة - الجزء 2 ص 111-117';
       }
 
       if (matchedRule) {
@@ -5472,7 +5669,16 @@
       const container = document.getElementById('suggestedChipsContainer');
       container.innerHTML = '';
 
-      let suggestions = [
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId);
+      const isArabicSubj = curr && (curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب')));
+
+      let suggestions = isArabicSubj ? [
+        'ما هي علامات الإعراب الأصلية والفرعية؟',
+        'اشرح قاعدة الأسماء الخمسة وإعرابها',
+        'ما هو الميزان الصرفي وكيف نزن الكلمات؟',
+        'ما الفرق بين الخط القياسي وغير القياسي؟',
+        'ما هي أنواع المنادى وحكم كل نوع؟'
+      ] : [
         'ما هي أقسام مجلة المدرسة؟',
         'اشرح قاعدة s التملك',
         'ما الفرق بين for و since؟',
@@ -5625,6 +5831,90 @@
     // محرك الإجابة المحلي الذكي الموثق
     function generateLocalAnswer(query, lessonId) {
       const q = query.toLowerCase().trim();
+
+      // فحص أسئلة علامات الإعراب
+      if (q.includes('علامات الإعراب') || q.includes('علامة الإعراب') || q.includes('أصلية وفرعية') || q.includes('حركات فرعية')) {
+        return {
+          content: `📌 **علامات الإعراب الأصلية والفرعية (الجزء الأول - ص 9 إلى 16):**\n` +
+                   `1. **العلامات الأصلية:**\n` +
+                   `• **الضمة:** للرفع في المفرد وجمع التكسير وجمع المؤنث السالم والمضارع.\n` +
+                   `• **الفتحة:** للنصب في المفرد وجمع التكسير والمضارع المسبوق بناصب.\n` +
+                   `• **الكسرة:** للجر في المفرد وجمع التكسير وجمع المؤنث السالم.\n` +
+                   `• **السكون:** للجزم في الفعل المضارع صحيح الآخر.\n\n` +
+                   `2. **العلامات الفرعية:**\n` +
+                   `• **الواو:** لرفع الأسماء الخمسة وجمع المذكر السالم وملحقاته.\n` +
+                   `• **الألف:** لرفع المثنى ونصب الأسماء الخمسة.\n` +
+                   `• **الياء:** لنصب وجر المثنى وجمع المذكر السالم وجر الأسماء الخمسة.\n` +
+                   `• **الكسرة بدل الفتحة:** لنصب جمع المؤنث السالم.\n` +
+                   `• **الفتحة بدل الكسرة:** لجر الممنوع من الصرف.\n` +
+                   `• **ثبوت وحذف النون:** لرفع ونصب وجزم الأفعال الخمسة.`,
+          sources: [{ page: 9, heading: 'علامات الإعراب الأصلية والفرعية' }],
+          speakText: "علامات الإعراب نوعان: أصلية وهي الضمة للرفع والفتحة للنصب والكسرة للجر والسكون للجزم. وفرعية تنوب عنها مثل الواو والألف والياء وحذف النون وحذف حرف العلة."
+        };
+      }
+
+      // فحص أسئلة الأسماء الخمسة
+      if (q.includes('الأسماء الخمسة') || q.includes('ابو') || q.includes('أخو') || q.includes('حمو') || q.includes('ذو') || q.includes('فو')) {
+        return {
+          content: `📌 **قاعدة الأسماء الخمسة (الجزء الأول - ص 26 إلى 30):**\n` +
+                   `• **الأسماء الخمسة هي:** (أبُو، أخُو، حَمُو، فُو، ذُو بمعنى صاحب).\n\n` +
+                   `• **إعرابها بالحروف:**\n` +
+                   `1. **ترفع بالواو:** (جاءَ أبُوكَ، ذُو العلمِ مكرَمٌ).\n` +
+                   `2. **تنصب بالألف:** (رأيتُ أخَاكَ، احترمتُ ذَا الفضلِ).\n` +
+                   `3. **تجر بالياء:** (سلّمتُ على أبِيكَ، استمعتُ إلى ذِي الحكمةِ).\n\n` +
+                   `• **شروط إعرابها بالحروف:**\n` +
+                   `1. أن تكون مفردة (فإن جمعت أعربت بالحركات: آباؤكم).\n` +
+                   `2. أن تكون مضافة لاسم ظاهر أو ضمير كاف الخطاب أو هاء الغيبة.\n` +
+                   `3. ألا تضاف إلى ياء المتكلم؛ فإن أضيفت لياء المتكلم أعربت بحركات مقدرة (أَخِي، أَبِي).`,
+          sources: [{ page: 26, heading: 'الأسماء الخمسة' }],
+          speakText: "الأسماء الخمسة هي أبو وأخو وحمو وفو وذو، ترفع بالواو وتنصب بالألف وتجر بالياء بشرط أن تكون مفردة ومضافة لغير ياء المتكلم."
+        };
+      }
+
+      // فحص أسئلة الميزان الصرفي
+      if (q.includes('ميزان صرفي') || q.includes('الميزان الصرفي') || q.includes('فعل') || q.includes('وزن الكلمات')) {
+        return {
+          content: `📌 **قواعد الميزان الصرفي (الجزء الأول ص 38، والجزء الثاني ص 125):**\n` +
+                   `1. **الأساس:** جعل علماء العربية لفظ (فَـ ـعَـ ـلَ) ميزاناً يزنون به الكلمات العربية الثلاثية المجردة.\n` +
+                   `• الحرف الأول يقابل الفاء (فاء الكلمة).\n` +
+                   `• الحرف الثاني يقابل العين (عين الكلمة).\n` +
+                   `• الحرف الثالث يقابل اللام (لام الكلمة).\n\n` +
+                   `2. **الكلمات المزيدة:** ننزل حروف الزيادة في الميزان كما هي: (كَاتِب -> فَاعِل، اسْتَخْرَجَ -> اسْتَفْعَلَ).\n` +
+                   `3. **الرباعي والخماسي المجرد:** نزيد لاماً في الرباعي (دَحْرَجَ -> فَعْلَلَ)، ولامين في الخماسي (سَفَرْجَل -> فَعَلَّل).\n` +
+                   `4. **حذف حرف أصلي:** يُحذف ما يقابله في الميزان (قِ -> عِ، صُنْ -> فُلْ، يَصِلُ -> يَعِلُ).`,
+          sources: [{ page: 38, heading: 'الميزان الصرفي' }, { page: 125, heading: 'الميزان الصرفي 2' }],
+          speakText: "الميزان الصرفي أساسه وزن فَعَلَ، تقابل حروف الكلمة الثلاثية المجردة به، وتنزل الزيادة كما هي، وما يحذف من الأصول يحذف مقابله من الميزان."
+        };
+      }
+
+      // فحص أسئلة أسلوب النداء
+      if (q.includes('نداء') || q.includes('المنادى') || q.includes('حروف النداء') || q.includes('يا محمد')) {
+        return {
+          content: `📌 **أسلوب النداء وأحكام المنادى (الجزء الثاني - ص 8 إلى 12):**\n` +
+                   `1. **حروف النداء:** (يا) لجميع المنادى، و(الهمزة وأي) للقريب، و(أيا وهيا) للبعيد.\n` +
+                   `2. **المنادى المبني في محل نصب:**\n` +
+                   `• **العلم المفرد:** يا محمّدُ، يا عليُّ (يبنى على الضم في محل نصب).\n` +
+                   `• **النكرة المقصودة:** يا رجلُ، يا طالبُ (يقصد شخصاً معيناً أمامه).\n\n` +
+                   `3. **المنادى المعرب المنصوب:**\n` +
+                   `• **النكرة غير المقصودة:** يا غافلاً تنبّهْ، يا سائقاً تمهّلْ.\n` +
+                   `• **المنادى المضاف:** يا طالبَ العلمِ، يا أهلَ الخيرِ.\n` +
+                   `• **الشبيه بالمضاف:** يا حسناً وجهُهُ، يا طالعاً جبلاً.`,
+          sources: [{ page: 8, heading: 'أسلوب النداء' }],
+          speakText: "أسلوب النداء طلب الإقبال بأحد أحرف النداء. المنادى يبنى على ما يرفع به إذا كان علماً مفرداً أو نكرة مقصودة، وينصب إذا كان نكرة غير مقصودة أو مضافاً أو شبيهاً بالمضاف."
+        };
+      }
+
+      // فحص أسئلة الاستفهام
+      if (q.includes('استفهام') || q.includes('التصديق') || q.includes('التصور') || q.includes('أدوات الاستفهام')) {
+        return {
+          content: `📌 **أسلوب الاستفهام (الجزء الثاني - ص 23 إلى 29):**\n` +
+                   `طلب معرفة شيء مجهول لدى المتكلم بأحد أدوات الاستفهام، وينقسم إلى نوعين:\n` +
+                   `1. **استفهام التصديق:** يُطلب به إثبات النسبة أو نفيها، ويُجاب عنه بأحرف الجواب (نعم، لا، بلى، كلا). أدواته: (هل) و(الهمزة بدون أم المعادلة).\n` +
+                   `2. **استفهام التصور:** يُطلب به تعيين مفرد من أمرين، ويُجاب عنه بالتعيين. أدواته: (الهمزة مع أم المعادلة) وجميع أسماء الاستفهام (من، ما، أين، متى، كيف، كم، أي).`,
+          sources: [{ page: 23, heading: 'الاستفهام' }],
+          speakText: "الاستفهام نوعان: تصديق ويجاب عنه بنعم أو لا بأداتي هل والهمزة، وتصور ويجاب عنه بالتعيين بأسماء الاستفهام أو الهمزة المقترنة بأم المعادلة."
+        };
+      }
 
       // فحص أسئلة s التملك
       if (q.includes('تملك') || q.includes('possessive') || q.includes('boy\'s') || q.includes('boys\'')) {
@@ -6137,10 +6427,82 @@
     }
 
     // عرض القواعد المهمة (Grammar & Rules View)
+    let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar'
+
+    function setGrammarSubjectMode(mode) {
+      activeGrammarSubjectMode = mode;
+      renderGrammarRules();
+    }
+
     function renderGrammarRules() {
       const container = document.getElementById('grammarContainer');
       container.innerHTML = '';
 
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId);
+      const isCurrArabic = curr && (curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب')));
+      
+      const showArabic = (activeGrammarSubjectMode === 'ar') || (activeGrammarSubjectMode === 'auto' && isCurrArabic);
+
+      // إضافة شريط التبديل بين بنك قواعد الإنجليزية وبنك قواعد العربية
+      const toggleBar = document.createElement('div');
+      toggleBar.style.cssText = 'grid-column: 1 / -1; display: flex; gap: 0.6rem; margin-bottom: 1.25rem; flex-wrap: wrap; align-items: center; background: white; padding: 0.65rem 1rem; border-radius: 12px; border: 1px solid var(--slate-200); box-shadow: 0 1px 3px rgba(0,0,0,0.04);';
+      toggleBar.innerHTML = `
+        <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر بنك القواعد:</span>
+        <button class="btn btn-sm ${!showArabic ? 'btn-primary' : 'btn-secondary'}" onclick="setGrammarSubjectMode('en')" style="font-weight: 800; font-size: 0.78rem;">
+          📘 بنك قواعد اللغة الإنجليزية (43 قاعدة)
+        </button>
+        <button class="btn btn-sm ${showArabic ? 'btn-primary' : 'btn-secondary'}" onclick="setGrammarSubjectMode('ar')" style="font-weight: 800; font-size: 0.78rem; ${showArabic ? 'background: #059669; border-color: #047857;' : ''}">
+          📙 بنك قواعد اللغة العربية (الجزءان الأول والثاني - 18 قاعدة)
+        </button>
+      `;
+      container.appendChild(toggleBar);
+
+      if (showArabic) {
+        // عرض بنك قواعد اللغة العربية
+        const arRules = window.ARABIC_GRAMMAR_RULES || [];
+        const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+        const filteredAr = arRules.filter(r => {
+          return !search || 
+            (r.title && r.title.toLowerCase().includes(search)) || 
+            (r.summary && r.summary.toLowerCase().includes(search)) || 
+            (r.details && r.details.toLowerCase().includes(search));
+        });
+
+        if (filteredAr.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
+          empty.innerText = 'لا توجد قواعد عربية مطابقة لبحثك.';
+          container.appendChild(empty);
+          return;
+        }
+
+        filteredAr.forEach(rule => {
+          const card = document.createElement('div');
+          card.className = 'grammar-card';
+          card.style.cssText = 'background: white; border: 1px solid var(--slate-200); border-right: 4px solid #059669; border-radius: 12px; padding: 1.15rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;';
+          card.innerHTML = `
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
+                <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.7rem; font-weight: 800;">${rule.category}</span>
+                <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(rule.title + '. ' + rule.summary)}\`, 'ar')" style="font-size: 0.7rem;">
+                  🔊 استمع للشرح
+                </button>
+              </div>
+              <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #064e3b;">${rule.title}</h4>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #14532d; line-height: 1.6; margin-bottom: 0.65rem;">
+                <strong>💡 الخلاصة والقاعدة:</strong> ${rule.summary}
+              </div>
+              <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
+                ${rule.details}
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        return;
+      }
+
+      // القواعد الإنجليزية
       const rules = window.GRAMMAR_RULES || [];
       const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
 
@@ -9931,7 +10293,166 @@
       let totalLessons = 0;
       chaps.forEach(ch => { totalLessons += (ch.lessons || []).length; });
 
-      if (isEnglishDefault) {
+      const isArP1 = curr.id === 4 || (curr.name && curr.name.includes('الجزء الأول'));
+      const isArP2 = curr.id === 5 || (curr.name && curr.name.includes('الجزء الثاني'));
+
+      if (isArP1) {
+        container.innerHTML = `
+          <div style="display: flex; gap: 1.5rem; align-items: stretch; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <!-- صورة غلاف كتاب اللغة العربية الجزء الأول -->
+            <div style="width: 145px; height: 205px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 12px 24px rgba(5,150,105,0.25), 0 0 0 1px rgba(0,0,0,0.08); background: #064e3b; cursor: pointer; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; position: relative;" onclick="selectCurriculumForStudy(${curr.id})" title="انقر لفتح قاعة المذاكرة ومباشرة القراءة الصوتية">
+              <img src="./book_images/arabic_p1/page_1.jpeg" alt="غلاف كتاب اللغة العربية الجزء الأول" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(6, 78, 59, 0.9)); padding: 0.4rem 0.3rem; color: white; font-size: 0.68rem; font-weight: 800; text-align: center;">
+                📙 كتاب الجزء الأول المعتمد
+              </div>
+            </div>
+
+            <!-- تفاصيل المقرر -->
+            <div style="flex: 1 1 450px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                  <span class="subject-card-badge green" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+                    <span>🌟</span> المنهج الوزاري المعتمد • مكتمل 100%
+                  </span>
+                  <span style="font-size: 0.78rem; font-weight: 800; color: #065f46; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.2rem 0.65rem; border-radius: 9999px;">
+                    الصف الثاني متوسط • كتاب اللغة العربية (الجزء الأول)
+                  </span>
+                </div>
+                <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.4rem;">
+                  <span style="font-size: 1.8rem;">📙</span>
+                  <span>اللغة العربية (الجزء الأول) - الصف الثاني متوسط</span>
+                </h3>
+                <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.65; max-width: 850px; margin: 0 0 1rem;">
+                  منهاج تفاعلي متكامل لكتاب اللغة العربية (الجزء الأول): يشمل المطالعة والنصوص القرآنية والأدبية، قواعد اللغة العربية، الإملاء والخط، والتعبير الشفهي والتحريري، مع القراءة الصوتية الفصيحة وبنك القواعد النحوية الشامل وعارض الصفحات الأصلية بدقة عالية.
+                </p>
+              </div>
+
+              <!-- أزرار الإجراءات السريعة للمقرر -->
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #059669, #10b981); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);">
+                  📖 دخول قاعة المذاكرة والدروس ⮞
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(${curr.id}); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 0.95rem;">
+                  💡 بنك القواعد النحوية والصرفية
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="background: #f8fafc; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.55rem 0.95rem;">
+                  📚 فهرس الفصول والوحدات (10 وحدات)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- شبكة الإحصائيات والأرقام -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الوحدات المقررة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">10 وحدات كاملة</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الدروس المتاحة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">40 درساً شاملاً</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">القواعد والصرف</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: #047857;">9 قواعد أساسية</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">صفحات الكتاب</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">136 صفحة معتمدة</div>
+            </div>
+          </div>
+
+          <!-- الميزات البارزة -->
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.4rem;">الميزات وكفايات التعلم التفاعلية المتاحة للمنهج:</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+              <span class="subject-feature-pill">🎧 قراءة نصوص المطالعة والقرآن والشعر بصوت عربي فصيح</span>
+              <span class="subject-feature-pill">💡 بنك قواعد شامل يغطي علامات الإعراب والأسماء الخمسة والميزان والمفاعيل</span>
+              <span class="subject-feature-pill">✍️ دروس إملاء متخصصة في الخط القياسي وغير القياسي ورسم الهمزات</span>
+              <span class="subject-feature-pill">📖 عارض صفحات الكتاب الأصلي بدقة فائقة وخاصية التكبير المباشر</span>
+              <span class="subject-feature-pill">🤖 مساعد ذكي تفاعلي يشرح القواعد ويعرب الأمثلة فورياً</span>
+            </div>
+          </div>
+        `;
+      } else if (isArP2) {
+        container.innerHTML = `
+          <div style="display: flex; gap: 1.5rem; align-items: stretch; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <!-- صورة غلاف كتاب اللغة العربية الجزء الثاني -->
+            <div style="width: 145px; height: 205px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 12px 24px rgba(5,150,105,0.25), 0 0 0 1px rgba(0,0,0,0.08); background: #064e3b; cursor: pointer; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; position: relative;" onclick="selectCurriculumForStudy(${curr.id})" title="انقر لفتح قاعة المذاكرة ومباشرة القراءة الصوتية">
+              <img src="./book_images/arabic_p2/page_1.jpeg" alt="غلاف كتاب اللغة العربية الجزء الثاني" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none';">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(6, 78, 59, 0.9)); padding: 0.4rem 0.3rem; color: white; font-size: 0.68rem; font-weight: 800; text-align: center;">
+                📗 كتاب الجزء الثاني المعتمد
+              </div>
+            </div>
+
+            <!-- تفاصيل المقرر -->
+            <div style="flex: 1 1 450px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                  <span class="subject-card-badge green" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+                    <span>🌟</span> المنهج الوزاري المعتمد • مكتمل 100%
+                  </span>
+                  <span style="font-size: 0.78rem; font-weight: 800; color: #065f46; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.2rem 0.65rem; border-radius: 9999px;">
+                    الصف الثاني متوسط • كتاب اللغة العربية (الجزء الثاني)
+                  </span>
+                </div>
+                <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.4rem;">
+                  <span style="font-size: 1.8rem;">📗</span>
+                  <span>اللغة العربية (الجزء الثاني) - الصف الثاني متوسط</span>
+                </h3>
+                <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.65; max-width: 850px; margin: 0 0 1rem;">
+                  منهاج تفاعلي متكامل لكتاب اللغة العربية (الجزء الثاني): يشمل نصوص الفداء والإحسان والربيع وإرادة الحياة، وقواعد النداء والاستفهام والمضارع وجموع المذكر والمؤنث والتكسير والأسماء والميزان الصرفي، مع القراءة الصوتية الفصيحة.
+                </p>
+              </div>
+
+              <!-- أزرار الإجراءات السريعة للمقرر -->
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #047857, #059669); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35);">
+                  📖 دخول قاعة المذاكرة والدروس ⮞
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(${curr.id}); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 0.95rem;">
+                  💡 بنك القواعد النحوية والصرفية
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="background: #f8fafc; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.55rem 0.95rem;">
+                  📚 فهرس الفصول والوحدات (10 وحدات)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- شبكة الإحصائيات والأرقام -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الوحدات المقررة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">10 وحدات كاملة</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">الدروس المتاحة</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">40 درساً شاملاً</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">القواعد والصرف</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: #047857;">9 قواعد أساسية</div>
+            </div>
+            <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.65rem 0.85rem; text-align: center;">
+              <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700; margin-bottom: 0.2rem;">صفحات الكتاب</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-800);">136 صفحة معتمدة</div>
+            </div>
+          </div>
+
+          <!-- الميزات البارزة -->
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700); margin-bottom: 0.4rem;">الميزات وكفايات التعلم التفاعلية المتاحة للمنهج:</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+              <span class="subject-feature-pill">🎧 قراءة نصوص المطالعة والقرآن والشعر بصوت عربي فصيح</span>
+              <span class="subject-feature-pill">💡 بنك قواعد شامل يغطي أساليب النداء والاستفهام وبناء المضارع والجموع</span>
+              <span class="subject-feature-pill">✍️ دروس إملاء متخصصة في الهمزة وعلامات الترقيم والألف اللينة</span>
+              <span class="subject-feature-pill">📖 عارض صفحات الكتاب الأصلي بدقة فائقة وخخاصية التكبير المباشر</span>
+              <span class="subject-feature-pill">🤖 مساعد ذكي تفاعلي يشرح القواعد ويعرب الأمثلة فورياً</span>
+            </div>
+          </div>
+        `;
+      } else if (isEnglishDefault) {
         container.innerHTML = `
           <div style="display: flex; gap: 1.5rem; align-items: stretch; flex-wrap: wrap; margin-bottom: 1.5rem;">
             <!-- صورة غلاف كتاب المنهج الرسمي -->
