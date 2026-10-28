@@ -2171,7 +2171,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.0.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.1.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3403,7 +3403,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.0.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.1.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3458,8 +3458,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '2.8.6';
-    const CURRENT_VERSION_LABEL = 'v3.0.0';
-    const SYSTEM_VERSION = 'v3.0.0';
+    const CURRENT_VERSION_LABEL = 'v3.1.0';
+    const SYSTEM_VERSION = 'v3.1.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -6353,6 +6353,425 @@
 
       // خريطة الأسئلة التدريبية المتخصصة حسب الدرس المختار
       const LESSON_QUIZZES = {
+        // الوحدة 7: العالم من حولنا والبيئة (Unit 7: The World Around Us)
+        3001: [
+          {
+            "id": 30011,
+            "question": "What is the full grammatical sentence for the headline: 'Sixteen elephants found dead'?",
+            "options": [
+              "Sixteen elephants were found dead",
+              "Sixteen elephants find dead",
+              "Sixteen elephants has been dead",
+              "Sixteen elephants is found dead"
+            ],
+            "correct": 0,
+            "explanation": "Page 71 & 79: Headlines omit auxiliary verbs like 'were' to save space: 'Sixteen elephants were found dead.'"
+          },
+          {
+            "id": 30012,
+            "question": "Why are articles and auxiliary verbs omitted in newspaper headlines?",
+            "options": [
+              "To save space and attract reader attention quickly",
+              "Because journalists don't understand English grammar",
+              "To make the news intentionally confusing",
+              "Because grammar rules ban them in printed media"
+            ],
+            "correct": 0,
+            "explanation": "Page 71: Headline language uses condensation (ellipsis) to be concise and eye-catching."
+          },
+          {
+            "id": 30013,
+            "question": "Which environmental crisis was reported from Brazil on page 71?",
+            "options": [
+              "More and more of the rainforest being destroyed",
+              "Severe litter accumulation drowning cities",
+              "Industrial emissions causing lung danger in Tokyo",
+              "Factory waste contaminating river water"
+            ],
+            "correct": 0,
+            "explanation": "Page 71: The headline from Brazil states: 'More and more of the rainforest being destroyed.'"
+          }
+        ],
+        3002: [
+          {
+            "id": 30021,
+            "question": "How much money can pay for an African child to attend school for an entire year?",
+            "options": [
+              "100 dollars",
+              "10 dollars",
+              "500 dollars",
+              "1,000 dollars"
+            ],
+            "correct": 0,
+            "explanation": "Page 72: 'In some countries, just 100 dollars can pay for one child to go to school for a year.'"
+          },
+          {
+            "id": 30022,
+            "question": "What is a 'bring-and-buy sale'?",
+            "options": [
+              "An event where everyone brings items to sell and buys items to raise charity funds",
+              "A market where only commercial businesses can sell items",
+              "A supermarket where food is given out for free",
+              "A book store owned by the headmistress"
+            ],
+            "correct": 0,
+            "explanation": "Page 72: 'Everyone brings something to be sold. And everyone buys something to collect money.'"
+          },
+          {
+            "id": 30023,
+            "question": "Which modal expresses a strong, mandatory obligation rather than simple advice?",
+            "options": [
+              "must",
+              "should",
+              "may",
+              "might"
+            ],
+            "correct": 0,
+            "explanation": "Page 72: 'Must is stronger than should. It means have to or have got to (an absolute obligation).'"
+          }
+        ],
+        3003: [
+          {
+            "id": 30031,
+            "question": "Why is the beautiful snow leopard illegally hunted by poachers?",
+            "options": [
+              "For its valuable grey fur with black spots",
+              "For its long horns",
+              "For its rich blubber and oil",
+              "To protect mountain farmland"
+            ],
+            "correct": 0,
+            "explanation": "Page 73: 'The snow leopard is hunted for its fur. Its fur is grey with biggish black spots.'"
+          },
+          {
+            "id": 30032,
+            "question": "Why is the rare golden toad facing extinction?",
+            "options": [
+              "People are draining water from its wetland breeding habitats",
+              "Poachers hunt it for horn ornaments",
+              "Because Arctic sea ice is thawing",
+              "Because of heavy plastic pollution in oceans"
+            ],
+            "correct": 0,
+            "explanation": "Page 73: 'People are draining water from the places where they live. When the water goes completely, it will disappear.'"
+          },
+          {
+            "id": 30033,
+            "question": "Why are polar bears in even greater danger today than in the past?",
+            "options": [
+              "Because Arctic sea ice is melting as a result of climate change",
+              "Because they are hunted for whale oil",
+              "Because they cannot live in cold temperatures",
+              "Because wetlands are disappearing in Africa"
+            ],
+            "correct": 0,
+            "explanation": "Page 73: 'Polar bears are in more danger because the sea ice is melting as a result of climate change.'"
+          }
+        ],
+        3004: [
+          {
+            "id": 30041,
+            "question": "What is the natural habitat of the blue whale?",
+            "options": [
+              "Sea and oceans",
+              "High, cold mountains",
+              "Freshwater wetlands",
+              "Hot desert sand dunes"
+            ],
+            "correct": 0,
+            "explanation": "Page 74: Whales live in the sea and oceans; the blue whale is the largest animal alive today (29 metres)."
+          },
+          {
+            "id": 30042,
+            "question": "Which of the following phrases expresses polite agreement?",
+            "options": [
+              "I agree. You're right.",
+              "I disagree. I think you're wrong.",
+              "I am not sure at all.",
+              "I think you are mistaken."
+            ],
+            "correct": 0,
+            "explanation": "Page 74: Expressions of agreeing include 'I agree' and 'You're right'."
+          },
+          {
+            "id": 30043,
+            "question": "In what environment do toads and amphibians naturally live?",
+            "options": [
+              "Wetlands near water",
+              "Arctic frozen ice",
+              "Mountain rocky cliffs",
+              "Arid sandy deserts"
+            ],
+            "correct": 0,
+            "explanation": "Page 74: Toads live near water in wetland habitats."
+          }
+        ],
+        3005: [
+          {
+            "id": 30051,
+            "question": "What are Iraq's two great historic rivers mentioned on page 75?",
+            "options": [
+              "The Tigris and the Euphrates",
+              "The Nile and the Amazon",
+              "The Thames and the Seine",
+              "The Danube and the Rhine"
+            ],
+            "correct": 0,
+            "explanation": "Page 75: 'Iraq, with its two great rivers running the length of the country (Tigris and Euphrates)...'"
+          },
+          {
+            "id": 30052,
+            "question": "What does the word 'volunteer' mean in the context of cleaning rivers?",
+            "options": [
+              "A person who does a job or service willingly without pay",
+              "A government inspector who fines polluters",
+              "A factory manager dumping waste",
+              "A commercial boat driver"
+            ],
+            "correct": 0,
+            "explanation": "Page 75: Vocabulary definition: 'volunteer: a person who does a job without pay.'"
+          },
+          {
+            "id": 30053,
+            "question": "Complete the inspirational slogan from page 75: 'If we want to have clean rivers, we must have ________.'",
+            "options": [
+              "clean minds",
+              "more factories",
+              "more motor cars",
+              "more waste dumps"
+            ],
+            "correct": 0,
+            "explanation": "Page 75: 'Remember - you are the solution to river pollution. If we want to have clean rivers, we must have clean minds.'"
+          }
+        ],
+        3006: [
+          {
+            "id": 30061,
+            "question": "Why is the world getting warmer according to the environmental scientist on page 76?",
+            "options": [
+              "We burn fossil fuels like coal, gas and oil, and drive cars that produce heat-trapping gases",
+              "The sun is moving closer to Earth every decade",
+              "Because of extensive tree planting across continents",
+              "Because rivers are flowing into the sea"
+            ],
+            "correct": 0,
+            "explanation": "Page 76: Burning coal, gas, oil, wood and driving cars produce gases that trap heat in the atmosphere."
+          },
+          {
+            "id": 30062,
+            "question": "Between 'may' and 'might', which one indicates a LESS certain possibility?",
+            "options": [
+              "might",
+              "may",
+              "must",
+              "will"
+            ],
+            "correct": 0,
+            "explanation": "Page 76 & 119: 'Might is less certain than may. Both are used to talk about the present or future.'"
+          },
+          {
+            "id": 30063,
+            "question": "What is a major consequence if global sea levels rise due to melting ice caps?",
+            "options": [
+              "Some coastal and low-lying land will disappear underwater",
+              "Deserts will instantly turn into lush forests",
+              "Summers will become colder everywhere",
+              "Water pollution in rivers will immediately vanish"
+            ],
+            "correct": 0,
+            "explanation": "Page 76: 'The ice caps will melt, so the sea level will rise. This means some land will disappear.'"
+          }
+        ],
+        3007: [
+          {
+            "id": 30071,
+            "question": "Why did Tamara's father tell her that leaving food was wasteful?",
+            "options": [
+              "Because millions of people around the world are hungry",
+              "Because he wanted to feed the dog",
+              "Because the food was extremely spicy",
+              "Because the restaurant was closing"
+            ],
+            "correct": 0,
+            "explanation": "Page 77 & 105: 'That's so wasteful, Tamara. People around the world are hungry. Think of them next time.'"
+          },
+          {
+            "id": 30072,
+            "question": "What is the English proverb Kamal quotes when Nasser wastes electricity?",
+            "options": [
+              "'Waste not, want not!'",
+              "'Actions speak louder than words!'",
+              "'Time is money!'",
+              "'Better safe than sorry!'"
+            ],
+            "correct": 0,
+            "explanation": "Page 77 & 105: 'I think it's terrible to waste electricity like this... Waste not, want not! Remember?'"
+          },
+          {
+            "id": 30073,
+            "question": "Which imperative form correctly prohibits throwing rubbish in the street?",
+            "options": [
+              "Don't drop litter in the street!",
+              "Not to drop litter in the street!",
+              "No drop litter in the street!",
+              "Doesn't drop litter in the street!"
+            ],
+            "correct": 0,
+            "explanation": "Page 77: Direct negative command: 'Don't drop litter in the street!'"
+          }
+        ],
+        3008: [
+          {
+            "id": 30081,
+            "question": "What are the primary causes of the moving desert in Iraq?",
+            "options": [
+              "Low rainfall, tree cutting, sand storms, and burning oil wells",
+              "Heavy winter rains and river flooding in the north",
+              "The expansion of green belt forests in Karbala",
+              "The restoration of fresh water to southern marshes"
+            ],
+            "correct": 0,
+            "explanation": "Page 78: 'Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone.'"
+          },
+          {
+            "id": 30082,
+            "question": "How much area is one traditional Iraqi agricultural 'donam'?",
+            "options": [
+              "2,500 square metres",
+              "1,000 square metres",
+              "500 square metres",
+              "10,000 square metres"
+            ],
+            "correct": 0,
+            "explanation": "Page 78: Footnote: 'A donam is a unit of land area equivalent to 2,500 m².'"
+          },
+          {
+            "id": 30083,
+            "question": "How are authorities working to stop the moving desert in west Al Anbar and west Karbala?",
+            "options": [
+              "By establishing 'green belt' projects (planting barrier trees)",
+              "By constructing glass bottle walls",
+              "By draining remaining lakes",
+              "By paving the desert with concrete"
+            ],
+            "correct": 0,
+            "explanation": "Page 78: 'One way to stop the moving desert in Iraq is to start green belt projects... in west Al Anbar and west Karbala.'"
+          }
+        ],
+        3009: [
+          {
+            "id": 30091,
+            "question": "Which of the following phrases expresses polite disagreement?",
+            "options": [
+              "I disagree. I think you're wrong.",
+              "I agree. You're right.",
+              "I think that's right.",
+              "I'll bring some clothes."
+            ],
+            "correct": 0,
+            "explanation": "Page 79: 'Disagreeing: I disagree. I think you're wrong.'"
+          },
+          {
+            "id": 30092,
+            "question": "Complete the spontaneous offer: 'I have some plants. I ________ bring them for the sale.'",
+            "options": [
+              "'ll",
+              "must",
+              "had to",
+              "was"
+            ],
+            "correct": 0,
+            "explanation": "Page 79: Making offers: 'I have some plants. I'll bring some plants.'"
+          },
+          {
+            "id": 30093,
+            "question": "Which sentence expresses future possibility rather than certainty?",
+            "options": [
+              "There may be less rain in some regions next summer.",
+              "There was less rain last year.",
+              "There is rain outside right now.",
+              "It must rain every single Tuesday."
+            ],
+            "correct": 0,
+            "explanation": "Page 79: 'Describing possible future events: There may be less rain.'"
+          }
+        ],
+        3010: [
+          {
+            "id": 30101,
+            "question": "How did Jad get the group past the huge queue at the Eiffel Tower?",
+            "options": [
+              "He told the man he was a famous photographer from Iraq and his friends were international journalists",
+              "He bought all remaining VIP tickets",
+              "He climbed the emergency stairs",
+              "He pretended to be a French government official"
+            ],
+            "correct": 0,
+            "explanation": "Page 80: 'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international magazine.'"
+          },
+          {
+            "id": 30102,
+            "question": "What did Jad's photograph from the top of the tower show when they reached the bottom?",
+            "options": [
+              "Only the back of Johnny's head",
+              "A panoramic view of Paris",
+              "The River Thames in London",
+              "A golden toad in the grass"
+            ],
+            "correct": 0,
+            "explanation": "Page 81: Jad laughed: 'These photographs may not get into our magazine... All I can see is the back of your head, Johnny!'"
+          },
+          {
+            "id": 30103,
+            "question": "What phrase did all the friends shout together when Johnny dropped his phone during the video call?",
+            "options": [
+              "'Use your hands!'",
+              "'Waste not, want not!'",
+              "'Keep fit!'",
+              "'Look out!'"
+            ],
+            "correct": 0,
+            "explanation": "Page 81: Marcus asked 'Why didn't you catch it, Johnny?' and they all shouted: 'Use your hands!'"
+          }
+        ],
+        3011: [
+          {
+            "id": 30111,
+            "question": "What four materials are needed to make the recycled bottle pencil case on page 85?",
+            "options": [
+              "Two plastic bottles, a zipper fastener, scissors, and glue",
+              "Glass jars, string, wax, and paint",
+              "Cardboard tubes, paper clips, ruler, and ink",
+              "Tin cans, hammer, nails, and wire"
+            ],
+            "correct": 0,
+            "explanation": "Page 85: 'You will need: two plastic bottles, a fastener, scissors, glue.'"
+          },
+          {
+            "id": 30112,
+            "question": "What is the amazing visitor house on page 83 made of?",
+            "options": [
+              "4,000 recycled glass bottles",
+              "100 plastic cups",
+              "Old cardboard tubes",
+              "Recycled newspapers"
+            ],
+            "correct": 0,
+            "explanation": "Page 83: 'This is a small house for people to visit. It is made from 4,000 glass bottles!'"
+          },
+          {
+            "id": 30113,
+            "question": "What is the first step in creating the plastic bottle pencil case?",
+            "options": [
+              "Use scissors to cut the top off each bottle so one is tall and one is short",
+              "Zip the two bottles together immediately",
+              "Fill the bottles with water and glue",
+              "Decorate the outside with paper clips"
+            ],
+            "correct": 0,
+            "explanation": "Page 85: 'Step 1: Use the scissors to cut the top off each bottle so that one stays long and the other is short.'"
+          }
+        ],
         // الوحدة 6: المهن والوظائف (Unit 6: Jobs and Occupations)
         2981: [
           {

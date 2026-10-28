@@ -1,9 +1,6 @@
-// ----------------------------------------------------
-// قاعدة بيانات المنهج الدراسي وقواعد اللغة والبطاقات المصورة
-// النظام التعليمي التفاعلي الشامل (Comprehensive Interactive Educational System)
-// الإصدار المعتمد: v3.0.0 - إنجاز وتدشين الوحدة السادسة (المهن والوظائف)
-// إعداد وتطوير: المهندس أسامة خليل هاشم
-// ----------------------------------------------------
+// Curriculum Data for English for Iraq - 2nd Intermediate
+// Comprehensive Educational System - إعداد المهندس أسامة خليل هاشم
+// Updated for Unit 7 Complete Delivery (v3.1.0)
 
 window.CURRICULUM_DATA = [
   {
@@ -873,124 +870,148 @@ window.CURRICULUM_DATA = [
   {
     "id": 196,
     "title": "الوحدة 7: العالم من حولنا والبيئة (Unit 7: The World Around Us)",
-    "description": "صفحات 71 - 84",
+    "description": "صفحات 71 - 85",
     "lessons": [
       {
-        "id": 305,
-        "title": "Lesson 1: World Problems (مشاكل التلوث والبيئة)",
-        "summary": "صفحة 71 - 73",
+        "id": 3001,
+        "title": "Lesson 1: World Problems & Headlines (مشاكل العالم البيئية وعناوين الصحف العالمية)",
+        "summary": "صفحة 71",
         "chunks": [
           {
-            "id": 558,
+            "id": 30011,
             "page": 71,
-            "heading": "Unit AB 102-103 Lesson 1: World problems Read the newspaper headlines from around the world and match them to the photographs. Brazil More and more of the rainforest being destroyed Kenya Sixteen elephants found dead Egypt Population reaches 100 million Japan Air pollution a danger to young and old, doctor warns France Litter drowns town! a Talk about the questions. What do you know about the problems in the newspaper headlines? • Do you know the reasons for them? What can we do about them? Waste trom factory DOIlutes town's water supply Headlines Newspaper headlines-are usually not complete sentences. Which words are missing? The world around us unit 7 71",
-            "text": "Unit AB 102-103 Lesson 1: World problems Read the newspaper headlines from around the world and match them to the photographs. Brazil More and more of the rainforest being destroyed Kenya Sixteen elephants found dead Egypt Population reaches 100 million Japan Air pollution a danger to young and old, doctor warns France Litter drowns town! a Talk about the questions. What do you know about the problems in the newspaper headlines? • Do you know the reasons for them? What can we do about them? Waste trom factory DOIlutes town's water supply Headlines Newspaper headlines-are usually not complete sentences. Which words are missing? The world around us unit 7 71"
-          },
+            "heading": "Unit 7 Lesson 1: World problems & Environmental Headlines - مشاكل العالم وعناوين الأخبار (صفحة 71)",
+            "text": "Unit 7: The world around us - Lesson 1: World problems\nRead the newspaper headlines from around the world and match them to the photographs:\n\n1. Brazil:\n\"More and more of the rainforest being destroyed\"\n(Scientists warn that massive clearing of Amazon trees threatens global weather patterns and releases carbon.)\n\n2. Kenya:\n\"Sixteen elephants found dead\"\n(Park rangers discovered elephants killed by illegal poachers hunting for valuable ivory tusks.)\n\n3. Egypt:\n\"Population reaches 100 million\"\n(The nation's population crosses the 100 million milestone, increasing demand for housing, food and water.)\n\n4. Japan:\n\"Air pollution a danger to young and old, doctor warns\"\n(Harmful emissions from motor vehicles and manufacturing plants cause respiratory illnesses in urban centres.)\n\n5. France:\n\"Litter drowns town!\"\n(Excessive packaging and domestic waste accumulate on streets and parks after municipal disposal problems.)\n\n6. Water pollution:\n\"Waste from factory pollutes town's water supply\"\n(Toxic chemical discharges from local industrial facilities contaminate drinking water and kill river fish.)\n\nTalk about the questions:\n• What do you know about the problems in the newspaper headlines?\n• Do you know the reasons for them?\n• What can we do about them?\n\nGrammar & Headline Language Features (خصائص لغة العناوين الصحفية):\nNewspaper headlines are usually not complete sentences:\n• Auxiliary verbs (is, are, was, were) and articles (a, an, the) are omitted to save space and attract attention:\n  - Headline: \"World getting warmer, scientists say.\"\n    Full sentence: \"The world is getting warmer, scientists say.\"\n  - Headline: \"Sixteen elephants found dead.\"\n    Full sentence: \"Sixteen elephants were found dead.\"\n  - Headline: \"Litter drowns town!\"\n    Full sentence: \"Litter is drowning the town!\""
+          }
+        ]
+      },
+      {
+        "id": 3002,
+        "title": "Lesson 2: How can we help? (كيف يمكننا المساعدة؟ السوق الخيري المدرسي ودعم التعليم)",
+        "summary": "صفحة 72",
+        "chunks": [
           {
-            "id": 559,
+            "id": 30021,
             "page": 72,
-            "heading": "AB 104-105 Unit Lesson 2: How can we help? Sara was very upset when she read the article. Read it and find out why. Send a child to school for 100 dollars! n many African countries, people have to pay to go to school. 1 Unfortunately, many parents are too poor to do this, so their children must go without education. This is very bad for their future and for the future of their country. In some countries, just 100 dollars can pay for one child to go to school for a year. O Listen and read. What did Sara and her friends decide to do? Noora Sara Dalia Layla Dalia Layla Noora Sara Dalia Layla Noora Sara Dalia Layla We should do something. No. We must do something. But what? We must collect money to send some children to school. I know! Let's have a bring-and-buy sale. What's that? Everyone brings something to be sold. And everyone buys something. That's a great idea. We can advertise it in the school magazine. Wonderful! I have some CDs. I'll bring those. I can help. I'll bring some plants. I grow them in our garden. And I have lots of clothes. I'll bake some cakes. Wait! Wait! Where are we going to have this sale? In the school playground, I hope. Let's go and ask the headmistress. Good idea. should and must We use should to give advice. Example: You should work harder. You'll get better marks in your exam. Must is stronger than should. It means have to or have got to. Example: You must work harder. If you don't, you'll fail your exam. Find examples of •must' on the page. 72 Unit 7 The world around us",
-            "text": "AB 104-105 Unit Lesson 2: How can we help? Sara was very upset when she read the article. Read it and find out why. Send a child to school for 100 dollars! n many African countries, people have to pay to go to school. 1 Unfortunately, many parents are too poor to do this, so their children must go without education. This is very bad for their future and for the future of their country. In some countries, just 100 dollars can pay for one child to go to school for a year. O Listen and read. What did Sara and her friends decide to do? Noora Sara Dalia Layla Dalia Layla Noora Sara Dalia Layla Noora Sara Dalia Layla We should do something. No. We must do something. But what? We must collect money to send some children to school. I know! Let's have a bring-and-buy sale. What's that? Everyone brings something to be sold. And everyone buys something. That's a great idea. We can advertise it in the school magazine. Wonderful! I have some CDs. I'll bring those. I can help. I'll bring some plants. I grow them in our garden. And I have lots of clothes. I'll bake some cakes. Wait! Wait! Where are we going to have this sale? In the school playground, I hope. Let's go and ask the headmistress. Good idea. should and must We use should to give advice. Example: You should work harder. You'll get better marks in your exam. Must is stronger than should. It means have to or have got to. Example: You must work harder. If you don't, you'll fail your exam. Find examples of •must' on the page. 72 Unit 7 The world around us"
-          },
+            "heading": "Unit 7 Lesson 2: How can we help? - السوق الخيري لمساعدة التعليم وقاعدة should و must (صفحة 72)",
+            "text": "Unit 7 Lesson 2: How can we help?\nSara was very upset when she read the article. Read it and find out why:\n\n\"Send a child to school for 100 dollars!\nIn many African countries, people have to pay to go to school. Unfortunately, many parents are too poor to do this, so their children must go without education. This is very bad for their future and for the future of their country. In some countries, just 100 dollars can pay for one child to go to school for a whole year.\"\n\nDialogue - Sara and her friends decide to act:\nNoora: We should do something.\nSara: No. We must do something!\nDalia: But what?\nLayla: We must collect money to send some children to school.\nDalia: I know! Let's have a bring-and-buy sale.\nLayla: What's that?\nNoora: Everyone brings something to be sold. And everyone buys something.\nSara: That's a great idea. We can advertise it in the school magazine.\nDalia: Wonderful! I have some CDs. I'll bring those.\nLayla: I can help. I'll bring some plants. I grow them in our garden.\nNoora: And I have lots of clothes.\nSara: I'll bake some cakes.\nDalia: Wait! Wait! Where are we going to have this sale?\nLayla: In the school playground, I hope. Let's go and ask the headmistress.\nNoora: Good idea.\n\nGrammar Focus - should and must:\n1. Should (نصيحة - Advice):\n   • We use 'should' to give advice to someone:\n     - Example: You should work harder. You'll get better marks in your exam.\n     - Negative: You shouldn't eat that. It's not good for you.\n2. Must (إلزام وواجب قاطع - Strong Obligation / Rule):\n   • 'Must' is much stronger than 'should'. It means 'have to' or 'have got to':\n     - Example: You must work harder. If you don't, you'll fail your exam.\n     - Negative (نهي وتحريم): You mustn't throw litter in the street.\n3. Making Offers with 'I will / I'll':\n   • Spontaneous decisions and voluntary offers:\n     - I'll bring some plants.\n     - I'll bake some cakes.\n     - I'll bring my old camera."
+          }
+        ]
+      },
+      {
+        "id": 3003,
+        "title": "Lesson 3: Animals in Danger - Part A (حيوانات في خطر الانقراض وأسباب التهديد البيئي)",
+        "summary": "صفحة 73",
+        "chunks": [
           {
-            "id": 560,
+            "id": 30031,
             "page": 73,
-            "heading": "AB 106-107 Unit Lesson 3: Animals in danger (Part A) O Read about the animals and find two reasons why they are in danger. Snow leopard The fur of this beautiful animal is grey with biggish black spots and much smaller spots. Nobody knows exactly how many there are, but there are hunted for its horns. They are 70 to 140 centimetres long. Its coat is reddish brown to greyish brown. If it's not protected, it'll soon disappear. very few. It's hunted for its fur. Golden toad The male is bright gold in colour. The female is much darker. People are draining water from the places where they live. When the water goes completely, the golden toad will disappear. Blue whale This is the largest animal alive today. It's 29 metres long. Whales were hunted for their oil and almost disappeared. Now they're protected. Polar bear Polar bears live on sea ice in one of the coldest environments on Earth. Their white coat is very thick and covers a lot of fat which keeps them warm. Polar bears were hunted for the fur, but now they're in more danger because the sea ice is melting as a result of climate change. The world around us Unit 7 73",
-            "text": "AB 106-107 Unit Lesson 3: Animals in danger (Part A) O Read about the animals and find two reasons why they are in danger. Snow leopard The fur of this beautiful animal is grey with biggish black spots and much smaller spots. Nobody knows exactly how many there are, but there are hunted for its horns. They are 70 to 140 centimetres long. Its coat is reddish brown to greyish brown. If it's not protected, it'll soon disappear. very few. It's hunted for its fur. Golden toad The male is bright gold in colour. The female is much darker. People are draining water from the places where they live. When the water goes completely, the golden toad will disappear. Blue whale This is the largest animal alive today. It's 29 metres long. Whales were hunted for their oil and almost disappeared. Now they're protected. Polar bear Polar bears live on sea ice in one of the coldest environments on Earth. Their white coat is very thick and covers a lot of fat which keeps them warm. Polar bears were hunted for the fur, but now they're in more danger because the sea ice is melting as a result of climate change. The world around us Unit 7 73"
+            "heading": "Unit 7 Lesson 3: Animals in danger (Part A) - خمسة حيوانات مهددة بالانقراض (صفحة 73)",
+            "text": "Unit 7 Lesson 3: Animals in danger (Part A)\nRead about the animals and find two reasons why they are in danger:\n\n1. Snow leopard (نمر الثلوج):\nThe fur of this beautiful animal is grey with biggish black spots and much smaller spots. Nobody knows exactly how many there are, but there are very few. It is hunted for its luxurious fur. It lives in high, cold mountain ranges.\n\n2. Wild Ibex / Mountain Horned Goat (الوعل الجبلي البري):\nHunted for its impressive, sweeping horns which measure between 70 to 140 centimetres long. Its coat is reddish brown to greyish brown. If it is not protected immediately by strict laws, it will soon disappear forever.\n\n3. Golden toad (الضفدع الذهبي):\nThe male toad is brilliant bright gold in colour, while the female is much darker. People are draining water from the wetlands where they live and breed. When the water goes completely, the golden toad will disappear.\n\n4. Blue whale (الحوت الأزرق العملاق):\nThis is the largest animal alive today, reaching up to 29 metres in length. Blue whales were hunted heavily in the past for their valuable whale oil and blubber, and almost became extinct. Now they are protected by international conservation laws.\n\n5. Polar bear (الدب القطبي):\nPolar bears live on sea ice in the Arctic, one of the coldest environments on Earth. Their thick white coat covers a dense layer of insulating body fat which keeps them warm. In the past, polar bears were hunted for their thick fur. Today, they face greater danger because the Arctic sea ice is melting rapidly as a direct result of global climate change."
           }
         ]
       },
       {
-        "id": 306,
-        "title": "Lesson 2: Rules with (must / mustn't & should / shouldn't)",
-        "summary": "صفحة 74 - 76",
+        "id": 3004,
+        "title": "Lesson 4: Animals in Danger - Part B & Habitats (مواطن الحيوانات الطبيعية والتعبير عن الاتفاق والاختلاف)",
+        "summary": "صفحة 74",
         "chunks": [
           {
-            "id": 561,
+            "id": 30041,
             "page": 74,
-            "heading": "AB 108-109 Unit Lesson 4: Animals in danger (Part B) O Which animals were killed to make three things in the room? What do you think Agreeing I agree. You're right. Disagreeing I disagree. I think you're wrong. Look at the photographs. Where do you think the animals from Lesson 3 live? Why? I agree. I think you're right. Wetlands High, cold mountains 74 I think the golden toads live in the wetlands. Toads live near water. Sea Desert Unit 7 The world around us 2 Mountain forest 5 Arctic 3 6",
-            "text": "AB 108-109 Unit Lesson 4: Animals in danger (Part B) O Which animals were killed to make three things in the room? What do you think Agreeing I agree. You're right. Disagreeing I disagree. I think you're wrong. Look at the photographs. Where do you think the animals from Lesson 3 live? Why? I agree. I think you're right. Wetlands High, cold mountains 74 I think the golden toads live in the wetlands. Toads live near water. Sea Desert Unit 7 The world around us 2 Mountain forest 5 Arctic 3 6"
-          },
+            "heading": "Unit 7 Lesson 4: Animals in danger (Part B) - البيئات الطبيعية والتعبير عن الرأي والاتفاق (صفحة 74)",
+            "text": "Unit 7 Lesson 4: Animals in danger (Part B)\nLook at the photographs. Where do you think the animals from Lesson 3 live? Why?\n\nNatural Habitats (البيئات الطبيعية):\n1. Wetlands (المستنقعات والأراضي الرطبة) - Golden toad lives near shallow freshwater and marshes.\n2. High, cold mountains (الجبال الشاهقة الباردة) - Snow leopards and mountain goats climb rocky cliffs.\n3. Sea / Oceans (البحار والمحيطات) - Blue whales migrate across deep marine waters.\n4. Desert (الصحراء القاحلة) - Lizards, camels, and desert foxes adapted to arid heat.\n5. Mountain forest (الغابات الجبلية) - Dense trees sheltering birds and mammals.\n6. Arctic (المنطقة القطبية المتجمدة) - Endless frozen sea ice, hunting ground of the polar bear.\n\nWhich animals were killed to make products in luxury rooms?\n• Leopard fur coats and rugs (Snow leopard)\n• Mounted horn trophies and ornaments (Wild Ibex)\n• Whale oil lamps and cosmetics (Blue whale)\n\nExpressing Agreement & Disagreement (التعبير عن الاتفاق والاختلاف في المحادثة):\n• Agreeing (الموافقة والتأييد):\n  - I agree.\n  - You're right.\n  - I think you're right.\n  - Example: \"I think golden toads live in wetlands.\" -> \"I agree. You're right. Toads always live near water.\"\n• Disagreeing (الاعتراض والاختلاف المهذب):\n  - I disagree.\n  - I think you're wrong.\n  - Example: \"Polar bears live in warm desert areas.\" -> \"I disagree. I think you're wrong. They live on Arctic sea ice.\""
+          }
+        ]
+      },
+      {
+        "id": 3005,
+        "title": "Lesson 5: Please keep the rivers clean! (حماية مياه الأنهار في العراق: دجلة والفرات)",
+        "summary": "صفحة 75",
+        "chunks": [
           {
-            "id": 562,
+            "id": 30051,
             "page": 75,
-            "heading": "AB 110-111 Unit Lesson 5: Please keep the rivers clean A B Read the text and match the paragraphs to the topics. a What needs to be done b Water in Iraq c The solution d Water pollution in rivers 1 Iraq, with its two great rivers running the length of the country, is unable to provide drinking water for most of its people. There are a lot fewer fish than there were before. 2 The two rivers are polluted with sewage, rubbish and industrial waste. Millions of tonnes of waste go into the rivers and streams every year. This destroys the natural habitats of the wildlife and damages our beautiful rivers. It also causes huge damage to health. 3 The river water must be safe for drinking, fishing, swimming and boating. We can make our rivers safer 4 and healthier for wildlife and people. In fact, everyone should do something to keep the rivers clean. First, we must stop littering. We can make teams of volunteers to pick up the rubbish along the banks. The river will clean itself if we stop littering. Then, we can also lead river clean-up efforts. People can force the government to do something to stop sewage and waste from factories, hospitals and power stations flowing into the rivers. Remember - you are the solution to river pollution. If we want to have clean rivers, we must have clean minds. Find words in the text that match the definitions. • a person who does a job without pay • to drop rubbish • to add harmful things to water, etc. • places where animals live The world around us unit 7 75",
-            "text": "AB 110-111 Unit Lesson 5: Please keep the rivers clean A B Read the text and match the paragraphs to the topics. a What needs to be done b Water in Iraq c The solution d Water pollution in rivers 1 Iraq, with its two great rivers running the length of the country, is unable to provide drinking water for most of its people. There are a lot fewer fish than there were before. 2 The two rivers are polluted with sewage, rubbish and industrial waste. Millions of tonnes of waste go into the rivers and streams every year. This destroys the natural habitats of the wildlife and damages our beautiful rivers. It also causes huge damage to health. 3 The river water must be safe for drinking, fishing, swimming and boating. We can make our rivers safer 4 and healthier for wildlife and people. In fact, everyone should do something to keep the rivers clean. First, we must stop littering. We can make teams of volunteers to pick up the rubbish along the banks. The river will clean itself if we stop littering. Then, we can also lead river clean-up efforts. People can force the government to do something to stop sewage and waste from factories, hospitals and power stations flowing into the rivers. Remember - you are the solution to river pollution. If we want to have clean rivers, we must have clean minds. Find words in the text that match the definitions. • a person who does a job without pay • to drop rubbish • to add harmful things to water, etc. • places where animals live The world around us unit 7 75"
-          },
+            "heading": "Unit 7 Lesson 5: Please keep the rivers clean - نظافة أنهار العراق والحلول البيئية (صفحة 75)",
+            "text": "Unit 7 Lesson 5: Please keep the rivers clean\nRead the text and match the paragraphs to the topics:\n\nParagraph 1: Water in Iraq (واقع المياه في العراق):\nIraq, with its two great rivers running the length of the country (the Tigris and Euphrates), is unable to provide clean drinking water for most of its people. There are a lot fewer fish than there were before.\n\nParagraph 2: Water pollution in rivers (أسباب تلوث الأنهار ومخاطره):\nThe two rivers are polluted with untreated sewage, rubbish and industrial waste. Millions of tonnes of waste go into the rivers and streams every year. This destroys the natural habitats of wildlife and damages our beautiful rivers. It also causes huge damage to public health and spreads diseases.\n\nParagraph 3: What needs to be done (ما يجب فعله):\nThe river water must be safe for drinking, fishing, swimming and boating. We can make our rivers safer and healthier for wildlife and people. In fact, everyone should do something to keep the rivers clean.\n\nParagraph 4: The solution (الحل العملي):\nFirst, we must stop littering. We can make teams of volunteers to pick up rubbish along the banks. The river will clean itself if we stop littering! Then, we can also lead river clean-up efforts. People can force the government to do something to stop sewage and waste from factories, hospitals and power stations flowing into the rivers.\nRemember: You are the solution to river pollution! If we want to have clean rivers, we must have clean minds!\n\nVocabulary Definitions:\n• volunteer (متطوع): a person who does a job or service willingly without pay.\n• litter (قمامة / يرمي قمامة): to drop rubbish carelessly on the ground; discarded waste.\n• pollute (يلوث): to add harmful and toxic chemicals to water, air or soil.\n• habitat (موطن طبيعي): the natural environment where an animal or plant normally lives."
+          }
+        ]
+      },
+      {
+        "id": 3006,
+        "title": "Lesson 6: A warmer world (عالم أكثر دفئاً: الاحتباس الحراري وقاعدة may و might)",
+        "summary": "صفحة 76",
+        "chunks": [
           {
-            "id": 563,
+            "id": 30061,
             "page": 76,
-            "heading": "AB 112-113 Unit Lesson 6: A warmer world heat Sun What does the picture tell you? Earth Earth's atmosphere Read an interview with a scientist. Find some results of a warmer world. Is the world getting Yes, it is. is this happening? There may be other causes, but it's mainly our fault. Why is it our fault? We're buming fuels like coal, gas, oil and wood. And we're driving cars. I don t understand. All these produce gases that trap heat in the Earth's atmosphere. If the world gets warner, what will happen? The ice caps will melt, so the sea level will rise. This means some land will disappear. Also, it's possible that the weather will change. In what way? We might have hotter summers and wetter winters. In some hot countries, there may be less rain, and some farmland might become desert. Will all this happen soon? Some things are already happening, but others may take 30 or 40 years. Can we stop it happening? We can if we want to. What can be done to stop the world getting warmer? Do you think it should be done? Do you think it will be done? may and might We use may and might to say there is a chance that something is true or that it is possible something will happen. Both are used to talk about the present or future. Might is less certain than may. Examples: I may not be at school tomorrow. 76 It might be too windy to go sailing this afternoon. Unit 7 The world around us",
-            "text": "AB 112-113 Unit Lesson 6: A warmer world heat Sun What does the picture tell you? Earth Earth's atmosphere Read an interview with a scientist. Find some results of a warmer world. Is the world getting Yes, it is. is this happening? There may be other causes, but it's mainly our fault. Why is it our fault? We're buming fuels like coal, gas, oil and wood. And we're driving cars. I don t understand. All these produce gases that trap heat in the Earth's atmosphere. If the world gets warner, what will happen? The ice caps will melt, so the sea level will rise. This means some land will disappear. Also, it's possible that the weather will change. In what way? We might have hotter summers and wetter winters. In some hot countries, there may be less rain, and some farmland might become desert. Will all this happen soon? Some things are already happening, but others may take 30 or 40 years. Can we stop it happening? We can if we want to. What can be done to stop the world getting warmer? Do you think it should be done? Do you think it will be done? may and might We use may and might to say there is a chance that something is true or that it is possible something will happen. Both are used to talk about the present or future. Might is less certain than may. Examples: I may not be at school tomorrow. 76 It might be too windy to go sailing this afternoon. Unit 7 The world around us"
+            "heading": "Unit 7 Lesson 6: A warmer world - أسباب ونتائج الاحتباس الحراري وقاعدة may و might (صفحة 76)",
+            "text": "Unit 7 Lesson 6: A warmer world\nRead an interview with an environmental scientist and discover the causes and results of global warming:\n\nQ: Is the world getting warmer?\nScientist: Yes, it is.\n\nQ: Why is this happening?\nScientist: There may be other causes, but it is mainly our fault!\n\nQ: Why is it our fault?\nScientist: We are burning fossil fuels like coal, gas, oil and wood. And we are driving millions of petrol-burning cars.\n\nQ: I don't understand.\nScientist: All of these activities produce greenhouse gases that trap heat in the Earth's atmosphere, acting like a blanket around the planet.\n\nQ: If the world gets warmer, what will happen?\nScientist: The polar ice caps will melt, so the sea level will rise. This means low-lying land and coastal areas will disappear underwater. Also, it is possible that global weather will change drastically.\n\nQ: In what way?\nScientist: We might have much hotter summers and wetter, stormier winters. In some hot countries, there may be less rain, and fertile farmland might become barren desert.\n\nQ: Will all this happen soon?\nScientist: Some things are already happening today, but others may take 30 or 40 years.\n\nQ: Can we stop it happening?\nScientist: We can if we want to! We must act now to reduce carbon emissions and adopt clean energy.\n\nGrammar Focus - may and might:\n• We use 'may' and 'might' to say there is a chance that something is true or that it is possible something will happen.\n• Both express possibility in the present or future and are followed by the infinitive without 'to':\n  - Formula: Subject + may / might + Base Verb\n• Difference in certainty:\n  - 'May' expresses a good possibility (50% likelihood): \"There may be less rain.\"\n  - 'Might' expresses a weaker possibility / less certain (30-40% likelihood): \"Farmland might become desert.\"\n• Examples:\n  - I may not be at school tomorrow.\n  - It might be too windy to go sailing this afternoon.\n  - We might turn parts of the desert into green zones if we plant trees."
           }
         ]
       },
       {
-        "id": 307,
-        "title": "Lesson 3: Possibility with (may and might)",
-        "summary": "صفحة 77 - 79",
+        "id": 3007,
+        "title": "Lesson 7: Throwing things away (وقف هدر الموارد وصيغ النهي والتوجيه البيئي)",
+        "summary": "صفحة 77",
         "chunks": [
           {
-            "id": 564,
+            "id": 30071,
             "page": 77,
-            "heading": "AB 15 Unit Lesson 7: Throwing things away Look at the pictures and answer the questions. The people in the pictures are being wasteful. What reasons do you think they give? What do you think a careful person says to each of them? O NOW listen and check your ideas. Tell the people what to do. Don't drop litter in the street! throw/out Of your car drop/in the park leave/on the beach The world around us Unit 7 77",
-            "text": "AB 15 Unit Lesson 7: Throwing things away Look at the pictures and answer the questions. The people in the pictures are being wasteful. What reasons do you think they give? What do you think a careful person says to each of them? O NOW listen and check your ideas. Tell the people what to do. Don't drop litter in the street! throw/out Of your car drop/in the park leave/on the beach The world around us Unit 7 77"
-          },
+            "heading": "Unit 7 Lesson 7: Throwing things away - محاربة التبذير وصيغ الأمر والنهي (صفحة 77)",
+            "text": "Unit 7 Lesson 7: Throwing things away\nThe people in these situations are being wasteful. What reasons do they give, and what should a careful person say?\n\nSituation 1: Food Waste (Tamara and her Father):\n• Father: Tamara! You haven't finished your food!\n• Tamara: Yes, I have, Dad.\n• Father: No, you haven't. Just look at all that food left on your plate!\n• Tamara: I can't eat it. I took too much.\n• Father: That's so wasteful, Tamara. Millions of people around the world are hungry. Think of them next time!\n\nSituation 2: Water Waste (James and his Mother):\n• Mother: James, you're wasting clean water!\n• James: No, I'm not. I'm just brushing my teeth.\n• Mother: But you don't need to keep the tap running all the time! It's very wasteful.\n• James: But we have plenty of water.\n• Mother: Yes, we have now, but we may not always have plenty. Turn the tap off!\n\nSituation 3: Electricity Waste (Nasser and Kamal):\n• Kamal: Nasser, I thought your house was on fire!\n• Nasser: On fire! Why?\n• Kamal: There are bright lights blazing everywhere in every room!\n• Nasser: Yes, isn't it lovely?\n• Kamal: No, I don't think it is. I think it's terrible to waste electricity like this. You should switch most of them off. Remember the proverb: \"Waste not, want not!\"\n\nEnvironmental Imperatives & Directives (صيغ الأمر والنهي لحماية البيئة):\n• Direct Negative Imperatives (صيغ النهي والمنع بـ Don't):\n  - Don't drop litter in the street!\n  - Don't throw rubbish out of your car window!\n  - Don't leave plastic bags and bottles on the beach!\n  - Don't leave the tap running while brushing your teeth!\n• Positive Imperatives (صيغ الأمر والتوجيه بالفعل المجرد):\n  - Put all rubbish in the bin!\n  - Turn off the water tap!\n  - Switch off the lights when you leave the room!"
+          }
+        ]
+      },
+      {
+        "id": 3008,
+        "title": "Lesson 8: The moving desert (الصحراء المتحركة ومكافحة التصحر في العراق)",
+        "summary": "صفحة 78",
+        "chunks": [
           {
-            "id": 565,
+            "id": 30081,
             "page": 78,
-            "heading": "n 116-117 Unit Lesson 8: The moving desert Read the newspaper article and answer the questions. 1 What are the main causes of the moving desert? 2 What is the good news? THE MOVING DESERT The moving desert is a danger from which many countries around the world suffer. It is caused by social, political, economic or natural factors. It harms both the environment and the people who live there. It damages all aspects of life and is a challenge to many in Iraq. Thousands of donams* in Iraq are lost every year as a result of the moving desert. This causes many problems to the environment, the economy and society. Moving sand dunes are one of these problems. Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone. Many fertile areas have disappeared. The desert is moving and expanding. This is happening in AI Anbar, west Talk about the questions. Karbala, west Muthanna, west Nasiriya and west Basra. One way to stop the moving desert in Iraq is to start 'green belt' projects. There are two projects already, in west Al Anbar and west Karbala. The marshes in the south were drained in the 1 990s, and very few plants survived. The wetlands turned into dust, which moves when it is blown by the wind - a moving desert. Today, the marshlands tell a different story, and the picture is improving. Fresh water now flows into some of the dry areas, and as a result, the wildlife is beginning to return. Much of the land is now covered with water, as it was many years ago. • A donam is a unit of land area equivalent to 2.500 rn2. 78 • What do you think will happen if people don't do anything? • What happens to the wildlife when the desert moves? • Think of more 'green belt' projects. What else would help? Unit 7 The world around us",
-            "text": "n 116-117 Unit Lesson 8: The moving desert Read the newspaper article and answer the questions. 1 What are the main causes of the moving desert? 2 What is the good news? THE MOVING DESERT The moving desert is a danger from which many countries around the world suffer. It is caused by social, political, economic or natural factors. It harms both the environment and the people who live there. It damages all aspects of life and is a challenge to many in Iraq. Thousands of donams* in Iraq are lost every year as a result of the moving desert. This causes many problems to the environment, the economy and society. Moving sand dunes are one of these problems. Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone. Many fertile areas have disappeared. The desert is moving and expanding. This is happening in AI Anbar, west Talk about the questions. Karbala, west Muthanna, west Nasiriya and west Basra. One way to stop the moving desert in Iraq is to start 'green belt' projects. There are two projects already, in west Al Anbar and west Karbala. The marshes in the south were drained in the 1 990s, and very few plants survived. The wetlands turned into dust, which moves when it is blown by the wind - a moving desert. Today, the marshlands tell a different story, and the picture is improving. Fresh water now flows into some of the dry areas, and as a result, the wildlife is beginning to return. Much of the land is now covered with water, as it was many years ago. • A donam is a unit of land area equivalent to 2.500 rn2. 78 • What do you think will happen if people don't do anything? • What happens to the wildlife when the desert moves? • Think of more 'green belt' projects. What else would help? Unit 7 The world around us"
-          },
+            "heading": "Unit 7 Lesson 8: The moving desert - زحف الرمال ومشاريع الحزام الأخضر وإحياء الأهوار (صفحة 78)",
+            "text": "Unit 7 Lesson 8: The moving desert\nRead the newspaper article about environmental challenges in Iraq:\n\n\"THE MOVING DESERT\nThe moving desert is a danger from which many countries around the world suffer. It is caused by social, political, economic or natural factors. It harms both the environment and the people who live there. It damages all aspects of life and is a challenge to many in Iraq.\n\nThousands of donams* in Iraq are lost every year as a result of the moving desert. This causes many problems to the environment, the economy and society. Moving sand dunes are one of these problems. Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone.\n\nMany fertile agricultural areas have disappeared. The desert is moving and expanding rapidly. This is happening in Al Anbar, west Karbala, west Muthanna, west Nasiriya and west Basra.\n\nOne way to stop the moving desert in Iraq is to start 'green belt' projects (planting rows of trees). There are two projects already established, in west Al Anbar and west Karbala.\n\nThe marshes in southern Iraq were drained in the 1990s, and very few plants survived. The lush wetlands turned into dry dust, which moves when it is blown by the wind - creating a moving desert. Today, the marshlands tell an inspiring story, and the picture is improving. Fresh water now flows into some of the dry areas, and as a result, wildlife is beginning to return. Much of the land is now covered with water, as it was many years ago.\"\n\n(*Note: A donam is a traditional Iraqi unit of land area equivalent to 2,500 square metres.)\n\nCritical Thinking Questions:\n• What are the main causes of the moving desert in Iraq? (Low rainfall, tree cutting, sand dunes, oil well fires).\n• What is the good news mentioned in the article? (The return of fresh water and wildlife to the southern Iraqi marshes, and green belt projects in Al Anbar and Karbala)."
+          }
+        ]
+      },
+      {
+        "id": 3009,
+        "title": "Lesson 9: Unit 7 Round Up (المراجعة الشاملة لمهارات وقواعد الوحدة السابعة)",
+        "summary": "صفحة 79",
+        "chunks": [
           {
-            "id": 566,
+            "id": 30091,
             "page": 79,
-            "heading": "AB 118 Unit 7 Round up O In this unit, you have practised: Reading headlines and understanding their form World getting warmer, 'The world is getting warmer,' scientists say. scientists say Sixteen elephants found dead Sixteen elephants were found dead. 2 3 4 5 6 Using should and must We should do something to help poor children in Africa. No. We must do something. We have to. Making offers I have some CDs. I'll bring these. Expressing agreement and disagreement I agree. You're right. I disagree. I think you're wrong. Describing possible future events There may be less rain. Farmland might become a desert. And you have ... I'll bring some plants. I'll bring some clothes. • • listened to conversations and written notes. talked about world problems. made conversations about a bring-and-buy sale. given orders to people who have dropped litter. read quickly to find the topics of paragraphs and to find names, then more carefully to find details. The world around us Unit 7 79",
-            "text": "AB 118 Unit 7 Round up O In this unit, you have practised: Reading headlines and understanding their form World getting warmer, 'The world is getting warmer,' scientists say. scientists say Sixteen elephants found dead Sixteen elephants were found dead. 2 3 4 5 6 Using should and must We should do something to help poor children in Africa. No. We must do something. We have to. Making offers I have some CDs. I'll bring these. Expressing agreement and disagreement I agree. You're right. I disagree. I think you're wrong. Describing possible future events There may be less rain. Farmland might become a desert. And you have ... I'll bring some plants. I'll bring some clothes. • • listened to conversations and written notes. talked about world problems. made conversations about a bring-and-buy sale. given orders to people who have dropped litter. read quickly to find the topics of paragraphs and to find names, then more carefully to find details. The world around us Unit 7 79"
+            "heading": "Unit 7 Lesson 9: Unit 7 Round Up - المراجعة التراكمية الشاملة للوحدة السابعة (صفحة 79)",
+            "text": "Unit 7 Lesson 9: Round up\nIn this unit, you have practised and mastered:\n\n1. Reading headlines and understanding their grammatical structure:\n   • Headline: \"World getting warmer, scientists say.\"\n     -> Full form: \"The world is getting warmer, scientists say.\"\n   • Headline: \"Sixteen elephants found dead.\"\n     -> Full form: \"Sixteen elephants were found dead.\"\n   • Headline: \"Waste from factory pollutes town's water supply.\"\n     -> Full form: \"Waste from a factory has polluted the town's water supply.\"\n\n2. Using 'should' and 'must':\n   • \"We should do something to help poor children in Africa.\" (giving advice/suggestion)\n   • \"No. We must do something. We have to.\" (obligation/duty)\n   • \"You must not throw litter on the street.\" (prohibition)\n\n3. Making offers with 'I will / I'll':\n   • \"I have some CDs. I'll bring these.\"\n   • \"I'll bring some plants from our garden.\"\n   • \"I'll bake delicious cakes for the sale.\"\n\n4. Expressing agreement and disagreement politely:\n   • Agreement: \"I agree.\", \"You're right.\", \"I think you're right.\"\n   • Disagreement: \"I disagree.\", \"I think you're wrong.\"\n\n5. Describing possible future events with 'may' and 'might':\n   • \"There may be less rain next summer.\"\n   • \"Farmland might become a desert if we do not protect it.\"\n   • \"If we plant trees, we may turn parts of the desert into green zones.\"\n\n6. Practical Environmental Competencies:\n   • Listening to real-world conversations and recording accurate notes.\n   • Formulating practical solutions for plastic pollution and river clean-ups.\n   • Distinguishing between renewable and non-renewable habits."
           }
         ]
       },
       {
-        "id": 308,
-        "title": "Story Time: Jad and Johnny - The Eiffel Tower",
-        "summary": "صفحة 80 - 82",
+        "id": 3010,
+        "title": "Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (وقت القصة: جاد وجوني - برج إيفل في باريس والوداع)",
+        "summary": "صفحات 80-81",
         "chunks": [
           {
-            "id": 567,
+            "id": 30101,
             "page": 80,
-            "heading": "AB119 Story Jad and Johnny - time Listen, read and find out. The Eiffel Tower I 2 3 What does Jad want to do at the Eiffel Tower? What happens at the top of the tower? Why does everyone say 'Use your hands' to Johnny? 'But it might not,' said Jad. 'I've got an idea.' He walked to the front of the queue. We saw him talking to a man, and then he waved to us. We followed him past the other people in the queue, and we all got into the lift. 'How did you do that?' I asked Jad. 'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international magazine.' 'But that's not true,' said Paolo. 'It's not true now,' said Jad. 'But it might be true in the future!' The doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded. There are so many people here!' said Marcus. We tried to get to the front, but we couldn't get past people. 80 'It's nearly time for you all to go back to your own countries. boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.' 'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip. 'That's right!' said Tom. 'Make sure you take some photographs for the magazine.' 'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!' We were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue. 'Look at all these people!' said Aziz. 'We're going to be here for hours!' 'It might move quickly,' I said. Unit 7 The world around us",
-            "text": "AB119 Story Jad and Johnny - time Listen, read and find out. The Eiffel Tower I 2 3 What does Jad want to do at the Eiffel Tower? What happens at the top of the tower? Why does everyone say 'Use your hands' to Johnny? 'But it might not,' said Jad. 'I've got an idea.' He walked to the front of the queue. We saw him talking to a man, and then he waved to us. We followed him past the other people in the queue, and we all got into the lift. 'How did you do that?' I asked Jad. 'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international magazine.' 'But that's not true,' said Paolo. 'It's not true now,' said Jad. 'But it might be true in the future!' The doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded. There are so many people here!' said Marcus. We tried to get to the front, but we couldn't get past people. 80 'It's nearly time for you all to go back to your own countries. boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.' 'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip. 'That's right!' said Tom. 'Make sure you take some photographs for the magazine.' 'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!' We were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue. 'Look at all these people!' said Aziz. 'We're going to be here for hours!' 'It might move quickly,' I said. Unit 7 The world around us"
-          },
-          {
-            "id": 568,
-            "page": 81,
-            "heading": "Jad and Johnny - The Eiffel Tower 'Excuse me,' I said. But nobody moved. 'Can I get past, please?' said Jad. But nobody moved. He held his camera up high to take photographs. Then some people in the crowd turned around and started walking towards us. We turned around, too, and we were back in the lift. 'Wait!' I said. 'We haven't seen anything yet!' But the doors of the lift closed, and we started to go back down again. At the bottom of the tower, Jad looked at his photographs. 'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. All I can see is the back of your head, Johnny!' I laughed, too. 'I'm going to miss you, Jad,' I said. Jad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.' 'Great idea, Jad!' 'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' faces on the screen. 'It's not the morning here in Iraq, Johnny. It's the afternoon,' said Jad. 'It's 7 a.m. here in the USA,' said Marcus. 'You woke me up!' 'Sorry, but I wanted to check. Did Tom send you the magazine?' 'Yes!' they all replied. 'It looks great,' said Aziz. 'l love your story about Stonehenge, Johnny.' 'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!' 'The one of Johnny standing in the River Thames is good, too,' laughed Paolo. 'l think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face.' I laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor. I heard Marcus say 'Why didn't you catch it, Johnny?' And then I heard them all laughing and saying the same thing 'Use your hands!' 'Very funny, guys!' I said, and I laughed, too. The world around us Unit 7 81",
-            "text": "Jad and Johnny - The Eiffel Tower 'Excuse me,' I said. But nobody moved. 'Can I get past, please?' said Jad. But nobody moved. He held his camera up high to take photographs. Then some people in the crowd turned around and started walking towards us. We turned around, too, and we were back in the lift. 'Wait!' I said. 'We haven't seen anything yet!' But the doors of the lift closed, and we started to go back down again. At the bottom of the tower, Jad looked at his photographs. 'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. All I can see is the back of your head, Johnny!' I laughed, too. 'I'm going to miss you, Jad,' I said. Jad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.' 'Great idea, Jad!' 'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' faces on the screen. 'It's not the morning here in Iraq, Johnny. It's the afternoon,' said Jad. 'It's 7 a.m. here in the USA,' said Marcus. 'You woke me up!' 'Sorry, but I wanted to check. Did Tom send you the magazine?' 'Yes!' they all replied. 'It looks great,' said Aziz. 'l love your story about Stonehenge, Johnny.' 'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!' 'The one of Johnny standing in the River Thames is good, too,' laughed Paolo. 'l think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face.' I laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor. I heard Marcus say 'Why didn't you catch it, Johnny?' And then I heard them all laughing and saying the same thing 'Use your hands!' 'Very funny, guys!' I said, and I laughed, too. The world around us Unit 7 81"
-          },
-          {
-            "id": 569,
-            "page": 82,
-            "heading": "صفحة 82",
-            "text": "82 p Project 4: Recycling at home Read the article. ne of the biggest problems in the world today is rubbish. Countries and cities around the world have to deal with mountains of trash every day. As we know, this causes many problems for people, wildlife and our environment. ight now, there are many ways you can - reduce the amount of rubbish you and your family make. For example, you can use paper carefully and write on both sides. Try to use plastic bottles again. How can you use old newspapers? What about old clothes? Think before you throw things in the bin! Project 4 Recycling at home"
+            "heading": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower - مغامرة باريس وبرج إيفل (صفحات 80-81)",
+            "text": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (Part 1 - At the Eiffel Tower)\n\n'It's nearly time for you all to go back to your own countries, boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.'\n'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip.\n'That's right!' said Tom. 'Make sure you take some photographs for the magazine.'\n'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!'\n\nWe were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue.\n'Look at all these people!' said Aziz. 'We're going to be here for hours!'\n'It might move quickly,' I said.\n'But it might not,' said Jad. 'I've got an idea.'\nHe walked boldly to the front of the queue. We saw him talking politely to a man, and then he turned and waved to us! We followed him past the other people in the queue, and we all stepped into the lift.\n\n'How did you do that?' I asked Jad in amazement.\n'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international youth magazine!'\n'But that's not true!' said Paolo.\n'It's not true now,' smiled Jad. 'But it might be true in the future!'\n\nThe doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded.\n'There are so many people here!' said Marcus. We tried to get to the front railing, but we couldn't get past people.\n'Excuse me,' I said. But nobody moved.\n'Can I get past, please?' said Jad. But nobody moved.\nJad held his camera up high above the crowd to take photographs. Then suddenly, some people in the crowd turned around and started walking towards us. We turned around, too, and were pushed right back into the lift!\n'Wait!' I cried. 'We haven't seen anything yet!'\nBut the doors of the lift closed, and we started going back down again!\n\nAt the bottom of the tower, Jad looked through his photographs.\n'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. 'All I can see is the back of your head, Johnny!'\nI laughed, too. 'I'm going to miss you, Jad,' I said.\nJad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.'\n'Great idea, Jad!'\n\nPart 2 - The International Video Chat:\n'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' smiling faces on the screen.\n'It's not the morning here in Iraq, Johnny. It's the afternoon,' smiled Jad.\n'It's 7 a.m. here in the USA,' yawned Marcus. 'You woke me up!'\n'Sorry, but I wanted to check. Did Tom send you the published magazine?'\n'Yes!' they all cheered.\n'It looks great,' said Aziz. 'I love your story about Stonehenge, Johnny.'\n'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!'\n'The one of Johnny standing in the River Thames is good, too,' laughed Paolo.\n'I think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face!'\nI laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor!\nI heard Marcus call out through the speaker: 'Why didn't you catch it, Johnny?'\nAnd then I heard them all laughing together and shouting the same famous phrase:\n'Use your hands!'\n'Very funny, guys!' I said, and I laughed, too."
           }
         ]
       },
       {
-        "id": 309,
-        "title": "Project 4: Recycling at Home",
-        "summary": "صفحة 83 - 84",
+        "id": 3011,
+        "title": "Lesson 11: Project 4: Recycling at home (المشروع الرابع: إعادة التدوير المنزلي وصناعة حافظة أقلام)",
+        "summary": "صفحات 82-85",
         "chunks": [
           {
-            "id": 570,
-            "page": 83,
-            "heading": "صفحة 83",
-            "text": "p Project 4: Recycling at home The items below were made using rubbish. We call this 'recycling'. Which do you think is the best idea? Give each idea a score — from 4, for the best, down to I. THE RUBBISH COMPETITION Score This is a present tag. It is made from an old piece of paper and some string. It is cut to look like a heart. This is a lampshade. It is made from plastic cups and paper clips. The paper clips hold the cups together. Score This is a toy rocket for a child. It is made from a cardboard tube and some colourful pieces of paper. This is a small house for people to visit. It is made from 4,000 glass bottles! Project 4 Recycling at home 83"
-          },
-          {
-            "id": 571,
-            "page": 84,
-            "heading": "صفحة 84",
-            "text": "p Project 4: Recycling at home What can you see in each photograph? What is it made of? Is it useful? useful not useful Tks iS a useful useful not useful not useful useful not useful f 84 Project 4 Recycling at home"
+            "id": 30111,
+            "page": 82,
+            "heading": "Unit 7 Lesson 11: Project 4: Recycling at home - إعادة التدوير المنزلي ودليل صناعة حافظة أقلام (صفحات 82-85)",
+            "text": "Unit 7 Lesson 11: Project 4: Recycling at home (المشروع الرابع: إعادة التدوير المنزلي)\n\n1. The Global Rubbish Crisis (صفحة 82):\nOne of the biggest problems facing the modern world today is rubbish. Countries and cities across the globe have to deal with mountains of solid trash every single day. As we know, this causes immense problems for people, wildlife and our fragile environment.\nRight now, there are practical steps you and your family can take at home to reduce waste:\n• Use paper carefully and write on both sides of every sheet.\n• Try to reuse plastic water bottles instead of throwing them away.\n• Find creative ways to use old newspapers (wrapping gifts, cleaning, crafts).\n• Donate or repurpose outgrown clothes.\n• Think before you throw anything in the bin!\n\n2. The Rubbish Competition - Creative Upcycling (صفحة 83):\nIngenious items made entirely from household rubbish:\n• Present Tag: Cut out of scrap paper into a heart shape and tied with string.\n• Lampshade: Crafted using plastic drinking cups fastened together with paper clips.\n• Toy Rocket: Created for children using a cardboard paper towel tube and brightly coloured scraps.\n• Glass Bottle House: An astounding real building constructed from 4,000 recycled glass bottles!\n\n3. Useful or Not Useful? (صفحة 84):\nEvaluating home recycling inventions:\n• Does it replace a new plastic product?\n• Is it sturdy and safe for daily use?\n• How much waste does it divert from landfills?\n\n4. DIY Step-by-Step Recycling Project (صفحة 85):\n\"Make a Handy Pencil Case from Recycled Plastic Bottles!\"\nYou will need:\n- Two clean plastic bottles\n- One zipper fastener\n- A pair of scissors\n- Strong glue or glue gun\n\nInstructions:\n1. Use the scissors to cut the top off each bottle so that one bottle remains tall (for holding pencils) and the other is cut short (to serve as the lid).\n2. Use glue to stick one side of the zipper fastener neatly around the inside upper edge of the tall bottle.\n3. Glue the other side of the zipper fastener along the inside rim of the short bottle.\n4. Allow the glue to dry completely, then zip the two halves together.\n5. Put your pens, pencils and erasers in your new eco-friendly pencil case!\n\nShare your DIY recycling project with your classmates and publish your photo in the school magazine!"
           }
         ]
       }
@@ -2166,65 +2187,73 @@ window.GRAMMAR_RULES = [
   {
     "id": "must_vs_should",
     "unit": 7,
-    "title": "الإلزام والقوانين مقابل النصيحة (Must vs Should)",
-    "level": "الوحدة 7",
-    "page": 74,
-    "formula": "Must: إلزام وقانون إجباري  |  Should: نصيحة ورأي اختياري",
-    "explanation": "1. Must / Mustn't: للتعبير عن الإلزام القانوني والأخلاقي الإجباري وتجنب المخالفات الخطيرة.\n2. Should / Shouldn't: لتقديم النصيحة الودية والتوجيه بدون إلزام إجباري.",
+    "category": "modals",
+    "isTense": false,
+    "title": "الإلزام والقوانين مقابل النصيحة (Must / Mustn't vs Should / Shouldn't)",
+    "level": "الوحدة 7 - صفحة 72 و 119",
+    "page": 72,
+    "formula": "Subject + must / should / mustn't / shouldn't + Infinitive (مصدر مجرد بدون to)",
+    "explanation": "نستخدم (must و should) للتعبير عن مستويين مختلفين تماماً من الإلزام والتوجيه:\n\n1. Should / Shouldn't (تقديم النصيحة - Giving Advice):\n   • نستخدم should لتقديم نصيحة ودية أو اقتراح شخصي، والطرف الآخر حر في اتباعه أو تركه:\n     - You should work harder. You'll get better marks in your exam.\n     - You shouldn't eat so much junk food; it's bad for you.\n     - What should I do to improve my English?\n\n2. Must / Mustn't (الإلزام الصارم والقوانين - Strong Obligation & Prohibition):\n   • نستخدم must للتعبير عن واجب حتمي، أو قانون إجباري، أو ضرورة قاطعة لا تحتمل الخيار:\n     - You must work harder. If you don't, you will fail your exam.\n     - We must change our habits to reduce the effects of climate change.\n     - We must collect money to send some poor children to school.\n   • نستخدم mustn't للتعبير عن التحريم والمنع التام والقوانين التي يمنع خرقها:\n     - You mustn't throw litter on the street. Always put it in the bin!\n     - You mustn't drive through a red traffic light.\n\n3. الملاحظات الهيكلية (Form Notes):\n   • الفعل بعد must و should يأتي دائماً في المصدر المجرد الخالي من to (Infinitive without to).\n   • في حالة السؤال، نضع must أو should قبل الفاعل: Should we help them? / Must you go now? (مع ملاحظة أن استخدام have to في الأسئلة أكثر شيوعاً من must).",
     "examples": [
       {
-        "en": "You must not throw litter on the street.",
-        "ar": "يُحظر تماماً رمي القمامة في الشارع (قانون)."
+        "en": "We should do something to help poor children in Africa.",
+        "ar": "ينبغي لنا أن نفعل شيئاً لمساعدة الأطفال الفقراء في أفريقيا (نصيحة واقتراح should)."
       },
       {
-        "en": "You should sleep early to feel fresh.",
-        "ar": "ينبغي أن تنام مبكراً لتشعر بالانتعاش (نصيحة)."
+        "en": "No, we must do something! We have to help them get an education.",
+        "ar": "كلا، يجب علينا حتماً أن نفعل شيئاً! إنه واجب إنساني حتمي (إلزام قوي must)."
       },
       {
-        "en": "We must reduce pollution to save our planet.",
-        "ar": "يجب علينا الحد من التلوث لإنقاذ كوكبنا."
+        "en": "You mustn't drop plastic bottles in the river; it destroys the habitat.",
+        "ar": "يُحظر عليك تماماً إلقاء القناني البلاستيكية في النهر؛ فهذا يدمر الموطن البيئي (تحريم قاطع mustn't)."
       }
     ],
     "quiz": {
-      "question": "Drivers _______ stop when the traffic light is red.",
+      "question": "Drivers ________ stop completely when the traffic light turns red. It is a strict law.",
       "options": [
-        "should",
         "must",
+        "should",
         "may",
         "might"
       ],
-      "correct": 1,
-      "explanation": "إشارة المرور الحمراء قانون إلزامي صارم، لذا نستخدم must."
+      "correct": 0,
+      "explanation": "إشارة المرور الحمراء قانون إلزامي صارم يترتب عليه عقوبة ومخالفة، لذا نستخدم must وليس should."
     }
   },
   {
     "id": "may_and_might",
     "unit": 7,
-    "title": "الاحتمالية والترجيح (May & Might)",
-    "level": "الوحدة 7",
-    "page": 77,
-    "formula": "Subject + may / might + مصدر الفعل (Infinitive)",
-    "explanation": "نستخدم may و might للتعبير عن احتمال حدوث شيء في الحاضر أو المستقبل دون تأكيد جازم. وتعتبر might أقل تأكيداً من may.",
+    "category": "modals",
+    "isTense": false,
+    "title": "الاحتمالية في الحاضر والمستقبل (Possibility: May & Might)",
+    "level": "الوحدة 7 - صفحة 76 و 119",
+    "page": 76,
+    "formula": "Subject + may / might + Infinitive (مصدر مجرد بدون to)",
+    "explanation": "نستخدم (may و might) للتحدث عن احتمالية حدوث شيء في الحاضر أو المستقبل دون تأكيد جازم:\n\n1. صيغة التركيب (Form):\n   • الإثبات: الفاعل + may / might + مصدر مجرد بدون to:\n     - Subject + may/might + base verb.\n   • النفي: الفاعل + may not / might not + مصدر مجرد بدون to:\n     - We may not reduce global temperatures without serious action.\n   • السؤال: نضع might قبل الفاعل:\n     - If we plant thousands of trees, might we turn the desert into a green area?\n     (ملاحظة: من النادر جداً استخدام may في صيغة السؤال التخميني).\n\n2. الاستخدام والفرق بينهما (Use & Distinction):\n   • نستخدم may و might عندما نعتقد أن هناك فرصة أو احتمالاً لحدوث الأمر لكننا غير متأكدين تماماً.\n   • الفرق بينهما دقيق جداً:\n     - may تدل على درجة احتمال معتدلة (حوالي 50% تأكيد).\n     - might تدل على درجة احتمال أقل وأضعف وأقل تأكيداً (Less certain - حوالي 30% إلى 40%).\n   • كلاهما صالح للتعبير عن المستقبل أو الحاضر.",
     "examples": [
       {
-        "en": "If we plant thousands of trees, we may turn parts of the desert green.",
-        "ar": "إذا زرعنا آلاف الأشجار، قد نحول أجزاءً من الصحراء إلى مساحات خضراء."
+        "en": "If the world gets warmer, some farmland might become desert.",
+        "ar": "إذا أصبح العالم أكثر دفئاً، فربما تتحول بعض الأراضي الزراعية إلى صحراء (احتمال ضعيف might)."
       },
       {
-        "en": "It might rain this afternoon, but the sky is clear now.",
-        "ar": "ربما تمطر بعد الظهر، لكن السماء صافية الآن."
+        "en": "There may be less rain in some hot countries over the next thirty years.",
+        "ar": "قد تكون هناك أمطار أقل في بعض البلدان الحارة خلال الأعوام الثلاثين القادمة (احتمال معتدل may)."
+      },
+      {
+        "en": "I may not be at school tomorrow because I have a doctor's appointment.",
+        "ar": "قد لا أكون في المدرسة غداً لأن لدي موعداً مع الطبيب (احتمال منفي)."
       }
     ],
     "quiz": {
-      "question": "Take an umbrella with you; it _______ rain later.",
+      "question": "Look at those faint distant clouds. It ________ rain later, but nobody is certain.",
       "options": [
         "might",
         "must",
         "should to",
-        "need"
+        "has to"
       ],
       "correct": 0,
-      "explanation": "نستخدم might للتعبير عن إمكانية واحتمالية هطول المطر."
+      "explanation": "نستخدم might للتعبير عن احتمالية ضعيفة وغير مؤكدة (nobody is certain) متبوعة بالمصدر rain."
     }
   },
   {
@@ -2493,6 +2522,134 @@ window.GRAMMAR_RULES = [
       ],
       "correct": 0,
       "explanation": "في السؤال في زمن المضارع البسيط عن المواعيد المجدولة مع الفاعل المفرد (the first train) نستخدم الفعل المساعد does."
+    }
+  },
+  {
+    "id": "expressing_agreement_disagreement",
+    "unit": 7,
+    "category": "functions",
+    "isTense": false,
+    "title": "التعبير عن الاتفاق والاختلاف في الرأي (Agreeing & Disagreeing)",
+    "level": "الوحدة 7 - صفحة 74 و 79",
+    "page": 74,
+    "formula": "Agreeing: I agree. / You're right. | Disagreeing: I disagree. / I think you're wrong.",
+    "explanation": "في المحادثات والمناقشات الصفية وتبادل الآراء العلمية والبيئية، نستخدم تراكيب محددة للتعبير عن الاتفاق أو الاعتراض بأدب:\n\n1. صيغ الاتفاق والتأييد (Expressing Agreement):\n   • I agree. (أنا أتفق معك)\n   • You're right. (أنت محق / معك حق)\n   • I think you're right. (أعتقد أنك محق)\n   • مثال:\n     - A: \"I think the golden toads live in wetlands because toads need water.\"\n     - B: \"I agree. You're right.\"\n\n2. صيغ الاختلاف والاعتراض المهذب (Expressing Disagreement):\n   • I disagree. (أنا لا أتفق معك / أعترض)\n   • I think you're wrong. (أعتقد أنك مخطئ)\n   • ثم نذكر التبرير المنطقي أو الحقيقة العلمية:\n     - A: \"Polar bears live in warm tropical deserts.\"\n     - B: \"I disagree. I think you're wrong. They live on Arctic sea ice!\"",
+    "examples": [
+      {
+        "en": "A: 'We must stop factory waste flowing into the rivers.' -> B: 'I agree. You're right.'",
+        "ar": "أ: يجب أن نوقف نفايات المصانع المتدفقة في الأنهار. -> ب: أتفق معك، أنت على حق تماماً."
+      },
+      {
+        "en": "A: 'Throwing plastic bottles in the street is fine.' -> B: 'I disagree! It destroys the environment.'",
+        "ar": "أ: رمي القناني البلاستيكية في الشارع أمر لا بأس به. -> ب: أعترض بشدة! فهذا يدمر البيئة."
+      }
+    ],
+    "quiz": {
+      "question": "A: 'Blue whales are the largest animals on Earth.' — B: '________. You're right.'",
+      "options": [
+        "I agree",
+        "I disagree",
+        "I am agree",
+        "I not agree"
+      ],
+      "correct": 0,
+      "explanation": "الصيغة الإنجليزية الصحيحة للتعبير عن الاتفاق هي (I agree) كفعل مجرد بدون فعل الكينونة am."
+    }
+  },
+  {
+    "id": "environmental_imperatives",
+    "unit": 7,
+    "category": "imperatives",
+    "isTense": false,
+    "title": "صيغ التوجيه والأمر والنهي لحماية البيئة (Environmental Imperatives: Do & Don't)",
+    "level": "الوحدة 7 - صفحة 75 و 77 و 85",
+    "page": 77,
+    "formula": "الأمر الإيجابي: Base Verb (فعل مجرد) | النهي والمنع: Don't + Base Verb",
+    "explanation": "تُستخدم صيغ الأمر والنهي (Imperatives) لإعطاء تعليمات بيئية مباشرة، وتوجيهات مجتمعية، وقواعد سلوكية صريحة:\n\n1. صيغ الأمر الإيجابي (Positive Imperatives):\n   • تبدأ الجملة مباشرة بالفعل المصدري المجرد الخالي من أي إضافات:\n     - Turn off the water tap while brushing your teeth!\n     - Switch off the lights when you leave the room!\n     - Put your rubbish in the recycling bin!\n     - Use both sides of the paper!\n\n2. صيغ النهي والمنع (Negative Imperatives / Prohibitions):\n   • تبدأ الجملة دائماً بـ Don't متبوعة بالفعل المصدري المجرد:\n     - Don't drop litter in the street!\n     - Don't throw rubbish out of your car window!\n     - Don't leave plastic bags on the beach!\n     - Don't waste electricity!",
+    "examples": [
+      {
+        "en": "Don't leave the tap running; turn it off!",
+        "ar": "لا تترك صنبور الماء مفتوحاً؛ أغلقه فوراً! (نهي بـ Don't ثم أمر مجرد)."
+      },
+      {
+        "en": "Use the scissors carefully to cut the top of the bottle.",
+        "ar": "استخدم المقص بحذر لقطع قمة الزجاجة (أمر إرشادي في خطوات المشروع)."
+      }
+    ],
+    "quiz": {
+      "question": "________ drop plastic rubbish in the park; always use the bin!",
+      "options": [
+        "Don't",
+        "Not",
+        "Doesn't",
+        "No"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم Don't في بداية الجملة لصياغة النهي المباشر (Negative Imperative)."
+    }
+  },
+  {
+    "id": "newspaper_headline_rules",
+    "unit": 7,
+    "category": "writing",
+    "isTense": false,
+    "title": "قواعد وخصائص العناوين الصحفية (Grammar Features of Newspaper Headlines)",
+    "level": "الوحدة 7 - صفحة 71 و 79",
+    "page": 71,
+    "formula": "حذف أدوات التعريف (a / an / the) + حذف أفعال الكينونة (is / are / was / were)",
+    "explanation": "تتميز لغة العناوين في الصحف والمواقع الإخبارية بالإيجاز الشديد لجذب انتباه القارئ وتوفير المساحة:\n\n1. الخصائص الأساسية للغة العناوين (Headline Grammar Rules):\n   • حذف أدوات النكرة والتعريف (Articles: a, an, the).\n   • حذف أفعال الكينونة المساعدة (Auxiliary verbs: is, are, was, were).\n   • استخدام صيغة التصريف الثالث (Past Participle) بمفردها للدلالة على المبني للمجهول في الماضي.\n   • استخدام صيغة المضارع البسيط (Present Simple) للدلالة على أحداث وقعت حديثاً في الماضي القريب.\n   • استخدام صيغة (Verb-ing) بمفردها للدلالة على حدث مستمر يقع في الوقت الحاضر.\n\n2. أمثلة المقارنة بين العنوان والجملة الكاملة:\n   • العنوان: \"World getting warmer, scientists say.\"\n     - الجملة الكاملة: \"The world is getting warmer, scientists say.\"\n   • العنوان: \"Sixteen elephants found dead.\"\n     - الجملة الكاملة: \"Sixteen elephants were found dead.\"\n   • العنوان: \"Waste from factory pollutes town's water supply.\"\n     - الجملة الكاملة: \"Waste from a factory has polluted the town's water supply.\"",
+    "examples": [
+      {
+        "en": "Headline: 'Rainforest destroyed' -> Full: 'The rainforest has been destroyed.'",
+        "ar": "عنوان صحفي: تم حذف أداة التعريف وفعل الكينونة لتكثيف الرسالة الإخبارية."
+      },
+      {
+        "en": "Headline: 'Doctor warns of air pollution' -> Full: 'A doctor warns people about air pollution.'",
+        "ar": "عنوان صحفي: استخدام المضارع البسيط warns للتعبير عن تصريح وتحذير حديث."
+      }
+    ],
+    "quiz": {
+      "question": "What is the full grammatical sentence for the headline: 'Litter drowns town!'?",
+      "options": [
+        "Litter is drowning the town!",
+        "Litter was drown a town.",
+        "A litter have drowned town.",
+        "Litter drown town."
+      ],
+      "correct": 0,
+      "explanation": "العنوان الصحفي 'Litter drowns town!' يُفهم بجملة كاملة مع أداة التعريف وفعل الكينونة المستمر: 'Litter is drowning the town!'."
+    }
+  },
+  {
+    "id": "making_offers_contributions",
+    "unit": 7,
+    "category": "functions",
+    "isTense": false,
+    "title": "تقديم العروض والمبادرات التطوعية (Making Offers with: I will / I'll)",
+    "level": "الوحدة 7 - صفحة 72 و 79 و 104",
+    "page": 72,
+    "formula": "I'll + Base Verb (مصدر مجرد)  |  Shall I + Base Verb ...?",
+    "explanation": "عند المشاركة في فعاليات العمل الخيري والتطوعي (مثل السوق الخيري Bring-and-buy sale أو حملات تنظيف الأنهار):\n\n1. صيغة القرار التلقائي والعرض المباشر (Spontaneous Decision / Offer):\n   • نستخدم الصيغة المختصرة (I'll + base verb) للتعبير عن الرغبة الفورية في التبرع أو المشاركة:\n     - I have some CDs; I'll bring those.\n     - I can help. I'll bring some plants.\n     - I'll bake some delicious cakes for the sale.\n     - I'll bring my old camera; it still works.\n\n2. صيغة السؤال المهذب لتقديم المساعدة (Polite Offers):\n   • نستخدم (Shall I + base verb ...?):\n     - Shall I take them to your house?\n     - Shall I help you carry those boxes?",
+    "examples": [
+      {
+        "en": "I've got lots of storybooks; I'll bring the ones I've read.",
+        "ar": "لدي الكثير من كتب القصص؛ سأجلب تلك التي قرأتها للتبرع بها في السوق الخيري."
+      },
+      {
+        "en": "Shall I bring some clothes to the playground at quarter to four?",
+        "ar": "هل أجلب بعض الملابس إلى ساحة المدرسة في الرابعة إلا ربعاً؟"
+      }
+    ],
+    "quiz": {
+      "question": "I want to help with the charity sale. I ________ some flowers from our garden.",
+      "options": [
+        "will bring",
+        "brought",
+        "am bringing to",
+        "bringed"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم will bring (أو I'll bring) لتقديم عرض عفوي وتطوعي للمساعدة (Making an offer)."
     }
   }
 ];
@@ -6192,6 +6349,655 @@ window.TOPIC_CARDS = {
         {
           "en": "Suddenly, I was skiing down a terribly steep slope!",
           "ar": "وفجأة، كنت أتزلج هابطاً منحدراً شديد الوعورة!"
+        }
+      ]
+    }
+  },
+  "3001": {
+    "unit": 7,
+    "lessonNumber": 1,
+    "pages": [
+      71
+    ],
+    "titleAr": "مشاكل العالم البيئية وعناوين الأخبار العالمية",
+    "titleEn": "World Environmental Problems & Newspaper Headlines",
+    "themeColor": "#0d9488",
+    "icon": "🌍",
+    "sections": [
+      {
+        "name": "Rainforest Destruction",
+        "ar": "تدمير الغابات المطيرة",
+        "icon": "🌳",
+        "def": "Massive tree clearing in Brazil harms planetary biodiversity and accelerates climate crisis."
+      },
+      {
+        "name": "Poaching of Elephants",
+        "ar": "الصيد الجائر للفيلة",
+        "icon": "🐘",
+        "def": "Criminal ivory trafficking in Kenya causing severe decline and death of elephant populations."
+      },
+      {
+        "name": "Population Growth",
+        "ar": "الزيادة السكانية السريعة",
+        "icon": "👥",
+        "def": "Egypt reaches 100 million people, placing heavy stress on urban services, fresh water and food."
+      },
+      {
+        "name": "Air Pollution Warning",
+        "ar": "تلوث الهواء الحضري",
+        "icon": "🏭",
+        "def": "Toxic airborne particles from cars and factories endanger respiratory health of old and young in Japan."
+      },
+      {
+        "name": "Litter Drowning Towns",
+        "ar": "تراكم القمامة في المدن",
+        "icon": "🗑️",
+        "def": "Streets inundated with domestic trash and plastic refuse in France due to waste handling issues."
+      },
+      {
+        "name": "Industrial Water Contamination",
+        "ar": "تلوث مصادر المياه الصناعية",
+        "icon": "☣️",
+        "def": "Unchecked chemical runoff from riverbank factories directly spoiling municipal municipal supplies."
+      }
+    ],
+    "grammarFocus": {
+      "title": "لغة واختصارات العناوين الصحفية (Headlines Grammar)",
+      "rule": "حذف أدوات التعريف (a, an, the) وأفعال الكينونة (be/is/are/was/were) مع اعتماد صيغ المبني للمجهول المختصرة والمضارع البسيط للتعبير عن أحداث حديثة.",
+      "examples": [
+        {
+          "en": "Headline: 'Sixteen elephants found dead.' -> Full sentence: 'Sixteen elephants were found dead.'",
+          "ar": "عنوان صحفي: تم حذف فعل الكينونة were لتوفير المساحة وإبراز الحدث بصورة عاجلة."
+        },
+        {
+          "en": "Headline: 'World getting warmer, scientists say.' -> Full sentence: 'The world is getting warmer, scientists say.'",
+          "ar": "تم حذف أداة التعريف The وفعل الكينونة is ليصبح العنوان رشيقاً وموجزاً."
+        }
+      ]
+    }
+  },
+  "3002": {
+    "unit": 7,
+    "lessonNumber": 2,
+    "pages": [
+      72
+    ],
+    "titleAr": "كيف يمكننا المساعدة؟ السوق الخيري المدرسي ودعم التعليم",
+    "titleEn": "How Can We Help? Bring-and-Buy Sale & School Support",
+    "themeColor": "#0284c7",
+    "icon": "🤝",
+    "sections": [
+      {
+        "name": "Child Education Sponsorship",
+        "ar": "كفالة تعليم الأطفال في أفريقيا",
+        "icon": "🎓",
+        "def": "Just 100 dollars can pay school fees for a needy African child for an entire academic year."
+      },
+      {
+        "name": "Bring-and-Buy Sale",
+        "ar": "السوق الخيري التكافلي المدرسي",
+        "icon": "🏷️",
+        "def": "A charity event where students bring surplus goods to sell and buy items to raise school funds."
+      },
+      {
+        "name": "Student Voluntary Contributions",
+        "ar": "مساهمات الطالبات التطوعية",
+        "icon": "🍰",
+        "def": "Sara bakes cakes, Dalia brings CDs, Layla donates garden plants, and Noora contributes clothes."
+      },
+      {
+        "name": "Event Promotion",
+        "ar": "الدعاية والتنظيم المدرسي",
+        "icon": "📢",
+        "def": "Advertising the sale in the school magazine and obtaining the headmistress's permission."
+      },
+      {
+        "name": "Making Offers with I'll",
+        "ar": "تقديم المبادرات والعروض بـ I'll",
+        "icon": "💡",
+        "def": "Spontaneous decisions to help: 'I'll bring some plants', 'I'll bake delicious cakes'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الفرق بين النصيحة والإلزام (Must vs Should)",
+      "rule": "Should + Base Verb (نصيحة ودية اختيارية)  vs  Must + Base Verb (إلزام وضرورة حتمية وقانونية)",
+      "examples": [
+        {
+          "en": "We should do something. (Advice/Suggestion)",
+          "ar": "ينبغي لنا أن نفعل شيئاً (اقتراح ونصيحة لطيفة)."
+        },
+        {
+          "en": "No. We must do something! We have to help them! (Strong Obligation)",
+          "ar": "كلا، يجب علينا حتماً أن نفعل شيئاً، إنه واجب والتزام إنساني قاطع!"
+        }
+      ]
+    }
+  },
+  "3003": {
+    "unit": 7,
+    "lessonNumber": 3,
+    "pages": [
+      73
+    ],
+    "titleAr": "حيوانات مهددة بالانقراض وأسباب التهديد البيئي",
+    "titleEn": "Animals in Danger: Species & Environmental Threats",
+    "themeColor": "#d97706",
+    "icon": "🐾",
+    "sections": [
+      {
+        "name": "Snow Leopard",
+        "ar": "نمر الثلوج الجبلي",
+        "icon": "🐆",
+        "def": "Magnificent predator of high cold peaks; illegal poachers hunt it for its grey spotted pelt."
+      },
+      {
+        "name": "Wild Horned Ibex",
+        "ar": "الوعل والماعز الجبلي ذو القرون",
+        "icon": "🐐",
+        "def": "Endangered by trophy hunters targeting its magnificent curved horns measuring up to 140 cm."
+      },
+      {
+        "name": "Golden Toad",
+        "ar": "الضفدع الذهبي البرمائي",
+        "icon": "🐸",
+        "def": "Bright gold amphibian pushed to extinction by human drainage of shallow tropical breeding marshes."
+      },
+      {
+        "name": "Blue Whale",
+        "ar": "الحوت الأزرق العملاق",
+        "icon": "🐋",
+        "def": "The largest creature on Earth (29m); nearly decimated by commercial whaling for blubber and lamp oil."
+      },
+      {
+        "name": "Polar Bear",
+        "ar": "الدب القطبي المتجمد",
+        "icon": "🐻‍❄️",
+        "def": "Arctic apex hunter suffering habitat collapse because rising temperatures melt critical sea ice."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صياغة أسباب التهديد والانقراض (Causative & Passive Forms)",
+      "rule": "It is hunted for... / When the water goes, it will disappear... / If it's not protected...",
+      "examples": [
+        {
+          "en": "The snow leopard is hunted for its beautiful fur.",
+          "ar": "يُصاد نمر الثلوج من أجل فرائه الجميل (صيغة مبني للمجهول)."
+        },
+        {
+          "en": "If it is not protected by strict law, it will soon disappear.",
+          "ar": "إذا لم تتم حمايته بقوانين صارمة، فإنه سيختفي قريباً (جملة شرطية أولى)."
+        }
+      ]
+    }
+  },
+  "3004": {
+    "unit": 7,
+    "lessonNumber": 4,
+    "pages": [
+      74
+    ],
+    "titleAr": "المواطن الطبيعية والتعبير عن الاتفاق والاختلاف",
+    "titleEn": "Natural Habitats & Agreeing / Disagreeing Formulations",
+    "themeColor": "#059669",
+    "icon": "🏞️",
+    "sections": [
+      {
+        "name": "Wetlands Ecosystem",
+        "ar": "الأراضي الرطبة والمستنقعات",
+        "icon": "🌿",
+        "def": "Freshwater marshland essential for amphibians and toads requiring water to breed."
+      },
+      {
+        "name": "High Cold Mountains",
+        "ar": "الجبال العالية والقمم الباردة",
+        "icon": "🏔️",
+        "def": "Rocky precipices that provide safe refuge for the agile snow leopard and mountain goats."
+      },
+      {
+        "name": "The Arctic Sea Ice",
+        "ar": "المنطقة القطبية الجليدية",
+        "icon": "🧊",
+        "def": "Frozen polar expanses serving as feeding grounds for polar bears and marine seals."
+      },
+      {
+        "name": "Open Oceans",
+        "ar": "أعماق البحار والمحيطات",
+        "icon": "🌊",
+        "def": "Boundless saltwater oceans through which blue whales navigate across hemispheres."
+      },
+      {
+        "name": "Polite Agreement",
+        "ar": "عبارات التأييد والموافقة",
+        "icon": "✅",
+        "def": "Conversational tools to endorse opinions: 'I agree', 'You're right', 'I think you're right'."
+      },
+      {
+        "name": "Polite Disagreement",
+        "ar": "عبارات الاعتراض المهذب",
+        "icon": "❌",
+        "def": "Constructive dissent in dialogue: 'I disagree', 'I think you're wrong because...'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "أساليب المحاورة وإبداء الرأي (Agreeing & Disagreeing)",
+      "rule": "Agreeing: I agree. / You're right. | Disagreeing: I disagree. / I think you're wrong.",
+      "examples": [
+        {
+          "en": "A: 'I think golden toads live in the wetlands.' -> B: 'I agree. You're right.'",
+          "ar": "أ: أعتقد أن الضفادع الذهبية تعيش في المستنقعات. -> ب: أتفق معك تماماً، أنت محق."
+        },
+        {
+          "en": "A: 'Polar bears live in hot dry areas.' -> B: 'I disagree. They live on Arctic sea ice.'",
+          "ar": "أ: الدببة القطبية تعيش في مناطق حارة. -> ب: أعترض على ذلك، هي تعيش على جليد القطب الشمالي."
+        }
+      ]
+    }
+  },
+  "3005": {
+    "unit": 7,
+    "lessonNumber": 5,
+    "pages": [
+      75
+    ],
+    "titleAr": "حماية نظافة أنهار العراق: دجلة والفرات ومكافحة التلوث",
+    "titleEn": "Protecting Iraq's Rivers: Clean Tigris & Euphrates Campaign",
+    "themeColor": "#0284c7",
+    "icon": "🌊",
+    "sections": [
+      {
+        "name": "Twin Lifeline Rivers",
+        "ar": "نهرا دجلة والفرات العظيمان",
+        "icon": "💧",
+        "def": "Ancient waterways traversing the entire length of Iraq, supplying agriculture and civil life."
+      },
+      {
+        "name": "Severe River Contamination",
+        "ar": "مصادر تلوث مياه الأنهار",
+        "icon": "⚠️",
+        "def": "Untreated sewage, municipal rubbish, and industrial chemicals causing catastrophic fish decline."
+      },
+      {
+        "name": "Health & Ecological Threats",
+        "ar": "المخاطر الصحية والبيئية",
+        "icon": "🏥",
+        "def": "Polluted water transmitting diseases, spoiling drinking supplies and destroying wetland habitats."
+      },
+      {
+        "name": "Youth Clean-up Squads",
+        "ar": "فرق المتطوعين لحملات النظافة",
+        "icon": "🧤",
+        "def": "Organised volunteer brigades collecting plastic bags and discarded waste from riverbanks."
+      },
+      {
+        "name": "The Civic Slogan",
+        "ar": "شعار الوعي البيئي الوطني",
+        "icon": "✨",
+        "def": "'You are the solution to river pollution! If we want to have clean rivers, we must have clean minds!'"
+      }
+    ],
+    "grammarFocus": {
+      "title": "مفردات البيئة والواجب المدني (Civic & Environmental Terms)",
+      "rule": "volunteer (متطوع بلا أجر) | litter (يلقي قمامة / مهملات) | pollute (يلوث) | habitat (موطن طبيعي)",
+      "examples": [
+        {
+          "en": "The river will clean itself if we stop littering.",
+          "ar": "سينظف النهر نفسه بنفسه إذا توقفنا عن إلقاء القمامة."
+        },
+        {
+          "en": "We must form teams of volunteers to pick up rubbish along the banks.",
+          "ar": "يجب علينا تشكيل فرق من المتطوعين لجمع النفايات على امتداد الضفاف."
+        }
+      ]
+    }
+  },
+  "3006": {
+    "unit": 7,
+    "lessonNumber": 6,
+    "pages": [
+      76
+    ],
+    "titleAr": "عالم أكثر دفئاً: الاحتباس الحراري وقاعدة may و might",
+    "titleEn": "A Warmer World: Global Climate Change & May / Might",
+    "themeColor": "#ea580c",
+    "icon": "🌡️",
+    "sections": [
+      {
+        "name": "Greenhouse Heat Trap",
+        "ar": "ظاهرة الاحتباس الحراري",
+        "icon": "☀️",
+        "def": "Gases released by human activity trapping solar warmth inside Earth's atmosphere."
+      },
+      {
+        "name": "Fossil Fuel Combustion",
+        "ar": "حرق الوقود الأحفوري",
+        "icon": "⛽",
+        "def": "Burning coal, oil, natural gas, and wood to power vehicles and industrial generators."
+      },
+      {
+        "name": "Melting Polar Ice Caps",
+        "ar": "ذوبان القمم الجليدية وارتفاع البحار",
+        "icon": "🌊",
+        "def": "Sea levels rising as glaciers thaw, putting coastal cities and agricultural deltas under water."
+      },
+      {
+        "name": "Extreme Climate Volatility",
+        "ar": "اضطرابات وتقلبات الطقس العنيف",
+        "icon": "⛈️",
+        "def": "Scorching dry heatwaves in summer alternating with severe winter floods and storm surges."
+      },
+      {
+        "name": "Probability Spectrum",
+        "ar": "طيف الاحتمالية والترجيح",
+        "icon": "🎲",
+        "def": "Using 'may' for moderate likelihood (50%) and 'might' for weaker or less certain possibility (30-40%)."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الاحتمالية في الحاضر والمستقبل مع May و Might",
+      "rule": "Subject + may / might + Infinitive (مصدر مجرد خالي من to)",
+      "examples": [
+        {
+          "en": "In some hot countries, there may be less rain.",
+          "ar": "في بعض البلدان الحارة، قد تكون هناك أمطار أقل (احتمال معتدل may)."
+        },
+        {
+          "en": "Some fertile farmland might become desert.",
+          "ar": "بعض الأراضي الزراعية الخصبة ربما تصبح صحراء قاحلة (احتمال أقل تأكيداً might)."
+        }
+      ]
+    }
+  },
+  "3007": {
+    "unit": 7,
+    "lessonNumber": 7,
+    "pages": [
+      77
+    ],
+    "titleAr": "وقف هدر الموارد وصيغ النهي والتوجيه البيئي",
+    "titleEn": "Stopping Wastefulness & Community Imperatives",
+    "themeColor": "#7c3aed",
+    "icon": "🚫",
+    "sections": [
+      {
+        "name": "Stopping Food Waste",
+        "ar": "محاربة هدر الطعام والوجبات",
+        "icon": "🍲",
+        "def": "Tamara is reminded not to leave food on her plate while millions starve worldwide."
+      },
+      {
+        "name": "Water Conservation",
+        "ar": "ترشيد مياه الشرب والغسيل",
+        "icon": "🚰",
+        "def": "James learns to turn off the running tap while brushing teeth to preserve precious water."
+      },
+      {
+        "name": "Electricity Stewardship",
+        "ar": "ترشيد الطاقة الكهربائية",
+        "icon": "💡",
+        "def": "Extinguishing unnecessary blazing lights: Kamal reminds Nasser 'Waste not, want not!'."
+      },
+      {
+        "name": "Negative Civic Prohibitions",
+        "ar": "صيغ النهي الصريح بـ Don't",
+        "icon": "🛑",
+        "def": "Strict instructions: 'Don't drop litter in the street!', 'Don't throw rubbish out of cars!'."
+      },
+      {
+        "name": "Positive Environmental Directives",
+        "ar": "صيغ الأمر والتوجيه الإيجابي",
+        "icon": "✅",
+        "def": "Action imperatives: 'Put litter in the bin!', 'Turn off the tap!', 'Switch off the lights!'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "أفعال الأمر والنهي (Imperatives & Prohibitions)",
+      "rule": "Positive: Base Verb (Turn off...)  |  Negative: Don't + Base Verb (Don't drop...)",
+      "examples": [
+        {
+          "en": "Don't throw litter out of your car window!",
+          "ar": "لا ترمِ القمامة من نافذة سيارتك! (نهي صريح لحماية الطرق)."
+        },
+        {
+          "en": "Turn the tap off when brushing your teeth!",
+          "ar": "أغلق صنبور الماء أثناء تنظيف أسنانك! (أمر إيجابي لترشيد المياه)."
+        }
+      ]
+    }
+  },
+  "3008": {
+    "unit": 7,
+    "lessonNumber": 8,
+    "pages": [
+      78
+    ],
+    "titleAr": "الصحراء المتحركة ومكافحة التصحر في العراق",
+    "titleEn": "The Moving Desert & Combating Desertification in Iraq",
+    "themeColor": "#b45309",
+    "icon": "🏜️",
+    "sections": [
+      {
+        "name": "Encroaching Dunes Threat",
+        "ar": "خطر زحف الكثبان الرملية",
+        "icon": "🌪️",
+        "def": "Moving sand dunes caused by drought, logging, and oil well fires turning soil into dry zones."
+      },
+      {
+        "name": "Affected Iraqi Provinces",
+        "ar": "المحافظات الأكثر عرضة للتصحر",
+        "icon": "🗺️",
+        "def": "Severe land loss across western Al Anbar, west Karbala, west Muthanna, Nasiriyah, and Basra."
+      },
+      {
+        "name": "The Donam Land Unit",
+        "ar": "وحدة قياس الدونم الزراعي",
+        "icon": "📐",
+        "def": "Standard agricultural measure in Iraq equal to 2,500 square metres of farmland."
+      },
+      {
+        "name": "Green Belt Forestry Shields",
+        "ar": "مشاريع الأحزمة الخضراء الوقائية",
+        "icon": "🌲",
+        "def": "Planting continuous belts of sturdy trees in Anbar and Karbala to arrest moving sands."
+      },
+      {
+        "name": "Revival of Southern Marshes",
+        "ar": "إعادة إنعاش أهوار جنوب العراق",
+        "icon": "🛶",
+        "def": "Wetlands drained in the 1990s now restored with fresh flowing water, welcoming returning wildlife."
+      }
+    ],
+    "grammarFocus": {
+      "title": "لغة الأسباب والنتائج البيئية (Cause & Effect Structures)",
+      "rule": "It is caused by... | ...as a result of... | This leads to...",
+      "examples": [
+        {
+          "en": "Thousands of donams in Iraq are lost every year as a result of the moving desert.",
+          "ar": "تُفقد آلاف الدونمات في العراق كل عام نتيجة للصحراء المتحركة (تركيب as a result of)."
+        },
+        {
+          "en": "Fresh water now flows into dry areas, and as a result, wildlife is returning.",
+          "ar": "تتدفق المياه العذبة الآن إلى المناطق الجافة، ونتيجة لذلك بدأت الحياة البرية بالعودة."
+        }
+      ]
+    }
+  },
+  "3009": {
+    "unit": 7,
+    "lessonNumber": 9,
+    "pages": [
+      79
+    ],
+    "titleAr": "المراجعة الشاملة لمهارات وقواعد الوحدة السابعة",
+    "titleEn": "Unit 7 Comprehensive Skills & Language Round Up",
+    "themeColor": "#0f766e",
+    "icon": "📋",
+    "sections": [
+      {
+        "name": "Headline Parsing",
+        "ar": "قراءة وتحليل العناوين الإخبارية",
+        "icon": "📰",
+        "def": "De-compressing abbreviated headlines into fully structured grammatical English sentences."
+      },
+      {
+        "name": "Modals of Duty and Counsel",
+        "ar": "أفعال النصيحة والإلزام الصارم",
+        "icon": "⚖️",
+        "def": "Contrast between ethical/legal obligation (Must / Mustn't) and sensible counsel (Should / Shouldn't)."
+      },
+      {
+        "name": "Voluntary Action Offers",
+        "ar": "عروض المبادرات التشاركية بـ I'll",
+        "icon": "🎁",
+        "def": "Spontaneous offers of help: 'I have some CDs. I'll bring these', 'I'll bake cakes'."
+      },
+      {
+        "name": "Debate Protocol",
+        "ar": "آداب التعبير عن الاتفاق والاختلاف",
+        "icon": "💬",
+        "def": "Constructive conversational agreement ('You're right') and polite disagreement ('I disagree')."
+      },
+      {
+        "name": "Future Projection Modals",
+        "ar": "التنبؤ باحتمالات المستقبل",
+        "icon": "🔮",
+        "def": "Anticipating environmental trends: 'There may be less rain', 'Farmland might become desert'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المصفوفة الشاملة لقواعد الوحدة السابعة (Unit 7 Master Matrix)",
+      "rule": "Must vs Should | May vs Might | Imperatives | Agree/Disagree | Headlines",
+      "examples": [
+        {
+          "en": "You must not throw litter on the street, and you should separate recyclables.",
+          "ar": "يُحظر عليك رمي القمامة في الشارع (قانون must not)، وينبغي عليك فرز المواد القابلة للتدوير (نصيحة should)."
+        },
+        {
+          "en": "If we protect Iraqi rivers, wildlife may return to all marshlands.",
+          "ar": "إذا حمينا أنهار العراق، فقد تعود الحياة البرية إلى كافة الأهوار."
+        }
+      ]
+    }
+  },
+  "3010": {
+    "unit": 7,
+    "lessonNumber": 10,
+    "pages": [
+      80,
+      81
+    ],
+    "titleAr": "وقت القصة: جاد وجوني في باريس - برج إيفل والمجلة",
+    "titleEn": "Story Time: Jad & Johnny - The Eiffel Tower & The Farewell",
+    "themeColor": "#6366f1",
+    "icon": "🗼",
+    "sections": [
+      {
+        "name": "Final Tour Destination",
+        "ar": "المحطة الأوروبية الأخيرة في باريس",
+        "icon": "🇫🇷",
+        "def": "Visiting the iconic Eiffel Tower on the boys' last day before returning to their home countries."
+      },
+      {
+        "name": "Jad's Witty Lift Ploy",
+        "ar": "حيلة جاد الذكية في طابور التذاكر",
+        "icon": "🎭",
+        "def": "Jad convinces the attendant he is a renowned Iraqi photographer with young magazine journalists!"
+      },
+      {
+        "name": "Crowded Summit Frustration",
+        "ar": "الازدحام الخانق على قمة البرج",
+        "icon": "👥",
+        "def": "Dense crowds push the boys backwards straight into the descending lift before they view Paris."
+      },
+      {
+        "name": "Johnny's Head Photo",
+        "ar": "صورة مؤخرة رأس جوني الطريفة",
+        "icon": "📸",
+        "def": "Jad's high-angle snapshots capture only Johnny's hair: 'These won't make the cover!'."
+      },
+      {
+        "name": "International Video Reunion",
+        "ar": "مكالمة الفيديو الجماعية حول العالم",
+        "icon": "📱",
+        "def": "Johnny in England, Jad in Iraq, and Marcus in USA laughing over Stonehenge and Alps photos."
+      },
+      {
+        "name": "The Famous Catchphrase",
+        "ar": "شعار جوني الطريف: Use your hands!",
+        "icon": "😂",
+        "def": "Johnny drops his phone while laughing, prompting all his friends to shout: 'Use your hands!'."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الاستنتاج والتخمين في السرد القصصي (Deduction & Possibility)",
+      "rule": "Must be (استنتاج منطقي مؤكد) vs Might be (تخمين واحتمال وارد)",
+      "examples": [
+        {
+          "en": "'You're going to see one of the most famous places.' -> 'It must be the Eiffel Tower!'",
+          "ar": "ستزورون أحد أشهر الأماكن في أوروبا -> لا بد أنه برج إيفل! (استنتاج مؤكد بـ must)."
+        },
+        {
+          "en": "'That is not true now!' -> 'It might be true in the future!'",
+          "ar": "هذا ليس صحيحاً الآن! -> لكنه قد يكون صحيحاً في المستقبل! (احتمالية مستقبلية بـ might)."
+        }
+      ]
+    }
+  },
+  "3011": {
+    "unit": 7,
+    "lessonNumber": 11,
+    "pages": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "titleAr": "المشروع الرابع: إعادة التدوير المنزلي وصناعة حافظة أقلام",
+    "titleEn": "Project 4: Recycling at Home & Crafting a Bottle Pencil Case",
+    "themeColor": "#16a34a",
+    "icon": "♻️",
+    "sections": [
+      {
+        "name": "Tackling Global Trash",
+        "ar": "معالجة أزمة جبال القمامة العالمية",
+        "icon": "🗑️",
+        "def": "Practical domestic steps: writing on both paper sides, reusing water bottles, repurposing textiles."
+      },
+      {
+        "name": "The Rubbish Competition",
+        "ar": "مسابقة ابتكارات إعادة التدوير",
+        "icon": "🏆",
+        "def": "Inspiring inventions: lampshade from cups, rocket from cardboard tubes, and house of 4,000 bottles."
+      },
+      {
+        "name": "DIY Bottle Pencil Case",
+        "ar": "دليل صناعة مقلمة من قنان بلاستيكية",
+        "icon": "✂️",
+        "def": "Crafting a durable zip-up pencil case using two recycled plastic bottles, a zipper, glue, and scissors."
+      },
+      {
+        "name": "Step-by-Step Instructions",
+        "ar": "خطوات التنفيذ الإرشادية",
+        "icon": "📋",
+        "def": "1. Cut bottle tops (tall & short) | 2. Glue zipper to tall bottle | 3. Glue to lid | 4. Dry & zip."
+      },
+      {
+        "name": "Classroom Eco-Campaign",
+        "ar": "حملة التوعية المدرسية الخضراء",
+        "icon": "🏫",
+        "def": "Sharing innovative student creations in the school magazine to inspire sustainable living habits."
+      }
+    ],
+    "grammarFocus": {
+      "title": "لغة الإرشادات وصناعة الأدوات (Procedural English & Materials)",
+      "rule": "Imperative steps: Cut... Glue... Put...  |  Passive & Material: is made of / made from",
+      "examples": [
+        {
+          "en": "Use the scissors to cut the top off each bottle so that one stays tall and one is short.",
+          "ar": "استخدم المقص لقطع قمة كل زجاجة بحيث تظل إحداهما طويلة والأخرى قصيرة (أمر إرشادي)."
+        },
+        {
+          "en": "This pencil case is made from two recycled plastic bottles and a zipper fastener.",
+          "ar": "هذه الحافظة مصنوعة من زجاجتين بلاستيكيتين معاد تدويرهما وسحاب."
         }
       ]
     }
