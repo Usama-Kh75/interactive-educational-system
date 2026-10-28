@@ -1,6 +1,8 @@
-// curriculum_data.js
-// بيانات المنهج الكاملة لنظام التعليم التفاعلي
-// إعداد وتطوير: إعداد المهندس أسامة خليل هاشم
+// ----------------------------------------------------
+// قاعدة بيانات المنهج الدراسي وقواعد اللغة والبطاقات المصورة
+// النظام التعليمي التفاعلي الشامل (Comprehensive Interactive Educational System)
+// إعداد وتطوير: المهندس أسامة خليل هاشم
+// ----------------------------------------------------
 
 window.CURRICULUM_DATA = [
   {
@@ -561,121 +563,157 @@ window.CURRICULUM_DATA = [
     "description": "صفحات 47 - 59",
     "lessons": [
       {
-        "id": 296,
-        "title": "Lesson 1: History of Communication & Old Ways of Sending Info (تاريخ وسائل الاتصال والوسائل القديمة)",
-        "summary": "صفحة 47 - 50",
+        "id": 2961,
+        "title": "Lesson 1: Old Ways of Sending Information (تاريخ وسائل الاتصال والوسائل القديمة)",
+        "summary": "صفحة 47",
         "chunks": [
           {
             "id": 534,
             "page": 47,
             "heading": "Unit 5 Lesson 1: Old ways of sending information (صفحة 47)",
             "text": "Read and use the photographs to work out the meanings of the words:\ndrum, flag, horse, lighthouse, pigeon, signal, smoke.\n\n1. In the Arab world, men used to ride for hours, carrying messages. When one horse was tired, they got another one. This messenger service started in 670. It was called Al-Barid.\n2. In parts of Africa, people used to use drums to send messages.\n3. People used to build lighthouses near the sea. The lighthouses warned ships of danger.\n4. People used to light fires on the tops of mountains and send messages using smoke signals.\n5. People used to send messages using flags.\n6. People used to use pigeons to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping."
-          },
+          }
+        ]
+      },
+      {
+        "id": 2962,
+        "title": "Lesson 2: Accessing Information (الوصول للمعلومات ومصادر البحث والقراءة النقدية)",
+        "summary": "صفحة 48",
+        "chunks": [
           {
             "id": 535,
             "page": 48,
             "heading": "Unit 5 Lesson 2: Accessing information (صفحة 48)",
             "text": "Nowadays, we have access to huge amounts of information.\n• You can use an encyclopedia in the library if you want to find out about history.\n• If you want to know what the capital of Madagascar is, you can look it up in an atlas.\n• Or you can go straight to the internet for all the answers.\n\nCritical Reading:\nRemember, a lot of information does not always mean good information! We need to think critically about what we are reading:\n• Who wrote the information?\n• Why did they write it?\n• Can we find the same information in different sources?\n• Are there references we can check?"
-          },
-          {
-            "id": 536,
-            "page": 49,
-            "heading": "AB 70-71 Unit Lesson 3: Working out meanings Read the Reading tip. \"l Reading tip 6 — Dictionaries We need dictionaries to find the meanings of words and to check their spelling. Remember: I All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well. Who can put the words below into alphabetical order the fastest? bus bright bag but book box boy belt bicycle build blue better 2 It is also important to know the meaning of the abbreviations below. (prep.) (conj.) (adv.) (pron.) (n) (adj.) Work out what the abbreviations mean. Then find an example of each in the sentence below: The black horse ran fast, so it won the race easily. 3 A word can have more than one meaning, and you will find all of them in a dictionary. It is important to choose the correct meaning. Read the dictionary entry. Find the correct definition for 'bank' in each of the sentences a—d. Is it a noun or a verb? bank (n.) l. a place where you keep money. 2. a piece Of ground higher than the ground around it. 3. a piece of ground next to a river. 4. a piece of ground, usually sand or rock, in the sea, near or above the top of the water. bank (v.) 5. to keep money in or put money into a bank. 6. to turn a plane left or right. a He sat on the grassy bank and put his feet in the water. b The plane banked to the left as it got near the airport. c He wanted to see better, so he walked to the top Of the bank. d She banks her money twice a week. Do you have an English learner's dictionary? If not, see if you can get one, or check out learner's dictionaries on the internet. Getting and sending information Unit 5 49",
-            "text": "AB 70-71 Unit Lesson 3: Working out meanings Read the Reading tip. \"l Reading tip 6 — Dictionaries We need dictionaries to find the meanings of words and to check their spelling. Remember: I All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well. Who can put the words below into alphabetical order the fastest? bus bright bag but book box boy belt bicycle build blue better 2 It is also important to know the meaning of the abbreviations below. (prep.) (conj.) (adv.) (pron.) (n) (adj.) Work out what the abbreviations mean. Then find an example of each in the sentence below: The black horse ran fast, so it won the race easily. 3 A word can have more than one meaning, and you will find all of them in a dictionary. It is important to choose the correct meaning. Read the dictionary entry. Find the correct definition for 'bank' in each of the sentences a—d. Is it a noun or a verb? bank (n.) l. a place where you keep money. 2. a piece Of ground higher than the ground around it. 3. a piece of ground next to a river. 4. a piece of ground, usually sand or rock, in the sea, near or above the top of the water. bank (v.) 5. to keep money in or put money into a bank. 6. to turn a plane left or right. a He sat on the grassy bank and put his feet in the water. b The plane banked to the left as it got near the airport. c He wanted to see better, so he walked to the top Of the bank. d She banks her money twice a week. Do you have an English learner's dictionary? If not, see if you can get one, or check out learner's dictionaries on the internet. Getting and sending information Unit 5 49"
-          },
-          {
-            "id": 537,
-            "page": 50,
-            "heading": ".7 AB 72-73 Unit Lesson 4: From Cairo to Baghdad (Part A) 50 Read the text and look at the pictures. How long does it take for an article to get from a reporter in Cairo to a reader in Baghdad? On Monday morning, an article is written in Cairo. 3 When the article arrives. it is read by an editor. Unit 5 Getting and sending information Iraq 1,300 km Baghdad Cairo Egypt SENT Next, it is sent by email to a newspaper office in Baghdad. This takes less than a minute. 4 If the editor likes the article. it is edited and inserted into the newspaper.",
-            "text": ".7 AB 72-73 Unit Lesson 4: From Cairo to Baghdad (Part A) 50 Read the text and look at the pictures. How long does it take for an article to get from a reporter in Cairo to a reader in Baghdad? On Monday morning, an article is written in Cairo. 3 When the article arrives. it is read by an editor. Unit 5 Getting and sending information Iraq 1,300 km Baghdad Cairo Egypt SENT Next, it is sent by email to a newspaper office in Baghdad. This takes less than a minute. 4 If the editor likes the article. it is edited and inserted into the newspaper."
           }
         ]
       },
       {
-        "id": 297,
-        "title": "Lesson 2: Telephone Calls & Passive Voice (المبني للمجهول)",
-        "summary": "صفحة 51 - 53",
+        "id": 2963,
+        "title": "Lesson 3: Working Out Meanings & Dictionaries (معاني الكلمات وقواميس اللغة الإنجليزية واختصاراتها)",
+        "summary": "صفحة 49",
+        "chunks": [
+          {
+            "id": 536,
+            "page": 49,
+            "heading": "AB 70-71 Unit 5 Lesson 3: Working out meanings (صفحة 49)",
+            "text": "Reading tip 6 — Dictionaries\nWe need dictionaries to find the meanings of words and to check their spelling.\nRemember:\n1. All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well. (bus, bright, bag, but, book, box, boy, belt, bicycle, build, blue, better).\n2. It is also important to know the meaning of the abbreviations below:\n(prep.) preposition - حرف جر\n(conj.) conjunction - أداة ربط\n(adv.) adverb - ظرف / حال\n(pron.) pronoun - ضمير\n(n.) noun - اسم\n(adj.) adjective - صفة\n(v.) verb - فعل\nExample: The (art.) black (adj.) horse (n.) ran (v.) fast (adv.), so (conj.) it (pron.) won (v.) the race easily (adv.).\n\n3. A word can have more than one meaning, and you will find all of them in a dictionary. It is important to choose the correct meaning:\nbank (n.) 1. a place where you keep money. 2. a piece of ground higher than the ground around it. 3. a piece of ground next to a river. 4. a piece of ground, usually sand or rock, in the sea, near or above the top of the water.\nbank (v.) 5. to keep money in or put money into a bank. 6. to turn a plane left or right.\na. He sat on the grassy bank and put his feet in the water. (Definition 3, noun)\nb. The plane banked to the left as it got near the airport. (Definition 6, verb)\nc. He wanted to see better, so he walked to the top of the bank. (Definition 2, noun)\nd. She banks her money twice a week. (Definition 5, verb)"
+          }
+        ]
+      },
+      {
+        "id": 2964,
+        "title": "Lesson 4: From Cairo to Baghdad - Part A (رحلة المقالة الصحفية: الكتابة والإرسال والتحرير)",
+        "summary": "صفحة 50",
+        "chunks": [
+          {
+            "id": 537,
+            "page": 50,
+            "heading": "AB 72-73 Unit 5 Lesson 4: From Cairo to Baghdad (Part A) (صفحة 50)",
+            "text": "How long does it take for an article to get from a reporter in Cairo to a reader in Baghdad?\n\n1. On Monday morning, an article is written in Cairo by a reporter.\n2. Next, it is sent by email to a newspaper office in Baghdad across 1,300 km. This takes less than a minute.\n3. When the article arrives, it is read by an editor.\n4. If the editor likes the article, it is edited and inserted into the newspaper layout."
+          }
+        ]
+      },
+      {
+        "id": 2965,
+        "title": "Lesson 5: From Cairo to Baghdad - Part B & Present Passive (المبني للمجهول في المضارع والطباعة والتوزيع)",
+        "summary": "صفحة 51",
         "chunks": [
           {
             "id": 538,
             "page": 51,
-            "heading": "AB '74—75 Unit Lesson 5: From Cairo to Baghdad (Part B) 6 5 DELIVERY I Then, it is sent to the printing press, and at night, the newspapers are printed. Active and passive A reporter writes an article in Cairo. active Early on Tuesday morning, the newspapers are sent to the shops. Notice we don't need to add 'by a reporter'. An article is written in Cairo. Next, she serids it to Baghdad. Next, it is sent to Baghdad. passive active passive When we say what people and things do, we use active verb forms like write and send. When we say what happens to people and things, we use passive verb forms like is written and is sent. To form the present passive, use the verb be + past participle of a verb. Books are sold in Al Mutanabbi Street. Find more passive verbs in the text. Are there any active ones? Reread the story. Ask and answer questions about it. Getting and sending information Unit 5 v51",
-            "text": "AB '74—75 Unit Lesson 5: From Cairo to Baghdad (Part B) 6 5 DELIVERY I Then, it is sent to the printing press, and at night, the newspapers are printed. Active and passive A reporter writes an article in Cairo. active Early on Tuesday morning, the newspapers are sent to the shops. Notice we don't need to add 'by a reporter'. An article is written in Cairo. Next, she serids it to Baghdad. Next, it is sent to Baghdad. passive active passive When we say what people and things do, we use active verb forms like write and send. When we say what happens to people and things, we use passive verb forms like is written and is sent. To form the present passive, use the verb be + past participle of a verb. Books are sold in Al Mutanabbi Street. Find more passive verbs in the text. Are there any active ones? Reread the story. Ask and answer questions about it. Getting and sending information Unit 5 v51"
-          },
-          {
-            "id": 539,
-            "page": 52,
-            "heading": "AB 76-77 Unit Lesson 6: Great inventions Do you think the page below comes from: I a dictionary 2 a storybook 3 a reference book? O Scan the first paragraph and quickly find the answers to the questions. I Who invented television? 3 When did he invent it? 2 What was his nationality? 4 Is he alive or dead? Now ask and answer about the radio. John Baird, 1888—1946 In London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen. The pictures were not very good, and they did not move. In 1927, however, he was able to send moving pictures from London to Scotland using telephone wires. The following year, he sent pictures to America using radio waves. Baird continued working and, finally, he helped to develop colour television. Guglielmo Marconi, 1874—1937 After the invention of the telephone by Alexander Bell (1847—1922), inventors worked on radio waves instead of electric signals to carry sound. Marconi, an Italian, was the first to do this. In 1896, he sent a radio message over a distance of more than 1.5 kilometres. The following year, he sent a message from land to a ship at sea, a distance of 29 kilometres. Finally, in 1902, he sent a radio message from America to England. Past active and past passive tenses Past active Marconi invented the radio. Baird showed pictures on a television screen. Past passive The radio was invented by Marconi. Pictures were shown on a television screen by Baird. 52 Unit 5 Getting and sending information",
-            "text": "AB 76-77 Unit Lesson 6: Great inventions Do you think the page below comes from: I a dictionary 2 a storybook 3 a reference book? O Scan the first paragraph and quickly find the answers to the questions. I Who invented television? 3 When did he invent it? 2 What was his nationality? 4 Is he alive or dead? Now ask and answer about the radio. John Baird, 1888—1946 In London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen. The pictures were not very good, and they did not move. In 1927, however, he was able to send moving pictures from London to Scotland using telephone wires. The following year, he sent pictures to America using radio waves. Baird continued working and, finally, he helped to develop colour television. Guglielmo Marconi, 1874—1937 After the invention of the telephone by Alexander Bell (1847—1922), inventors worked on radio waves instead of electric signals to carry sound. Marconi, an Italian, was the first to do this. In 1896, he sent a radio message over a distance of more than 1.5 kilometres. The following year, he sent a message from land to a ship at sea, a distance of 29 kilometres. Finally, in 1902, he sent a radio message from America to England. Past active and past passive tenses Past active Marconi invented the radio. Baird showed pictures on a television screen. Past passive The radio was invented by Marconi. Pictures were shown on a television screen by Baird. 52 Unit 5 Getting and sending information"
-          },
-          {
-            "id": 540,
-            "page": 53,
-            "heading": "AB 78-79 unit Lesson 7: Telephones Look at the photographs. Which of these kinds of telephones have you used? Read the texts. Find the advantages and disadvantages of each kind of phone. A landline phone sends and receives signals through a wire. The wire is called the landline. All landlines are connected, so you can phone people all over the world. Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable. mobile phone mast Present passive with can Landline phones can be used in one place. Mobile phones cannot be used without batteries. mobile phone landline phone soe a modern smartphone A mobile phone does not need a landline because it sends signals to a special mast, using radio waves. The mast sends the radio waves to another phone. There are mobile phone masts in most places, so mobile phones can be used almost anywhere. Many mobile phones can also be used to take photographs, play music and access the internet. These are called 'smartphones' • Getting and sending information Unit 5 53",
-            "text": "AB 78-79 unit Lesson 7: Telephones Look at the photographs. Which of these kinds of telephones have you used? Read the texts. Find the advantages and disadvantages of each kind of phone. A landline phone sends and receives signals through a wire. The wire is called the landline. All landlines are connected, so you can phone people all over the world. Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable. mobile phone mast Present passive with can Landline phones can be used in one place. Mobile phones cannot be used without batteries. mobile phone landline phone soe a modern smartphone A mobile phone does not need a landline because it sends signals to a special mast, using radio waves. The mast sends the radio waves to another phone. There are mobile phone masts in most places, so mobile phones can be used almost anywhere. Many mobile phones can also be used to take photographs, play music and access the internet. These are called 'smartphones' • Getting and sending information Unit 5 53"
+            "heading": "AB 74-75 Unit 5 Lesson 5: From Cairo to Baghdad (Part B) (صفحة 51)",
+            "text": "5. Then, it is sent to the printing press, and at night, the newspapers are printed.\n6. Early on Tuesday morning, the newspapers are sent to the shops.\n7. When the shops open, the newspapers are sold to readers.\n\nActive and Passive Voice:\n• Active: A reporter writes an article in Cairo.\n• Passive: An article is written in Cairo.\n• Active: Next, she sends it to Baghdad.\n• Passive: Next, it is sent to Baghdad.\n\nWhen we say what people and things do, we use active verb forms like write and send.\nWhen we say what happens to people and things, we use passive verb forms like is written and is sent.\nNotice we don't need to add 'by a reporter' because the action is more important than who did it!\nTo form the present passive, use the verb be (am / is / are) + past participle of the verb:\n• Books are sold in Al Mutanabbi Street."
           }
         ]
       },
       {
-        "id": 298,
-        "title": "Lesson 3: Satellites and the Internet (الأقمار الصناعية والإنترنت)",
-        "summary": "صفحة 54 - 56",
+        "id": 2966,
+        "title": "Lesson 6: Great Inventions & Past Passive (اختراعات عظيمة: التلفزيون والراديو والمبني للمجهول في الماضي)",
+        "summary": "صفحة 52",
+        "chunks": [
+          {
+            "id": 539,
+            "page": 52,
+            "heading": "AB 76-77 Unit 5 Lesson 6: Great inventions (صفحة 52)",
+            "text": "John Baird (1888—1946):\nIn London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen. The pictures were not very good, and they did not move. In 1927, however, he was able to send moving pictures from London to Scotland using telephone wires. The following year (1928), he sent pictures to America using radio waves. Baird continued working and, finally, he helped to develop colour television.\n\nGuglielmo Marconi (1874—1937):\nAfter the invention of the telephone by Alexander Bell (1847—1922), inventors worked on radio waves instead of electric signals to carry sound. Marconi, an Italian, was the first to do this. In 1896, he sent a radio message over a distance of more than 1.5 kilometres. The following year (1897), he sent a message from land to a ship at sea, a distance of 29 kilometres. Finally, in 1902, he sent a radio message from America to England across the Atlantic Ocean.\n\nPast Active and Past Passive tenses:\n• Past Active: Marconi invented the radio. | Baird showed pictures on a television screen.\n• Past Passive: The radio was invented by Marconi. | Pictures were shown on a television screen by Baird.\nRule: Subject + was / were + Past Participle (+ by + agent)."
+          }
+        ]
+      },
+      {
+        "id": 2967,
+        "title": "Lesson 7: Telephones: Landlines vs Mobile Phones (الهواتف الأرضية والمحمولة والمبني للمجهول مع Can)",
+        "summary": "صفحة 53",
+        "chunks": [
+          {
+            "id": 540,
+            "page": 53,
+            "heading": "AB 78-79 Unit 5 Lesson 7: Telephones (صفحة 53)",
+            "text": "Landline Phones:\nA landline phone sends and receives signals through a wire. The wire is called the landline. All landlines are connected, so you can phone people all over the world. Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable.\n\nMobile Phones:\nA mobile phone does not need a landline because it sends signals to a special mast, using radio waves. The mast sends the radio waves to another phone. There are mobile phone masts in most places, so mobile phones can be used almost anywhere. Many mobile phones can also be used to take photographs, play music and access the internet. These are called 'smartphones'.\n\nPresent Passive with Can:\n• Landline phones can only be used in one place.\n• Mobile phones can be used almost anywhere.\n• Mobile phones cannot be used without batteries.\nRule: Object + can / cannot + be + Past Participle."
+          }
+        ]
+      },
+      {
+        "id": 2968,
+        "title": "Lesson 8: Making Telephone Calls & Etiquette (إجراء المكالمات الهاتفية وآداب التحدث وتدوين الرسائل)",
+        "summary": "صفحة 54",
         "chunks": [
           {
             "id": 541,
             "page": 54,
-            "heading": "unit Lesson 8: Making telephone calls Talk about some of the things to do and not to do when you are making an important telephone call. Now read the pieces of advice. How many did you talk about? SPEAK UP! Do introduce yourself. Always say who you are. Don't wait for the other person to ask who you are. It is not polite. Do say why you are calling. Don't start before the other person knows what your call is about, Excuse me. What are you talking about? 4 by Susan Ayad, Grade 8 Do think about what you want to say before you make the call. Don't waste time trying to think of things as you speak. Can you start again, please? Do speak slowly and clearly. Remember that the other person can't see you. Don't speak too fast even if you are nervous. Anas has a stomach ache. He needs to see a doctor. He rings the medical centre to make an appointment. Listen to Anas on the telephone and look at Susan's advice. What does he do wrong? Some things you can hear I'm sorry. Could you repeat that, please? Can you spell that, please? 54 Some things you can say Anas Abdullah here. Anas Abdullah speaking. I'm calling about ... I'd like to make an appointment, please. Unit 5 Getting and sending information",
-            "text": "unit Lesson 8: Making telephone calls Talk about some of the things to do and not to do when you are making an important telephone call. Now read the pieces of advice. How many did you talk about? SPEAK UP! Do introduce yourself. Always say who you are. Don't wait for the other person to ask who you are. It is not polite. Do say why you are calling. Don't start before the other person knows what your call is about, Excuse me. What are you talking about? 4 by Susan Ayad, Grade 8 Do think about what you want to say before you make the call. Don't waste time trying to think of things as you speak. Can you start again, please? Do speak slowly and clearly. Remember that the other person can't see you. Don't speak too fast even if you are nervous. Anas has a stomach ache. He needs to see a doctor. He rings the medical centre to make an appointment. Listen to Anas on the telephone and look at Susan's advice. What does he do wrong? Some things you can hear I'm sorry. Could you repeat that, please? Can you spell that, please? 54 Some things you can say Anas Abdullah here. Anas Abdullah speaking. I'm calling about ... I'd like to make an appointment, please. Unit 5 Getting and sending information"
-          },
+            "heading": "Unit 5 Lesson 8: Making telephone calls (صفحة 54)",
+            "text": "Advice for making an important phone call (SPEAK UP! by Susan Ayad, Grade 8):\n1. DO introduce yourself immediately. Always say who you are ('Anas Abdullah here' / 'Anas speaking'). DON'T wait for the other person to ask who you are; that is not polite.\n2. DO say why you are calling clearly ('I'm calling about tomorrow's appointment'). DON'T start before the other person knows what your call is about.\n3. DO think about what you want to say before you make the call. DON'T waste time trying to think of things as you speak.\n4. DO speak slowly and clearly. Remember that the other person can't see your face or gestures. DON'T speak too fast even if you are nervous.\n\nUseful Phrases on the Phone:\n• What you say: 'Anas Abdullah here.' | 'I\\'d like to make an appointment, please.' | 'Could I speak to Dr Salim, please?'\n• What you hear: 'Hold on a moment, please.' | 'I\\'m sorry, could you repeat that, please?' | 'Can you spell your name, please?' | 'Can I take a message?'"
+          }
+        ]
+      },
+      {
+        "id": 2969,
+        "title": "Lesson 9: Unit 5 Round Up (المراجعة الشاملة لقواعد ومفردات ومهارات الوحدة الخامسة)",
+        "summary": "صفحة 55",
+        "chunks": [
           {
             "id": 542,
             "page": 55,
-            "heading": "•j AB 82 Unit 5 Round up In this unit, you have practised: Using the abbreviations in a dictionary entry and (conj.) is used (I) to link words and (2) to link clauses. My mother and father are at home. I came here in 1990, and I have lived here ever since. Do you remember what the grammatical abbreviations below mean? (adj.) (adv.) (prep.) (pron.) (conj.) 2 3 4 Forming and using the passive • • Present passive: is/are + past participle of a main verb The article is written in Cairo. It is edited in Baghdad. Then it is printed in newspapers the same night. They are sold in the shops the next day. Past passive: was/were + past participle of a main verb Radio was invented by Marconi. Pictures were shown on a television screen by Baird. Present passive with can: can + be + past participle of a main verb Mobile phones can be used almost anywhere. In remote places, landline and mobile phones cannot be used. Making telephone calls properly • • • Always say who you are. Say why you are calling. Layla Ahmed here. I'm calling about tomorrow's fight to Bahrain. Speak slowly and clearly. The other person can ask: I'm sorry. Could you repeat that, please? Can you spell that, please? And you have • listened to people asking for advice on where to find information. listened for mistakes made by someone making a phone call, • practised telephone conversations. • practised working out meanings without using a dictionary. • read texts quickly to find particular information. • Getting and sending information Unit 5",
-            "text": "•j AB 82 Unit 5 Round up In this unit, you have practised: Using the abbreviations in a dictionary entry and (conj.) is used (I) to link words and (2) to link clauses. My mother and father are at home. I came here in 1990, and I have lived here ever since. Do you remember what the grammatical abbreviations below mean? (adj.) (adv.) (prep.) (pron.) (conj.) 2 3 4 Forming and using the passive • • Present passive: is/are + past participle of a main verb The article is written in Cairo. It is edited in Baghdad. Then it is printed in newspapers the same night. They are sold in the shops the next day. Past passive: was/were + past participle of a main verb Radio was invented by Marconi. Pictures were shown on a television screen by Baird. Present passive with can: can + be + past participle of a main verb Mobile phones can be used almost anywhere. In remote places, landline and mobile phones cannot be used. Making telephone calls properly • • • Always say who you are. Say why you are calling. Layla Ahmed here. I'm calling about tomorrow's fight to Bahrain. Speak slowly and clearly. The other person can ask: I'm sorry. Could you repeat that, please? Can you spell that, please? And you have • listened to people asking for advice on where to find information. listened for mistakes made by someone making a phone call, • practised telephone conversations. • practised working out meanings without using a dictionary. • read texts quickly to find particular information. • Getting and sending information Unit 5"
-          },
+            "heading": "AB 82 Unit 5 Round up (صفحة 55)",
+            "text": "In Unit 5, you have practised:\n1. Using abbreviations in a dictionary entry: (n.) noun, (v.) verb, (adj.) adjective, (adv.) adverb, (prep.) preposition, (conj.) conjunction, (pron.) pronoun.\n2. Forming and using the Passive Voice:\n• Present Passive (is / are + p.p.): The article is written in Cairo. It is edited in Baghdad. Then it is printed in newspapers the same night. They are sold in shops the next day.\n• Past Passive (was / were + p.p.): Radio was invented by Marconi. Pictures were shown on a television screen by Baird.\n• Passive with Can (can + be + p.p.): Mobile phones can be used almost anywhere. In remote places, landlines and mobiles cannot be used.\n3. Making telephone calls properly: Introduce yourself, state the purpose of the call, speak slowly and clearly, and use polite request formulas.\n4. Working out meanings without a dictionary using context clues."
+          }
+        ]
+      },
+      {
+        "id": 2970,
+        "title": "Lesson 10: Story Time: Jad and Johnny - The Gondola Trip (وقت القصة: جاد وجوني - رحلة الجندول في البندقية)",
+        "summary": "صفحة 56 - 57",
+        "chunks": [
           {
             "id": 543,
             "page": 56,
-            "heading": "Story time 56b Jad and Johnny - The gondola trip Listen, read and find out. I Where are the boys? 3 Where does Jad go? 'It's good to be back in Italy,' said Paolo. 'Now we can eat the best food in the world.' We were in the bus, driving into Venice in northern Italy. 'l can't wait to have a proper Italian pizza,' said Jad. We got out of the bus and walked into the centre of the city. It was very crowded. 'So, what do we do first?' I asked. 'Go for a pizza?' suggested Jad. 'It's only half past ten in the morning,' Paolo laughed. 'Let's go on a tour of the city.' 'Is there a bus tour?' asked Aziz. 'No, there isn't,' said Paolo. 'Venice isn't a place for buses and cars.' 'So shall we walk?' I asked. 'Venice is a water city. Let's ride on Unit 5 Getting and sending information 2 What happens to Marcus' phone? a gondola. It's the best way to see Venice.' said Paolo. 'Look, there's one with nobody in it,' and he pointed to a beautiful little boat with a man standing at one end of it. We all got on the gondola, and the man used a long stick to move us along the canal. There were a lot of other gondolas on the canal. 'This is amazing!' said Marcus. Then he took out his phone and called his father. 'Dad, it's me, Marcus. Look where I am.' he said. Then he stood up and held his phone out. 'Sit down, Marcus,' said Paolo. But Marcus stayed standing. He wanted to show his dad more of the city. Dad, I'm in Venice. It's really cool. We're on a little boat 'Marcus, look out!' Paolo shouted.",
-            "text": "Story time 56b Jad and Johnny - The gondola trip Listen, read and find out. I Where are the boys? 3 Where does Jad go? 'It's good to be back in Italy,' said Paolo. 'Now we can eat the best food in the world.' We were in the bus, driving into Venice in northern Italy. 'l can't wait to have a proper Italian pizza,' said Jad. We got out of the bus and walked into the centre of the city. It was very crowded. 'So, what do we do first?' I asked. 'Go for a pizza?' suggested Jad. 'It's only half past ten in the morning,' Paolo laughed. 'Let's go on a tour of the city.' 'Is there a bus tour?' asked Aziz. 'No, there isn't,' said Paolo. 'Venice isn't a place for buses and cars.' 'So shall we walk?' I asked. 'Venice is a water city. Let's ride on Unit 5 Getting and sending information 2 What happens to Marcus' phone? a gondola. It's the best way to see Venice.' said Paolo. 'Look, there's one with nobody in it,' and he pointed to a beautiful little boat with a man standing at one end of it. We all got on the gondola, and the man used a long stick to move us along the canal. There were a lot of other gondolas on the canal. 'This is amazing!' said Marcus. Then he took out his phone and called his father. 'Dad, it's me, Marcus. Look where I am.' he said. Then he stood up and held his phone out. 'Sit down, Marcus,' said Paolo. But Marcus stayed standing. He wanted to show his dad more of the city. Dad, I'm in Venice. It's really cool. We're on a little boat 'Marcus, look out!' Paolo shouted."
-          }
-        ]
-      },
-      {
-        "id": 299,
-        "title": "Story Time: Jad and Johnny - The Gondola Trip",
-        "summary": "صفحة 57 - 58",
-        "chunks": [
+            "heading": "Story time: Jad and Johnny - The gondola trip (Part 1 - صفحة 56)",
+            "text": "'It's good to be back in Italy,' said Paolo. 'Now we can eat the best food in the world.' We were in the bus, driving into Venice in northern Italy.\n'I can't wait to have a proper Italian pizza,' said Jad.\nWe got out of the bus and walked into the centre of the city. It was very crowded.\n'So, what do we do first?' I asked. 'Go for a pizza?' suggested Jad.\n'It's only half past ten in the morning,' Paolo laughed. 'Let's go on a tour of the city.'\n'Is there a bus tour?' asked Aziz. 'No, there isn't,' said Paolo. 'Venice isn't a place for buses and cars.'\n'So shall we walk?' I asked.\n'Venice is a water city. Let's ride on a gondola. It's the best way to see Venice,' said Paolo. 'Look, there's one with nobody in it,' and he pointed to a beautiful little boat with a man standing at one end of it.\nWe all got on the gondola, and the man used a long stick to move us along the canal. There were a lot of other gondolas on the canal.\n'This is amazing!' said Marcus. Then he took out his phone and called his father.\n'Dad, it's me, Marcus. Look where I am,' he said. Then he stood up and held his phone out.\n'Sit down, Marcus,' said Paolo. But Marcus stayed standing. He wanted to show his dad more of the city.\n'Dad, I'm in Venice. It's really cool. We're on a little boat—'\n'Marcus, look out!' Paolo shouted."
+          },
           {
             "id": 544,
             "page": 57,
-            "heading": "Story Jad and Johnny - The gondola trip But he was too late. Our boat bumped into another gondola, and Marcus fell. Luckily, Jad and Aziz caught him before he fell in the water. 'Thanks, guys,' he said, 'but, where's my phone? Oh. no!' We all looked and saw his phone sinking into the water. 'Can we go for a pizza now?' said Jad. 'l think I need to go to a phone shop,' said Marcus. We got out of the gondola and looked for a pizza restaurant. but none of them had a table for five people. 'There are a lot of people in Venice,' I said. 'Yes,' said Paolo. And they're all tourists, looking for pizza!' We walked for half an hour, but we only found restaurants with tables for two people. 'I'm sorry, Jad.' said Paolo. 'No pizza for us tonight ... Jad?' But Jad had disappeared into the crowd. We couldn't see him anywhere. I took out my phone and dialled his number, but there was no answer. Then we noticed Marcus had disappeared, too. We were worried. We looked everywhere for Jad and Marcus. Then, after 20 minutes, we saw them - in a pizza restaurant! 'Hey!' I said. 'What happened?' 'I'm sorry,' answered Jad with his mouth full of pizza. 'I couldn't wait any longer.' 'You guys got a pizza without us!' said Paolo. And I got a new phone,' said Marcus. Then the people at the next table stood up and left. Paolo, Aziz and I quickly sat down. 'Oh great,' said Jad. 'Now you can order some more pizza.' No, Jad,' I said. I took his plate and put it on our table. Paolo and Aziz both picked up slices. 'Now you can order some more pizza!' PIZZA • Getting and sending information Unit 5",
-            "text": "Story Jad and Johnny - The gondola trip But he was too late. Our boat bumped into another gondola, and Marcus fell. Luckily, Jad and Aziz caught him before he fell in the water. 'Thanks, guys,' he said, 'but, where's my phone? Oh. no!' We all looked and saw his phone sinking into the water. 'Can we go for a pizza now?' said Jad. 'l think I need to go to a phone shop,' said Marcus. We got out of the gondola and looked for a pizza restaurant. but none of them had a table for five people. 'There are a lot of people in Venice,' I said. 'Yes,' said Paolo. And they're all tourists, looking for pizza!' We walked for half an hour, but we only found restaurants with tables for two people. 'I'm sorry, Jad.' said Paolo. 'No pizza for us tonight ... Jad?' But Jad had disappeared into the crowd. We couldn't see him anywhere. I took out my phone and dialled his number, but there was no answer. Then we noticed Marcus had disappeared, too. We were worried. We looked everywhere for Jad and Marcus. Then, after 20 minutes, we saw them - in a pizza restaurant! 'Hey!' I said. 'What happened?' 'I'm sorry,' answered Jad with his mouth full of pizza. 'I couldn't wait any longer.' 'You guys got a pizza without us!' said Paolo. And I got a new phone,' said Marcus. Then the people at the next table stood up and left. Paolo, Aziz and I quickly sat down. 'Oh great,' said Jad. 'Now you can order some more pizza.' No, Jad,' I said. I took his plate and put it on our table. Paolo and Aziz both picked up slices. 'Now you can order some more pizza!' PIZZA • Getting and sending information Unit 5"
-          },
-          {
-            "id": 545,
-            "page": 58,
-            "heading": "صفحة 58",
-            "text": "p Project 3: A chat forum Discuss the questions in small groups. 1 Do you use the internet? 3 What is a chat forum? 5 Have you or anyone you know ever used a chat forum? 2 Which websites do you visit? 4 What topics do you think people discuss in chat forums? O Look at a chat forum and answer the questions. 2 How many people give their opinion? I What are the people discussing? Global Chat LaylaIraq123 writes: I was talking to a friend yesterday, and he said he wants to be rich. When I asked him why, he said that money makes people happy. I disagree. I don't believe anyone can buy happiness. What do you think? EnglishTom44 writes: Good question, Layla! I agree with you. Money is nice, but I know a rich man, and he isn't happy at all. He's lonely! Friends, family, health all of these things are more important than money. They are the things that make people truly happy. FrancoisF56 writes: You guys are crazy! Everyone wants to be rich because we all know that money means a better life. Rich people can buy a big house, a cool car, and they can travel anywhere in the world. Those things would make anyone happy! EngliShTom - you say health is more important than money, Tayyeb101 writes: but those two things are connected. A rich person can afford healthy food, a gym and good doctors. I think rich people can have a lot of friends, too! This is a really interesting chat. I think it's difficult to be happy PollyP writes: when you are poor. We all need enough money to live. However, I don't think that very rich people are happier than everyone else. O Read the chat forum more carefully. Match the opinions to the people. 58 1 People can use money to stay healthy. 2 It's impossible to buy happiness. 3 Rich people are happy because they can buy nice things. 4 People need enough. money, but you don't need a lot of money to be happy. 5 Happiness comes from feeling healthy and being with other people. Project 3 A chat forum"
+            "heading": "Story time: Jad and Johnny - The gondola trip (Part 2 - صفحة 57)",
+            "text": "But he was too late. Our boat bumped into another gondola, and Marcus fell. Luckily, Jad and Aziz caught him before he fell in the water.\n'Thanks, guys,' he said, 'but, where's my phone? Oh, no!' We all looked and saw his phone sinking into the water.\n'Can we go for a pizza now?' said Jad.\n'I think I need to go to a phone shop,' said Marcus.\nWe got out of the gondola and looked for a pizza restaurant, but none of them had a table for five people. 'There are a lot of people in Venice,' I said. 'Yes,' said Paolo. 'And they're all tourists, looking for pizza!'\nWe walked for half an hour, but we only found restaurants with tables for two people. 'I'm sorry, Jad,' said Paolo. 'No pizza for us tonight ... Jad?' But Jad had disappeared into the crowd. We couldn't see him anywhere. I took out my phone and dialled his number, but there was no answer. Then we noticed Marcus had disappeared, too. We were worried. We looked everywhere for Jad and Marcus. Then, after 20 minutes, we saw them — in a pizza restaurant!\n'Hey!' I said. 'What happened?'\n'I'm sorry,' answered Jad with his mouth full of pizza. 'I couldn't wait any longer.'\n'You guys got a pizza without us!' said Paolo.\n'And I got a new phone,' said Marcus.\nThen the people at the next table stood up and left. Paolo, Aziz and I quickly sat down.\n'Oh great,' said Jad. 'Now you can order some more pizza.'\n'No, Jad,' I said. I took his plate and put it on our table. Paolo and Aziz both picked up slices. 'Now you can order some more pizza!'"
           }
         ]
       },
       {
-        "id": 300,
-        "title": "Project 3: A Chat Forum",
-        "summary": "صفحة 59 - 60",
+        "id": 2971,
+        "title": "Lesson 11: Project 3: A Chat Forum (المشروع 3: منتدى المحادثة والنقاش ومناظرة المال والسعادة)",
+        "summary": "صفحة 58 - 59",
         "chunks": [
+          {
+            "id": 545,
+            "page": 58,
+            "heading": "Project 3: A chat forum (Part 1 - صفحة 58)",
+            "text": "Global Chat Forum Topic: 'Can money buy you happiness?'\n\n• LaylaIraq123 writes: I was talking to a friend yesterday, and he said he wants to be rich because money makes people happy. I disagree. I don't believe anyone can buy happiness. What do you think?\n• EnglishTom44 writes: Good question, Layla! I agree with you. Money is nice, but I know a rich man, and he isn't happy at all. He's lonely! Friends, family, health — all of these things are more important than money. They are the things that make people truly happy.\n• FrancoisF56 writes: You guys are crazy! Everyone wants to be rich because we all know that money means a better life. Rich people can buy a big house, a cool car, and they can travel anywhere in the world. Those things would make anyone happy!\n• Tayyeb101 writes: EnglishTom — you say health is more important than money, but those two things are connected. A rich person can afford healthy food, a gym and good doctors. I think rich people can have a lot of friends, too!\n• PollyP writes: This is a really interesting chat. I think it's difficult to be happy when you are poor. We all need enough money to live. However, I don't think that very rich people are happier than everyone else."
+          },
           {
             "id": 546,
             "page": 59,
-            "heading": "صفحة 59",
-            "text": "p Project 3: A chat forum Complete the table with opinions from Exercise C. Add your own ideas. Topic: Money can buy you happiness. Arguments for People need enough money. Arguments against You don' + need a 10+ of rnoney +0 be happy. Now join a Chat forum by following the instructions. Decide what question you would like to ask other people in the chat forum. You could ask about homework, exams, social media, friends and family, video games, or anything else you can think of. Practise writing your forum post. • Write your post neatly at the top of a large piece of paper. Attach the paper to • the classroom wall. Walk around the classroom and read other people's posts. Think about how • you will reply. • Write your replies to the other posts and stick them to the large pieces of paper. Read through all the chat forums. • Choose one of the chat forums on the wall. On a new piece of paper, draw a table like the one in Exercise D and fill in the topic and opinions from your chosen chat forum. Add your own ideas. Write a similar number of arguments for and arguments against. O Use your table in Exercise F to write a for-and-against essay for the school magazine. Follow the structure. • • • In the first paragraph, introduce the topic. In the second paragraph, give the arguments for. In the third paragraph, give the arguments against. In the fourth paragraph, summarize the arguments and say which side you agree with. Project 3 A chat forum"
-          },
-          {
-            "id": 547,
-            "page": 60,
-            "heading": "Unit a d f AB 84-85 Lesson 1: What do they do? Listen and read the descriptions. Then match them to the photographs. A businesswoman works in an office and runs a business. She is very good at working with money. A mechanic works in a workshop or a garage and repairs people's cars. b e A pilot flies a plane and takes people to different countries. They have to wear a uniform. c An architect plans and designs buildings. They work in an office. An engineer works outside or in an office. They design, build or repair machines, roads and bridges. A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop. g A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes. Number I is a/an . O Talk about the photographs. 60 unit 6 Jobs",
-            "text": "Unit a d f AB 84-85 Lesson 1: What do they do? Listen and read the descriptions. Then match them to the photographs. A businesswoman works in an office and runs a business. She is very good at working with money. A mechanic works in a workshop or a garage and repairs people's cars. b e A pilot flies a plane and takes people to different countries. They have to wear a uniform. c An architect plans and designs buildings. They work in an office. An engineer works outside or in an office. They design, build or repair machines, roads and bridges. A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop. g A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes. Number I is a/an . O Talk about the photographs. 60 unit 6 Jobs"
+            "heading": "Project 3: A chat forum (Part 2 - صفحة 59)",
+            "text": "Writing a For-and-Against Essay for the school magazine:\nStructure of the essay (4 Paragraphs):\n1. In the first paragraph, introduce the topic clearly.\n2. In the second paragraph, present the arguments FOR the topic (e.g. money buys good healthcare, education, comfortable living, and travel).\n3. In the third paragraph, present the arguments AGAINST the topic (e.g. money cannot buy true friends, family love, genuine health, or inner peace).\n4. In the fourth paragraph, summarize both sides and state your personal conclusion and balanced opinion."
           }
         ]
       }
@@ -684,13 +722,19 @@ window.CURRICULUM_DATA = [
   {
     "id": 195,
     "title": "الوحدة 6: المهن والوظائف (Unit 6: Jobs and Occupations)",
-    "description": "صفحات 61 - 70",
+    "description": "صفحات 60 - 70",
     "lessons": [
       {
         "id": 301,
-        "title": "Lesson 1: What is my job? (المهن والمسارات الوظيفية)",
-        "summary": "صفحة 61 - 62",
+        "title": "Lesson 1: What do they do? (المهن والمسارات الوظيفية)",
+        "summary": "صفحة 60 - 62",
         "chunks": [
+          {
+            "id": 547,
+            "page": 60,
+            "heading": "Unit 6 Lesson 1: What do they do? (صفحة 60)",
+            "text": "Unit 6 Jobs - Lesson 1: What do they do?\nListen and read the descriptions. Then match them to the photographs:\n• A businesswoman works in an office and runs a business. She is very good at working with money.\n• A mechanic works in a workshop or a garage and repairs people's cars.\n• A pilot flies a plane and takes people to different countries. They have to wear a uniform.\n• An architect plans and designs buildings. They work in an office.\n• An engineer works outside or in an office. They design, build or repair machines, roads and bridges.\n• A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop.\n• A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes."
+          },
           {
             "id": 548,
             "page": 61,
@@ -1881,42 +1925,192 @@ window.GRAMMAR_RULES = [
     }
   },
   {
-    "id": "passive_voice",
+    "id": "passive_present",
     "unit": 5,
     "category": "tenses",
-    "title": "المبني للمجهول (Passive Voice)",
+    "isTense": true,
+    "title": "المبني للمجهول في زمن المضارع البسيط (Present Simple Passive)",
     "level": "الوحدة 5",
     "page": 51,
-    "formula": "المضارع: Object + is / are + Past Participle  |  مع can: Object + can be + Past Participle",
-    "explanation": "يُستخدم المبني للمجهول عندما يكون الفعل أو الحدث أهم من الفاعل الذي قام به، أو عندما يكون الفاعل غير معروف.",
+    "formula": "المفعول به (Subject) + am / is / are + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "explanation": "يُستخدم عندما يكون الحدث أو الفعل نفسه أهم بكثير من ذكر الفاعل الذي قام به، أو عندما يكون الفاعل غير معروف أو بديهياً:\n• المفرد يأخذ is + p.p.\n• الجمع وضمائر الجمع (we / they / you) تأخذ are + p.p.\n• الضمير I يأخذ am + p.p.\n• في النفي: is not / are not + past participle.\n• في السؤال: Is / Are + المفعول به + past participle ?",
     "examples": [
       {
-        "en": "Arabic is spoken in Iraq.",
-        "ar": "اللغة العربية يُتحدث بها في العراق."
+        "en": "On Monday morning, an article is written in Cairo.",
+        "ar": "في صباح يوم الاثنين، يُكتب المقال في القاهرة (المفعول به مفرد أخذ is written)."
       },
       {
-        "en": "Newspapers are sold in this shop.",
-        "ar": "الصحف تُباع في هذا المتجر."
+        "en": "At night, the newspapers are printed in Baghdad.",
+        "ar": "في الليل، تُطبع الصحف في بغداد (المفعول به جمع أخذ are printed)."
       },
       {
-        "en": "Mobile phones can be used when the plane lands.",
-        "ar": "الهواتف المحمولة يمكن استخدامها عند هبوط الطائرة."
+        "en": "Next, it is sent by email to a newspaper office.",
+        "ar": "بعد ذلك، يُرسل عبر البريد الإلكتروني إلى مكتب الجريدة."
       },
       {
-        "en": "Mobile phones cannot be used during take-off.",
-        "ar": "الهواتف المحمولة لا يمكن استخدامها أثناء الإقلاع."
+        "en": "Books are sold in Al Mutanabbi Street.",
+        "ar": "الكتب تُباع في شارع المتنبي."
       }
     ],
     "quiz": {
-      "question": "English _______ in many schools around the world.",
+      "question": "Early on Tuesday morning, the newspapers _______ to the shops.",
       "options": [
-        "speaks",
-        "is spoken",
-        "is speak",
-        "spoken"
+        "are sent",
+        "is sent",
+        "send",
+        "are sending"
       ],
-      "correct": 1,
-      "explanation": "جملة مبني للمجهول في المضارع: is + التصريف الثالث (spoken)."
+      "correct": 0,
+      "explanation": "المفعول به (newspapers) جمع في زمن المضارع البسيط، لذا نستخدم are + التصريف الثالث (are sent)."
+    }
+  },
+  {
+    "id": "passive_past",
+    "unit": 5,
+    "category": "tenses",
+    "isTense": true,
+    "title": "المبني للمجهول في زمن الماضي البسيط (Past Simple Passive)",
+    "level": "الوحدة 5",
+    "page": 52,
+    "formula": "المفعول به (Subject) + was / were + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "explanation": "يُستخدم للحديث عن اختراعات أو أحداث تاريخية اكتملت في الماضي مع التركيز على النتيجة أو الشيء المخترَع:\n• المفرد (I / He / She / It) يأخذ was + p.p.\n• الجمع (We / You / They) يأخذ were + p.p.\n• عندما نذكر الفاعل نضعه في نهاية الجملة مسبوقاً بحرف الجر (by).",
+    "examples": [
+      {
+        "en": "The radio was invented by Marconi in the late nineteenth century.",
+        "ar": "الراديو اختُرع بواسطة ماركوني في أواخر القرن التاسع عشر."
+      },
+      {
+        "en": "The first television pictures were shown by Baird in London in 1926.",
+        "ar": "أولى صور التلفزيون عُرضت بواسطة بيرد في لندن عام 1926."
+      },
+      {
+        "en": "A radio message was sent across the Atlantic Ocean in 1902.",
+        "ar": "أُرسلت رسالة لاسلكية عبر المحيط الأطلسي عام 1902."
+      },
+      {
+        "en": "In ancient times, messages were carried by pigeons.",
+        "ar": "في العصور القديمة، كانت الرسائل تُنقل بواسطة الحمام."
+      }
+    ],
+    "quiz": {
+      "question": "The television _______ by John Logie Baird in 1926.",
+      "options": [
+        "was invented",
+        "were invented",
+        "invented",
+        "is invented"
+      ],
+      "correct": 0,
+      "explanation": "المبني للمجهول في الماضي البسيط للمفرد (The television): was + التصريف الثالث (was invented)."
+    }
+  },
+  {
+    "id": "passive_modals",
+    "unit": 5,
+    "category": "grammar",
+    "title": "المبني للمجهول مع الأفعال الناقصة (Passive with: Can / Cannot)",
+    "level": "الوحدة 5",
+    "page": 53,
+    "formula": "المفعول به (Subject) + can / cannot + be + Past Participle (التصريف الثالث)",
+    "explanation": "يُستخدم للتعبير عن الإمكانية أو الاستطاعة العامة (أو منع الاستخدام) بصيغة المجهول:\n• الإثبات: can be + past participle (يمكن أن يُفعل).\n• النفي: cannot be + past participle (لا يمكن أن يُفعل).\n• السؤال: Can + المفعول به + be + past participle ?",
+    "examples": [
+      {
+        "en": "Mobile phones can be used almost anywhere.",
+        "ar": "الهواتف المحمولة يمكن استخدامها في أي مكان تقريباً."
+      },
+      {
+        "en": "Landline phones can only be used in one place.",
+        "ar": "الهواتف الأرضية يمكن استخدامها في مكان واحد فقط."
+      },
+      {
+        "en": "Mobile phones cannot be used without charged batteries.",
+        "ar": "الهواتف المحمولة لا يمكن استخدامها بدون بطاريات مشحونة."
+      },
+      {
+        "en": "High quality photographs can be taken with modern smartphones.",
+        "ar": "الصور عالية الجودة يمكن التقاطها بالهواتف الذكية الحديثة."
+      }
+    ],
+    "quiz": {
+      "question": "Important messages can _______ instantly across long distances.",
+      "options": [
+        "be sent",
+        "sent",
+        "be send",
+        "are sent"
+      ],
+      "correct": 0,
+      "explanation": "المبني للمجهول بعد الفعل المساعد can يتطلب be متبوعة بالتصريف الثالث (be sent)."
+    }
+  },
+  {
+    "id": "dictionary_abbreviations",
+    "unit": 5,
+    "category": "vocabulary",
+    "title": "اختصارات القاموس وأقسام الكلام (Dictionary Abbreviations & Word Categories)",
+    "level": "الوحدة 5",
+    "page": 49,
+    "formula": "n. (noun) | v. (verb) | adj. (adjective) | adv. (adverb) | prep. (preposition) | conj. (conjunction) | pron. (pronoun)",
+    "explanation": "دليل الرموز والاختصارات النحوية المستخدمة في قواميس اللغة الإنجليزية لمعرفة وظيفة الكلمة:\n• n. = اسم (noun) مثل: horse, bank, phone, messenger\n• v. = فعل (verb) مثل: ride, warn, invent, send\n• adj. = صفة (adjective) مثل: black, fast, clever, great\n• adv. = ظرف أو حال (adverb) مثل: easily, fast, slowly, critically\n• prep. = حرف جر (preposition) مثل: in, on, at, from, to, across\n• conj. = أداة ربط أو عطف (conjunction) مثل: and, but, so, because\n• pron. = ضمير (pronoun) مثل: he, she, it, they, we\n\nتنبيه: بعض الكلمات تملك أكثر من معنى ووظيفة (مثل bank: اسم بمعنى مصرف أو ضفة نهر، وفعل بمعنى يودع مالاً أو تنعطف الطائرة).",
+    "examples": [
+      {
+        "en": "The black horse ran fast, so it won the race easily.",
+        "ar": "black صفة (adj.)، horse اسم (n.)، ran فعل (v.)، fast ظرف (adv.)، so أداة ربط (conj.)، it ضمير (pron.)، won فعل (v.)، easily ظرف (adv.)."
+      },
+      {
+        "en": "He sat on the grassy bank (n.) of the river.",
+        "ar": "جلس على ضفة النهر العشبية (bank هنا اسم تعني ضفة)."
+      },
+      {
+        "en": "The pilot banked (v.) the plane to the left.",
+        "ar": "أمال الطيار الطائرة وانعطف يساراً (bank هنا فعل ماضٍ)."
+      }
+    ],
+    "quiz": {
+      "question": "In a learner's dictionary, what does the abbreviation '(conj.)' mean?",
+      "options": [
+        "conjunction (أداة ربط أو عطف)",
+        "content (محتوى)",
+        "condition (حالة)",
+        "conversation (محادثة)"
+      ],
+      "correct": 0,
+      "explanation": "الرمز (conj.) اختصار لـ conjunction وهي أداة الربط بين الكلمات أو الجمل مثل (and, but, so, because)."
+    }
+  },
+  {
+    "id": "phone_etiquette",
+    "unit": 5,
+    "category": "functions",
+    "title": "آداب وتعبيرات المكالمات الهاتفية (Telephone Etiquette & Communication Phrases)",
+    "level": "الوحدة 5",
+    "page": 54,
+    "formula": "Introduce yourself (Anas here) ➔ State purpose (I'm calling about) ➔ Speak clearly ➔ Polite requests",
+    "explanation": "أصول المحادثة الهاتفية المعتمدة في المنهج الدراسي:\n1. التعريف بالنفس فوراً: Always say who you are immediately (e.g. Layla Ahmed here / Layla speaking).\n2. توضيح سبب الاتصال: State clearly why you are calling (e.g. I'm calling about tomorrow's appointment).\n3. التحدث بتمهل ووضوح: Speak slowly and clearly because the other person cannot see you.\n4. عبارات الاستيضاح والرد المهذب: Could you repeat that, please? | Can you spell that, please? | Hold on a moment, please.",
+    "examples": [
+      {
+        "en": "Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.",
+        "ar": "معكم ليلى أحمد، أنا أتصل بخصوص رحلة الغد إلى البحرين."
+      },
+      {
+        "en": "Hello, could I speak to Dr Salim, please? - Hold on a moment, please.",
+        "ar": "مرحباً، هل يمكنني التحدث إلى الدكتور سليم من فضلك؟ - انتظر لحظة لو سمحت."
+      },
+      {
+        "en": "I'm sorry, could you repeat that, please? Can you spell your surname?",
+        "ar": "أعتذر منك، هل يمكنك تكرار ذلك؟ وهل تتهجى اسم عائلتك؟"
+      }
+    ],
+    "quiz": {
+      "question": "When making an important phone call, what should you do first according to Susan's advice?",
+      "options": [
+        "Introduce yourself and say who you are immediately",
+        "Wait for the other person to guess who you are",
+        "Speak as fast as possible to save time",
+        "Hang up if you feel nervous"
+      ],
+      "correct": 0,
+      "explanation": "نصيحة كتاب الطالب صفحة 54: Do introduce yourself immediately. Always say who you are ('Anas Abdullah here')."
     }
   },
   {
@@ -4604,6 +4798,591 @@ window.TOPIC_CARDS = {
         {
           "en": "I used to be shy, but now I am confident.",
           "ar": "كنت في الماضي خجولاً، لكني الآن واثق من نفسي."
+        }
+      ]
+    }
+  },
+  "2961": {
+    "unit": 5,
+    "lessonNumber": 1,
+    "pages": [
+      47
+    ],
+    "titleAr": "الوسائل القديمة لإرسال واستقبال المعلومات",
+    "titleEn": "Old Ways of Sending Information",
+    "themeColor": "#d97706",
+    "icon": "🕊️",
+    "sections": [
+      {
+        "name": "Al-Barid (Horse Messengers)",
+        "ar": "خدمة البريد بالخيول",
+        "icon": "🐎",
+        "def": "Started in 670 in the Arab world; messengers rode horses for hours to deliver letters, changing tired horses."
+      },
+      {
+        "name": "Messenger Pigeons",
+        "ar": "الحمام الزاجل",
+        "icon": "🕊️",
+        "def": "Used to carry messages from Egypt to Syria; a good pigeon flew from Cairo to Damascus without stopping."
+      },
+      {
+        "name": "Smoke Signals",
+        "ar": "إشارات الدخان",
+        "icon": "💨",
+        "def": "Lighting fires on mountain tops to transmit coded warnings across long distances."
+      },
+      {
+        "name": "Lighthouses",
+        "ar": "المنارات والفنارات البحرية",
+        "icon": "🏮",
+        "def": "Built near coastal waters to warn approaching ships of hazardous rocks and shallow waters."
+      },
+      {
+        "name": "Drums & Flags",
+        "ar": "الطبول والأعلام",
+        "icon": "🥁",
+        "def": "Drums were used in parts of Africa and flags between ships to communicate visual and acoustic signals."
+      }
+    ],
+    "grammarFocus": {
+      "title": "صيغة الاعتياد في الماضي (Used to)",
+      "rule": "People used to + base verb (للحديث عن عادات الاتصال القديمة التي استبدلتها التكنولوجيا الحديثة)",
+      "examples": [
+        {
+          "en": "In the Arab world, men used to ride for hours carrying messages.",
+          "ar": "في العالم العربي، اعتاد الرجال أن يمتطوا الخيول لساعات حاملين الرسائل."
+        },
+        {
+          "en": "People used to use pigeons to carry messages from Egypt to Syria.",
+          "ar": "اعتاد الناس استخدام الحمام الزاجل لنقل الرسائل من مصر إلى سوريا."
+        }
+      ]
+    }
+  },
+  "2962": {
+    "unit": 5,
+    "lessonNumber": 2,
+    "pages": [
+      48
+    ],
+    "titleAr": "الوصول للمعلومات ومصادر البحث والقراءة النقدية",
+    "titleEn": "Accessing Information & Critical Reading",
+    "themeColor": "#0284c7",
+    "icon": "📚",
+    "sections": [
+      {
+        "name": "Encyclopedia",
+        "ar": "الموسوعة المعرفية",
+        "icon": "📖",
+        "def": "Found in libraries to research verified historical, scientific, and cultural facts."
+      },
+      {
+        "name": "Atlas",
+        "ar": "أطلس الخرائط والجغرافيا",
+        "icon": "🗺️",
+        "def": "Book of comprehensive maps to look up countries, boundaries, and capitals (e.g. capital of Madagascar)."
+      },
+      {
+        "name": "Internet",
+        "ar": "شبكة الإنترنت العالمية",
+        "icon": "🌐",
+        "def": "Instant digital access to billions of search results and worldwide knowledge repositories."
+      },
+      {
+        "name": "Critical Reading",
+        "ar": "القراءة النقدية والتحليلية",
+        "icon": "🧐",
+        "def": "A lot of info does not mean good info! Asking: Who wrote it? Why? Can we cross-check references?"
+      }
+    ],
+    "grammarFocus": {
+      "title": "مهارات البحث والتحقق (Reference & Research Verbs)",
+      "rule": "look up = يبحث عن معلومة في كتاب أو أطلس | find out = يكتشف ويكتسب المعرفة",
+      "examples": [
+        {
+          "en": "If you want to know what the capital of Madagascar is, look it up in an atlas.",
+          "ar": "إذا أردت معرفة عاصمة مدغشقر، فابحث عنها في كتاب الأطلس."
+        },
+        {
+          "en": "Critical reading: Who wrote the information and why did they write it?",
+          "ar": "القراءة النقدية: من الذي كتب هذه المعلومة وما هو دافعه وغايته من كتابتها؟"
+        }
+      ]
+    }
+  },
+  "2963": {
+    "unit": 5,
+    "lessonNumber": 3,
+    "pages": [
+      49
+    ],
+    "titleAr": "معاني الكلمات وقواميس اللغة واختصارات أقسام الكلام",
+    "titleEn": "Working Out Meanings, Dictionaries & Abbreviations",
+    "themeColor": "#7c3aed",
+    "icon": "📖",
+    "sections": [
+      {
+        "name": "Alphabetical Order",
+        "ar": "الترتيب الأبجدي",
+        "icon": "🔤",
+        "def": "Words in a dictionary are sorted strictly alphabetically from A to Z for instant retrieval."
+      },
+      {
+        "name": "Grammar Abbreviations",
+        "ar": "رموز أقسام الكلام",
+        "icon": "🏷️",
+        "def": "prep. (preposition), conj. (conjunction), adv. (adverb), pron. (pronoun), n. (noun), adj. (adjective), v. (verb)."
+      },
+      {
+        "name": "Multiple Meanings: Bank",
+        "ar": "تعدد المعاني (كلمة Bank)",
+        "icon": "🏦",
+        "def": "noun: money bank, or river bank | verb: put money into a bank, or turn a plane left/right."
+      },
+      {
+        "name": "Learner's Dictionary",
+        "ar": "قاموس المتعلم المعتمد",
+        "icon": "💡",
+        "def": "Provides clear definitions, pronunciation, example sentences, and part-of-speech labels."
+      }
+    ],
+    "grammarFocus": {
+      "title": "أقسام الكلام في الجملة (Parts of Speech Analysis)",
+      "rule": "The (art.) black (adj.) horse (n.) ran (v.) fast (adv.), so (conj.) it (pron.) won easily (adv.).",
+      "examples": [
+        {
+          "en": "He sat on the grassy bank (n.) and put his feet in the water.",
+          "ar": "جلس على الضفة العشبية (اسم: ضفة نهر) ووضع قدميه في الماء."
+        },
+        {
+          "en": "The plane banked (v.) to the left as it got near the airport.",
+          "ar": "انعطفت الطائرة وأمالت جناحيها يساراً (فعل: مالت الطائرة) مع اقترابها من المطار."
+        }
+      ]
+    }
+  },
+  "2964": {
+    "unit": 5,
+    "lessonNumber": 4,
+    "pages": [
+      50
+    ],
+    "titleAr": "رحلة المقالة الصحفية (1): الكتابة والإرسال والتحرير",
+    "titleEn": "From Cairo to Baghdad (Part A): Writing & Editing",
+    "themeColor": "#059669",
+    "icon": "✍️",
+    "sections": [
+      {
+        "name": "Step 1: Monday Morning",
+        "ar": "الخطوة 1: كتابة المقال بالقاهرة",
+        "icon": "📝",
+        "def": "On Monday morning, an article is written in Cairo by a professional reporter."
+      },
+      {
+        "name": "Step 2: Instant Email",
+        "ar": "الخطوة 2: الإرسال السريع بالإيميل",
+        "icon": "📧",
+        "def": "Next, it is sent by email to a newspaper office in Baghdad (1,300 km) in less than a minute."
+      },
+      {
+        "name": "Step 3: Editor's Review",
+        "ar": "الخطوة 3: قراءة المقال وتدقيقه",
+        "icon": "👓",
+        "def": "When the article arrives, it is read and evaluated critically by an experienced editor."
+      },
+      {
+        "name": "Step 4: Layout Insertion",
+        "ar": "الخطوة 4: الإدراج في صفحات الجريدة",
+        "icon": "📰",
+        "def": "If the editor likes the article, it is edited and inserted into the newspaper layout."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المبني للمجهول في المضارع (Introduction to Present Passive)",
+      "rule": "is / are + past participle (is written, is sent, is read, is edited, is inserted)",
+      "examples": [
+        {
+          "en": "On Monday morning, an article is written in Cairo.",
+          "ar": "في صباح الاثنين، تُكتب المقالة في القاهرة."
+        },
+        {
+          "en": "Next, it is sent by email to a newspaper office in Baghdad.",
+          "ar": "بعد ذلك، تُرسل بالبريد الإلكتروني إلى مكتب الجريدة في بغداد."
+        }
+      ]
+    }
+  },
+  "2965": {
+    "unit": 5,
+    "lessonNumber": 5,
+    "pages": [
+      51
+    ],
+    "titleAr": "المبني للمجهول في المضارع: الطباعة والتوزيع والبيع",
+    "titleEn": "From Cairo to Baghdad (Part B) & Present Passive",
+    "themeColor": "#2563eb",
+    "icon": "🖨️",
+    "sections": [
+      {
+        "name": "Step 5: Printing Press",
+        "ar": "الخطوة 5: الإرسال إلى المطبعة",
+        "icon": "⚙️",
+        "def": "The completed newspaper pages are sent to the industrial printing press."
+      },
+      {
+        "name": "Step 6: Night Printing",
+        "ar": "الخطوة 6: الطباعة الليلية المكثفة",
+        "icon": "🌙",
+        "def": "At night, thousands of newspapers are printed ready for morning delivery."
+      },
+      {
+        "name": "Step 7: Dawn Distribution",
+        "ar": "الخطوة 7: التوزيع فجر الثلاثاء",
+        "icon": "🚚",
+        "def": "Early on Tuesday morning, the newspapers are sent to the shops and newsagents."
+      },
+      {
+        "name": "Step 8: Sold to Readers",
+        "ar": "الخطوة 8: البيع للقراء صباحاً",
+        "icon": "📰",
+        "def": "When the shops open, the newspapers are sold to eager readers across Baghdad."
+      }
+    ],
+    "grammarFocus": {
+      "title": "قاعدة المبني للمجهول في زمن المضارع البسيط (Present Passive Formula)",
+      "rule": "Object + am / is / are + Past Participle (نستخدمه للتركيز على ما يحدث للشيء لا من يقوم به)",
+      "examples": [
+        {
+          "en": "Active: A reporter writes an article. ➔ Passive: An article is written.",
+          "ar": "المعلوم: يكتب المراسل مقالاً. ➔ المجهول: يُكتب المقال (دون الحاجة لذكر المراسل)."
+        },
+        {
+          "en": "Early on Tuesday morning, the newspapers are sent to the shops.",
+          "ar": "في الصباح الباكر ليوم الثلاثاء، تُرسل الصحف إلى المحلات."
+        }
+      ]
+    }
+  },
+  "2966": {
+    "unit": 5,
+    "lessonNumber": 6,
+    "pages": [
+      52
+    ],
+    "titleAr": "اختراعات عظيمة والمبني للمجهول في الماضي (بيرد وماركوني)",
+    "titleEn": "Great Inventions & Past Passive (Baird & Marconi)",
+    "themeColor": "#dc2626",
+    "icon": "📺",
+    "sections": [
+      {
+        "name": "John Baird (1888–1946)",
+        "ar": "جون بيرد (مخترع التلفزيون)",
+        "icon": "📺",
+        "def": "Scottish inventor: 1926 showed first TV pictures; 1927 sent pictures to Scotland; 1928 sent to America."
+      },
+      {
+        "name": "Guglielmo Marconi (1874–1937)",
+        "ar": "غولييلمو ماركوني (رائد الراديو)",
+        "icon": "📻",
+        "def": "Italian inventor: 1896 sent radio 1.5 km; 1897 sent to ship at sea (29 km); 1902 sent across Atlantic Ocean."
+      },
+      {
+        "name": "Alexander Graham Bell",
+        "ar": "ألكسندر غراهام بيل",
+        "icon": "☎️",
+        "def": "Scottish-American inventor of the electric telephone; paved the way for audio communications."
+      },
+      {
+        "name": "Radio Waves Innovation",
+        "ar": "ثورة الموجات الراديوية اللاسلكية",
+        "icon": "〰️",
+        "def": "Using radio waves through the air instead of cumbersome physical copper wires to carry signals."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المبني للمجهول في زمن الماضي البسيط (Past Simple Passive)",
+      "rule": "Subject + was / were + Past Participle (+ by + inventor)",
+      "examples": [
+        {
+          "en": "The radio was invented by Marconi in the late nineteenth century.",
+          "ar": "اختُرع الراديو بواسطة ماركوني في أواخر القرن التاسع عشر."
+        },
+        {
+          "en": "The first television pictures were shown by Baird in London in 1926.",
+          "ar": "عُرضت أولى صور التلفزيون بواسطة بيرد في لندن عام 1926."
+        }
+      ]
+    }
+  },
+  "2967": {
+    "unit": 5,
+    "lessonNumber": 7,
+    "pages": [
+      53
+    ],
+    "titleAr": "الهواتف: الأرضية والمحمولة والمبني للمجهول مع Can",
+    "titleEn": "Telephones: Landlines vs Mobiles & Passive with Can",
+    "themeColor": "#0d9488",
+    "icon": "📱",
+    "sections": [
+      {
+        "name": "Landline Phone",
+        "ar": "الهاتف الأرضي السلكي",
+        "icon": "☎️",
+        "def": "Sends and receives signals through underground wires; can only be used in one place, but highly reliable."
+      },
+      {
+        "name": "Mobile Phone",
+        "ar": "الهاتف المحمول اللاسلكي",
+        "icon": "📱",
+        "def": "Sends radio waves to dedicated masts; can be used almost anywhere; powered by rechargeable batteries."
+      },
+      {
+        "name": "Smartphones",
+        "ar": "الهواتف الذكية متعددة المهام",
+        "icon": "🤳",
+        "def": "Combines phone calling with internet access, high-res photography, music playback, and mobile apps."
+      },
+      {
+        "name": "Mobile Masts & Network",
+        "ar": "أبراج التقوية وشبكات الاتصال",
+        "icon": "🗼",
+        "def": "Transmission masts installed in cities and countryside to relay wireless radio signals between callers."
+      }
+    ],
+    "grammarFocus": {
+      "title": "المبني للمجهول مع الأفعال الناقصة (Passive with Can / Cannot)",
+      "rule": "Subject + can / cannot + be + Past Participle",
+      "examples": [
+        {
+          "en": "Mobile phones can be used almost anywhere.",
+          "ar": "الهواتف المحمولة يمكن استخدامها في أي مكان تقريباً."
+        },
+        {
+          "en": "Mobile phones cannot be used without charged batteries.",
+          "ar": "الهواتف المحمولة لا يمكن استخدامها بدون بطاريات مشحونة."
+        }
+      ]
+    }
+  },
+  "2968": {
+    "unit": 5,
+    "lessonNumber": 8,
+    "pages": [
+      54
+    ],
+    "titleAr": "إجراء المكالمات الهاتفية وآداب التحدث وتدوين الرسائل",
+    "titleEn": "Making Telephone Calls & Phone Etiquette",
+    "themeColor": "#e11d48",
+    "icon": "📞",
+    "sections": [
+      {
+        "name": "Introduce Yourself",
+        "ar": "التعريف بالنفس فوراً",
+        "icon": "🙋",
+        "def": "Always state who you are immediately ('Anas Abdullah here / Anas speaking'); never wait to be asked."
+      },
+      {
+        "name": "State Your Reason",
+        "ar": "بيان سبب المكالمة بوضوح",
+        "icon": "🎯",
+        "def": "Explain clearly why you called: 'I'm calling about tomorrow's medical appointment'."
+      },
+      {
+        "name": "Plan Before Dialling",
+        "ar": "التحضير المسبق قبل الاتصال",
+        "icon": "📝",
+        "def": "Prepare what you need to say and keep a pen ready to note dates, names, or addresses."
+      },
+      {
+        "name": "Speak Slowly & Clearly",
+        "ar": "التحدث ببطء ونطق سليم",
+        "icon": "🗣️",
+        "def": "Speak with clarity and composure because the listener cannot see your facial cues."
+      },
+      {
+        "name": "Polite Request Formulas",
+        "ar": "عبارات الاستيضاح والتهذيب",
+        "icon": "👂",
+        "def": "'Could you repeat that, please?' | 'Could you spell your surname?' | 'Hold on a moment, please.'"
+      }
+    ],
+    "grammarFocus": {
+      "title": "العبارات الهاتفية الرسمية والمهذبة (Phone Dialogue Phrases)",
+      "rule": "Could I speak to ... ? | I'd like to make an appointment | Can I take a message?",
+      "examples": [
+        {
+          "en": "Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.",
+          "ar": "معكم ليلى أحمد، أنا أتصل بخصوص رحلة الطيران غداً إلى البحرين."
+        },
+        {
+          "en": "I'm sorry, could you repeat that, please? Can you spell your name?",
+          "ar": "أعتذر، هل يمكنك تكرار ذلك لو سمحت؟ وهل تتهجى اسمك؟"
+        }
+      ]
+    }
+  },
+  "2969": {
+    "unit": 5,
+    "lessonNumber": 9,
+    "pages": [
+      55
+    ],
+    "titleAr": "المراجعة الشاملة لمهارات وقواعد ومفردات الوحدة 5",
+    "titleEn": "Unit 5 Comprehensive Round Up & Mastery",
+    "themeColor": "#4f46e5",
+    "icon": "🎯",
+    "sections": [
+      {
+        "name": "Passive Voice Across 3 Forms",
+        "ar": "صيغ المبني للمجهول الثلاث المقررة",
+        "icon": "⚙️",
+        "def": "Present (is/are + pp) | Past (was/were + pp) | Modals (can be + pp)."
+      },
+      {
+        "name": "Dictionary Guide",
+        "ar": "دليل اختصارات القاموس",
+        "icon": "🔤",
+        "def": "Mastery of n, v, adj, adv, prep, conj, pron and multiple definitions of polysemous words."
+      },
+      {
+        "name": "Communication Evolution",
+        "ar": "مسيرة تطور وسائل الاتصال",
+        "icon": "🚀",
+        "def": "From 7th-century Al-Barid horses and pigeons to Baird's 1926 television and modern smartphones."
+      },
+      {
+        "name": "Calling Etiquette Checklist",
+        "ar": "قائمة التدقيق للمكالمات الهاتفية",
+        "icon": "✅",
+        "def": "Self-introduction, clear objective, calm tone, active listening, and polite message taking."
+      }
+    ],
+    "grammarFocus": {
+      "title": "الصيغ الامتحانية للمبني للمجهول (Ministerial Exam Master Form)",
+      "rule": "Present: is/are + pp | Past: was/were + pp | Modals: can be + pp",
+      "examples": [
+        {
+          "en": "Present: The article is edited in Baghdad and printed the same night.",
+          "ar": "المضارع: يُدقق المقال في بغداد ويُطبع في الليلة نفسها."
+        },
+        {
+          "en": "Past: Radio was invented by Marconi in the late nineteenth century.",
+          "ar": "الماضي: اختُرع الراديو على يد ماركوني في أواخر القرن التاسع عشر."
+        },
+        {
+          "en": "Modal: High quality pictures can be taken with smartphones.",
+          "ar": "مع can: الصور عالية الجودة يمكن التقاطها بالهواتف الذكية."
+        }
+      ]
+    }
+  },
+  "2970": {
+    "unit": 5,
+    "lessonNumber": 10,
+    "pages": [
+      56,
+      57
+    ],
+    "titleAr": "وقت القصة: جاد وجوني - رحلة الجندول في البندقية",
+    "titleEn": "Story Time: Jad and Johnny - The Gondola Trip in Venice",
+    "themeColor": "#0284c7",
+    "icon": "🛶",
+    "sections": [
+      {
+        "name": "Venice: The Water City",
+        "ar": "مدينة الماء (البندقية - فينيسيا)",
+        "icon": "🏛️",
+        "def": "A historic canal city in northern Italy with no cars or buses; all travel is on foot or by boat."
+      },
+      {
+        "name": "The Gondola Ride",
+        "ar": "جولة قارب الجندول التقليدي",
+        "icon": "🛶",
+        "def": "The boys board a gondola steered by a gondolier with a long pole through picturesque waterways."
+      },
+      {
+        "name": "Marcus' Phone Accident",
+        "ar": "حادث سقوط هاتف ماركوس",
+        "icon": "📵",
+        "def": "Marcus stands up to video call his dad; the gondola bumps another boat, and his phone sinks into the canal!"
+      },
+      {
+        "name": "Crowded Pizza Quest",
+        "ar": "رحلة البحث عن البيتزا الإيطالية",
+        "icon": "🍕",
+        "def": "Jad eagerly craves authentic pizza, but Venetian restaurants are overflowing with tourists and have no tables for 5."
+      },
+      {
+        "name": "The Restaurant Surprise",
+        "ar": "المفاجأة الطريفة داخل المطعم",
+        "icon": "😋",
+        "def": "Jad and Marcus vanish and are found enjoying a large pizza (and Marcus bought a shiny replacement phone)!"
+      }
+    ],
+    "grammarFocus": {
+      "title": "تعبيرات القصة وأفعال الحركة (Story Movement Verbs)",
+      "rule": "bumped into = اصطدم بـ | sank into the water = غرق في الماء | disappeared into the crowd = اختفى بين الحشود",
+      "examples": [
+        {
+          "en": "Venice isn't a place for buses and cars; it's a water city, so ride on a gondola.",
+          "ar": "البندقية ليست مكاناً للحافلات والسيارات، إنها مدينة مائية لذا اركب الجندول."
+        },
+        {
+          "en": "Our boat bumped into another gondola, and Marcus' phone fell into the canal.",
+          "ar": "اصطدم قاربنا بجندول آخر، وسقط هاتف ماركوس في القناة المائية."
+        }
+      ]
+    }
+  },
+  "2971": {
+    "unit": 5,
+    "lessonNumber": 11,
+    "pages": [
+      58,
+      59
+    ],
+    "titleAr": "المشروع 3: منتدى المحادثة والنقاش، ومقال الرأي",
+    "titleEn": "Project 3: A Chat Forum & For-and-Against Essay",
+    "themeColor": "#8b5cf6",
+    "icon": "💬",
+    "sections": [
+      {
+        "name": "Chat Forum Concept",
+        "ar": "مفهوم منتدى المحادثة الإلكتروني",
+        "icon": "💻",
+        "def": "An online discussion board where global participants debate essential topics and share diverse perspectives."
+      },
+      {
+        "name": "Topic: Can Money Buy Happiness?",
+        "ar": "مناظرة: هل يشتري المال السعادة؟",
+        "icon": "💰",
+        "def": "Layla & EnglishTom argue true happiness comes from health and family | Francois & Tayyeb argue money buys comfort and care."
+      },
+      {
+        "name": "Arguments For & Against",
+        "ar": "الحجج المؤيدة والحجج المعارضة",
+        "icon": "⚖️",
+        "def": "Balanced debate methodology: listing pros and cons objectively before arriving at a reasoned judgment."
+      },
+      {
+        "name": "Essay Structure (4 Paragraphs)",
+        "ar": "هيكل مقال الرأي المتوازن (4 فقرات)",
+        "icon": "📋",
+        "def": "Para 1: Introduce topic | Para 2: Arguments for | Para 3: Arguments against | Para 4: Summary & personal view."
+      }
+    ],
+    "grammarFocus": {
+      "title": "عبارات إبداء الرأي والربط في المقال (Opinion & Contrast Connectors)",
+      "rule": "I agree with ... | I disagree | However | In my opinion | On the one hand ... On the other hand",
+      "examples": [
+        {
+          "en": "In the first paragraph introduce the topic, then give arguments for and against.",
+          "ar": "في الفقرة الأولى اطرح الموضوع، ثم قدّم الحجج المؤيدة والحجج المعارضة."
+        },
+        {
+          "en": "Friends, family and good health are the things that make people truly happy.",
+          "ar": "الأصدقاء والعائلة والصحة الجيدة هي الأشياء التي تجعل الناس سعداء حقاً."
         }
       ]
     }

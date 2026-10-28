@@ -2171,7 +2171,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.8.6 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v2.9.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3191,7 +3191,7 @@
         </div>
       </div>
       <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; background: var(--slate-100); border-radius: 8px; padding: 1rem; position: relative;" id="bookPageImgWrapper">
-        <img id="bookPageModalImg" src="" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
+        <img id="bookPageModalImg" src=" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
       </div>
     </div>
   </div>
@@ -3403,7 +3403,7 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.8.6؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v2.9.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
@@ -3458,8 +3458,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '2.8.6';
-    const CURRENT_VERSION_LABEL = 'v2.8.6';
-    const SYSTEM_VERSION = 'v2.8.6';
+    const CURRENT_VERSION_LABEL = 'v2.9.0';
+    const SYSTEM_VERSION = 'v2.9.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -5862,6 +5862,166 @@
         };
       }
 
+      // --- أسئلة الوحدة الخامسة: تلقي وإرسال المعلومات ---
+      // فحص أسئلة المبني للمجهول Passive Voice
+      if (q.includes('مبني للمجهول') || q.includes('passive') || q.includes('active') || q.includes('مجهول') || q.includes('is written') || q.includes('was invented')) {
+        return {
+          content: `📌 **قواعد المبني للمجهول الشاملة (Passive Voice - الوحدة الخامسة ص 51، 52، 53، 115-117):**\n` +
+                   `يُستخدم المبني للمجهول عندما يكون الحدث والنتيجة أهم من الفاعل، أو عندما يكون الفاعل غير معروف:\n\n` +
+                   `1. **المضارع البسيط (Present Simple Passive):**\n` +
+                   `• القاعدة: **المفعول به + am / is / are + التصريف الثالث (p.p.)**\n` +
+                   `• مثال: An article **is written** in Cairo. | The newspapers **are printed** at night.\n\n` +
+                   `2. **الماضي البسيط (Past Simple Passive):**\n` +
+                   `• القاعدة: **المفعول به + was / were + التصريف الثالث (p.p.) + (by + الفاعل)**\n` +
+                   `• مثال: The radio **was invented** by Marconi. | TV pictures **were shown** by Baird in 1926.\n\n` +
+                   `3. **مع الأفعال الناقصة (Passive with Can):**\n` +
+                   `• القاعدة: **المفعول به + can / cannot + be + التصريف الثالث (p.p.)**\n` +
+                   `• مثال: Mobile phones **can be used** almost anywhere. | Landlines **can only be used** in one place.`,
+          sources: [{ page: 51, heading: 'Present Passive' }, { page: 52, heading: 'Past Passive' }, { page: 53, heading: 'Passive with Can' }, { page: 115, heading: 'Grammar Reference' }],
+          speakText: "Passive voice has three forms: Present passive with is or are plus past participle; past passive with was or were plus past participle; and modal passive with can be plus past participle."
+        };
+      }
+
+      // فحص وسائل الاتصال القديمة
+      if (q.includes('الوسائل القديمة') || q.includes('old ways') || q.includes('البريد') || q.includes('barid') || q.includes('حمام') || q.includes('pigeon') || q.includes('منارة') || q.includes('lighthouse') || q.includes('دخان') || q.includes('smoke')) {
+        return {
+          content: `📌 **وسائل الاتصال القديمة (Old Ways of Sending Information - صفحة 47):**\n` +
+                   `1. **خدمة البريد (Al-Barid):** بدأت في العالم العربي عام 670م؛ كان الركاب يمتطون الخيول لساعات حاملين الرسائل، ويستبدلون الخيل المتعبة بأخرى طازجة.\n` +
+                   `2. **الحمام الزاجل (Pigeons):** استُخدم لنقل الرسائل بين مصر وسوريا؛ فكان الحمام القوي يطير من القاهرة إلى دمشق دون توقف.\n` +
+                   `3. **المنارات والفنارات (Lighthouses):** شُيدت قرب السواحل لتحذير السفن القادمة من أخطار الصخور والشعاب.\n` +
+                   `4. **إشارات الدخان (Smoke Signals):** إشعال النيران على قمم الجبال لإرسال إشارات بصرية مشفرة للمسافات البعيدة.\n` +
+                   `5. **الطبول والأعلام (Drums and Flags):** استخدمت الطبول في أجزاء من إفريقيا، والأعلام بين السفن لإرسال الإشارات.`,
+          sources: [{ page: 47, heading: 'Lesson 1: Old ways of sending information' }],
+          speakText: "Old ways of sending information included Al-Barid horse messengers started in 670, pigeons flying between Cairo and Damascus, smoke signals on mountains, and lighthouses warning ships."
+        };
+      }
+
+      // فحص رحلة المقال من القاهرة إلى بغداد
+      if (q.includes('cairo') || q.includes('baghdad') || q.includes('قاهرة') || q.includes('بغداد') || q.includes('مقال') || q.includes('article') || q.includes('مطبعة') || q.includes('printing press')) {
+        return {
+          content: `📌 **رحلة المقالة الصحفية من القاهرة إلى بغداد (صفحة 50 و 51):**\n` +
+                   `المسافة بين القاهرة وبغداد 1,300 كم، وتمر المقالة بـ 8 خطوات متسلسلة بالمبني للمجهول:\n` +
+                   `1. **الاثنين صباحاً:** An article **is written** in Cairo (تُكتب المقالة بواسطة مراسل).\n` +
+                   `2. **الإرسال السريع:** It **is sent** by email to Baghdad (تُرسل بالإيميل في أقل من دقيقة).\n` +
+                   `3. **القراءة والتقييم:** It **is read** by an editor (يقرؤها المحرر في بغداد).\n` +
+                   `4. **التدقيق والإدراج:** It **is edited and inserted** into the newspaper (تُدقق وتُدرج في صفحات الجريدة).\n` +
+                   `5. **المطبعة:** It **is sent** to the printing press (تُرسل المسودة إلى المطبعة).\n` +
+                   `6. **الطباعة ليلاً:** The newspapers **are printed** at night (تُطبع آلاف النسخ ليلاً).\n` +
+                   `7. **التوزيع فجراً:** Early Tuesday morning, they **are sent** to the shops (تُرسل فجر الثلاثاء للمحلات والأكشاك).\n` +
+                   `8. **البيع للقراء:** The newspapers **are sold** to readers (تُباع للقراء مع فتح المحلات كشارع المتنبي).`,
+          sources: [{ page: 50, heading: 'From Cairo to Baghdad Part A' }, { page: 51, heading: 'From Cairo to Baghdad Part B' }],
+          speakText: "The article journey: written in Cairo on Monday morning, emailed to Baghdad in under a minute, edited, printed at night, sent to shops Tuesday morning, and sold to readers."
+        };
+      }
+
+      // فحص المخترعين (جون بيرد وماركوني وتلفزيون وراديو)
+      if (q.includes('بيرد') || q.includes('baird') || q.includes('ماركوني') || q.includes('marconi') || q.includes('تلفزيون') || q.includes('television') || q.includes('راديو') || q.includes('radio') || q.includes('مخترع') || q.includes('inventions')) {
+        return {
+          content: `📌 **أعظم الاختراعات في الاتصالات (Great Inventions - صفحة 52):**\n` +
+                   `1. **جون لوجي بيرد (John Logie Baird 1888–1946):**\n` +
+                   `• مخترع اسكتلندي (Scottish inventor).\n` +
+                   `• عام **1926** في لندن: أول من عرض صوراً على شاشة التلفزيون (لم تكن متحركة).\n` +
+                   `• عام **1927**: أرسل صوراً متحركة من لندن إلى اسكتلندا بأسلاك الهاتف.\n` +
+                   `• عام **1928**: أرسل صوراً إلى أمريكا بالموجات اللاسلكية، وساهم في تطوير التلفزيون الملون.\n\n` +
+                   `2. **غولييلمو ماركوني (Guglielmo Marconi 1874–1937):**\n` +
+                   `• مبتكر إيطالي (Italian).\n` +
+                   `• عام **1896**: أرسل رسالة راديوية لمسافة 1.5 كم بالموجات اللاسلكية.\n` +
+                   `• عام **1897**: أرسل رسالة من اليابسة إلى سفينة في البحر (29 كم).\n` +
+                   `• عام **1902**: أرسل رسالة راديو لاسلكية تاريخية عبر المحيط الأطلسي من أمريكا إلى إنجلترا.`,
+          sources: [{ page: 52, heading: 'Lesson 6: Great inventions' }],
+          speakText: "John Baird, a Scottish inventor, showed the first television pictures in London in 1926. Guglielmo Marconi, an Italian inventor, sent radio messages across the Atlantic Ocean in 1902."
+        };
+      }
+
+      // فحص الهواتف الأرضية والمحمولة
+      if (q.includes('هاتف') || q.includes('phone') || q.includes('landline') || q.includes('mobile') || q.includes('أرضي') || q.includes('محمول') || q.includes('mast') || q.includes('برج')) {
+        return {
+          content: `📌 **مقارنة الهواتف: الأرضية والمحمولة والذكية (Telephones - صفحة 53):**\n` +
+                   `1. **الهاتف الأرضي (Landline Phone):**\n` +
+                   `• يرسل ويستقبل الإشارات عبر أسلاك أرضية متصلة حول العالم.\n` +
+                   `• **العيب:** يُستخدم في مكان واحد فقط (less useful).\n` +
+                   `• **الميزة:** أكثر موثوقية وثباتاً في الاتصال (more reliable).\n\n` +
+                   `2. **الهاتف المحمول (Mobile Phone):**\n` +
+                   `• يرسل إشارات عبر موجات الراديو إلى أبراج التقوية (masts).\n` +
+                   `• يُستخدم في أي مكان تقريباً، لكنه يحتاج لبطارية مشحونة (battery).\n\n` +
+                   `3. **الهواتف الذكية (Smartphones):**\n` +
+                   `• هواتف متطورة تتصل بالإنترنت وتلتقط صوراً عالية الجودة وتشغل المقاطع والتطبيقات.`,
+          sources: [{ page: 53, heading: 'Lesson 7: Telephones' }],
+          speakText: "Landline phones use wires and work in one place but are very reliable. Mobile phones use radio waves to masts and can be used almost anywhere."
+        };
+      }
+
+      // فحص آداب المكالمات الهاتفية
+      if (q.includes('مكالمة') || q.includes('اتصال') || q.includes('telephone call') || q.includes('etiquette') || q.includes('anas') || q.includes('أنس') || q.includes('موعد') || q.includes('appointment')) {
+        return {
+          content: `📌 **آداب المكالمات الهاتفية (Making Telephone Calls - صفحة 54):**\n` +
+                   `1. **التعريف بالنفس فوراً:** قل اسمك في بداية الاتصال (Layla Ahmed here / Anas speaking).\n` +
+                   `2. **توضيح الغرض:** اذكر سبب المكالمة مباشرة (I'm calling about tomorrow's appointment).\n` +
+                   `3. **التحضير المسبق:** فكّر بما ستقوله وجهز ورقة وقلماً قبل طلب الرقم.\n` +
+                   `4. **التحدث ببطء ووضوح:** تكلّم بتؤدة لأن المستمع لا يرى تعابير وجهك.\n` +
+                   `5. **عبارات مهذبة:**\n` +
+                   `• Could I speak to ... please? (هل يمكنني التحدث إلى... من فضلك؟)\n` +
+                   `• Hold on a moment, please (انتظر لحظة لو سمحت).\n` +
+                   `• Could you repeat that, please? (هل يمكنك إعادة ذلك؟)\n` +
+                   `• Can you spell that, please? (هل تتهجى ذلك لو سمحت؟)`,
+          sources: [{ page: 54, heading: 'Lesson 8: Making telephone calls' }],
+          speakText: "Telephone etiquette: Introduce yourself immediately, state why you are calling, think before calling, and speak slowly and clearly."
+        };
+      }
+
+      // فحص قصة جاد وجوني في فينيسيا
+      if (q.includes('فينيسيا') || q.includes('venice') || q.includes('جندول') || q.includes('gondola') || q.includes('قناة') || q.includes('بيتزا') || q.includes('pizza') || q.includes('marcus') || q.includes('ماركوس') || q.includes('هاتف ماركوس')) {
+        return {
+          content: `📌 **قصة جاد وجوني: رحلة الجندول في البندقية (The Gondola Trip in Venice - صفحة 56 و 57):**\n` +
+                   `1. **مدينة البندقية (Venice):** مدينة مائية في شمال إيطاليا مبنية على القنوات المائية، لا توجد فيها سيارات أو حافلات، والتنقل إما مشياً أو بقارب الجندول (gondola).\n` +
+                   `2. **حادث الهاتف:** صعد الأولاد في الجندول، فوقف ماركوس في القارب ليتصل بوالده بالفيديو ويريه معالم المدينة. اصطدم الجندول بقارب آخر، فسقط هاتف ماركوس وغرق في ماء القناة!\n` +
+                   `3. **رحلة البحث عن البيتزا:** كان جاد متلهفاً لأكل البيتزا الإيطالية، لكن جميع المطاعم كانت مزدحمة بالسياح ولا توجد طاولة لخمسة أشخاص.\n` +
+                   `4. **المفاجأة الطريفة:** اختفى جاد وماركوس بين الحشود، وبعد 20 دقيقة من البحث قلقاً وجدهم باولو وجوني وأزيز جالسين في مطعم يلتهمون البيتزا، وقد اشترى ماركوس هاتفاً جديداً! فأخذ جوني طبق جاد وقال له: الآن يمكنك طلب المزيد!`,
+          sources: [{ page: 56, heading: 'Story time Part 1' }, { page: 57, heading: 'Story time Part 2' }],
+          speakText: "In Venice, a water city with no cars, Marcus stood up in a gondola and his phone sank in the canal. Jad and Marcus disappeared and were found eating pizza in a crowded restaurant."
+        };
+      }
+
+      // فحص منتدى المحادثة ومناظرة المال والسعادة
+      if (q.includes('منتدى') || q.includes('forum') || q.includes('chat') || q.includes('سعادة') || q.includes('happiness') || q.includes('مال') || q.includes('money') || q.includes('essay') || q.includes('مقال جدلي')) {
+        return {
+          content: `📌 **منتدى المحادثة الإلكتروني ومناظرة المال والسعادة (A Chat Forum - صفحة 58 و 59):**\n` +
+                   `1. **موضوع المناظرة:** هل يستطيع المال شراء السعادة؟ (Can money buy happiness?):\n` +
+                   `• **ليلى (LaylaIraq123) وتوم (EnglishTom44):** لا يستطيع المال شراء السعادة، فالأصدقاء والعائلة والصحة هي سر السعادة الحقيقية، والمال لا يمنع الوحدة.\n` +
+                   `• **فرانسوا (FrancoisF56):** المال يجلب حياة أفضل وشراء منازل وسيارات والسفر حول العالم.\n` +
+                   `• **طيّب (Tayyeb101):** الصحة والمال مترابطان، فالمال يتيح الغذاء الصحي والرعاية الطبية الممتازة والأندية الرياضية.\n` +
+                   `• **بولي (PollyP):** من الصعب أن تكون سعيداً وأنت فقير، فنحن بحاجة لمال كافٍ للمعيشة، لكن الثراء الفاحش لا يعني سعادة أكبر.\n\n` +
+                   `2. **هيكل مقال الرأي (For-and-Against Essay):**\n` +
+                   `• **الفقرة 1:** طرح الموضوع ومقدمته.\n` +
+                   `• **الفقرة 2:** الحجج المؤيدة (Arguments For).\n` +
+                   `• **الفقرة 3:** الحجج المعارضة (Arguments Against).\n` +
+                   `• **الفقرة 4:** تلخيص الحجج وخاتمة الرأي الشخصي المتوازن.`,
+          sources: [{ page: 58, heading: 'Project 3: Global Chat' }, { page: 59, heading: 'Project 3: For-and-Against Essay' }],
+          speakText: "The chat forum discusses whether money can buy happiness. A for-and-against essay has 4 paragraphs: introduction, arguments for, arguments against, and summary conclusion."
+        };
+      }
+
+      // فحص اختصارات القاموس والترتيب الأبجدي
+      if (q.includes('قاموس') || q.includes('dictionary') || q.includes('أبجدي') || q.includes('alphabetical') || q.includes('اختصارات') || q.includes('abbreviations') || q.includes('prep') || q.includes('conj') || q.includes('pron')) {
+        return {
+          content: `📌 **دليل القواميس واختصارات أقسام الكلام (صفحة 49 و 55):**\n` +
+                   `1. **الترتيب الأبجدي:** ترتب الكلمات في القاموس هجائياً من A إلى Z لسرعة البحث.\n` +
+                   `2. **الرموز المعتمدة:**\n` +
+                   `• **n.** = noun (اسم) مثل book, river\n` +
+                   `• **v.** = verb (فعل) مثل run, invent\n` +
+                   `• **adj.** = adjective (صفة) مثل fast, clear\n` +
+                   `• **adv.** = adverb (ظرف/حال) مثل easily, slowly\n` +
+                   `• **prep.** = preposition (حرف جر) مثل in, on, at\n` +
+                   `• **conj.** = conjunction (أداة ربط) مثل and, but, so\n` +
+                   `• **pron.** = pronoun (ضمير) مثل he, she, it\n\n` +
+                   `3. **تعدد المعاني (كلمة Bank):**\n` +
+                   `• اسم: مصرف مالي، أو ضفة نهر.\n` +
+                   `• فعل: يودع مالاً، أو تميل الطائرة وتنعطف.`,
+          sources: [{ page: 49, heading: 'Reading tip 6: Dictionaries' }, { page: 55, heading: 'Unit 5 Round up' }],
+          speakText: "Dictionaries arrange words alphabetically. Key abbreviations are n for noun, v for verb, adj for adjective, adv for adverb, prep for preposition, and conj for conjunction."
+        };
+      }
+
       // إجابة عامة موثقة بالدرس الحالي
       return {
         content: `أهلاً بك! لقد تم فحص استفسارك في نصوص المنهج المعتمد. يمكنك الاستفسار عن أي قاعدة نحوية (مثل s التملك، for و since، أفعال الرياضة)، أو معاني الكلمات والمفردات، أو تفاصيل دروس مجلة المدرسة والقصص المقررة. تفضل بطرح سؤالك وسأجيبك بدقة مع رقم الصفحة.`,
@@ -6087,6 +6247,518 @@
 
       // خريطة الأسئلة التدريبية المتخصصة حسب الدرس المختار
       const LESSON_QUIZZES = {
+        // الوحدة 5: تلقي وإرسال المعلومات (Unit 5: Getting & Sending Info)
+        2961: [
+          {
+            id: 29611,
+            question: "When did the messenger horse service 'Al-Barid' start in the Arab world?",
+            options: ["In 670", "In 1926", "In 1896", "In 1492"],
+            correct: 0,
+            explanation: "Page 47 states: 'This messenger service started in 670. It was called Al-Barid.'"
+          },
+          {
+            id: 29612,
+            question: "What route could a good messenger pigeon fly without stopping?",
+            options: [
+              "From Cairo to Damascus",
+              "From Baghdad to London",
+              "From Paris to Rome",
+              "From Basra to Alexandria"
+            ],
+            correct: 0,
+            explanation: "Page 47 states: 'People used to use pigeons to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping.'"
+          },
+          {
+            id: 29613,
+            question: "Why did people build lighthouses near the sea?",
+            options: [
+              "To warn ships of danger",
+              "To catch fish at night",
+              "To store grain and food",
+              "To send emails to islands"
+            ],
+            correct: 0,
+            explanation: "Page 47 states: 'People used to build lighthouses near the sea. The lighthouses warned ships of danger.'"
+          },
+          {
+            id: 29614,
+            question: "How did people on mountain tops send messages in ancient times?",
+            options: [
+              "Using smoke signals from fires",
+              "Using mobile phone masts",
+              "Using underwater cables",
+              "Using television screens"
+            ],
+            correct: 0,
+            explanation: "Page 47 states: 'People used to light fires on the tops of mountains and send messages using smoke signals.'"
+          }
+        ],
+        2962: [
+          {
+            id: 29621,
+            question: "Where should you look if you want to find the capital of Madagascar?",
+            options: ["In an atlas", "In a recipe book", "In a poetry anthology", "In a sports magazine"],
+            correct: 0,
+            explanation: "Page 48 states: 'If you want to know what the capital of Madagascar is, you can look it up in an atlas.'"
+          },
+          {
+            id: 29622,
+            question: "What can you use in the library to find out comprehensive facts about history?",
+            options: ["An encyclopedia", "A comic strip", "A calculator", "A novel"],
+            correct: 0,
+            explanation: "Page 48 states: 'You can use an encyclopedia in the library if you want to find out about history.'"
+          },
+          {
+            id: 29623,
+            question: "What is the core message of 'Critical Reading'?",
+            options: [
+              "A lot of information does not always mean good information",
+              "All internet information is 100% accurate",
+              "You should never check references",
+              "Read only the shortest paragraphs"
+            ],
+            correct: 0,
+            explanation: "Page 48 emphasizes: 'Remember, a lot of information does not always mean good information! We need to think critically about what we are reading.'"
+          },
+          {
+            id: 29624,
+            question: "Which question is essential when evaluating a source critically?",
+            options: [
+              "Who wrote the information and why did they write it?",
+              "What font color was chosen?",
+              "How many pictures are on the cover?",
+              "Was it printed on glossy paper?"
+            ],
+            correct: 0,
+            explanation: "Critical reading questions on page 48: Who wrote the information? Why did they write it? Can we find the same information in different sources? Are there references?"
+          }
+        ],
+        2963: [
+          {
+            id: 29631,
+            question: "How are words arranged in an English dictionary?",
+            options: [
+              "In strict alphabetical order from A to Z",
+              "By word length from shortest to longest",
+              "By date of publication",
+              "Randomly"
+            ],
+            correct: 0,
+            explanation: "Reading tip 6 on page 49 states: 'All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well.'"
+          },
+          {
+            id: 29632,
+            question: "In a dictionary entry, what does the abbreviation '(adv.)' mean?",
+            options: ["adverb (ظرف أو حال)", "adjective (صفة)", "advertisement (إعلان)", "advanced (متقدم)"],
+            correct: 0,
+            explanation: "Page 49 lists grammatical abbreviations: (adv.) stands for adverb."
+          },
+          {
+            id: 29633,
+            question: "In the sentence: 'He sat on the grassy bank and put his feet in the water', what does 'bank' mean?",
+            options: [
+              "A piece of ground next to a river (noun)",
+              "A place where you keep money (noun)",
+              "To keep money in a bank (verb)",
+              "To turn a plane left or right (verb)"
+            ],
+            correct: 0,
+            explanation: "Page 49 dictionary exercise: 'grassy bank' next to water corresponds to definition 3: a piece of ground next to a river (noun)."
+          },
+          {
+            id: 29634,
+            question: "In the sentence: 'The plane banked to the left as it got near the airport', what part of speech is 'banked'?",
+            options: ["A verb meaning to turn left or right", "A noun meaning a money vault", "An adjective meaning grassy", "A preposition"],
+            correct: 0,
+            explanation: "Page 49 entry: 'bank (v.) 6. to turn a plane left or right.' Here banked is a past tense verb."
+          }
+        ],
+        2964: [
+          {
+            id: 29641,
+            question: "When and where is the news article written in the story 'From Cairo to Baghdad'?",
+            options: [
+              "On Monday morning in Cairo",
+              "On Friday night in Baghdad",
+              "On Sunday afternoon in London",
+              "On Tuesday dawn in Damascus"
+            ],
+            correct: 0,
+            explanation: "Page 50 states: '1. On Monday morning, an article is written in Cairo.'"
+          },
+          {
+            id: 29642,
+            question: "How long does it take to send the article by email from Cairo to Baghdad (1,300 km)?",
+            options: ["Less than a minute", "Two whole days", "Six hours", "One week"],
+            correct: 0,
+            explanation: "Page 50 states: 'Next, it is sent by email to a newspaper office in Baghdad. This takes less than a minute.'"
+          },
+          {
+            id: 29643,
+            question: "What happens when the article arrives at the Baghdad newspaper office?",
+            options: [
+              "It is read by an editor",
+              "It is thrown away immediately",
+              "It is sold directly to readers",
+              "It is put on television"
+            ],
+            correct: 0,
+            explanation: "Page 50 states: '3. When the article arrives, it is read by an editor.'"
+          },
+          {
+            id: 29644,
+            question: "What does the editor do if he likes the article?",
+            options: [
+              "It is edited and inserted into the newspaper",
+              "He deletes it from the computer",
+              "He calls the police",
+              "He sends it back to Cairo"
+            ],
+            correct: 0,
+            explanation: "Page 50 states: '4. If the editor likes the article, it is edited and inserted into the newspaper.'"
+          }
+        ],
+        2965: [
+          {
+            id: 29651,
+            question: "When are the newspapers printed at the printing press?",
+            options: ["At night", "On Monday afternoon", "At noon on Tuesday", "Next Sunday"],
+            correct: 0,
+            explanation: "Page 51 states: 'Then, it is sent to the printing press, and at night, the newspapers are printed.'"
+          },
+          {
+            id: 29652,
+            question: "Change this active sentence to present passive: 'A reporter writes an article in Cairo.'",
+            options: [
+              "An article is written in Cairo.",
+              "An article was written in Cairo.",
+              "An article is write in Cairo.",
+              "An article writing in Cairo."
+            ],
+            correct: 0,
+            explanation: "Present passive for singular 'an article': is + past participle (written) = An article is written in Cairo."
+          },
+          {
+            id: 29653,
+            question: "Early on Tuesday morning, what happens to the newspapers?",
+            options: [
+              "They are sent to the shops",
+              "They are burned in the press",
+              "They are hidden under desks",
+              "They are rewritten by reporters"
+            ],
+            correct: 0,
+            explanation: "Page 51 states: 'Early on Tuesday morning, the newspapers are sent to the shops.'"
+          },
+          {
+            id: 29654,
+            question: "Why do we use the passive voice instead of active in newspaper distribution?",
+            options: [
+              "When what happens to things is more important than who does the action",
+              "Because active sentences are forbidden in English",
+              "Because reporters do not know grammar",
+              "To make sentences longer"
+            ],
+            correct: 0,
+            explanation: "Page 51 states: 'When we say what happens to people and things, we use passive verb forms... Notice we don't need to add by a reporter.'"
+          }
+        ],
+        2966: [
+          {
+            id: 29661,
+            question: "Who was John Logie Baird and what was his nationality?",
+            options: [
+              "A Scottish inventor who showed first pictures on a TV screen in 1926",
+              "An Italian painter who made radios",
+              "An American pilot who flew planes",
+              "A French doctor who built hospitals"
+            ],
+            correct: 0,
+            explanation: "Page 52 states: 'In London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen.'"
+          },
+          {
+            id: 29662,
+            question: "In 1902, what historic feat did Guglielmo Marconi achieve?",
+            options: [
+              "He sent a radio message from America to England across the Atlantic Ocean",
+              "He landed a spaceship on the moon",
+              "He invented the electric lightbulb",
+              "He published the first internet website"
+            ],
+            correct: 0,
+            explanation: "Page 52 states: 'Finally, in 1902, he sent a radio message from America to England.'"
+          },
+          {
+            id: 29663,
+            question: "Convert to past passive: 'Marconi invented the radio.'",
+            options: [
+              "The radio was invented by Marconi.",
+              "The radio is invented by Marconi.",
+              "The radio were invented by Marconi.",
+              "The radio has invent by Marconi."
+            ],
+            correct: 0,
+            explanation: "Past passive for singular 'The radio': was + past participle (invented) + by Marconi."
+          },
+          {
+            id: 29664,
+            question: "What did inventors work on after Alexander Bell invented the telephone?",
+            options: [
+              "On radio waves instead of electric signals to carry sound",
+              "On smoke signals and pigeons",
+              "On paper letters and horse messengers",
+              "On plastic cups and strings"
+            ],
+            correct: 0,
+            explanation: "Page 52 states: 'After the invention of the telephone by Alexander Bell, inventors worked on radio waves instead of electric signals to carry sound.'"
+          }
+        ],
+        2967: [
+          {
+            id: 29671,
+            question: "How does a landline phone send and receive signals?",
+            options: [
+              "Through a physical underground wire called a landline",
+              "Through satellite radio masts exclusively",
+              "Through pigeons and flags",
+              "Through sound waves in the ocean"
+            ],
+            correct: 0,
+            explanation: "Page 53 states: 'A landline phone sends and receives signals through a wire. The wire is called the landline.'"
+          },
+          {
+            id: 29672,
+            question: "What is an advantage of a landline phone compared to a mobile phone?",
+            options: [
+              "Landlines are often more reliable",
+              "You can take landlines into your pocket anywhere",
+              "Landlines can take high quality photos",
+              "Landlines don't need any connection"
+            ],
+            correct: 0,
+            explanation: "Page 53 states: 'Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable.'"
+          },
+          {
+            id: 29673,
+            question: "How does a mobile phone transmit calls without wires?",
+            options: [
+              "It sends signals using radio waves to a special mast",
+              "It connects directly by long rope",
+              "It flashes colored lights",
+              "It uses smoke puffs"
+            ],
+            correct: 0,
+            explanation: "Page 53 states: 'A mobile phone does not need a landline because it sends signals to a special mast, using radio waves.'"
+          },
+          {
+            id: 29674,
+            question: "Complete with the correct passive form: 'Mobile phones cannot _______ without batteries.'",
+            options: ["be used", "use", "be using", "been used"],
+            correct: 0,
+            explanation: "Passive with modal cannot: cannot + be + past participle (used) = cannot be used."
+          }
+        ],
+        2968: [
+          {
+            id: 29681,
+            question: "What is Susan's first rule when making an important phone call?",
+            options: [
+              "Introduce yourself immediately and say who you are",
+              "Wait silently for 30 seconds",
+              "Ask the person to tell a funny story",
+              "Speak in whispered tones"
+            ],
+            correct: 0,
+            explanation: "Page 54 states: 'DO introduce yourself. Always say who you are. Don't wait for the other person to ask who you are. It is not polite.'"
+          },
+          {
+            id: 29682,
+            question: "Why should you speak slowly and clearly on the phone?",
+            options: [
+              "Because the other person cannot see you or your gestures",
+              "To use up all your phone credit",
+              "Because microphones don't record normal speech",
+              "To sound like a robot"
+            ],
+            correct: 0,
+            explanation: "Page 54 states: 'DO speak slowly and clearly. Remember that the other person can't see you. Don't speak too fast even if you are nervous.'"
+          },
+          {
+            id: 29683,
+            question: "If you did not hear or understand a name over the phone, what should you say politely?",
+            options: [
+              "I'm sorry. Could you repeat that, please? Can you spell that, please?",
+              "You are speaking badly!",
+              "Hang up now!",
+              "Speak Arabic only!"
+            ],
+            correct: 0,
+            explanation: "Page 54 lists standard polite clarification phrases: 'I'm sorry. Could you repeat that, please? Can you spell that, please?'"
+          },
+          {
+            id: 29684,
+            question: "What mistake did Anas make when ringing the medical centre?",
+            options: [
+              "He didn't introduce himself first and spoke too fast when explaining his stomach ache",
+              "He called the fire department instead",
+              "He forgot what a doctor was",
+              "He sang a song"
+            ],
+            correct: 0,
+            explanation: "In Lesson 8 audio on page 54, Anas failed to introduce himself properly and rushed into his complaint without preparation."
+          }
+        ],
+        2969: [
+          {
+            id: 29691,
+            question: "Which tense and passive form is: 'Radio was invented by Marconi'?",
+            options: [
+              "Past simple passive (was/were + p.p.)",
+              "Present simple passive (is/are + p.p.)",
+              "Present continuous active",
+              "Future with will"
+            ],
+            correct: 0,
+            explanation: "Page 55 Round up: 'Past passive: was/were + past participle of a main verb. Radio was invented by Marconi.'"
+          },
+          {
+            id: 29692,
+            question: "What does the conjunction 'and' do in a sentence according to the Round Up page?",
+            options: [
+              "It links words and links clauses",
+              "It turns nouns into adverbs",
+              "It creates passive questions",
+              "It ends the conversation"
+            ],
+            correct: 0,
+            explanation: "Page 55 states: 'and (conj.) is used (1) to link words and (2) to link clauses: My mother and father are at home.'"
+          },
+          {
+            id: 29693,
+            question: "Which sentence is in the present passive with 'can'?",
+            options: [
+              "Mobile phones can be used almost anywhere.",
+              "Baird showed pictures in London in 1926.",
+              "She wrote an article in Cairo.",
+              "They are playing football in the garden."
+            ],
+            correct: 0,
+            explanation: "Page 55 Round up: 'Present passive with can: can + be + past participle of a main verb: Mobile phones can be used almost anywhere.'"
+          },
+          {
+            id: 29694,
+            question: "When answering the phone to a business or client, which greeting is recommended?",
+            options: [
+              "Layla Ahmed here. I'm calling about tomorrow's flight.",
+              "Who gave you this number?",
+              "Talk quickly, I am busy!",
+              "Guess my identity!"
+            ],
+            correct: 0,
+            explanation: "Page 55 model greeting: 'Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.'"
+          }
+        ],
+        2970: [
+          {
+            id: 29701,
+            question: "Why are there no buses or cars in the city centre of Venice?",
+            options: [
+              "Because Venice is a water city built on canals",
+              "Because the roads were undergoing construction",
+              "Because cars were banned only on Mondays",
+              "Because tourists don't like vehicles"
+            ],
+            correct: 0,
+            explanation: "Page 56 states: 'Venice isn't a place for buses and cars... Venice is a water city. Let's ride on a gondola. It's the best way to see Venice.'"
+          },
+          {
+            id: 29702,
+            question: "What happened to Marcus' mobile phone during the gondola ride?",
+            options: [
+              "It sank into the canal water when the gondola bumped into another boat",
+              "It was stolen by a tourist",
+              "He left it at the hotel in Rome",
+              "He gave it to the gondolier"
+            ],
+            correct: 0,
+            explanation: "Page 57 states: 'Our boat bumped into another gondola, and Marcus fell... We all looked and saw his phone sinking into the water.'"
+          },
+          {
+            id: 29703,
+            question: "Why was it difficult for the boys to find a pizza table in Venice?",
+            options: [
+              "Because all restaurants were packed with tourists and only had tables for two people",
+              "Because Italian pizza was completely sold out",
+              "Because restaurants were closed for the winter",
+              "Because Jad did not have any money"
+            ],
+            correct: 0,
+            explanation: "Page 57 states: 'We walked for half an hour, but we only found restaurants with tables for two people. And they're all tourists, looking for pizza!'"
+          },
+          {
+            id: 29704,
+            question: "Where did Johnny, Paolo, and Aziz finally find Jad and Marcus after 20 minutes?",
+            options: [
+              "Inside a pizza restaurant with Jad eating pizza and Marcus holding a new phone",
+              "At the train station heading home",
+              "Swimming in the canal looking for the lost phone",
+              "At the top of a lighthouse"
+            ],
+            correct: 0,
+            explanation: "Page 57 states: 'Then, after 20 minutes, we saw them — in a pizza restaurant! \"I'm sorry,\" answered Jad with his mouth full of pizza... \"And I got a new phone,\" said Marcus.'"
+          }
+        ],
+        2971: [
+          {
+            id: 29711,
+            question: "What is a 'chat forum' on the internet?",
+            options: [
+              "An online platform where people post topics and discuss differing opinions",
+              "A software to calculate bank accounts",
+              "A physical room inside a library",
+              "An antivirus program"
+            ],
+            correct: 0,
+            explanation: "Page 58 presents Global Chat as an online forum where users write posts and reply to discuss questions like 'Can money buy happiness?'"
+          },
+          {
+            id: 29712,
+            question: "What was EnglishTom44's argument about money and happiness in the forum?",
+            options: [
+              "Friends, family, and health are the things that make people truly happy, not money alone",
+              "Money is the only thing in life that matters",
+              "Rich people are never lonely",
+              "Happiness can be bought at supermarkets"
+            ],
+            correct: 0,
+            explanation: "Page 58 states: 'EnglishTom44 writes: Friends, family, health — all of these things are more important than money. They are the things that make people truly happy.'"
+          },
+          {
+            id: 29713,
+            question: "What argument did Tayyeb101 make to show health and money are connected?",
+            options: [
+              "A rich person can afford healthy nutritious food, a gym, and good doctors",
+              "Money cures all diseases automatically",
+              "Gyms are free for everyone",
+              "Health doesn't matter if you have a phone"
+            ],
+            correct: 0,
+            explanation: "Page 58 states: 'Tayyeb101 writes: A rich person can afford healthy food, a gym and good doctors. I think rich people can have a lot of friends, too!'"
+          },
+          {
+            id: 29714,
+            question: "In a four-paragraph 'For-and-Against Essay', what should you write in the third paragraph?",
+            options: [
+              "The arguments against the topic",
+              "The opening introduction of the topic",
+              "The arguments for the topic",
+              "A list of dictionary definitions"
+            ],
+            correct: 0,
+            explanation: "Page 59 essay instructions: 'In the third paragraph, give the arguments against.'"
+          }
+        ],
+
         // الوحدة 4: المراجعة الشاملة 1 (Unit 4: Review 1)
         294: [
           {
@@ -6850,6 +7522,8 @@
 
       if (lessonId && LESSON_QUIZZES[lessonId]) {
         currentQuizQuestions = LESSON_QUIZZES[lessonId];
+      } else if (lessonId && ((lessonId >= 2961 && lessonId <= 2971) || (lessonId >= 296 && lessonId <= 300))) {
+        currentQuizQuestions = LESSON_QUIZZES[2961];
       } else if (lessonId && lessonId >= 272 && lessonId <= 282) {
         currentQuizQuestions = LESSON_QUIZZES[272];
       } else if (lessonId && (lessonId === 294 || lessonId === 295 || (lessonId >= 2950 && lessonId <= 2955))) {

@@ -31,3 +31,11 @@ Thumbs.db
 .idea/
 .env
 *.mp4
+
+# Local only: the repo is public and served by GitHub Pages (see GEMINI.md, section 4)
+backend/
+frontend/
+storage/
+*.docx
+GEMINI.md
+AGENTS.md
