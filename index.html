@@ -727,6 +727,141 @@
       color: var(--slate-500);
     }
 
+    /* شريط الاختيار السريع للمناهج في الصفحة الرئيسية (Dashboard Quick Curricula Bar) */
+    .dashboard-curricula-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.15rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .dashboard-curricula-bar {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+    }
+
+    .dash-curr-card {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dash-curr-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .dash-curr-card.active-subj {
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .dash-curr-card.eng-theme {
+      border-right: 5px solid #4f46e5;
+    }
+    .dash-curr-card.eng-theme.active-subj {
+      border-color: #6366f1;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .dash-curr-card.arab-theme {
+      border-right: 5px solid #059669;
+    }
+    .dash-curr-card.arab-theme.active-subj {
+      border-color: #10b981;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    .dash-curr-card.is-theme {
+      border-right: 5px solid #0d9488;
+    }
+    .dash-curr-card.is-theme.active-subj {
+      border-color: #14b8a6;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
+    }
+
+    /* شريط تبويبات المناهج الفردية في بوابة المناهج والمواد (Curricula Tabs Navigation) */
+    .curricula-tabs-nav {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      background: #f1f5f9;
+      padding: 0.4rem;
+      border-radius: 14px;
+      border: 1px solid var(--slate-200);
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .curricula-tabs-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .curricula-tab-btn {
+      flex: 1;
+      min-width: 140px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1rem;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--slate-600);
+      cursor: pointer;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .curricula-tab-btn:hover {
+      color: var(--slate-900);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .curricula-tab-btn.active {
+      background: #ffffff;
+      color: var(--slate-900);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .curricula-tab-btn.active.eng {
+      color: #4338ca;
+      box-shadow: 0 3px 10px rgba(67, 56, 202, 0.15);
+      border-bottom: 2.5px solid #4f46e5;
+    }
+
+    .curricula-tab-btn.active.arab {
+      color: #065f46;
+      box-shadow: 0 3px 10px rgba(5, 150, 105, 0.15);
+      border-bottom: 2.5px solid #059669;
+    }
+
+    .curricula-tab-btn.active.islamic {
+      color: #0f766e;
+      box-shadow: 0 3px 10px rgba(13, 148, 136, 0.15);
+      border-bottom: 2.5px solid #0d9488;
+    }
+
+    .curricula-tab-btn.active.all {
+      color: var(--slate-800);
+      border-bottom: 2.5px solid var(--slate-700);
+    }
+
     /* شبكة المناهج */
     .curriculums-grid {
       display: grid;
@@ -2297,7 +2432,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.1 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.2 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2390,7 +2525,26 @@
         </div>
       </div>
 
-      <!-- 2. بيئة وأجواء دراسية ملهمة (معرض تفاعلي هادئ وبصري) -->
+      <!-- 2. شريط الاختيار السريع للمناهج والمواد (بارز ومباشر فور الدخول على الهاتف والحاسوب) -->
+      <div style="margin-bottom: 2.25rem;" id="dashboardCurriculaQuickSection">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.6rem;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary-light); color: var(--primary); padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.3rem;">
+              <span>⚡</span> وصول فوري ومباشر للمناهج
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 900; color: var(--slate-900); margin: 0;">اختر المنهج لبدء المذاكرة والدروس فوراً</h3>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+            <span>📚</span> استعراض بوابة المناهج الكاملة ⮞
+          </button>
+        </div>
+
+        <div class="dashboard-curricula-bar" id="dashboardCurriculaQuickBar">
+          <!-- تتولد ديناميكياً بواسطة renderDashboardCurriculaQuickBar() -->
+        </div>
+      </div>
+
+      <!-- 3. بيئة وأجواء دراسية ملهمة (معرض تفاعلي هادئ وبصري) -->
       <div style="margin-bottom: 2rem;">
         <div style="margin-bottom: 1.25rem;">
           <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary-light); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.4rem;">
@@ -2552,13 +2706,18 @@
           </p>
         </div>
         <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 800;">
-          <span>🌟</span> 1 مقرر وزاري مكتمل 100%
+          <span>🌟</span> 3 مناهج وزارية معتمدة ومكتملة 100%
         </div>
       </div>
 
-      <!-- شبكة بطاقات المواد الدراسية الموحدة -->
+      <!-- شريط تبويبات المناهج الفردية: يتيح التبديل الفوري بنقرة واحدة دون أي تمرير على الهاتف -->
+      <div class="curricula-tabs-nav" id="curriculaTabsNav">
+        <!-- يتم توليد أزرار التبويبات ديناميكياً بواسطة renderCurriculaTabsNav() -->
+      </div>
+
+      <!-- مساحة عرض بطاقة المنهج المحدد فقط -->
       <div class="curriculums-grid" id="curriculumsContainer">
-        <!-- يتم توليد البطاقات ديناميكياً بواسطة renderCurriculumsList() -->
+        <!-- يتم توليد بطاقة المنهج المحدد فقط بواسطة renderCurriculumsList() -->
       </div>
     </section>
 
@@ -3020,7 +3179,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.1</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.2</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3045,7 +3204,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.1</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.2</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3054,7 +3213,8 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
-            <div>• <strong style="color: var(--primary);">v3.4.1 (أكتوبر 2026):</strong> تخصيص الواجهات وإلغاء أزرار القراءة الصوتية وفلاتر الإنجليزية من مناهج اللغة العربية والتربية الإسلامية وحصر الصوت بمنهج اللغة الإنجليزية - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.4.2 (أكتوبر 2026):</strong> تطوير طريقة عرض واختيار المناهج على الهواتف الذكية بنظام التبويبات الفردية وشريط الوصول السريع بالرئيسية - إعداد المهندس أسامة خليل هاشم.</div>
+              <div>• <strong style="color: var(--primary);">v3.4.1 (أكتوبر 2026):</strong> تخصيص الواجهات وإلغاء أزرار القراءة الصوتية وفلاتر الإنجليزية من مناهج اللغة العربية والتربية الإسلامية وحصر الصوت بمنهج اللغة الإنجليزية - إعداد المهندس أسامة خليل هاشم.</div>
               <div>• <strong style="color: var(--primary);">v3.4.0 (أكتوبر 2026):</strong> توحيد إحصائيات المنظومة التعليمية الشاملة لكافة المناهج واعتماد 61 قاعدة ومفهوماً موثقاً لغوياً ونحوياً - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.3.3 (أكتوبر 2026):</strong> تخصيص قارئ تفاعلي مستقل للمكتبة الرقمية وتصفح الكتب المدرسية مع القراءة الصوتية الفصيحة، والمزامنة الشاملة لشارات الإصدار في كامل واجهات النظام - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.3.2 (أكتوبر 2026):</strong> تدشين اللوحات الفوتوغرافية الواقعية المعبرة عن بيئة التعلم وشعار «العلم نور»، وإطلاق قارئ المكتبة الرقمية وتصفح الكتب المدرسية مع الاستماع الفوري، وتطهير قائمة المناهج من التكرار - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3096,7 +3256,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.4.1</span>
+        <span class="version-badge" id="footerVersionBadge">v3.4.2</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3393,7 +3553,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.1</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.2</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -3421,13 +3581,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.1؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.2؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.1</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.2</span>
         </div>
       </div>
 
@@ -3476,8 +3636,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.4.1';
-    const SYSTEM_VERSION = 'v3.4.1';
+    const CURRENT_VERSION_LABEL = 'v3.4.2';
+    const SYSTEM_VERSION = 'v3.4.2';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -4547,8 +4707,10 @@
       }
 
       renderDashboard();
-      renderActiveSubjectShowcase();
+      renderDashboardCurriculaQuickBar();
+      renderCurriculaTabsNav();
       renderCurriculumsList();
+      renderActiveSubjectShowcase();
       populateStudyCurriculumSelect();
       renderGrammarRules();
       renderPastExam('midyear');
@@ -4818,11 +4980,156 @@
       } else if (tabId === 'grammar') {
         renderGrammarRules();
       } else if (tabId === 'curriculums') {
+        if (!currentCurriculumViewTab) {
+          if (appData.currentCurriculumId === 4 || appData.currentCurriculumId === 5) {
+            currentCurriculumViewTab = 'arabic';
+          } else if (appData.currentCurriculumId === 6) {
+            currentCurriculumViewTab = 6;
+          } else {
+            currentCurriculumViewTab = 3;
+          }
+        }
+        renderCurriculaTabsNav();
         renderCurriculumsList();
         renderCurriculumsSelectorBar();
         renderActiveSubjectShowcase();
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let currentCurriculumViewTab = 3;
+
+    // شريط التبديل السريع للمناهج والمواد في الصفحة الرئيسية
+    function renderDashboardCurriculaQuickBar() {
+      const container = document.getElementById('dashboardCurriculaQuickBar');
+      if (!container) return;
+
+      const currs = (appData.curriculums || []).filter(c => 
+        c && c.id !== 1 && 
+        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
+        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
+      );
+
+      const isEngActive = appData.currentCurriculumId === 3;
+      const isArabActive = appData.currentCurriculumId === 4 || appData.currentCurriculumId === 5;
+      const isIsActive = appData.currentCurriculumId === 6;
+
+      container.innerHTML = `
+        <!-- 1. بطاقة مادة اللغة الإنجليزية -->
+        <div class="dash-curr-card eng-theme ${isEngActive ? 'active-subj' : ''}" onclick="openSubjectTab(3)" title="انقر لبدء دراسة منهج اللغة الإنجليزية">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.6rem;">📘</span>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: var(--slate-900);">اللغة الإنجليزية</div>
+                <div style="font-size: 0.76rem; color: var(--slate-500); font-weight: 700;">English for Iraq • الثاني متوسط</div>
+              </div>
+            </div>
+            <span style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 6px;">مكتمل 100%</span>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.55; margin: 0 0 0.85rem; flex: 1;">
+            8 وحدات و 76 درساً تفاعلياً، قراءة صوتية بالذكاء الاصطناعي، 43 قاعدة، وامتحان وزاري شامل.
+          </p>
+          <div style="display: flex; gap: 0.4rem; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.65rem;">
+            <span style="font-size: 0.72rem; color: #4338ca; font-weight: 800;">📚 119 صفحة</span>
+            <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openSubjectTab(3);" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-size: 0.78rem; font-weight: 800; padding: 0.35rem 0.85rem;">
+              دخول المنهج ⮞
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. بطاقة مادة اللغة العربية -->
+        <div class="dash-curr-card arab-theme ${isArabActive ? 'active-subj' : ''}" title="انقر لبدء دراسة منهج اللغة العربية">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.6rem;">📚</span>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: var(--slate-900);">اللغة العربية</div>
+                <div style="font-size: 0.76rem; color: var(--slate-500); font-weight: 700;">كتابان معتمدان (الجزء 1 و 2)</div>
+              </div>
+            </div>
+            <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 6px;">كتابان</span>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.55; margin: 0 0 0.85rem; flex: 1;">
+            20 وحدة و 80 درساً، 272 صفحة أصلية بدقة فائقة، و 18 قاعدة نحوية وصرفية وإملائية.
+          </p>
+          <div style="display: flex; gap: 0.4rem; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.65rem;">
+            <button class="branch-pill-btn ${appData.currentCurriculumId === 4 ? 'active-branch' : ''}" onclick="event.stopPropagation(); openSubjectTab(4);" style="flex: 1; justify-content: center; font-size: 0.76rem; padding: 0.35rem 0.5rem;">
+              📙 الجزء 1 ⮞
+            </button>
+            <button class="branch-pill-btn ${appData.currentCurriculumId === 5 ? 'active-branch' : ''}" onclick="event.stopPropagation(); openSubjectTab(5);" style="flex: 1; justify-content: center; font-size: 0.76rem; padding: 0.35rem 0.5rem;">
+              📗 الجزء 2 ⮞
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. بطاقة مادة التربية الإسلامية -->
+        <div class="dash-curr-card is-theme ${isIsActive ? 'active-subj' : ''}" onclick="openSubjectTab(6)" title="انقر لبدء دراسة منهج التربية الإسلامية">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.6rem;">🕌</span>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: var(--slate-900);">التربية الإسلامية</div>
+                <div style="font-size: 0.76rem; color: var(--slate-500); font-weight: 700;">القرآن الكريم والتربية الإسلامية</div>
+              </div>
+            </div>
+            <span style="background: #f0fdfa; color: #0d9488; border: 1px solid #99f6e4; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 6px;">مكتمل 100%</span>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.55; margin: 0 0 0.85rem; flex: 1;">
+            6 وحدات، 31 درساً، 120 صفحة أصلية، أحكام التلاوة والمد، السور الكريمة، والفقه.
+          </p>
+          <div style="display: flex; gap: 0.4rem; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.65rem;">
+            <span style="font-size: 0.72rem; color: #0d9488; font-weight: 800;">📖 120 صفحة</span>
+            <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openSubjectTab(6);" style="background: linear-gradient(135deg, #0d9488, #0f766e); border: none; font-size: 0.78rem; font-weight: 800; padding: 0.35rem 0.85rem;">
+              دخول المنهج ⮞
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // شريط تبويبات المناهج الفردية في بوابة المناهج والمواد
+    function renderCurriculaTabsNav() {
+      const nav = document.getElementById('curriculaTabsNav');
+      if (!nav) return;
+
+      if (!currentCurriculumViewTab) {
+        if (appData.currentCurriculumId === 4 || appData.currentCurriculumId === 5) {
+          currentCurriculumViewTab = 'arabic';
+        } else if (appData.currentCurriculumId === 6) {
+          currentCurriculumViewTab = 6;
+        } else {
+          currentCurriculumViewTab = 3;
+        }
+      }
+
+      nav.innerHTML = `
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 3 ? 'active eng' : ''}" onclick="setCurriculumViewTab(3)">
+          <span>📘</span>
+          <span>اللغة الإنجليزية</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 3 ? 'background: #e0e7ff; color: #4338ca;' : 'background: #e2e8f0; color: #475569;'}">English</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 'arabic' ? 'active arab' : ''}" onclick="setCurriculumViewTab('arabic')">
+          <span>📚</span>
+          <span>اللغة العربية</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 'arabic' ? 'background: #d1fae5; color: #065f46;' : 'background: #e2e8f0; color: #475569;'}">كتابان</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 6 ? 'active islamic' : ''}" onclick="setCurriculumViewTab(6)">
+          <span>🕌</span>
+          <span>التربية الإسلامية</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 6 ? 'background: #ccfbf1; color: #0f766e;' : 'background: #e2e8f0; color: #475569;'}">120 ص</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 'all' ? 'active all' : ''}" onclick="setCurriculumViewTab('all')">
+          <span>🌐</span>
+          <span>عرض كافة المناهج</span>
+        </button>
+      `;
+    }
+
+    function setCurriculumViewTab(tabMode) {
+      currentCurriculumViewTab = tabMode;
+      renderCurriculaTabsNav();
+      renderCurriculumsList();
     }
 
     // تحديث إحصائيات لوحة التحكم الشاملة لكافة مناهج المنظومة
@@ -4859,6 +5166,7 @@
         statGrammarEl.title = `إجمالي القواعد والمفاهيم الموثقة في المنظومة: ${engGrammarCount} قاعدة لغوية لمنهج الإنجليزية + ${arGrammarCount} قاعدة نحوية وصرفية للعربية + ${isGrammarCount} حكماً وقاعدة فقهية وعقدية وتجويدية للتربية الإسلامية`;
       }
 
+      renderDashboardCurriculaQuickBar();
       renderCurriculumsSelectorBar();
       renderActiveSubjectShowcase();
     }
@@ -4875,7 +5183,12 @@
         !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
       );
 
+      const showEng = currentCurriculumViewTab === 3 || currentCurriculumViewTab === 'all';
+      const showArab = currentCurriculumViewTab === 'arabic' || currentCurriculumViewTab === 'all';
+      const showIslamic = currentCurriculumViewTab === 6 || currentCurriculumViewTab === 'all';
+
       // 1. بطاقة منهج اللغة الإنجليزية
+      if (showEng) {
       const engCurr = currs.find(c => c.id === 3);
       if (engCurr) {
         const div = document.createElement('div');
@@ -4924,7 +5237,10 @@
         container.appendChild(div);
       }
 
+      }
+
       // 2. بطاقة موحدة لمنهج اللغة العربية يتفرع منها الجزء الأول والجزء الثاني
+      if (showArab) {
       const arP1Curr = currs.find(c => c.id === 4);
       const arP2Curr = currs.find(c => c.id === 5);
 
@@ -5063,8 +5379,11 @@
         container.appendChild(div);
       }
 
+      }
+
       // 3. أي مناهج أخرى مضافة مستقبلاً
-      currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5).forEach(curr => {
+      if (currentCurriculumViewTab === 'all') {
+        currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6).forEach(curr => {
         const div = document.createElement('div');
         div.className = 'card curr-card';
         div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--slate-200); box-shadow: var(--shadow); grid-column: 1 / -1; margin-bottom: 1.5rem;';
@@ -5080,9 +5399,11 @@
           </div>
         `;
         container.appendChild(div);
-      });
+        });
+      }
 
       // 3. بطاقة منهج التربية الإسلامية
+      if (showIslamic) {
       const islamicCardCurr = currs.find(c => c.id === 6);
       if (islamicCardCurr) {
         const div = document.createElement('div');
@@ -5143,8 +5464,10 @@
         `;
         container.appendChild(div);
       }
+      }
 
       // المقررات القادمة ضمن خطة التوسع الأكاديمي
+      if (currentCurriculumViewTab === 'all') {
       const upcoming = [
         { title: 'الرياضيات', icon: '📐', grade: 'الصف الثاني متوسط', status: 'المقرر القادم • قيد الإعداد والبرمجة' },
         { title: 'العلوم العامة', icon: '🔬', grade: 'الصف الثاني متوسط', status: 'قيد الإعداد والبرمجة' }
@@ -5173,6 +5496,7 @@
         `;
         container.appendChild(uDiv);
       });
+      }
     }
 
     function populateStudyCurriculumSelect() {
@@ -5240,9 +5564,15 @@
     }
 
     function onCurriculumSelectChange(currId) {
-      appData.currentCurriculumId = Number(currId);
+      const idNum = Number(currId);
+      appData.currentCurriculumId = idNum;
       appData.currentLessonId = null;
       saveData();
+      if (idNum === 6) currentCurriculumViewTab = 6;
+      else if (idNum === 4 || idNum === 5) currentCurriculumViewTab = 'arabic';
+      else if (idNum === 3) currentCurriculumViewTab = 3;
+      renderDashboardCurriculaQuickBar();
+      renderCurriculaTabsNav();
       renderStudyView();
     }
 
