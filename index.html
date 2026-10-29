@@ -2786,7 +2786,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.3 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.4 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2801,10 +2801,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           المناهج والمواد
         </button>
-        <button class="tab-btn" onclick="switchTab('study')" data-tab="study">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          قاعة المذاكرة
-        </button>
+
         <button class="tab-btn" onclick="switchTab('grammar')" data-tab="grammar">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           بنك القواعد
@@ -2861,11 +2858,8 @@
               بيئة تعليمية رقمية متكاملة تواكب أرقى معايير منصات التعليم العالمية، تتيح لك دراسة المناهج المعتمدة فصلاً فصلاً، الاستماع للشروحات بالصوت البشري الفصيح، والتدريب التفاعلي على نماذج الامتحانات الوزارية الرسمية.
             </p>
             <div class="hero-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-              <button class="btn-hero-primary" onclick="switchTab('study')" style="font-size: 1rem; padding: 0.85rem 1.85rem; border-radius: 12px; font-weight: 900;">
-                <span>📖</span> ابدأ المذاكرة والدروس الآن ⮞
-              </button>
-              <button class="btn-hero-secondary" onclick="switchTab('curriculums')" style="font-size: 0.95rem; padding: 0.85rem 1.6rem; border-radius: 12px; font-weight: 800;">
-                <span>📚</span> استعراض بوابة المناهج
+              <button class="btn-hero-primary" onclick="switchTab('curriculums')" style="font-size: 1rem; padding: 0.85rem 1.85rem; border-radius: 12px; font-weight: 900;">
+                <span>📚</span> استعراض المناهج والبدء بالدراسة ⮞
               </button>
             </div>
           </div>
@@ -2910,47 +2904,23 @@
             </div>
             <h3 style="font-size: 1.25rem; font-weight: 900; color: var(--slate-900); margin: 0;">مركز وظائف وقاعات المنظومة التعليمية</h3>
           </div>
-          <span style="font-size: 0.8rem; color: var(--slate-500); font-weight: 700;">7 خدمات وقاعات رئيسية بنقرة واحدة</span>
+          <span style="font-size: 0.8rem; color: var(--slate-500); font-weight: 700;">5 بوابات رئيسية بنقرة واحدة</span>
         </div>
 
-        <div class="functions-hub-grid">
-          <!-- زر 1: الرئيسية -->
-          <button class="function-nav-btn" onclick="switchTab('dashboard')" title="لوحة المعلومات ومؤشرات المنظومة">
-            <div class="func-icon-box" style="background: #eef2ff; color: #4338ca;">🏠</div>
-            <div class="func-info">
-              <div class="func-title">
-                <span>الرئيسية</span>
-                <span class="func-arrow">⮞</span>
-              </div>
-              <div class="func-desc">لوحة المؤشرات والوصول السريع</div>
-            </div>
-          </button>
-
-          <!-- زر 2: بوابة المناهج والمواد -->
+        <div class="functions-hub-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));">
+          <!-- بوابة 1: بوابة المناهج والمواد -->
           <button class="function-nav-btn" onclick="switchTab('curriculums')" title="استعراض المقررات الدراسية المعتمدة">
             <div class="func-icon-box" style="background: #e0e7ff; color: #4f46e5;">📚</div>
             <div class="func-info">
               <div class="func-title">
-                <span>بوابة المناهج</span>
+                <span>بوابة المناهج والمواد</span>
                 <span class="func-arrow">⮞</span>
               </div>
-              <div class="func-desc">مقررات الثاني متوسط المعتمدة</div>
+              <div class="func-desc">مقررات الثاني متوسط ووحداتها</div>
             </div>
           </button>
 
-          <!-- زر 3: قاعة المذاكرة والدروس -->
-          <button class="function-nav-btn" onclick="switchTab('study')" title="متابعة الدروس والشروحات التفاعلية">
-            <div class="func-icon-box" style="background: #dbeafe; color: #2563eb;">📖</div>
-            <div class="func-info">
-              <div class="func-title">
-                <span>قاعة المذاكرة والدروس</span>
-                <span class="func-arrow">⮞</span>
-              </div>
-              <div class="func-desc">شروحات الفصول والصوت والتتبع</div>
-            </div>
-          </button>
-
-          <!-- زر 4: بنك القواعد والأحكام -->
+          <!-- بوابة 2: بنك القواعد والأحكام -->
           <button class="function-nav-btn" onclick="switchTab('grammar')" title="بنك القواعد النحوية والصرفية واللغوية وأحكام التلاوة">
             <div class="func-icon-box" style="background: #fef3c7; color: #d97706;">💡</div>
             <div class="func-info">
@@ -2962,7 +2932,7 @@
             </div>
           </button>
 
-          <!-- زر 5: قاعة الامتحانات والتقييم -->
+          <!-- بوابة 3: قاعة الامتحانات والتقييم -->
           <button class="function-nav-btn" onclick="switchTab('exams')" title="النماذج الامتحانية الوزارية والشهرية وتوليد الاختبارات">
             <div class="func-icon-box" style="background: #fce7f3; color: #db2777;">📝</div>
             <div class="func-info">
@@ -2974,7 +2944,7 @@
             </div>
           </button>
 
-          <!-- زر 6: المكتبة وقارئ الكتب المدرسية -->
+          <!-- بوابة 4: المكتبة وقارئ الكتب المدرسية -->
           <button class="function-nav-btn" onclick="openDigitalLibraryReader(appData.currentCurriculumId || 3, 1)" title="تصفح صفحات الكتب المدرسية الأصلية">
             <div class="func-icon-box" style="background: #ccfbf1; color: #0d9488;">🔍</div>
             <div class="func-info">
@@ -2986,7 +2956,7 @@
             </div>
           </button>
 
-          <!-- زر 7: إعدادات المنظومة -->
+          <!-- بوابة 5: إعدادات المنظومة -->
           <button class="function-nav-btn" onclick="switchTab('settings')" title="تخصيص النظام وإدارة البيانات والنسخ الاحتياطي">
             <div class="func-icon-box" style="background: #f1f5f9; color: #475569;">⚙️</div>
             <div class="func-info">
@@ -2994,7 +2964,7 @@
                 <span>إعدادات المنظومة</span>
                 <span class="func-arrow">⮞</span>
               </div>
-              <div class="func-desc">النسخ الاحتياطي وحالة النظام</div>
+              <div class="func-desc">النسخ الاحتياطي وتخصيص النظام</div>
             </div>
           </button>
         </div>
@@ -3043,19 +3013,12 @@
           
           <!-- الركيزة 1: قاعة المحاضرات والصف الدراسي الذكي -->
           <div class="enterprise-feature-block">
-            <!-- اللوحة البصرية التوضيحية (غير تفاعلية نهائياً) -->
+            <!-- اللوحة البصرية التوضيحية لبيئة التعلم (غير تفاعلية ونقية تماماً) -->
             <div class="feature-showcase-visual">
               <img src="./book_images/atmosphere_classroom.jpeg" alt="قاعة الصف الدراسي التفاعلي - طلاب العلم نور" loading="lazy">
-              <div class="visual-overlay"></div>
-              <div class="visual-badge-top">
-                <span>🌟</span> العِلْمُ نُـورٌ • قاعة الدرس الذكية
-              </div>
-              <div class="visual-badge-bottom">
-                📷 صورة توضيحية لبيئة التعلم
-              </div>
             </div>
 
-            <!-- المحتوى النصي وزر الإجراء الحصري -->
+            <!-- المحتوى النصي التوضيحي -->
             <div class="feature-showcase-content">
               <div class="feature-category-badge indigo">
                 <span>📖</span> ركيزة الشرح والمذاكرة
@@ -3070,17 +3033,12 @@
                 <span class="feature-pill-item">👥 تفاعل دراسي حي</span>
                 <span class="feature-pill-item">💡 ربط النظري بالتطبيقي</span>
               </div>
-              <div>
-                <button class="btn btn-primary" onclick="openSubjectTab(appData.currentCurriculumId || 3)" style="font-weight: 800; font-size: 0.92rem; padding: 0.7rem 1.6rem; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);">
-                  <span>📖</span> دخول قاعة الصف والمذاكرة ⮞
-                </button>
-              </div>
             </div>
           </div>
 
           <!-- الركيزة 2: المكتبة الرقمية وتصفح الكتب المدرسية الأصلية -->
           <div class="enterprise-feature-block reverse-layout">
-            <!-- المحتوى النصي وزر الإجراء الحصري -->
+            <!-- المحتوى النصي التوضيحي -->
             <div class="feature-showcase-content">
               <div class="feature-category-badge teal">
                 <span>📚</span> ركيزة المطالعة والأصول المعتمدة
@@ -3095,41 +3053,22 @@
                 <span class="feature-pill-item">🎧 تتبع الكلمات الصوتي المباشر</span>
                 <span class="feature-pill-item">🔍 تقليب وتكبير وتصفح الصفحات</span>
               </div>
-              <div>
-                <button class="btn btn-secondary" onclick="openDigitalLibraryReader(appData.currentCurriculumId || 3, 1)" style="font-weight: 800; font-size: 0.92rem; padding: 0.7rem 1.6rem; background: #ffffff; color: #0d9488; border-color: #0d9488; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.15);">
-                  <span>📚</span> فتح قارئ الكتب بالمكتبة ⮞
-                </button>
-              </div>
             </div>
 
-            <!-- اللوحة البصرية التوضيحية (غير تفاعلية نهائياً) -->
+            <!-- اللوحة البصرية التوضيحية لبيئة التعلم (غير تفاعلية ونقية تماماً) -->
             <div class="feature-showcase-visual">
               <img src="./book_images/atmosphere_library.jpeg" alt="المكتبة الرقمية والمطالعة المفتوحة" loading="lazy">
-              <div class="visual-overlay"></div>
-              <div class="visual-badge-top">
-                <span>🎧</span> القراءة حياة • استمع واقرأ
-              </div>
-              <div class="visual-badge-bottom">
-                📷 صورة توضيحية لبيئة التعلم
-              </div>
             </div>
           </div>
 
           <!-- الركيزة 3: قاعة الامتحانات الرسمية والتقييم الذاتي -->
           <div class="enterprise-feature-block">
-            <!-- اللوحة البصرية التوضيحية (غير تفاعلية نهائياً) -->
+            <!-- اللوحة البصرية التوضيحية لبيئة التعلم (غير تفاعلية ونقية تماماً) -->
             <div class="feature-showcase-visual">
               <img src="./book_images/atmosphere_exam.jpeg" alt="قاعة الامتحانات والتقييم الذاتي" loading="lazy">
-              <div class="visual-overlay"></div>
-              <div class="visual-badge-top">
-                <span>📝</span> ثمرة التعلم • اختبار الكفايات
-              </div>
-              <div class="visual-badge-bottom">
-                📷 صورة توضيحية لبيئة التعلم
-              </div>
             </div>
 
-            <!-- المحتوى النصي وزر الإجراء الحصري -->
+            <!-- المحتوى النصي التوضيحي -->
             <div class="feature-showcase-content">
               <div class="feature-category-badge emerald">
                 <span>📝</span> ركيزة التقييم والجاهزية
@@ -3143,11 +3082,6 @@
                 <span class="feature-pill-item">📑 نماذج امتحانية حقيقية</span>
                 <span class="feature-pill-item">⏱️ مؤقت تدريبي للاختبار</span>
                 <span class="feature-pill-item">🖨️ طباعة الورقة بيضاء</span>
-              </div>
-              <div>
-                <button class="btn btn-secondary" onclick="openPastExamsTab('midyear')" style="font-weight: 800; font-size: 0.92rem; padding: 0.7rem 1.6rem; background: #ffffff; color: #065f46; border-color: #059669; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);">
-                  <span>📝</span> بدء الاختبار والتقييم الذاتي ⮞
-                </button>
               </div>
             </div>
           </div>
@@ -3238,17 +3172,8 @@
           </span>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-          <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-size: 0.8rem; font-weight: 700;">
-            <span>📝</span> نماذج الامتحانات والأسئلة
-          </button>
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-size: 0.8rem; font-weight: 700;">
-            <span>💡</span> بنك القواعد
-          </button>
           <button class="btn btn-secondary btn-sm" onclick="switchTab('curriculums')" style="font-size: 0.8rem; font-weight: 700;">
-            <span>📚</span> فهرس المناهج
-          </button>
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.8rem; font-weight: 700;">
-            <span>🏠</span> الرئيسية
+            <span>📚</span> العودة لفهرس المناهج
           </button>
         </div>
       </div>
@@ -3456,15 +3381,6 @@
           </div>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.78rem; font-weight: 700;">
-            <span>🏠</span> العودة للرئيسية
-          </button>
-          <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="font-size: 0.78rem; font-weight: 700;">
-            <span>📖</span> قاعة المذاكرة
-          </button>
-          <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-size: 0.78rem; font-weight: 700;">
-            <span>📝</span> نماذج الامتحانات والأسئلة
-          </button>
           <button class="btn btn-secondary btn-sm" id="grammarVoiceStudioBtn" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
             <span>🎙️</span> استوديو الصوت
           </button>
@@ -3517,15 +3433,6 @@
           </div>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('dashboard')" style="font-size: 0.78rem; font-weight: 700;">
-            <span>🏠</span> العودة للرئيسية
-          </button>
-          <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="font-size: 0.78rem; font-weight: 700;">
-            <span>📖</span> قاعة المذاكرة
-          </button>
-          <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-size: 0.78rem; font-weight: 700;">
-            <span>💡</span> بنك القواعد
-          </button>
           <button class="btn btn-secondary btn-sm" id="examsVoiceStudioBtn" onclick="openVoiceStudioModal()" style="display: none; background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
             <span>🎙️</span> استوديو الصوت
           </button>
@@ -3680,7 +3587,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.3</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.4</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3705,7 +3612,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.3</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.4</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3714,7 +3621,7 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
-            <div>• <strong style="color: var(--primary);">v3.4.3 (أكتوبر 2026):</strong> تصميم واجهة 2: اعتماد الأزرار الحصرية للانتقال بين الوظائف والمناهج وجعل الصور توضيحية فقط تعكس طبيعة النظام التعليمي - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.4.4 (أكتوبر 2026):</strong> تصميم واجهة 2: اعتماد الأزرار الحصرية للانتقال بين الوظائف والمناهج وجعل الصور توضيحية فقط تعكس طبيعة النظام التعليمي - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.4.2 (أكتوبر 2026):</strong> تطوير طريقة عرض واختيار المناهج على الهواتف الذكية بنظام التبويبات الفردية وشريط الوصول السريع بالرئيسية - إعداد المهندس أسامة خليل هاشم.</div>
               <div>• <strong style="color: var(--primary);">v3.4.1 (أكتوبر 2026):</strong> تخصيص الواجهات وإلغاء أزرار القراءة الصوتية وفلاتر الإنجليزية من مناهج اللغة العربية والتربية الإسلامية وحصر الصوت بمنهج اللغة الإنجليزية - إعداد المهندس أسامة خليل هاشم.</div>
               <div>• <strong style="color: var(--primary);">v3.4.0 (أكتوبر 2026):</strong> توحيد إحصائيات المنظومة التعليمية الشاملة لكافة المناهج واعتماد 61 قاعدة ومفهوماً موثقاً لغوياً ونحوياً - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3758,7 +3665,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.4.3</span>
+        <span class="version-badge" id="footerVersionBadge">v3.4.4</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -4055,7 +3962,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.3</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.4</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4083,13 +3990,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.3؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.4؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.3</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.4</span>
         </div>
       </div>
 
@@ -4138,8 +4045,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.4.3';
-    const SYSTEM_VERSION = 'v3.4.3';
+    const CURRENT_VERSION_LABEL = 'v3.4.4';
+    const SYSTEM_VERSION = 'v3.4.4';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -5466,11 +5373,12 @@
       const activeSec = document.getElementById('tab-' + tabId);
       if (activeSec) activeSec.classList.remove('hidden');
 
+      const targetActiveTab = (tabId === 'study') ? 'curriculums' : tabId;
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         const oc = btn.getAttribute('onclick') || '';
         const dt = btn.getAttribute('data-tab') || '';
-        if (dt === tabId || oc.includes("'" + tabId + "'")) {
+        if (dt === targetActiveTab || (targetActiveTab !== 'curriculums' && oc.includes("'" + targetActiveTab + "'"))) {
           btn.classList.add('active');
         }
       });
@@ -11803,7 +11711,7 @@
             <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
               <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(13,148,136,0.25); background: #134e4a; cursor: default; position: relative;">
                 <img src="./book_images/islamic/page_1.jpeg" alt="غلاف كتاب التربية الإسلامية" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(19, 78, 74, 0.9); color: white; font-size: 0.65rem; font-weight: 800; text-align: center; padding: 0.25rem 0.2rem; pointer-events: none;">📖 غلاف الكتاب</div>
+                
               </div>
               <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
                 <div>
