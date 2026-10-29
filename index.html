@@ -2297,7 +2297,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.4.1 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -2644,8 +2644,8 @@
             </div>
           </div>
 
-          <!-- شريط القارئ الصوتي التفاعلي المسموع (مثبت بالأعلى) -->
-          <div class="audio-player-bar" id="audioPlayerBar">
+          <!-- شريط القارئ الصوتي التفاعلي المسموع (مثبت بالأعلى - مخصص حصراً لمنهج اللغة الإنجليزية) -->
+          <div class="audio-player-bar" id="audioPlayerBar" style="display: none;">
             <div class="audio-player-controls">
               <button class="audio-btn" id="audioPlayBtn" onclick="audioPlayer.playCurrentLesson()">
                 <span>▶️</span> استمع للدرس بصوت مسموع
@@ -2805,7 +2805,7 @@
           <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-size: 0.78rem; font-weight: 700;">
             <span>📝</span> نماذج الامتحانات والأسئلة
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
+          <button class="btn btn-secondary btn-sm" id="grammarVoiceStudioBtn" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
             <span>🎙️</span> استوديو الصوت
           </button>
         </div>
@@ -2813,25 +2813,30 @@
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
         <div>
-          <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--slate-900);">💡 المرجع الشامل للقواعد والوظائف اللغوية</h2>
-          <p style="font-size: 0.85rem; color: var(--slate-500);">شرح وافٍ لكافة القواعد المقررة بالمنهج مع الصيغ النحوية، الأمثلة المنطوقة، وتدريبات الفهم الفورية.</p>
+          <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--slate-900);" id="grammarSectionTitle">💡 المرجع الشامل للقواعد والوظائف اللغوية</h2>
+          <p style="font-size: 0.85rem; color: var(--slate-500);" id="grammarSectionSubtitle">شرح وافٍ لكافة القواعد المقررة بالمنهج مع الصيغ النحوية، الأمثلة، وتدريبات الفهم الفورية.</p>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <input type="text" id="grammarSearchInput" class="form-control" placeholder="ابحث في القواعد والأزمنة (مثلاً: Past, Present, Future, since, passive)..." style="width: 290px;" oninput="filterGrammarRules()">
+          <input type="text" id="grammarSearchInput" class="form-control" placeholder="ابحث في القواعد..." style="width: 320px;" oninput="filterGrammarRules()">
         </div>
       </div>
 
-      <!-- فلاتر الوحدات -->
+      <!-- شريط اختيار بنك القواعد والأحكام المعتمدة -->
+      <div id="grammarBankSelectorBar" style="display: flex; gap: 0.6rem; margin-bottom: 0.85rem; flex-wrap: wrap; align-items: center; background: white; padding: 0.65rem 1rem; border-radius: 12px; border: 1px solid var(--slate-200); box-shadow: 0 1px 3px rgba(0,0,0,0.04); cursor: pointer;">
+        <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر بنك القواعد والأحكام:</span>
+        <button id="btnGrammarBankEn" class="btn btn-sm btn-primary" onclick="setGrammarSubjectMode('en')" style="font-weight: 800; font-size: 0.78rem;">
+          📘 بنك قواعد اللغة الإنجليزية (43 قاعدة)
+        </button>
+        <button id="btnGrammarBankAr" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('ar')" style="font-weight: 800; font-size: 0.78rem;">
+          📙 بنك قواعد اللغة العربية (الجزءان الأول والثاني - 18 قاعدة)
+        </button>
+        <button id="btnGrammarBankIs" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('is')" style="font-weight: 800; font-size: 0.78rem;">
+          🕌 بنك أحكام وقواعد التربية الإسلامية (15 حكماً)
+        </button>
+      </div>
+
+      <!-- فلاتر الوحدات والأقسام الديناميكية المخصصة لكل منهج -->
       <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1rem;" id="grammarUnitFilters">
-        <button class="btn btn-primary btn-sm" onclick="filterGrammarByUnit('all', this)">جميع القواعد</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit('tenses', this)" style="border: 1px solid #c7d2fe;">⏱️ قواعد الأزمنة (Tenses)</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(1, this)">الوحدة 1</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(2, this)">الوحدة 2</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(3, this)">الوحدة 3</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(4, this)">الوحدة 4</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(5, this)">الوحدة 5</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(6, this)">الوحدة 6</button>
-        <button class="btn btn-secondary btn-sm" onclick="filterGrammarByUnit(7, this)">الوحدة 7</button>
       </div>
 
       <div class="grammar-grid" id="grammarContainer">
@@ -2861,7 +2866,7 @@
           <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar')" style="background: #fef3c7; color: #92400e; border: none; font-size: 0.78rem; font-weight: 700;">
             <span>💡</span> بنك القواعد
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="openVoiceStudioModal()" style="background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
+          <button class="btn btn-secondary btn-sm" id="examsVoiceStudioBtn" onclick="openVoiceStudioModal()" style="display: none; background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; font-size: 0.78rem; font-weight: 700;">
             <span>🎙️</span> استوديو الصوت
           </button>
         </div>
@@ -3015,7 +3020,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.4.1</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3040,7 +3045,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.4.1</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3049,7 +3054,8 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
-            <div>• <strong style="color: var(--primary);">v3.4.0 (أكتوبر 2026):</strong> توحيد إحصائيات المنظومة التعليمية الشاملة لكافة المناهج واعتماد 61 قاعدة ومفهوماً موثقاً لغوياً ونحوياً - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.4.1 (أكتوبر 2026):</strong> تخصيص الواجهات وإلغاء أزرار القراءة الصوتية وفلاتر الإنجليزية من مناهج اللغة العربية والتربية الإسلامية وحصر الصوت بمنهج اللغة الإنجليزية - إعداد المهندس أسامة خليل هاشم.</div>
+              <div>• <strong style="color: var(--primary);">v3.4.0 (أكتوبر 2026):</strong> توحيد إحصائيات المنظومة التعليمية الشاملة لكافة المناهج واعتماد 61 قاعدة ومفهوماً موثقاً لغوياً ونحوياً - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.3.3 (أكتوبر 2026):</strong> تخصيص قارئ تفاعلي مستقل للمكتبة الرقمية وتصفح الكتب المدرسية مع القراءة الصوتية الفصيحة، والمزامنة الشاملة لشارات الإصدار في كامل واجهات النظام - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.3.2 (أكتوبر 2026):</strong> تدشين اللوحات الفوتوغرافية الواقعية المعبرة عن بيئة التعلم وشعار «العلم نور»، وإطلاق قارئ المكتبة الرقمية وتصفح الكتب المدرسية مع الاستماع الفوري، وتطهير قائمة المناهج من التكرار - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.3.1 (أكتوبر 2026):</strong> إعادة هيكلة واجهة اختيار منهج اللغة العربية لتكون بمفتاح موحد يتفرع منه الجزء الأول والجزء الثاني بسلاسة وأناقة تامة - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3090,7 +3096,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.4.0</span>
+        <span class="version-badge" id="footerVersionBadge">v3.4.1</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3387,7 +3393,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.4.1</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -3415,13 +3421,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.4.1؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.4.1</span>
         </div>
       </div>
 
@@ -3470,8 +3476,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.4.0';
-    const SYSTEM_VERSION = 'v3.4.0';
+    const CURRENT_VERSION_LABEL = 'v3.4.1';
+    const SYSTEM_VERSION = 'v3.4.1';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -3496,6 +3502,12 @@
     // إصدار متقدم يدعم الكشف التلقائي عن التحديثات وبنك قواعد الأزمنة v2.4.0
     // إعداد المهندس أسامة خليل هاشم
     // ----------------------------------------------------
+    // التحقق مما إذا كان المنهج الحالي هو منهج اللغة الإنجليزية حصراً (المؤهل للقراءة الصوتية)
+    function isEnglishCurriculum(currId) {
+      const id = Number(currId !== undefined ? currId : (window.appData ? appData.currentCurriculumId : 3));
+      return id === 3;
+    }
+
     const audioPlayer = {
       synth: window.speechSynthesis,
       isPlaying: false,
@@ -3962,6 +3974,10 @@
       },
 
       speakSmart(text, lang = 'en', onDone = null) {
+        if (lang === 'ar' || !isEnglishCurriculum()) {
+          if (onDone) onDone();
+          return;
+        }
         if (!this.synth) {
           alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
           return;
@@ -4069,6 +4085,10 @@
       },
 
       speakText(text, lang = 'en', onDone = null) {
+        if (lang === 'ar' || !isEnglishCurriculum()) {
+          if (onDone) onDone();
+          return;
+        }
         if (!this.synth) {
           alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
           return;
@@ -4140,6 +4160,9 @@
       },
 
       playCurrentLesson() {
+        if (!isEnglishCurriculum()) {
+          return;
+        }
         if (this.isPaused) {
           this.resume();
           return;
@@ -4178,7 +4201,12 @@
         this.showFloatingPlayer(current.text, chunkHeading);
 
         const isEnglish = /[a-zA-Z]{3,}/.test(current.text);
-        this.speakSmart(current.text, isEnglish ? 'en' : 'ar', () => {
+        if (!isEnglish || !isEnglishCurriculum()) {
+          this.currentChunkIdx++;
+          this.readNextChunk();
+          return;
+        }
+        this.speakSmart(current.text, 'en', () => {
           this.currentChunkIdx++;
           setTimeout(() => {
             if (this.isPlaying) {
@@ -4236,6 +4264,10 @@
       },
 
       showFloatingPlayer(text, speakerLabel) {
+        if (!isEnglishCurriculum()) {
+          this.hideFloatingPlayer();
+          return;
+        }
         const floatBar = document.getElementById('floatingAudioPlayerBar');
         const floatSpeaker = document.getElementById('floatingPlayerSpeakerBadge');
         const floatLoc = document.getElementById('floatingPlayerLocationTag');
@@ -4372,6 +4404,9 @@
     };
 
     function speakSnippet(text, lang = 'en') {
+      if (lang === 'ar' || !isEnglishCurriculum()) {
+        return;
+      }
       audioPlayer.stop();
       audioPlayer.speakSmart(text, lang);
     }
@@ -4381,6 +4416,10 @@
     // إعداد المهندس أسامة خليل هاشم
     // ----------------------------------------------------
     function openVoiceStudioModal() {
+      if (!isEnglishCurriculum()) {
+        showToast('استوديو الصوت وإعدادات النطق مخصصة حصراً لمنهج اللغة الإنجليزية', 'info');
+        return;
+      }
       const modal = document.getElementById('voiceStudioModal');
       if (!modal) return;
 
@@ -4770,6 +4809,9 @@
           btn.classList.add('active');
         }
       });
+
+      const activeCurrObj = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || { id: 3 };
+      updateGlobalSubjectContextBars(activeCurrObj);
 
       if (tabId === 'study') {
         renderStudyView();
@@ -5225,6 +5267,18 @@
       audioPlayer.stop();
       populateStudyCurriculumSelect();
       const currId = appData.currentCurriculumId || 3;
+      const isEnglish = isEnglishCurriculum(currId);
+
+      // إظهار أو إخفاء شريط القارئ الصوتي وشاشة التتبع الصوتي المباشر (حصراً لمنهج اللغة الإنجليزية)
+      const audioBar = document.getElementById('audioPlayerBar');
+      const teleprompterBox = document.getElementById('liveTeleprompterBox');
+      if (audioBar) {
+        audioBar.style.display = isEnglish ? 'flex' : 'none';
+      }
+      if (teleprompterBox && !isEnglish) {
+        teleprompterBox.style.display = 'none';
+      }
+
       const treeContainer = document.getElementById('chaptersTreeContainer');
       const chunksContainer = document.getElementById('lessonChunksContainer');
 
@@ -5365,6 +5419,45 @@
       }
 
       // تحديث بطاقة موقع الدرس والوحدة والصفحة في الكتاب المعتمد
+      const isEnCurr = isEnglishCurriculum(currId);
+      let bookCoordHtml = '';
+      if (isEnCurr) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage">
+            📖 <strong>كتاب الطالب (SB):</strong> صفحة ${studentPageText}
+          </div>
+          ${activityBookText ? `
+            <div class="coord-badge activity-book">
+              📝 <strong>كتاب النشاط (AB):</strong> ${activityBookText}
+            </div>
+          ` : ''}
+        `;
+      } else if (currId === 4) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">
+            📖 <strong>كتاب اللغة العربية (الجزء الأول):</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else if (currId === 5) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">
+            📖 <strong>كتاب اللغة العربية (الجزء الثاني):</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else if (currId === 6) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #f0fdfa; color: #0f766e; border-color: #99f6e4;">
+            🕌 <strong>كتاب التربية الإسلامية:</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage">
+            📖 <strong>الكتاب المنهجي المعتمد:</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      }
+
       if (breadcrumbEl) {
         breadcrumbEl.innerHTML = `
           <div class="breadcrumb-top-row">
@@ -5379,14 +5472,7 @@
             ${lessonTitle}
           </h2>
           <div class="breadcrumb-coords-row">
-            <div class="coord-badge student-book" id="breadcrumbStudentBookPage">
-              📖 <strong>كتاب الطالب (SB):</strong> صفحة ${studentPageText}
-            </div>
-            ${activityBookText ? `
-              <div class="coord-badge activity-book">
-                📝 <strong>كتاب النشاط (AB):</strong> ${activityBookText}
-              </div>
-            ` : ''}
+            ${bookCoordHtml}
             <button class="btn btn-primary btn-sm" onclick="openBookPageModal(${pages[0] || 4}, \`${escapeForAttribute(lessonTitle)}\`)" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
               🔍 فتح صفحة الكتاب الأصلية (${pages[0] || 4})
             </button>
@@ -5424,9 +5510,11 @@
                 📖 صورة صفحة (${page})
               </button>
             </div>
-            <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(text)}\`, 'en')">
-              🔊 قراءة هذا المقطع
-            </button>
+            ${isEnCurr ? `
+              <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(text)}\`, 'en')">
+                🔊 قراءة هذا المقطع
+              </button>
+            ` : ''}
           </div>
           <div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${/[a-zA-Z]{2,}/.test(text) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(text) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>
         `;
@@ -5534,25 +5622,38 @@
         pageSelect.innerHTML = optHtml;
       }
 
-      // جمع نص الصفحة للاستماع الصوتي
-      let pageText = '';
-      const currObj = (appData.curriculums || []).find(c => c.id === currId) || { id: currId };
-      const activeChapters = getCurriculumChapters(currObj);
-      for (const ch of activeChapters) {
-        for (const l of (ch.lessons || [ch])) {
-          if (l.chunks) {
-            const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
-            if (pageChunks.length > 0) {
-              pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
-              break;
+      // جمع نص الصفحة للاستماع الصوتي (حصراً للمنهج الإنجليزي)
+      const isEn = (currentModalBookCurrId === 3);
+      const listenBtn = document.getElementById('bookPageModalListenBtn');
+      const stopBtn = document.getElementById('bookPageModalStopBtn');
+      const statusBanner = document.getElementById('bookPageAudioStatusBanner');
+
+      if (!isEn) {
+        if (listenBtn) listenBtn.style.display = 'none';
+        if (stopBtn) stopBtn.style.display = 'none';
+        if (statusBanner) statusBanner.style.display = 'none';
+        if (audioPlayer.isPlaying) audioPlayer.stop();
+        currentPageAudioText = '';
+      } else {
+        if (listenBtn) listenBtn.style.display = 'inline-flex';
+        let pageText = '';
+        const currObj = (appData.curriculums || []).find(c => c.id === currId) || { id: currId };
+        const activeChapters = getCurriculumChapters(currObj);
+        for (const ch of activeChapters) {
+          for (const l of (ch.lessons || [ch])) {
+            if (l.chunks) {
+              const pageChunks = l.chunks.filter(c => (c.page_number || c.page) === pageNum);
+              if (pageChunks.length > 0) {
+                pageText = pageChunks.map(c => c.content_text || c.text || '').join('\n');
+                break;
+              }
             }
           }
+          if (pageText) break;
         }
-        if (pageText) break;
+        currentPageAudioText = pageText;
+        updateBookPageAudioUI(audioPlayer.isPlaying);
       }
-      currentPageAudioText = pageText;
-
-      updateBookPageAudioUI(audioPlayer.isPlaying);
     }
 
     function openBookPageModal(pageNum, lessonTitle) {
@@ -5569,6 +5670,14 @@
       const statusBanner = document.getElementById('bookPageAudioStatusBanner');
 
       if (!listenBtn) return;
+
+      const isEn = (currentModalBookCurrId === 3);
+      if (!isEn) {
+        listenBtn.style.display = 'none';
+        if (stopBtn) stopBtn.style.display = 'none';
+        if (statusBanner) statusBanner.style.display = 'none';
+        return;
+      }
 
       if (isPlaying) {
         if (audioPlayer.isPaused) {
@@ -5592,6 +5701,7 @@
     }
 
     function toggleBookPageAudio() {
+      if (currentModalBookCurrId !== 3) return;
       if (audioPlayer.isPlaying && !audioPlayer.isPaused) {
         audioPlayer.pause();
       } else if (audioPlayer.isPaused) {
@@ -6081,11 +6191,13 @@
       actionRow.style.alignItems = 'center';
       actionRow.style.flexWrap = 'wrap';
 
-      const speakBtn = document.createElement('button');
-      speakBtn.className = 'mini-listen-btn';
-      speakBtn.innerHTML = '🔊 استمع للإجابة والشرح';
-      speakBtn.onclick = () => speakSnippet(audioToSpeak, /[a-zA-Z]{5,}/.test(audioToSpeak) ? 'en' : 'ar');
-      actionRow.appendChild(speakBtn);
+      if (isEnglishCurriculum(appData.currentCurriculumId)) {
+        const speakBtn = document.createElement('button');
+        speakBtn.className = 'mini-listen-btn';
+        speakBtn.innerHTML = '🔊 استمع للإجابة والشرح';
+        speakBtn.onclick = () => speakSnippet(audioToSpeak, 'en');
+        actionRow.appendChild(speakBtn);
+      }
 
       if (sources && sources.length > 0) {
         sources.forEach(s => {
@@ -6700,10 +6812,13 @@
     }
 
     // عرض القواعد المهمة (Grammar & Rules View)
-    let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar'
+    let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar', 'is'
 
     function setGrammarSubjectMode(mode) {
       activeGrammarSubjectMode = mode;
+      currentActiveGrammarFilter = 'all';
+      const searchInput = document.getElementById('grammarSearchInput');
+      if (searchInput) searchInput.value = '';
       renderGrammarRules();
     }
 
@@ -6722,39 +6837,130 @@
         else currentMode = 'en';
       }
 
-      // إضافة شريط التبديل بين بنوك القواعد والأحكام
-      const toggleBar = document.createElement('div');
-      toggleBar.style.cssText = 'grid-column: 1 / -1; display: flex; gap: 0.6rem; margin-bottom: 1.25rem; flex-wrap: wrap; align-items: center; background: white; padding: 0.65rem 1rem; border-radius: 12px; border: 1px solid var(--slate-200); box-shadow: 0 1px 3px rgba(0,0,0,0.04);';
-      toggleBar.innerHTML = `
-        <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر بنك القواعد والأحكام:</span>
-        <button class="btn btn-sm ${currentMode === 'en' ? 'btn-primary' : 'btn-secondary'}" onclick="setGrammarSubjectMode('en')" style="font-weight: 800; font-size: 0.78rem;">
-          📘 قواعد اللغة الإنجليزية (43 قاعدة)
-        </button>
-        <button class="btn btn-sm ${currentMode === 'ar' ? 'btn-primary' : 'btn-secondary'}" onclick="setGrammarSubjectMode('ar')" style="font-weight: 800; font-size: 0.78rem; ${currentMode === 'ar' ? 'background: #059669; border-color: #047857;' : ''}">
-          📙 قواعد اللغة العربية (18 قاعدة)
-        </button>
-        <button class="btn btn-sm ${currentMode === 'is' ? 'btn-primary' : 'btn-secondary'}" onclick="setGrammarSubjectMode('is')" style="font-weight: 800; font-size: 0.78rem; ${currentMode === 'is' ? 'background: #0d9488; border-color: #0f766e;' : ''}">
-          🕌 أحكام وقواعد التربية الإسلامية (15 حكماً)
-        </button>
-      `;
-      container.appendChild(toggleBar);
+      // تحديث حالة أزرار شريط اختيار بنك القواعد الثابت بالأعلى
+      const btnEn = document.getElementById('btnGrammarBankEn');
+      const btnAr = document.getElementById('btnGrammarBankAr');
+      const btnIs = document.getElementById('btnGrammarBankIs');
+      if (btnEn && btnAr && btnIs) {
+        btnEn.className = 'btn btn-sm ' + (currentMode === 'en' ? 'btn-primary' : 'btn-secondary');
+        btnAr.className = 'btn btn-sm ' + (currentMode === 'ar' ? 'btn-primary' : 'btn-secondary');
+        btnIs.className = 'btn btn-sm ' + (currentMode === 'is' ? 'btn-primary' : 'btn-secondary');
+        if (currentMode === 'ar') {
+          btnAr.style.background = '#059669';
+          btnAr.style.borderColor = '#047857';
+          btnAr.style.color = 'white';
+        } else {
+          btnAr.style.background = '';
+          btnAr.style.borderColor = '';
+          btnAr.style.color = '';
+        }
+        if (currentMode === 'is') {
+          btnIs.style.background = '#0d9488';
+          btnIs.style.borderColor = '#0f766e';
+          btnIs.style.color = 'white';
+        } else {
+          btnIs.style.background = '';
+          btnIs.style.borderColor = '';
+          btnIs.style.color = '';
+        }
+      }
+
+      // تحديث العناوين ونصوص البحث بحسب المنهج المختار
+      const titleEl = document.getElementById('grammarSectionTitle');
+      const subTitleEl = document.getElementById('grammarSectionSubtitle');
+      const searchInput = document.getElementById('grammarSearchInput');
+      const voiceStudioBtn = document.getElementById('grammarVoiceStudioBtn');
+      if (voiceStudioBtn) {
+        voiceStudioBtn.style.display = (currentMode === 'en') ? 'inline-flex' : 'none';
+      }
+
+      if (currentMode === 'en') {
+        if (titleEl) titleEl.innerText = '💡 المرجع الشامل لقواعد اللغة الإنجليزية والوظائف اللغوية';
+        if (subTitleEl) subTitleEl.innerText = 'شرح وافٍ لكافة القواعد المقررة بالمنهج مع الصيغ النحوية، الأمثلة المنطوقة، وتدريبات الفهم الفورية.';
+        if (searchInput) searchInput.placeholder = 'ابحث في القواعد والأزمنة (مثلاً: Past, Present, Future, since, passive)...';
+      } else if (currentMode === 'ar') {
+        if (titleEl) titleEl.innerText = '💡 المرجع الشامل لقواعد اللغة العربية (الجزء الأول والثاني)';
+        if (subTitleEl) subTitleEl.innerText = 'شرح وافٍ لكافة القواعد النحوية والصرفية المقررة مع الضوابط والشواهد الإعرابية المعتمدة.';
+        if (searchInput) searchInput.placeholder = 'ابحث في القواعد النحوية والصرفية (مثلاً: الميزان الصرفي، الأسماء الخمسة، النداء، الفاعل)...';
+      } else if (currentMode === 'is') {
+        if (titleEl) titleEl.innerText = '🕌 المرجع الشامل لأحكام التلاوة والضوابط الشرعية';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع الوافي لأحكام التلاوة والتجويد، العقيدة، الحديث الشريف، الفقه، والآداب المقررة في منهج التربية الإسلامية.';
+        if (searchInput) searchInput.placeholder = 'ابحث في أحكام التلاوة والآداب والقواعد الفقهية (مثلاً: المد العارض، الصلاة، المعجزة)...';
+      }
+
+      // تحديث وتوليد فلاتر الوحدات والأقسام المخصصة لكل منهج ديناميكياً
+      const filtersEl = document.getElementById('grammarUnitFilters');
+      if (filtersEl) {
+        if (currentMode === 'en') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع القواعد (43)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'tenses' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('tenses', this)" style="border: 1px solid #c7d2fe;">⏱️ قواعد الأزمنة (Tenses)</button>
+            <button class="btn ${currentActiveGrammarFilter == 1 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(1, this)">الوحدة 1</button>
+            <button class="btn ${currentActiveGrammarFilter == 2 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(2, this)">الوحدة 2</button>
+            <button class="btn ${currentActiveGrammarFilter == 3 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(3, this)">الوحدة 3</button>
+            <button class="btn ${currentActiveGrammarFilter == 4 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(4, this)">الوحدة 4</button>
+            <button class="btn ${currentActiveGrammarFilter == 5 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(5, this)">الوحدة 5</button>
+            <button class="btn ${currentActiveGrammarFilter == 6 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(6, this)">الوحدة 6</button>
+            <button class="btn ${currentActiveGrammarFilter == 7 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(7, this)">الوحدة 7</button>
+          `;
+        } else if (currentMode === 'ar') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع قواعد العربية (18)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'p1' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('p1', this)">📙 قواعد الجزء الأول (9)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'p2' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('p2', this)">📗 قواعد الجزء الثاني (9)</button>
+            <button class="btn ${currentActiveGrammarFilter == 1 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(1, this)">الوحدة 1</button>
+            <button class="btn ${currentActiveGrammarFilter == 2 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(2, this)">الوحدة 2</button>
+            <button class="btn ${currentActiveGrammarFilter == 3 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(3, this)">الوحدة 3</button>
+            <button class="btn ${currentActiveGrammarFilter == 4 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(4, this)">الوحدة 4</button>
+            <button class="btn ${currentActiveGrammarFilter == 5 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(5, this)">الوحدة 5</button>
+            <button class="btn ${currentActiveGrammarFilter == 6 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(6, this)">الوحدة 6</button>
+            <button class="btn ${currentActiveGrammarFilter == 7 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(7, this)">الوحدة 7</button>
+            <button class="btn ${currentActiveGrammarFilter == 8 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(8, this)">الوحدة 8</button>
+            <button class="btn ${currentActiveGrammarFilter == 9 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(9, this)">الوحدة 9</button>
+          `;
+        } else if (currentMode === 'is') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع الأحكام والقواعد (15)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'tilawa' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('tilawa', this)">📖 أحكام التلاوة والتجويد</button>
+            <button class="btn ${currentActiveGrammarFilter === 'aqeeda' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('aqeeda', this)">🌟 العقيدة والمعجزات</button>
+            <button class="btn ${currentActiveGrammarFilter === 'hadith' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('hadith', this)">📜 الحديث النبوي الشريف</button>
+            <button class="btn ${currentActiveGrammarFilter === 'fiqh' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('fiqh', this)">🕌 الفقه والعبادات</button>
+            <button class="btn ${currentActiveGrammarFilter === 'seerah' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('seerah', this)">🕊️ السيرة والآداب الإسلامية</button>
+          `;
+        }
+      }
 
       if (currentMode === 'is') {
         // عرض بنك أحكام التربية الإسلامية
         const isRules = window.ISLAMIC_RULES || [];
         const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
         const filteredIs = isRules.filter(r => {
-          return !search || 
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') {
+            matchesFilter = true;
+          } else if (currentActiveGrammarFilter === 'tilawa') {
+            matchesFilter = r.category && (r.category.includes('تلاوة') || r.category.includes('تجويد'));
+          } else if (currentActiveGrammarFilter === 'aqeeda') {
+            matchesFilter = r.category && (r.category.includes('عقيدة') || r.category.includes('معجز'));
+          } else if (currentActiveGrammarFilter === 'hadith') {
+            matchesFilter = r.category && r.category.includes('حديث');
+          } else if (currentActiveGrammarFilter === 'fiqh') {
+            matchesFilter = r.category && (r.category.includes('فقه') || r.category.includes('عباد') || r.category.includes('صلاة') || r.category.includes('صوم'));
+          } else if (currentActiveGrammarFilter === 'seerah') {
+            matchesFilter = r.category && (r.category.includes('سيرة') || r.category.includes('صحاب') || r.category.includes('آداب') || r.category.includes('أخلاق'));
+          }
+          const matchesSearch = !search || 
             (r.title && r.title.toLowerCase().includes(search)) || 
             (r.category && r.category.toLowerCase().includes(search)) || 
             (r.summary && r.summary.toLowerCase().includes(search)) || 
             (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
         });
 
         if (filteredIs.length === 0) {
           const empty = document.createElement('div');
           empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
-          empty.innerText = 'لا توجد أحكام إسلامية مطابقة لبحثك.';
+          empty.innerText = 'لا توجد أحكام إسلامية مطابقة للفلتر أو البحث المحدد.';
           container.appendChild(empty);
           return;
         }
@@ -6766,10 +6972,8 @@
           card.innerHTML = `
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
-                <span class="badge" style="background: #f0fdfa; color: #0f766e; font-size: 0.7rem; font-weight: 800;">${rule.category}</span>
-                <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(rule.title + '. ' + rule.summary)}\`, 'ar')" style="font-size: 0.7rem;">
-                  🔊 استمع للحكم
-                </button>
+                <span class="badge" style="background: #f0fdfa; color: #0f766e; font-size: 0.72rem; font-weight: 800;">${rule.category}</span>
+                <span style="font-size: 0.7rem; color: var(--slate-400); font-weight: 700;">التربية الإسلامية</span>
               </div>
               <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #115e59;">${rule.title}</h4>
               <div style="background: #f0fdfa; border: 1px solid #99f6e4; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #134e4a; line-height: 1.6; margin-bottom: 0.65rem;">
@@ -6790,16 +6994,27 @@
         const arRules = window.ARABIC_GRAMMAR_RULES || [];
         const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
         const filteredAr = arRules.filter(r => {
-          return !search || 
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') {
+            matchesFilter = true;
+          } else if (currentActiveGrammarFilter === 'p1') {
+            matchesFilter = r.category && r.category.includes('الجزء الأول');
+          } else if (currentActiveGrammarFilter === 'p2') {
+            matchesFilter = r.category && r.category.includes('الجزء الثاني');
+          } else if (currentActiveGrammarFilter !== undefined && !isNaN(Number(currentActiveGrammarFilter))) {
+            matchesFilter = r.category && r.category.includes(`الوحدة ${currentActiveGrammarFilter}`);
+          }
+          const matchesSearch = !search || 
             (r.title && r.title.toLowerCase().includes(search)) || 
             (r.summary && r.summary.toLowerCase().includes(search)) || 
             (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
         });
 
         if (filteredAr.length === 0) {
           const empty = document.createElement('div');
           empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
-          empty.innerText = 'لا توجد قواعد عربية مطابقة لبحثك.';
+          empty.innerText = 'لا توجد قواعد عربية مطابقة للفلتر أو البحث المحدد.';
           container.appendChild(empty);
           return;
         }
@@ -6811,10 +7026,8 @@
           card.innerHTML = `
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
-                <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.7rem; font-weight: 800;">${rule.category}</span>
-                <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(rule.title + '. ' + rule.summary)}\`, 'ar')" style="font-size: 0.7rem;">
-                  🔊 استمع للشرح
-                </button>
+                <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.72rem; font-weight: 800;">${rule.category}</span>
+                <span style="font-size: 0.7rem; color: var(--slate-400); font-weight: 700;">منهج اللغة العربية</span>
               </div>
               <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #064e3b;">${rule.title}</h4>
               <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #14532d; line-height: 1.6; margin-bottom: 0.65rem;">
@@ -6964,10 +7177,6 @@
 
     function filterGrammarByUnit(unit, btn) {
       currentActiveGrammarFilter = unit;
-      document.querySelectorAll('#grammarUnitFilters button').forEach(b => {
-        b.className = 'btn btn-secondary btn-sm';
-      });
-      btn.className = 'btn btn-primary btn-sm';
       renderGrammarRules();
     }
 
@@ -9561,7 +9770,128 @@
         ]
       };
 
-      if (lessonId && LESSON_QUIZZES[lessonId]) {
+      if (currId === 4) {
+        // اختبار لغة عربية - الجزء الأول
+        currentQuizQuestions = [
+          {
+            id: 4001,
+            question: "ما هي علامة رفع الأسماء الخمسة (أبو، أخو، حمو، فو، ذو) في اللغة العربية؟",
+            options: ["الواو (مثل: جاءَ أبُوكَ)", "الألف", "الياء", "الضمة الظاهرة"],
+            correct: 0,
+            explanation: "ترفع الأسماء الخمسة بالواو نيابة عن الضمة بشرط أن تكون مضافة إلى غير ياء المتكلم."
+          },
+          {
+            id: 4002,
+            question: "ما هو الميزان الصرفي للكلمة الثلاثية المجردة (كَتَبَ)؟",
+            options: ["فَعَلَ", "فَعَّلَ", "مَفْعُول", "افْتَعَلَ"],
+            correct: 0,
+            explanation: "الميزان الصرفي للأفعال والأسماء الثلاثية المجردة هو (فَعَلَ)، فتقابل الكاف الفاء، والتاء العين، والباء اللام."
+          },
+          {
+            id: 4003,
+            question: "ما الفرق بين الفعل اللازم والفعل المتعدي؟",
+            options: [
+              "اللازم يكتفي بفاعله ولا يحتاج لمفعول به، بينما المتعدي ينصب مفعولاً به",
+              "اللازم ينصب مفعولين، والمتعدي لا ينصب أي مفعول",
+              "كلاهما ينصب المفعول به دائماً",
+              "اللازم فعل ماضٍ فقط والمتعدي مضارع فقط"
+            ],
+            correct: 0,
+            explanation: "الفعل اللازم يكتفي برفع الفاعل لتكوين جملة تامة المعنى، أما المتعدي فيتعدى الفاعل إلى مفعول به واحد أو أكثر."
+          },
+          {
+            id: 4004,
+            question: "ما هو الخط غير القياسي المعتمد في رسم القرآن الكريم؟",
+            options: [
+              "الرسم العثماني القرآني الذي كتبت به آيات المصحف الشريف",
+              "خط الرقعة الحديث",
+              "الخط الكوفي التجريدي",
+              "الكتابة الإملائية المدرسية المعاصرة"
+            ],
+            correct: 0,
+            explanation: "الخط غير القياسي (العثماني) هو الرسم الذي دونت به كلمات القرآن الكريم وتوقيفي لا يقاس عليه في الإملاء المعتاد."
+          }
+        ];
+      } else if (currId === 5) {
+        // اختبار لغة عربية - الجزء الثاني
+        currentQuizQuestions = [
+          {
+            id: 5001,
+            question: "ما هو حكم المنادى إذا كان علماً مفرداً (يا محمدُ) أو نكرة مقصودة (يا رجلُ)؟",
+            options: ["يبنى على ما يرفع به في محل نصب", "يكون معرباً منصوباً دائماً", "يكون مجروراً بالكسرة", "يبنى على السكون دائماً"],
+            correct: 0,
+            explanation: "يبنى المنادى على ما يرفع به (كالضم أو الألف أو الواو) إذا كان علماً مفرداً أو نكرة مقصودة."
+          },
+          {
+            id: 5002,
+            question: "متى يبنى الفعل المضارع على السكون؟",
+            options: ["إذا اتصلت به نون النسوة (مثل: الطالباتُ يَكْتُبْنَ)", "إذا اتصلت به نون التوكيد الثقيلة", "إذا سبق بأداة جزم", "إذا كان صحيح الآخر ولم يتصل به شيء"],
+            correct: 0,
+            explanation: "يبنى الفعل المضارع على السكون في حالة واحدة: إذا اتصلت به نون النسوة."
+          },
+          {
+            id: 5003,
+            question: "أي من الجمل التالية تشتمل على استفهام تصديق يجاب عنه بـ (نعم) أو (لا)؟",
+            options: ["هل قرأتَ الدرسَ اليوم؟", "كم كتاباً في مكتبتك؟", "متى موعد الامتحان الوزاري؟", "أين يقع شارع الرشيد؟"],
+            correct: 0,
+            explanation: "الاستفهام بـ (هل) يكون دائماً استفهام تصديق يجاب عنه بـ نعم للإثبات وبـ لا للنفي."
+          },
+          {
+            id: 5004,
+            question: "ما هي علامة إعراب جمع المذكر السالم في حالتي النصب والجر؟",
+            options: ["الياء (كافأتُ المعلمينَ، سلّمتُ على المهندسينَ)", "الكسرة نيابة عن الفتحة", "الواو", "الفتحة المقدرة"],
+            correct: 0,
+            explanation: "يرفع جمع المذكر السالم بالواو، وينصب ويجر بالياء."
+          }
+        ];
+      } else if (currId === 6) {
+        // اختبار التربية الإسلامية
+        currentQuizQuestions = [
+          {
+            id: 6001,
+            question: "ما هو المد العارض للسكون وما مقداره جوازاً عند الوقف في التلاوة؟",
+            options: ["يمد بمقدار حركتين أو أربع أو ست حركات جوازاً", "يمد وجوباً بمقدار ست حركات فقط", "يمد بحركة واحدة فقط كالحركة الطبيعية", "لا يمد إطلاقاً عند الوقف"],
+            correct: 0,
+            explanation: "المد العارض للسكون يمد جوازاً بمقدار حركتين (قصر) أو 4 حركات (توسط) أو 6 حركات (طول) عند الوقف على الحرف الأخير بالسكون."
+          },
+          {
+            id: 6002,
+            question: "ما هي شروط المعجزة الإلهية المؤيدة للأنبياء؟",
+            options: [
+              "أن تكون خارقة للعادة، وتجري على يد نبي، وتكون مقرونة بالتحدي ويعجز المنكرون عن معارضتها",
+              "أن تكون عملاً سحرياً يستطيع السحرة تكراره",
+              "أن تحدث بأسباب طبيعية وعلمية مألوفة",
+              "أن تقع لأي إنسان صالح بلا نبوة"
+            ],
+            correct: 0,
+            explanation: "المعجزة أمر خارق للعادة يظهره الله على يد مدعي النبوة تأييداً له، مقرونة بالتحدي مع عدم المعارضة."
+          },
+          {
+            id: 6003,
+            question: "ما هي علامات المنافق كما وردت في الحديث النبوي الشريف؟",
+            options: [
+              "إذا حدّث كذب، وإذا وعد أخلف، وإذا اؤتمن خان",
+              "إذا سئل أجاب، وإذا صام أفطر، وإذا صلى خشع",
+              "إذا سافر تعب، وإذا قرأ استمع، وإذا نام استيقظ",
+              "إذا دخل سلّم، وإذا أنفق شكر، وإذا عاهد وفى"
+            ],
+            correct: 0,
+            explanation: "قال رسول الله (ص): آية المنافق ثلاث: إذا حدث كذب، وإذا وعد أخلف، وإذا اؤتمن خان."
+          },
+          {
+            id: 6004,
+            question: "ما هي أركان الصلاة المفروضة التي تبطل الصلاة بتركها عمداً أو سهواً؟",
+            options: [
+              "النية، وتكبيرة الإحرام، والقيام، والركوع، والسجود",
+              "قراءة الأدعية المستحبة وقنوت الوتر",
+              "الأذان والإقامة وصلاة النافلة",
+              "التسبيح ثلاث مرات في الركوع"
+            ],
+            correct: 0,
+            explanation: "أركان الصلاة هي الأجزاء الأساسية التي تبطل الصلاة بترك أحدها سواء كان الترك متعمداً أو نسياناً."
+          }
+        ];
+      } else if (lessonId && LESSON_QUIZZES[lessonId]) {
         currentQuizQuestions = LESSON_QUIZZES[lessonId];
       } else if (lessonId && ((lessonId >= 2961 && lessonId <= 2971) || (lessonId >= 296 && lessonId <= 300))) {
         currentQuizQuestions = LESSON_QUIZZES[2961];
@@ -10355,7 +10685,7 @@
                 </div>
                 <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
                   <span class="exam-q-marks">${q.marks}</span>
-                  ${q.passage ? `
+                  ${(q.passage && isEnglishCurriculum(appData.currentCurriculumId)) ? `
                     <button class="exam-listen-btn" onclick="speakExamPassage(this.getAttribute('data-passage'))" data-passage="${q.passage.replace(/"/g, '&quot;')}" title="استمع لنص القطعة بالصوت البشري">
                       <span>🔊</span> استمع للنص
                     </button>
@@ -10438,6 +10768,7 @@
     }
 
     function speakExamPassage(text) {
+      if (!isEnglishCurriculum(appData.currentCurriculumId)) return;
       if (audioPlayer && audioPlayer.speakText && text) {
         audioPlayer.speakText(text, 'en');
       }
@@ -10903,11 +11234,25 @@
       if (grammarTitle) grammarTitle.innerText = titleText;
       if (grammarIcon) grammarIcon.innerText = icon;
 
+      const voiceStudioBtn = document.getElementById('grammarVoiceStudioBtn');
+      if (voiceStudioBtn) {
+        voiceStudioBtn.style.display = (curr.id === 3) ? 'inline-flex' : 'none';
+      }
+      const audioBar = document.getElementById('audioPlayerBar');
+      if (audioBar) {
+        audioBar.style.display = (curr.id === 3) ? 'flex' : 'none';
+      }
+
       // الامتحانات
       const examsTitle = document.getElementById('examsActiveSubjectTitle');
       const examsIcon = document.getElementById('examsActiveSubjectIcon');
       if (examsTitle) examsTitle.innerText = titleText;
       if (examsIcon) examsIcon.innerText = icon;
+
+      const examsVoiceStudioBtn = document.getElementById('examsVoiceStudioBtn');
+      if (examsVoiceStudioBtn) {
+        examsVoiceStudioBtn.style.display = (curr.id === 3) ? 'inline-flex' : 'none';
+      }
     }
     // إدارة إضافة المناهج والمودال
     function openAddModal() {
