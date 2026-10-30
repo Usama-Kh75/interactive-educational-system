@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v3.5.0';
+const CACHE_NAME = 'interactive-edu-pwa-v3.5.1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -6,6 +6,7 @@ const ASSETS_TO_CACHE = [
   './curriculum_data_arabic.js',
   './curriculum_data_islamic.js',
   './curriculum_data_physics.js',
+  './curriculum_diagrams_physics.js',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',

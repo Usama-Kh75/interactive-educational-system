@@ -21,6 +21,7 @@
   <script src="curriculum_data_arabic.js"></script>
   <script src="curriculum_data_islamic.js"></script>
   <script src="curriculum_data_physics.js"></script>
+  <script src="curriculum_diagrams_physics.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -2801,7 +2802,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.1 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3605,7 +3606,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.1</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3630,7 +3631,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.1</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3683,7 +3684,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.5.0</span>
+        <span class="version-badge" id="footerVersionBadge">v3.5.1</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3801,6 +3802,68 @@
       </div>
     </div>
   </div>
+  <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الفيزيائي الدقيق -->
+  <div class="modal-overlay hidden" id="physicsDiagramModal" onclick="if(event.target === this) closePhysicsDiagramModal()">
+    <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🔬</span>
+          <div>
+            <h3 id="physicsDiagramModalTitle" style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0;">الرسم التوضيحي الفيزيائي المعتمد</h3>
+            <span id="physicsDiagramModalSubtitle" style="font-size: 0.75rem; color: #0284c7; font-weight: 700;">منهج الفيزياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <button class="btn btn-secondary btn-sm" onclick="zoomPhysicsDiagram(0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➕ تكبير</button>
+          <button class="btn btn-secondary btn-sm" onclick="zoomPhysicsDiagram(-0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➖ تصغير</button>
+          <button class="btn btn-secondary btn-sm" onclick="resetPhysicsDiagramZoom()" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">🔄 100%</button>
+          <button onclick="closePhysicsDiagramModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center; margin-right: 0.3rem;">✕</button>
+        </div>
+      </div>
+
+      <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; padding: 0.25rem;">
+        <div id="physicsDiagramSvgWrapper" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; padding: 0.5rem; min-height: 380px;">
+          <!-- SVG injected here -->
+        </div>
+        <div id="physicsDiagramInfoWrapper">
+          <!-- Details injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: معرض بنك الرسوم التوضيحية واللوحات الفيزيائية الشاملة -->
+  <div class="modal-overlay hidden" id="allPhysicsDiagramsModal" onclick="if(event.target === this) closeAllPhysicsDiagramsGallery()">
+    <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🎨</span>
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0;">معرض بنك الرسوم واللوحات التوضيحية للفيزياء (15 لوحة)</h3>
+            <span style="font-size: 0.75rem; color: #0284c7; font-weight: 700;">رسوم بيانية متجهة عالية الدقة تغطي كافة فصول المنهج • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <button onclick="closeAllPhysicsDiagramsGallery()" title="إغلاق المعرض" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="diagramsFilterTabs">
+        <button class="btn btn-primary btn-sm" onclick="filterAllPhysicsDiagrams('all', this)">كل الرسوم (15)</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('الحركة والقياس', this)">الحركة والقياس</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('قوانين الحركة', this)">قوانين الحركة والجاذبية</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('الشغل والقدرة والطاقة', this)">الشغل والطاقة</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('الآلات البسيطة', this)">الآلات والعتلات</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('الحركة الموجية والصوت', this)">الموجات والصوت</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllPhysicsDiagrams('الضوء والبصريات', this)">الضوء والبصريات</button>
+      </div>
+
+      <!-- Diagrams Grid -->
+      <div id="allPhysicsDiagramsGrid" style="flex: 1; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
 
   <!-- نافذة مودال: استوديو ضبط ومعاينة الصوت البشري المتقدم -->
   <div class="modal-overlay hidden" id="voiceStudioModal">
@@ -3981,7 +4044,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.1</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4009,13 +4072,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.1؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.1</span>
         </div>
       </div>
 
@@ -4064,8 +4127,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.5.0';
-    const SYSTEM_VERSION = 'v3.5.0';
+    const CURRENT_VERSION_LABEL = 'v3.5.1';
+    const SYSTEM_VERSION = 'v3.5.1';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -6346,8 +6409,13 @@
               🔍 فتح صفحة الكتاب الأصلية (${pages[0] || 4})
             </button>
             <button class="btn btn-secondary btn-sm" id="toggleVisualBtn" onclick="toggleMediaSection('lessonMediaVisualContainer')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
-              🎨 عرض بطاقة المفاهيم المصورة
+              🎨 المعرض البصري والمفاهيم
             </button>
+            ${(appData.currentCurriculumId === 7 && window.getPhysicsDiagram && window.getPhysicsDiagram(activeLesson.id)) ? `
+              <button class="btn btn-sm" id="togglePhysicsDiagramBtn" onclick="toggleMediaSection('lessonMediaVisualContainer', 'physicsDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #0284c7; color: #ffffff; border: none; font-weight: 700; box-shadow: 0 1px 3px rgba(2,132,199,0.3);">
+                🔬 الرسم التوضيحي للدرس
+              </button>
+            ` : ''}
           </div>
         `;
       }
@@ -6615,20 +6683,164 @@
       if (img) img.style.transform = `scale(${currentBookZoom})`;
     }
 
+
+    // ----------------------------------------------------
+    // إدارة نافذة الرسوم التوضيحية الفيزيائية ومعرض اللوحات المعتمدة
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    let currentPhysicsDiagramZoom = 1;
+
+    function openPhysicsDiagramModal(diagId) {
+      if (!window.PHYSICS_DIAGRAMS) return;
+      const diag = window.PHYSICS_DIAGRAMS.find(d => d.id === diagId);
+      if (!diag) return;
+
+      const modal = document.getElementById('physicsDiagramModal');
+      const titleEl = document.getElementById('physicsDiagramModalTitle');
+      const subEl = document.getElementById('physicsDiagramModalSubtitle');
+      const svgWrap = document.getElementById('physicsDiagramSvgWrapper');
+      const infoWrap = document.getElementById('physicsDiagramInfoWrapper');
+
+      if (!modal) return;
+
+      if (titleEl) titleEl.innerText = diag.title;
+      if (subEl) subEl.innerText = `${diag.category} • منهج الفيزياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم`;
+
+      currentPhysicsDiagramZoom = 1;
+      if (svgWrap) {
+        svgWrap.innerHTML = `
+          <div id="physicsDiagramZoomTarget" style="width: 100%; max-width: 820px; transition: transform 0.2s ease; transform-origin: center center;">
+            ${diag.svg}
+          </div>
+        `;
+      }
+
+      if (infoWrap) {
+        infoWrap.innerHTML = `
+          <div style="background: #f0fdf4; border-right: 4px solid #10b981; padding: 0.6rem 0.85rem; border-radius: 6px; font-size: 0.84rem; color: #065f46; margin-bottom: 0.5rem; line-height: 1.6;">
+            <strong>💡 الشرح العلمي والتفسير الفيزيائي:</strong> ${diag.summary}
+          </div>
+          ${diag.formula ? `
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.5rem 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.1rem;">📐</span>
+              <strong style="font-size: 0.85rem; color: #1d4ed8;">القانون والمعادلة الرياضية:</strong>
+              <span style="font-size: 0.85rem; font-weight: 800; color: #1e40af;">${diag.formula}</span>
+            </div>
+          ` : ''}
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
+            ${(diag.keyPoints || []).map(pt => `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.45rem 0.75rem; font-size: 0.78rem; color: #334155; line-height: 1.5;">
+                <span style="color: #0284c7; font-weight: 800;">✔️</span> ${pt}
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closePhysicsDiagramModal() {
+      const modal = document.getElementById('physicsDiagramModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function zoomPhysicsDiagram(delta) {
+      currentPhysicsDiagramZoom = Math.max(0.6, Math.min(2.5, currentPhysicsDiagramZoom + delta));
+      const target = document.getElementById('physicsDiagramZoomTarget');
+      if (target) target.style.transform = `scale(${currentPhysicsDiagramZoom})`;
+    }
+
+    function resetPhysicsDiagramZoom() {
+      currentPhysicsDiagramZoom = 1;
+      const target = document.getElementById('physicsDiagramZoomTarget');
+      if (target) target.style.transform = 'scale(1)';
+    }
+
+    let currentAllDiagramsFilter = 'all';
+
+    function openAllPhysicsDiagramsGallery(filterCat) {
+      currentAllDiagramsFilter = filterCat || 'all';
+      renderAllPhysicsDiagramsGrid();
+      const modal = document.getElementById('allPhysicsDiagramsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeAllPhysicsDiagramsGallery() {
+      const modal = document.getElementById('allPhysicsDiagramsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function filterAllPhysicsDiagrams(cat, btn) {
+      currentAllDiagramsFilter = cat;
+      const tabs = document.querySelectorAll('#diagramsFilterTabs button');
+      tabs.forEach(t => {
+        t.className = 'btn btn-secondary btn-sm';
+      });
+      if (btn) btn.className = 'btn btn-primary btn-sm';
+      renderAllPhysicsDiagramsGrid();
+    }
+
+    function renderAllPhysicsDiagramsGrid() {
+      const grid = document.getElementById('allPhysicsDiagramsGrid');
+      if (!grid || !window.PHYSICS_DIAGRAMS) return;
+
+      const list = window.PHYSICS_DIAGRAMS.filter(d => {
+        if (currentAllDiagramsFilter === 'all') return true;
+        return d.category && d.category.includes(currentAllDiagramsFilter);
+      });
+
+      if (list.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد رسوم في هذا القسم.</div>';
+        return;
+      }
+
+      grid.innerHTML = list.map(diag => `
+        <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+              <span class="badge" style="background: #e0f2fe; color: #0284c7; font-size: 0.7rem; font-weight: 800;">${diag.category}</span>
+              <button class="btn btn-secondary btn-sm" onclick="openPhysicsDiagramModal('${diag.id}')" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; color: #0284c7;">
+                🔍 تكبير
+              </button>
+            </div>
+            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-weight: 800; color: #0f172a; line-height: 1.35;">${diag.title}</h4>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem; cursor: pointer;" onclick="openPhysicsDiagramModal('${diag.id}')" title="انقر لتكبير الرسم">
+              ${diag.svg}
+            </div>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.77rem; color: #475569; line-height: 1.5;">${diag.summary}</p>
+          </div>
+          <button class="btn btn-sm" onclick="openPhysicsDiagramModal('${diag.id}')" style="background: #0284c7; color: white; width: 100%; font-size: 0.75rem; padding: 0.3rem 0.5rem; font-weight: 700;">
+            🔬 فحص اللوحة والشرح الكامل
+          </button>
+        </div>
+      `).join('');
+    }
+
     function resetBookPageZoom() {
       currentBookZoom = 1;
       const img = document.getElementById('bookPageModalImg');
       if (img) img.style.transform = `scale(1)`;
     }
 
-    function toggleMediaSection(secId) {
+    function toggleMediaSection(secId, childId) {
       const el = document.getElementById(secId);
       const btn = document.getElementById('toggleVisualBtn');
       if (el) {
+        if (childId) {
+          el.style.display = 'block';
+          const childEl = document.getElementById(childId);
+          if (childEl) {
+            childEl.style.display = 'block';
+            childEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (btn) btn.innerHTML = '<span>🔼</span> إخفاء المعرض البصري';
+          return;
+        }
         const isHidden = (el.style.display === 'none' || !el.style.display);
         el.style.display = isHidden ? 'block' : 'none';
         if (btn) {
-          btn.innerHTML = isHidden ? '<span>🔼</span> إخفاء بطاقة المفاهيم' : '<span>🎨</span> عرض بطاقة المفاهيم المصورة';
+          btn.innerHTML = isHidden ? '<span>🔼</span> إخفاء المعرض البصري' : '<span>🎨</span> المعرض البصري والمفاهيم';
         }
         if (isHidden) {
           el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -6727,6 +6939,11 @@
                 ✨ بطاقة المفهوم المصورة
               </button>
             ` : ''}
+            ${(isPhysics && window.getPhysicsDiagram && window.getPhysicsDiagram(lesson.id)) ? `
+              <button class="btn btn-sm" onclick="toggleMediaSection('physicsDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #0284c7; color: #ffffff; font-weight: 700;">
+                🔬 الرسم التوضيحي
+              </button>
+            ` : ''}
           </div>
         </div>
 
@@ -6753,6 +6970,60 @@
           </div>
         `;
       });
+
+      // 1.5. الرسوم التوضيحية واللوحات الفيزيائية المعتمدة (Physics Visual Diagrams)
+      const physDiagram = (isPhysics && window.getPhysicsDiagram) ? window.getPhysicsDiagram(lesson.id) : null;
+      if (physDiagram) {
+        html += `
+          <div id="physicsDiagramSec" style="background: white; border: 2px solid #0284c7; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(2,132,199,0.08); grid-column: 1 / -1; margin-bottom: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 1.4rem;">🔬</span>
+                <div>
+                  <h4 style="margin: 0; font-size: 0.98rem; font-weight: 800; color: #0f172a;">${physDiagram.title}</h4>
+                  <span style="font-size: 0.72rem; color: #0284c7; font-weight: 700;">لوحة توضيحية علمية معتمدة • ${physDiagram.category}</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <span class="badge" style="background: #e0f2fe; color: #0369a1; font-size: 0.7rem; font-weight: 800;">
+                  رسم فيزيائي دقيق
+                </span>
+                <button class="btn btn-secondary btn-sm" onclick="openPhysicsDiagramModal('${physDiagram.id}')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #f0f9ff; border: 1px solid #bae6fd; color: #0284c7; font-weight: 700;">
+                  🔍 تكبير وفحص الرسم
+                </button>
+              </div>
+            </div>
+
+            <!-- SVG Container -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; cursor: pointer; padding: 0.4rem;" onclick="openPhysicsDiagramModal('${physDiagram.id}')" title="انقر لتكبير وفحص الرسم التوضيحي">
+              <div style="width: 100%; max-width: 680px;">
+                ${physDiagram.svg}
+              </div>
+            </div>
+
+            <!-- Summary & Formula -->
+            <div style="background: #f0fdf4; border-right: 4px solid #10b981; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: #065f46; margin-bottom: 0.5rem; line-height: 1.5;">
+              <strong>💡 الشرح العلمي: </strong>${physDiagram.summary}
+            </div>
+
+            ${physDiagram.formula ? `
+              <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 0.85rem;">📐</span>
+                <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${physDiagram.formula}</span>
+              </div>
+            ` : ''}
+
+            <!-- Takeaway Points -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
+              ${(physDiagram.keyPoints || []).map(pt => `
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
+                  <span style="color: #0284c7; font-weight: 800;">•</span> ${pt}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
 
       // 2. البطاقة البصرية المصممة للموضوع
       if (cardData) {
@@ -7832,6 +8103,7 @@
             <button class="btn ${currentActiveGrammarFilter === 'machines' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('machines', this)">🏗️ الآلات البسيطة والعتلات (فصل 4)</button>
             <button class="btn ${currentActiveGrammarFilter === 'sound' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('sound', this)">🌊 الموجات والصوت (فصل 5)</button>
             <button class="btn ${currentActiveGrammarFilter === 'light' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('light', this)">💡 الضوء والمرايا والعدسات (فصل 6)</button>
+            <button class="btn btn-sm" onclick="openAllPhysicsDiagramsGallery()" style="background: #0284c7; color: #ffffff; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.3); margin-right: 0.5rem;">🎨 استعراض بنك الرسوم التوضيحية (15 لوحة)</button>
           `;
         }
       }
@@ -7890,6 +8162,32 @@
               <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
                 ${rule.details}
               </div>
+              ${(() => {
+                let diag = null;
+                if (window.PHYSICS_DIAGRAMS) {
+                  const t = rule.title || '';
+                  if (t.includes('المسافة') || t.includes('الإزاحة')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_distance_displacement');
+                  else if (t.includes('السرعة') || t.includes('التعجيل')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_velocity_acceleration');
+                  else if (t.includes('نيوتن')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_newton_laws');
+                  else if (t.includes('الجاذبية') || t.includes('الوزن')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_mass_vs_weight');
+                  else if (t.includes('الشغل') || t.includes('القدرة')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_work_power');
+                  else if (t.includes('الطاقة') || t.includes('البندول')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_pendulum_energy');
+                  else if (t.includes('العتلات')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_levers_classes');
+                  else if (t.includes('الآلات') || t.includes('البكر') || t.includes('السطح المائل')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_pulleys_inclined_plane');
+                  else if (t.includes('الموجات') || t.includes('الموجية')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_waves_transverse_longitudinal');
+                  else if (t.includes('الصوت') || t.includes('الصدى')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_sound_echo_sonar');
+                  else if (t.includes('الظل') || t.includes('الكسوف') || t.includes('الخسوف')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_shadows_eclipses');
+                  else if (t.includes('الانعكاس') || t.includes('المرايا')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_reflection_mirrors');
+                  else if (t.includes('الانكسار') || t.includes('العدسات')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_refraction_lenses_vision');
+                  else if (t.includes('الألياف') || t.includes('المنشور') || t.includes('الطيف')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_total_internal_reflection_prism');
+                  else if (t.includes('البادئات') || t.includes('القياس')) diag = window.PHYSICS_DIAGRAMS.find(d => d.id === 'diag_measurement_prefixes');
+                }
+                return diag ? `
+                  <button class="btn btn-sm" onclick="openPhysicsDiagramModal('${diag.id}')" style="background: #0284c7; color: white; border: none; font-size: 0.74rem; padding: 0.35rem 0.75rem; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.6rem; cursor: pointer; box-shadow: 0 1px 3px rgba(2,132,199,0.3);">
+                    <span>🔬</span> عرض الرسم التوضيحي للظاهرة (${diag.title.substring(0, 32)}...)
+                  </button>
+                ` : '';
+              })()}
             </div>
           `;
           container.appendChild(card);
@@ -12935,6 +13233,14 @@
         const whatsNewModal = document.getElementById('whatsNewModal');
         if (whatsNewModal && !whatsNewModal.classList.contains('hidden')) {
           closeWhatsNewModal();
+        }
+        const physModal = document.getElementById('physicsDiagramModal');
+        if (physModal && !physModal.classList.contains('hidden')) {
+          closePhysicsDiagramModal();
+        }
+        const allPhysModal = document.getElementById('allPhysicsDiagramsModal');
+        if (allPhysModal && !allPhysModal.classList.contains('hidden')) {
+          closeAllPhysicsDiagramsGallery();
         }
       }
     });
