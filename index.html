@@ -1887,6 +1887,36 @@
       text-align: left;
     }
 
+    .phy-formula {
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+      display: inline-block;
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      font-weight: 700;
+      padding: 0.05rem 0.35rem;
+      margin: 0 0.15rem;
+      background: rgba(2, 132, 199, 0.08);
+      color: #0369a1;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+
+    .phy-math-block {
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 0.98rem;
+      padding: 0.65rem 1rem;
+      margin: 0.65rem auto;
+      background: #f0fdfa;
+      color: #0f766e;
+      border: 1px solid #ccfbf1;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
     .grammar-example-item {
       padding: 0.5rem;
       border-radius: 6px;
@@ -2802,7 +2832,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.4 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.5 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3596,7 +3626,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.4</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.5</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3621,7 +3651,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.4</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.5</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3674,7 +3704,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.5.4</span>
+        <span class="version-badge" id="footerVersionBadge">v3.5.5</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -4034,7 +4064,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.4</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.5</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4062,13 +4092,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.4؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.5؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.4</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.5</span>
         </div>
       </div>
 
@@ -4117,8 +4147,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.5.4';
-    const SYSTEM_VERSION = 'v3.5.4';
+    const CURRENT_VERSION_LABEL = 'v3.5.5';
+    const SYSTEM_VERSION = 'v3.5.5';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -7600,16 +7630,16 @@
           return {
             content: `📌 **حل مسألة حساب محصلة إزاحتين (كتاب الفيزياء ص 15-17):**\n\n` +
                      `1. **إذا كانت الإزاحتان باتجاه واحد:**\n` +
-                     `• نجمع الإزاحتين: $x_R = x_1 + x_2$\n` +
+                     `• نجمع الإزاحتين: <span dir='ltr' class='phy-formula'>x<sub>R</sub> = x₁ + x₂</span>\n` +
                      `• مثال: تحرك جسم 3km شرقاً ثم 4km شرقاً ➔ المحصلة = 3 + 4 = 7km شرقاً.\n\n` +
                      `2. **إذا كانت الإزاحتان باتجاهين متعاكسين:**\n` +
-                     `• نطرح الصغرى من الكبرى: $x_R = x_1 - x_2$ (باتجاه الإزاحة الأكبر).\n` +
+                     `• نطرح الصغرى من الكبرى: <span dir='ltr' class='phy-formula'>x<sub>R</sub> = x₁ - x₂</span> (باتجاه الإزاحة الأكبر).\n` +
                      `• مثال: 5km شرقاً و 2km غرباً ➔ المحصلة = 5 - 2 = 3km شرقاً.\n\n` +
                      `3. **إذا كانت الإزاحتان متعامدتين (بزاوية 90°):**\n` +
-                     `• نطبق مبرهنة فيثاغورس: $x_R = \\sqrt{x_1^2 + x_2^2}$\n` +
+                     `• نطبق مبرهنة فيثاغورس: <span dir='ltr' class='phy-formula'>x<sub>R</sub> = √(x₁² + x₂²)</span>\n` +
                      `• مثال الكتاب: تحركت سيارة 3km شمالاً و 4km شرقاً:\n` +
-                     `$$x_R = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5\\text{ km}$$\n` +
-                     `والاتجاه: شمال الشرق (بزاوية $37^\\circ$ تقريباً).`,
+                     `<div dir='ltr' class='phy-math-block'>x<sub>R</sub> = √(3² + 4²) = √(9 + 16) = √25 = 5 km</div>\n` +
+                     `والاتجاه: شمال الشرق (بزاوية 37° تقريباً).`,
             sources: [{ page: 16, heading: 'محصلة إزاحتين' }]
           };
         }
@@ -7617,13 +7647,13 @@
           return {
             content: `📌 **قوانين ومسائل السرعة والانطلاق والتعجيل (ص 17-20):**\n\n` +
                      `1. **قانون الانطلاق (Speed):**\n` +
-                     `• $s = \\frac{d}{t}$ (الانطلاق = المسافة الكلية ÷ الزمن المستغرق).\n` +
+                     `• <span dir='ltr' class='phy-formula'>s = d / t</span> (الانطلاق = المسافة الكلية ÷ الزمن المستغرق).\n` +
                      `• الوحدة: م/ث (m/s).\n\n` +
                      `2. **قانون السرعة (Velocity):**\n` +
-                     `• $v = \\frac{x}{t}$ (السرعة = الإزاحة المقطوعة ÷ الزمن).\n` +
+                     `• <span dir='ltr' class='phy-formula'>v = x / t</span> (السرعة = الإزاحة المقطوعة ÷ الزمن).\n` +
                      `• وهي كمية اتجاهية لها نفس اتجاه الإزاحة.\n\n` +
                      `3. **قانون التعجيل (Acceleration):**\n` +
-                     `• $a = \\frac{v_f - v_i}{t}$ (التعجيل = التغير بالسرعة ÷ الزمن).\n` +
+                     `• <span dir='ltr' class='phy-formula'>a = (v<sub>f</sub> - v<sub>i</sub>) / t</span> (التعجيل = التغير بالسرعة ÷ الزمن).\n` +
                      `• الوحدة: م/ث² (m/s²).\n` +
                      `• إذا كانت السرعة تزداد فالتعجيل **تسارعي موجب**، وإذا تباطأت فالتعجيل **تباطئي سالب**.`,
             sources: [{ page: 18, heading: 'الانطلاق والسرعة والتعجيل' }]
@@ -7633,13 +7663,13 @@
           return {
             content: `📌 **قوانين ومسائل الشغل والقدرة (كتاب الفيزياء ص 36-39):**\n\n` +
                      `1. **قانون الشغل الفيزيائي (Work):**\n` +
-                     `• $W = F \\times x$ (الشغل = القوة × الإزاحة باتجاه القوة).\n` +
-                     `• الوحدة: الجول (Joule) = نيوتن × متر ($N \\cdot m$).\n` +
+                     `• <span dir='ltr' class='phy-formula'>W = F × x</span> (الشغل = القوة × الإزاحة باتجاه القوة).\n` +
+                     `• الوحدة: الجول (Joule) = نيوتن × متر (<span dir='ltr' class='phy-formula'>N · m</span>).\n` +
                      `• شرط إنجاز الشغل: أن تتحرك نقطة تأثير القوة باتجاه القوة نفسها.\n\n` +
                      `2. **قانون القدرة (Power):**\n` +
-                     `• $P = \\frac{W}{t}$ (القدرة = الشغل المنجز ÷ الزمن المستغرق).\n` +
-                     `• الوحدة: الواط (Watt) = جول/ثانية ($J/s$).\n` +
-                     `• القدرة الحصانية: $1\\text{ hp} = 746\\text{ Watt}$.`,
+                     `• <span dir='ltr' class='phy-formula'>P = W / t</span> (القدرة = الشغل المنجز ÷ الزمن المستغرق).\n` +
+                     `• الوحدة: الواط (Watt) = جول/ثانية (<span dir='ltr' class='phy-formula'>J/s</span>).\n` +
+                     `• القدرة الحصانية: <span dir='ltr' class='phy-formula'>1 hp = 746 Watt</span>.`,
             sources: [{ page: 37, heading: 'الشغل والقدرة' }]
           };
         }
@@ -7647,25 +7677,25 @@
           return {
             content: `📌 **قوانين ومسائل العتلات والفائدة الميكانيكية (ص 47-49):**\n\n` +
                      `1. **قانون العتلات الأساسي:**\n` +
-                     `$$\\text{القوة} \\times \\text{ذراعها} = \\text{المقاومة} \\times \\text{ذراعها}$$\n` +
-                     `$$F_1 \\times d_1 = F_2 \\times d_2$$\n\n` +
+                     `<div dir='ltr' class='phy-math-block'>القوة × ذراعها = المقاومة × ذراعها</div>\n` +
+                     `<div dir='ltr' class='phy-math-block'>F₁ × d₁ = F₂ × d₂</div>\n\n` +
                      `2. **قانون الفائدة الميكانيكية (Mechanical Advantage - MA):**\n` +
-                     `$$MA = \\frac{\\text{المقاومة } F_2}{\\text{القوة } F_1} = \\frac{\\text{ذراع القوة } d_1}{\\text{ذراع المقاومة } d_2}$$\n` +
-                     `• إذا كان $MA > 1$: نحصل على **ربح قوة** (القوة أصغر من المقاومة).\n` +
-                     `• إذا كان $MA < 1$: نحصل على **ربح سرعة** (ذراع المقاومة أطول من ذراع القوة).\n` +
-                     `• إذا كان $MA = 1$: لا ربح قوة ولا ربح سرعة (مثل الميزان ذي الكفتين).`,
+                     `<div dir='ltr' class='phy-math-block'>MA = F₂ / F₁ = d₁ / d₂</div>\n` +
+                     `• إذا كان <span dir='ltr' class='phy-formula'>MA > 1</span>: نحصل على **ربح قوة** (القوة أصغر من المقاومة).\n` +
+                     `• إذا كان <span dir='ltr' class='phy-formula'>MA < 1</span>: نحصل على **ربح سرعة** (ذراع المقاومة أطول من ذراع القوة).\n` +
+                     `• إذا كان <span dir='ltr' class='phy-formula'>MA = 1</span>: لا ربح قوة ولا ربح سرعة (مثل الميزان ذي الكفتين).`,
             sources: [{ page: 48, heading: 'قانون العتلات' }]
           };
         }
         if (qClean.includes('صدى') || qClean.includes('صدي') || qClean.includes('عمق') || qClean.includes('بحر')) {
           return {
             content: `📌 **مسألة حساب عمق البحر بصدى الصوت (ص 64-65):**\n\n` +
-                     `• ينتقل الصوت في ماء البحر بسرعة $v \\approx 1500\\text{ m/s}$.\n` +
-                     `• النبضة الصوتية تقطع المسافة **ذهاباً وإياباً**، فالزمن المقاس $t$ هو زمن الذهاب والإياب.\n` +
+                     `• ينتقل الصوت في ماء البحر بسرعة <span dir='ltr' class='phy-formula'>v ≈ 1500 m/s</span>.\n` +
+                     `• النبضة الصوتية تقطع المسافة **ذهاباً وإياباً**، فالزمن المقاس t هو زمن الذهاب والإياب.\n` +
                      `• قانون العمق:\n` +
-                     `$$d = \\frac{v \\times t}{2}$$\n` +
-                     `• **مثال:** أرسلت سفينة موجة فوق صوتية لقاع البحر واستلمت صداها بعد $t = 2\\text{ s}$:\n` +
-                     `$$d = \\frac{1500 \\times 2}{2} = 1500\\text{ m}$$ (عمق البحر = 1.5 كيلومتر).`,
+                     `<div dir='ltr' class='phy-math-block'>d = (v × t) / 2</div>\n` +
+                     `• **مثال:** أرسلت سفينة موجة فوق صوتية لقاع البحر واستلمت صداها بعد <span dir='ltr' class='phy-formula'>t = 2 s</span>:\n` +
+                     `<div dir='ltr' class='phy-math-block'>d = (1500 × 2) / 2 = 1500 m</div> (عمق البحر = 1.5 كيلومتر).`,
             sources: [{ page: 65, heading: 'تطبيقات صدى الصوت' }]
           };
         }
@@ -12755,6 +12785,55 @@
       renderPastExam(currentSelectedPastExamId);
     }
 
+    // دالة تهيئة وتنسيق الرموز والمعادلات الرياضية والفيزيائية ومنع أي تشوه في نصوص RTL
+    function formatPhysicsMath(text) {
+      if (!text || typeof text !== 'string') return text || '';
+      
+      function cleanFormula(s, isBlock) {
+        if (!s) return '';
+        let str = s.trim();
+        for (let i = 0; i < 5; i++) {
+          if (!str.includes('text{')) break;
+          str = str.replace(/\\?text\{([^{}]+)\}/g, '$1');
+        }
+        for (let i = 0; i < 5; i++) {
+          if (!str.includes('sqrt{')) break;
+          str = str.replace(/\\?sqrt\{([^{}]+)\}/g, '√($1)');
+        }
+        for (let i = 0; i < 5; i++) {
+          if (!str.includes('frac{')) break;
+          str = str.replace(/\\?frac\{([^{}]+)\}\{([^{}]+)\}/g, '($1 / $2)');
+        }
+        str = str.replace(/\\times/g, '×').replace(/\btimes\b/g, '×');
+        str = str.replace(/\\cdot/g, '·').replace(/\bcdot\b/g, '·');
+        str = str.replace(/\\approx/g, '≈').replace(/\bapprox\b/g, '≈');
+        str = str.replace(/\\Rightarrow/g, ' ⇐ ').replace(/\bRightarrow\b/g, ' ⇐ ');
+        str = str.replace(/\\mu\s*s/g, 'μs').replace(/\bmu\s*s\b/g, 'μs');
+        str = str.replace(/\\mu/g, 'μ').replace(/\bmu\b/g, 'μ');
+        str = str.replace(/\\theta/g, 'θ').replace(/\btheta\b/g, 'θ');
+        str = str.replace(/\\eta/g, 'η').replace(/\beta\b/g, 'η');
+        str = str.replace(/\\%/g, '%');
+        str = str.replace(/\^\\circ/g, '°').replace(/\^circ/g, '°');
+        str = str.replace(/\^{12}/g, '¹²').replace(/\^{-15}/g, '⁻¹⁵').replace(/\^{-12}/g, '⁻¹²').replace(/\^{-9}/g, '⁻⁹').replace(/\^{-6}/g, '⁻⁶').replace(/\^{-3}/g, '⁻³').replace(/\^{-2}/g, '⁻²');
+        str = str.replace(/\^{9}/g, '⁹').replace(/\^{8}/g, '⁸').replace(/\^{6}/g, '⁶').replace(/\^{3}/g, '³').replace(/\^{2}/g, '²');
+        str = str.replace(/\^12/g, '¹²').replace(/\^-15/g, '⁻¹⁵').replace(/\^-12/g, '⁻¹²').replace(/\^-9/g, '⁻⁹').replace(/\^-6/g, '⁻⁶').replace(/\^-3/g, '⁻³').replace(/\^-2/g, '⁻²');
+        str = str.replace(/\^9/g, '⁹').replace(/\^8/g, '⁸').replace(/\^6/g, '⁶').replace(/\^3/g, '³').replace(/\^2/g, '²').replace(/\^1/g, '¹').replace(/\^0/g, '⁰');
+        str = str.replace(/_1/g, '₁').replace(/_2/g, '₂').replace(/_3/g, '₃').replace(/_4/g, '₄');
+        str = str.replace(/_f/g, '<sub>f</sub>').replace(/_i/g, '<sub>i</sub>').replace(/_R/g, '<sub>R</sub>');
+        str = str.replace(/\\/g, '');
+        str = str.replace(/\s+/g, ' ').trim();
+        if (isBlock) {
+          return `<div dir='ltr' class='phy-math-block'>${str}</div>`;
+        } else {
+          return `<span dir='ltr' class='phy-formula'>${str}</span>`;
+        }
+      }
+      
+      text = text.replace(/\$\$([^\$]+)\$\$/g, (m, inner) => cleanFormula(inner, true));
+      text = text.replace(/\$([^\$]+)\$/g, (m, inner) => cleanFormula(inner, false));
+      return text;
+    }
+
     // عرض ورقة الامتحان والأسئلة كاملة
     function renderPastExam(examId) {
       const container = document.getElementById('printableExamArea');
@@ -12826,14 +12905,14 @@
 
               ${q.content ? `
                 <div class="exam-q-content" style="font-size: 0.9rem; line-height: 1.8; color: var(--slate-800); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign};">
-                  ${q.content}
+                  ${formatPhysicsMath(q.content)}
                 </div>
               ` : ''}
 
               ${q.branchA ? `
                 <div style="margin-bottom: 0.85rem;">
                   <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchA.title}
+                    ${formatPhysicsMath(q.branchA.title)}
                   </div>
                   ${q.branchA.boxWords ? `
                     <div style="background: white; border: 1px dashed var(--slate-300); border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; direction: ${textDir}; text-align: center; font-weight: 700; color: var(--primary);">
@@ -12841,7 +12920,7 @@
                     </div>
                   ` : ''}
                   <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchA.items.map(it => `<div>${it}</div>`).join('')}
+                    ${q.branchA.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
                   </div>
                 </div>
               ` : ''}
@@ -12849,10 +12928,10 @@
               ${q.branchB ? `
                 <div style="margin-bottom: 0.85rem;">
                   <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchB.title}
+                    ${formatPhysicsMath(q.branchB.title)}
                   </div>
                   <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchB.items.map(it => `<div>${it}</div>`).join('')}
+                    ${q.branchB.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
                   </div>
                 </div>
               ` : ''}
@@ -12860,17 +12939,17 @@
               ${q.branchC ? `
                 <div style="margin-bottom: 0.85rem;">
                   <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchC.title}
+                    ${formatPhysicsMath(q.branchC.title)}
                   </div>
                   <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                    ${q.branchC.items.map(it => `<div>${it}</div>`).join('')}
+                    ${q.branchC.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
                   </div>
                 </div>
               ` : ''}
 
               ${q.items ? `
                 <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                  ${q.items.map(it => `<div>${it}</div>`).join('')}
+                  ${q.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
                 </div>
               ` : ''}
 
@@ -12880,7 +12959,7 @@
                   <span>💡</span> الجواب النموذجي المعتمد وتوزيع الدرجات الوزارية:
                 </div>
                 <div style="font-size: 0.88rem; line-height: 1.8; color: #166534;">
-                  ${q.answer || q.solution || ''}
+                  ${formatPhysicsMath(q.answer || q.solution || '')}
                 </div>
               </div>
             </div>
