@@ -2802,7 +2802,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.1 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.3 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3114,7 +3114,7 @@
           <div class="card stat-item">
             <div>
               <div class="lbl">المناهج المعتمدة</div>
-              <div class="val" id="statCurriculums">3</div>
+              <div class="val" id="statCurriculums">4</div>
             </div>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
@@ -3157,7 +3157,7 @@
           </p>
         </div>
         <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 800;">
-          <span>🌟</span> 3 مناهج وزارية معتمدة ومكتملة 100%
+          <span>🌟</span> 4 مناهج وزارية معتمدة ومكتملة 100%
         </div>
       </div>
 
@@ -3363,8 +3363,8 @@
           </div>
 
           <div class="panel-body chat-messages" id="chatMessages">
-            <div class="message assistant">
-              أهلاً بك! أنا معلمك الذكي الموثق للمنهج. اسألني عن أي نقطة، مفردة، أو قاعدة لغوية في هذا الدرس، وسأشرحها لك فوراً مع توثيق الصفحة، ويمكنك الاستماع للإجابة صوتياً.
+            <div class="message assistant" id="initialAiGreetingMessage">
+              أهلاً بك! أنا معلمك الذكي الموثق للمنهج 🎓. اسألني عن أي نقطة، أو مسألة، أو قانون، أو قاعدة في هذا الدرس وسأشرحها لك فوراً بالدليل ورقم الصفحة.
             </div>
           </div>
 
@@ -3483,24 +3483,29 @@
         </div>
       </div>
 
+      <!-- شريط اختيار المادة الامتحانية -->
+      <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
+        <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر المادة الامتحانية:</span>
+        <button id="btnExamSubjectPhy" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('phy')" style="font-weight: 800; font-size: 0.78rem;">
+          ⚛️ مادة الفيزياء (5 نماذج معتمدة)
+        </button>
+        <button id="btnExamSubjectIs" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('is')" style="font-weight: 800; font-size: 0.78rem;">
+          🕌 مادة التربية الإسلامية (4 نماذج)
+        </button>
+        <button id="btnExamSubjectAr" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('ar')" style="font-weight: 800; font-size: 0.78rem;">
+          📙 مادة اللغة العربية (4 نماذج)
+        </button>
+        <button id="btnExamSubjectEn" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('en')" style="font-weight: 800; font-size: 0.78rem;">
+          📘 مادة اللغة الإنجليزية (5 نماذج)
+        </button>
+      </div>
+
       <!-- العرض الأول: نماذج الامتحانات الوزارية والشهرية السابقة -->
       <div id="pastExamsViewContainer">
         <!-- شريط أدوات وفلاتر الامتحانات السابقة -->
         <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.85rem 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--slate-600); margin-inline-end: 0.35rem;">اختر النموذج:</span>
-            <button class="btn btn-sm btn-primary" id="examFilter_midyear" onclick="selectPastExam('midyear')">
-              🌟 نصف السنة الشامل (100 درجة)
-            </button>
-            <button class="btn btn-sm btn-secondary" id="examFilter_m1" onclick="selectPastExam('m1')">
-              📘 الشهر الأول (الوحدة 1)
-            </button>
-            <button class="btn btn-sm btn-secondary" id="examFilter_m2" onclick="selectPastExam('m2')">
-              📗 الشهر الثاني (الوحدة 2)
-            </button>
-            <button class="btn btn-sm btn-secondary" id="examFilter_u34" onclick="selectPastExam('u34')">
-              📙 الوحدات 3 و 4
-            </button>
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;" id="pastExamFilterButtons">
+            <!-- يتم توليد أزرار النماذج ديناميكياً بحسب المادة المختارة -->
           </div>
 
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
@@ -3606,7 +3611,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.1</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.3</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3631,7 +3636,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.1</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.3</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3684,7 +3689,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.5.1</span>
+        <span class="version-badge" id="footerVersionBadge">v3.5.3</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3822,7 +3827,7 @@
       </div>
 
       <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; padding: 0.25rem;">
-        <div id="physicsDiagramSvgWrapper" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; padding: 0.5rem; min-height: 380px;">
+        <div id="physicsDiagramSvgWrapper" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; overflow: auto; text-align: center; padding: 1rem 0.5rem; width: 100%; box-sizing: border-box;">
           <!-- SVG injected here -->
         </div>
         <div id="physicsDiagramInfoWrapper">
@@ -4044,7 +4049,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.1</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.3</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4072,13 +4077,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.1؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.3؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.1</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.3</span>
         </div>
       </div>
 
@@ -4127,8 +4132,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.5.1';
-    const SYSTEM_VERSION = 'v3.5.1';
+    const CURRENT_VERSION_LABEL = 'v3.5.3';
+    const SYSTEM_VERSION = 'v3.5.3';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -5204,7 +5209,7 @@
       renderActiveSubjectShowcase();
       populateStudyCurriculumSelect();
       renderGrammarRules();
-      renderPastExam('midyear');
+      renderExamsCenter();
       renderStudyView();
       initAiChatPanelState();
       syncSystemVersionBadges();
@@ -5503,6 +5508,8 @@
         renderStudyView();
       } else if (tabId === 'grammar') {
         renderGrammarRules();
+      } else if (tabId === 'exams') {
+        renderExamsCenter();
       } else if (tabId === 'curriculums') {
         if (!currentCurriculumViewTab) {
           if (appData.currentCurriculumId === 4 || appData.currentCurriculumId === 5) {
@@ -5657,7 +5664,24 @@
         !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
         !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
       );
-      document.getElementById('statCurriculums').innerText = currs.length || 3;
+      // حساب عدد المواد والمناهج المعتمدة (الإنجليزية، العربية بجزأيها، الإسلامية، الفيزياء)
+      const officialSubjects = new Set();
+      currs.forEach(c => {
+        const n = (c.name || '').toLowerCase();
+        const s = (c.subject || '').toLowerCase();
+        if (n.includes('عربية') || s.includes('عرب') || c.id === 4 || c.id === 5) {
+          officialSubjects.add('arabic');
+        } else if (n.includes('فيزياء') || s.includes('فيزياء') || c.id === 7) {
+          officialSubjects.add('physics');
+        } else if (n.includes('إسلامية') || s.includes('إسلام') || c.id === 6) {
+          officialSubjects.add('islamic');
+        } else if (n.includes('انجليزية') || s.includes('eng') || c.id === 3) {
+          officialSubjects.add('english');
+        } else {
+          officialSubjects.add(c.id);
+        }
+      });
+      document.getElementById('statCurriculums').innerText = officialSubjects.size || 4;
       
       let totalChapters = 0;
       let totalLessons = 0;
@@ -6308,8 +6332,9 @@
       // فحص القواعد المرتبطة بهذا الدرس
       updateLessonGrammarAlert(activeLesson);
 
-      // تحديث رقائق الأسئلة المقترحة
+      // تحديث رقائق الأسئلة المقترحة وتخصيص رسالة ترحيب المعلم الذكي بحسب المادة والدرس
       updateSuggestedChips(activeLesson);
+      resetAiChatForLesson(activeLesson);
 
       let chunks = [];
 
@@ -6709,7 +6734,7 @@
       currentPhysicsDiagramZoom = 1;
       if (svgWrap) {
         svgWrap.innerHTML = `
-          <div id="physicsDiagramZoomTarget" style="width: 100%; max-width: 820px; transition: transform 0.2s ease; transform-origin: center center;">
+          <div id="physicsDiagramZoomTarget" style="display: inline-block; width: 100%; max-width: 760px; transition: transform 0.2s ease; transform-origin: top center; margin: 0 auto;">
             ${diag.svg}
           </div>
         `;
@@ -7196,52 +7221,253 @@
     }
 
     // تحديث الأسئلة السريعة المقترحة
+    function resetAiChatForLesson(lesson) {
+      const chatMessages = document.getElementById('chatMessages');
+      if (!chatMessages || !lesson) return;
+
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
+      const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
+
+      let greeting = '';
+      if (isPhysics) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الفيزياء (الصف الثاني المتوسط)</strong> ⚛️.<br>` +
+                   `اسألني عن أي قانون رياضي، أو مسألة حسابية، أو مفهوم علمي، أو تفسير ظاهرة فيزيائية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والمعادلات الدقيقة.`;
+      } else if (isIslamic) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>التربية الإسلامية والقرآن الكريم</strong> 🕌.<br>` +
+                   `اسألني عن معاني وتفسير الآيات، أو شرح الأحاديث النبوية، أو الأحكام الفقهية والتجويدية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة.`;
+      } else if (isArabic) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>اللغة العربية</strong> 📖.<br>` +
+                   `اسألني عن إعراب الكلمات، أو القواعد النحوية والصرفية، أو ضوابط الإملاء ونصوص المطالعة في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والشواهد المعتمدة.`;
+      } else {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>اللغة الإنجليزية (English for Iraq)</strong> 🇬🇧.<br>` +
+                   `اسألني عن أي نقطة، مفردة، أو قاعدة لغوية في درس «${lesson.title}»، وسأشرحها لك فوراً مع توثيق الصفحة، ويمكنك الاستماع للإجابة صوتياً.`;
+      }
+
+      chatMessages.innerHTML = `
+        <div class="message assistant">
+          ${greeting}
+        </div>
+      `;
+    }
+
+    // تحديث الأسئلة السريعة المقترحة لكل مادة ودرس
     function updateSuggestedChips(lesson) {
       const container = document.getElementById('suggestedChipsContainer');
+      if (!container || !lesson) return;
       container.innerHTML = '';
 
-      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId);
-      const isArabicSubj = curr && (curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب')));
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
+      const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
-      let suggestions = isArabicSubj ? [
-        'ما هي علامات الإعراب الأصلية والفرعية؟',
-        'اشرح قاعدة الأسماء الخمسة وإعرابها',
-        'ما هو الميزان الصرفي وكيف نزن الكلمات؟',
-        'ما الفرق بين الخط القياسي وغير القياسي؟',
-        'ما هي أنواع المنادى وحكم كل نوع؟'
-      ] : [
-        'ما هي أقسام مجلة المدرسة؟',
-        'اشرح قاعدة s التملك',
-        'ما الفرق بين for و since؟',
-        'ما معنى كلمة article و editor؟',
-        'ما هي نصائح Aunt Sally لتجاوز الخجل؟'
-      ];
+      let suggestions = [];
 
-      const t = lesson.title.toLowerCase();
-      if (t.includes('keep fit')) {
-        suggestions = ['كيف نحافظ على اللياقة البدنية؟', 'اشرح قاعدة should و shouldn\'t', 'لماذا تعتبر الرياضة مهمة؟'];
-      } else if (t.includes('eat the right food')) {
-        suggestions = ['ما الفرق بين too much و too many؟', 'ما نصائح الممرضة جانيت للغذاء الصحي؟', 'متى نستخدم a few و a little؟'];
-      } else if (t.includes('restaurant')) {
-        suggestions = ['ما معنى grilled و fried و baked؟', 'كيف أطلب الطعام في المطعم بأدب؟', 'ما أقسام قائمة الطعام؟'];
-      } else if (t.includes('aches')) {
-        suggestions = ['كيف أعبر عن الصداع وألم الأسنان؟', 'متى نستخدم hurts ومتى نستخدم ache؟', 'ما علاج ألم الأذن في الدرس؟'];
-      } else if (t.includes('jalal')) {
-        suggestions = ['ما العبرة من قصة جلال وأخيه إبراهيم؟', 'ماذا كان مرض إبراهيم الحقيقي؟', 'اشرح قاعدة want + pronoun + to'];
-      } else if (t.includes('get well') || t.includes('letter')) {
-        suggestions = ['ما عبارات التمني بالشفاء العاجل؟', 'ما عناصر الرسالة غير الرسمية لصديق مريض؟', 'أين نكتب العنوان والتاريخ في الرسالة؟'];
-      } else if (t.includes('limerick')) {
-        suggestions = ['ما هي قواعد قصيدة الليمريك؟', 'ما هي قافية AABBA؟', 'ما قصة فتاة بيرو وصبغ السقف؟'];
-      } else if (t.includes('stonehenge')) {
-        suggestions = ['ما هو لغز آثار ستونهنج؟', 'ماذا حدث أثناء التخييم ليلاً؟', 'لماذا التقط جوني صورة لجاد؟'];
-      } else if (t.includes('healthy living poster') || t.includes('project 2')) {
-        suggestions = ['ما أهداف ملصق الحياة الصحية؟', 'ما هي شعارات تعزيز اللياقة والغذاء؟', 'كيف أقدم نصائح صحية بـ should؟'];
-      } else if (t.includes('lesson 2') || t.includes('project')) {
-        suggestions = ['ما معنى article و printer؟', 'ما مهام المحرر editor؟', 'ما أقسام المجلة المقترحة؟'];
-      } else if (t.includes('lesson 4') || t.includes('interview')) {
-        suggestions = ['متى نستخدم for ومتى نستخدم since؟', 'اشرح قاعدة like + ing', 'كيف نصف الأشخاص باستخدام who؟'];
-      } else if (t.includes('sports')) {
-        suggestions = ['ما الفرق بين play و go و do مع الرياضة؟', 'متى نستخدم used to؟', 'أعطني أمثلة على رياضات الكرة.'];
+      if (isPhysics) {
+        const lid = lesson.id;
+        const lt = (lesson.title || '').toLowerCase();
+
+        if (lid === 7011 || lt.includes('قياس') || lt.includes('وحدات')) {
+          suggestions = [
+            'ما هو القياس وما هي عناصره الأساسية؟',
+            'ما هي وحدات النظام الدولي الأساسية (SI)؟',
+            'كيف نستخدم البادئات الأسية (تيرا، نانو، فيمتو)؟',
+            'ما الفرق بين الكميات المقدارية والاتجاهية؟',
+            'ما أهمية أدوات القياس ودقة القياس؟'
+          ];
+        } else if (lid === 7012 || lt.includes('حركة وأنواعها') || lt.includes('مسار')) {
+          suggestions = [
+            'ما مفهوم الحركة ونقطة الإسناد والجسم الساكن؟',
+            'ما هي أنواع الحركة (الانتقالية والدورية)؟',
+            'ما هو مسار الحركة وكيف نصفه؟',
+            'أعطني أمثلة على الحركة الدورانية والاهتزازية'
+          ];
+        } else if (lid === 7013 || lt.includes('وصف الحركة') || lt.includes('مسافة') || lt.includes('سرعة')) {
+          suggestions = [
+            'ما الفرق الجوهري بين المسافة (d) والإزاحة (x)؟',
+            'كيف نحسب محصلة إزاحتين بنفس الاتجاه أو متعامدتين؟',
+            'ما الفرق بين الانطلاق (Speed) والسرعة (Velocity)؟',
+            'ما هو التعجيل وما قانون حسابه: a = (v_f - v_i) / t؟'
+          ];
+        } else if (lid === 7014 || lt.includes('مراجعة الفصل الأول')) {
+          suggestions = [
+            'حل مسألة إزاحتين متعامدتين: 3km شرقاً و 4km شمالاً',
+            'حل مسألة حساب السرعة والتعجيل',
+            'ما شروط اعتبار الجسم في حالة حركة؟'
+          ];
+        } else if (lid === 7021 || lt.includes('نيوتن')) {
+          suggestions = [
+            'اشرح قانون نيوتن الأول (القصور الذاتي)',
+            'ما الصيغة الرياضية لقانون نيوتن الثاني: F = m × a؟',
+            'اشرح قانون نيوتن الثالث (لكل فعل رد فعل)',
+            'لماذا يندفع الراكب للأمام عند توقف الحافلة فجأة؟'
+          ];
+        } else if (lid === 7022 || lt.includes('جاذبية') || lt.includes('وزن')) {
+          suggestions = [
+            'ما نص قانون الجذب العام لنيوتن؟',
+            'ما الفرق بين وزن الجسم (w) وكتلته (m)؟',
+            'كيف نقيس الوزن باستخدام القبان الحلزوني؟',
+            'ما هو السقوط الحر وانعدام الوزن بالأقمار الصناعية؟'
+          ];
+        } else if (lid === 7031 || lt.includes('شغل') || lt.includes('قدرة')) {
+          suggestions = [
+            'ما هو الشغل بالفيزياء وما قانونه: W = F × x؟',
+            'ما هي وحدة الجول وكيف تُعرّف؟',
+            'ما هي القدرة وما قانونها: P = W / t ووحدة الواط؟',
+            'ما الفرق بين الواط والقدرة الحصانية (hp)؟'
+          ];
+        } else if (lid === 7032 || lt.includes('طاقة')) {
+          suggestions = [
+            'ما هي الطاقة الحركية وما قانونها: KE = ½mv²؟',
+            'ما هي الطاقة الكامنة وما قانونها: PE = mgh؟',
+            'اشرح قانون حفظ الطاقة مع أمثلة لتحولاتها',
+            'ما هي مصادر الطاقة المتجددة وغير المتجددة؟'
+          ];
+        } else if (lid === 7041 || lt.includes('عتلات')) {
+          suggestions = [
+            'ما هو قانون العتلات: القوة × ذراعها = المقاومة × ذراعها؟',
+            'ما هي الفائدة الميكانيكية للعتلة وكيف نحسبها؟',
+            'ما الفرق بين عتلات النوع الأول والثاني والثالث؟',
+            'أعطني أمثلة حياتية على كل نوع من العتلات'
+          ];
+        } else if (lid === 7042 || lt.includes('سطح مائل') || lt.includes('آلات') || lt.includes('بكرة')) {
+          suggestions = [
+            'كيف يوفر السطح المائل والإسفين فائدة ميكانيكية؟',
+            'ما الفرق بين البكرة الثابتة والبكرة المتحركة؟',
+            'ما هي كفاءة الآلة ولماذا لا توجد آلة كفاءتها 100%؟'
+          ];
+        } else if (lid === 7051 || lt.includes('موجات') || lt.includes('موجية')) {
+          suggestions = [
+            'ما هي الحركة الموجية وما أنواع الموجات؟',
+            'ما الفرق بين الموجات الطولية والمستعرضة؟',
+            'ما قانون سرعة انتشار الموجه: v = λ × f؟'
+          ];
+        } else if (lid === 7052 || lt.includes('صوت') || lt.includes('صدى')) {
+          suggestions = [
+            'ما طبيعة الصوت وما شروط انتقاله وسرعته؟',
+            'ما هي خصائص الصوت: الدرجة، الشدة، والنوع؟',
+            'ما هو صدى الصوت وما شروط حدوثه؟',
+            'كيف نحسب عمق البحر باستخدام صدى الموجات فوق الصوتية؟'
+          ];
+        } else if (lid === 7061 || lt.includes('ضوء') || lt.includes('ظلال')) {
+          suggestions = [
+            'ما هي خصائص الضوء وسلوكه في الأوساط؟',
+            'كيف تتكون الظلال وما الفرق بين الكسوف والخسوف؟'
+          ];
+        } else if (lid === 7062 || lt.includes('انعكاس') || lt.includes('مرايا')) {
+          suggestions = [
+            'ما هما قانونا انعكاس الضوء؟',
+            'ما صفات الصورة في المرآة المستوية؟',
+            'ما الفرق بين المرآة المقعرة اللامة والمرآة المحدبة؟'
+          ];
+        } else if (lid === 7063 || lt.includes('انكسار') || lt.includes('عدسات')) {
+          suggestions = [
+            'ما هو انكسار الضوء والكثافة الضوئية والزاوية الحرجة؟',
+            'ما هو الانعكاس الكلي الداخلي وتطبيقاته في الألياف البصرية؟',
+            'كيف تعالج العدسات المحدبة والمقعرة عيوب البصر؟',
+            'كيف يتحلل الضوء الأبيض بالمنشور الزجاجي إلى ألوان الطيف؟'
+          ];
+        } else {
+          suggestions = [
+            'اشرح قوانين نيوتن الثلاثة في الحركة',
+            'ما هو قانون الشغل والقدرة ووحداتهما؟',
+            'ما الفرق بين الكتلة والوزن؟',
+            'كيف نحسب الفائدة الميكانيكية للعتلات؟',
+            'ما شروط حدوث صدى الصوت؟'
+          ];
+        }
+      } else if (isIslamic) {
+        const lt = (lesson.title || '').toLowerCase();
+        if (lt.includes('تلاوة') || lt.includes('مد')) {
+          suggestions = ['ما هو المد العارض للسكون وما شروطه ومقداره؟', 'ما هي أحرف المد الثلاثة؟', 'أعطني أمثلة على المد العارض من القرآن الكريم'];
+        } else if (lt.includes('النبأ')) {
+          suggestions = ['ما موضوعات سورة النبأ؟', 'ما معاني: وجنات ألفافا، ثجاجا، لا يرجون حسابا؟', 'ما عاقبة الطاغين وثواب المتقين في سورة النبأ؟'];
+        } else if (lt.includes('القيامة')) {
+          suggestions = ['ما معنى: لا أقسم بيوم القيامة؟', 'ما هي أهوال يوم القيامة المذكورة بالسورة؟', 'اشرح الآية: بل الإنسان على نفسه بصيرة'];
+        } else if (lt.includes('المزمل')) {
+          suggestions = ['ما سبب نزول سورة المزمل؟', 'ما معنى: ورتل القرآن ترتيلا؟', 'ما فضل قيام الليل والاستغفار؟'];
+        } else if (lt.includes('الجمعة')) {
+          suggestions = ['ما هي أحكام صلاة الجمعة وشروط وجوبها؟', 'ما معنى: وذروا البيع؟', 'ما فضل يوم الجمعة؟'];
+        } else if (lt.includes('الصف')) {
+          suggestions = ['ما معنى سورة الصف ولماذا سميت بهذا الاسم؟', 'اشرح الآية: لم تقولون ما لا تفعلون؟', 'ما هي التجارة الرابحة المنجية من عذاب أليم؟'];
+        } else if (lt.includes('حديث') || lt.includes('المنافق') || lt.includes('معروف') || lt.includes('حرمة') || lt.includes('أخلاق') || lt.includes('ضرر')) {
+          suggestions = ['ما نص الحديث النبوي الشريف وشرحه؟', 'ما هي علامات المنافق الثلاث؟', 'ما معنى: لا ضرر ولا ضرار؟', 'ما أهم ما يرشد إليه الحديث الشريف؟'];
+        } else if (lt.includes('صلاة') || lt.includes('صوم') || lt.includes('سجود')) {
+          suggestions = ['ما هي أركان وشروط فريضة الصلاة؟', 'ما هي صلاة الآيات (الكسوف والخسوف) وكيفيتها؟', 'ما هي مبطلات الصيام وشروطه؟', 'ما هي الأعضاء السبعة للسجود؟'];
+        } else {
+          suggestions = [
+            'ما هو المد العارض للسكون وما حكمه؟',
+            'ما هي شروط المعجزة الإلهية؟',
+            'ما هي علامات المنافق في الحديث النبوي؟',
+            'ما هي أركان الصلاة وفريضة الصوم؟',
+            'اذكر نبذة عن فضائل عمر بن الخطاب وعثمان بن عفان'
+          ];
+        }
+      } else if (isArabic) {
+        const lt = (lesson.title || '').toLowerCase();
+        if (lt.includes('إعراب') || lt.includes('علامات')) {
+          suggestions = ['ما هي علامات الإعراب الأصلية والفرعية؟', 'ما الفرق بين الحركات الأصلية وحروف الإعراب؟', 'متى يعرب الاسم بالحركات الفرعية؟'];
+        } else if (lt.includes('الأسماء الخمسة')) {
+          suggestions = ['ما هي الأسماء الخمسة وما إعرابها؟', 'ما شروط إعراب الأسماء الخمسة بالحروف؟', 'أعرب: جاء أبوك، ورأيت أخاك'];
+        } else if (lt.includes('ميزان') || lt.includes('صرف')) {
+          suggestions = ['ما هو الميزان الصرفي وكيف نزن الكلمات؟', 'كيف نزن الكلمات المزيدة مثل استخرج وكاتب؟', 'ما وزن قِ وصُنْ بعد حذف الحروف؟'];
+        } else if (lt.includes('لازم') || lt.includes('متعد')) {
+          suggestions = ['ما الفرق بين الفعل اللازم والفعل المتعدي؟', 'كيف نحول الفعل اللازم إلى متعد؟', 'أعطني أمثلة على أفعال لازمة ومتعدية'];
+        } else if (lt.includes('نائب الفاعل')) {
+          suggestions = ['ما هو نائب الفاعل وما حكمه الإعرابي؟', 'كيف نبني الفعل الماضي والمضارع للمجهول؟', 'أعرب: كُتِبَ الدرسُ'];
+        } else if (lt.includes('مفعول')) {
+          suggestions = ['ما الفرق بين المفعول فيه والمفعول المطلق والمفعول به؟', 'ما هي ظروف الزمان وظروف المكان؟', 'ما الفائدة البلاغية للمفعول المطلق؟'];
+        } else if (lt.includes('حال')) {
+          suggestions = ['ما هو الحال وما شروطه في الجملة؟', 'ما الفرق بين الحال والصفة (النعت)؟', 'أعرب: جاء الطالبُ راكباً'];
+        } else if (lt.includes('استثناء')) {
+          suggestions = ['ما هي أركان جملة الاستثناء بـ إلا؟', 'متى يكون المستثنى تاماً متصلاً أو مفرغاً؟', 'أعرب: ما فاز إلا المجتهدُ'];
+        } else if (lt.includes('نداء') || lt.includes('منادى')) {
+          suggestions = ['ما هي أحرف النداء واستعمالاتها؟', 'متى يبنى المنادى على الضم ومتى ينصب؟', 'أعرب: يا محمدُ، ويا طالبَ العلمِ'];
+        } else if (lt.includes('استفهام')) {
+          suggestions = ['ما الفرق بين استفهام التصديق واستفهام التصور؟', 'ما هي أدوات الاستفهام ومعانيها؟', 'متى نستخدم الهمزة مع أم المعادلة؟'];
+        } else if (lt.includes('مضارع') || lt.includes('بناء')) {
+          suggestions = ['متى يبنى الفعل المضارع وما هي حالات بنائه؟', 'ما الفرق بين نون التوكيد الثقيلة ونون النسوة؟', 'أعرب: واللهِ لأدرسَنَّ، والطالباتُ يدرسْنَ'];
+        } else if (lt.includes('مثنى')) {
+          suggestions = ['ما هو المثنى وما علامات إعرابه؟', 'ما هي الملحقات بالمثنى (اثنان واثنتان وكلا وكلتا)؟', 'متى تعرب كلا وكلتا إعراب المثنى؟'];
+        } else if (lt.includes('جمع مذكر') || lt.includes('مذكر سالم')) {
+          suggestions = ['ما هو جمع المذكر السالم وعلامات إعرابه؟', 'ما هي ملحقات جمع المذكر السالم؟', 'أعرب: حضر المهندسونَ، ورأيتُ العاملينَ'];
+        } else if (lt.includes('جمع مؤنث') || lt.includes('مؤنث سالم')) {
+          suggestions = ['ما علامة نصب جمع المؤنث السالم؟', 'ما هي شروط وما يجمع جمع مؤنث سالم؟', 'أعرب: شكرتُ المعلماتِ'];
+        } else {
+          suggestions = [
+            'ما هي علامات الإعراب الأصلية والفرعية؟',
+            'اشرح قاعدة الأسماء الخمسة وإعرابها',
+            'ما هو الميزان الصرفي وكيف نزن الكلمات؟',
+            'ما هي أنواع المنادى وحكم كل نوع؟',
+            'ما الفرق بين استفهام التصديق والتصور؟'
+          ];
+        }
+      } else {
+        // منهج اللغة الإنجليزية
+        const t = (lesson.title || '').toLowerCase();
+        if (t.includes('keep fit')) {
+          suggestions = ['كيف نحافظ على اللياقة البدنية؟', 'اشرح قاعدة should و shouldn\'t', 'لماذا تعتبر الرياضة مهمة؟'];
+        } else if (t.includes('eat the right food')) {
+          suggestions = ['ما الفرق بين too much و too many؟', 'ما نصائح الممرضة جانيت للغذاء الصحي؟', 'متى نستخدم a few و a little؟'];
+        } else if (t.includes('restaurant')) {
+          suggestions = ['ما معنى grilled و fried و baked؟', 'كيف أطلب الطعام في المطعم بأدب؟', 'ما أقسام قائمة الطعام؟'];
+        } else if (t.includes('aches')) {
+          suggestions = ['كيف أعبر عن الصداع وألم الأسنان؟', 'متى نستخدم hurts ومتى نستخدم ache؟', 'ما علاج ألم الأذن في الدرس؟'];
+        } else if (t.includes('jalal')) {
+          suggestions = ['ما العبرة من قصة جلال وأخيه إبراهيم؟', 'ماذا كان مرض إبراهيم الحقيقي؟', 'اشرح قاعدة want + pronoun + to'];
+        } else if (t.includes('sports')) {
+          suggestions = ['ما الفرق بين play و go و do مع الرياضة؟', 'متى نستخدم used to؟', 'أعطني أمثلة على رياضات الكرة.'];
+        } else {
+          suggestions = [
+            'ما هي أقسام مجلة المدرسة؟',
+            'اشرح قاعدة s التملك',
+            'ما الفرق بين for و since؟',
+            'ما معنى كلمة article و editor؟',
+            'ما هي نصائح Aunt Sally لتجاوز الخجل؟'
+          ];
+        }
       }
 
       suggestions.forEach(q => {
@@ -7256,7 +7482,6 @@
       });
     }
 
-    // إرسال رسالة للمساعد الذكي
     async function sendChatMessage(customQuery = null) {
       const input = document.getElementById('chatInput');
       const query = (customQuery || input.value).trim();
@@ -7362,8 +7587,507 @@
     }
 
     // محرك الإجابة المحلي الذكي الموثق
+    // دالة مساعدة لتنظيف وتطبيع النص العربي للبحث الذكي
+    function normalizeArabicSearchText(txt) {
+      if (!txt) return '';
+      return txt.replace(/[ًٌٍَُِّْـ]/g, '')
+                .replace(/[إأآ]/g, 'ا')
+                .replace(/ة/g, 'ه')
+                .replace(/ى/g, 'ي')
+                .toLowerCase()
+                .trim();
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة الفيزياء (الصف الثاني المتوسط)
+    // -------------------------------------------------------------
+    function generatePhysicsLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const rules = window.PHYSICS_RULES || [];
+      const diagrams = window.PHYSICS_DIAGRAMS || [];
+
+      // 1. فحص أسئلة حل المسائل الحسابية والقوانين الرياضية المحددة
+      if (qClean.includes('مسال') || qClean.includes('احسب') || qClean.includes('حل مسال') || qClean.includes('قانون')) {
+        if (qClean.includes('ازاح') || qClean.includes('محصل') || qClean.includes('فيثاغورس')) {
+          return {
+            content: `📌 **حل مسألة حساب محصلة إزاحتين (كتاب الفيزياء ص 15-17):**\n\n` +
+                     `1. **إذا كانت الإزاحتان باتجاه واحد:**\n` +
+                     `• نجمع الإزاحتين: $x_R = x_1 + x_2$\n` +
+                     `• مثال: تحرك جسم 3km شرقاً ثم 4km شرقاً ➔ المحصلة = 3 + 4 = 7km شرقاً.\n\n` +
+                     `2. **إذا كانت الإزاحتان باتجاهين متعاكسين:**\n` +
+                     `• نطرح الصغرى من الكبرى: $x_R = x_1 - x_2$ (باتجاه الإزاحة الأكبر).\n` +
+                     `• مثال: 5km شرقاً و 2km غرباً ➔ المحصلة = 5 - 2 = 3km شرقاً.\n\n` +
+                     `3. **إذا كانت الإزاحتان متعامدتين (بزاوية 90°):**\n` +
+                     `• نطبق مبرهنة فيثاغورس: $x_R = \\sqrt{x_1^2 + x_2^2}$\n` +
+                     `• مثال الكتاب: تحركت سيارة 3km شمالاً و 4km شرقاً:\n` +
+                     `$$x_R = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5\\text{ km}$$\n` +
+                     `والاتجاه: شمال الشرق (بزاوية $37^\\circ$ تقريباً).`,
+            sources: [{ page: 16, heading: 'محصلة إزاحتين' }]
+          };
+        }
+        if (qClean.includes('سرع') || qClean.includes('انطلاق') || qClean.includes('تعجيل')) {
+          return {
+            content: `📌 **قوانين ومسائل السرعة والانطلاق والتعجيل (ص 17-20):**\n\n` +
+                     `1. **قانون الانطلاق (Speed):**\n` +
+                     `• $s = \\frac{d}{t}$ (الانطلاق = المسافة الكلية ÷ الزمن المستغرق).\n` +
+                     `• الوحدة: م/ث (m/s).\n\n` +
+                     `2. **قانون السرعة (Velocity):**\n` +
+                     `• $v = \\frac{x}{t}$ (السرعة = الإزاحة المقطوعة ÷ الزمن).\n` +
+                     `• وهي كمية اتجاهية لها نفس اتجاه الإزاحة.\n\n` +
+                     `3. **قانون التعجيل (Acceleration):**\n` +
+                     `• $a = \\frac{v_f - v_i}{t}$ (التعجيل = التغير بالسرعة ÷ الزمن).\n` +
+                     `• الوحدة: م/ث² (m/s²).\n` +
+                     `• إذا كانت السرعة تزداد فالتعجيل **تسارعي موجب**، وإذا تباطأت فالتعجيل **تباطئي سالب**.`,
+            sources: [{ page: 18, heading: 'الانطلاق والسرعة والتعجيل' }]
+          };
+        }
+        if (qClean.includes('شغل') || qClean.includes('قدر')) {
+          return {
+            content: `📌 **قوانين ومسائل الشغل والقدرة (كتاب الفيزياء ص 36-39):**\n\n` +
+                     `1. **قانون الشغل الفيزيائي (Work):**\n` +
+                     `• $W = F \\times x$ (الشغل = القوة × الإزاحة باتجاه القوة).\n` +
+                     `• الوحدة: الجول (Joule) = نيوتن × متر ($N \\cdot m$).\n` +
+                     `• شرط إنجاز الشغل: أن تتحرك نقطة تأثير القوة باتجاه القوة نفسها.\n\n` +
+                     `2. **قانون القدرة (Power):**\n` +
+                     `• $P = \\frac{W}{t}$ (القدرة = الشغل المنجز ÷ الزمن المستغرق).\n` +
+                     `• الوحدة: الواط (Watt) = جول/ثانية ($J/s$).\n` +
+                     `• القدرة الحصانية: $1\\text{ hp} = 746\\text{ Watt}$.`,
+            sources: [{ page: 37, heading: 'الشغل والقدرة' }]
+          };
+        }
+        if (qClean.includes('عتل') || qClean.includes('فائده ميكانيك')) {
+          return {
+            content: `📌 **قوانين ومسائل العتلات والفائدة الميكانيكية (ص 47-49):**\n\n` +
+                     `1. **قانون العتلات الأساسي:**\n` +
+                     `$$\\text{القوة} \\times \\text{ذراعها} = \\text{المقاومة} \\times \\text{ذراعها}$$\n` +
+                     `$$F_1 \\times d_1 = F_2 \\times d_2$$\n\n` +
+                     `2. **قانون الفائدة الميكانيكية (Mechanical Advantage - MA):**\n` +
+                     `$$MA = \\frac{\\text{المقاومة } F_2}{\\text{القوة } F_1} = \\frac{\\text{ذراع القوة } d_1}{\\text{ذراع المقاومة } d_2}$$\n` +
+                     `• إذا كان $MA > 1$: نحصل على **ربح قوة** (القوة أصغر من المقاومة).\n` +
+                     `• إذا كان $MA < 1$: نحصل على **ربح سرعة** (ذراع المقاومة أطول من ذراع القوة).\n` +
+                     `• إذا كان $MA = 1$: لا ربح قوة ولا ربح سرعة (مثل الميزان ذي الكفتين).`,
+            sources: [{ page: 48, heading: 'قانون العتلات' }]
+          };
+        }
+        if (qClean.includes('صدى') || qClean.includes('صدي') || qClean.includes('عمق') || qClean.includes('بحر')) {
+          return {
+            content: `📌 **مسألة حساب عمق البحر بصدى الصوت (ص 64-65):**\n\n` +
+                     `• ينتقل الصوت في ماء البحر بسرعة $v \\approx 1500\\text{ m/s}$.\n` +
+                     `• النبضة الصوتية تقطع المسافة **ذهاباً وإياباً**، فالزمن المقاس $t$ هو زمن الذهاب والإياب.\n` +
+                     `• قانون العمق:\n` +
+                     `$$d = \\frac{v \\times t}{2}$$\n` +
+                     `• **مثال:** أرسلت سفينة موجة فوق صوتية لقاع البحر واستلمت صداها بعد $t = 2\\text{ s}$:\n` +
+                     `$$d = \\frac{1500 \\times 2}{2} = 1500\\text{ m}$$ (عمق البحر = 1.5 كيلومتر).`,
+            sources: [{ page: 65, heading: 'تطبيقات صدى الصوت' }]
+          };
+        }
+      }
+
+      // 2. مطابقة قوانين ومفاهيم بنك الفيزياء الـ 18
+      let matchedRuleId = null;
+      if (qClean.includes('انكسار') || qClean.includes('عدس') || qClean.includes('زاويه حرجه') || qClean.includes('الياف بصر') || qClean.includes('منشور') || qClean.includes('قصر البصر') || qClean.includes('طول البصر') || qClean.includes('ابصار') || qClean.includes('بصر') || qClean.includes('طيف')) {
+        matchedRuleId = 718;
+      } else if (qClean.includes('مرايا') || qClean.includes('مراه') || qClean.includes('انعكاس') || qClean.includes('كسوف') || qClean.includes('خسوف') || qClean.includes('ظلال') || qClean.includes('ظل') || qClean.includes('ضوء')) {
+        matchedRuleId = 717;
+      } else if (qClean.includes('صوت') || qClean.includes('صدي') || qClean.includes('فوق صوتي') || qClean.includes('ديسيبل')) {
+        matchedRuleId = 716;
+      } else if (qClean.includes('موج') || qClean.includes('طول موج') || qClean.includes('تردد') || qClean.includes('مستعرض') || qClean.includes('طولي') || qClean.includes('هرتز')) {
+        matchedRuleId = 715;
+      } else if (qClean.includes('عتل') || qClean.includes('فائده ميكانيك')) {
+        matchedRuleId = 713;
+      } else if (qClean.includes('سطح مائل') || qClean.includes('بكر') || qClean.includes('اسفين') || qClean.includes('بريم') || qClean.includes('عجله ومحور') || qClean.includes('كفاءه الاله') || qClean.includes('اله بسيط')) {
+        matchedRuleId = 714;
+      } else if (qClean.includes('طاق') || qClean.includes('حركي') || qClean.includes('كامن') || qClean.includes('حفظ الطاق')) {
+        matchedRuleId = 712;
+      } else if (qClean.includes('قدر') || qClean.includes('واط') || qClean.includes('قدره حصان') || qClean.includes('وات')) {
+        matchedRuleId = 711;
+      } else if (qClean.includes('شغل') || qClean.includes('جول')) {
+        matchedRuleId = 710;
+      } else if (qClean.includes('جذب عام') || qClean.includes('جاذبي') || qClean.includes('وزن') || qClean.includes('كتل') || qClean.includes('سقوط حر') || qClean.includes('انعدام الوزن') || qClean.includes('قبان')) {
+        matchedRuleId = 709;
+      } else if (qClean.includes('نيوتن الثالث') || qClean.includes('فعل ورد فعل') || qClean.includes('صاروخ') || qClean.includes('الغازات')) {
+        matchedRuleId = 708;
+      } else if (qClean.includes('نيوتن الثاني') || qClean.includes('f = m') || qClean.includes('f=m') || qClean.includes('قوه وكتل') || qClean.includes('قوه وتعجيل') || qClean.includes('نيوتن 2')) {
+        matchedRuleId = 707;
+      } else if (qClean.includes('نيوتن الاول') || qClean.includes('قصور ذاتي') || qClean.includes('عطال') || qClean.includes('يندفع الراكب') || qClean.includes('نيوتن 1') || qClean.includes('نيوتن')) {
+        matchedRuleId = 706;
+      } else if (qClean.includes('انطلاق') || qClean.includes('سرع') || qClean.includes('تعجيل')) {
+        matchedRuleId = 705;
+      } else if (qClean.includes('مساف') || qClean.includes('ازاح') || qClean.includes('محصل')) {
+        matchedRuleId = 704;
+      } else if (qClean.includes('نقطه اسناد') || qClean.includes('سكون') || qClean.includes('مسار') || qClean.includes('حرك')) {
+        matchedRuleId = 703;
+      } else if (qClean.includes('مقداري') || qClean.includes('اتجاهي') || qClean.includes('قياسي') || qClean.includes('متجه')) {
+        matchedRuleId = 702;
+      } else if (qClean.includes('قياس') || qClean.includes('بادئ') || qClean.includes('نظام دولي') || qClean.includes('si') || qClean.includes('وحدات') || qClean.includes('تيرا') || qClean.includes('نانو') || qClean.includes('فيمتو')) {
+        matchedRuleId = 701;
+      }
+
+      if (matchedRuleId) {
+        const rule = rules.find(r => r.id === matchedRuleId);
+        if (rule) {
+          let diagNotice = '';
+          const diag = diagrams.find(d => {
+            const dt = (d.title || '') + ' ' + (d.category || '');
+            return dt.includes(rule.title.substring(0, 10)) || 
+                   (rule.title.includes('نيوتن') && d.id === 'diag_newton_laws') || 
+                   (rule.title.includes('الشغل') && d.id === 'diag_work_power') || 
+                   (rule.title.includes('العتلات') && d.id === 'diag_levers_classes') || 
+                   (rule.title.includes('الصدى') && d.id === 'diag_sound_echo') || 
+                   (rule.title.includes('البادئات') && d.id === 'diag_measurement_prefixes');
+          });
+          if (diag) {
+            diagNotice = `\n\n🔬 **اللوحة والتمثيل البياني المعتمد:** يتوفر رسم توضيحي هندسي متكامل لهذا المفهوم بعنوان «${diag.title}»، ويمكنك معاينته وتكبيره عبر زر "🔬 الرسم التوضيحي" بالدرس أو من معرض اللوحات.`;
+          }
+
+          const pageNum = {
+            701: 5, 702: 8, 703: 11, 704: 14, 705: 17,
+            706: 24, 707: 26, 708: 28, 709: 30,
+            710: 36, 711: 38, 712: 40,
+            713: 47, 714: 51,
+            715: 57, 716: 62,
+            717: 72, 718: 78
+          }[rule.id] || 5;
+
+          return {
+            content: `📌 **${rule.title}** (كتاب الفيزياء - الصف الثاني المتوسط):\n\n` +
+                     `💡 **الخلاصة العلمية:** ${rule.summary}\n\n` +
+                     `📐 **القوانين والتفاصيل والضوابط:**\n${rule.details}${diagNotice}`,
+            sources: [{ page: pageNum, heading: rule.title }]
+          };
+        }
+      }
+
+      // 3. البحث في بنك الرسوم واللوحات التوضيحية
+      if (qClean.includes('رسم') || qClean.includes('لوح') || qClean.includes('مخطط') || qClean.includes('سلم البادئات')) {
+        const diag = diagrams.find(d => {
+          const dt = normalizeArabicSearchText(d.title + ' ' + d.category + ' ' + d.summary);
+          return qClean.split(' ').some(w => w.length > 3 && dt.includes(w));
+        }) || diagrams[0];
+
+        return {
+          content: `🎨 **اللوحة التوضيحية المتجهة (SVG): ${diag.title}**\n\n` +
+                   `💡 **التفسير الفيزيائي للرسم:** ${diag.summary}\n\n` +
+                   `📐 **المعادلة الرياضية للرسم:** ${diag.formula}\n\n` +
+                   `📌 **أهم مخرجات واستنتاجات اللوحة:**\n` +
+                   diag.keyPoints.map(p => `• ${p}`).join('\n') + `\n\n` +
+                   `🔍 يمكنك النقر على زر **«🔬 الرسم التوضيحي للدرس»** في أعلى الصفحة لتكبير اللوحة وفحص عناصرها بدقة فائقة.`,
+          sources: [{ page: 5, heading: diag.title }]
+        };
+      }
+
+      // 4. البحث في مقاطع الدرس الحالي المفتوح (Chunks)
+      if (window.PHYSICS_CURRICULUM && window.PHYSICS_CURRICULUM.chapters) {
+        let activeChunks = [];
+        for (const ch of window.PHYSICS_CURRICULUM.chapters) {
+          for (const l of ch.lessons || []) {
+            if (l.id === appData.currentLessonId) {
+              activeChunks = l.chunks || [];
+              break;
+            }
+          }
+          if (activeChunks.length > 0) break;
+        }
+
+        if (activeChunks.length > 0) {
+          const qWords = qClean.split(/\s+/).filter(w => w.length > 2);
+          let bestChunk = null;
+          let maxMatches = 0;
+          activeChunks.forEach(ch => {
+            const chText = normalizeArabicSearchText(ch.content || ch.text || '');
+            let score = 0;
+            qWords.forEach(w => { if (chText.includes(w)) score++; });
+            if (score > maxMatches) {
+              maxMatches = score;
+              bestChunk = ch;
+            }
+          });
+
+          if (bestChunk && maxMatches >= 2) {
+            return {
+              content: `📖 **إجابة موثقة من الدرس الحالي (${bestChunk.heading || 'كتاب الفيزياء'}):**\n\n` +
+                       `${bestChunk.content || bestChunk.text}`,
+              sources: [{ page: bestChunk.page_number || bestChunk.page || 5, heading: bestChunk.heading || 'منهج الفيزياء' }]
+            };
+          }
+        }
+      }
+
+      // 5. الرد العام الذكي لمادة الفيزياء
+      return {
+        content: `أهلاً بك! أنا **معلم الفيزياء الذكي للصف الثاني المتوسط** ⚛️.\n\n` +
+                 `تم فحص استفسارك في كتاب الفيزياء المعتمد (وزارة التربية العراقية).\n` +
+                 `يمكنك سؤالي عن:\n` +
+                 `1. **الحركة والقوة:** عناصر القياس، البادئات، المسافة والإزاحة، السرعة والتعجيل، وقوانين نيوتن الثلاثة.\n` +
+                 `2. **الشغل والقدرة والطاقة:** حساب الشغل بالجول، القدرة بالواط، الطاقة الحركية والكامنة، وحفظ الطاقة.\n` +
+                 `3. **الآلات البسيطة:** قانون العتلات بأنواعها الثلاثة، الفائدة الميكانيكية، السطح المائل، والبكرات.\n` +
+                 `4. **الصوت والضوء:** الموجات والتردد، صدى الصوت وعمق البحر، انعكاس وانكسار الضوء، والمرايا والعدسات.\n\n` +
+                 `💡 **جرّب النقر على أحد الأسئلة المقترحة أسفل الشاشة، أو اكتب مسألتك وسأشرحها لك خطوة بخطوة بالدليل والمعادلات.**`,
+        sources: [{ page: 5, heading: 'كتاب الفيزياء - الثاني المتوسط' }]
+      };
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة التربية الإسلامية
+    // -------------------------------------------------------------
+    function generateIslamicLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const rules = window.ISLAMIC_RULES || [];
+
+      let matchedRuleId = null;
+      if (qClean.includes('مد') || qClean.includes('عارض') || qClean.includes('تلاو') || qClean.includes('تجويد')) {
+        matchedRuleId = 601;
+      } else if (qClean.includes('معجز') || qClean.includes('عقيد') || qClean.includes('تحدي')) {
+        matchedRuleId = 602;
+      } else if (qClean.includes('منافق')) {
+        matchedRuleId = 603;
+      } else if (qClean.includes('ايات') || qClean.includes('ايات') || qClean.includes('كسوف') || qClean.includes('خسوف')) {
+        matchedRuleId = 608;
+      } else if (qClean.includes('جماع') || qClean.includes('ليل')) {
+        matchedRuleId = 606;
+      } else if (qClean.includes('صلاه') || qClean.includes('صلات') || qClean.includes('ركوع')) {
+        matchedRuleId = 604;
+      } else if (qClean.includes('معروف') || qClean.includes('منكر')) {
+        matchedRuleId = 605;
+      } else if (qClean.includes('حرم') || qClean.includes('دم المسلم')) {
+        matchedRuleId = 607;
+      } else if (qClean.includes('اخلاق') || qClean.includes('اقربكم مني')) {
+        matchedRuleId = 609;
+      } else if (qClean.includes('صوم') || qClean.includes('صيام') || qClean.includes('افطار')) {
+        matchedRuleId = 610;
+      } else if (qClean.includes('ضرر') || qClean.includes('ضرار')) {
+        matchedRuleId = 611;
+      } else if (qClean.includes('سجود') || qClean.includes('ساجد')) {
+        matchedRuleId = 612;
+      } else if (qClean.includes('ايثار')) {
+        matchedRuleId = 613;
+      } else if (qClean.includes('اسراف') || qClean.includes('تبذير')) {
+        matchedRuleId = 614;
+      } else if (qClean.includes('رحم') || qClean.includes('اقارب')) {
+        matchedRuleId = 615;
+      }
+
+      if (matchedRuleId) {
+        const rule = rules.find(r => r.id === matchedRuleId);
+        if (rule) {
+          const pageNum = {
+            601: 4, 602: 12, 603: 16, 604: 18, 605: 38,
+            606: 41, 607: 62, 608: 65, 609: 86, 610: 89,
+            611: 108, 612: 110, 613: 75, 614: 97, 615: 116
+          }[rule.id] || 7;
+
+          return {
+            content: `📌 **${rule.title}** (كتاب التربية الإسلامية - الثاني المتوسط):\n\n` +
+                     `💡 **الخلاصة الفقهية والعقدية:** ${rule.summary}\n\n` +
+                     `📖 **الأدلة والتفاصيل والأحكام:**\n${rule.details}`,
+            sources: [{ page: pageNum, heading: rule.title }]
+          };
+        }
+      }
+
+      // البحث في مقاطع الدرس الإسلامي الحالي
+      if (window.ISLAMIC_CURRICULUM && window.ISLAMIC_CURRICULUM.chapters) {
+        let activeChunks = [];
+        for (const ch of window.ISLAMIC_CURRICULUM.chapters) {
+          for (const l of ch.lessons || []) {
+            if (l.id === appData.currentLessonId) {
+              activeChunks = l.chunks || [];
+              break;
+            }
+          }
+          if (activeChunks.length > 0) break;
+        }
+
+        if (activeChunks.length > 0) {
+          const qWords = qClean.split(/\s+/).filter(w => w.length > 2);
+          let bestChunk = null;
+          let maxMatches = 0;
+          activeChunks.forEach(ch => {
+            const chText = normalizeArabicSearchText(ch.content || ch.text || '');
+            let score = 0;
+            qWords.forEach(w => { if (chText.includes(w)) score++; });
+            if (score > maxMatches) {
+              maxMatches = score;
+              bestChunk = ch;
+            }
+          });
+
+          if (bestChunk && maxMatches >= 2) {
+            return {
+              content: `📖 **إجابة موثقة من الدرس الإسلامي الحالي (${bestChunk.heading || 'كتاب التربية الإسلامية'}):**\n\n` +
+                       `${bestChunk.content || bestChunk.text}`,
+              sources: [{ page: bestChunk.page_number || bestChunk.page || 7, heading: bestChunk.heading || 'التربية الإسلامية' }]
+            };
+          }
+        }
+      }
+
+      return {
+        content: `أهلاً بك! أنا **معلم التربية الإسلامية الذكي للصف الثاني المتوسط** 🕌.\n\n` +
+                 `تم فحص استفسارك في كتاب التربية الإسلامية المعتمد (وزارة التربية العراقية).\n` +
+                 `يمكنك سؤالي عن:\n` +
+                 `• **القرآن الكريم والتلاوة:** أحكام المد العارض للسكون، وتفسير سور: النبأ، القيامة، المزمل، الجمعة، والصف.\n` +
+                 `• **الحديث النبوي الشريف:** علامات المنافق، الأمر بالمعروف، حرمة المسلم، في الأخلاق، ومنع الضرر.\n` +
+                 `• **الفقه الإسلامي:** أركان الصلاة، صلاة الجماعة، صلاة الآيات، فريضة الصوم، وأعضاء السجود.\n` +
+                 `• **السيرة والآداب:** فتح مكة، الصحابة الكرام، خلق الإيثار، النهي عن الإسراف، وصلة الرحم.\n\n` +
+                 `💡 **جرّب النقر على أحد الأسئلة المقترحة أسفل الشاشة أو اكتب سؤالك وسأجيبك فوراً مع توثيق الصفحة.**`,
+        sources: [{ page: 7, heading: 'كتاب التربية الإسلامية' }]
+      };
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة اللغة العربية
+    // -------------------------------------------------------------
+    function generateArabicLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+
+      if (qClean.includes('علامات الاعراب') || qClean.includes('علامه الاعراب') || qClean.includes('اصليه وفرعيه') || qClean.includes('حركات فرعيه')) {
+        return {
+          content: `📌 **علامات الإعراب الأصلية والفرعية (الجزء الأول - ص 9 إلى 16):**\n\n` +
+                   `1. **العلامات الأصلية:**\n` +
+                   `• **الضمة:** للرفع في المفرد وجمع التكسير وجمع المؤنث السالم والمضارع.\n` +
+                   `• **الفتحة:** للنصب في المفرد وجمع التكسير والمضارع المسبوق بناصب.\n` +
+                   `• **الكسرة:** للجر في المفرد وجمع التكسير وجمع المؤنث السالم.\n` +
+                   `• **السكون:** للجزم في الفعل المضارع صحيح الآخر.\n\n` +
+                   `2. **العلامات الفرعية:**\n` +
+                   `• **الواو:** لرفع الأسماء الخمسة وجمع المذكر السالم.\n` +
+                   `• **الألف:** لرفع المثنى ونصب الأسماء الخمسة.\n` +
+                   `• **الياء:** لنصب وجر المثنى وجمع المذكر السالم وجر الأسماء الخمسة.\n` +
+                   `• **الكسرة بدل الفتحة:** لنصب جمع المؤنث السالم.\n` +
+                   `• **الفتحة بدل الكسرة:** لجر الممنوع من الصرف.\n` +
+                   `• **ثبوت وحذف النون:** لرفع ونصب وجزم الأفعال الخمسة.`,
+          sources: [{ page: 9, heading: 'علامات الإعراب الأصلية والفرعية' }]
+        };
+      }
+
+      if (qClean.includes('اسماء خمس') || qClean.includes('ابو') || qClean.includes('اخو') || qClean.includes('حمو') || qClean.includes('ذو') || qClean.includes('فو')) {
+        return {
+          content: `📌 **قاعدة الأسماء الخمسة وإعرابها (الجزء الأول - ص 26 إلى 30):**\n\n` +
+                   `• **الأسماء الخمسة هي:** (أبُو، أخُو، حَمُو، فُو، ذُو بمعنى صاحب).\n\n` +
+                   `• **إعرابها بالحروف:**\n` +
+                   `1. **ترفع بالواو:** جاءَ أبُوكَ، ذُو العلمِ مكرَمٌ.\n` +
+                   `2. **تنصب بالألف:** رأيتُ أخَاكَ، احترمتُ ذَا الفضلِ.\n` +
+                   `3. **تجر بالياء:** سلّمتُ على أبِيكَ، استمعتُ إلى ذِي الحكمةِ.\n\n` +
+                   `• **شروط إعرابها بالحروف:** أن تكون مفردة، مضافة إلى غير ياء المتكلم.`,
+          sources: [{ page: 26, heading: 'الأسماء الخمسة' }]
+        };
+      }
+
+      if (qClean.includes('ميزان صرفي') || qClean.includes('وزن الكلمات') || qClean.includes('فاء الكلمه') || qClean.includes('عين الكلمه')) {
+        return {
+          content: `📌 **قواعد الميزان الصرفي (الجزء الأول ص 38، والجزء الثاني ص 125):**\n\n` +
+                   `1. **الأساس:** جعل علماء العربية لفظ (فَـ ـعَـ ـلَ) ميزاناً للكلمات الثلاثية المجردة (كَتَبَ -> فَعَلَ).\n` +
+                   `2. **الكلمات المزيدة:** تنزل حروف الزيادة (سألتمونيها) في الميزان كما هي: (كَاتِب -> فَاعِل، اسْتَخْرَجَ -> اسْتَفْعَلَ).\n` +
+                   `3. **الرباعي والخماسي المجرد:** نزيد لاماً في الرباعي (دَحْرَجَ -> فَعْلَلَ)، ولامين في الخماسي (سَفَرْجَل -> فَعَلَّل).\n` +
+                   `4. **حذف حرف أصلي:** يُحذف ما يقابله في الميزان (قِ -> عِ، صُنْ -> فُلْ، يَصِلُ -> يَعِلُ).`,
+          sources: [{ page: 38, heading: 'الميزان الصرفي' }]
+        };
+      }
+
+      if (qClean.includes('نداء') || qClean.includes('منادي') || qClean.includes('حروف النداء') || qClean.includes('يا محمد')) {
+        return {
+          content: `📌 **أسلوب النداء وأحكام المنادى (الجزء الثاني - ص 8 إلى 12):**\n\n` +
+                   `1. **أحرف النداء:** (يا) لجميع المنادى، و(الهمزة وأي) للقريب، و(أيا وهيا) للبعيد.\n` +
+                   `2. **المنادى المبني (يبنى على ما يرفع به في محل نصب):**\n` +
+                   `• العلم المفرد: يا محمّدُ، يا فاطمةُ.\n` +
+                   `• النكرة المقصودة: يا رجلُ، يا طالبُ.\n` +
+                   `3. **المنادى المعرب المنصوب:**\n` +
+                   `• النكرة غير المقصودة: يا غافلاً تنبّهْ.\n` +
+                   `• المنادى المضاف: يا طالبَ العلمِ.\n` +
+                   `• الشبيه بالمضاف: يا حسناً وجهُهُ.`,
+          sources: [{ page: 8, heading: 'أسلوب النداء' }]
+        };
+      }
+
+      if (qClean.includes('استفهام') || qClean.includes('تصديق') || qClean.includes('تصور') || qClean.includes('ادوات الاستفهام') || qClean.includes('ام المعادله')) {
+        return {
+          content: `📌 **أسلوب الاستفهام (الجزء الثاني - ص 23 إلى 29):**\n\n` +
+                   `1. **استفهام التصديق:** يُطلب به إثبات النسبة أو نفيها، ويُجاب عنه بنعم أو لا. أدواته: (هل) و(الهمزة بدون أم المعادلة).\n` +
+                   `2. **استفهام التصور:** يُطلب به تعيين مفرد، ويُجاب عنه بالتعيين. أدواته: (الهمزة مع أم المعادلة) وأسماء الاستفهام (من، ما، أين، متى، كيف، كم، أي).`,
+          sources: [{ page: 23, heading: 'الاستفهام' }]
+        };
+      }
+
+      if (qClean.includes('لازم') || qClean.includes('متعدي')) {
+        return {
+          content: `📌 **الفعل اللازم والمتعدي (الجزء الأول - ص 53):**\n\n` +
+                   `1. **الفعل اللازم:** هو الفعل الذي يكتفي بفاعله ولا يحتاج لمفعول به لإتمام معناه (مثل: نامَ الطفلُ، جاءَ الحقُّ).\n` +
+                   `2. **الفعل المتعدي:** هو الفعل الذي لا يكتفي بفاعله بل يتعداه إلى مفعول به واحد أو أكثر لإتمام المعنى (مثل: كَتَبَ الطالبُ الدرسَ).\n` +
+                   `• **علامة المتعدي:** يقبل الاتصال بضمائر النصب (الهاء، الكاف، الياء): أكرمَ -> أكرَمَهُ.`,
+          sources: [{ page: 53, heading: 'الفعل اللازم والمتعدي' }]
+        };
+      }
+
+      if (qClean.includes('نائب فاعل') || qClean.includes('مبني للمجهول')) {
+        return {
+          content: `📌 **نائب الفاعل وبناء الفعل للمجهول (الجزء الأول - ص 68):**\n\n` +
+                   `• **نائب الفاعل:** اسم مرفوع يحل محل الفاعل بعد حذفه، ويأخذ أحكامه الإعرابية.\n` +
+                   `• **صياغة المبني للمجهول:**\n` +
+                   `1. في الماضي: يُضم أوله ويُكسر ما قبل آخره (كَتَبَ -> كُـتِـبَ).\n` +
+                   `2. في المضارع: يُضم أوله ويُفتح ما قبل آخره (يَكْتُبُ -> يُـكْـتَـبُ).\n` +
+                   `• **مثال الإعراب:** كُتِبَ الدرسُ (الدرسُ: نائب فاعل مرفوع بالضمة).`,
+          sources: [{ page: 68, heading: 'نائب الفاعل' }]
+        };
+      }
+
+      if (qClean.includes('مفعول فيه') || qClean.includes('مفعول مطلق') || qClean.includes('ظرف زمان') || qClean.includes('ظرف مكان')) {
+        return {
+          content: `📌 **المفاعيل: المفعول فيه والمفعول المطلق (الجزء الأول - ص 84 و ص 97):**\n\n` +
+                   `1. **المفعول فيه (ظرفا الزمان والمكان):** اسم منصوب متضمن معنى (في) يدل على زمان أو مكان وقوع الفعل (سافرتُ ليلاً، وقفتُ أمامَ الصفِّ).\n` +
+                   `2. **المفعول المطلق:** مصدر منصوب مشتق من لفظ الفعل يُذكر معه لتوكيده، أو بيان نوعه، أو بيان عدده (وَرَتِّلِ الْقُرْآنَ تَرْتِيلاً).`,
+          sources: [{ page: 84, heading: 'المفعول فيه' }]
+        };
+      }
+
+      if (qClean.includes('مثني') || qClean.includes('كلا وكلتا') || qClean.includes('اثنان واثنتان')) {
+        return {
+          content: `📌 **المثنى والملحق به (الجزء الثاني - ص 52):**\n\n` +
+                   `• **المثنى:** اسم يدل على اثنين أو اثنتين بزيادة ألف ونون في الرفع، أو ياء ونون في النصب والجر.\n` +
+                   `• **إعرابه:** يرفع بالألف (حضر الطالبانِ)، وينصب ويجر بالياء (كافأتُ الطالبينِ).\n` +
+                   `• **الملحق بالمثنى:** اثنان واثنتان، وكلا وكلتا إذا أضيفتا لضمير (كلاهما).`,
+          sources: [{ page: 52, heading: 'المثنى والملحق به' }]
+        };
+      }
+
+      if (qClean.includes('جمع مذكر') || qClean.includes('جمع مؤنث') || qClean.includes('ملحقات جمع')) {
+        return {
+          content: `📌 **جمع المذكر والمؤنث السالم (الجزء الثاني - ص 66 و ص 84):**\n\n` +
+                   `1. **جمع المذكر السالم:** يرفع بالواو (نجح المهندسونَ)، وينصب ويجر بالياء (شكرتُ المهندسينَ).\n` +
+                   `2. **جمع المؤنث السالم:** يرفع بالضمة (حضرتْ المعلماتُ)، وينصب ويجر بالكسرة بدل الفتحة (شكرتُ المعلماتِ).`,
+          sources: [{ page: 66, heading: 'جمع المذكر والمؤنث السالم' }]
+        };
+      }
+
+      return {
+        content: `أهلاً بك! أنا **معلم اللغة العربية الذكي للصف الثاني المتوسط** 📖.\n\n` +
+                 `تم فحص استفسارك في كتابي اللغة العربية المعتمدين (الجزء الأول والثاني).\n` +
+                 `يمكنك سؤالي عن علامات الإعراب، الأسماء الخمسة، الميزان الصرفي، نائب الفاعل، المفاعيل، الحال، الاستثناء، أسلوب النداء، أسلوب الاستفهام، المثنى، وجموع السالم والتكسير.\n\n` +
+                 `💡 **جرّب النقر على أحد الأسئلة المقترحة أسفل الشاشة أو اكتب سؤالك وسأجيبك فوراً مع توثيق الصفحة.**`,
+        sources: [{ page: 5, heading: 'كتاب اللغة العربية' }]
+      };
+    }
+
+    // محرك الإجابة المحلي الذكي الموثق الشامل
     function generateLocalAnswer(query, lessonId) {
       const q = query.toLowerCase().trim();
+      const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
+      const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
+
+      // توجيه السؤال مباشرة إلى محرك المادة المعتمد حصراً منعاً لأي تداخل بين المناهج
+      if (isPhysics) {
+        return generatePhysicsLocalAnswer(query, lessonId, curr);
+      }
+      if (isIslamic) {
+        return generateIslamicLocalAnswer(query, lessonId, curr);
+      }
+      if (isArabic) {
+        return generateArabicLocalAnswer(query, lessonId, curr);
+      }
+
+      // فيما يلي: المحرك الخاص بمنهج اللغة الإنجليزية حصراً
+
 
       // فحص أسئلة علامات الإعراب
       if (q.includes('علامات الإعراب') || q.includes('علامة الإعراب') || q.includes('أصلية وفرعية') || q.includes('حركات فرعية')) {
@@ -11948,15 +12672,43 @@
       }
     };
 
-    function selectPastExam(examId) {
-      currentSelectedPastExamId = examId;
-      allExamSolutionsVisible = false;
+        let currentExamSubjectMode = 'auto'; // 'phy' | 'is' | 'ar' | 'en'
+    currentSelectedPastExamId = null;
+    allExamSolutionsVisible = false;
 
-      // تحديث حالة أزرار الفلترة
-      ['midyear', 'm1', 'm2', 'u34', 'final'].forEach(id => {
-        const btn = document.getElementById(`examFilter_${id}`);
+    // الحصول على قاعدة بيانات الامتحانات للمادة المحددة
+    function getSubjectExams(mode) {
+      if (!mode || mode === 'auto') {
+        mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
+      }
+      if (mode === 'phy') return window.PHYSICS_PAST_EXAMS || {};
+      if (mode === 'is') return window.ISLAMIC_PAST_EXAMS || {};
+      if (mode === 'ar') return window.ARABIC_PAST_EXAMS || {};
+      return PAST_EXAMS_DATABASE || {};
+    }
+
+    // مطابقة معرّف المنهج مع نمط المادة الامتحانية
+    function resolveCurriculumToExamSubject(currId) {
+      if (currId === 7) return 'phy';
+      if (currId === 6) return 'is';
+      if (currId === 4 || currId === 5) return 'ar';
+      return 'en';
+    }
+
+    // تبديل المادة الامتحانية في مركز الامتحانات
+    function setExamSubjectMode(mode, userExplicit = true) {
+      if (mode === 'auto') {
+        mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
+      }
+      currentExamSubjectMode = mode;
+
+      // تحديث مظهر أزرار المواد الأربعة
+      const subjectModes = ['phy', 'is', 'ar', 'en'];
+      subjectModes.forEach(m => {
+        const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
+        const btn = document.getElementById(btnId);
         if (btn) {
-          if (id === examId) {
+          if (m === mode) {
             btn.className = 'btn btn-sm btn-primary';
           } else {
             btn.className = 'btn btn-sm btn-secondary';
@@ -11964,13 +12716,97 @@
         }
       });
 
-      renderPastExam(examId);
+      // توليد أزرار النماذج المتاحة لهذه المادة ديناميكياً
+      const exams = getSubjectExams(mode);
+      const filterContainer = document.getElementById('pastExamFilterButtons');
+      const examKeys = Object.keys(exams);
+
+      if (filterContainer) {
+        filterContainer.innerHTML = `
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--slate-600); margin-inline-end: 0.35rem;">اختر النموذج:</span>
+          ${examKeys.map(k => {
+            const ex = exams[k];
+            const label = ex.badge || ex.title;
+            return `
+              <button class="btn btn-sm btn-secondary" id="examFilter_${k}" onclick="selectPastExam('${k}')" style="font-size: 0.75rem; font-weight: 700;">
+                ${label}
+              </button>
+            `;
+          }).join('')}
+        `;
+      }
+
+      // اختيار النموذج الافتراضي للمادة
+      let defaultExamId = examKeys[0];
+      if (mode === 'phy') {
+        defaultExamId = exams['phy_midyear'] ? 'phy_midyear' : (exams['phy_final'] ? 'phy_final' : examKeys[0]);
+      } else if (mode === 'is') {
+        defaultExamId = exams['is_midyear'] ? 'is_midyear' : (exams['is_final'] ? 'is_final' : examKeys[0]);
+      } else if (mode === 'ar') {
+        defaultExamId = exams['ar_midyear'] ? 'ar_midyear' : (exams['ar_final'] ? 'ar_final' : examKeys[0]);
+      } else {
+        defaultExamId = exams['midyear'] ? 'midyear' : (exams['final'] ? 'final' : examKeys[0]);
+      }
+
+      selectPastExam(defaultExamId);
     }
 
+    // تهيئة وعرض مركز الامتحانات تلقائياً بناءً على المنهج النشط
+    function renderExamsCenter() {
+      const detectedMode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
+      setExamSubjectMode(detectedMode, false);
+    }
+
+    // اختيار نموذج امتحاني محدد
+    function selectPastExam(examId) {
+      if (!examId) return;
+
+      // فحص إذا كان النموذج المطلوب ينتمي لمادة أخرى
+      let matchedMode = null;
+      ['phy', 'is', 'ar', 'en'].forEach(m => {
+        const subExams = getSubjectExams(m);
+        if (subExams[examId]) matchedMode = m;
+      });
+
+      if (matchedMode && matchedMode !== currentExamSubjectMode) {
+        currentExamSubjectMode = matchedMode;
+        setExamSubjectMode(matchedMode, true);
+        currentSelectedPastExamId = examId;
+      } else {
+        currentSelectedPastExamId = examId;
+      }
+
+      allExamSolutionsVisible = false;
+
+      // تحديث حالة أزرار النماذج
+      const exams = getSubjectExams(currentExamSubjectMode);
+      Object.keys(exams).forEach(id => {
+        const btn = document.getElementById(`examFilter_${id}`);
+        if (btn) {
+          if (id === currentSelectedPastExamId) {
+            btn.className = 'btn btn-sm btn-primary';
+          } else {
+            btn.className = 'btn btn-sm btn-secondary';
+          }
+        }
+      });
+
+      renderPastExam(currentSelectedPastExamId);
+    }
+
+    // عرض ورقة الامتحان والأسئلة كاملة
     function renderPastExam(examId) {
       const container = document.getElementById('printableExamArea');
       if (!container) return;
-      const exam = PAST_EXAMS_DATABASE[examId] || PAST_EXAMS_DATABASE['midyear'];
+
+      const exams = getSubjectExams(currentExamSubjectMode);
+      const exam = exams[examId] || Object.values(exams)[0] || PAST_EXAMS_DATABASE['midyear'];
+      if (!exam) return;
+      currentSelectedPastExamId = exam.id;
+
+      const isEnglish = (currentExamSubjectMode === 'en');
+      const textDir = isEnglish ? 'ltr' : 'rtl';
+      const textAlign = isEnglish ? 'left' : 'right';
 
       container.innerHTML = `
         <!-- الترويسة الرسمية لورقة الامتحان -->
@@ -11983,7 +12819,7 @@
             <div style="font-size: 1.05rem; font-weight: 800; color: var(--primary);">${exam.title}</div>
             <div style="font-size: 0.75rem; color: var(--slate-500);">العام الدراسي: ${exam.year}</div>
           </div>
-          <div style="text-align: left; font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">
+          <div style="text-align: ${isEnglish ? 'right' : 'left'}; font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">
             <div>الوقت: ${exam.time}</div>
             <div style="color: var(--primary);">الدرجة الكلية: ${exam.totalMarks}</div>
           </div>
@@ -12004,7 +12840,7 @@
                 </div>
                 <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
                   <span class="exam-q-marks">${q.marks}</span>
-                  ${(q.passage && isEnglishCurriculum(appData.currentCurriculumId)) ? `
+                  ${(q.passage && isEnglish) ? `
                     <button class="exam-listen-btn" onclick="speakExamPassage(this.getAttribute('data-passage'))" data-passage="${q.passage.replace(/"/g, '&quot;')}" title="استمع لنص القطعة بالصوت البشري">
                       <span>🔊</span> استمع للنص
                     </button>
@@ -12016,28 +12852,34 @@
               </div>
 
               ${q.instructions ? `
-                <div style="font-size: 0.82rem; color: var(--slate-600); margin-bottom: 0.75rem; font-weight: 600; direction: ltr; text-align: left;">
+                <div style="font-size: 0.82rem; color: var(--slate-600); margin-bottom: 0.75rem; font-weight: 600; direction: ${textDir}; text-align: ${textAlign};">
                   ${q.instructions}
                 </div>
               ` : ''}
 
               ${q.passage ? `
-                <div class="exam-passage-box">
+                <div class="exam-passage-box" style="direction: ${textDir}; text-align: ${textAlign};">
                   ${q.passage}
+                </div>
+              ` : ''}
+
+              ${q.content ? `
+                <div class="exam-q-content" style="font-size: 0.9rem; line-height: 1.8; color: var(--slate-800); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign};">
+                  ${q.content}
                 </div>
               ` : ''}
 
               ${q.branchA ? `
                 <div style="margin-bottom: 0.85rem;">
-                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchA.title}
                   </div>
                   ${q.branchA.boxWords ? `
-                    <div style="background: white; border: 1px dashed var(--slate-300); border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; direction: ltr; text-align: center; font-weight: 700; color: var(--primary);">
+                    <div style="background: white; border: 1px dashed var(--slate-300); border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; direction: ${textDir}; text-align: center; font-weight: 700; color: var(--primary);">
                       [ ${q.branchA.boxWords.join('  •  ')} ]
                     </div>
                   ` : ''}
-                  <div class="exam-questions-list">
+                  <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchA.items.map(it => `<div>${it}</div>`).join('')}
                   </div>
                 </div>
@@ -12045,10 +12887,10 @@
 
               ${q.branchB ? `
                 <div style="margin-bottom: 0.85rem;">
-                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchB.title}
                   </div>
-                  <div class="exam-questions-list">
+                  <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchB.items.map(it => `<div>${it}</div>`).join('')}
                   </div>
                 </div>
@@ -12056,24 +12898,29 @@
 
               ${q.branchC ? `
                 <div style="margin-bottom: 0.85rem;">
-                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ltr; text-align: left;">
+                  <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchC.title}
                   </div>
-                  <div class="exam-questions-list">
+                  <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
                     ${q.branchC.items.map(it => `<div>${it}</div>`).join('')}
                   </div>
                 </div>
               ` : ''}
 
               ${q.items ? `
-                <div class="exam-questions-list">
+                <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
                   ${q.items.map(it => `<div>${it}</div>`).join('')}
                 </div>
               ` : ''}
 
               <!-- صندوق الحل النموذجي المفصل -->
-              <div class="exam-model-answer-box hidden" id="solBox_${q.id}">
-                ${q.solution}
+              <div class="exam-model-answer-box hidden" id="solBox_${q.id}" style="direction: ${textDir}; text-align: ${textAlign};">
+                <div style="font-weight: 800; margin-bottom: 0.45rem; color: #15803d; display: flex; align-items: center; gap: 0.4rem;">
+                  <span>💡</span> الجواب النموذجي المعتمد وتوزيع الدرجات الوزارية:
+                </div>
+                <div style="font-size: 0.88rem; line-height: 1.8; color: #166534;">
+                  ${q.answer || q.solution || ''}
+                </div>
               </div>
             </div>
           `).join('')}
@@ -12087,7 +12934,7 @@
     }
 
     function speakExamPassage(text) {
-      if (!isEnglishCurriculum(appData.currentCurriculumId)) return;
+      if (currentExamSubjectMode !== 'en' && !isEnglishCurriculum(appData.currentCurriculumId)) return;
       if (audioPlayer && audioPlayer.speakText && text) {
         audioPlayer.speakText(text, 'en');
       }
@@ -12110,7 +12957,8 @@
     function toggleAllExamSolutions() {
       allExamSolutionsVisible = !allExamSolutionsVisible;
       const btn = document.getElementById('toggleAllSolutionsBtn');
-      const exam = PAST_EXAMS_DATABASE[currentSelectedPastExamId];
+      const exams = getSubjectExams(currentExamSubjectMode);
+      const exam = exams[currentSelectedPastExamId];
       if (!exam) return;
 
       exam.questions.forEach(q => {
@@ -12135,8 +12983,8 @@
     }
 
     function printExamPaper() {
-      // إخفاء كل الحلول أولاً لتكون الورقة نظيفة وجاهزة للاختبار الورقي
-      const exam = PAST_EXAMS_DATABASE[currentSelectedPastExamId];
+      const exams = getSubjectExams(currentExamSubjectMode);
+      const exam = exams[currentSelectedPastExamId];
       if (exam) {
         exam.questions.forEach(q => {
           const box = document.getElementById(`solBox_${q.id}`);
@@ -12166,10 +13014,14 @@
       }
     }
 
-    function openPastExamsTab(examId = 'midyear') {
+    function openPastExamsTab(examId) {
       switchTab('exams');
       switchExamSubtab('past-exams');
-      if (examId) selectPastExam(examId);
+      if (examId) {
+        selectPastExam(examId);
+      } else {
+        renderExamsCenter();
+      }
     }
 
     function openAddModalWithPreset(name, subject, grade) {
