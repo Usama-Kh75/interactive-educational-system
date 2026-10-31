@@ -2832,7 +2832,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.5 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.6 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3626,7 +3626,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.5</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.6</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3651,7 +3651,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.5</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.6</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3704,7 +3704,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.5.5</span>
+        <span class="version-badge" id="footerVersionBadge">v3.5.6</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -4064,7 +4064,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.5</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.6</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4092,13 +4092,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.5؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.6؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.5</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.6</span>
         </div>
       </div>
 
@@ -4147,8 +4147,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.5.5';
-    const SYSTEM_VERSION = 'v3.5.5';
+    const CURRENT_VERSION_LABEL = 'v3.5.6';
+    const SYSTEM_VERSION = 'v3.5.6';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -7141,8 +7141,11 @@
     }
 
     function formatTextHighlights(text) {
+      if (!text) return '';
+      // تنقية النص من الرموز والتشكيلات المركبة غير المتوافقة مع خطوط العرض (مثل سهم المتجهات U+20D7)
+      const clean = text.replace(/\u20d7/g, '');
       // إبراز الكلمات المفتاحية النحوية بأسلوب جمالي
-      return text
+      return clean
         .replace(/\b(Possessive 's'|A school magazine|article|cover|edit|editor|print|printer|report|reporter|for|since|used to|should|shouldn't|too much|too many|a few|a little|a lot of|headache|stomach ache|toothache|earache|painkiller|dentist|appendicitis|limerick|limericks|Stonehenge|healthy|unfit|exercise|regularly|fried|grilled|baked|boiled|starters|desserts|curry|marshmallow|marshmallows|ambulance|must|mustn't|play|go|do|passive|be going to)\b/gi, 
           '<span style="background: #fef3c7; color: #92400e; font-weight: 700; padding: 0.05rem 0.25rem; border-radius: 3px;">$1</span>');
     }
@@ -12788,6 +12791,7 @@
     // دالة تهيئة وتنسيق الرموز والمعادلات الرياضية والفيزيائية ومنع أي تشوه في نصوص RTL
     function formatPhysicsMath(text) {
       if (!text || typeof text !== 'string') return text || '';
+      text = text.replace(/\u20d7/g, '');
       
       function cleanFormula(s, isBlock) {
         if (!s) return '';
