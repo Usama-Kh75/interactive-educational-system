@@ -1,43 +1,40 @@
-# Virtual environment
-.venv/
-env/
-venv/
-ENV/
+# =====================================================================
+# قائمة السماح الحصرية (Allowlist .gitignore)
+# لمستودع «interactive-educational-system» المنشور على GitHub Pages
+# إعداد المهندس أسامة خليل هاشم
+# =====================================================================
+# الغرض:
+# ضمان حجب كل الملفات غير المنشورة تلقائياً (قواعد البيانات، الخوادم،
+# بيئات العمل، الوثائق، الفيديوهات، ملفات القواعد والذاكرة)،
+# مع السماح الحصري بما يخدم تطبيق الويب الفعلي PWA فقط.
+# =====================================================================
 
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.pytest_cache/
+# 1. حجب جميع الملفات والمجلدات افتراضياً
+*
+.*
 
-# Node / Frontend build
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
+# 2. ملفات المستودع والتوثيق والنسخ المسموحة في الجذر
+!.gitignore
+!README.md
+!version.json
 
-# Heavy uploads & backups
-storage/uploads/*
-!storage/uploads/.gitkeep
-storage/backups/*
-!storage/backups/.gitkeep
-storage/extracted/*/images/
-*.log
+# 3. ملفات تشغيل تطبيق الويب المنشور (PWA Shell & Logic)
+!index.html
+!manifest.json
+!sw.js
 
-# OS & IDE files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-.env
-*.mp4
+# 4. ملفات بيانات المناهج الدراسية والرسوم التوضيحية المعتمدة
+!curriculum_data.js
+!curriculum_data_*.js
+!curriculum_diagrams_*.js
 
-# Local only: the repo is public and served by GitHub Pages (see GEMINI.md, section 4)
-backend/
-frontend/
-storage/
-*.docx
-GEMINI.md
-AGENTS.md
+# 5. أيقونات التطبيق وملف المتجه
+!icons/
+!icons/*
 
-scratch/
+# 6. مجلد صور الكتاب المدرسي (حصر التتبع بالصور المستخدمة فعلياً)
+!book_images/
+!book_images/atmosphere_*.jpeg
+!book_images/page_*.jpeg
+!book_images/*/
+!book_images/*/page_*.jpeg
