@@ -1303,7 +1303,178 @@ window.CURRICULUM_DATA = [
             "page": 17,
             "heading": "Lesson 1: Keep fit! - Take my advice (صفحة 17)",
             "text": "Fitness is very important. Unfit people cannot enjoy life. They get tired very quickly, so they cannot play games. They cannot run. In fact, they cannot even walk without getting tired and out of breath.\nSo, if you want to enjoy life, you should get fit and keep fit.\n\nHow can you get fit?\nYou should take exercise regularly. Games like football, basketball and netball give you plenty of exercise because you have to run all the time. Swimming and cycling are also very good forms of exercise.\nIf you don't like any of these, you can just go walking. You should walk quickly for about 20 minutes every day. Walking slowly will not make you fit, and walking to your bedroom will not either!\nSome people think that taking exercise is boring, but it doesn't have to be. If you take exercise with your friends, you will have fun.\n\nGiving advice with should and shouldn't:\n• You need to get fit. You should take some exercise.\n• You're always tired. You shouldn't go to bed late.\n\nWhich of these people is fit?\n1. Zaid: \"They won't let me play. I get tired quickly.\" ➔ Unfit. (Advice: You should take exercise regularly.)\n2. Sana: \"I watch TV all the time.\" ➔ Unfit. (Advice: You shouldn't watch TV all the time. You should go walking.)\n3. Hanaa: \"I love running.\" ➔ Fit!\n4. Younis: \"I love my car. I drive everywhere.\" ➔ Unfit. (Advice: You shouldn't drive everywhere. You should walk more.)"
+          },
+          {
+            "id": 50401,
+            "is_activity_book": true,
+            "activity_book_page": 22,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 22 و 23): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 1: Keep fit! (Activity Book pp. 22-23)\n\nExercise A (Page 22): Paragraph Main Ideas:\n• Paragraph 1: why fitness is important\n• Paragraph 2: how you can get fit\n\nExercise 1 (Page 22): Comprehension Questions:\na. Why is it important to be fit? -> To enjoy life. Unfit people get tired very quickly and cannot run or play games.\nb. Why can unfit people not run or walk easily? -> Because they get tired very quickly and become out of breath.\nc. Why is exercise good for you? -> Because it makes you fit, keeps you healthy, and helps you enjoy life.\nd. What kinds of exercise can you find in paragraph 2? -> Football, basketball, netball, swimming, cycling and walking.\ne. Synonyms & Definitions: 1. regularly, 2. fit, 3. unfit, 4. forms.\nf. Other forms of exercise: Tennis, running, karate, gymnastics.\n\nExercise 2 (Page 22): Giving Advice (should / shouldn't):\na. Sana: shouldn't watch TV all the time / should play games.\nb. Zaid: should take exercise regularly and get fit.\nc. Younis: shouldn't drive everywhere / should walk.\n\nExercise 3 (Page 23): Re-writing Advice:\na. You shouldn't let children play with matches.\nb. You should use the zebra crossing when you cross the road.\nc. You shouldn't cycle on the wrong side of the road.\nd. You should keep medicine out of the reach of children.\n\nExercise 4 (Page 23): How often questions:\na. How often do you exercise? -> Three times a week / every day.\nb. Games: football and basketball, twice a week, for an hour.\nc. Walking: in the park, every evening, for 20 minutes.\n\nExercise 5 (Page 23): Personal Fitness Advice:\n• I should exercise regularly and walk to school.\n• I shouldn't eat too many crisps and sweets.",
+            "exercises": [
+              {
+                "id": "u2_l1_exA",
+                "num": "Exercise A (Page 22)",
+                "title": "Read the article. What is each paragraph about? Choose the best answers from the box.",
+                "title_ar": "اقرأ المقالة في كتاب الطالب، عن ماذا تتحدث كل فقرة؟ اختر الفكرة الرئيسية المناسبة من الصندوق:",
+                "words_box": [
+                  "how to enjoy life",
+                  "how you can get fit",
+                  "playing games",
+                  "why fitness is important"
+                ],
+                "questions": [
+                  {
+                    "q": "Paragraph 1 is about:",
+                    "q_ar": "الفقرة الأولى تتحدث عن:",
+                    "a": "why fitness is important (لماذا تعتبر اللياقة البدنية مهمة للاستمتاع بالحياة)"
+                  },
+                  {
+                    "q": "Paragraph 2 is about:",
+                    "q_ar": "الفقرة الثانية تتحدث عن:",
+                    "a": "how you can get fit (كيف يمكنك اكتساب اللياقة البدنية والتمتع بالصحة)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l1_ex1",
+                "num": "Exercise 1 (Page 22)",
+                "title": "Read the article in your Student's Book again and answer the questions. Write accurate answers.",
+                "title_ar": "اقرأ المقالة في صفحة 17 من كتاب الطالب وأجب عن الأسئلة الآتية بإجابات دقيقة ونموذجية:",
+                "questions": [
+                  {
+                    "q": "a. Why is it important to be fit?",
+                    "q_ar": "لماذا من المهم جداً أن يكون المرء لائقاً بدنياً؟",
+                    "a": "To enjoy life. Unfit people get tired very quickly and cannot run, play games, or walk without getting out of breath. (لكي يستمتع بالحياة؛ فالأشخاص فاقدو اللياقة يتعبون سريعاً وينقطع تنفسهم ولا يستطيعون ممارسة الألعاب أو الركض)."
+                  },
+                  {
+                    "q": "b. Why can unfit people not run or walk easily?",
+                    "q_ar": "لماذا لا يقدر الأشخاص غير اللائقين بدنياً على المشي أو الركض بسهولة؟",
+                    "a": "Because they get tired very quickly and become out of breath. (لأنهم يرهقون بسرعة فائقة وينقطع نفسهم عند أي جهد بسيط)."
+                  },
+                  {
+                    "q": "c. Why is exercise good for you?",
+                    "q_ar": "لماذا تعد التمارين الرياضية مفيدة ونافعة للجسم؟",
+                    "a": "Because it makes you fit, keeps you healthy, and helps you enjoy life. (لأنها تجعلك لائقاً بدنياً وتبقيك متمتعاً بالصحة وتساعدك على الاستمتاع بالحياة)."
+                  },
+                  {
+                    "q": "d. What kinds of exercise can you find in paragraph 2?",
+                    "q_ar": "ما هي أنواع التمارين والرياضات المذكورة في الفقرة الثانية؟",
+                    "a": "Football, basketball, netball, swimming, cycling, and walking. (كرة القدم، كرة السلة، كرة الشبكة، السباحة، ركوب الدراجات، والمشي السريع)."
+                  },
+                  {
+                    "q": "e. Which words in the text mean the following? (1 often, 2 able to do things like running and playing games easily, 3 opposite of 'fit', 4 kinds)",
+                    "q_ar": "استخرج الكلمات من النص المطابقة للمعاني والتعاريف الآتية:",
+                    "a": "1. often ➔ regularly (بانتظام وبصورة دورية)\n2. able to do things like running and playing games easily ➔ fit (لائق بدنياً)\n3. opposite of 'fit' ➔ unfit (غير لائق بدنياً)\n4. kinds ➔ forms (أنواع / أشكال)"
+                  },
+                  {
+                    "q": "f. What other forms of exercise do you know?",
+                    "q_ar": "ما هي الأشكال والأنشطة الرياضية الأخرى التي تعرفها؟",
+                    "a": "Running, tennis, gymnastics, karate, skipping, and volleyball. (الجري، التنس، الجمباز، الكاراتيه، القفز بالحبل، والكرة الطائرة)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l1_ex2",
+                "num": "Exercise 2 (Page 22)",
+                "title": "Complete the sentences to give advice to the people in your Student's Book using should or shouldn't.",
+                "title_ar": "أكمل الجمل لتقديم النصيحة للشخصيات الواردة في صفحة 17 باستخدام (should أو shouldn't):",
+                "questions": [
+                  {
+                    "q": "a. Sana, you _______ watch TV all the time. You _______ play games.",
+                    "q_ar": "سناء، أنتِ تشاهدين التلفاز طوال الوقت:",
+                    "a": "shouldn't / should ➔ Sana, you shouldn't watch TV all the time. You should play games. (لا ينبغي أن تشاهدي التلفاز طوال الوقت، بل يجب أن تمارسي الألعاب الحركية)."
+                  },
+                  {
+                    "q": "b. Zaid, you should _______ exercise regularly and _______ fit.",
+                    "q_ar": "زيد، لا يدعونه يلعب ويتعب سريعاً:",
+                    "a": "take / get (أو keep) ➔ Zaid, you should take exercise regularly and get fit. (ينبغي عليك ممارسة التمارين بانتظام لتكتسب اللياقة البدنية)."
+                  },
+                  {
+                    "q": "c. Younis, you _______ drive everywhere. You should _______.",
+                    "q_ar": "يونس، يقود سيارته في كل مكان ولا يمشي:",
+                    "a": "shouldn't / walk ➔ Younis, you shouldn't drive everywhere. You should walk. (لا ينبغي أن تقود سيارتك لكل مكان، بل يجب أن تمشي على قدميك)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l1_ex3",
+                "num": "Exercise 3 (Page 23)",
+                "title": "Write the sentences again using should or shouldn't.",
+                "title_ar": "أعد كتابة الجمل الآتية بصيغة تقديم النصيحة الإيجابية والسلبية باستخدام (should أو shouldn't):",
+                "questions": [
+                  {
+                    "q": "a. Don't let children play with matches.",
+                    "q_ar": "لا تدع الأطفال يعبثون بأعواد الثقاب:",
+                    "a": "You shouldn't let children play with matches. (لا ينبغي أن تدع الأطفال يلعبون بأعواد الثقاب)."
+                  },
+                  {
+                    "q": "b. Use the zebra crossing when you cross the road.",
+                    "q_ar": "استخدم خطوط عبور المشاة عند عبور الشارع:",
+                    "a": "You should use the zebra crossing when you cross the road. (ينبغي عليك استخدام ممر المشاة عند عبور الشارع حفاظاً على سلامتك)."
+                  },
+                  {
+                    "q": "c. Never cycle on the wrong side of the road.",
+                    "q_ar": "إياك وقيادة الدراجة في الاتجاه المعاكس للسير:",
+                    "a": "You shouldn't cycle on the wrong side of the road. (لا ينبغي عليك قيادة الدراجة في الجانب الخاطئ المعاكس لحركة المرور)."
+                  },
+                  {
+                    "q": "d. Keep medicine out of the reach of children.",
+                    "q_ar": "احفظ الأدوية بعيداً عن متناول أيدي الأطفال الصغار:",
+                    "a": "You should keep medicine out of the reach of children. (ينبغي أن تحفظ الدواء بعيداً عن متناول أيدي الأطفال)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l1_ex4",
+                "num": "Exercise 4 (Page 23)",
+                "title": "Ask and answer: Frequency expressions (every day, every Thursday, not very often, often, once a week, twice a week, sometimes).",
+                "title_ar": "السؤال والجواب عن معدل وتكرار ممارسة الأنشطة الرياضية (How often):",
+                "words_box": [
+                  "every day",
+                  "every Thursday",
+                  "not very often",
+                  "often",
+                  "once a week",
+                  "twice a week",
+                  "sometimes"
+                ],
+                "questions": [
+                  {
+                    "q": "a. How often do you exercise?",
+                    "q_ar": "كم مرة تمارس التمارين الرياضية في الأسبوع؟",
+                    "a": "I exercise three times a week / every day. (أمارس التمارين ثلاث مرات أسبوعياً / كل يوم بانتظام)."
+                  },
+                  {
+                    "q": "b. 1 Do you play any games? 2 Which games? 3 How often? 4 For how long?",
+                    "q_ar": "هل تلعب ألعاباً رياضية؟ أي منها؟ كم مرة؟ ولأي مدة؟",
+                    "a": "1. Yes, I do. 2. Football and basketball. 3. Twice a week. 4. For an hour each time."
+                  },
+                  {
+                    "q": "c. 1 Do you go walking? 2 Where? 3 How often? 4 For how long?",
+                    "q_ar": "هل تمارس رياضة المشي؟ أين؟ كم مرة؟ ولأي مدة زمنية؟",
+                    "a": "1. Yes, I do. 2. In the local park. 3. Every evening. 4. For about twenty minutes."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l1_ex5",
+                "num": "Exercise 5 (Page 23)",
+                "title": "Do you think you're fit? Write sentences using should and shouldn't to give yourself advice on how you can improve your fitness.",
+                "title_ar": "اكتب نصائح لنفسك لتحسين مستوى لياقتك البدنية باستخدام (should و shouldn't):",
+                "questions": [
+                  {
+                    "q": "Model Advice to Improve Fitness:",
+                    "q_ar": "النموذج التطبيقي لتقديم النصائح الذاتية:",
+                    "a": "• I should take regular exercise and walk to school every morning.\n• I should drink plenty of fresh water and eat more fruit and vegetables.\n• I shouldn't sit playing video games or watching TV for hours.\n• I shouldn't eat too many crisps, burgers and sweets."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          22,
+          23
         ]
       },
       {
@@ -1316,7 +1487,139 @@ window.CURRICULUM_DATA = [
             "page": 18,
             "heading": "Lesson 2: Eat the right food - Nurse Janette's report (صفحة 18)",
             "text": "A report of Nurse Janette's talk by Layla Ahmed:\nWhat did Nurse Janette mean? Before her talk, I did not understand, but I do now. This is what she said:\n\n\"We all need food and drink, but what kind and how much do we need?\nSome kinds of food are very good for us, for example, fish, fruit and vegetables. They keep us healthy. We should eat five pieces of fruit and vegetables every day, but we can eat more. We should also drink a lot of water.\nMeat and cheese are also good, but only if we don't eat too much. They have a lot of fat. We should be very careful about anything that has a lot of fat, salt or sugar in it.\nThis does not mean that we should never eat biscuits, sweets, fries or crisps. It is all right to eat a few. If we eat too many, we will be unhealthy.\"\n\nWhen Nurse Janette came to our school, I had a bag of crisps, two chocolate bars and a bottle of cola in my school bag. Today, I have water and fruit in my bag.\n\nQuantifiers:\n• too much / too many / a little / a few / a lot of\n• A little sugar is all right, but too much is bad for you. (Uncountable)\n• A few biscuits are all right, but too many are bad for you. (Countable)\n• Eating a lot of sweets is bad for you.\nYou are what you eat!"
+          },
+          {
+            "id": 50501,
+            "is_activity_book": true,
+            "activity_book_page": 24,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 24 و 25): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 2: Eat the right food (Activity Book pp. 24-25)\n\nExercise 1 (Page 24): The Spider Diagram (Healthy vs Unhealthy):\n• Very good for you: apple, cucumber, lettuce, strawberries, water.\n• Not so good for you: biscuits, burger, coke, crisps, sugar.\n\nExercise 2 (Page 24): Questions on Nurse Janette's Report:\na. Which things are very good for us? -> Fish, fruit, vegetables and water.\nb. What should we not eat too much of? -> Meat and cheese (things with a lot of fat).\nc. Which three things should we be careful about? -> Fat, salt and sugar.\nd. Why was Layla's food unhealthy? -> Crisps (too much fat/salt), Chocolate bars (too much sugar/fat), Cola (too much sugar).\n\nExercise 3 (Page 25): Quantifier Rules:\n• Countable nouns: too many and a few.\n• Uncountable nouns: too much and a little.\n• Both countable and uncountable: a lot of.\n\nExercise 4 (Page 25): Completing Sentences with Quantifiers:\na. a lot of / a few\nb. too many\nc. too much\nd. too many\ne. a little\nf. a few / a lot of",
+            "exercises": [
+              {
+                "id": "u2_l2_ex1",
+                "num": "Exercise 1 (Page 24)",
+                "title": "Complete the spider diagram. Use the words from the box.",
+                "title_ar": "أكمل المخطط العنكبوتي بتصنيف الأطعمة الصحية وغير الصحية من الصندوق:",
+                "words_box": [
+                  "apple",
+                  "biscuits",
+                  "burger",
+                  "coke",
+                  "crisps",
+                  "cucumber",
+                  "lettuce",
+                  "strawberries",
+                  "sugar",
+                  "water"
+                ],
+                "questions": [
+                  {
+                    "q": "Very good for you (أطعمة ومشروبات صحية ومفيدة جداً):",
+                    "q_ar": "الأطعمة المفيدة جداً للجسم:",
+                    "a": "• apple (تفاح)\n• cucumber (خيار)\n• lettuce (خس)\n• strawberries (فراولة)\n• water (ماء نقي)"
+                  },
+                  {
+                    "q": "Not so good for you (أطعمة غير صحية ينبغي عدم الإكثار منها):",
+                    "q_ar": "الأطعمة غير المفيدة عند الإفراط في تناولها:",
+                    "a": "• biscuits (بسكويت)\n• burger (برغر)\n• coke (مشروب كولا غازي)\n• crisps (رقائق بطاطا مقلية)\n• sugar (سكر مضاف)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l2_ex2",
+                "num": "Exercise 2 (Page 24)",
+                "title": "Answer the questions about Nurse Janette's report in your Student's Book. Write complete sentences.",
+                "title_ar": "أجب عن الأسئلة المتعلقة بتقرير الممرضة جانيت (صفحة 18 من كتاب الطالب) بجمل كاملة:",
+                "questions": [
+                  {
+                    "q": "a. Which things are very good for us?",
+                    "q_ar": "ما هي الأطعمة والمشروبات المفيدة جداً لأجسامنا؟",
+                    "a": "Fish, fruit, vegetables and water are very good for us. (السمك، الفواكه، الخضروات، والماء مفيدة جداً لجسم الإنسان)."
+                  },
+                  {
+                    "q": "b. What should we not eat too much of?",
+                    "q_ar": "ما هي الأطعمة التي لا ينبغي أن نكثر من تناولها؟",
+                    "a": "We should not eat too much meat and cheese because they contain a lot of fat. (لا ينبغي الإكثار من اللحوم والأجبان لاحتوائها على نسب عالية من الدهون)."
+                  },
+                  {
+                    "q": "c. Which three things should we be careful about?",
+                    "q_ar": "ما هي العناصر الغذائية الثلاثة التي يجب أن نكون حذرين جداً بشأنها؟",
+                    "a": "We should be very careful about fat, salt and sugar. (يجب أن نتوخى الحذر الشديد من: الدهون، الملح، والسكريات)."
+                  },
+                  {
+                    "q": "d. Why was the food in Layla's bag not very healthy? (1 Crisps, 2 Chocolate bars, 3 Cola)",
+                    "q_ar": "لماذا لم تكن الأطعمة الموجودة في حقيبة ليلى صحية؟",
+                    "a": "1. Crisps: Because they have too much fat and salt. (لاحتوائها على الكثير من الدهون والملح)\n2. Chocolate bars: Because they have too much sugar and fat. (لاحتوائها على كميات مفرطة من السكر والدهون)\n3. Cola: Because it has too much sugar. (لاحتوائها على نسبة سكر عالية جداً)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l2_ex3",
+                "num": "Exercise 3 (Page 25)",
+                "title": "Use the examples to complete the grammatical rules for quantifiers (too much, too many, a little, a few, a lot of).",
+                "title_ar": "أكمل القواعد النحوية للمحددات وكلمات التعبير عن المقادير والكميات:",
+                "questions": [
+                  {
+                    "q": "Rule 1 (Countable Nouns - الأسماء المعدودة):",
+                    "q_ar": "قاعدة الأسماء المعدودة التي تقبل الجمع:",
+                    "a": "[too many] and [a few] can only be used before countable nouns. (يُستعملان حصراً مع الأسماء المعدودة: a few للقليل، و too many للكثير المفرط)."
+                  },
+                  {
+                    "q": "Rule 2 (Uncountable Nouns - الأسماء غير المعدودة):",
+                    "q_ar": "قاعدة الأسماء غير المعدودة أو الكميات:",
+                    "a": "[too much] and [a little] can only be used before uncountable nouns. (يُستعملان حصراً مع الأسماء غير المعدودة: a little للقليل، و too much للكثير المفرط)."
+                  },
+                  {
+                    "q": "Rule 3 (Both Countable and Uncountable):",
+                    "q_ar": "قاعدة الكلمات المشتركة بين المعدود وغير المعدود:",
+                    "a": "[a lot of] can be used before both countable and uncountable nouns. (تُستعمل مع كل من الأسماء المعدودة وغير المعدودة للتعبير عن الكثرة والوفرة)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l2_ex4",
+                "num": "Exercise 4 (Page 25)",
+                "title": "Complete the sentences using (a little, a few, too much, too many, a lot of).",
+                "title_ar": "املأ الفراغات بالمحدد والكمية المناسبة سياقياً وقواعدياً:",
+                "questions": [
+                  {
+                    "q": "a. I want _______ vegetables, please. I love them!",
+                    "q_ar": "أريد الخضروات من فضلك، فأنا أحبها:",
+                    "a": "a lot of (أو a few) ➔ الخضروات اسم جمع معدود، وبما أنه يحبها فـ a lot of هي الأنسب."
+                  },
+                  {
+                    "q": "b. I've got _______ books in my bag, and I can't carry it.",
+                    "q_ar": "لدي كتب في حقيبتي ولا أستطيع حملها:",
+                    "a": "too many ➔ كتب (books) اسم جمع معدود، ودلالة العجز عن الحمل تفيد الكثرة المفرطة السيئة (too many)."
+                  },
+                  {
+                    "q": "c. I've got _______ homework. I'll never finish!",
+                    "q_ar": "لدي واجبات مدرسية ولن أنهيها أبداً:",
+                    "a": "too much ➔ كلمة (homework) اسم غير معدود، ودلالة عدم القدرة على الإنهاء تتطلب (too much)."
+                  },
+                  {
+                    "q": "d. You can't eat all those chocolate bars! That's _______!",
+                    "q_ar": "لا يمكنك أكل كل ألواح الشوكولاتة تلك! ذلك عدد مفرط:",
+                    "a": "too many! ➔ إشارة إلى عدد ألواح الشوكولاتة المعدودة (chocolate bars)."
+                  },
+                  {
+                    "q": "e. If you need help, I speak _______ French.",
+                    "q_ar": "إذا كنت بحاجة للمساعدة، فأنا أتحدث الفرنسية قليلاً:",
+                    "a": "a little ➔ اللغات والفرنسية اسم غير معدود، والمقصود القليل المفيد (a little)."
+                  },
+                  {
+                    "q": "f. I ate _______ crisps today and _______ fruit and vegetables. I ate healthy food today!",
+                    "q_ar": "أكلت رقائق البطاطا والفواكه والخضار:",
+                    "a": "a few / a lot of ➔ أكلت القليل من الشيبس (a few crisps) والكثير من الفواكه والخضار (a lot of fruit and vegetables)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          24,
+          25
         ]
       },
       {
@@ -1329,7 +1632,137 @@ window.CURRICULUM_DATA = [
             "page": 19,
             "heading": "Lesson 3: In a restaurant - The Menu (صفحة 19)",
             "text": "Look at the restaurant menu:\n\nMain Courses:\n• Lamb curry\n• Beef curry\n• Fried chicken\n• Burgers\n• Hot dogs\n• Pizza (Cheese and tomato)\n• Fried fish\n• Grilled fish\n• Baked potato\n\nDesserts:\n• Apple cake\n• Chocolate cake\n• Ice cream\n• Fruit salad\n\nDrinks:\n• Fruit juices\n• Milkshakes\n• Cola & Lemonade\n• Tea & Coffee\n• Mineral water\n\nVocabulary & Definitions:\n• lamb (n.): the meat of a sheep.\n• beef (n.): the meat of a cow.\n• fried (adj.): cooked in hot fat or oil.\n• grilled (adj.): cooked under strong heat or over a fire.\n• baked (adj.): cooked in an oven.\n\nIn the restaurant:\nWaiter: Good evening. Are you ready to order, sir?\nFather: Yes, thank you. Could I have the grilled fish with a baked potato, please?\nMeena: I would like a fruit salad and mineral water, please."
+          },
+          {
+            "id": 50601,
+            "is_activity_book": true,
+            "activity_book_page": 26,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 26 و 27): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 3: In a restaurant (Activity Book pp. 26-27)\n\nExercise 1 (Page 26): Ordering from the Menu (Track 8):\n• Waleed (W): Burgers, Fries, Chocolate cake, Ice cream, Cola.\n• Meena (M): Baked potato, Salad, Fruit salad, Ice cream, Orange juice.\n• Father (F): Grilled fish, Rice, Mineral water.\n\nExercise 2 (Page 26): Unhealthy Meal Evaluation:\n• Waleed's meal wasn't very healthy because it had too much fat and sugar (burger, fries, chocolate cake, ice cream, large cola).\n\nExercise 3 (Page 26): Restaurant Polite Phrases:\na. Are you ready to order, sir?\nb. I'd like a baked potato, please.\nc. What would you like to drink?\nd. Can I have a large cola, please?\n\nExercise 4 (Page 27): Meal Role-Play:\n• Meal: Grilled fish with rice and a fresh mixed salad.\n• Dessert: Fresh fruit salad with a little ice cream.\n• Drink: Mineral water or fresh orange juice.\n\nExercise 5 (Page 27): Cooking Methods & Meats:\na. cooked in hot fat or oil -> fried\nb. cooked in the oven -> baked\nc. cooked under strong heat -> grilled\nd. meat from a cow -> beef\ne. meat from a young sheep -> lamb",
+            "exercises": [
+              {
+                "id": "u2_l3_ex1",
+                "num": "Exercise 1 (Page 26)",
+                "title": "Listen to Track 8. What do the family order? Write M for Meena, W for Waleed, and F for Father.",
+                "title_ar": "استمع للمقطع الصوتي (8) واكتب رمز الطلب لكل فرد من العائلة (M لمينا، W لوليد، F للأب):",
+                "questions": [
+                  {
+                    "q": "Main Dishes & Vegetables (الأطباق الرئيسية والخضار):",
+                    "q_ar": "طلبات اللحوم والأسماك والخضار:",
+                    "a": "• Burgers: [W] (وليد)\n• Grilled fish: [F] (الأب طلب سمكاً مشوياً)\n• Baked potato: [M] (مينا طلبت بطاطا مشوية مع قليل من الزبدة)\n• Fries: [W] (وليد طلب بطاطا مقلية)\n• Salad: [M, W] (مينا طلبت سلطة مشكلة، وبرغر وليد يرافقه القليل من السلطة)\n• Rice: [F] (الأب طلب رزا مع السمك المشوي)"
+                  },
+                  {
+                    "q": "Desserts (الحلويات):",
+                    "q_ar": "طلبات الحلويات:",
+                    "a": "• Chocolate cake: [W] (وليد طلب قطعة كبيرة من كعكة الشوكولاتة)\n• Ice cream: [M, W] (مينا طلبت القليل، ووليد طلب كمية وافرة)\n• Fruit salad: [M] (مينا طلبت سلطة فواكه طازجة)"
+                  },
+                  {
+                    "q": "Drinks (المشروبات):",
+                    "q_ar": "طلبات المشروبات:",
+                    "a": "• Fruit juices (Orange juice): [M] (مينا طلبت عصير برتقال)\n• Cola: [W] (وليد طلب كولا بحجم كبير)\n• Mineral water: [F] (الأب طلب ماء معدنياً)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l3_ex2",
+                "num": "Exercise 2 (Page 26)",
+                "title": "Whose meal wasn't very healthy? Explain why.",
+                "title_ar": "أي وجبة من وجبات العائلة لم تكن صحية؟ ولماذا؟",
+                "questions": [
+                  {
+                    "q": "Whose meal wasn't very healthy?",
+                    "q_ar": "تقييم الوجبة غير الصحية:",
+                    "a": "Waleed's meal wasn't very healthy, because he ordered a burger, fries, a large piece of chocolate cake, ice cream, and a large cola, which all contain too much fat and sugar. (وجبة وليد لم تكن صحية لأنه أفرط في طلب الأطعمة المقلية والسكريات والدهون المشبعة والمشروبات الغازية)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l3_ex3",
+                "num": "Exercise 3 (Page 26)",
+                "title": "Complete the sentences for ordering politely in a restaurant.",
+                "title_ar": "أكمل جمل الطلب والتعامل الراقي في المطعم بين النادل والزبائن:",
+                "questions": [
+                  {
+                    "q": "a. _______ to order, sir?",
+                    "q_ar": "سؤال النادل للأب:",
+                    "a": "Are you ready ➔ \"Are you ready to order, sir?\" (هل أنتم جاهزون لتسجيل الطلب يا سيدي؟)"
+                  },
+                  {
+                    "q": "b. _______ a baked potato, please.",
+                    "q_ar": "طلب مينا المؤدب:",
+                    "a": "I'd like / Could I have ➔ \"I'd like a baked potato, please.\" (أرغب في بطاطا مشوية من فضلك)."
+                  },
+                  {
+                    "q": "c. What _______ to drink?",
+                    "q_ar": "سؤال النادل عن المشروبات:",
+                    "a": "would you like ➔ \"What would you like to drink?\" (ماذا ترغبون أن تشربوا؟)"
+                  },
+                  {
+                    "q": "d. _______ a large cola, please?",
+                    "q_ar": "طلب وليد للمشروب:",
+                    "a": "Can I have / Could I have ➔ \"Can I have a large cola, please?\" (هل يمكنني الحصول على كولا بحجم كبير من فضلك؟)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l3_ex4",
+                "num": "Exercise 4 (Page 27)",
+                "title": "Use the phrases from Exercise 3 to order a healthy balanced meal from the menu.",
+                "title_ar": "نموذج تقديم طلب متوازن وصحي من قائمة طعام المطعم:",
+                "questions": [
+                  {
+                    "q": "Model Healthy Order (الطلب الصحي المتكامل):",
+                    "q_ar": "تفاصيل الوجبة المتوازنة:",
+                    "a": "• Meal: I'd like the grilled fish with a baked potato and a mixed salad, please.\n• Dessert: Could I have a fresh fruit salad with a little ice cream, please?\n• Drink: I would like a glass of mineral water or fresh orange juice, please."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l3_ex5",
+                "num": "Exercise 5 (Page 27)",
+                "title": "Match the words from the box to their definitions.",
+                "title_ar": "طابق كلمات طرق الطهي وأنواع اللحوم من الصندوق مع تعاريفها:",
+                "words_box": [
+                  "baked",
+                  "beef",
+                  "fried",
+                  "grilled",
+                  "lamb"
+                ],
+                "questions": [
+                  {
+                    "q": "a. cooked in hot fat or oil ➔",
+                    "q_ar": "مطبوخ في زيت أو دهن ساخن:",
+                    "a": "fried (مقلي)"
+                  },
+                  {
+                    "q": "b. cooked in the oven ➔",
+                    "q_ar": "مطبوخ ومحمص داخل الفرن:",
+                    "a": "baked (مخبوز / بالفرن)"
+                  },
+                  {
+                    "q": "c. cooked under strong heat ➔",
+                    "q_ar": "مطبوخ تحت حرارة مباشرة عالية أو على الجمر:",
+                    "a": "grilled (مشوي)"
+                  },
+                  {
+                    "q": "d. meat from a cow ➔",
+                    "q_ar": "لحم مأخوذ من الأبقار:",
+                    "a": "beef (لحم بقر)"
+                  },
+                  {
+                    "q": "e. meat from a young sheep ➔",
+                    "q_ar": "لحم مأخوذ من صغار الخراف:",
+                    "a": "lamb (لحم ضأن / خروف)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          26,
+          27
         ]
       },
       {
@@ -1342,7 +1775,138 @@ window.CURRICULUM_DATA = [
             "page": 20,
             "heading": "Lesson 4: Aches and pains (صفحة 20)",
             "text": "Common Aches and Illnesses:\n• I have a stomach ache.\n• I have an earache.\n• I've got a toothache.\n• I've got a headache.\n(Note: We can say \"I've got a headache\" or \"My head aches\". They mean the same thing.)\n\nConversations:\n1. \"What's the matter, Ansam?\" - \"I've got a toothache.\" - \"Oh dear! You should go to the dentist.\" - \"Yes, I will.\"\n2. \"What's wrong, Anas?\" - \"I have a stomach ache, and I feel sick.\" - \"You shouldn't eat so many crisps in the break.\" - \"Yes, I think you're right.\"\n3. \"Are you all right, Jameel?\" - \"No, my ear hurts.\" - \"Oh, I'm sorry. You should go to the doctor.\" - \"I've been to the doctor. He gave me some drops. I have to put them in twice a day.\"\n4. \"You don't look well, Noora.\" - \"I've got a bad headache.\" - \"Oh dear. Here, take these two pills with some water.\" - \"Thanks very much.\""
+          },
+          {
+            "id": 50701,
+            "is_activity_book": true,
+            "activity_book_page": 28,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 28 و 29): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 4: Aches and pains (Activity Book pp. 28-29)\n\nExercise B (Page 28): Matching Sentences to Pictures:\n1. Ansam: I've got a toothache.\n2. Anas: I have a stomach ache.\n3. Jameel: I have an earache (My ear hurts).\n4. Noora: I've got a headache.\n\nExercise 1 (Page 28): Conversations (Ailments & Medicines):\n• Conversation 1: Are you all right, Jalal? / toothache / sorry / dentist.\n• Conversation 2: What's the matter, Mum? / have a headache / aches / pills and water.\n\nExercise 2 (Pages 28-29): Medical Clinic Notes (Track 11):\na. Noora: pain in ear, 2 drops, twice a day, 4 drops total, must not go swimming.\nb. Rasha: bad headache, needs glasses, thinks she looks not nice with glasses, must wear them all the time, painkillers, 2 pills 3 times a day.\n\nExercise 3 (Page 29): Summaries:\n• Noora: earache, put drops, twice, a few days, not go swimming.\n• Rasha: headache, hurts, needs glasses, doesn't like wearing them, should wear them all the time, headaches, painkillers, take two pills three times a day.\n\nExercise 4 (Page 29): Expressing Feelings:\na. 3 hours sleep -> tired / exhausted\nb. bad weather on boat -> frightened / terrified\nc. new baby boy -> happy / delighted\nd. holiday to Australia -> excited / thrilled\ne. friend ill in hospital -> worried / upset\nf. exercise 5 times a week -> fit and healthy",
+            "exercises": [
+              {
+                "id": "u2_l4_exB",
+                "num": "Exercise B (Page 28)",
+                "title": "Match the sentences to the pictures (Common Ailments).",
+                "title_ar": "طابق الشكاوى الصحية والآلام مع الصور في كتاب الطالب:",
+                "questions": [
+                  {
+                    "q": "Sentences matched to pictures 1—4:",
+                    "q_ar": "مطابقة العبارات مع الصور:",
+                    "a": "• Picture 1 (Ansam): I've got a toothache. (ألم في الأسنان)\n• Picture 2 (Anas): I have a stomach ache. (ألم ومغص في المعدة)\n• Picture 3 (Jameel): I have an earache / My ear hurts. (ألم في الأذن)\n• Picture 4 (Noora): I've got a headache. (صداع في الرأس)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l4_ex1",
+                "num": "Exercise 1 (Page 28)",
+                "title": "Complete the conversations. Use the words from the box.",
+                "title_ar": "أكمل المحادثتين بالكلمات المناسبة من الصندوق:",
+                "words_box": [
+                  "aches",
+                  "all",
+                  "dentist",
+                  "have",
+                  "headache",
+                  "matter",
+                  "pills",
+                  "right",
+                  "sorry",
+                  "toothache",
+                  "water"
+                ],
+                "questions": [
+                  {
+                    "q": "Conversation 1 (A & B with Jalal):",
+                    "q_ar": "المحادثة الأولى مع جلال:",
+                    "a": "A: Are you [all] [right], Jalal?\nB: I've got a [toothache]. My tooth really hurts.\nA: Oh, I'm [sorry]. You should go to the [dentist]."
+                  },
+                  {
+                    "q": "Conversation 2 (C & D with Mum):",
+                    "q_ar": "المحادثة الثانية مع الأم:",
+                    "a": "C: What's the [matter], Mum?\nD: I [have] a [headache]. My head really [aches].\nC: Oh, dear. Shall I get you some [pills] and [water]?\nD: Yes, please."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l4_ex2",
+                "num": "Exercise 2 (Pages 28 - 29)",
+                "title": "Listen to Track 11 and answer the questions about Noora and Rasha. Write notes.",
+                "title_ar": "استمع للمقطع الصوتي (11) وسجل ملاحظات طبية دقيقة عن حالة نورة ورشا:",
+                "questions": [
+                  {
+                    "q": "a. Noora's Earache (حالة نورة والأذن):",
+                    "q_ar": "أسئلة حالة نورة (1-5):",
+                    "a": "1. What is wrong with Noora? ➔ She has a pain in her ear (an earache).\n2. What did the doctor put in her ear? ➔ Two drops of medicine.\n3. How many times a day should Noora use the medicine? ➔ Twice a day.\n4. How many drops should Noora use each day? ➔ Four drops (two drops, twice a day).\n5. What should she not do? ➔ She should not go swimming until it's better."
+                  },
+                  {
+                    "q": "b. Rasha's Headache (حالة رشا والصداع والنظارات):",
+                    "q_ar": "أسئلة حالة رشا (1-6):",
+                    "a": "1. What is wrong with Rasha? ➔ She has a very bad headache that hurts all the time.\n2. What does Rasha need to wear? ➔ Glasses.\n3. Why does she not like wearing them? ➔ Because she thinks she doesn't look nice with glasses.\n4. What should she do to stop her headaches? ➔ She should wear her glasses all the time.\n5. What did the doctor give Rasha? ➔ Painkillers (a box of 12 pills).\n6. How many times a day should she take them? ➔ Three times a day (two pills, three times a day)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l4_ex3",
+                "num": "Exercise 3 (Page 29)",
+                "title": "Use your answers to complete the summary paragraphs.",
+                "title_ar": "استخدم إجاباتك السابقة لإكمال الفقرتين التلخيصيتين عن استشارة الطبيب:",
+                "questions": [
+                  {
+                    "q": "Noora's Summary (فقرة نورة):",
+                    "q_ar": "ملخص حالة نورة:",
+                    "a": "Noora had [a pain in her ear / an earache], so she went to the doctor. The doctor [put drops] in Noora's ear. Noora should do this [twice] a day. Her ear will be better in [a few days]. Noora should [not go swimming]."
+                  },
+                  {
+                    "q": "Rasha's Summary (فقرة رشا):",
+                    "q_ar": "ملخص حالة رشا:",
+                    "a": "Rasha had a very bad [headache]. It [hurts] all the time. Rasha [needs glasses], but she [doesn't like wearing them]. The doctor said Rasha [should wear them all the time]. If she doesn't, she will have [headaches] all the time, and her eyes will get worse. The doctor gave her [painkillers / pills]. She [should take two pills three times a day]."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l4_ex4",
+                "num": "Exercise 4 (Page 29)",
+                "title": "How would you feel in these situations? (Expressing feelings and emotions)",
+                "title_ar": "بماذا تشعر في كل من المواقف والظروف الآتية؟ (التعبير عن المشاعر والأحاسيس):",
+                "questions": [
+                  {
+                    "q": "a. Last night, you had only three hours sleep.",
+                    "q_ar": "نمت الليلة الماضية 3 ساعات فقط:",
+                    "a": "'I feel tired / exhausted.' (أشعر بالتعب والإرهاق الشديد)."
+                  },
+                  {
+                    "q": "b. You are out on a boat. The weather gets very bad, and water starts coming into the boat.",
+                    "q_ar": "أنت في قارب وساء الجو وبدأ الماء يدخل القارب:",
+                    "a": "'I feel frightened / terrified.' (أشعر بالخوف والرعب الشديد)."
+                  },
+                  {
+                    "q": "c. Your older sister has just had a baby boy.",
+                    "q_ar": "رُزقت أختك الكبرى بمولود ذكر جديد:",
+                    "a": "'I feel happy / delighted.' (أشعر بالسعادة والفرحة الغامرة)."
+                  },
+                  {
+                    "q": "d. Your father has just told you that the family are going to Australia for a holiday.",
+                    "q_ar": "أخبركم والدكم أن العائلة ستسافر إلى أستراليا في إجازة:",
+                    "a": "'I feel excited / thrilled.' (أشعر بالحماس والبهجة الكبيرة)."
+                  },
+                  {
+                    "q": "e. Your friend is very ill in hospital.",
+                    "q_ar": "صديقك يرقد مريضاً في المستشفى:",
+                    "a": "'I feel worried / upset.' (أشعر بالقلق والحزن الشديد عليه)."
+                  },
+                  {
+                    "q": "f. You take exercise five times a week.",
+                    "q_ar": "تمارس التمارين الرياضية خمس مرات أسبوعياً:",
+                    "a": "'I feel fit and energetic.' (أشعر باللياقة والنشاط والحيوية)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          28,
+          29
         ]
       },
       {
@@ -1355,7 +1919,117 @@ window.CURRICULUM_DATA = [
             "page": 21,
             "heading": "Lesson 5: Jalal's story - A true story (صفحة 21)",
             "text": "A true story written by Jalal for the school magazine:\n\nI sometimes have to look after my little brother Ibrahim for an hour or so when my parents go out. Ibrahim is eight. He always wants me to play with him, but I want him to play by himself.\nOne evening, I was playing a computer game. \"Jalal,\" Ibrahim said, \"I feel sick. I have a pain in my stomach.\"\n\"You're always saying that,\" I said without looking up. \"Go and sit down.\"\nAn hour later, he began crying loudly. He held his stomach. \"Jalal, it really hurts!\"\n\"Stop making that noise!\" I shouted. \"You're just pretending.\"\nA few minutes later, Ibrahim vomited, and he was very pale.\nJust then, my parents came home. My father saw Ibrahim and knew immediately that something was very wrong. He phoned for an ambulance.\nAt the hospital, the doctor examined Ibrahim. \"He has severe appendicitis,\" the surgeon said. \"We must operate immediately.\"\nThey took out his appendix and saved his life.\nI felt so guilty and cried. I had ignored my little brother when he was in agony. I learned a lesson I will never forget: never ignore someone when they say they are in pain."
+          },
+          {
+            "id": 50801,
+            "is_activity_book": true,
+            "activity_book_page": 30,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 30 و 31): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 5: Jalal's story (Activity Book pp. 30-31)\n\nExercise 1 (Page 30): Comprehension Questions on Jalal's Story:\na. Does Jalal enjoy playing with Ibrahim? -> No, he doesn't. Words: 'He always wants me to play with him. I want him to play by himself.'\nb. Did Ibrahim say he felt sick a few times or many times? -> Many times. Words: 'again and again'.\nc. Did Jalal believe Ibrahim was sick? -> No, he didn't.\nd. In line 16, what does 'That' refer to? -> That Ibrahim was genuinely in severe pain and needed emergency hospital care.\ne. Where did Ibrahim have to go? -> To hospital.\nf. Did Ibrahim die? -> No, he didn't. The doctor operated and saved his life.\n\nExercise 2 (Page 30): Vocabulary Meaning:\na. an hour or so -> about an hour\nb. unusual -> what someone does not usually do\nc. Jalal was surprised -> Jalal was shocked because something unexpected happened\nd. my fault -> something bad that happened because of me\n\nExercise 3 (Page 31): Sentences with 'want + pronoun + to + infinitive':\na. Our teacher wants us to work harder.\nb. My mother wants me to help her in the garden.\nc. My father wants me to ride my bike more carefully.\nd. My friend wants you to go to the park.\n\nExercise 4 (Page 31): Proofreading Marks & Corrected Paragraph:\n• join (ربط جملتين), gr. (تصحيح قواعدي), P. (علامات ترقيم), sp. (تصحيح إملائي), n.p. (فقرة جديدة).",
+            "exercises": [
+              {
+                "id": "u2_l5_ex1",
+                "num": "Exercise 1 (Page 30)",
+                "title": "Answer the questions about Jalal's story on Student's Book pages 20-21.",
+                "title_ar": "أجب عن الأسئلة الاستيعابية والامتحانية حول قصة جلال وأخيه إبراهيم:",
+                "questions": [
+                  {
+                    "q": "a. 1 Does Jalal enjoy playing with Ibrahim? 2 Which words tell you this?",
+                    "q_ar": "هل يستمتع جلال باللعب مع أخيه إبراهيم؟ وما هي العبارة التي تثبت ذلك؟",
+                    "a": "1. No, he doesn't.\n2. The words are: 'He always wants me to play with him. I want him to play by himself.' and 'I sometimes have to look after my little brother...'"
+                  },
+                  {
+                    "q": "b. 1 Did Ibrahim say he felt sick a few times or many times? 2 Which words tell you this?",
+                    "q_ar": "هل قال إبراهيم إنه يشعر بالمرض مرات قليلة أم مرات عديدة؟ وما الدليل؟",
+                    "a": "1. Many times.\n2. The words are: 'he said again and again' and 'You always say that, Ibrahim.'"
+                  },
+                  {
+                    "q": "c. Did Jalal believe Ibrahim was sick?",
+                    "q_ar": "هل صدق جلال أن أخاه مريض حقاً في البداية؟",
+                    "a": "No, he didn't. He thought Ibrahim was just pretending so Jalal would play with him. (كلا، ظن أنه يدعي المرض ليلعب معه)."
+                  },
+                  {
+                    "q": "d. In line 16, what does 'That' refer to?",
+                    "q_ar": "إلى ماذا تشير كلمة (That) في السطر 16؟",
+                    "a": "'That' refers to the fact that Ibrahim was genuinely ill and needed urgent medical help / his severe stomach pain. (تشير إلى خطورة مرض إبراهيم وحاجته الماسة لنقله للمستشفى)."
+                  },
+                  {
+                    "q": "e. Where did Ibrahim have to go?",
+                    "q_ar": "إلى أين توجب نقل إبراهيم فوراً؟",
+                    "a": "He had to go to hospital (for an emergency operation on his appendix). (إلى المستشفى لإجراء عملية جراحية طارئة للزائدة الدودية)."
+                  },
+                  {
+                    "q": "f. Did Ibrahim die?",
+                    "q_ar": "هل توفي إبراهيم؟",
+                    "a": "No, he didn't. The doctor operated and saved his life. (كلا، لم يمت، بل أجرى الطبيب العملية وأنقذ حياته)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l5_ex2",
+                "num": "Exercise 2 (Page 30)",
+                "title": "Choose and tick (✓) the correct meaning of the words and phrases below.",
+                "title_ar": "اختر المعنى الدقيق للكلمات والعبارات بوضع علامة (✓):",
+                "questions": [
+                  {
+                    "q": "a. an hour or so:",
+                    "q_ar": "معنى عبارة an hour or so:",
+                    "a": "✓ about an hour (حوالي ساعة تقريباً)"
+                  },
+                  {
+                    "q": "b. unusual:",
+                    "q_ar": "معنى كلمة unusual:",
+                    "a": "✓ what someone does not usually do (أمر غير مألوف أو معتاد)"
+                  },
+                  {
+                    "q": "c. Jalal was surprised:",
+                    "q_ar": "معنى عبارة Jalal was surprised:",
+                    "a": "✓ Jalal was shocked because something unexpected happened (صُدم لأن شيئاً خطيراً وغير متوقع قد حدث)"
+                  },
+                  {
+                    "q": "d. my fault:",
+                    "q_ar": "معنى عبارة my fault:",
+                    "a": "✓ something bad that happened because of me (خطأي وذنبي: أمر سيء وقع بسببي)"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l5_ex3",
+                "num": "Exercise 3 (Page 31)",
+                "title": "Use the table to write four sentences like: 'My brother wants me to play with him' (Pattern: want + pronoun + to + infinitive).",
+                "title_ar": "كون 4 جمل باستخدام قاعدة الطلب والرغبة (want + pronoun + to + infinitive):",
+                "questions": [
+                  {
+                    "q": "Four Grammatical Sentences:",
+                    "q_ar": "الجمل الأربع النموذجية:",
+                    "a": "a. Our teacher wants us to work harder. (يريد منا معلمنا أن نجتهد أكثر).\nb. My mother wants me to help her in the garden. (تريد مني والدتي مساعدتها في الحديقة).\nc. My father wants me to ride my bike more carefully. (يريد مني والدي أن أقود دراجتي بحذر أكبر).\nd. My friend wants you to go to the park. (صديقي يريد منك أن تذهب إلى المتنزه معه)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_l5_ex4",
+                "num": "Exercise 4 (Page 31)",
+                "title": "Proofreading marks: Correct Jalal's draft paragraph and explain what the editor marks mean.",
+                "title_ar": "تصحيح المسودة وتفسير علامات التدقيق اللغوي (Proofreading Marks):",
+                "questions": [
+                  {
+                    "q": "Explanation of Proofreading Marks (دلالة علامات التصحيح):",
+                    "q_ar": "معاني الرموز:",
+                    "a": "• join: اربط الجملتين في جملة واحدة متصلة المعنى بواسطة أداة ربط مناسبة.\n• gr. (grammar): خطأ نحوي؛ تصحيح فعل (played) إلى (was playing) لأنه حدث مستمر قطعه حدث آخر.\n• P. (punctuation): علامات ترقيم منقوصة (تنصيص وفواصل).\n• sp. (spelling): خطأ إملائي في كتابة كلمة (pane) والصحيح (pain).\n• n.p. (new paragraph): ابدأ فقرة جديدة."
+                  },
+                  {
+                    "q": "The Corrected Paragraph (الفقرة كاملة بعد التصحيح):",
+                    "q_ar": "النص بعد المراجعة:",
+                    "a": "\"I sometimes have to look after my little brother for an hour or so when my parents go out. Ibrahim is ten. He always wants me to play with him, but I want him to play by himself. One day, when I was playing a computer game, he said again and again, 'Jalal, I feel sick. I've got a pain in my stomach.'\n'You always say that, Ibrahim. There's nothing wrong with you,' I said. 'You haven't got a pain. You are a pain! Sit down and watch that video.'\""
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          30,
+          31
         ]
       },
       {
@@ -1368,7 +2042,56 @@ window.CURRICULUM_DATA = [
             "page": 22,
             "heading": "Lesson 6: Get well cards (صفحة 22)",
             "text": "When a friend or family member is ill or in hospital, we send them 'Get well' cards to show love and support.\n\nCard 1:\n\"Get well soon!\nThinking of you and wishing you a speedy recovery.\"\n\nCard 2 (Humorous):\n\"Heard you're feeling under the weather!\nDon't worry, the germs will get tired of you soon!\nGet well quickly!\"\n\nCard 3 (Poem):\n\"Sending warm wishes your way,\nTo brighten up your day.\nRest and heal, take it slow,\nWe all miss you so!\nGet well soon!\"\n\nKey questions:\n1. Which words are on all the cards? (\"Get well soon\")\n2. Why do people send funny cards? (To make the patient laugh and lift their spirits)\n3. When do we send 'Get well' cards? (When someone is sick, injured, or in hospital)"
+          },
+          {
+            "id": 50901,
+            "is_activity_book": true,
+            "activity_book_page": 32,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 32 و 33): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 6: Get well cards (Activity Book pp. 32-33)\n\nExercise B (Page 32): Matching Cards to Messages:\n• Card 1: Acrostic poem (GET WELL)\n• Card 2: Cheerful flower illustration with funny message\n• Card 3: Bandaged teddy bear with comforting rhyme\n• Card 4: Smiling sun and warm recovery wishes\n• Card 5: Serious respectful get-well note\n• Card 6: Humorous school homework message\n\nExercise 1 (Pages 32-33): Card Design & Messages:\n• Acrostic Poem (G-E-T W-E-L-L)\n• Funny Message: 'Please hurry up and get well! The class is too quiet and teacher is giving double homework!'\n• Serious Message: 'Wishing you a full and speedy recovery.'",
+            "exercises": [
+              {
+                "id": "u2_l6_exB",
+                "num": "Exercise B (Page 32)",
+                "title": "Match the card designs (1—6) to the messages inside (from Student's Book page 22).",
+                "title_ar": "طابق تصميم بطاقات الشفاء مع الرسائل المدونة بداخلها:",
+                "questions": [
+                  {
+                    "q": "Matching Cards 1 to 6:",
+                    "q_ar": "مطابقة البطاقات الست:",
+                    "a": "• Card 1 ➔ Acrostic poem (G-E-T W-E-L-L)\n• Card 2 ➔ Cheerful flower cartoon with funny message\n• Card 3 ➔ Bandaged teddy bear with comforting rhyme\n• Card 4 ➔ Smiling sun and nature wishes\n• Card 5 ➔ Serious, respectful recovery message\n• Card 6 ➔ Humorous school-related get-well note"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l6_ex1",
+                "num": "Exercise 1 (Pages 32 - 33)",
+                "title": "Design a 'Get well' card and write three different styles of messages (Acrostic poem, Funny message, Serious message).",
+                "title_ar": "صمم بطاقة تمنيات بالشفاء واكتب 3 نماذج من الرسائل (شعر بحروف الكلمة، رسالة فكاهية، ورسالة رقيقة وجادة):",
+                "questions": [
+                  {
+                    "q": "a. Acrostic Poem (GET WELL - شعر يبدأ كل سطر بحرف من الكلمة):",
+                    "q_ar": "نموذج الشعر التفاعلي:",
+                    "a": "G - Get well very soon,\nE - Every day brings you strength,\nT - Take all the time you need,\nW - We miss you in every class,\nE - Everyone sends you great love,\nL - Lots of warm hugs and smiles,\nL - Looking forward to your return!"
+                  },
+                  {
+                    "q": "b. Funny Message (رسالة فكاهية مرحة):",
+                    "q_ar": "نموذج الرسالة الفكاهية:",
+                    "a": "\"Please hurry up and get well soon! The classroom is way too quiet without you, and the teacher is giving us double homework because there's nobody making jokes!\""
+                  },
+                  {
+                    "q": "c. Serious Message (رسالة محبة رقيقة وجادة):",
+                    "q_ar": "نموذج الرسالة الرسمية الودية:",
+                    "a": "\"Dear friend, I was deeply saddened to hear about your illness. Please get plenty of rest and take good care of yourself. Wishing you a full and speedy recovery!\""
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          32,
+          33
         ]
       },
       {
@@ -1381,7 +2104,64 @@ window.CURRICULUM_DATA = [
             "page": 23,
             "heading": "Lesson 7: An informal letter to a sick friend (صفحة 23)",
             "text": "Sara's friend Marwa was in hospital after an accident. Sara wrote her an informal letter:\n\nAddress and Date:\nFlat 411, Street 36, Baghdad\n14th March 2021\n\nGreeting:\nDear Marwa,\n\nLetter Body:\nI was very sorry to hear about your accident. I hope your leg doesn't hurt too much and that you will be able to leave hospital soon.\nWe have had a busy week at school. In English, we are learning about healthy food and writing articles. Our teacher Mrs Noor asked us to make 'Get well' cards, and everyone made one for you!\nI am sending you our school magazine and some puzzle books so you won't get bored in bed. All the girls in our class send their love and best wishes.\nLet me know when you can have visitors. I would love to come and see you.\n\nSign-off:\nBest wishes,\nSara"
+          },
+          {
+            "id": 51001,
+            "is_activity_book": true,
+            "activity_book_page": 34,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 34 و 35): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 7: A letter (Activity Book pp. 34-35)\n\nExercise 1 (Page 34): Correcting the 11 Mistakes in Sara's Letter:\n1. acident -> accident\n2. you're leg -> your leg\n3. will can leave -> will be able to leave (or can leave)\n4. a visits -> a visit\n5. We have -> We had\n6. intresting -> interesting\n7. really enjoy it -> really enjoyed it\n8. We learning -> We learned / were learning\n9. I show them -> I will show them\n10. when your back -> when you're back\n11. wishes we will come -> wishes. We will come\n\nExercise 2 (Page 35): Preparation Notes for Writing to a Sick Friend:\n• Who: friend Ali.\n• Accident: fell off bike and broke arm.\n• 3 school events: science experiment, football victory 2-0, healthy lifestyle project.\n• Get-well wish: miss you and visit this Thursday.\n\nExercise 3 (Page 35): Full Model Letter to a Sick Friend.",
+            "exercises": [
+              {
+                "id": "u2_l7_ex1",
+                "num": "Exercise 1 (Page 34)",
+                "title": "Read the draft of Sara's letter to Muna. Correct the 11 marked mistakes.",
+                "title_ar": "اقرأ مسودة رسالة سارة وصحح الأخطاء الإملائية والقواعدية الـ 11 المحددة بالأسهم:",
+                "questions": [
+                  {
+                    "q": "The 11 Corrections (تصحيح الأخطاء الـ 11 بالترتيب):",
+                    "q_ar": "جدول تصحيح الأخطاء:",
+                    "a": "1. acident ➔ accident (خطأ إملائي spelling)\n2. you're leg ➔ your leg (كلمة خاطئة: ضمير ملكية your وليس you are)\n3. will can leave ➔ will be able to leave (أو can leave - لا يجتمع فعلان ناقصان معاً)\n4. a visits ➔ a visit (اسم مفرد بعد أداة التنكير a)\n5. We have ➔ We had (زمن ماضٍ past simple)\n6. intresting ➔ interesting (خطأ إملائي spelling)\n7. really enjoy it ➔ really enjoyed it (زمن ماضٍ past simple)\n8. We learning ➔ We learned / were learning (صيغة فعل ماضٍ)\n9. I show them ➔ I will show them (صيغة المستقبل مع will)\n10. when your back ➔ when you're back (كلمة خاطئة: you are back)\n11. wishes we will come ➔ wishes. We will come (جملة جديدة تبدأ بحرف كبير new sentence)"
+                  },
+                  {
+                    "q": "Full Corrected Letter (نص الرسالة المصححة بالكامل):",
+                    "q_ar": "الرسالة بعد المعالجة:",
+                    "a": "411, 36, 7\nKarrada, Baghdad\n4th March 2021\n\nDear Muna,\nI was very sorry to hear about your accident. I hope your leg does not hurt too much and that you will be able to leave hospital soon.\n\nWe had an unusual week at school. First, we had a visit from a nurse called Janette. She gave us a talk about food. It was very interesting, and I really enjoyed it. Now I can tell you which food is good for you and which is not so good.\n\nThen, we had a visit from a netball coach. She was fantastic. We learned a lot from her. She showed us little things to make our game better. I will show them to you when you're back at school.\n\nAll your friends in class miss you and send you their best wishes. We will come and see you on Friday if you are still in hospital.\n\nLove,\nSara"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l7_ex2",
+                "num": "Exercise 2 (Page 35)",
+                "title": "Make notes in preparation to write a letter to a sick friend.",
+                "title_ar": "دوّن ملاحظات تحضيرية لكتابة رسالة لصديق مريض:",
+                "questions": [
+                  {
+                    "q": "Preparation Notes:",
+                    "q_ar": "عناصر الملاحظات:",
+                    "a": "• Who are you writing to? ➔ My friend Ali.\n• What happened to them? ➔ He fell off his bicycle and broke his arm.\n• Three interesting things that happened in school: 1. We had a great science experiment in the lab. 2. Our school football team won 2-0. 3. We started a new English project.\n• Say something to make your friend feel better: ➔ We all miss you very much and can't wait to play football together again!"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l7_ex3",
+                "num": "Exercise 3 (Page 35)",
+                "title": "Write a complete letter to your sick friend using your notes.",
+                "title_ar": "نموذج وزاري متكامل لرسالة إلى صديق مريض (A letter to a sick friend):",
+                "questions": [
+                  {
+                    "q": "Full Model Letter (نموذج الرسالة المعتمد كاملاً):",
+                    "q_ar": "الإنشاء النموذجي المعتمد:",
+                    "a": "12 Al-Mansour Street,\nBaghdad, Iraq\n15th October 2026\n\nDear Ali,\n\nI was very sorry to hear about your accident. I hope your arm does not hurt too much and that you are resting well at home.\n\nWe have had a very busy and exciting week at school. First, our science teacher showed us a fantastic experiment in the laboratory about chemical reactions. Secondly, our class team played a great football match and we won 2-0! Lastly, we started our new English project about healthy living, and everyone is participating.\n\nAll your classmates miss you deeply and send you their warmest wishes. I will come to visit you this Thursday afternoon to bring you the class notes and homework.\n\nGet well soon!\n\nBest wishes,\nAhmed"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          34,
+          35
         ]
       },
       {
@@ -1394,7 +2174,69 @@ window.CURRICULUM_DATA = [
             "page": 24,
             "heading": "Lesson 8: Limericks - English Humorous Poetry (صفحة 24)",
             "text": "A limerick is a short, funny poem that always follows strict rules:\n• It has five lines.\n• Lines 1, 2, and 5 rhyme together (Rhyme A) and have three beats.\n• Lines 3 and 4 rhyme together (Rhyme B) and are shorter with two beats.\n• The rhyme scheme is: A A B B A.\n\nLimerick 1 (The Girl from Peru):\nThere once was a girl from Peru, (A)\nWho was trying to paint her roof blue. (A)\nShe felt a bit faint, (B)\nAnd spilt all the paint, (B)\nSo now she'll be needing shampoo! (A)\n\nLimerick 2 (The Young Man from Tibet):\nThere was a young man from Tibet, (A)\nWho had an incredible pet. (A)\nHe found out its wings, (B)\nWere held on with strings, (B)\nAnd now he is very upset! (A)\n\nLimerick 3 (The Boy from Kuwait):\nThere was a young boy from Kuwait, (A)\nWho got to school every day late. (A)\nWhen his teacher asked \"Why?\", (B)\nHe replied with a cry, (B)\n\"My clock always wakes me at eight!\" (A)\n\nLimerick 4 (The Old Man from Jaipur):\nThere was an old man from Jaipur, (A)\nWhose house had a green and blue door. (A)\nI said, \"I like white.\" (B)\nHe said, \"That's all right, (B)\nBut I think that white is a bore!\" (A)"
+          },
+          {
+            "id": 51101,
+            "is_activity_book": true,
+            "activity_book_page": 36,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 36 و 37): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 2 Lesson 8: Limericks (Activity Book pp. 36-37)\n\nExercise 1 (Page 36): Jumbled Limericks (AABBA Rhyme Scheme):\na. Spider Limerick:\n   1. I once met a spider in a corner,\n   2. Who said it was getting cooler and cooler.\n   3. I turned up the heat.\n   4. It worked like a treat,\n   5. And now the spider is warmer.\nb. Chicken Limerick:\n   1. One day, I was talking to a chicken.\n   2. It said it wanted to be a pigeon.\n   3. It wanted to fly.\n   4. Don't ask me why.\n   5. It ended up in the kitchen.\n\nExercise 3 (Page 37): Complete Limericks:\na. Kuwait Boy: boy, Kuwait, school, late, teacher, Why?, cry, clock, eight.\nb. Jaipur Man: man, Jaipur, house, door, white, right, bore.\n\nExercise C (Page 36): Original Limerick Model.",
+            "exercises": [
+              {
+                "id": "u2_l8_ex1",
+                "num": "Exercise 1 (Page 36)",
+                "title": "Read the jumbled limericks. Can you put them in the correct order? (AABBA Rhyme Scheme)",
+                "title_ar": "رتب أبيات القصائد الفكاهية المشوشة بالترتيب الصحيح (قافية AABBA):",
+                "questions": [
+                  {
+                    "q": "a. The Spider Limerick (ترتيب قصيدة العنكبوت):",
+                    "q_ar": "الترتيب الصحيح للأسطر الخمسة:",
+                    "a": "1. I once met a spider in a corner, [1]\n2. Who said it was getting cooler and cooler. [2]\n3. I turned up the heat. [3]\n4. It worked like a treat, [4]\n5. And now the spider is warmer. [5]"
+                  },
+                  {
+                    "q": "b. The Chicken Limerick (ترتيب قصيدة الدجاجة):",
+                    "q_ar": "الترتيب الصحيح للأسطر الخمسة:",
+                    "a": "1. One day, I was talking to a chicken. [1]\n2. It said it wanted to be a pigeon. [2]\n3. It wanted to fly. [3]\n4. Don't ask me why. [4]\n5. It ended up in the kitchen. [5]"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l8_ex3",
+                "num": "Exercise 3 (Page 37)",
+                "title": "Complete the limericks using the words from the boxes (Tracks 13 & 14).",
+                "title_ar": "أكمل القصائد الفكاهية بالكلمات الصحيحة من الصناديق لتكتمل القافية والوزن الإيقاعي:",
+                "questions": [
+                  {
+                    "q": "a. The Kuwait Boy Limerick (قصيدة فتى الكويت):",
+                    "q_ar": "الكلمات المناسبة من الصندوق الأول:",
+                    "a": "There was a young [boy] from [Kuwait]\nWho got to [school] every day [late].\nWhen his [teacher] asked '[Why?]',\nHe replied with a [cry],\n'My [clock] always wakes me at [eight]!'"
+                  },
+                  {
+                    "q": "b. The Jaipur Man Limerick (قصيدة رجل جايبور):",
+                    "q_ar": "الكلمات المناسبة من الصندوق الثاني:",
+                    "a": "There was an old [man] from [Jaipur]\nWhose [house] had a green and blue [door].\nI said, 'I like [white].'\nHe said, 'That's all [right],\nBut I think that white is a [bore]!'"
+                  }
+                ]
+              },
+              {
+                "id": "u2_l8_exC",
+                "num": "Exercise C (Page 36)",
+                "title": "Write your own original 5-line limerick with an AABBA rhyme pattern.",
+                "title_ar": "نموذج تأليف قصيدة ليمريك فكاهية متوافقة مع القافية:",
+                "questions": [
+                  {
+                    "q": "Original Limerick Model (نموذج قصيدة ليمريك أصيلة):",
+                    "q_ar": "القصيدة وقافيتها (AABBA):",
+                    "a": "There was a young student named Dan, (A)\nWho ran just as fast as he can. (A)\nHe tripped on a rock, (B)\nAnd damaged his clock, (B)\nThen landed right inside a pan! (A)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          36,
+          37
         ]
       },
       {
@@ -1407,7 +2249,112 @@ window.CURRICULUM_DATA = [
             "page": 25,
             "heading": "Unit 2 Round Up - مراجعة الوحدة الثانية (صفحة 25)",
             "text": "In Unit 2, you have practised:\n1. Giving advice with should and shouldn't:\n   • You should get fit and keep fit.\n   • You shouldn't watch TV all the time.\n   • You should take exercise regularly.\n\n2. Saying how often you do things (Frequency):\n   • I play chess twice a week.\n   • I go walking three times a week.\n   • I take exercise regularly.\n\n3. Using words to show amounts (Quantifiers):\n   • A little salt on your food is all right.\n   • Too much sugar is bad for your teeth.\n   • A few biscuits are OK.\n   • Too many fries will make you unhealthy.\n   • I drink a lot of water every day.\n\n4. Saying what is wrong when you are ill:\n   • I don't feel well.\n   • I've got a headache / stomach ache / toothache / earache.\n   • My arm hurts.\n\n5. Expressing feelings in different situations:\n   • I feel frightened / excited / bored / sick.\n\n6. Using the pattern: want + pronoun/noun + to + infinitive:\n   • Your father wants you to help him in his shop.\n   • My mother wants me to eat more vegetables and fruit.\n\n7. Key skills:\n   • Ordering food politely from a restaurant menu.\n   • Giving advice to friends who feel sick.\n   • Writing an informal letter and making a 'Get well' card.\n   • Reading and writing 5-line limericks with AABBA rhyme."
+          },
+          {
+            "id": 51201,
+            "is_activity_book": true,
+            "activity_book_page": 38,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 38): مراجعة الوحدة الشاملة والحلول النموذجية",
+            "text": "Unit 2 Round Up: Activity Book (Page 38)\n\nExercise 1 (Page 38): Word Order Sentences:\na. The doctor wants you to see him tomorrow.\nb. Nadia has a pain in her ear.\nc. Too many sweets are bad for your teeth.\nd. You shouldn't let small children climb trees.\ne. If you have a toothache, you should see a dentist.\n\nExercise 2 (Page 38): Punctuation:\na. \"Would you like to go to a restaurant this evening?\" she asked.\nb. \"I don't know what to do,\" said Ali. \"I agreed to meet Jamal, but I can't remember where.\"\n\nExercise 3 (Page 38): Emotions & Feelings:\na. frightened\nb. excited\nc. surprised / worried\nd. happy / wonderful\ne. upset",
+            "exercises": [
+              {
+                "id": "u2_roundup_ex1",
+                "num": "Exercise 1 (Page 38)",
+                "title": "Put the words in the correct order to make complete grammatical sentences.",
+                "title_ar": "أعد ترتيب الكلمات التالية لتكوين جمل تامة المعنى وقواعدية صحيحة:",
+                "questions": [
+                  {
+                    "q": "a. you / The / doctor / to / tomorrow / see / wants / him",
+                    "q_ar": "ترتيب الجملة a:",
+                    "a": "The doctor wants you to see him tomorrow. (يريد منك الطبيب أن تراجعه غداً)."
+                  },
+                  {
+                    "q": "b. pain / her / has / ear / Nadia / a / in",
+                    "q_ar": "ترتيب الجملة b:",
+                    "a": "Nadia has a pain in her ear. (نادية تعاني من ألم في أذنها)."
+                  },
+                  {
+                    "q": "c. are / many / sweets / teeth / Too / for / your / bad",
+                    "q_ar": "ترتيب الجملة c:",
+                    "a": "Too many sweets are bad for your teeth. (كثرة الحلويات المفرطة ضارة بأسنانك)."
+                  },
+                  {
+                    "q": "d. small / climb / shouldn't / trees / You / children / let",
+                    "q_ar": "ترتيب الجملة d:",
+                    "a": "You shouldn't let small children climb trees. (لا ينبغي أن تدع الأطفال الصغار يتسلقون الأشجار)."
+                  },
+                  {
+                    "q": "e. have / should / a / toothache / see / If / dentist / you / a / you",
+                    "q_ar": "ترتيب الجملة e:",
+                    "a": "If you have a toothache, you should see a dentist. (إذا كنت تعاني من ألم في أسنانك، فيجب عليك مراجعة طبيب الأسنان)."
+                  }
+                ]
+              },
+              {
+                "id": "u2_roundup_ex2",
+                "num": "Exercise 2 (Page 38)",
+                "title": "Write the sentences with the correct punctuation (Speech marks, question mark, capitals, commas).",
+                "title_ar": "أعد كتابة الجمل بوضع علامات الترقيم والتنصيص وعلامات الاستفهام والفواصل الصحيحة:",
+                "questions": [
+                  {
+                    "q": "a. would you like to go to a restaurant this evening she asked",
+                    "q_ar": "الجملة a مع علامات الترقيم:",
+                    "a": "\"Would you like to go to a restaurant this evening?\" she asked."
+                  },
+                  {
+                    "q": "b. i dont know what to do said ali i agreed to meet jamal but i cant remember where",
+                    "q_ar": "الجملة b مع علامات الترقيم:",
+                    "a": "\"I don't know what to do,\" said Ali. \"I agreed to meet Jamal, but I can't remember where.\""
+                  }
+                ]
+              },
+              {
+                "id": "u2_roundup_ex3",
+                "num": "Exercise 3 (Page 38)",
+                "title": "Complete the sentences. Use the feeling and emotion words from the box.",
+                "title_ar": "أكمل الجمل بكلمات المشاعر والأحاسيس المناسبة سياقياً من الصندوق:",
+                "words_box": [
+                  "excited",
+                  "frightened",
+                  "happy",
+                  "surprised",
+                  "upset",
+                  "wonderful",
+                  "worried"
+                ],
+                "questions": [
+                  {
+                    "q": "a. I get _______ when I read scary stories at night.",
+                    "q_ar": "أشعر بـ _______ عندما أقرأ قصصاً مخيفة بالليل:",
+                    "a": "frightened (أشعر بالخوف والرعب)."
+                  },
+                  {
+                    "q": "b. Jad and Johnny were very _______ about going on the Global Youth Magazine trip.",
+                    "q_ar": "كان جاد وجوني _______ للغاية بشأن الذهاب في الرحلة:",
+                    "a": "excited (كانا متحمسين جداً)."
+                  },
+                  {
+                    "q": "c. I was so _______ to pass the exam. I was _______ I had done badly.",
+                    "q_ar": "كنت _______ بنجاحي في الامتحان؛ حيث كنت _______ من أدائي:",
+                    "a": "surprised / worried (كنت متفاجئاً بنجاحي؛ حيث كنت قلقاً من الرسوب أو الأداء السيئ)."
+                  },
+                  {
+                    "q": "d. Dania was really _______ with the _______ present from her best friend.",
+                    "q_ar": "كانت دانية _______ بالهدية الـ _______ من صديقتها المفضلة:",
+                    "a": "happy / wonderful (كانت سعيدة للغاية بالهدية الرائعة)."
+                  },
+                  {
+                    "q": "e. Arguing with my sister makes me feel _______.",
+                    "q_ar": "الجدال مع أختي يجعلني أشعر بـ _______:",
+                    "a": "upset (يجعلني أشعر بالانزعاج والضيق)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          38
         ]
       },
       {
@@ -1426,7 +2373,90 @@ window.CURRICULUM_DATA = [
             "page": 27,
             "heading": "Story Time: Jad and Johnny - Camping at Stonehenge (Part 2 - صفحة 27)",
             "text": "\"Stonehenge is a landing place for alien spaceships,\" Jad joked. The other boys laughed, but I wasn't laughing.\n\"I think this place is scary,\" I said.\n\"Oh, I don't think it's scary,\" said Clara. \"It's beautiful, especially first thing in the morning.\"\n\"And I've got some good news,\" said Tom. \"We're going to camp here tonight so you can see the sunrise tomorrow morning ... at 5:15 AM!\"\n\"Camp here?\" I asked. I was nervous.\n\"5:15?\" Jad complained. \"That's too early!\"\n\nIn the evening, we built a campfire and sat in a circle. We toasted marshmallows and drank hot chocolate. The other boys took turns telling spooky stories. They were all having fun, but I was still uneasy.\nDuring the night, I woke up in my tent because there was a strange, rustling noise outside.\n\"What was that?\" I whispered.\nThe noise happened again. Something was right outside our tent canvas!\n\"It could be ... aliens,\" I whispered.\n\"Or maybe it's a giant!\" said Aziz, scared now too.\nMarcus opened the tent flap and burst out laughing. It wasn't an alien or a giant at all - it was a fluffy sheep calmly chewing on our marshmallows!\n\nTom woke us up early the next morning. It was still dark as we walked to the stones. We stood in the centre of the circle and waited. At exactly 5:00 AM, the glorious golden sun started to rise over the horizon.\n\"That is breathtaking,\" said Paolo.\n\"It's amazing!\" said Marcus, clicking photographs with his camera.\n\"Aren't you happy you got up early, Jad?\" I turned to ask.\nThere was no answer. I turned around and saw him sitting against one of the ancient stones. His eyes were closed, and he was fast asleep!\nI picked up his camera and took a photograph of him. \"Now it's my turn to take a funny photograph!\" I laughed."
+          },
+          {
+            "id": 51301,
+            "is_activity_book": true,
+            "activity_book_page": 39,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 39): أسئلة القصة الاستيعابية والحلول النموذجية",
+            "text": "Unit 2 Story Time: Jad and Johnny - Camping at Stonehenge (Activity Book Page 39)\n\nExercise 1 (Page 39): Story Analysis Card:\n• Title: Jad and Johnny - Camping at Stonehenge\n• Characters: Johnny, Jad, Tom, Marcus, Clara, Aziz, Paolo\n• What it is about: The boys visit Stonehenge, camp overnight, get scared by a noise which is just a sheep eating marshmallows, and watch the sunrise.\n• Why I liked/didn't like it: Exciting, mysterious and humorous twist.\n• New words: Stonehenge, ancient, mystery, aliens, canvas, marshmallows, breathtaking.\n\nExercise 2 (Page 39): Comprehension Questions:\na. Why was Stonehenge built? -> Unknown for sure (ancient temple, calendar, or astronomical observatory).\nb. Who do some people think built it? -> Giants, magic, or aliens.\nc. What makes Stonehenge surprising? -> Huge stones built 4,000 years ago without modern machines.\nd. How does it make Johnny feel? -> Nervous and scary.\ne. Why camp at Stonehenge? -> To see the spectacular sunrise at 5:15 AM.\nf. Why afraid of a sheep? -> In the dark they imagined it was an alien or a giant eating their food.",
+            "exercises": [
+              {
+                "id": "u2_story_ex1",
+                "num": "Exercise 1 (Page 39)",
+                "title": "Complete the Story Analysis Card for 'Jad and Johnny - Camping at Stonehenge'.",
+                "title_ar": "أكمل بطاقة التحليل الأدبي والبيانات الأساسية لقصة (جاد وجوني - التخييم في ستونهنج):",
+                "questions": [
+                  {
+                    "q": "a. Title (عنوان القصة):",
+                    "q_ar": "العنوان:",
+                    "a": "Jad and Johnny - Camping at Stonehenge (جاد وجوني - التخييم عند آثار ستونهنج)"
+                  },
+                  {
+                    "q": "b. Characters (شخصيات القصة):",
+                    "q_ar": "الشخصيات:",
+                    "a": "Johnny, Jad, Tom (the guide), Marcus, Clara, Aziz, and Paolo."
+                  },
+                  {
+                    "q": "c. What it is about (موضوع وفكرة القصة):",
+                    "q_ar": "ملخص القصة:",
+                    "a": "The youth group visits the mysterious ancient stone circle of Stonehenge in England. They camp overnight in tents, get spooked by a night noise that turns out to be a hungry sheep eating their marshmallows, and wake up at dawn to witness a breathtaking sunrise."
+                  },
+                  {
+                    "q": "d. Why I liked/didn't like the story (رأيي في القصة والسبب):",
+                    "q_ar": "الرأي والتعليل:",
+                    "a": "I liked the story very much because it combines mystery, history, humor, and a surprising twist when the 'monster' turns out to be a fluffy harmless sheep!"
+                  },
+                  {
+                    "q": "e. New words (أهم المفردات الجديدة المكتسبة):",
+                    "q_ar": "المفردات الجديدة:",
+                    "a": "Stonehenge, ancient, mystery, observatory, alien, spaceships, canvas, rustling, marshmallows, breathtaking."
+                  }
+                ]
+              },
+              {
+                "id": "u2_story_ex2",
+                "num": "Exercise 2 (Page 39)",
+                "title": "Answer the comprehension and examination questions about the story.",
+                "title_ar": "أجب عن الأسئلة الاستيعابية والامتحانية المقررة عن القصة:",
+                "questions": [
+                  {
+                    "q": "a. Why was Stonehenge built?",
+                    "q_ar": "لماذا تم بناء صخور ستونهنج الأثرية؟",
+                    "a": "Nobody knows for sure; scientists believe it may have been an ancient sun temple, a calendar, or an astronomical observatory. (لا أحد يعلم على وجه اليقين، ويعتقد العلماء أنه كان معبداً للشمس أو تقويماً فلكياً قديماً)."
+                  },
+                  {
+                    "q": "b. Some people think Stonehenge wasn't built by humans. Who do they think built it?",
+                    "q_ar": "يعتقد بعض الناس أن ستونهنج لم يبنها بشر، فمن يعتقدون أنه بناها؟",
+                    "a": "They think it was built by giants, ancient magic, or aliens from spaceships. (يعتقدون أنها بنيت بواسطة العمالقة أو السحر القديم أو كائنات فضائية)."
+                  },
+                  {
+                    "q": "c. What makes Stonehenge surprising?",
+                    "q_ar": "ما الذي يجعل موقع ستونهنج مدهشاً ومثيراً للدهشة؟",
+                    "a": "The enormous size and heavy weight of the stones, and how ancient humans moved and erected them 4,000 years ago without modern technology or cranes. (ضخامة وثقل الصخور وكيف استطاع القدماء نقلها وتشييدها قبل 4000 عام دون رافعات حديثة)."
+                  },
+                  {
+                    "q": "d. How does Stonehenge make Johnny feel?",
+                    "q_ar": "بماذا يشعر جوني حيال موقع ستونهنج؟",
+                    "a": "It makes him feel nervous, uneasy, and scared ('I think this place is scary'). (يشعره بالتوتر والخوف والقلق)."
+                  },
+                  {
+                    "q": "e. Why is the group camping at Stonehenge?",
+                    "q_ar": "لماذا خيمت المجموعة في ستونهنج ليلاً؟",
+                    "a": "To see the spectacular sunrise early in the morning over the ancient stone circle at 5:15 AM. (لمشاهدة شروق الشمس الساحر فوق الصخور فجراً عند الساعة 5:15 صباحاً)."
+                  },
+                  {
+                    "q": "f. Why were Johnny and Aziz afraid of a sheep?",
+                    "q_ar": "لماذا خاف جوني وعزيز من الخروف؟",
+                    "a": "Because in the dark outside the tent, they heard strange rustling noises and let their imagination run wild thinking it was a giant or an alien, before seeing it was just a sheep chewing their marshmallows. (لأنهما سمعا حفيفاً غريباً في الظلام فخيّل لهما أنه عملاق أو كائن فضائي، قبل أن يكتشفوا أنه مجرد خروف يلتهم حلوى المارشميلو)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          39
         ]
       },
       {
@@ -1439,7 +2469,67 @@ window.CURRICULUM_DATA = [
             "page": 25,
             "heading": "Project 2: Healthy Living Poster (مشروع: ملصق نمط الحياة الصحي)",
             "text": "Unit 2 Capstone Project: Design a Healthy Living Poster & Campaign\n\nProject Overview:\nUsing everything you learned in Unit 2 (pages 17 to 25), work individually or in groups to design an eye-catching, informative poster encouraging healthy lifestyle choices among students in your school.\n\nKey Sections to Include in Your Poster:\n1. Catchy Slogans:\n   • \"Keep Fit, Live Well!\"\n   • \"You Are What You Eat!\"\n   • \"Move Every Day: 20 Minutes Makes a Difference!\"\n\n2. The Fitness Guide (Page 17):\n   • Encourage regular exercise: football, swimming, cycling, brisk walking.\n   • Use 'should' and 'shouldn't': \"You should take exercise with friends; you shouldn't sit on the sofa all day.\"\n\n3. The Healthy Plate (Page 18):\n   • Explain the balance: 5 portions of fruit and vegetables every day.\n   • Water hydration: drink plenty of fresh water.\n   • Use quantifiers correctly: \"A little salt/sugar is enough. Avoid too much fat. A few treats are OK, but too many will make you unhealthy.\"\n\n4. First Aid & Health Care (Pages 20 & 21):\n   • How to describe aches (headache, toothache, stomach ache).\n   • When to see a doctor or dentist, and the importance of never ignoring severe pain.\n\n5. Cheering Up Friends (Pages 22 & 23):\n   • Designing 'Get well soon' messages and sending kindness to sick friends.\n\nPresentation:\nPresent your poster to the class, explain your advice, and answer questions using should, shouldn't, and frequency expressions!"
+          },
+          {
+            "id": 51501,
+            "is_activity_book": true,
+            "activity_book_page": 63,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 63): الأنشطة الإضافية الموسعة والحلول النموذجية",
+            "text": "Unit 2 Extra activities: Story of Salam and Kamal (Activity Book Page 63)\n\nExercise 1 (Page 63): Read the story and answer questions:\na. Writer's name: Salam.\nb. Brother's name: Kamal.\nc. Where were the brothers when mother went out? -> In the sitting room.\nd. Why did Salam go out of the room? -> To get himself a cola.\ne. Did Kamal hit a stone when he fell? -> No, he hit the ground (he stayed like a stone).\nf. Was he dead? -> No, he wasn't.\ng. When will he come home? -> In a day or two.\nh. What lesson did Salam learn? -> I should look after my brother better.",
+            "exercises": [
+              {
+                "id": "u2_extra_ex1",
+                "num": "Exercise 1 (Page 63)",
+                "title": "Read the story of Salam and Kamal and answer the questions. Write short answers.",
+                "title_ar": "اقرأ قصة سلام وأخيه الصغير كمال وأجب عن الأسئلة الآتية بإجابات قصيرة ومحددة:",
+                "questions": [
+                  {
+                    "q": "a. What was the writer's name?",
+                    "q_ar": "ما هو اسم كاتب القصة؟",
+                    "a": "Salam. (سلام)"
+                  },
+                  {
+                    "q": "b. What is his brother's name?",
+                    "q_ar": "ما هو اسم شقيقه الصغير؟",
+                    "a": "Kamal. (كمال)"
+                  },
+                  {
+                    "q": "c. Where were the brothers when their mother went out?",
+                    "q_ar": "أين كان الشقيقان عندما خرجت والدتهما للرد على الهاتف؟",
+                    "a": "In the sitting room. (في غرفة الجلوس / الصالة)"
+                  },
+                  {
+                    "q": "d. Why did Salam go out of the room?",
+                    "q_ar": "لماذا خرج سلام من غرفة الجلوس وترك أخاه بمفرده؟",
+                    "a": "To get himself a cola from the kitchen during TV advertisements. (ليحضر لنفسه علبة كولا من المطبخ أثناء فترة الإعلانات)"
+                  },
+                  {
+                    "q": "e. Did Kamal hit a stone when he fell?",
+                    "q_ar": "هل اصطدم كمال بحجر عندما سقط من فوق الشجرة؟",
+                    "a": "No, he didn't. He hit the ground, and he just stayed there like a stone (motionless). (كلا، بل ارتطم بالأرض، وبقي هناك بلا حراك كالحجر)"
+                  },
+                  {
+                    "q": "f. Was he dead?",
+                    "q_ar": "هل كان قد فارق الحياة؟",
+                    "a": "No, he wasn't. (كلا، لم يمت ولله الحمد)"
+                  },
+                  {
+                    "q": "g. When will he come home?",
+                    "q_ar": "متى سيعود كمال إلى البيت من المستشفى؟",
+                    "a": "In a day or two. (في غضون يوم أو يومين بعد الاطمئنان التام عليه)"
+                  },
+                  {
+                    "q": "h. What lesson do you think Salam learnt? Tick (✓) one:",
+                    "q_ar": "ما هو الدرس الحقيقي البليغ الذي تعلمه سلام ولن ينساه أبداً؟",
+                    "a": "✓ I should look after my brother better. (ينبغي عليّ أن أعتني بأخي الصغير بصورة أفضل وألا أتركه دون مراقبة أبداً)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          63
         ]
       }
     ]
@@ -1447,7 +2537,7 @@ window.CURRICULUM_DATA = [
   {
     "id": 192,
     "title": "الوحدة 3: الرياضة والألعاب (Unit 3: Sports and Games)",
-    "description": "صفحات 28 - 42",
+    "description": "صفحات 28 - 42 (وكراس النشاط ص 40 - 57 وص 64)",
     "lessons": [
       {
         "id": 283,
@@ -1459,6 +2549,152 @@ window.CURRICULUM_DATA = [
             "page": 28,
             "heading": "Lesson 1: The sports centre - Come to the sports centre and get fit! (صفحة 28)",
             "text": "Come to the sports centre and get fit!\nYou can choose from last year's old favourites:\n• tennis\n• table tennis\n• football\n• basketball\n• netball\n• volleyball\n• running\n• swimming\n• sailing\n• horse riding\n• gymnastics\n• judo\n• karate\n\nAnd, from the beginning of this year, we can give you lessons in these sports:\nkarate, judo, horse riding, tennis, volleyball, gymnastics.\nCall us on 952841 for more information.\n\nVerbs and sports:\n• We play football, tennis, basketball, volleyball (team games and ball games).\n• We go swimming, horse riding, sailing, running (activities ending in -ing).\n• We do judo, karate, gymnastics, athletics (combat sports and individual activities).\n\nAsk and answer:\nWhat sports would you like to do?\n• \"I'd like to play volleyball.\"\n• \"I'd like to do gymnastics.\"\n• \"And I'd like to go horse riding.\""
+          },
+          {
+            "id": 51501,
+            "is_activity_book": true,
+            "activity_book_page": 40,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 40 و 41): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 1: The sports centre (Activity Book pp. 40-41)\n\nExercise 1 (Page 40): Sports and Clue Words:\na. run / jump / throw -> athletics\nb. ball / basket / two teams -> basketball\nc. sea / boat / wind -> sailing\nd. ball / net / racket -> tennis\ne. swim / pool / race -> swimming\nf. ball / eleven players / goal -> football\n\nExercise 2 (Page 40): Verbs with Sports (do, play, go):\n• do: athletics, boxing, judo, karate, yoga\n• play: basketball, chess, football, golf, tennis\n• go: cycling, jogging, skating, skiing, swimming\n\nExercise 3 (Page 40): Adding More Sports:\n• do: gymnastics, aerobics, martial arts\n• play: volleyball, badminton, table tennis, netball\n• go: horse riding, running, sailing, fishing\n\nExercise 4 (Page 41): Grammar Rules for Sports Verbs:\na. Do is often used where no equipment is needed.\nb. Play is often used for team sports or sports that use a ball.\nc. Go is often used with sports that end in -ing.\n\nExercise 5 (Page 41): Sports Preferences:\na. Which sports do you do? -> I play football and go swimming.\nb. Which sports do you want to do? Why? -> I'd like to do karate because it makes me strong.\nc. Which sports don't interest you? Why? -> I don't like boxing because it is too violent.",
+            "exercises": [
+              {
+                "id": "u3_l1_ex1",
+                "num": "Exercise 1 (Page 40)",
+                "title": "Which sports connect the words? Write the names of the sports.",
+                "title_ar": "أي رياضات ترتبط بهذه الكلمات؟ اكتب اسم الرياضة المناسبة أمام كل مجموعة:",
+                "questions": [
+                  {
+                    "q": "a. run / jump / throw",
+                    "q_ar": "الجري، القفز، الرمي",
+                    "a": "athletics (ألعاب القوى)"
+                  },
+                  {
+                    "q": "b. ball / basket / two teams",
+                    "q_ar": "كرة، سلة، فريقان",
+                    "a": "basketball (كرة السلة)"
+                  },
+                  {
+                    "q": "c. sea / boat / wind",
+                    "q_ar": "بحر، قارب، رياح",
+                    "a": "sailing (الإبحار الشراعي)"
+                  },
+                  {
+                    "q": "d. ball / net / racket",
+                    "q_ar": "كرة، شبكة، مضرب",
+                    "a": "tennis (كرة المضرب / التنس)"
+                  },
+                  {
+                    "q": "e. swim / pool / race",
+                    "q_ar": "سباحة، حوض سباحة، سباق",
+                    "a": "swimming (السباحة)"
+                  },
+                  {
+                    "q": "f. ball / eleven players / goal",
+                    "q_ar": "كرة، 11 لاعباً، مرمى / هدف",
+                    "a": "football (كرة القدم)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l1_ex2",
+                "num": "Exercise 2 (Page 40)",
+                "title": "Write the sports in the correct column: do, play, go.",
+                "title_ar": "صنّف الرياضات التالية في العمود الصحيح وفق الفعل المناسب لها (do, play, go):",
+                "words_box": [
+                  "athletics",
+                  "basketball",
+                  "boxing",
+                  "chess",
+                  "cycling",
+                  "football",
+                  "golf",
+                  "jogging",
+                  "judo",
+                  "karate",
+                  "skating",
+                  "skiing",
+                  "swimming",
+                  "tennis",
+                  "yoga"
+                ],
+                "questions": [
+                  {
+                    "q": "1. Sports with 'do' (الرياضات القتالية والفردية والأنشطة بدون كرة):",
+                    "q_ar": "الرياضات التي تأخذ الفعل do:",
+                    "a": "• athletics (ألعاب القوى)\n• boxing (الملاكمة)\n• judo (الجودو)\n• karate (الكاراتيه)\n• yoga (اليوغا)"
+                  },
+                  {
+                    "q": "2. Sports with 'play' (ألعاب الكرة والتنافس بين فرق أو لاعبين):",
+                    "q_ar": "الرياضات التي تأخذ الفعل play:",
+                    "a": "• basketball (كرة السلة)\n• chess (الشطرنج)\n• football (كرة القدم)\n• golf (الغولف)\n• tennis (كرة المضرب)"
+                  },
+                  {
+                    "q": "3. Sports with 'go' (الأنشطة الحركية المنتهية بـ -ing):",
+                    "q_ar": "الرياضات التي تأخذ الفعل go:",
+                    "a": "• cycling (ركوب الدراجات)\n• jogging (الركض الخفيف)\n• skating (التزلج على الألواح / الجليد)\n• skiing (التزلج على الثلج)\n• swimming (السباحة)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l1_ex3",
+                "num": "Exercise 3 (Page 40)",
+                "title": "Can you add any more sports to the table?",
+                "title_ar": "هل يمكنك إضافة المزيد من الرياضات إلى الجدول؟",
+                "questions": [
+                  {
+                    "q": "Add more sports examples for (do, play, go):",
+                    "q_ar": "أضف أمثلة رياضية إضافية للأفعال الثلاثة:",
+                    "a": "• do: gymnastics (جمباز), aerobics (تمارين إيروبيك), martial arts (فنون قتالية).\n• play: volleyball (كرة طائرة), badminton (كرة ريشة), table tennis (تنس طاولة), netball (كرة شبكة).\n• go: horse riding (ركوب الخيل), running (الجري), sailing (الإبحار), fishing (صيد الأسماك)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l1_ex4",
+                "num": "Exercise 4 (Page 41)",
+                "title": "Complete the sentences with Do, Go or Play.",
+                "title_ar": "أكمل الجمل بالقواعد الخاصة باستخدام Do أو Go أو Play:",
+                "questions": [
+                  {
+                    "q": "a. ________ is often used where no equipment is needed.",
+                    "q_ar": "غالباً ما يُستخدم الفعل ... للأنشطة الفردية التي لا تحتاج لمعدات أو كرات:",
+                    "a": "Do (نستخدم Do مع الألعاب الفردية والقتالية)"
+                  },
+                  {
+                    "q": "b. ________ is often used for team sports or sports that use a ball.",
+                    "q_ar": "غالباً ما يُستخدم الفعل ... للألعاب الجماعية أو الألعاب التي تعتمد على الكرة:",
+                    "a": "Play (نستخدم Play مع ألعاب الكرة والمنافسة)"
+                  },
+                  {
+                    "q": "c. ________ is often used with sports that end in -ing.",
+                    "q_ar": "غالباً ما يُستخدم الفعل ... مع الرياضات والأنشطة المنتهية بـ -ing:",
+                    "a": "Go (نستخدم Go مع الرياضات المنتهية بـ -ing)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l1_ex5",
+                "num": "Exercise 5 (Page 41)",
+                "title": "Answer the questions about your sports preferences.",
+                "title_ar": "أجب عن الأسئلة حول تفضيلاتك الرياضية الشخصية:",
+                "questions": [
+                  {
+                    "q": "a. Which sport(s) do you do?",
+                    "q_ar": "ما الرياضات التي تمارسها؟",
+                    "a": "I play football with my classmates and go swimming at the weekend. (ألعب كرة القدم مع زملائي وأمارس السباحة في عطلة نهاية الأسبوع)."
+                  },
+                  {
+                    "q": "b. Which sport(s) do you want to do? Why?",
+                    "q_ar": "ما الرياضة التي ترغب في تعلمها أو ممارستها؟ ولماذا؟",
+                    "a": "I'd like to do karate because it makes me strong, disciplined, and teaches me self-defence. (أرغب في ممارسة الكاراتيه لأنها تجعلني قوياً ومنضبطاً وتعلّمني الدفاع عن النفس)."
+                  },
+                  {
+                    "q": "c. Are there any sports that don't interest you? Why?",
+                    "q_ar": "هل هناك رياضات لا تثير اهتمامك؟ ولماذا؟",
+                    "a": "I am not interested in boxing because I think it is too dangerous and violent. (لا تثير الملاكمة اهتمامي لأنني أراها خطيرة وعنيفة للغاية)."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1472,6 +2708,132 @@ window.CURRICULUM_DATA = [
             "page": 29,
             "heading": "Lesson 2: The timetable - Days, Levels & Schedules (صفحة 29)",
             "text": "Dave phoned the sports centre and heard a message.\nListen to the message. What does Dave have to leave?\nListen and repeat the words:\n• beginners (المبتدئون)\n• advanced (المتقدمون)\n• team practice (تدريب الفريق)\n\nThe sports centre sent Dave this leaflet. Ask and answer questions about it:\n\"When is the volleyball beginners' class?\"\n\"On Monday, from five o'clock to seven o'clock.\"\n\nSchedule:\n• Men's and boys' lessons: Tuesday, Thursday and Saturday.\n• Women's and girls' lessons: Monday, Wednesday and Friday.\n\nTimetable:\n• Volleyball: Beginners: Mon. 5-7 | Team practice: Mon. 7-9\n• Athletics: Start now! Wed. and Thur. 5-7\n• Swimming: Team practice: Thur. 7-9 and Fri. 5-7\n• Tennis: Beginners: Mon. and Tue. 7-9 | Advanced: Fri. 5-7 and Sat. 3-5\n• Gymnastics: Beginners: Tue. and Wed. 7-9 | Advanced: Thur. and Fri. 5-7\n• Basketball: Beginners: Tue. 5-7 | Team practice: Sat. 3-5\n• Karate: A new sport! Mon. 5-7 and Thur. 5-7\n\nCall 952841 to book a class and for information about other sports.\n\nAsk and answer questions:\n\"What sports do you want to do?\"\n\"How good are you at volleyball?\"\n• \"I'm quite good at volleyball, but I want to practise.\"\n• \"I've never played volleyball. I'd like to learn how to play it.\""
+          },
+          {
+            "id": 51601,
+            "is_activity_book": true,
+            "activity_book_page": 42,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 42 و 43): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 2: The timetable (Activity Book pp. 42-43)\n\nExercise 1 (Page 42): Leaflet Questions:\na. Beginners' lessons: 6 lessons (Volleyball, Tennis 2, Gymnastics 2, Basketball) - or 8 including Athletics and Karate.\nb. Advanced lessons: 4 lessons (Tennis: Fri & Sat; Gymnastics: Thur & Fri).\nc. Team practices: 4 practices (Volleyball: Mon; Swimming: Thur & Fri; Basketball: Sat).\n\nExercise 2 (Page 42): Spelling Corrections:\na. sentre -> centre\nb. biginers' -> beginners'\nc. afeletics -> athletics\nd. practice (verb) -> practise\ne. teem -> team\n\nExercise 3 (Pages 42-43): Questions and Answers about Sports Centre Leaflet:\nExample: When is the women's advanced tennis class? -> On Friday from 5 to 7 o'clock.\na. When is the boys' athletics class? -> On Thursday from 5 to 7 o'clock.\nb. When is the women's volleyball team practice? -> On Monday from 7 to 9 o'clock.\nc. When is the women's / girls' karate class? -> On Monday from 5 to 7 o'clock.\nd. When is the men's basketball beginners' class? -> On Tuesday from 5 to 7 o'clock.\ne. When is the boys' swimming team practice? -> On Thursday from 7 to 9 o'clock.\n\nExercise 4 (Page 43): Matching Questions and Answers:\na. Are you good at judo? -> 2. I've never done it before.\nb. How good are you at basketball? -> 3. I've never played it before.\nc. Do you enjoy skiing? -> 1. I've never been before.",
+            "exercises": [
+              {
+                "id": "u3_l2_ex1",
+                "num": "Exercise 1 (Page 42)",
+                "title": "Answer the questions about the leaflet in your Student's Book. Write short answers.",
+                "title_ar": "أجب عن الأسئلة المتعلقة بجدول ونشرة المركز الرياضي في كتاب الطالب (إجابات قصيرة ومحددة):",
+                "questions": [
+                  {
+                    "q": "a. How many beginners' lessons are there?",
+                    "q_ar": "كم عدد دروس المبتدئين الموجودة في الجدول؟",
+                    "a": "6 lessons (Volleyball, Tennis 2, Gymnastics 2, Basketball) - Or 8 including Athletics and Karate new lessons. (المعتمد رسمياً: 6 أو 8 دروس)."
+                  },
+                  {
+                    "q": "b. How many advanced lessons are there?",
+                    "q_ar": "كم عدد دروس المتقدمين؟",
+                    "a": "4 lessons (Tennis: Fri 5-7 & Sat 3-5; Gymnastics: Thur 5-7 & Fri 5-7). (4 دروس للمتقدمين)."
+                  },
+                  {
+                    "q": "c. How many team practices are there?",
+                    "q_ar": "كم عدد تدريبات الفرق (team practice)؟",
+                    "a": "4 team practices (Volleyball: Mon 7-9; Swimming: Thur 7-9 & Fri 5-7; Basketball: Sat 3-5). (4 تدريبات للفرق)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l2_ex2",
+                "num": "Exercise 2 (Page 42)",
+                "title": "Correct the words that have the wrong spelling.",
+                "title_ar": "صحح الكلمات التي كُتبت بإملاء خاطئ في الجمل الآتية:",
+                "questions": [
+                  {
+                    "q": "a. Come to the sports sentre at five o'clock.",
+                    "q_ar": "تصحيح كلمة sentre:",
+                    "a": "centre (المركز) ➔ Come to the sports centre at five o'clock."
+                  },
+                  {
+                    "q": "b. There's a biginers' lesson in judo.",
+                    "q_ar": "تصحيح كلمة biginers':",
+                    "a": "beginners' (المبتدئين) ➔ There's a beginners' lesson in judo."
+                  },
+                  {
+                    "q": "c. I really want to do afeletics on Wednesday.",
+                    "q_ar": "تصحيح كلمة afeletics:",
+                    "a": "athletics (ألعاب القوى) ➔ I really want to do athletics on Wednesday."
+                  },
+                  {
+                    "q": "d. I also have to practice playing basketball.",
+                    "q_ar": "تصحيح الفعل practice (في الإنجليزية البريطانية يُكتب الفعل بـ s والاسم بـ c):",
+                    "a": "practise (يتدرب / يمارس - فعل) ➔ I also have to practise playing basketball."
+                  },
+                  {
+                    "q": "e. There's a teem practice on Saturday.",
+                    "q_ar": "تصحيح كلمة teem:",
+                    "a": "team (فريق) ➔ There's a team practice on Saturday."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l2_ex3",
+                "num": "Exercise 3 (Pages 42-43)",
+                "title": "Look at the photographs and write questions and answers about classes at the sports centre.",
+                "title_ar": "انظر إلى الصور واكتب أسئلة وإجابات عن مواعيد الدروس بالاستعانة بجدول كتاب الطالب:",
+                "questions": [
+                  {
+                    "q": "Example (Women Tennis):",
+                    "q_ar": "المثال المعطى في الكتاب (تنس السيدات المتقدم):",
+                    "a": "Q: When is the women's advanced tennis class?\nA: On Friday from 5 o'clock to 7 o'clock. (or on Saturday from 3 o'clock to 5 o'clock)."
+                  },
+                  {
+                    "q": "a. (Boy running / Athletics - Thursday):",
+                    "q_ar": "ألعاب القوى للبنين / الرجال (الخميس):",
+                    "a": "Q: When is the boys' / men's athletics class?\nA: On Thursday from 5 o'clock to 7 o'clock."
+                  },
+                  {
+                    "q": "b. (Women Volleyball team):",
+                    "q_ar": "تدريب فريق الطائرة للسيدات (الاثنين):",
+                    "a": "Q: When is the women's volleyball team practice?\nA: On Monday from 7 o'clock to 9 o'clock."
+                  },
+                  {
+                    "q": "c. (Girl Karate):",
+                    "q_ar": "درس الكاراتيه للفتيات / السيدات (الاثنين):",
+                    "a": "Q: When is the women's / girls' karate class?\nA: On Monday from 5 o'clock to 7 o'clock."
+                  },
+                  {
+                    "q": "d. (Man Basketball):",
+                    "q_ar": "درس كرة السلة للمبتدئين للرجال / البنين (الثلاثاء):",
+                    "a": "Q: When is the men's / boys' basketball beginners' class?\nA: On Tuesday from 5 o'clock to 7 o'clock."
+                  },
+                  {
+                    "q": "e. (Boys Swimming team):",
+                    "q_ar": "تدريب فريق السباحة للبنين / الرجال (الخميس):",
+                    "a": "Q: When is the men's / boys' swimming team practice?\nA: On Thursday from 7 o'clock to 9 o'clock."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l2_ex4",
+                "num": "Exercise 4 (Page 43)",
+                "title": "Match the answers (1-3) to the questions (a-c).",
+                "title_ar": "طابق الإجابات (1-3) مع الأسئلة (a-c) بحسب توافق أفعال الرياضة:",
+                "questions": [
+                  {
+                    "q": "a. Are you good at judo?",
+                    "q_ar": "هل أنت بارع في الجودو؟",
+                    "a": "➔ 2. I've never done it before. (يطابق الفعل do/done مع رياضة الجودو)"
+                  },
+                  {
+                    "q": "b. How good are you at basketball?",
+                    "q_ar": "ما مدى مهارتك في كرة السلة؟",
+                    "a": "➔ 3. I've never played it before. (يطابق الفعل play/played مع كرة السلة)"
+                  },
+                  {
+                    "q": "c. Do you enjoy skiing?",
+                    "q_ar": "هل تستمتع بالتزلج؟",
+                    "a": "➔ 1. I've never been before. (يطابق الفعل go/been مع التزلج المنتهي بـ ing)"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1485,6 +2847,109 @@ window.CURRICULUM_DATA = [
             "page": 30,
             "heading": "Lesson 3: Booking lessons - Phone calls and enquiries (صفحة 30)",
             "text": "Liz and Dave called the sports centre to find out about lessons.\nListen and read. Fill in part of the timetable in your Activity Book.\n\n[Conversation 1: Liz and the Sports Officer]\nLiz: Hello. Is that the sports centre?\nSports officer: Yes. Can I help you?\nLiz: Well, I'd like to play volleyball.\nSports officer: How good are you at volleyball?\nLiz: Oh, I'm quite good. I'm in the school team.\nSports officer: All right. Come on Monday at seven o'clock. It's team practice.\nLiz: Thanks very much. Oh, and I'd like to learn horse riding.\nSports officer: We have beginners' lessons on Wednesdays at five o'clock.\nLiz: Thank you very much. Goodbye.\n\n[Conversation 2: Dave and the Sports Officer]\nSports officer: Hello. Sports centre.\nDave: Hello. I'd like to do judo.\nSports officer: Are you good at judo, or do you want to learn?\nDave: I'm a beginner. I want to learn.\nSports officer: That's fine. Beginners' lessons are on Tuesdays at five o'clock.\nDave: Thank you. Goodbye."
+          },
+          {
+            "id": 51701,
+            "is_activity_book": true,
+            "activity_book_page": 44,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 44 و 45): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 3: Booking lessons (Activity Book pp. 44-45)\n\nExercise A & 1 & 2 (Page 44): Complete Sports Centre Timetable:\n• Monday W & G: 5-7 Karate (B) / Volleyball (B); 7-9 Volleyball (T) / Tennis (B)\n• Tuesday M & B: 5-7 Basketball (B) / Judo (B); 7-9 Tennis (B) / Gymnastics (B)\n• Wednesday W & G: 5-7 Horse riding (B) / Athletics; 7-9 Gymnastics (B)\n• Thursday M & B: 5-7 Athletics / Karate (B); 7-9 Swimming (T) / Gymnastics (A)\n• Friday W & G: 5-7 Tennis (A) / Swimming (T) / Gymnastics (A)\n• Saturday M & B: 10-12 Horse riding (A); 3-5 Basketball (T) / Tennis (A)\n\nExercise 3 (Page 45): Correct Verb Forms (do, go, play):\na. I have never played volleyball before. I don't know what to do.\nb. I did judo for three hours yesterday, and now my back hurts.\nc. I can't come out this evening. I am doing gymnastics at seven o'clock.\nd. I am going swimming this afternoon. Do you want to come?\ne. The boys were playing football on the beach when it started to rain.\n\nExercise 4 (Page 45): Role-play Booking Conversations.",
+            "exercises": [
+              {
+                "id": "u3_l3_exA",
+                "num": "Exercise A & 1 & 2 (Page 44)",
+                "title": "Listen to phone calls and fill in the sports centre timetable (Track 19 & Track 20).",
+                "title_ar": "استمع للمكالمات الهاتفية واستكمل جدول المركز الرياضي كاملاً (Track 19 و 20 وجدول ديف):",
+                "questions": [
+                  {
+                    "q": "Monday (Women & Girls):",
+                    "q_ar": "يوم الاثنين (نساء وفتيات):",
+                    "a": "• 5:00 - 7:00 ➔ Karate (Beginners) / Volleyball (Beginners)\n• 7:00 - 9:00 ➔ Volleyball (Team practice - Liz's booking) / Tennis (Beginners)"
+                  },
+                  {
+                    "q": "Tuesday (Men & Boys):",
+                    "q_ar": "يوم الثلاثاء (رجال وبنين):",
+                    "a": "• 5:00 - 7:00 ➔ Basketball (Beginners) / Judo (Beginners - Dave's booking)\n• 7:00 - 9:00 ➔ Tennis (Beginners) / Gymnastics (Beginners)"
+                  },
+                  {
+                    "q": "Wednesday (Women & Girls):",
+                    "q_ar": "يوم الأربعاء (نساء وفتيات):",
+                    "a": "• 5:00 - 7:00 ➔ Horse riding (Beginners - Liz's booking) / Athletics (Start now)\n• 7:00 - 9:00 ➔ Gymnastics (Beginners - Track 20 Girl's booking)"
+                  },
+                  {
+                    "q": "Thursday (Men & Boys):",
+                    "q_ar": "يوم الخميس (رجال وبنين):",
+                    "a": "• 5:00 - 7:00 ➔ Athletics (Start now) / Karate (Beginners)\n• 7:00 - 9:00 ➔ Swimming (Team practice - Track 20 Boy's booking) / Gymnastics (Advanced)"
+                  },
+                  {
+                    "q": "Friday (Women & Girls):",
+                    "q_ar": "يوم الجمعة (نساء وفتيات):",
+                    "a": "• 5:00 - 7:00 ➔ Tennis (Advanced) / Swimming (Team practice) / Gymnastics (Advanced)\n• 7:00 - 9:00 ➔ (No classes scheduled)"
+                  },
+                  {
+                    "q": "Saturday (Men & Boys):",
+                    "q_ar": "يوم السبت (رجال وبنين):",
+                    "a": "• 10:00 - 12:00 ➔ Horse riding (Advanced - Track 20 Boy's booking)\n• 3:00 - 5:00 ➔ Basketball (Team practice) / Tennis (Advanced)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l3_ex3",
+                "num": "Exercise 3 (Page 45)",
+                "title": "Complete the sentences. Use the correct form of the verbs from the box [do, go, play].",
+                "title_ar": "أكمل الجمل بالصيغة والزمن الصحيح للأفعال (do, go, play) بحسب قواعد الأزمنة والسياق:",
+                "words_box": [
+                  "do",
+                  "go",
+                  "play"
+                ],
+                "questions": [
+                  {
+                    "q": "a. I ________ never ________ volleyball before. I don't know what to do.",
+                    "q_ar": "لم ألعب الكرة الطائرة من قبل مطلقاً ولا أعرف ماذا أفعل:",
+                    "a": "have never played (المضارع التام مع never للتعبير عن انعدام التجربة: have + never + p.p. of play)"
+                  },
+                  {
+                    "q": "b. I ________ judo for three hours yesterday, and now my back hurts.",
+                    "q_ar": "مارست الجودو لثلاث ساعات أمس وظهري يؤلمني الآن:",
+                    "a": "did (الماضي البسيط للفعل do لوجود ظرف الماضي yesterday: did judo)"
+                  },
+                  {
+                    "q": "c. I can't come out this evening. I ________ gymnastics at seven o'clock.",
+                    "q_ar": "لا يمكنني الخروج هذا المساء فلدي تدريب جمباز في السابعة:",
+                    "a": "am doing (or have / do) ➔ am doing gymnastics (المضارع المستمر للتعبير عن المواعيد والترتيبات المستقبلية المؤكدة)"
+                  },
+                  {
+                    "q": "d. I ________ swimming this afternoon. Do you want to come?",
+                    "q_ar": "أنا ذاهب للسباحة بعد ظهر اليوم. هل تود المجيء معي؟:",
+                    "a": "am going (المضارع المستمر للنية والترتيب القريب: am going swimming)"
+                  },
+                  {
+                    "q": "e. The boys ________ football on the beach when it started to rain.",
+                    "q_ar": "كان الأولاد يلعبون كرة القدم على الشاطئ عندما بدأت تمطر:",
+                    "a": "were playing (الماضي المستمر لوجود الحدث المستمر المقاطع بـ when + ماضي بسيط: were playing football)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l3_ex4",
+                "num": "Exercise 4 (Page 45)",
+                "title": "Make conversations (Role-play booking at the sports centre).",
+                "title_ar": "تكوين محادثات تمثيلية لإجراء حجوزات الدروس في المركز الرياضي:",
+                "questions": [
+                  {
+                    "q": "Role-play 1: Beginner level booking (حجز للمبتدئين):",
+                    "q_ar": "نموذج محادثة حجز لصف المبتدئين:",
+                    "a": "• Student 1: I'd like to do karate.\n• Student 2 (Sports officer): How good are you at karate?\n• Student 1: I'm a beginner, but I want to learn.\n• Student 2: OK. Come on Monday at five o'clock. There's a beginners' class."
+                  },
+                  {
+                    "q": "Role-play 2: Team practice enquiry (الاستفسار عن تدريب الفريق):",
+                    "q_ar": "نموذج محادثة للانضمام لتدريب الفريق:",
+                    "a": "• Student 1: I'd like to play basketball.\n• Student 2 (Sports officer): How good are you at basketball?\n• Student 1: I'm quite good. I'd like to join the team practice.\n• Student 2: OK. Come on Saturday at three o'clock. It's team practice."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1498,6 +2963,140 @@ window.CURRICULUM_DATA = [
             "page": 31,
             "heading": "Lesson 4: The basketball game - Results, Opposites & Competitions (صفحة 31)",
             "text": "Read and work out the meaning of the words in red.\nResult of a basketball game: Babil 60 - Kirkuk 54.\n1. Babil won the game. (فازت بابل بالمباراة)\n2. Kirkuk lost the game. (خسرت كركوك المباراة)\n3. Babil beat Kirkuk. (هزمت بابل كركوك)\n4. Kirkuk lost to Babil. (خسرت كركوك أمام بابل)\n\nRead the conversation between Hilal and Samir:\nHilal: Samir. That was awful! How did we lose?\nSamir: It was my fault, Hilal. I was terrible!\nHilal: You? At least you won a few points.\nSamir: What? You won more points than I did. You always do.\nHilal: I know. Other people are fitter than us. And they can run faster.\nSamir: Let's face it. We're not very fit.\nHilal: They can beat us at anything. What can we do?\nSamir: We have to get fitter.\nHilal: Let's have a competition. Just you against me.\nSamir: Good idea! When shall we have it?\nHilal: High jump!\nSamir: But I jumped higher than you last week.\nHilal: That wasn't in a competition.\nSamir: Next weekend. Swimming, running and high jump. OK?\nHilal: OK. I'll see you next weekend at the sports centre."
+          },
+          {
+            "id": 51801,
+            "is_activity_book": true,
+            "activity_book_page": 46,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 46 و 47): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 4: The basketball game (Activity Book pp. 46-47)\n\nExercise B (Page 46): Samir's Responses (1-6 to a-f):\n1 -> f (It was my fault, Hilal. I was terrible!)\n2 -> c (What? You won more points than I did. You always do.)\n3 -> a (Let's face it. We're not very fit.)\n4 -> d (We have to get fitter.)\n5 -> b (Good idea! When shall we have it?)\n6 -> e (Next weekend. Swimming, running and high jump. OK?)\n\nExercise 1 (Page 46): Comparative Sentences:\na. They ran faster than us. We ran more slowly than them.\nb. They are fitter than us. We are more unfit than them.\nc. They played better than us. We played worse than them.\nd. They worked harder than us. We were lazier than them.\n\nExercise 2 (Page 46): Adjectives vs Adverbs:\n• Adjectives describe nouns (good team, fitter, lazier, more unfit).\n• Adverbs describe verbs/actions (played well, faster, more slowly, better, worse, harder).\n\nExercise 3 (Page 46): Saying Measurements:\n• Distances: 1.6 m, 6.43 m, 27.81 m, 12 km, 23.1 km, 41.55 km.\n• Times: 10.27 seconds, 19.32 secs, 3 mins 43.13 secs, 2 hrs 37 mins 28.57 secs.\n• Weights: 52 kg, 68.05 kg, 105 kg, 85 kg, .05 kg, 60.54 kg.\n\nExercise 5 & 6 (Page 47): Story of Competition and Beach Rescue:\nJane and Mary compete in 100m sprint and high jump, then heroically rescue a drowning boy from the sea.",
+            "exercises": [
+              {
+                "id": "u3_l4_exB",
+                "num": "Exercise B (Page 46)",
+                "title": "Read the conversation. What does Samir say? Put each phrase (a-f) in its place (1-6).",
+                "title_ar": "اقرأ المحادثة بين هلال وسمير وضع عبارات سمير (a-f) في مكانها الصحيح (1-6):",
+                "questions": [
+                  {
+                    "q": "1. Hilal: Samir. That was awful! How did we lose? ➔ Samir (1):",
+                    "q_ar": "سمير (الرد 1):",
+                    "a": "f. It was my fault, Hilal. I was terrible! (كان خطأي يا هلال، لقد كنت فظيعاً في المباراة!)"
+                  },
+                  {
+                    "q": "2. Hilal: You? At least you won a few points. ➔ Samir (2):",
+                    "q_ar": "سمير (الرد 2):",
+                    "a": "c. What? You won more points than I did. You always do. (ماذا؟ لقد أحرزت نقاطاً أكثر مني، أنت تفعل ذلك دائماً)."
+                  },
+                  {
+                    "q": "3. Hilal: They can beat us at anything. What can we do? ➔ Samir (3):",
+                    "q_ar": "سمير (الرد 3):",
+                    "a": "a. Let's face it. We're not very fit. (دعنا نواجه الحقيقة بصراحة، نحن لسنا لائقين بدنياً بما يكفي)."
+                  },
+                  {
+                    "q": "4. Hilal: Other people are fitter than us. And they can run faster. ➔ Samir (4):",
+                    "q_ar": "سمير (الرد 4):",
+                    "a": "d. We have to get fitter. (يجب علينا أن نصبح أكثر لياقة وتدريباً)."
+                  },
+                  {
+                    "q": "5. Hilal: Let's have a competition. Just you against me. ➔ Samir (5):",
+                    "q_ar": "سمير (الرد 5):",
+                    "a": "b. Good idea! When shall we have it? (فكرة ممتازة! متى سنقيم هذه المنافسة؟)"
+                  },
+                  {
+                    "q": "6. Hilal: That wasn't in a competition. ➔ Samir (6):",
+                    "q_ar": "سمير (الرد 6):",
+                    "a": "e. Next weekend. Swimming, running and high jump. OK? (في عطلة نهاية الأسبوع القادمة. سباق سباحة وجري وقفز عالي. متفقون؟)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l4_ex1",
+                "num": "Exercise 1 (Page 46)",
+                "title": "Hilal and Samir continue talking about the game. Complete sentences using words from the box.",
+                "title_ar": "أكمل الجمل بالمقارنات المناسبة من الصندوق (better, faster, fitter, harder, lazier, more slowly, more unfit, worse):",
+                "words_box": [
+                  "better",
+                  "faster",
+                  "fitter",
+                  "harder",
+                  "lazier",
+                  "more slowly",
+                  "more unfit",
+                  "worse"
+                ],
+                "questions": [
+                  {
+                    "q": "a. They ran ________ than us. We ran ________ than them.",
+                    "q_ar": "هم ركضوا ... منا، ونحن ركضنا ... منهم:",
+                    "a": "They ran faster than us. We ran more slowly than them. (هم ركضوا أسرع منا، ونحن ركضنا أبطأ منهم)."
+                  },
+                  {
+                    "q": "b. They are ________ than us. We are ________ than them.",
+                    "q_ar": "هم ... منا، ونحن ... منهم:",
+                    "a": "They are fitter than us. We are more unfit (or lazier) than them. (هم أكثر لياقة منا، ونحن أقل لياقة منهم)."
+                  },
+                  {
+                    "q": "c. They played ________ than us. We played ________ than them.",
+                    "q_ar": "هم لعبوا ... منا، ونحن لعبنا ... منهم:",
+                    "a": "They played better than us. We played worse than them. (هم لعبوا أفضل منا، ونحن لعبنا أسوأ منهم)."
+                  },
+                  {
+                    "q": "d. They worked ________ than us. We were ________ than them.",
+                    "q_ar": "هم عملوا وتدربوا ... منا، ونحن كنا ... منهم:",
+                    "a": "They worked harder than us. We were lazier than them. (هم بذلوا جهداً أكبر منا، ونحن كنا أكثر كسلاً منهم)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l4_ex2",
+                "num": "Exercise 2 (Page 46)",
+                "title": "Descriptions: Write adj for adjectives or adv for adverbs from Exercise 1.",
+                "title_ar": "التمييز بين الصفة (Adjective) والظرف (Adverb) من كلمات التمرين الأول:",
+                "questions": [
+                  {
+                    "q": "Grammar rule & Word classification:",
+                    "q_ar": "القاعدة النحوية وتصنيف الكلمات:",
+                    "a": "• Rule: Adjectives describe nouns ('They are a good team'). Adverbs describe verbs ('They played well').\n• faster: adv / adj\n• more slowly: adv (ظرف يصف طريقة الجري ran)\n• fitter: adj (صفة بعد فعل الكينونة are)\n• more unfit: adj (صفة بعد فعل الكينونة are)\n• better: adv (ظرف في الجملة c لأنه يصف طريقة اللعب played)\n• worse: adv (ظرف في الجملة c يصف طريقة اللعب played)\n• harder: adv (ظرف في الجملة d يصف طريقة العمل والجهد worked)\n• lazier: adj (صفة بعد were)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l4_ex3",
+                "num": "Exercise 3 (Page 46)",
+                "title": "Speaking Tip 1: Practise saying the measurements (Distances, Times, Weights).",
+                "title_ar": "نطق وقراءة القياسات الرياضية (المسافات، الأزمان، الأوزان) بالأرقام والكلمات الإنجليزية:",
+                "questions": [
+                  {
+                    "q": "Distances (المسافات):",
+                    "q_ar": "قراءة المسافات بالإنجليزية:",
+                    "a": "• a. 1.6 m ➔ one point six metres\n• b. 6.43 m ➔ six point four three metres\n• c. 27.81 m ➔ twenty-seven point eight one metres\n• d. 12 km ➔ twelve kilometres\n• e. 23.1 km ➔ twenty-three point one kilometres\n• f. 41.55 km ➔ forty-one point five five kilometres"
+                  },
+                  {
+                    "q": "Times (الأزمان والأوقات الرياضية):",
+                    "q_ar": "قراءة الأزمنة بالإنجليزية:",
+                    "a": "• a. 10.27 seconds ➔ ten point two seven seconds\n• b. 19.32 secs ➔ nineteen point three two seconds\n• c. 3 mins 43.13 secs ➔ three minutes forty-three point one three seconds\n• d. 2 hrs 37 mins 28.57 secs ➔ two hours thirty-seven minutes twenty-eight point five seven seconds"
+                  },
+                  {
+                    "q": "Weights (الأوزان بالكيلوغرام):",
+                    "q_ar": "قراءة الأوزان بالإنجليزية:",
+                    "a": "• a. 52 kg ➔ fifty-two kilograms\n• b. 68.05 kg ➔ sixty-eight point zero five kilograms\n• c. 105 kg ➔ one hundred and five kilograms\n• d. 85 kg ➔ eighty-five kilograms\n• e. .05 kg ➔ zero point zero five kilograms (or point zero five kilograms)\n• f. 60.54 kg ➔ sixty point five four kilograms"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l4_ex5_6",
+                "num": "Exercise 5 & 6 (Page 47)",
+                "title": "Look at the pictures and write the story of the competition (Jane and Mary).",
+                "title_ar": "انظر إلى الصور الست واكتب القصة الكاملة للمنافسة وإنقاذ الطفل الغريق:",
+                "questions": [
+                  {
+                    "q": "Write the complete story based on pictures (a—g):",
+                    "q_ar": "القصة النموذجية المتكاملة للسباق والإنقاذ البطولي:",
+                    "a": "First, the girls ran 100 metres. Mary lost. She was slower than Jane (Mary took 13.2 seconds, while Jane took 12.5 seconds). Then, they did the high jump. Mary jumped 1.45 metres, which was higher than Jane's 1.4 metres, so Mary won the second event.\n\nAfter the competition, the two girls went down to the beach to relax and pack their bags. Suddenly, they heard someone shouting 'Help! Help!' from the sea. A little boy had gotten into trouble in deep water and was drowning!\n\nBoth Jane and Mary didn't hesitate. They took off their tracksuits, dived into the waves, and swam as fast as they could towards the drowning boy. They reached him safely, kept his head above water, and brought him back to the shore.\n\nOn the beach, they wrapped the shivering boy warmly in a blanket. The boy's mother arrived and hugged him with tears of joy, saying to the girls, 'Thank you so much! You were fantastic!' Jane and Mary were proud and proved that being fit and healthy can save lives."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1511,6 +3110,107 @@ window.CURRICULUM_DATA = [
             "page": 32,
             "heading": "Lesson 5: The Olympic Games - History, Rings & Medals (صفحة 32)",
             "text": "Read about the Olympic Games:\nThe old Olympic Games took place in Greece 2,000 years ago.\nIn 1896, a Frenchman, Pierre de Coubertin, started the modern Olympic Games.\nThey take place every four years, in a different city each time.\nPierre de Coubertin thought that everybody should enjoy taking part in the Games. He said:\n\"The most important thing in the Olympic Games is not to win, but to take part.\"\n\nMore than 200 countries took part in the Rio de Janeiro Olympic Games in 2016.\nAthletes from 87 countries won medals. The athletes competed in 28 different sports.\nThe athletes who come first, second and third win medals:\n• The winner gets a gold medal (الميدالية الذهبية).\n• The athlete who comes second gets a silver medal (الميدالية الفضية).\n• The third gets a bronze medal (الميدالية البرونزية).\n\nThe rings on the Olympic flag show the meeting of athletes from all over the world.\nThe five colours and the white background are the only six colours that were on national flags in 1913, when the Olympic flag was invented.\n\nQuestions and Answers:\n1. How many countries took part in the Olympic Games in 2016? More than 200 countries.\n2. What do the athletes who come second get? A silver medal.\n3. Who was Pierre de Coubertin? A Frenchman who started the modern Olympic Games in 1896.\n4. What do the Olympic rings stand for? The meeting of athletes from all over the world (the five continents).\n5. When were the first modern Olympic Games held? In 1896.\n6. Did de Coubertin think it was important to win? No, he thought the most important thing is to take part.\n7. How often do the Olympic Games take place? Every four years."
+          },
+          {
+            "id": 51901,
+            "is_activity_book": true,
+            "activity_book_page": 48,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 48 و 49): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 5: The Olympic Games (Activity Book pp. 48-49)\n\nExercise 1 (Page 48): Vocabulary Meanings:\na. what the winners get -> medals\nb. happen -> take place\nc. competed in the Games -> took part\n\nExercise 2 (Page 48): Correcting Olympic Statements:\na. The athlete who comes second wins a silver medal.\nb. The Olympic flag was invented in 1913.\nc. The most important thing in the Olympic Games is not to win, but to take part.\nd. The Olympic Games are held every four years.\ne. More than 200 countries took part in the 2016 Olympic Games.\nf. The rings on the Olympic flag stand for the meeting of athletes from all over the world (the five continents).\n\nExercise 3 (Page 49): Saying Years in English:\n1896, 2000, 1948, 2012, 2022, 2002, 2004, 2010.\n\nExercise 4 & 6 (Page 49): Categorizing Sports by Actions:\n• Hit something (blue): tennis, table tennis, badminton, golf, cricket.\n• Throw something (red): basketball, volleyball, rugby, javelin, shot put.\n• Kick something (green): football, rugby.",
+            "exercises": [
+              {
+                "id": "u3_l5_ex1",
+                "num": "Exercise 1 (Page 48)",
+                "title": "Find words or phrases from the article in your Student's Book that mean the following.",
+                "title_ar": "استخرج من المقال في كتاب الطالب الكلمات أو العبارات التي تطابق المعاني التالية:",
+                "questions": [
+                  {
+                    "q": "a. what the winners get",
+                    "q_ar": "ما يناله الفائزون في المنافسات الأولمبية:",
+                    "a": "medals (الميداليات - ذهبية وفضية وبرونزية)"
+                  },
+                  {
+                    "q": "b. happen",
+                    "q_ar": "تحدث / تُقام / تقع:",
+                    "a": "take place (تُقام / تحدث)"
+                  },
+                  {
+                    "q": "c. competed in the Games",
+                    "q_ar": "تنافس واشترك في الألعاب الأولمبية:",
+                    "a": "took part (شارك / خاض المنافسات)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l5_ex2",
+                "num": "Exercise 2 (Page 48)",
+                "title": "Correct the statements about the Olympic Games.",
+                "title_ar": "صحح العبارات الخاطئة عن الألعاب الأولمبية واكتب الجملة المصححة كاملة:",
+                "questions": [
+                  {
+                    "q": "Example: The first ever Olympic Games were held in 1896.",
+                    "q_ar": "مثال مصحح في الكتاب:",
+                    "a": "The first modern Olympic Games were held in 1896. (The old Olympic Games took place 2,000 years ago in Greece)."
+                  },
+                  {
+                    "q": "a. The athlete who comes second wins a bronze medal.",
+                    "q_ar": "تصحيح جملة ميدالية المركز الثاني:",
+                    "a": "The athlete who comes second wins a silver medal. (الرياضي الذي يحل ثانياً يفوز بالميدالية الفضية، بينما الثالث يفوز بالبرونزية)."
+                  },
+                  {
+                    "q": "b. The Olympic flag was invented for the first modern Olympic Games.",
+                    "q_ar": "تصحيح تاريخ ابتكار العلم الأولمبي:",
+                    "a": "The Olympic flag was invented in 1913. (ابتُكر العلم الأولمبي ذو الحلقات الخمس عام 1913 وليس لأول دورة حديثة عام 1896)."
+                  },
+                  {
+                    "q": "c. Winning is the most important thing in the Olympic Games.",
+                    "q_ar": "تصحيح المبدأ والميثاق الأولمبي لبيير دي كوبرتان:",
+                    "a": "The most important thing in the Olympic Games is not to win, but to take part. (أهم شيء في الأولمبياد ليس الفوز وإنما شرف المشاركة والتنافس النبيل)."
+                  },
+                  {
+                    "q": "d. The Olympic Games are held every six years.",
+                    "q_ar": "تصحيح دورية إقامة الألعاب الأولمبية:",
+                    "a": "The Olympic Games are held every four years. (تُقام الألعاب الأولمبية دورياً كل أربع سنوات)."
+                  },
+                  {
+                    "q": "e. Less than 200 countries took part in the 2016 Olympic Games.",
+                    "q_ar": "تصحيح عدد الدول المشاركة في أولمبياد ريو 2016:",
+                    "a": "More than 200 countries took part in the 2016 Olympic Games. (شاركت أكثر من 200 دولة في دورة ريو دي جانيرو 2016)."
+                  },
+                  {
+                    "q": "f. The rings on the Olympic flag stand for the five countries who competed in the old Olympic Games.",
+                    "q_ar": "تصحيح دلالة الحلقات الملونة في العلم الأولمبي:",
+                    "a": "The rings on the Olympic flag stand for the meeting of athletes from all over the world (the five continents). (ترمز الحلقات لاجتماع رياضيي قارات العالم الخمس معاً)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l5_ex3",
+                "num": "Exercise 3 (Page 49)",
+                "title": "Speaking Tip 2: Practise saying the years.",
+                "title_ar": "التدريب على النطق الصحيح للسنوات والتواريخ باللغة الإنجليزية:",
+                "questions": [
+                  {
+                    "q": "Say the years aloud (قراءة السنوات الإنجليزية بصوت واضح):",
+                    "q_ar": "قراءة السنوات والتواريخ المذكورة بالإنجليزية:",
+                    "a": "• a. 1896 ➔ eighteen ninety-six\n• b. 2000 ➔ two thousand\n• c. 1948 ➔ nineteen forty-eight\n• d. 2012 ➔ twenty twelve (or two thousand and twelve)\n• e. 2022 ➔ twenty twenty-two\n• f. 2002 ➔ two thousand and two\n• g. 2004 ➔ two thousand and four\n• h. 2010 ➔ twenty ten (or two thousand and ten)\n• In which year were you born? ➔ I was born in 2012 (twenty twelve)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l5_ex4_6",
+                "num": "Exercise 4 & 6 (Page 49)",
+                "title": "Sports categorization: hitting, throwing, kicking.",
+                "title_ar": "تصنيف الرياضات بحسب الحركة الأساسية (الضرب، الرمي، الركل):",
+                "questions": [
+                  {
+                    "q": "Categorize sports by action:",
+                    "q_ar": "تصنيف الرياضات بالألوان بحسب الحركة المعتمدة:",
+                    "a": "• 🔵 Hit something (blue - ضرب الكرة أو الشيء بمضرب): tennis, table tennis, badminton, golf, cricket, baseball, hockey.\n• 🔴 Throw something (red - رمي أو تمرير الكرة باليد): basketball, volleyball, netball, rugby, American football, javelin, shot put, discus, Ultimate Frisbee.\n• 🟢 Kick something (green - ركل الكرة بالقدم): football (soccer), rugby.\n• ⚪ Other categories (أنشطة بدون ركل أو رمي أو ضرب): running, swimming, sailing, cycling, judo, karate, gymnastics, skateboarding."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1524,6 +3224,96 @@ window.CURRICULUM_DATA = [
             "page": 33,
             "heading": "Lesson 6: Olympic superstars - World Records & Champions (صفحة 33)",
             "text": "The Olympic Games are a source of inspiration for people around the world.\nIt's a special kind of person who can train for hours every single day and eat a special and controlled diet.\nSprinters train for years for a race that might last less than ten seconds. Athletes who take part in the long jump only need six seconds.\nNot all of us can go to the Olympics, but we can all learn from an Olympian's dedication and hard work.\n\nHere are some amazing records to inspire us:\n1. Florence Griffith Joyner (USA):\nBack in 1988, Florence ran the fastest women's 100 metres in Olympic history. Her time was 10.62 seconds. Her record has lasted for well over 30 years.\n\n2. Michael Phelps (USA):\nMichael Phelps holds the record for the biggest number of Olympic gold medals - 23! In total he has won 28 medals across four Olympic Games between 2004 and 2016.\n\n3. Inge Sørensen (Denmark):\nThe youngest person ever to win an Olympic medal in an individual event was Danish swimmer Inge Sørensen in 1936. She was only 12 years and 24 days old.\n\n4. Oscar Swahn (Sweden):\nOn the other hand, the oldest person to win a gold medal was Oscar Swahn from Sweden. He was 64 years and 280 days old when he won his gold medal for shooting.\n\n5. Table Tennis Dominance (China):\nChina is the best at table tennis. Since 1988, China has won 28 gold medals. Ma Long won the gold for China at the 2016 Rio de Janeiro Olympics.\n\n6. Serena Williams (USA):\nSerena Williams is probably the greatest female tennis player of all time. She has won four Olympic gold medals and 23 Grand Slam singles titles.\n\n7. Bob Beamon (USA):\nThe Olympic record for the longest jump is held by Bob Beamon. In 1968, in Mexico City, he jumped 8.90 metres - so far that the judges had to find another tape measure because their equipment was too short!"
+          },
+          {
+            "id": 52001,
+            "is_activity_book": true,
+            "activity_book_page": 50,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 50 و 51): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 6: Olympic superstars (Activity Book pp. 50-51)\n\nExercise 1 (Page 50): Olympic Records & Fast Answers:\na. Women's 100m record time: 10.62 seconds (Florence Griffith Joyner, 1988).\nb. Michael Phelps gold medals: 23 gold medals (28 total medals).\nc. Oscar Swahn's country: Sweden (oldest gold medalist at 64 years, 280 days).\nd. South Korea table tennis golds: 3 gold medals.\ne. Inge Sørensen's age: 12 years and 24 days old (youngest individual medalist, 1936).\nf. Serena Williams big competitions: 23 Grand Slam singles titles and 4 Olympic golds.\ng. Bob Beamon's record year: In 1968 (8.90m long jump in Mexico City).\nh. Michael Phelps' first Olympic medal: In 2004 (Athens Olympics).\ni. Sweden Olympic table tennis medals: One medal (Jan-Ove Waldner, 1992).\nj. Age of Florence's record: Well over 30 years old.\n\nExercise 3 & 4 (Pages 50-51): Athlete Profiles:\n• Cathy Freeman: 400m Olympic champion, Sydney 2000, first Australian Aboriginal individual medalist.\n• Abdul Wahid Aziz: Weightlifter, won Iraq's first and only Olympic medal (Bronze, Rome 1960).\n• Younis Mahmoud: Football legend, captained Iraq to win Asian Cup 2007.",
+            "exercises": [
+              {
+                "id": "u3_l6_ex1",
+                "num": "Exercise 1 (Page 50)",
+                "title": "Who can answer the questions fastest? (Olympic Facts and Superstars).",
+                "title_ar": "أجب عن الأسئلة بأسرع ما يمكن بالاعتماد على حقائق وأرقام كتاب الطالب (صفحة 33):",
+                "questions": [
+                  {
+                    "q": "a. What is the time for the women's Olympic 100 metre record?",
+                    "q_ar": "ما هو الرقم القياسي الأولمبي لسباق 100 متر للسيدات؟",
+                    "a": "10.62 seconds (حققته العداءة الأمريكية فلورنس غريفيث جوينر عام 1988)."
+                  },
+                  {
+                    "q": "b. How many gold medals did Michael Phelps win?",
+                    "q_ar": "كم عدد الميداليات الذهبية التي أحرزها السباح مايكل فيلبس؟",
+                    "a": "23 gold medals (23 ميدالية ذهبية من إجمالي 28 ميدالية أولمبية عبر 4 دورات)."
+                  },
+                  {
+                    "q": "c. Where was Oscar Swahn from?",
+                    "q_ar": "من أي بلد كان أوسكار سوان (أكبر فائز بذهبية أولمبية سناً)؟",
+                    "a": "He was from Sweden. (من السويد، وكان عمره 64 عاماً و 280 يوماً في منافسات الرماية)."
+                  },
+                  {
+                    "q": "d. How many table tennis gold medals has South Korea won?",
+                    "q_ar": "كم عدد ميداليات تنس الطاولة الذهبية التي فازت بها كوريا الجنوبية؟",
+                    "a": "3 gold medals (فازت الصين بـ 28 ميدالية ذهبية وكوريا الجنوبية بـ 3 ذهبيات)."
+                  },
+                  {
+                    "q": "e. Exactly how old was Inge Sørensen when she won her Olympic medal?",
+                    "q_ar": "كم كان عمر السباحة الدنماركية إنجي سورنسن بالضبط عند فوزها بالميدالية؟",
+                    "a": "12 years and 24 days old. (12 عاماً و 24 يوماً فقط - أصغر متوجة في سباق فردي عام 1936)."
+                  },
+                  {
+                    "q": "f. How many big tennis competitions has Serena Williams won?",
+                    "q_ar": "كم عدد البطولات الكبرى (غراند سلام) التي فازت بها أسطورة التنس سيرينا ويليامز؟",
+                    "a": "23 Grand Slam singles titles (بالإضافة إلى 4 ميداليات ذهبية أولمبية)."
+                  },
+                  {
+                    "q": "g. In what year did Bob Beamon break the Olympic long jump record?",
+                    "q_ar": "في أي عام حطم بوب بيمون الرقم القياسي التاريخي في الوثب الطويل؟",
+                    "a": "In 1968 (في دورة ألعاب مكسيكو سيتي بقفزة خارقة بلغت 8.90 أمتار)."
+                  },
+                  {
+                    "q": "h. In what year did Michael Phelps win his first Olympic medal?",
+                    "q_ar": "في أي عام فاز مايكل فيلبس بأول ميدالية أولمبية له؟",
+                    "a": "In 2004 (في دورة ألعاب أثينا الأولمبية 2004)."
+                  },
+                  {
+                    "q": "i. How many Olympic table tennis medals have Sweden won?",
+                    "q_ar": "كم عدد الميداليات الأولمبية في تنس الطاولة التي أحرزتها السويد؟",
+                    "a": "One medal (حققها البطل السويدي يان أوفه فالدنر عام 1992)."
+                  },
+                  {
+                    "q": "j. How old is Florence Griffith Joyner's Olympic record?",
+                    "q_ar": "كم مضى من الزمن على صمود الرقم القياسي لفلورنس غريفيث جوينر؟",
+                    "a": "Well over 30 years old (سُجل عام 1988 في أولمبياد سيؤول وهو صامد منذ أكثر من 30 عاماً)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l6_ex3_4",
+                "num": "Exercise 3 & 4 (Pages 50-51)",
+                "title": "Athlete Profiles: Cathy Freeman & Famous Iraqi Athlete (Abdul Wahid Aziz).",
+                "title_ar": "بطاقة تعريف البطل الرياضي: كاثي فريمان وبطل العراق الأولمبي عبد الواحد عزيز:",
+                "questions": [
+                  {
+                    "q": "Profile 1: Cathy Freeman (Australia)",
+                    "q_ar": "بطاقة البطلة الأولمبية الأسترالية كاثي فريمان:",
+                    "a": "• Name: Cathy Freeman\n• Sport: 400 metres\n• Why are they famous? She was the first Australian Aboriginal person to win an individual Olympic gold medal.\n• When did this happen? In 2000 at the Sydney Olympic Games.\n• Why did you choose this person? She does a lot of inspirational work for her community and the Aboriginal people of Australia."
+                  },
+                  {
+                    "q": "Profile 2: Famous Athlete from Iraq (Abdul Wahid Aziz - عبد الواحد عزيز)",
+                    "q_ar": "بطاقة البطل الرياضي العراقي الشهير (عبد الواحد عزيز):",
+                    "a": "• Name: Abdul Wahid Aziz (عبد الواحد عزيز)\n• Sport: Weightlifting - Lightweight division (رفع الأثقال)\n• Why are they famous? He won Iraq's first and only Olympic medal in history (Bronze medal in Rome 1960).\n• When did this happen? In 1960 at the Rome Olympic Games.\n• Why did you choose this person? Because he made Iraqi sports history and remains the ultimate inspiring Olympic figure for our nation."
+                  },
+                  {
+                    "q": "Alternative Profile: Younis Mahmoud (يونس محمود - أسطورة الكرة العراقية)",
+                    "q_ar": "بطاقة بديلة: قائد منتخب العراق يونس محمود:",
+                    "a": "• Name: Younis Mahmoud\n• Sport: Football\n• Why are they famous? He captained the Iraqi national team to win the AFC Asian Cup 2007 and scored the historic winning goal in the final against Saudi Arabia.\n• When did this happen? In July 2007.\n• Why did you choose this person? Because he brought unprecedented joy, national pride, and unity to all Iraqi people."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1537,6 +3327,134 @@ window.CURRICULUM_DATA = [
             "page": 34,
             "heading": "Lesson 7: Changes - Saad Salih and Judo (صفحة 34)",
             "text": "Saad does judo. The editor of Saad's school magazine asked him to write a paragraph about it.\nStudy how Saad planned his paragraph:\nNotes:\n• started judo 2 years ago, changed personality and life\n• personality: was shy, now confident\n• health: was weak and unfit, now strong and fitter\n• schoolwork: was bad, now good at it\n• friends: had no friends, now has lots\n• competitions: hated losing, now enjoys competing\n• dream: one day, do judo for Iraq\n\nSaad's Article: \"I used to be shy\" by Saad Salih, Year 8:\n\"I started doing judo two years ago, and it has changed my personality and my life.\nI used to be very shy, but judo has given me confidence.\nJudo has also been good for my health. I used to be very unhealthy and unfit. I could not run very fast, and I was often ill. Now I am much stronger and fitter.\nI also used to be lazy, but now I train every day and I enjoy it.\nMy teachers say that my schoolwork is better now. I used to be bad at it, but now I get good marks all the time.\nBefore I started doing judo, I used to have no friends. I don't know why. Now I have lots.\nI also used to be afraid of competitions and exams. Now I really enjoy competing against other people, and I hate losing.\nOne day, I hope to do judo for Iraq.\"\n\nTalking about changes with \"used to\":\n• I used to be shy, but now I'm confident.\n• I used to have no friends, but now I have lots.\n• I used to be lazy, but now I train every day.\n\nVocabulary definitions:\n1. What kind of person you are -> personality\n2. The opposite of 'shyness' -> confidence\n3. Practise a sport -> train"
+          },
+          {
+            "id": 52101,
+            "is_activity_book": true,
+            "activity_book_page": 52,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 52 و 53): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 7: Changes (Activity Book pp. 52-53)\n\nExercise C (Page 52): Vocabulary Definitions:\n1. what kind of person you are -> personality\n2. the opposite of 'shyness' -> confidence\n3. practise a sport -> train\n\nExercise 1 (Page 52): Saad's Changes with (Used to):\n• Example: I used to be shy, but now I'm confident.\na. I used to be very unfit, but now I am strong and much fitter.\nb. I used to be often ill, but now I rarely get sick and feel healthy.\nc. I used to be lazy, but now I train every day and enjoy it.\nd. I used to be afraid of competitions, but now I enjoy competing and hate losing.\n\nExercise 2 (Page 52): Personal Changes with (Used to):\na. I used to dislike green vegetables, but now I eat lots of salad.\nb. I used to go to bed early, but now I stay up reading until ten.\nc. I used to be afraid of the dark, but now I am brave.\nd. I used to watch cartoons all day, but now I play basketball.\n\nWriting Tip 2 & Exercise 3 & 4 (Page 53): Topic Sentences and Model Essays:\n• Topic A: Why people should do sport (Health, fitness, teamwork, stress relief).\n• Topic B: A sport you do and how it has changed you (Swimming journey and confidence).",
+            "exercises": [
+              {
+                "id": "u3_l7_exC",
+                "num": "Exercise C (Page 52)",
+                "title": "Find words that mean the following (Vocabulary from Student's Book page 34).",
+                "title_ar": "استخرج الكلمات التي تطابق المعاني التالية من نص سعد وصالح في كتاب الطالب:",
+                "questions": [
+                  {
+                    "q": "1. what kind of person you are",
+                    "q_ar": "طبيعة شخصيتك وصفاتك وطريقة تصرفك:",
+                    "a": "personality (الشخصية)"
+                  },
+                  {
+                    "q": "2. the opposite of 'shyness'",
+                    "q_ar": "عكس كلمة الخجل (shyness):",
+                    "a": "confidence (الثقة بالنفس)"
+                  },
+                  {
+                    "q": "3. practise a sport",
+                    "q_ar": "يتدرب على رياضة معينة بانتظام:",
+                    "a": "train (يتدرب)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l7_ex1",
+                "num": "Exercise 1 (Page 52)",
+                "title": "How many sentences can you make about Saad using used to? Use words from the box.",
+                "title_ar": "كوّن جملاً عن التغيرات في حياة سعد باستخدام صيغة (used to ..., but now ...):",
+                "words_box": [
+                  "afraid of competitions",
+                  "confident",
+                  "fit",
+                  "hate losing",
+                  "lazy",
+                  "often ill",
+                  "shy",
+                  "strong",
+                  "train every day",
+                  "unfit"
+                ],
+                "questions": [
+                  {
+                    "q": "Example: I used to be shy, but now I'm confident.",
+                    "q_ar": "المثال المعطى في الكتاب:",
+                    "a": "I used to be shy, but now I'm confident. (كنت خجولاً في الماضي، لكني الآن واثق من نفسي)."
+                  },
+                  {
+                    "q": "a. Fitness and strength (unfit / fit / strong):",
+                    "q_ar": "اللياقة والقوة البدنية:",
+                    "a": "I used to be very unfit and weak, but now I am strong and much fitter. (كنت قليل اللياقة وضعيفاً، لكني الآن قوي وأكثر لياقة بكثير)."
+                  },
+                  {
+                    "q": "b. Health and illness (often ill / healthy):",
+                    "q_ar": "الصحة والمرض:",
+                    "a": "I used to be often ill, but now I rarely get sick and I feel healthy. (كنت أمرض كثيراً، لكني الآن نادراً ما أمرض وأشعر بالصحة)."
+                  },
+                  {
+                    "q": "c. Activity and training (lazy / train every day):",
+                    "q_ar": "النشاط والتدريب:",
+                    "a": "I used to be lazy, but now I train every day and I enjoy it. (كنت كسولاً، لكني الآن أتدرب كل يوم وأستمتع بذلك)."
+                  },
+                  {
+                    "q": "d. Competitions (afraid of competitions / hate losing):",
+                    "q_ar": "المنافسات والامتحانات:",
+                    "a": "I used to be afraid of competitions, but now I really enjoy competing and I hate losing. (كنت أخشى المنافسات، لكني الآن أستمتع بالمنافسة وأكره الخسارة)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l7_ex2",
+                "num": "Exercise 2 (Page 52)",
+                "title": "Make notes about how you have changed. Then write sentences.",
+                "title_ar": "دوّن ملاحظات عن تغيرات حدثت في حياتك ثم صغها بجمل كاملة مع used to:",
+                "questions": [
+                  {
+                    "q": "Example: hate cheese -> love cheese",
+                    "q_ar": "المثال المعطى:",
+                    "a": "I used to hate cheese, but now I love it. (كنت أكره الجبن، لكني الآن أحبه)."
+                  },
+                  {
+                    "q": "a. Food habit (vegetables / healthy food):",
+                    "q_ar": "عادات الأكل والخضار:",
+                    "a": "I used to dislike green vegetables, but now I eat lots of salad every day."
+                  },
+                  {
+                    "q": "b. Sleep routine (bed time):",
+                    "q_ar": "مواعيد وروتين النوم:",
+                    "a": "I used to go to bed early at eight o'clock, but now I stay up reading until ten."
+                  },
+                  {
+                    "q": "c. Fears (fear of dark / heights):",
+                    "q_ar": "المخاوف الشخصية:",
+                    "a": "I used to be afraid of the dark, but now I sleep comfortably with the light off."
+                  },
+                  {
+                    "q": "d. Spare time hobbies (cartoons / sport):",
+                    "q_ar": "هوايات وقت الفراغ والرياضة:",
+                    "a": "I used to watch cartoons all day, but now I play basketball with my friends."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l7_ex3",
+                "num": "Exercise 3 & 4 (Page 53)",
+                "title": "Writing tip 2: Topic sentences & Paragraph Writing.",
+                "title_ar": "مهارات الكتابة: صياغة الجملة المفتاحية (Topic Sentence) ومخطط الأفكار وكتابة المقال:",
+                "questions": [
+                  {
+                    "q": "Topic A: Why people should do sport (لماذا ينبغي على الناس ممارسة الرياضة):",
+                    "q_ar": "المقال النموذجي للموضوع الأول:",
+                    "a": "I think that everybody should do regular sport to stay healthy and happy.\n\nFirst of all, doing sport is essential for our physical fitness. It strengthens our muscles and heart and prevents many illnesses. Furthermore, regular exercise helps us maintain a healthy weight and sleep much better at night. Secondly, sport is fantastic for our mental well-being and social life. When we play team games like football or volleyball, we make new friends, learn cooperation, and build self-confidence. Finally, exercise relieves school stress and gives us energy to concentrate on our studies. In conclusion, taking up a sport is the best decision anyone can make for a healthy, active life."
+                  },
+                  {
+                    "q": "Topic B: A sport you do and how it has changed you (رياضة تمارسها وكيف غيرت حياتك):",
+                    "q_ar": "المقال النموذجي للموضوع الثاني:",
+                    "a": "Doing swimming has completely changed my personality and my health.\n\nI started taking swimming lessons two years ago at the local sports centre. Before that, I used to be very unfit and lazy. I used to spend hours sitting on the sofa playing video games, and I was often tired and got headaches. Now, I go to the pool three times a week, and I am much stronger, fitter, and full of energy. Swimming has also given me great confidence. I used to be very shy when meeting new people, but now I have made many wonderful friends in the swimming team. I really love swimming, and my dream is to compete for Iraq one day."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1550,6 +3468,124 @@ window.CURRICULUM_DATA = [
             "page": 35,
             "heading": "Lesson 8: Have fun with words! - Tongue-twisters & Sound Patterns (صفحة 35)",
             "text": "You practised saying a tongue-twister last year. How fast can you say it now?\nListen and say:\n\"She sells seashells on the seashore.\nThe shells she sells are seashells, I'm sure.\"\n\nWhy is it difficult to say?\nIt is difficult to say - it twists your tongue - because most of the words begin with 'sh' (/ʃ/) or 's' (/s/) sounds.\nThat's what a tongue-twister is: a sentence or two where the words begin with one or two similar sounds.\n\nListen and try saying another famous one:\n\"Peter Piper picked a peck of pickled pepper.\"\n\nTongue-twisters don't have very much meaning, but they are funny!\nThey are easy to make. This is what you do:\n1. First, choose a sound, for example /b/.\n   Make a list of nouns and names starting with B:\n   Badria, Bashir, brother, ball, bag, balloon, bakery, banana, bed, bicycle, bird, boat, book, boy, bread, bus.\n2. Next, make a list of verbs starting with B:\n   bought, brought, broke, brushed, began.\n3. Then, make a list of describing words (adjectives and adverbs) beginning with B:\n   big, brown, bad, blue, black, beautiful, busy, badly.\n4. Finally, try to make a sentence with five or six of the words:\n   \"Bashir bought big brown balloons and broke them badly!\""
+          },
+          {
+            "id": 52201,
+            "is_activity_book": true,
+            "activity_book_page": 54,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 54 و 55): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 3 Lesson 8: Have fun with words! (Activity Book pp. 54-55)\n\nExercise 1 (Page 54): /b/ Tongue-twister:\nBashir bought big brown balloons and broke them badly!\n\nExercise 2 (Pages 54-55): Sound Patterns:\na. /f/: Five fresh fried fish fell from Fatima's frying pan.\nb. /g/: The girl gave green grass to the gentle goat.\nc. /h/: Happy Harry has a huge hairy hippo.\nd. /r/: Rashid ran round the red running track.\ne. /s/: Sam saw six striped socks soaking in soap.\n\nExercise 3 (Page 55): Word Tree Crossword Puzzle:\na. ADVANCED (V)\nb. SCORE (O)\nc. FINAL (L)\nd. LOSE (L)\ne. SECOND (E)\nf. OLYMPIC (Y)\ng. BEAT (B)\nh. RACE (A)\ni. MEDAL (L)\nj. GOAL (L)\nHidden word in shaded column: VOLLEYBALL",
+            "exercises": [
+              {
+                "id": "u3_l8_ex1",
+                "num": "Exercise 1 (Page 54)",
+                "title": "Write a tongue-twister with the sound 'b'.",
+                "title_ar": "اكتب جملة التواء لسان (Tongue-twister) باستخدام صوت الحرف /b/ باتباع الخطوات المنهجية:",
+                "questions": [
+                  {
+                    "q": "Create a /b/ tongue-twister following Student's Book steps:",
+                    "q_ar": "جملة اللسان لصوت الحرف /b/:",
+                    "a": "Bashir bought big brown balloons and broke them badly! (اشترى بشير بالونات بنية كبيرة وفجّرها بقوة!)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l8_ex2",
+                "num": "Exercise 2 (Pages 54-55)",
+                "title": "Make tongue-twisters with the sounds in the groups of words a-e.",
+                "title_ar": "كوّن جمل التواء لسان مستوحاة من الصور والكلمات المحددة (a-e):",
+                "questions": [
+                  {
+                    "q": "a. /f/ sound (fish, fried, fell):",
+                    "q_ar": "صوت /f/ (سمك، مقلي، سقط):",
+                    "a": "Five fresh fried fish fell from Fatima's frying pan. (خمس سمكات مقلية طازجة سقطت من مقلاة فاطمة)."
+                  },
+                  {
+                    "q": "b. /g/ sound (grass, green, gave):",
+                    "q_ar": "صوت /g/ (عشب، أخضر، أعطى):",
+                    "a": "The girl gave green grass to the gentle goat. (أعطت الفتاة عشباً أخضر للعنزة اللطيفة)."
+                  },
+                  {
+                    "q": "c. /h/ sound (Harry, happy, has):",
+                    "q_ar": "صوت /h/ (هاري، سعيد، يملك):",
+                    "a": "Happy Harry has a huge hairy hippo. (هاري السعيد لديه فرس نهر ضخم كثيف الشعر)."
+                  },
+                  {
+                    "q": "d. /r/ sound (Rashid, red, ran):",
+                    "q_ar": "صوت /r/ (رشيد، أحمر، ركض):",
+                    "a": "Rashid ran round the red running track. (ركض رشيد حول مضمار الجري الأحمر)."
+                  },
+                  {
+                    "q": "e. /s/ sound (socks, six, saw):",
+                    "q_ar": "صوت /s/ (جوارب، ستة، رأى):",
+                    "a": "Sam saw six striped socks soaking in soap. (شاهد سام ستة جوارب مخططة منقوعة في رغوة الصابون)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l8_ex3",
+                "num": "Exercise 3 (Page 55)",
+                "title": "Write the missing words and fill in the word tree puzzle.",
+                "title_ar": "اكتب الكلمات الناقصة في شجرة الكلمات واكتشف اللعبة الرياضية المخفية في العمود المظلل:",
+                "questions": [
+                  {
+                    "q": "a. The opposite of 'beginners' (8 letters):",
+                    "q_ar": "عكس كلمة مبتدئين (8 أحرف):",
+                    "a": "A D [V] A N C E D (متقدمون)"
+                  },
+                  {
+                    "q": "b. At the end of the game, the ... was Kirkuk 2, Babil 1 (5 letters):",
+                    "q_ar": "في نهاية المباراة كانت ... كركوك 2، بابل 1 (5 أحرف):",
+                    "a": "S C [O] R E (النتيجة)"
+                  },
+                  {
+                    "q": "c. The last game in a competition (5 letters):",
+                    "q_ar": "المباراة الأخيرة في البطولة (5 أحرف):",
+                    "a": "F I N A [L] (المباراة النهائية)"
+                  },
+                  {
+                    "q": "d. The opposite of 'win' (4 letters):",
+                    "q_ar": "عكس كلمة يفوز (4 أحرف):",
+                    "a": "[L] O S E (يخسر)"
+                  },
+                  {
+                    "q": "e. It comes after 'first' (6 letters):",
+                    "q_ar": "تأتي بعد المركز الأول (6 أحرف):",
+                    "a": "S [E] C O N D (المركز الثاني)"
+                  },
+                  {
+                    "q": "f. The ... Games take place every four years (7 letters):",
+                    "q_ar": "الألعاب ... تقام كل أربع سنوات (7 أحرف):",
+                    "a": "O L [Y] M P I C (الألعاب الأولمبية)"
+                  },
+                  {
+                    "q": "g. The opposite of 'lose to' (4 letters):",
+                    "q_ar": "عكس عبارة يخسر أمام (4 أحرف):",
+                    "a": "[B] E A T (يهزم)"
+                  },
+                  {
+                    "q": "h. You have to run fast in the 100 metres ... (4 letters):",
+                    "q_ar": "عليك الركض بسرعة في ... الـ 100 متر (4 أحرف):",
+                    "a": "R [A] C E (سباق)"
+                  },
+                  {
+                    "q": "i. Athletes win a ... if they come first, second or third (5 letters):",
+                    "q_ar": "يفوز الرياضيون بـ ... إذا حلوا في المراكز الثلاثة الأولى (5 أحرف):",
+                    "a": "M E D A [L] (ميدالية)"
+                  },
+                  {
+                    "q": "j. A point in football (4 letters):",
+                    "q_ar": "نقطة تسجل في كرة القدم (4 أحرف):",
+                    "a": "G O A [L] (هدف)"
+                  },
+                  {
+                    "q": "Which game is this? (الرياضة المخفية في العمود المظلل):",
+                    "q_ar": "ما اسم اللعبة المتكونة من الحروف الرأسية بالعمود المظلل؟",
+                    "a": "🏐 V - O - L - L - E - Y - B - A - L - L ➔ VOLLEYBALL (الكرة الطائرة)"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1563,6 +3599,148 @@ window.CURRICULUM_DATA = [
             "page": 36,
             "heading": "Lesson 9: Unit 3 Round up - Skills, Grammar & Review (صفحة 36)",
             "text": "In Unit 3, you have practised:\n\n1. Talking about which sports you would like to do or play:\n• \"What sports would you like to do?\"\n• \"I'd like to play tennis.\"\n• \"I'd like to do athletics.\"\n• \"I'd like to go horse riding.\"\n\n2. Asking and answering questions about a timetable:\n• \"When is the advanced horse riding class?\"\n• \"On Saturday, from three o'clock to five o'clock in the afternoon.\"\n\n3. Asking and answering questions about how good people are at sport:\n• \"How good are you at volleyball?\"\n• \"I'm quite good, but I'd like to practise.\"\n• \"I've never played volleyball. I'd like to learn.\"\n\n4. Saying numbers and years:\n• 28.28 seconds -> twenty-eight point two eight seconds.\n• 1996 -> nineteen ninety-six.\n• 2015 -> two thousand and fifteen.\n\n5. Describing changes with (used to):\n• \"I used to have no friends, but now I have lots.\"\n• \"I used to be lazy, but now I work hard.\"\n• \"I used to be shy, but now I'm confident.\"\n\n6. And you have:\n• used information from conversations to fill in a timetable.\n• performed a phone booking conversation.\n• written sentences to describe a sports story.\n• practiced finding information quickly in texts.\n• found new sports words and worked out their meanings."
+          },
+          {
+            "id": 52301,
+            "is_activity_book": true,
+            "activity_book_page": 56,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 56): مراجعة الوحدة الشاملة والحلول النموذجية",
+            "text": "Unit 3 Lesson 9: Unit 3 Round up (Activity Book p. 56)\n\nExercise 1 (Page 56): Verbs with Sports in Correct Tenses:\na. was playing tennis (past continuous)\nb. went horse riding (past simple)\nc. has done / has been doing judo (present perfect)\nd. used to go horse riding (used to)\ne. do gymnastics (infinitive after should)\nf. does judo (present simple routine)\ng. was doing gymnastics (past continuous)\nh. has played / has been playing football (present perfect with since)\n\nExercise 2 (Page 56): Irregular Verb Table:\n• lose -> lost -> lost\n• win -> won -> won\n• beat -> beat -> beaten\n• run -> ran -> run\n• hit -> hit -> hit\n• throw -> threw -> thrown\n\nExercise 3 (Page 56): Complete Sentences from Box:\na. beginners'\nb. at / trains\nc. for\nd. information / leaflet\ne. timetable",
+            "exercises": [
+              {
+                "id": "u3_l9_ex1",
+                "num": "Exercise 1 (Page 56)",
+                "title": "Complete the sentences. Use the correct form of the verbs from the box [do, go, play].",
+                "title_ar": "أكمل الجمل بالصيغة والزمن الصحيح للأفعال (do, go, play) بحسب قواعد القواعد النحوية:",
+                "words_box": [
+                  "do",
+                  "go",
+                  "play"
+                ],
+                "questions": [
+                  {
+                    "q": "a. When you phoned the sports centre, I ________ tennis.",
+                    "q_ar": "عندما اتصلت بالمركز الرياضي، كنت ألعب التنس:",
+                    "a": "was playing (ماضي مستمر لوجود when مقاطعة لحدث مستمر: was playing tennis)"
+                  },
+                  {
+                    "q": "b. My brother and I ________ horse riding last weekend.",
+                    "q_ar": "أخي وأنا ذهبنا لركوب الخيل في عطلة نهاية الأسبوع الماضي:",
+                    "a": "went (ماضي بسيط لوجود last weekend: went horse riding)"
+                  },
+                  {
+                    "q": "c. Saad Salih ________ judo for two years.",
+                    "q_ar": "سعد صالح يمارس الجودو منذ عامين:",
+                    "a": "has done (or has been doing) judo (مضارع تام لوجود دلالة المدة for two years)"
+                  },
+                  {
+                    "q": "d. I ________ horse riding a lot, but now I don't have a horse.",
+                    "q_ar": "كنت أمارس ركوب الخيل بكثرة في الماضي، لكني الآن لا أملك حصاناً:",
+                    "a": "used to go (صيغة used to go للعادة الماضية التي انقطعت لوجود but now)"
+                  },
+                  {
+                    "q": "e. I think we should ________ more gymnastics at school. It's good for us.",
+                    "q_ar": "أعتقد أنه ينبغي علينا ممارسة المزيد من الجمباز في المدرسة لأنه مفيد لنا:",
+                    "a": "do (فعل مجرد بعد أداة النصيحة should: should do gymnastics)"
+                  },
+                  {
+                    "q": "f. Ahmed ________ judo every Tuesday evening.",
+                    "q_ar": "أحمد يمارس الجودو كل مساء ثلاثاء:",
+                    "a": "does (مضارع بسيط للروتين المتكرر مع الفاعل المفرد Ahmed: does judo)"
+                  },
+                  {
+                    "q": "g. Muna ________ gymnastics, but she hurt her back.",
+                    "q_ar": "كانت منى تمارس الجمباز ولكنها آذت ظهرها:",
+                    "a": "was doing (or did) gymnastics"
+                  },
+                  {
+                    "q": "h. Bill ________ football since he was five years old.",
+                    "q_ar": "بيل يلعب كرة القدم منذ أن كان في الخامسة من عمره:",
+                    "a": "has played (or has been playing) football (مضارع تام لوجود since)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l9_ex2",
+                "num": "Exercise 2 (Page 56)",
+                "title": "Complete the table with Irregular Verb forms (Present, Past, Past participle).",
+                "title_ar": "أكمل جدول تصريف الأفعال الشاذة غير القياسية (المضارع، الماضي، التصريف الثالث):",
+                "questions": [
+                  {
+                    "q": "1. lose (يخسر):",
+                    "q_ar": "تصريف الفعل lose:",
+                    "a": "lose ➔ lost ➔ lost"
+                  },
+                  {
+                    "q": "2. win (يفوز):",
+                    "q_ar": "تصريف الفعل win:",
+                    "a": "win ➔ won ➔ won"
+                  },
+                  {
+                    "q": "3. beat (يهزم):",
+                    "q_ar": "تصريف الفعل beat:",
+                    "a": "beat ➔ beat ➔ beaten"
+                  },
+                  {
+                    "q": "4. run (يركض):",
+                    "q_ar": "تصريف الفعل run:",
+                    "a": "run ➔ ran ➔ run"
+                  },
+                  {
+                    "q": "5. hit (يضرب):",
+                    "q_ar": "تصريف الفعل hit:",
+                    "a": "hit ➔ hit ➔ hit"
+                  },
+                  {
+                    "q": "6. throw (يرمي):",
+                    "q_ar": "تصريف الفعل throw:",
+                    "a": "throw ➔ threw ➔ thrown"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l9_ex3",
+                "num": "Exercise 3 (Page 56)",
+                "title": "Complete the sentences. Use words from the box.",
+                "title_ar": "أكمل الجمل بالكلمات المناسبة من الصندوق (at, beginners', for, information, leaflet, timetable, trains):",
+                "words_box": [
+                  "at",
+                  "beginners'",
+                  "for",
+                  "information",
+                  "leaflet",
+                  "timetable",
+                  "trains"
+                ],
+                "questions": [
+                  {
+                    "q": "a. I have never done any sport before, so I'll go to the ________ class.",
+                    "q_ar": "لم أمارس أي رياضة من قبل، لذا سأنضم إلى صف المبتدئين:",
+                    "a": "beginners' (المبتدئين)"
+                  },
+                  {
+                    "q": "b. Bill is very good ________ athletics because he ________ every day.",
+                    "q_ar": "بيل بارع في ألعاب القوى لأنه يتدرب كل يوم:",
+                    "a": "at / trains (good at athletics / trains every day)"
+                  },
+                  {
+                    "q": "c. Our teacher says that gymnastics is good ________ us.",
+                    "q_ar": "يقول معلمنا إن الجمباز مفيد لنا:",
+                    "a": "for (good for us - مفيد لصحتنا)"
+                  },
+                  {
+                    "q": "d. I phoned the sports centre to get more ________, and they sent me a ________ about what they do there.",
+                    "q_ar": "اتصلت بالمركز الرياضي للحصول على مزيد من المعلومات فأرسلوا لي نشرة تعريفية عما يقدمونه:",
+                    "a": "information / leaflet (مزيد من المعلومات / نشرة تعريفية)"
+                  },
+                  {
+                    "q": "e. If you don't know when the class starts, look at the ________.",
+                    "q_ar": "إذا لم تكن تعرف متى يبدأ الدرس، فانظر إلى جدول المواعيد:",
+                    "a": "timetable (جدول المواعيد)"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1582,6 +3760,91 @@ window.CURRICULUM_DATA = [
             "page": 38,
             "heading": "Story Time (Part 2): The Match, Defeat & The Stadium Laugh (صفحة 38)",
             "text": "Aziz smiled at us. 'We're going to win,' he said. 'It's going to be easy!'\n'I'm not sure, Aziz,' Jad said as we watched the girls practising.\n'I used to play for my school team in Algeria,' he replied. 'I was the best player!'\n'I'm quite good at football, too,' I said.\n'I'm not very good,' said Marcus. 'I'll be the goalkeeper.'\n\nThe match started, and Jad passed the ball to me. 'Johnny! Give me the ball!' shouted Aziz.\nI tried to pass the ball to him, but one of the girls got it first.\nShe went past me, then past Jad and then past Paolo. Then she kicked the ball very hard, and it went past Marcus and into the goal.\nIt was 1-0 to the other team.\n'Why didn't you catch it, Marcus?' I shouted. 'Use your hands!'\n\nAfter ten minutes, it was 4-0. The girls were too good.\nBy the end of the match, they won 9-0! We were all very tired and disappointed.\n'Never mind,' said Tom. 'I have some good news. I've got tickets to watch the match tonight.'\n\n'Come on, Munich!' I shouted. We were watching Bayern Munich against Real Madrid, and we were very close to the pitch.\nIt was a great match, and Bayern Munich were winning 3-1.\n'Never mind about the match we lost,' I said to the other boys. 'It's been a great day.'\nThen the goalkeeper kicked the ball, but it went wrong. The ball left the pitch and went smack - straight into my face!\n'Ow!' I cried.\n'Why didn't you catch it, Johnny?' asked Marcus. 'Use your hands!'\nThe other boys laughed. My face hurt, but I laughed, too. 'Very funny, Marcus,' I said."
+          },
+          {
+            "id": 52401,
+            "is_activity_book": true,
+            "activity_book_page": 57,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 57): أسئلة القصة الاستيعابية والحلول النموذجية",
+            "text": "Unit 3 Lesson 10: Story Time: Jad and Johnny - The football match (Activity Book p. 57)\n\nExercise 1 (Page 57): Story Analysis Card:\n• Title: Jad and Johnny - The football match\n• Characters: Johnny, Jad, Tom, Aziz, Paolo, Marcus, and the Munich Under-12 girls team.\n• What it is about: The boys visit the Allianz Arena in Munich. Overconfident Aziz challenges young German girls to a match, but the girls beat them 9-0! Later, they watch Bayern Munich vs Real Madrid, where a stray ball hits Johnny in the face.\n• Why I liked it: Humorous, teaches not to underestimate opponents and shows that team practice beats boastfulness.\n• New words: stadium, trophy room, goalkeeper, pitch, league, Under-12s, stray ball.\n\nExercise 2 (Page 57): True or False Statements:\na. False (Allianz Arena seen from Austria, not space)\nb. True (Bayern Munich is a great team with nearly 100 trophies)\nc. False (Played against Under-12 girls team, not boys)\nd. True (Aziz played for school team in Algeria)\ne. False (Lost 9-0, not 4-0)\nf. True (Disappointed about losing)\ng. False (Johnny got hit in the face, not Marcus)",
+            "exercises": [
+              {
+                "id": "u3_l10_ex1",
+                "num": "Exercise 1 (Page 57)",
+                "title": "Read the story and complete the information below (Story Analysis Card).",
+                "title_ar": "اقرأ القصة واستكمل بطاقة تحليل القصة الأدبية الرسمية (العنوان، الشخصيات، الفكرة، الرأي، الكلمات الجديدة):",
+                "questions": [
+                  {
+                    "q": "a. Title",
+                    "q_ar": "عنوان القصة:",
+                    "a": "Jad and Johnny - The football match (جاد وجوني: مباراة كرة القدم)"
+                  },
+                  {
+                    "q": "b. Characters",
+                    "q_ar": "شخصيات القصة:",
+                    "a": "Johnny, Jad, Tom, Aziz, Paolo, Marcus, the Bayern Munich coach, and the girls of the Munich Under-12's team."
+                  },
+                  {
+                    "q": "c. What it is about",
+                    "q_ar": "عن ماذا تتحدث القصة (ملخص الأحداث):",
+                    "a": "The boys visit the famous Allianz Arena in Munich. Overconfident Aziz challenges a team of young Under-12 German girls to a match, but the girls beat them thoroughly 9-0! Later, the boys watch a thrilling Bayern Munich vs Real Madrid match, where Johnny gets hit humorously in the face by a stray ball."
+                  },
+                  {
+                    "q": "d. Why I liked / didn't like the story",
+                    "q_ar": "لماذا أعجبتني / لم تعجبني القصة:",
+                    "a": "I really liked the story because it is very funny, realistic, and teaches an important lesson: never underestimate opponents based on age or gender, and remember that fitness and team practice beat boastful words."
+                  },
+                  {
+                    "q": "e. New words",
+                    "q_ar": "المفردات الجديدة المستفادة:",
+                    "a": "stadium (ملعب), trophy room (غرفة الكؤوس والجوائز), pitch (أرضية الملعب), tracksuit (بدلة تدريب رياضية), Under-12s (فئة تحت 12 عاماً), goalkeeper (حارس مرمى), gasped (شهق من الدهشة), stray ball (كرة طائشة)."
+                  }
+                ]
+              },
+              {
+                "id": "u3_l10_ex2",
+                "num": "Exercise 2 (Page 57)",
+                "title": "Are the statements true or false? Write T or F.",
+                "title_ar": "هل العبارات التالية صحيحة (T) أم خاطئة (F)؟",
+                "questions": [
+                  {
+                    "q": "a. The Allianz Arena can be seen from space.",
+                    "q_ar": "يمكن رؤية ملعب أليانز أرينا من الفضاء الخارجي:",
+                    "a": "F (False - When the lights are turned on, it can be seen from Austria, not from space)."
+                  },
+                  {
+                    "q": "b. Bayern Munich is a good team.",
+                    "q_ar": "بايرن ميونيخ فريق ممتاز:",
+                    "a": "T (True - They have nearly a hundred trophies in their trophy room, including league titles and Champions League cups)."
+                  },
+                  {
+                    "q": "c. The boys play football against the Munich Under-12's boys team.",
+                    "q_ar": "لعب الأولاد مباراة كرة القدم ضد فريق بنين تحت 12 سنة:",
+                    "a": "F (False - They played against the Munich Under-12's girls team)."
+                  },
+                  {
+                    "q": "d. Aziz plays football for his school team.",
+                    "q_ar": "عزيز يلعب كرة القدم لفريق مدرسته:",
+                    "a": "T (True - He used to play for his school team in Algeria and said he was the best player)."
+                  },
+                  {
+                    "q": "e. The boys lose the football match 4-0.",
+                    "q_ar": "خسر الأولاد المباراة بنتيجة 4 - 0:",
+                    "a": "F (False - The score was 4-0 after ten minutes, but they lost 9-0 by the end of the match)."
+                  },
+                  {
+                    "q": "f. The boys are disappointed about losing the match.",
+                    "q_ar": "شعر الأولاد بخيبة أمل وإحباط بعد خسارة المباراة:",
+                    "a": "T (True - The text states: 'By the end of the match, they won 9-0! We were all very tired and disappointed')."
+                  },
+                  {
+                    "q": "g. Marcus gets hit in the face with a ball.",
+                    "q_ar": "أصيب ماركوس في وجهه بالكرة:",
+                    "a": "F (False - Johnny got hit in the face with the stray ball, and Marcus joked: 'Why didn't you catch it, Johnny? Use your hands!')."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1601,6 +3864,77 @@ window.CURRICULUM_DATA = [
             "page": 41,
             "heading": "Project: The Sports Survey - Class Questionnaire & Results (صفحات 41-42)",
             "text": "The Sports Survey by Umar and Ali:\nUmar and Ali created a class sports survey to find out what sports their classmates do and want to try.\n\nSurvey Questions:\n1. Do you do any sports? If yes, which ones?\n2. How often do you do sport each week?\n3. Which of the three new sports (Skateboarding, Ultimate, Surfing) would you like to try?\n4. Why do you enjoy your favourite sport?\n\nSurvey Results (Charts & Data):\n• Football is the most popular sport among the students.\n• Swimming and running are popular choices for staying fit.\n• Surfing is the new sport that most students would love to try during beach holidays.\n• Presenting data: using bar charts and pie charts to display sports habits clearly."
+          },
+          {
+            "id": 52601,
+            "is_activity_book": true,
+            "activity_book_page": 64,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 64): الأنشطة الإضافية الموسعة والحلول النموذجية",
+            "text": "Unit 3 Lesson 11: Extra activities (Activity Book p. 64)\n\nExercise 1 (Page 64): Track 38 Sports Weekend Timetable:\n• Classes Y/N: Athletics (Adv N, Beg Y); Gymnastics (Adv Y, Beg Y); Judo (Adv N, Beg N); Karate (Adv Y, Beg Y); Swimming (Adv N, Beg N); Tennis (Adv Y, Beg N).\n• Saturday (Beginners): 10-12 Karate; 2-4 Athletics; 5-7 Gymnastics.\n• Sunday (Advanced): 10-12 Gymnastics; 2-4 Karate; 5-7 Tennis.\n\nExercise 2 (Page 64): Babil vs Kirkuk Cup Final:\na. final, b. score, c. kicked, d. won, e. cup, f. beaten, g. scored, h. goals, i. lost.",
+            "exercises": [
+              {
+                "id": "u3_l11_ex1",
+                "num": "Exercise 1 (Page 64)",
+                "title": "Listen to Track 38. Which classes are going to be in the Sports Weekend? Write Y/N and fill the timetable.",
+                "title_ar": "استمع للتسجيل الصوتي 38 وحدد الدروس المقامة في عطلة نهاية الأسبوع الرياضية (Y أو N) واستكمل الجدول:",
+                "questions": [
+                  {
+                    "q": "Write Y for Yes and N for No:",
+                    "q_ar": "تحديد إقامة الدروس (نعم Y / لا N):",
+                    "a": "• a. Athletics: Advanced ➔ N\n• b. Athletics: Beginners ➔ Y (Saturday 2-4)\n• c. Gymnastics: Advanced ➔ Y (Sunday 10-12)\n• d. Gymnastics: Beginners ➔ Y (Saturday 5-7)\n• e. Judo: Advanced ➔ N\n• f. Judo: Beginners ➔ N\n• g. Karate: Advanced ➔ Y (Sunday 2-4)\n• h. Karate: Beginners ➔ Y (Saturday 10-12)\n• i. Swimming: Advanced ➔ N\n• j. Swimming: Beginners ➔ N\n• k. Tennis: Advanced ➔ Y (Sunday 5-7)\n• l. Tennis: Beginners ➔ N"
+                  },
+                  {
+                    "q": "Sports Weekend Timetable (جدول عطلة نهاية الأسبوع الرياضية):",
+                    "q_ar": "الجدول المعتمد لعطلة نهاية الأسبوع:",
+                    "a": "📅 Saturday (Beginners only):\n• 10:00 - 12:00 ➔ Karate (Beginners)\n• 2:00 - 4:00 ➔ Athletics (Beginners)\n• 5:00 - 7:00 ➔ Gymnastics (Beginners)\n\n📅 Sunday (Advanced only):\n• 10:00 - 12:00 ➔ Gymnastics (Advanced)\n• 2:00 - 4:00 ➔ Karate (Advanced)\n• 5:00 - 7:00 ➔ Tennis (Advanced)"
+                  }
+                ]
+              },
+              {
+                "id": "u3_l11_ex2",
+                "num": "Exercise 2 (Page 64)",
+                "title": "Complete the paragraph about Babil vs Kirkuk final. Use the words from the box.",
+                "title_ar": "أكمل النص حول المباراة النهائية بين بابل وكركوك باستخدام الكلمات التسع من الصندوق:",
+                "words_box": [
+                  "beaten",
+                  "cup",
+                  "final",
+                  "goals",
+                  "kicked",
+                  "lost",
+                  "score",
+                  "scored",
+                  "won"
+                ],
+                "questions": [
+                  {
+                    "q": "Babil played Kirkuk in the ________^a of the Iraqi School's competition.",
+                    "q_ar": "لعبت بابل ضد كركوك في ... بطولة المدارس العراقية:",
+                    "a": "final (المباراة النهائية)"
+                  },
+                  {
+                    "q": "After 85 minutes, the ________^b was Babil 0, Kirkuk 0.",
+                    "q_ar": "بعد 85 دقيقة، كانت ... بابل 0، كركوك 0:",
+                    "a": "score (النتيجة)"
+                  },
+                  {
+                    "q": "Then the ball came to Hasan. He ________^c it past the Kirkuk goalkeeper.",
+                    "q_ar": "ثم وصلت الكرة لحسن، فـ ... متجاوزاً حارس كركوك:",
+                    "a": "kicked (سدد / ركل الكرة)"
+                  },
+                  {
+                    "q": "'Babil 1, Kirkuk 0!' shouted Hasan. 'We've ________^d the ________^e! We've ________^f Kirkuk!'",
+                    "q_ar": "صاح حسن: لقد ... الـ ...! لقد ... كركوك!:",
+                    "a": "won^d the cup^e! We've beaten^f Kirkuk! (فزنا بالكأس! هزمنا كركوك!)"
+                  },
+                  {
+                    "q": "Unfortunately, Kirkuk ________^g two ________^h very quickly after that and Babil ________^i the game 1-2.",
+                    "q_ar": "للأسف، كركوك ... ... بسرعة كبيرة وبابل ... المباراة 1-2:",
+                    "a": "scored^g two goals^h very quickly after that and Babil lost^i the game 1-2. (سجلت كركوك هدفين بسرعة وخسرت بابل المباراة 1-2)"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -2468,7 +4802,7 @@ window.CURRICULUM_DATA = [
       }
     ]
   }
-];
+] ;
 
 window.GRAMMAR_RULES = [
   {
