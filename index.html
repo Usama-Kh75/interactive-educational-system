@@ -1717,6 +1717,13 @@
       transition: all 0.2s ease;
     }
 
+    .chunk-box.chunk-box-activity {
+      background: #f0fdfa !important;
+      border: 1.5px solid #99f6e4 !important;
+      border-right: 5px solid #0d9488 !important;
+      box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08) !important;
+    }
+
     .chunk-box.active-reading {
       border: 2px solid #4f46e5 !important;
       background: #eff6ff !important;
@@ -2832,7 +2839,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.5.6 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.6.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3626,7 +3633,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.5.6</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.6.0</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3651,7 +3658,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.5.6</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.6.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3704,7 +3711,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.5.6</span>
+        <span class="version-badge" id="footerVersionBadge">v3.6.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3791,12 +3798,20 @@
         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
           <span style="font-size: 0.8rem; font-weight: 800; color: var(--slate-700);">📚 الكتاب المدرسي:</span>
           <select id="modalBookCurrSelect" onchange="switchModalBookCurr(Number(this.value))" style="font-size: 0.82rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 8px; border: 1px solid var(--slate-300); background: white; color: var(--slate-900);">
-            <option value="3">📘 اللغة الإنجليزية (119 صفحة)</option>
+            <option value="3">📘 اللغة الإنجليزية (English for Iraq)</option>
             <option value="4">📙 اللغة العربية - الجزء الأول (136 صفحة)</option>
             <option value="5">📙 اللغة العربية - الجزء الثاني (136 صفحة)</option>
             <option value="6">🕌 التربية الإسلامية (120 صفحة)</option>
             <option value="7">⚛️ الفيزياء (88 صفحة)</option>
           </select>
+          <div id="modalEnglishBookTypeWrapper" style="display: inline-flex; align-items: center; gap: 0.35rem; margin-right: 0.4rem;">
+            <button type="button" class="btn btn-sm" id="modalBtnStudentBook" onclick="switchEnglishBookType('student')" style="font-size: 0.76rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
+              📖 كتاب الطالب (SB)
+            </button>
+            <button type="button" class="btn btn-sm" id="modalBtnActivityBook" onclick="switchEnglishBookType('activity')" style="font-size: 0.76rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
+              📝 كراس النشاط (AB)
+            </button>
+          </div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
@@ -4064,7 +4079,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.5.6</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.6.0</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4092,13 +4107,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.5.6؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.6.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.5.6</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.6.0</span>
         </div>
       </div>
 
@@ -4147,8 +4162,8 @@
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
     const CURRENT_VERSION = '3.3.2';
-    const CURRENT_VERSION_LABEL = 'v3.5.6';
-    const SYSTEM_VERSION = 'v3.5.6';
+    const CURRENT_VERSION_LABEL = 'v3.6.0';
+    const SYSTEM_VERSION = 'v3.6.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -6434,6 +6449,8 @@
       }
 
       if (breadcrumbEl) {
+        const actPages = activeLesson.activity_book_pages || [];
+        const hasActPages = isEnCurr && actPages.length > 0;
         breadcrumbEl.innerHTML = `
           <div class="breadcrumb-top-row">
             <div class="breadcrumb-unit-badge" id="breadcrumbUnitBadge">
@@ -6448,9 +6465,14 @@
           </h2>
           <div class="breadcrumb-coords-row">
             ${bookCoordHtml}
-            <button class="btn btn-primary btn-sm" onclick="openBookPageModal(${pages[0] || 4}, \`${escapeForAttribute(lessonTitle)}\`)" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
-              🔍 فتح صفحة الكتاب الأصلية (${pages[0] || 4})
+            <button class="btn btn-primary btn-sm" onclick="openBookPageModal(${pages[0] || 4}, \`${escapeForAttribute(lessonTitle)}\`, 'student')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
+              🔍 فتح كتاب الطالب (${pages[0] || 4})
             </button>
+            ${hasActPages ? `
+              <button class="btn btn-sm" onclick="openBookPageModal(${actPages[0]}, \`${escapeForAttribute(lessonTitle)}\`, 'activity')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #0d9488; color: #ffffff; border: none; font-weight: 700; border-radius: 6px; box-shadow: 0 1px 3px rgba(13,148,136,0.3);">
+                📝 فتح كراس النشاط (${actPages.join(', ')})
+              </button>
+            ` : ''}
             <button class="btn btn-secondary btn-sm" id="toggleVisualBtn" onclick="toggleMediaSection('lessonMediaVisualContainer')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem;">
               🎨 المعرض البصري والمفاهيم
             </button>
@@ -6478,17 +6500,95 @@
         const text = ch.content_text || ch.text || '';
         const page = ch.page || ch.page_number || 1;
         const heading = ch.heading || `المقطع ${idx + 1}`;
+        const isActivity = Boolean(ch.is_activity_book || ch.activity_book);
 
         const box = document.createElement('div');
-        box.className = 'chunk-box';
+        box.className = isActivity ? 'chunk-box chunk-box-activity' : 'chunk-box';
         box.id = `chunk-box-${idx}`;
-        box.innerHTML = `
-          <div class="chunk-meta">
-            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span>📌 ${heading.length > 50 ? heading.substring(0, 48) + '...' : heading} - صفحة (${page})</span>
-              <button class="mini-listen-btn" style="background: var(--slate-200); color: var(--slate-700);" onclick="openBookPageModal(${page}, \`${escapeForAttribute(activeLesson.title)}\`)">
-                📖 صورة صفحة (${page})
+
+        let innerContentHtml = '';
+
+        if (isActivity && ch.exercises && ch.exercises.length > 0) {
+          innerContentHtml = `
+            <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: #e6fffa; border: 1px solid #b2f5ea; padding: 0.45rem 0.75rem; border-radius: 8px;">
+              <span style="font-size: 0.82rem; font-weight: 800; color: #0d9488;">
+                🎯 تمارين كتاب النشاط الرسمية والحلول النموذجية المعتمدة
+              </span>
+              <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; font-weight: 700; background: white;">
+                👁️ إظهار / إخفاء جميع الحلول
               </button>
+            </div>
+            <div class="activity-exercises-list" id="activityExercisesList_${idx}">
+          `;
+
+          ch.exercises.forEach((ex, exIdx) => {
+            const exId = ex.id || `ex_${idx}_${exIdx}`;
+            let wordsBoxHtml = '';
+            if (ex.words_box && ex.words_box.length > 0) {
+              wordsBoxHtml = `
+                <div style="background: #ffffff; border: 1px dashed #cbd5e1; border-radius: 6px; padding: 0.4rem 0.65rem; margin: 0.4rem 0; font-size: 0.82rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                  <strong style="color: var(--slate-700);">📦 الكلمات / الخيارات:</strong>
+                  ${ex.words_box.map(w => `<span style="background: #f1f5f9; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; color: #0f172a;">${w}</span>`).join('')}
+                </div>
+              `;
+            }
+
+            let qListHtml = '';
+            if (ex.questions && ex.questions.length > 0) {
+              qListHtml = ex.questions.map((qObj, qIdx) => `
+                <div style="margin-bottom: 0.6rem; padding-bottom: 0.45rem; border-bottom: 1px solid #f1f5f9;">
+                  <div style="font-weight: 700; color: var(--slate-900); font-size: 0.88rem; direction: ltr; text-align: left; line-height: 1.5;">
+                    ${qObj.q}
+                  </div>
+                  ${qObj.q_ar ? `<div style="font-size: 0.76rem; color: var(--slate-500); margin-top: 0.15rem;">${qObj.q_ar}</div>` : ''}
+                  <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.35rem; padding: 0.45rem 0.75rem; font-size: 0.82rem; border-left: 3px solid #0d9488;">
+                    <div style="font-weight: 800; color: #0d9488; margin-bottom: 0.2rem;">✅ الحل النموذجي المعتمد:</div>
+                    <div style="direction: ${/[a-zA-Z]{2,}/.test(qObj.a) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(qObj.a) ? 'left' : 'right'}; font-weight: 700; color: #065f46; white-space: pre-wrap;">${qObj.a}</div>
+                  </div>
+                </div>
+              `).join('');
+            }
+
+            innerContentHtml += `
+              <div class="activity-exercise-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.85rem; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.4rem;">
+                  <div>
+                    <span class="badge" style="background: #ccfbf1; color: #0f766e; font-weight: 800; font-size: 0.74rem;">${ex.num || `التمرين ${exIdx+1}`}</span>
+                    <h4 style="display: inline; font-size: 0.92rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-800);">${ex.title}</h4>
+                    ${ex.title_ar ? `<div style="font-size: 0.78rem; color: var(--slate-500); margin-top: 0.15rem;">${ex.title_ar}</div>` : ''}
+                  </div>
+                  <div style="display: flex; gap: 0.35rem; align-items: center;">
+                    <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})">
+                      <span>👁️</span> إظهار الحل
+                    </button>
+                    <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(ex.title + '. ' + (ex.questions || []).map(q => q.q).join(' '))}\`, 'en')">
+                      🔊 استماع
+                    </button>
+                  </div>
+                </div>
+                ${wordsBoxHtml}
+                <div style="margin-top: 0.6rem;">
+                  ${qListHtml}
+                </div>
+              </div>
+            `;
+          });
+
+          innerContentHtml += `</div>`;
+        } else {
+          innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${/[a-zA-Z]{2,}/.test(text) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(text) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>`;
+        }
+
+        const pageLabel = isActivity ? `كراس النشاط ص (${ch.activity_book_page || page})` : `كتاب الطالب ص (${page})`;
+        const pageImgBtn = isActivity
+          ? `<button class="mini-listen-btn" style="background: #0d9488; color: #ffffff; font-weight: 700;" onclick="openBookPageModal(${ch.activity_book_page || page}, \`${escapeForAttribute(activeLesson.title)}\`, 'activity')">📝 صورة صفحة النشاط (${ch.activity_book_page || page})</button>`
+          : `<button class="mini-listen-btn" style="background: var(--slate-200); color: var(--slate-700);" onclick="openBookPageModal(${page}, \`${escapeForAttribute(activeLesson.title)}\`, 'student')">📖 صورة صفحة (${page})</button>`;
+
+        box.innerHTML = `
+          <div class="chunk-meta" ${isActivity ? 'style="background: #e6fffa; border-color: #b2f5ea;"' : ''}>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span>📌 ${heading.length > 50 ? heading.substring(0, 48) + '...' : heading} - ${pageLabel}</span>
+              ${pageImgBtn}
             </div>
             ${isEnCurr ? `
               <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(text)}\`, 'en')">
@@ -6496,7 +6596,7 @@
               </button>
             ` : ''}
           </div>
-          <div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${/[a-zA-Z]{2,}/.test(text) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(text) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>
+          ${innerContentHtml}
         `;
         chunksContainer.appendChild(box);
       });
@@ -6508,15 +6608,24 @@
     let currentBookZoom = 1;
     let currentPageAudioText = '';
     let currentModalBookCurrId = 3;
+    let currentModalEnglishBookType = 'student'; // 'student' or 'activity'
     let currentModalBookPage = 1;
 
     // فتح المكتبة الرقمية العامة وتصفح صفحات الكتب المدرسية المعتمدة
-    function openDigitalLibraryReader(currId = 3, pageNum = 4) {
+    function openDigitalLibraryReader(currId = 3, pageNum = 4, bookType = 'student') {
       currentModalBookCurrId = Number(currId) || 3;
+      currentModalEnglishBookType = bookType || 'student';
       currentModalBookPage = Number(pageNum) || 1;
       renderDigitalLibraryPage();
       const modal = document.getElementById('bookPageModal');
       if (modal) modal.classList.remove('hidden');
+    }
+
+    function switchEnglishBookType(type) {
+      if (audioPlayer.isPlaying) audioPlayer.stop();
+      currentModalEnglishBookType = type;
+      currentModalBookPage = 1;
+      renderDigitalLibraryPage();
     }
 
     function switchModalBookCurr(currId) {
@@ -6528,7 +6637,9 @@
 
     function navModalBookPage(delta) {
       if (audioPlayer.isPlaying) audioPlayer.stop();
-      const maxPages = currentModalBookCurrId === 3 ? 119 : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
+      const isEn = (currentModalBookCurrId === 3);
+      const isAct = isEn && (currentModalEnglishBookType === 'activity');
+      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
       let nextP = currentModalBookPage + delta;
       if (nextP < 1) nextP = 1;
       if (nextP > maxPages) nextP = maxPages;
@@ -6538,7 +6649,9 @@
 
     function goToModalBookPage(p) {
       if (audioPlayer.isPlaying) audioPlayer.stop();
-      const maxPages = currentModalBookCurrId === 3 ? 119 : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
+      const isEn = (currentModalBookCurrId === 3);
+      const isAct = isEn && (currentModalEnglishBookType === 'activity');
+      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
       let targetP = Number(p);
       if (isNaN(targetP) || targetP < 1) targetP = 1;
       if (targetP > maxPages) targetP = maxPages;
@@ -6559,16 +6672,20 @@
 
       const currId = currentModalBookCurrId;
       const pageNum = currentModalBookPage;
+      const isEn = (currId === 3);
+      const isActivity = isEn && (currentModalEnglishBookType === 'activity');
       const isP1 = currId === 4;
       const isP2 = currId === 5;
       const isIslamic = currId === 6;
       const isPhysics = currId === 7;
 
       let folder = '';
-      let bookName = 'كتاب اللغة الإنجليزية (English for Iraq)';
-      let maxPages = 119;
+      let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
+      let maxPages = isActivity ? 127 : 119;
 
-      if (isP1) {
+      if (isActivity) {
+        folder = 'english_activity/';
+      } else if (isP1) {
         folder = 'arabic_p1/';
         bookName = 'كتاب اللغة العربية (الجزء الأول)';
         maxPages = 136;
@@ -6584,6 +6701,31 @@
         folder = 'physics/';
         bookName = 'كتاب الفيزياء (الصف الثاني المتوسط)';
         maxPages = 88;
+      }
+
+      // محول نمط الكتاب للمنهج الإنجليزي (كتاب الطالب مقابل كراس النشاط)
+      const engTypeWrapper = document.getElementById('modalEnglishBookTypeWrapper');
+      if (engTypeWrapper) {
+        engTypeWrapper.style.display = isEn ? 'inline-flex' : 'none';
+        const btnSb = document.getElementById('modalBtnStudentBook');
+        const btnAb = document.getElementById('modalBtnActivityBook');
+        if (btnSb && btnAb) {
+          if (isActivity) {
+            btnAb.style.background = '#0d9488';
+            btnAb.style.color = '#ffffff';
+            btnAb.style.border = '1px solid #0f766e';
+            btnSb.style.background = '#ffffff';
+            btnSb.style.color = 'var(--slate-700)';
+            btnSb.style.border = '1px solid var(--slate-300)';
+          } else {
+            btnSb.style.background = 'var(--primary)';
+            btnSb.style.color = '#ffffff';
+            btnSb.style.border = '1px solid var(--primary-dark)';
+            btnAb.style.background = '#ffffff';
+            btnAb.style.color = 'var(--slate-700)';
+            btnAb.style.border = '1px solid var(--slate-300)';
+          }
+        }
       }
 
       if (title) title.innerText = `📖 المكتبة الرقمية: ${bookName}`;
@@ -6608,7 +6750,6 @@
       }
 
       // جمع نص الصفحة للاستماع الصوتي (حصراً للمنهج الإنجليزي)
-      const isEn = (currentModalBookCurrId === 3);
       const listenBtn = document.getElementById('bookPageModalListenBtn');
       const stopBtn = document.getElementById('bookPageModalStopBtn');
       const statusBanner = document.getElementById('bookPageAudioStatusBanner');
@@ -6641,12 +6782,57 @@
       }
     }
 
-    function openBookPageModal(pageNum, lessonTitle) {
+    function openBookPageModal(pageNum, lessonTitle, bookType = 'student') {
       currentModalBookCurrId = appData.currentCurriculumId || 3;
+      currentModalEnglishBookType = bookType || 'student';
       currentModalBookPage = Number(pageNum) || 1;
       renderDigitalLibraryPage(lessonTitle);
       const modal = document.getElementById('bookPageModal');
       if (modal) modal.classList.remove('hidden');
+    }
+
+    
+    // دوال إظهار وإخفاء الحلول النموذجية لتمارين كراس النشاط
+    function toggleActivityCardSolutions(exId, count) {
+      let anyHidden = false;
+      for (let i = 0; i < count; i++) {
+        const box = document.getElementById(`sol_${exId}_${i}`);
+        if (box && box.classList.contains('hidden')) {
+          anyHidden = true;
+          break;
+        }
+      }
+      for (let i = 0; i < count; i++) {
+        const box = document.getElementById(`sol_${exId}_${i}`);
+        if (box) {
+          if (anyHidden) box.classList.remove('hidden');
+          else box.classList.add('hidden');
+        }
+      }
+      const btn = document.getElementById(`btn_sol_${exId}`);
+      if (btn) {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      }
+    }
+
+    function toggleAllActivitySolutions(chunkIdx) {
+      const container = document.getElementById(`activityExercisesList_${chunkIdx}`);
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
     }
 
     function updateBookPageAudioUI(isPlaying) {
@@ -7006,13 +7192,36 @@
                 <span style="font-size: 0.72rem; color: var(--slate-500);">${bookLabel}</span>
               </div>
               <p style="font-size: 0.78rem; font-weight: 700; color: var(--slate-800); margin: 0 0 0.45rem 0; line-height: 1.3;">${lesson.title}</p>
-              <button class="btn btn-secondary btn-sm" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`)" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; width: 100%;">
+              <button class="btn btn-secondary btn-sm" onclick="openBookPageModal(${p}, \`${escapeForAttribute(lesson.title)}\`, 'student')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; width: 100%;">
                 🔍 تكبير ومطالعة الصفحة
               </button>
             </div>
           </div>
         `;
       });
+
+      // 1.2. بطاقات صفحات كراس النشاط (Activity Book Pages)
+      if (curr.id === 3 && lesson.activity_book_pages && lesson.activity_book_pages.length > 0) {
+        lesson.activity_book_pages.forEach(abP => {
+          html += `
+            <div id="activityBookPagesSec" style="background: #f0fdfa; border: 1.5px solid #99f6e4; border-radius: 10px; padding: 0.6rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 1px 3px rgba(13,148,136,0.06);">
+              <div style="width: 72px; height: 98px; border-radius: 6px; overflow: hidden; background: #e2e8f0; flex-shrink: 0; cursor: default; border: 1px solid #5eead4;">
+                <img src="book_images/english_activity/page_${abP}.jpeg" alt="كراس النشاط ص ${abP}" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="this.onerror=null; this.src='icons/icon-192.png'">
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                  <span class="badge" style="background: #ccfbf1; color: #0f766e; font-size: 0.7rem; font-weight: 800;">كراس النشاط ص ${abP}</span>
+                  <span style="font-size: 0.72rem; color: #0d9488; font-weight: 700;">Activity Book</span>
+                </div>
+                <p style="font-size: 0.78rem; font-weight: 700; color: var(--slate-800); margin: 0 0 0.45rem 0; line-height: 1.3;">تمارين وتطبيقات الدرس</p>
+                <button class="btn btn-sm" onclick="openBookPageModal(${abP}, \`${escapeForAttribute(lesson.title)}\`, 'activity')" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; width: 100%; background: #0d9488; color: #ffffff; border: none; font-weight: 700; border-radius: 6px;">
+                  🔍 تكبير ومطالعة النشاط
+                </button>
+              </div>
+            </div>
+          `;
+        });
+      }
 
       // 1.5. الرسوم التوضيحية واللوحات الفيزيائية المعتمدة (Physics Visual Diagrams)
       const physDiagram = (isPhysics && window.getPhysicsDiagram) ? window.getPhysicsDiagram(lesson.id) : null;
@@ -13446,8 +13655,11 @@
                 <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);">
                   📖 دخول قاعة المذاكرة والدروس ⮞
                 </button>
-                <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4)" style="background: #ffffff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.55rem 0.95rem;">
-                  📖 تصفح الكتاب الأصلي (119 صفحة)
+                <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4, 'student')" style="background: #ffffff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.55rem 0.95rem;">
+                  📖 تصفح كتاب الطالب (119 صفحة)
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4, 'activity')" style="background: #f0fdfa; color: #0f766e; border-color: #99f6e4; font-weight: 800; padding: 0.55rem 0.95rem;">
+                  📝 تصفح كراس النشاط (127 صفحة)
                 </button>
                 <button class="btn btn-secondary btn-sm" onclick="openPastExamsTab('final_comprehensive')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
                   📝 الامتحان النهائي 100 درجة

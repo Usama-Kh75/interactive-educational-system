@@ -1,7 +1,3 @@
-// Curriculum Data for English for Iraq - 2nd Intermediate
-// Comprehensive Educational System - إعداد المهندس أسامة خليل هاشم
-// Updated for Unit 8 Complete Delivery (v3.2.0)
-
 window.CURRICULUM_DATA = [
   {
     "id": 190,
@@ -18,7 +14,196 @@ window.CURRICULUM_DATA = [
             "page": 4,
             "heading": "Unit AB 4-5 Lesson 1: A school magazine AI Mustafa Intermediate School for Girls has its own monthly magazine. A team of four students and an English teacher produces it. Students from different classes write for it. They put their contributions in a box, and the team chooses the best. Read the notice and answer the questions below. o Write for the school magazine. Choose any of these sections: A.M.I.S.G. MAGAZINE Puzzles Town events Cartoons Problem page Stories School news Sports reports • Poetry Jokes Letters Interviews (Talk to somebody famous in the town.) Post them here - NOW - and get your name in print! o o I How many sections are there? 2 Write them in alphabetical order. 1 Car-boors 3 Match the sections to the definitions: a funny stories with small pictures b short, funny stories c writing with words that rhyme d asking people questions about themselves e things happening in the town f descriptions of events, for example, football matches g reports about school events 4 Which section do you think you would read first? Why? POssessive 's' Go and get the boy's bags. = one boy BUT Go and get the boys' bags. = more than one boy The school's magazine is very interesting. = one school, one magazine BUT The schools' magazines are very interesting. = more than one school, more than one magazine 4 j unit A school magazine",
             "text": "Unit AB 4-5 Lesson 1: A school magazine AI Mustafa Intermediate School for Girls has its own monthly magazine. A team of four students and an English teacher produces it. Students from different classes write for it. They put their contributions in a box, and the team chooses the best. Read the notice and answer the questions below. o Write for the school magazine. Choose any of these sections: A.M.I.S.G. MAGAZINE Puzzles Town events Cartoons Problem page Stories School news Sports reports • Poetry Jokes Letters Interviews (Talk to somebody famous in the town.) Post them here - NOW - and get your name in print! o o I How many sections are there? 2 Write them in alphabetical order. 1 Car-boors 3 Match the sections to the definitions: a funny stories with small pictures b short, funny stories c writing with words that rhyme d asking people questions about themselves e things happening in the town f descriptions of events, for example, football matches g reports about school events 4 Which section do you think you would read first? Why? POssessive 's' Go and get the boy's bags. = one boy BUT Go and get the boys' bags. = more than one boy The school's magazine is very interesting. = one school, one magazine BUT The schools' magazines are very interesting. = more than one school, more than one magazine 4 j unit A school magazine"
+          },
+          {
+            "id": 49101,
+            "is_activity_book": true,
+            "activity_book_page": 4,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 4 و 5): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 1: Activity Book (pp. 4-5)\n\nExercise A (Page 4): Read the notice on SB page 4 and answer the questions:\n1. How many sections are there? -> There are 11 sections.\n2. Write them in alphabetical order: 1. Articles, 2. Cartoons, 3. Interviews, 4. Jokes, 5. Letters, 6. Poetry, 7. Problem page, 8. Puzzles, 9. School news, 10. Sports reports, 11. Town events.\n3. Match definitions: a->Cartoons, b->Jokes, c->Poetry, d->Interviews, e->Town events, f->Sports reports, g->School news.\n4. Which section would you read first? Why? -> Cartoons, because they have funny pictures and make me laugh.\n\nExercise 1 (Page 4): Complete sentences with words from the box [article, cartoon, joke, poetry, report, team, well-known]:\na. Our teacher told us a joke this morning, and we all laughed loudly. (insert adjective: a funny joke)\nb. Noora has written an article for the school magazine. (insert adjective: an interesting article)\nc. Our football team didn't play well in the match yesterday.\nd. We need to interview a well-known person in our town. Can you suggest someone?\ne. I don't like writing stories, but I love writing poetry.\n\nExercise 2 (Pages 4-5): Read and choose a section [joke, letter, poetry, problem page, puzzle, school news, sports report, town event]:\na. 'My friend isn't talking to me. I don't know why.' -> Problem page\nb. 'Rafel scored just before half-time.' -> Sports report\nc. 'Come and join the fun in the main square.' -> Town event\nd. 'Our new English teacher, Mr Smith, starts at the school next month.' -> School news\ne. 'The door and the windows were locked. How did she escape?' -> Puzzle\nf. 'A Knock, knock. B Who's there? A Boo. B Boo who? A Why are you crying?' -> Joke\ng. 'I saw a cat sitting on the mat. Underneath was a mouse that was all flat.' -> Poetry\nh. 'Dear Editor, I'm writing to tell you about ...' -> Letter\n\nGrammar & Exercise 3 (Page 5): Possessive 's' (s التملك):\n- Singular: The boy's bags (one boy)\n- Regular plural: The boys' bags (more than one boy)\n- Irregular plural: The women's glasses, The children's toys\na. My friend's family is visiting us.\nb. This is the school's entrance.\nc. The girls' books are very heavy.\nd. My mum's car is blue.\ne. The women's shoes are on the first floor.\nf. The boys' lunch is on the table.\ng. The children's toys are all over the floor.\nh. The child's teddy bear is new.",
+            "exercises": [
+              {
+                "id": "u1_l1_exA",
+                "num": "Exercise A (Page 4)",
+                "title": "Read the notice on Student's Book page 4 and answer the questions below.",
+                "title_ar": "اقرأ الإعلان في صفحة 4 من كتاب الطالب وأجب عن الأسئلة الآتية:",
+                "questions": [
+                  {
+                    "q": "1. How many sections are there?",
+                    "q_ar": "كم عدد الأقسام الموجودة في المجلة؟",
+                    "a": "There are 11 sections. (يوجد 11 قسماً)"
+                  },
+                  {
+                    "q": "2. Write them in alphabetical order.",
+                    "q_ar": "اكتب أسماء الأقسام بترتيب الحروف الأبجدية الإنجليزية:",
+                    "a": "1. Articles, 2. Cartoons, 3. Interviews, 4. Jokes, 5. Letters, 6. Poetry, 7. Problem page, 8. Puzzles, 9. School news, 10. Sports reports, 11. Town events."
+                  },
+                  {
+                    "q": "3. Match the sections to the definitions (a—g):",
+                    "q_ar": "طابق الأقسام مع التعاريف التالية (a - g):",
+                    "a": "• a. funny stories with small pictures ➔ Cartoons (رسوم كاريكاتورية)\n• b. short, funny stories ➔ Jokes (نكات وقصص فكاهية قصيرة)\n• c. writing with words that rhyme ➔ Poetry (شعر وقوافٍ)\n• d. asking people questions about themselves ➔ Interviews (مقابلات صحفية)\n• e. things happening in the town ➔ Town events (أحداث المدينة)\n• f. descriptions of events, for example, football matches ➔ Sports reports (تقارير رياضية)\n• g. reports about school events ➔ School news (أخبار المدرسة)"
+                  },
+                  {
+                    "q": "4. Which section do you think you would read first? Why?",
+                    "q_ar": "أي قسم تعتقد أنك ستقرأه أولاً؟ ولماذا؟",
+                    "a": "Cartoons, because they have funny pictures and make me laugh. (الرسوم الهزلية لأنها ممتعة ومضحكة - أو أي إجابة منطقية يختارها الطالب)."
+                  }
+                ]
+              },
+              {
+                "id": "u1_l1_ex1",
+                "num": "Exercise 1 (Page 4)",
+                "title": "Complete the sentences. Use words from the box, then insert the adjectives (funny, interesting).",
+                "title_ar": "أكمل الجمل بالكلمات المناسبة من الصندوق، ثم ضع الصفتين (funny, interesting) في مكانهما الصحيح:",
+                "words_box": [
+                  "article",
+                  "cartoon",
+                  "joke",
+                  "poetry",
+                  "report",
+                  "team",
+                  "well-known"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Our teacher told us a _______ this morning, and we all laughed loudly.",
+                    "q_ar": "أخبرنا معلمنا _______ هذا الصباح، وضحكنا جميعاً بصوت عالٍ.",
+                    "a": "joke (نكتة) ➔ مع الصفة: a funny joke (نكتة مضحكة)"
+                  },
+                  {
+                    "q": "b. Noora has written an _______ for the school magazine.",
+                    "q_ar": "كتبت نورة _______ لمجلة المدرسة.",
+                    "a": "article (مقالة) ➔ مع الصفة: an interesting article (مقالة ممتعة ومثيرة للاهتمام)"
+                  },
+                  {
+                    "q": "c. Our football _______ didn't play well in the match yesterday.",
+                    "q_ar": "لم يلعب _______ كرة القدم الخاص بنا جيداً في مباراة البارحة.",
+                    "a": "team (فريق كرة القدم)"
+                  },
+                  {
+                    "q": "d. We need to interview a _______ person in our town. Can you suggest someone?",
+                    "q_ar": "نحتاج لإجراء مقابلة مع شخص _______ في مدينتنا. هل يمكنك اقتراح أحد؟",
+                    "a": "well-known (مشهور / معروف)"
+                  },
+                  {
+                    "q": "e. I don't like writing stories, but I love writing _______.",
+                    "q_ar": "لا أحب كتابة القصص، لكني أحب كتابة _______.",
+                    "a": "poetry (الشعر)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l1_ex2",
+                "num": "Exercise 2 (Pages 4 - 5)",
+                "title": "Read and choose a section from the box for each quote.",
+                "title_ar": "اقرأ العبارات التالية واختر القسم المناسب لكل منها من الصندوق:",
+                "words_box": [
+                  "joke",
+                  "letter",
+                  "poetry",
+                  "problem page",
+                  "puzzle",
+                  "school news",
+                  "sports report",
+                  "town event"
+                ],
+                "questions": [
+                  {
+                    "q": "a. 'My friend isn't talking to me. I don't know why.'",
+                    "q_ar": "صديقي لا يتحدث معي، ولا أعلم السبب.",
+                    "a": "Problem page (صفحة المشاكل وطلب النصيحة)"
+                  },
+                  {
+                    "q": "b. 'Rafel scored just before half-time.'",
+                    "q_ar": "سجل رافل هدفاً قبل نهاية الشوط الأول مباشرة.",
+                    "a": "Sports report (تقرير رياضي)"
+                  },
+                  {
+                    "q": "c. 'Come and join the fun in the main square.'",
+                    "q_ar": "تعال وشارك المرح في الساحة الرئيسية للمدينة.",
+                    "a": "Town event (أحداث المدينة)"
+                  },
+                  {
+                    "q": "d. 'Our new English teacher, Mr Smith, starts at the school next month.'",
+                    "q_ar": "معلم اللغة الإنجليزية الجديد، السيد سميث، سيباشر في المدرسة الشهر القادم.",
+                    "a": "School news (أخبار المدرسة)"
+                  },
+                  {
+                    "q": "e. 'The door and the windows were locked. How did she escape?'",
+                    "q_ar": "كان الباب والنوافذ مغلقة بإحكام. كيف تمكنت من الهروب؟",
+                    "a": "Puzzle (حزورة / لغز)"
+                  },
+                  {
+                    "q": "f. 'A: Knock, knock. B: Who's there? A: Boo. B: Boo who? A: Why are you crying?'",
+                    "q_ar": "نكتة طرطقة الباب الكوميدية الإنجليزية المشهورة.",
+                    "a": "Joke (طرفة / نكتة)"
+                  },
+                  {
+                    "q": "g. 'I saw a cat sitting on the mat. Underneath was a mouse that was all flat.'",
+                    "q_ar": "رأيت قطة جالسة على السجادة، وتحتها فأر منسحق تماماً.",
+                    "a": "Poetry (شعر / كلمات مقفاة)"
+                  },
+                  {
+                    "q": "h. 'Dear Editor, I'm writing to tell you about ...'",
+                    "q_ar": "عزيزي المحرر، أكتب إليك لأخبرك عن...",
+                    "a": "Letter (رسالة إلى المحرر)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l1_ex3",
+                "num": "Exercise 3 (Page 5)",
+                "title": "Fill in the gap. Use the word in brackets and add 's or s'.",
+                "title_ar": "املأ الفراغ بالكلمة الموجودة بين القوسين مع إضافة فاصلة التملك الصحيحة ('s للمفرد والجمع الشاذ، أو 's للجمع النظامي):",
+                "questions": [
+                  {
+                    "q": "a. My (friend) _______ family is visiting us.",
+                    "q_ar": "عائلة صديقي تزورنا (مالك مفرد friend).",
+                    "a": "friend's (عائلة صديقي - مفرد)"
+                  },
+                  {
+                    "q": "b. This is the (school) _______ entrance.",
+                    "q_ar": "هذا مدخل المدرسة (اسم مفرد school).",
+                    "a": "school's (مدخل المدرسة - مفرد)"
+                  },
+                  {
+                    "q": "c. The (girls) _______ books are very heavy.",
+                    "q_ar": "كتب البنات ثقيلة جداً (جمع نظامي ينتهي بـ s: girls).",
+                    "a": "girls' (كتب البنات - جمع ينتهي بـ s نضع الفاصلة بعده)"
+                  },
+                  {
+                    "q": "d. My (mum) _______ car is blue.",
+                    "q_ar": "سيارة أمي زرقاء (مفرد mum).",
+                    "a": "mum's (سيارة أمي - مفرد)"
+                  },
+                  {
+                    "q": "e. The (women) _______ shoes are on the first floor.",
+                    "q_ar": "أحذية النساء في الطابق الأول (جمع شاذ لا ينتهي بـ s: women).",
+                    "a": "women's (أحذية النساء - جمع شاذ يعامل كالمفرد بإضافة 's)"
+                  },
+                  {
+                    "q": "f. The (boys) _______ lunch is on the table.",
+                    "q_ar": "غداء الأولاد على الطاولة (جمع نظامي ينتهي بـ s: boys).",
+                    "a": "boys' (غداء الأولاد - جمع يوضع بعده ')"
+                  },
+                  {
+                    "q": "g. The (children) _______ toys are all over the floor.",
+                    "q_ar": "ألعاب الأطفال مبعثرة على الأرض (جمع شاذ children).",
+                    "a": "children's (ألعاب الأطفال - جمع شاذ يأخذ 's)"
+                  },
+                  {
+                    "q": "h. The (child) _______ teddy bear is new.",
+                    "q_ar": "دب الطفل الصغير جديد (اسم مفرد child).",
+                    "a": "child's (دب الطفل - مفرد يأخذ 's)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          4,
+          5
         ]
       },
       {
@@ -31,7 +216,137 @@ window.CURRICULUM_DATA = [
             "page": 5,
             "heading": "Unit Lesson 2: A new project O Study the words and meanings and answer the questions. I What do and mean? 2 How many meanings of 'printer' are there? 3 What do 'report' and 'reporter' mean? article (n.) a piece of writing in a newspaper or magazine cover (n.) the outside of a book or magazine edit (v.) to check and correct a piece of writing editor (n.) somebody who edits print (v.) to put words or pictures on paper with a machine printer (n.) I. somebody who prints as a job. 2. a machine that prints. report (v.) to describe an event report (n.), reporter (n.) O Listen and answer the questions. I What are the boys talking about? 2 What do they decide to do? 3 Which boy will do each job? Hey, Usama! Look at this. Al-Sayyab Intermediate School for Boys I'm a good photographer. Why? Your project this year is to write your own English magazine. Decide on the following things in groups and then as a class: 1 the sections you will have in your magazine 2 the best students for the team 3 a name for your magazine Why don't we start a magazine? What sections shall we have? Let's have articles about the school. A school magazine Unit 1 5",
             "text": "Unit Lesson 2: A new project O Study the words and meanings and answer the questions. I What do and mean? 2 How many meanings of 'printer' are there? 3 What do 'report' and 'reporter' mean? article (n.) a piece of writing in a newspaper or magazine cover (n.) the outside of a book or magazine edit (v.) to check and correct a piece of writing editor (n.) somebody who edits print (v.) to put words or pictures on paper with a machine printer (n.) I. somebody who prints as a job. 2. a machine that prints. report (v.) to describe an event report (n.), reporter (n.) O Listen and answer the questions. I What are the boys talking about? 2 What do they decide to do? 3 Which boy will do each job? Hey, Usama! Look at this. Al-Sayyab Intermediate School for Boys I'm a good photographer. Why? Your project this year is to write your own English magazine. Decide on the following things in groups and then as a class: 1 the sections you will have in your magazine 2 the best students for the team 3 a name for your magazine Why don't we start a magazine? What sections shall we have? Let's have articles about the school. A school magazine Unit 1 5"
+          },
+          {
+            "id": 49201,
+            "is_activity_book": true,
+            "activity_book_page": 6,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 6 و 7): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 2: Activity Book (pp. 6-7)\n\nExercise B & Exercise 1 (Page 6): Listen to the conversation (Track 1) and answer with short answers:\na. Who is not interested in starting a magazine at first? -> Tariq.\nb. Who does Layth suggest as the editor? Why? -> Mazin, because he is good at English and has experience in writing.\nc. What do Layth and Usama want to be? -> Reporters.\nd. What job will Tariq have on the magazine? -> Photographer.\n\nExercise 2 (Page 6): Word stress (underline the strong syllable):\n- maga-ZINE (stress on 3rd syllable)\n- re-POR-ter (stress on 2nd syllable)\n- IN-terview (stress on 1st syllable)\n- pho-TOG-rapher (stress on 2nd syllable)\n- PHO-tograph (stress on 1st syllable)\n\nExercise 3 (Page 6): Can you write a description of the jobs?\n- printer: somebody who makes copies of a document, paper, magazine, etc.\n- a. editor: somebody who decides what goes into a magazine and edits/corrects articles.\n- b. reporter: somebody who writes reports and articles for a newspaper or magazine.\n- c. photographer: somebody who takes photographs for a newspaper or magazine.\n\nExercise 4 (Page 6-7): Jobs ending in -er:\n- Picture a: window cleaner / cleaner\n- Picture b: farmer\n- Picture c: plumber / repairer\n- Picture d: teacher\n- More jobs: writer, driver, builder, painter, baker, player, singer.\n\nExercise 5 (Page 7): Suggestions conversation (Why don't we...? / That's a great idea... / What shall we...? / Let's...):\n- A: Why don't we go to the cinema?\n- B: That's a great idea. I'd love to go.\n- A: What film shall we watch?\n- B: Let's watch an action movie.\n- A: Hmm, yes! That sounds exciting.",
+            "exercises": [
+              {
+                "id": "u1_l2_ex1",
+                "num": "Exercise 1 (Page 6)",
+                "title": "Listen again to the audio track (1) and answer the questions. Write short answers.",
+                "title_ar": "استمع مجدداً للمقطع الصوتي (1) وأجب عن الأسئلة الآتية بإجابات قصيرة ومحددة:",
+                "questions": [
+                  {
+                    "q": "a. Who is not interested in starting a magazine at first?",
+                    "q_ar": "من لم يكن متحمساً أو مهتماً ببدء المجلة في البداية؟",
+                    "a": "Tariq. (طارق)"
+                  },
+                  {
+                    "q": "b. Who does Layth suggest as the editor? Why?",
+                    "q_ar": "من اقترح ليث ليكون رئيساً للتحرير؟ ولماذا؟",
+                    "a": "Mazin, because he is good at English and has experience. (مازن، لأنه شاطر ومتميز باللغة الإنجليزية ولديه خبرة سابقة في الكتابة)"
+                  },
+                  {
+                    "q": "c. What do Layth and Usama want to be?",
+                    "q_ar": "ماذا أراد ليث وأسامة أن يعملا في المجلة؟",
+                    "a": "Reporters. (محررين / مراسلين صحفيين ليكتبوا المقالات والمقابلات)"
+                  },
+                  {
+                    "q": "d. What job will Tariq have on the magazine?",
+                    "q_ar": "ما هي الوظيفة التي سيتولاها طارق في المجلة؟",
+                    "a": "Photographer. (مصور فوتوغرافي لالتقاط الصور)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l2_ex2",
+                "num": "Exercise 2 (Page 6)",
+                "title": "Listen and underline the strong syllable (word stress) in the words.",
+                "title_ar": "استمع وحدد المقطع الصوتي القوي (النبرة الصوتية Stress) في الكلمات التالية:",
+                "questions": [
+                  {
+                    "q": "1. magazine",
+                    "q_ar": "كلمة مجلة:",
+                    "a": "maga-ZINE ➔ النبرة القوية على المقطع الأخير (الثالث) -zine"
+                  },
+                  {
+                    "q": "2. reporter",
+                    "q_ar": "كلمة مراسل صحفي:",
+                    "a": "re-POR-ter ➔ النبرة القوية على المقطع الأوسط (الثاني) -por-"
+                  },
+                  {
+                    "q": "3. interview",
+                    "q_ar": "كلمة مقابلة صحفية:",
+                    "a": "IN-terview ➔ النبرة القوية على المقطع الأول In-"
+                  },
+                  {
+                    "q": "4. photographer",
+                    "q_ar": "كلمة مصور فوتوغرافي:",
+                    "a": "pho-TOG-rapher ➔ النبرة القوية على المقطع الثاني -tog-"
+                  },
+                  {
+                    "q": "5. photograph",
+                    "q_ar": "كلمة صورة فوتوغرافية:",
+                    "a": "PHO-tograph ➔ النبرة القوية على المقطع الأول Pho-"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l2_ex3",
+                "num": "Exercise 3 (Page 6)",
+                "title": "Can you write a description of the jobs? (editor, reporter, photographer)",
+                "title_ar": "اكتب تعريفاً مهنياً دقيقاً لكل مهنة من المهن الصحفية التالية:",
+                "questions": [
+                  {
+                    "q": "a. editor:",
+                    "q_ar": "تعريف رئيس التحرير (editor):",
+                    "a": "somebody who decides what goes into a magazine and edits/corrects the articles. (الشخص الذي يقرر ما يُنشر في المجلة ويصحح ويدقق المقالات)"
+                  },
+                  {
+                    "q": "b. reporter:",
+                    "q_ar": "تعريف المراسل الصحفي (reporter):",
+                    "a": "somebody who writes reports and articles for a newspaper or magazine. (الشخص الذي يكتب التقارير الإخبارية والمقالات للصحف والمجلات)"
+                  },
+                  {
+                    "q": "c. photographer:",
+                    "q_ar": "تعريف المصور (photographer):",
+                    "a": "somebody who takes photographs for a newspaper or magazine. (الشخص الذي يلتقط الصور للمطبوعات والمجلات)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l2_ex5",
+                "num": "Exercise 5 (Page 7)",
+                "title": "Make suggestions using (Why don't we...? / That's a great idea. / What shall we...? / Let's...).",
+                "title_ar": "اكتب محادثة تقديم اقتراحات كاملة للذهاب إلى السينما باستخدام صيغ الاقتراح المقررة:",
+                "questions": [
+                  {
+                    "q": "A: Why don't we _______________________?",
+                    "q_ar": "صيغة الاقتراح الأولى:",
+                    "a": "Why don't we go to the cinema? (لمَ لا نذهب إلى السينما؟)"
+                  },
+                  {
+                    "q": "B: That's _______________________.",
+                    "q_ar": "الموافقة على الاقتراح:",
+                    "a": "That's a great idea. (إنها فكرة رائعة جداً)"
+                  },
+                  {
+                    "q": "A: What _______________________?",
+                    "q_ar": "السؤال عن الفيلم:",
+                    "a": "What film shall we watch? (ما الفيلم الذي سنشاهده؟)"
+                  },
+                  {
+                    "q": "B: Let's _______________________.",
+                    "q_ar": "اقتراح نوع الفيلم:",
+                    "a": "Let's watch an adventure film. (دعنا نشاهد فيلم مغامرات)"
+                  },
+                  {
+                    "q": "A: _______________________.",
+                    "q_ar": "الرد الختامي:",
+                    "a": "Hmm, yes! That sounds exciting. (نعم بالتأكيد! يبدو ذلك مشوقاً)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          6,
+          7
         ]
       },
       {
@@ -44,7 +359,114 @@ window.CURRICULUM_DATA = [
             "page": 6,
             "heading": "AB Unit Lesson 3: An interview (Part A) This is the students' first interview for their magazine. Read it and find words that mean the following: 1 famous 2 the opposite of 'to like' 3 the opposite of 'polite' 4 a road round a town Meet a local personality This month, we talked to Jack James. He runs Pizza Cabin, the well-known Italian takeaway and café in the High Street. I'm sure we've all been there many times with our families. What kind of people do you like and dislike? I really like people who are polite and ask for things nicely. I don't like people who are impolite and shout. What's your favourite food? Italian food, of course — pizzas and pasta. But I also like some English food, like fish and chips. What's your favourite TV programme? I watch all the programmes about cooking. My favourite one is A taste of the sea. I always learn something. Do you have any suggestions for making the town better? There are too many cars in the town centre. Why don't they build a ring road? 6 How long have you worked at Pizza Cabin, Mr James? I've worked in the café for ten years, but I've lived in Ashby since I was born. Do you enjoy your work? I enjoy some parts of my work. I don't enjoy cleaning up when the café closes. What do you like doing in your spare time? I love painting. What things do you dislike doing? I don't like washing-up. I have to do that at work. And I hate gardening. It's very hard work. But we have a beautiful garden because my wife loyes gardening. Unit 1 A school magazine",
             "text": "AB Unit Lesson 3: An interview (Part A) This is the students' first interview for their magazine. Read it and find words that mean the following: 1 famous 2 the opposite of 'to like' 3 the opposite of 'polite' 4 a road round a town Meet a local personality This month, we talked to Jack James. He runs Pizza Cabin, the well-known Italian takeaway and café in the High Street. I'm sure we've all been there many times with our families. What kind of people do you like and dislike? I really like people who are polite and ask for things nicely. I don't like people who are impolite and shout. What's your favourite food? Italian food, of course — pizzas and pasta. But I also like some English food, like fish and chips. What's your favourite TV programme? I watch all the programmes about cooking. My favourite one is A taste of the sea. I always learn something. Do you have any suggestions for making the town better? There are too many cars in the town centre. Why don't they build a ring road? 6 How long have you worked at Pizza Cabin, Mr James? I've worked in the café for ten years, but I've lived in Ashby since I was born. Do you enjoy your work? I enjoy some parts of my work. I don't enjoy cleaning up when the café closes. What do you like doing in your spare time? I love painting. What things do you dislike doing? I don't like washing-up. I have to do that at work. And I hate gardening. It's very hard work. But we have a beautiful garden because my wife loyes gardening. Unit 1 A school magazine"
+          },
+          {
+            "id": 49301,
+            "is_activity_book": true,
+            "activity_book_page": 8,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 8 و 9): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 3: Activity Book (pp. 8-9)\n\nExercise A (Page 8): Read the interview on SB page 6 and find words that mean:\n1. famous = well-known\n2. the opposite of 'like' = dislike\n3. polite / pleasant = friendly\n4. a road around a town = a ring road\n\nExercise 1 (Page 8): Answer questions about Mr James's interview (short answers):\na. How long has Mr James worked in the café? -> For ten years.\nb. How long has he lived in Ashby? -> Since he was born.\nc. What does he dislike doing? -> Cleaning up, washing up, and gardening.\nd. Why does he like the programme A Taste of the Sea? -> Because he always learns something from it.\ne. Why does he think a ring road would help the town? -> Because there are too many cars in the town centre.\n\nExercise 2 (Pages 8-9): Read the interview with Yahya Zeki (Headteacher) and answer:\na. Where does Mr Zeki work? -> In a high school in the city (as a headteacher).\nb. What things does he dislike doing? -> Doing paperwork, and students dropping paper and empty cans in classrooms.\nc. What language is Mr Zeki learning in his evening class? -> French.\nd. What is a litter bin? -> 3. a place to put rubbish. [Tick]\ne. What kind of programme is Health for all? -> A programme about health and keeping fit.",
+            "exercises": [
+              {
+                "id": "u1_l3_exA",
+                "num": "Exercise A (Page 8)",
+                "title": "Find words from the interview on SB page 6 that mean the following.",
+                "title_ar": "استخرج من مقابلة السيد جيمس (صفحة 6 من كتاب الطالب) الكلمات المطابقة للمعاني التالية:",
+                "questions": [
+                  {
+                    "q": "1. famous =",
+                    "q_ar": "مرادف كلمة مشهور:",
+                    "a": "well-known (معروف / ذائع الصيت)"
+                  },
+                  {
+                    "q": "2. the opposite of 'like' =",
+                    "q_ar": "معاكس كلمة يُحب:",
+                    "a": "dislike (يكره / لا يحب)"
+                  },
+                  {
+                    "q": "3. polite / kind =",
+                    "q_ar": "مرادف كلمة مهذب / ودود:",
+                    "a": "friendly / polite (ودود / طيب المعاملة)"
+                  },
+                  {
+                    "q": "4. a road around a town =",
+                    "q_ar": "طريق دائري يلتف حول المدينة:",
+                    "a": "a ring road (طريق حولي / دائري)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l3_ex1",
+                "num": "Exercise 1 (Page 8)",
+                "title": "Answer the questions about the interview with Mr James. Write short answers.",
+                "title_ar": "أجب عن الأسئلة المتعلقة بمقابلة السيد جيمس بإجابات قصيرة دقيقة:",
+                "questions": [
+                  {
+                    "q": "a. How long has Mr James worked in the café?",
+                    "q_ar": "منذ متى يعمل السيد جيمس في المقهى؟",
+                    "a": "For ten years. (منذ عشر سنوات - استخدمنا for مع فترة زمنية)"
+                  },
+                  {
+                    "q": "b. How long has he lived in Ashby?",
+                    "q_ar": "منذ متى يعيش في بلدة أشفيل؟",
+                    "a": "Since he was born. (منذ ولادته - استخدمنا since مع نقطة بداية محددة)"
+                  },
+                  {
+                    "q": "c. What does he dislike doing?",
+                    "q_ar": "ما الذي يكره فعله في عمله وحياته؟",
+                    "a": "Cleaning up, washing up, and gardening. (التنظيف، غسل الصحون، وأعمال البستنة)"
+                  },
+                  {
+                    "q": "d. Why does he like the programme 'A Taste of the Sea'?",
+                    "q_ar": "لماذا يحب برنامج 'مذاق البحر' التلفزيوني؟",
+                    "a": "Because he always learns something from it. (لأنه يتعلم منه شيئاً جديداً دائماً)"
+                  },
+                  {
+                    "q": "e. Why does he think a ring road would help the town?",
+                    "q_ar": "لماذا يعتقد أن إنشاء طريق حولي سيساعد البلدة؟",
+                    "a": "Because there are too many cars in the town centre. (لأن هناك سيارات كثيرة تسبب ازدحاماً في مركز المدينة)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l3_ex2",
+                "num": "Exercise 2 (Pages 8 - 9)",
+                "title": "Read the interview with Yahya Zeki on page 9 and answer the questions.",
+                "title_ar": "اقرأ المقابلة الصحفية مع الأستاذ يحيى زكي في صفحة 9 وأجب عن الأسئلة:",
+                "questions": [
+                  {
+                    "q": "a. Where does Mr Zeki work?",
+                    "q_ar": "أين يعمل الأستاذ زكي؟",
+                    "a": "In a high school in the city (as a headteacher). (في مدرسة ثانوية بالمدينة كمدير مدرسة)"
+                  },
+                  {
+                    "q": "b. What things does he dislike doing?",
+                    "q_ar": "ما الأمور التي يكرهها ولا يحبها؟",
+                    "a": "Doing paperwork, and students dropping paper and empty cans in classrooms. (العمل المكتبي الورقي، والطلاب الذين يرمون النفايات والعلب الفارغة في الصفوف)"
+                  },
+                  {
+                    "q": "c. What language is Mr Zeki learning in his evening class?",
+                    "q_ar": "ما هي اللغة التي يتعلمها الأستاذ زكي في صفوفه المسائية؟",
+                    "a": "French. (اللغة الفرنسية)"
+                  },
+                  {
+                    "q": "d. What is a litter bin? Tick (✓) the correct box.",
+                    "q_ar": "ما معنى سلة المهملات (litter bin)؟",
+                    "a": "3. a place to put rubbish. [✓] (مكان لوضع ورمي القمامة والنفايات)"
+                  },
+                  {
+                    "q": "e. What kind of programme is 'Health for all'?",
+                    "q_ar": "ما نوع البرنامج التلفزيوني 'الصحة للجميع'؟",
+                    "a": "A programme about health and keeping well. (برنامج علمي وتوعوي عن الصحة واللياقة البدنية)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          8,
+          9
         ]
       },
       {
@@ -57,7 +479,104 @@ window.CURRICULUM_DATA = [
             "page": 7,
             "heading": "AB IO-II Unit Lesson 4: An interview (Part B) Listen to the interview. Then read it aloud. Ask and answer the questions. Talking about time for and since We use forto talk about a specific length of time. I've worked in the café for ten years. We use since to talk about the time between now and a point in the past. I've lived in Ashby since I was born. How long have you been in this school? How long has your family lived in Basra? How long have you been ill? How long have you been in this class? Now ask and answer questions like the ones in the interview. You can use the words and phrases from the boxes. You can also use your own words. Talking about likes and dislikes like + verb with -ing I like cooking. I don't like cleaning up. OR I dislike cleaning up. enjoy hate love playing football Describing people Using adjectives to describe people I like helpful people. I don't like noisy people. Using relative clauses to describe people I like people who help others. I dislike people What do you like doing? What don't you like doing? watching films What kind of people do you like? What kind of people don't you like? who are noisy. friendly funny happy kind lazy quiet sad unfriendly can do puzzles can play chess can tell jokes don't say anything tell lies A school magazine Unit 1 7",
             "text": "AB IO-II Unit Lesson 4: An interview (Part B) Listen to the interview. Then read it aloud. Ask and answer the questions. Talking about time for and since We use forto talk about a specific length of time. I've worked in the café for ten years. We use since to talk about the time between now and a point in the past. I've lived in Ashby since I was born. How long have you been in this school? How long has your family lived in Basra? How long have you been ill? How long have you been in this class? Now ask and answer questions like the ones in the interview. You can use the words and phrases from the boxes. You can also use your own words. Talking about likes and dislikes like + verb with -ing I like cooking. I don't like cleaning up. OR I dislike cleaning up. enjoy hate love playing football Describing people Using adjectives to describe people I like helpful people. I don't like noisy people. Using relative clauses to describe people I like people who help others. I dislike people What do you like doing? What don't you like doing? watching films What kind of people do you like? What kind of people don't you like? who are noisy. friendly funny happy kind lazy quiet sad unfriendly can do puzzles can play chess can tell jokes don't say anything tell lies A school magazine Unit 1 7"
+          },
+          {
+            "id": 49401,
+            "is_activity_book": true,
+            "activity_book_page": 10,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 10 و 11): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 4: Activity Book (pp. 10-11)\n\nExercise 2 (Page 10): Write three 'How long have you...?' questions with play, study, watch:\na. How long have you played tennis? -> I have played tennis for two years.\nb. How long have you studied English? -> I have studied English since I was seven.\nc. How long have you watched this cartoon? -> I have watched this cartoon since 5 o'clock.\n\nExercise 3 (Page 10): Likes and dislikes:\na. I like reading stories in my free time.\nb. I like playing computer games with my brother.\nc. I don't like getting up early on Saturdays.\nd. I don't like washing dishes after dinner.\n\nExercise 5 (Page 11): Complete the sentences with for or since:\na. I waited for the bus for half an hour. Then I started walking.\nb. We've been in school since eight o'clock this morning.\nc. I'm hungry. I haven't eaten anything since last night.\nd. We stayed in India for two weeks.\n\nExercise 6 (Page 11): Relative clauses with who:\nExample: I like helpful people. -> I like people who are helpful.\na. I like kind people. -> I like people who are kind.\nb. I like happy people. -> I like people who are happy.\nc. I don't like unfriendly people. -> I don't like people who are unfriendly.\nd. I like friendly people. -> I like people who are friendly.\ne. I don't like lazy people. -> I don't like people who are lazy.",
+            "exercises": [
+              {
+                "id": "u1_l4_ex2",
+                "num": "Exercise 2 (Page 10)",
+                "title": "Write three 'How long have you...?' questions using verbs from the box (play, study, watch).",
+                "title_ar": "اكتب ثلاثة أسئلة بصيغة المضارع التام (How long have you...?) مستخدماً الأفعال المحددة:",
+                "questions": [
+                  {
+                    "q": "a. (play) How long have you _______?",
+                    "q_ar": "سؤال باستخدام الفعل play:",
+                    "a": "How long have you played football / tennis? (منذ متى وأنت تلعب كرة القدم / التنس؟)"
+                  },
+                  {
+                    "q": "b. (study) How long have you _______?",
+                    "q_ar": "سؤال باستخدام الفعل study:",
+                    "a": "How long have you studied English? (منذ متى وأنت تدرس اللغة الإنجليزية؟)"
+                  },
+                  {
+                    "q": "c. (watch) How long have you _______?",
+                    "q_ar": "سؤال باستخدام الفعل watch:",
+                    "a": "How long have you watched television / this programme? (منذ متى وأنت تشاهد هذا البرنامج؟)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l4_ex5",
+                "num": "Exercise 5 (Page 11)",
+                "title": "Read and complete the sentences with for or since.",
+                "title_ar": "اقرأ وأكمل الجمل بـ (for مع طول المدة الزمنية، أو since مع بداية الوقت المحدد):",
+                "questions": [
+                  {
+                    "q": "a. I waited for the bus _______ half an hour. Then I started walking.",
+                    "q_ar": "انتظرت الحافلة _______ نصف ساعة، ثم بدأت بالمشي.",
+                    "a": "for (لمدة نصف ساعة ➔ فترة زمنية محددة الطول)"
+                  },
+                  {
+                    "q": "b. We've been in school _______ eight o'clock this morning.",
+                    "q_ar": "نحن في المدرسة _______ الساعة الثامنة صباح اليوم.",
+                    "a": "since (منذ الساعة الثامنة ➔ نقطة زمنية محددة)"
+                  },
+                  {
+                    "q": "c. I'm hungry. I haven't eaten anything _______ last night.",
+                    "q_ar": "أنا جائع، لم آكل أي شيء _______ الليلة الماضية.",
+                    "a": "since (منذ الليلة الماضية ➔ وقت بداية محدد)"
+                  },
+                  {
+                    "q": "d. We stayed in India _______ two weeks.",
+                    "q_ar": "أقمنا في الهند _______ أسبوعين.",
+                    "a": "for (لمدة أسبوعين ➔ إجمالي مدة زمنية)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l4_ex6",
+                "num": "Exercise 6 (Page 11)",
+                "title": "Complete the sentences using relative clauses with 'who'.",
+                "title_ar": "أعد صياغة الجمل باستخدام عبارات الوصل مع ضمير الوصل للعاقل (who):",
+                "questions": [
+                  {
+                    "q": "a. I like kind people. ➔ I like people _______.",
+                    "q_ar": "أحب الأشخاص الطيبين.",
+                    "a": "who are kind. (أحب الأشخاص الذين يتصفون بالطيبة واللطف)"
+                  },
+                  {
+                    "q": "b. I _______ ➔ I like people who are happy.",
+                    "q_ar": "أحب الأشخاص المبتهجين والسعداء.",
+                    "a": "like happy people. (أحب الأشخاص السعداء)"
+                  },
+                  {
+                    "q": "c. I don't _______ unfriendly people. ➔ I _______.",
+                    "q_ar": "لا أحب غير الودودين.",
+                    "a": "like / don't like people who are unfriendly. (لا أحب الأشخاص غير الودودين)"
+                  },
+                  {
+                    "q": "d. I _______ ➔ I _______ friendly.",
+                    "q_ar": "أحب الأشخاص الاجتماعيين والودودين.",
+                    "a": "like friendly people. / like people who are friendly. (أحب الأشخاص الذين يتصفون بالود)"
+                  },
+                  {
+                    "q": "e. I _______ ➔ I _______ lazy.",
+                    "q_ar": "لا أحب الكسالى.",
+                    "a": "don't like lazy people. / don't like people who are lazy. (لا أحب الأشخاص الكسالى)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          10,
+          11
         ]
       },
       {
@@ -70,7 +589,109 @@ window.CURRICULUM_DATA = [
             "page": 8,
             "heading": "unit AB 12-13 Lesson 5: Problems O Look at a magazine problem page. Who has a problem? What is it? Explain it. Now read the page and answer the questions. 8 ASK Aunt Sally Aunt Sally answers your problems Deat Cao, I am very, very shy. I have just arrived in a new school, and I am afraid to speak to the other students. I cannot make new friends. When the teacher asks me a question in class, I go red. I stammer and can't say the answer even when I know it. The other students laugh at me. Can you help me? (aged 15) A lot of people are shy, but you can learn to be confident. Don't hurry. It takes time. Here are some tips to help you. 1 Before you go to school, say to yourself, 'I will speak to somebody today.' 2 Be friendly. Say 'hello' to the other girls and smile. 3 To stop stammering, try this. Before you try to speak, count to five and think again about what you want to say. 4 Talk to your teacher. Ask her to give you a little time to answer. Good luck! What do you think of each piece of advice Aunt Sally gave Jill? . not very good? very good? ... good? Is it ... unit 1 A school magazine",
             "text": "unit AB 12-13 Lesson 5: Problems O Look at a magazine problem page. Who has a problem? What is it? Explain it. Now read the page and answer the questions. 8 ASK Aunt Sally Aunt Sally answers your problems Deat Cao, I am very, very shy. I have just arrived in a new school, and I am afraid to speak to the other students. I cannot make new friends. When the teacher asks me a question in class, I go red. I stammer and can't say the answer even when I know it. The other students laugh at me. Can you help me? (aged 15) A lot of people are shy, but you can learn to be confident. Don't hurry. It takes time. Here are some tips to help you. 1 Before you go to school, say to yourself, 'I will speak to somebody today.' 2 Be friendly. Say 'hello' to the other girls and smile. 3 To stop stammering, try this. Before you try to speak, count to five and think again about what you want to say. 4 Talk to your teacher. Ask her to give you a little time to answer. Good luck! What do you think of each piece of advice Aunt Sally gave Jill? . not very good? very good? ... good? Is it ... unit 1 A school magazine"
+          },
+          {
+            "id": 49501,
+            "is_activity_book": true,
+            "activity_book_page": 12,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 12 و 13): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 5: Activity Book (pp. 12-13)\n\nExercise 1 (Page 12): Read both letters on SB page 8 and find words that mean:\na. a word meaning 'speak with difficulty' -> stammer (يتلعثم)\nb. a word meaning the opposite of 'shy' -> confident (واثق من نفسه)\nc. a word meaning 'frightened' -> afraid (خائف)\nd. what to say to be friendly -> hello (مرحباً)\n\nExercise 2 (Page 12): Evaluate advice and make it better:\na. Make sure you never make eye contact. -> Bad advice. (Better: Look people in the eye and make friendly eye contact.)\nb. Always look unfriendly. -> Bad advice. (Better: Smile and look welcoming and friendly.)\nc. Wait for the other people to say 'hello' first. -> Bad advice. (Better: Be brave and say hello first.)\n\nExercise 3 (Page 12): Using 'very, very' for emphasis:\na. I am very, very tired after running five kilometres.\nb. The giraffe is very, very tall.\nc. He was very, very happy when he won first prize.\nd. I was very, very afraid of the big barking dog.\n\nExercise 4 (Page 13): Punctuation with Speech Marks (علامات الاقتباس والكلام المباشر):\na. \"Are you coming to the beach?\" my brother asked.\nb. I answered, \"I have to write an article.\"\nc. \"What is the article about?\" he asked.\nd. \"It's about yesterday's football match,\" I said. \"It's for the magazine.\"\ne. He asked, \"Can I read it?\"\nf. \"Maybe when you get back from the beach,\" I said.",
+            "exercises": [
+              {
+                "id": "u1_l5_ex1",
+                "num": "Exercise 1 (Page 12)",
+                "title": "Read both letters on SB page 8 and find the required words.",
+                "title_ar": "اقرأ رسالتي المشاكل في صفحة 8 من كتاب الطالب واستخرج الكلمات الدالة على المعاني الآتية:",
+                "questions": [
+                  {
+                    "q": "a. a word meaning 'speak with difficulty'",
+                    "q_ar": "كلمة تعني 'يتكلم بصعوبة أو يرتبك بالكلام':",
+                    "a": "stammer (يتلعثم / يتردد في نطق الحروف)"
+                  },
+                  {
+                    "q": "b. a word meaning the opposite of 'shy'",
+                    "q_ar": "كلمة تعني عكس ومضاد كلمة 'خجول':",
+                    "a": "confident (واثق من نفسه / جريء)"
+                  },
+                  {
+                    "q": "c. a word meaning 'frightened'",
+                    "q_ar": "مرادف كلمة 'خائف أو مرعوب':",
+                    "a": "afraid (خائف)"
+                  },
+                  {
+                    "q": "d. what to say to be friendly",
+                    "q_ar": "التحية البسيطة التي تقولها لتكون ودوداً مع الآخرين:",
+                    "a": "hello (مرحباً)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l5_ex2",
+                "num": "Exercise 2 (Page 12)",
+                "title": "Read the pieces of advice. Is it good or bad advice? Then make the advice better.",
+                "title_ar": "احكم على النصائح الآتية هل هي جيدة أم سيئة؟ ثم قدم الصياغة الصحيحة لها:",
+                "questions": [
+                  {
+                    "q": "a. Make sure you never make eye contact.",
+                    "q_ar": "احرص على ألا تنظر في أعين الآخرين أبداً.",
+                    "a": "Bad advice. ➔ Better advice: Look people in the eye and make warm, polite eye contact. (نصيحة سيئة، والأفضل التواصل البصري الودود)"
+                  },
+                  {
+                    "q": "b. Always look unfriendly.",
+                    "q_ar": "اجعل مظهرك دائماً غير ودود وصارماً.",
+                    "a": "Bad advice. ➔ Better advice: Smile and look friendly so people feel comfortable talking to you. (نصيحة سيئة، والأفضل التبسم والترحيب)"
+                  },
+                  {
+                    "q": "c. Wait for the other people to say 'hello' first.",
+                    "q_ar": "انتظر دائماً حتى يبادر الآخرون بإلقاء التحية.",
+                    "a": "Bad advice. ➔ Better advice: Take the initiative and say 'hello' first with a warm smile. (نصيحة سيئة، والأفضل المبادرة بإلقاء التحية)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l5_ex4",
+                "num": "Exercise 4 (Page 13)",
+                "title": "Write the questions and answers with the correct punctuation (speech marks, commas, question marks).",
+                "title_ar": "أعد كتابة الجمل والأسئلة بوضع علامات الترقيم الصحيحة وعلامات التنصيص الكلامي المباشر:",
+                "questions": [
+                  {
+                    "q": "a. are you coming to the beach my brother asked",
+                    "q_ar": "الجملة a:",
+                    "a": "\"Are you coming to the beach?\" my brother asked."
+                  },
+                  {
+                    "q": "b. i answered i have to write an article",
+                    "q_ar": "الجملة b:",
+                    "a": "I answered, \"I have to write an article.\""
+                  },
+                  {
+                    "q": "c. what is the article about he asked",
+                    "q_ar": "الجملة c:",
+                    "a": "\"What is the article about?\" he asked."
+                  },
+                  {
+                    "q": "d. its about yesterdays football match i said its for the magazine",
+                    "q_ar": "الجملة d:",
+                    "a": "\"It's about yesterday's football match,\" I said. \"It's for the magazine.\""
+                  },
+                  {
+                    "q": "e. he asked can i read it",
+                    "q_ar": "الجملة e:",
+                    "a": "He asked, \"Can I read it?\""
+                  },
+                  {
+                    "q": "f. maybe when you get back from the beach i said",
+                    "q_ar": "الجملة f:",
+                    "a": "\"Maybe when you get back from the beach,\" I said."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          12,
+          13
         ]
       },
       {
@@ -83,7 +704,136 @@ window.CURRICULUM_DATA = [
             "page": 9,
             "heading": "AB 14-15 Unit Lesson 6: Ask Aunt Sally Read the problems. What do you think Aunt Sally will say to the people who sent them in? I When we have exams, I sleep Then I very when I FO school, I A mine is very lazy never Aees her homework. Oh school bns, she copies mine. I is I have becn-Ase she is •Prien,A. Aunt Sally has made some notes on the problems. Read the notes and answer the questions. I What do the following abbreviations mean? a etc. b hw. d e.g. 2 How are notes different from sentences and paragraphs? hard all semes-tec — donk- LDOCE- -t-ÖÖ hard before exams — at exam -time, -t•C5 rct- -t-O — before bed, read a s-t-o% or listen -to music, etc. — bed each agree, no-t- fight — doret- give h.'Ö. — v. unhelpful — no-t- helping friend — doesnLf do own won'* learn ang-t-hing — e.g. canq- copq in exams — expldin A school magazine Unit I 9",
             "text": "AB 14-15 Unit Lesson 6: Ask Aunt Sally Read the problems. What do you think Aunt Sally will say to the people who sent them in? I When we have exams, I sleep Then I very when I FO school, I A mine is very lazy never Aees her homework. Oh school bns, she copies mine. I is I have becn-Ase she is •Prien,A. Aunt Sally has made some notes on the problems. Read the notes and answer the questions. I What do the following abbreviations mean? a etc. b hw. d e.g. 2 How are notes different from sentences and paragraphs? hard all semes-tec — donk- LDOCE- -t-ÖÖ hard before exams — at exam -time, -t•C5 rct- -t-O — before bed, read a s-t-o% or listen -to music, etc. — bed each agree, no-t- fight — doret- give h.'Ö. — v. unhelpful — no-t- helping friend — doesnLf do own won'* learn ang-t-hing — e.g. canq- copq in exams — expldin A school magazine Unit I 9"
+          },
+          {
+            "id": 49601,
+            "is_activity_book": true,
+            "activity_book_page": 14,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 14 و 15): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 6: Activity Book (pp. 14-15)\n\nExercise B (Page 14): Aunt Sally's note abbreviations:\na. etc. = et cetera (and other things / and so on - إلى آخره)\nb. h.w. = homework (واجب بيتي)\nc. v. = very (جداً)\nd. e.g. = exempli gratia (for example - على سبيل المثال)\n\nExercise 2 (Page 14): Match abbreviations to their definitions:\na. kilometres per hour -> kph\nb. 10 millimetres -> cm\nc. before 12 noon (in the morning) -> a.m.\nd. after 12 noon (in the afternoon/evening) -> p.m.\ne. second -> sec.\nf. 60 seconds -> min.\ng. millimetre -> mm\nh. 100 centimetres -> m\ni. 1,000 metres -> km\nj. 60 minutes -> hr\n\nExercise 3 (Page 15): Writing Aunt Sally's advice from notes into full paragraphs:\nParagraph a (Exam worry advice):\nYou should work hard all semester and don't work too hard just before exams. At exam time, try not to worry. Before you go to bed, read an enjoyable story or listen to relaxing music, etc. Make sure to go to bed early so you feel fresh.\n\nParagraph b (Copying homework advice):\nI agree that this is not right. Don't give your friend your homework. That is very unhelpful because it does not help your friend at all. If he doesn't do his own work, he won't learn anything. For example, he can't copy in exams! You should explain the lessons to him instead.",
+            "exercises": [
+              {
+                "id": "u1_l6_exB",
+                "num": "Exercise B (Page 14)",
+                "title": "Aunt Sally has made notes on the problems. What do these abbreviations stand for?",
+                "title_ar": "دونت العمة سالي ملاحظات مختصرة. ما المعنى الكامل لهذه الاختصارات الشائعة؟",
+                "questions": [
+                  {
+                    "q": "a. etc. =",
+                    "q_ar": "معنى الاختصار etc.:",
+                    "a": "et cetera = and so on / and other things (إلى آخره / وغير ذلك)"
+                  },
+                  {
+                    "q": "b. h.w. =",
+                    "q_ar": "معنى الاختصار h.w.:",
+                    "a": "homework (الواجب المنزلي)"
+                  },
+                  {
+                    "q": "c. v. =",
+                    "q_ar": "معنى الاختصار v.:",
+                    "a": "very (جداً / للغاية)"
+                  },
+                  {
+                    "q": "d. e.g. =",
+                    "q_ar": "معنى الاختصار e.g.:",
+                    "a": "for example (exempli gratia = على سبيل المثال)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l6_ex2",
+                "num": "Exercise 2 (Page 14)",
+                "title": "Match the abbreviations in the box to their definitions below.",
+                "title_ar": "طابق الاختصارات الرياضية والزمنية التالية مع تعريفاتها المناسبة:",
+                "words_box": [
+                  "a.m.",
+                  "cm",
+                  "hr",
+                  "km",
+                  "kph",
+                  "m",
+                  "min.",
+                  "mm",
+                  "p.m.",
+                  "sec."
+                ],
+                "questions": [
+                  {
+                    "q": "a. kilometres per hour ➔",
+                    "q_ar": "كيلومتر في الساعة:",
+                    "a": "kph"
+                  },
+                  {
+                    "q": "b. 10 millimetres ➔",
+                    "q_ar": "عشرة مليمترات (1 سنتيمتر):",
+                    "a": "cm"
+                  },
+                  {
+                    "q": "c. before 12 noon (or in the morning) ➔",
+                    "q_ar": "قبل منتصف النهار (صباحاً):",
+                    "a": "a.m."
+                  },
+                  {
+                    "q": "d. after 12 noon (or in the afternoon) ➔",
+                    "q_ar": "بعد منتصف النهار (مساءً):",
+                    "a": "p.m."
+                  },
+                  {
+                    "q": "e. second ➔",
+                    "q_ar": "ثانية واحدة:",
+                    "a": "sec."
+                  },
+                  {
+                    "q": "f. 60 seconds ➔",
+                    "q_ar": "60 ثانية (دقيقة):",
+                    "a": "min."
+                  },
+                  {
+                    "q": "g. millimetre ➔",
+                    "q_ar": "مليمتر:",
+                    "a": "mm"
+                  },
+                  {
+                    "q": "h. 100 centimetres ➔",
+                    "q_ar": "100 سنتيمتر (متر واحد):",
+                    "a": "m"
+                  },
+                  {
+                    "q": "i. 1,000 metres ➔",
+                    "q_ar": "1000 متر (كيلومتر):",
+                    "a": "km"
+                  },
+                  {
+                    "q": "j. 60 minutes ➔",
+                    "q_ar": "60 دقيقة (ساعة واحدة):",
+                    "a": "hr"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l6_ex3",
+                "num": "Exercise 3 (Page 15)",
+                "title": "Use Aunt Sally's notes to write her advice in full paragraphs.",
+                "title_ar": "استخدم ملاحظات العمة سالي المختصرة لكتابة فقرتين نصيتين كاملتين تقدمان النصيحة النموذجية:",
+                "questions": [
+                  {
+                    "q": "Paragraph a (Advice for exam stress):",
+                    "q_ar": "الفقرة الأولى (نصيحة الاستعداد للامتحانات وتجنب القلق):",
+                    "a": "You should work hard all semester and don't work too hard just before exams. At exam time, try not to worry. Before you go to bed, read an enjoyable story or listen to relaxing music, etc. Go to bed early."
+                  },
+                  {
+                    "q": "Paragraph b (Advice on copying homework):",
+                    "q_ar": "الفقرة الثانية (نصيحة عدم السماح بنقل الواجب البيتي):",
+                    "a": "I agree that this is not right. Don't give your friend your homework. That is very unhelpful because it is not helping your friend. If he doesn't do his own work, he won't learn anything. For example, he can't copy in exams! You should explain the work to him instead."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          14,
+          15
         ]
       },
       {
@@ -96,7 +846,66 @@ window.CURRICULUM_DATA = [
             "page": 10,
             "heading": "AB 16-17 Unit Lesson 7: Embarrassing moments Look at the pictures below and try to guess the stories. Now read the sentences and put them in the correct order. The Reading tip in your Activity Book will help you. Listen and check your answers. I nenl,lg did! The first sentence and the last sentence in the stories are in the correct place. Just for fun, tve have put the other sentences in the wrong order. Can you work out the stories? b C f g One day last week, my mum and I were out shopping in town, 'That's nice,' she said. 'Your uncle will like that. He drinks lots of tea.' was the shop assistant's own mug! I picked it up to look at the price and spilt hot coffee all over my dress. Mum saw a really nice mug on the shelf, We were looking for a present for my uncle, so we went to a gift shop. I wasS0 embarrassed that I nearly died! Liz Ellen — Year 8 b e f g Last week, my dad took my sister and me to the museum. I turned round, but he wasn't there. Suddenly, I saw him and ran tovcards him. Bang! I ran into a big mirror. 'Dad! Dad!' I shouted. I was worried. I still have a black eye. We were looking at an old car, and I wanted to ask Dad something. I feel embarrassed every time I go out. Wendy Hill — Year 7 IO Unit I A school magazine",
             "text": "AB 16-17 Unit Lesson 7: Embarrassing moments Look at the pictures below and try to guess the stories. Now read the sentences and put them in the correct order. The Reading tip in your Activity Book will help you. Listen and check your answers. I nenl,lg did! The first sentence and the last sentence in the stories are in the correct place. Just for fun, tve have put the other sentences in the wrong order. Can you work out the stories? b C f g One day last week, my mum and I were out shopping in town, 'That's nice,' she said. 'Your uncle will like that. He drinks lots of tea.' was the shop assistant's own mug! I picked it up to look at the price and spilt hot coffee all over my dress. Mum saw a really nice mug on the shelf, We were looking for a present for my uncle, so we went to a gift shop. I wasS0 embarrassed that I nearly died! Liz Ellen — Year 8 b e f g Last week, my dad took my sister and me to the museum. I turned round, but he wasn't there. Suddenly, I saw him and ran tovcards him. Bang! I ran into a big mirror. 'Dad! Dad!' I shouted. I was worried. I still have a black eye. We were looking at an old car, and I wanted to ask Dad something. I feel embarrassed every time I go out. Wendy Hill — Year 7 IO Unit I A school magazine"
+          },
+          {
+            "id": 49701,
+            "is_activity_book": true,
+            "activity_book_page": 16,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 16 و 17): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 7: Activity Book (pp. 16-17)\n\nReading tip 1 (Page 16): Pronouns and 'there' (she, he, it, we, they, them, there):\nPronouns replace nouns so we don't repeat them. Sentences with pronouns come after sentences with the original nouns.\n\nExercise B (Page 16): Put the sentences of the stories in correct order:\n- Story 1 (Liz Ellen - The Gift Shop Mug):\n  1. a (One day last week, my mum and I were out shopping in town.)\n  2. f (We were looking for a present for my uncle, so we went to a gift shop.)\n  3. e (Mum saw a really nice mug on the shelf.)\n  4. b ('That's nice,' she said. 'Your uncle will like that. He drinks lots of tea.')\n  5. d (I picked it up to look at the price and spilt hot coffee all over my dress.)\n  6. c (It was the shop assistant's own mug!)\n  7. g (I was so embarrassed that I nearly died!)\n- Story 2 (Wendy Hill - The Museum Mirror):\n  1. a (Last week, my dad took my sister and me to the museum.)\n  2. g (We were looking at an old car, and I wanted to ask Dad something.)\n  3. b (I turned round, but he wasn't there.)\n  4. f ('Dad! Dad!' I shouted. I was worried.)\n  5. c (Suddenly, I saw him and ran towards him.)\n  6. d (Bang! I ran into a big mirror.)\n  7. f (I still have a black eye.)\n  8. h (I feel embarrassed every time I go out.)\n\nWork it out! Idioms & Phrases (Page 16):\n- 'I nearly died!' = I felt extremely embarrassed and ashamed.\n- 'black eye' = dark, bruised skin around the eye after being hit or knocked.\n\nExercise 1 (Page 16-17): Vocabulary meanings:\na. embarrassed -> to feel shy and silly [✓]\nb. spilt -> made a liquid flow out [✓]\nc. mug -> a big cup [✓]\nd. mirror -> a glass you can see in [✓]\n\nExercise 3 (Page 17): Opinions:\n- Asking: 'What do you think of Ali's story?' / 'Which story is the best?'\n- Giving: 'I think that Liz's story is the funniest and most embarrassing.'",
+            "exercises": [
+              {
+                "id": "u1_l7_exB",
+                "num": "Exercise B (Page 16)",
+                "title": "Put the sentences of the two stories in the correct logical chronological order.",
+                "title_ar": "رتب جمل القصتين بالترتيب المنطقي والزمني الصحيح للأحداث:",
+                "questions": [
+                  {
+                    "q": "Story 1 Order (Liz Ellen - The Gift Shop):",
+                    "q_ar": "ترتيب القصة الأولى (قصة ليز في متجر الهدايا):",
+                    "a": "1: a ➔ 2: f ➔ 3: e ➔ 4: b ➔ 5: d ➔ 6: c ➔ 7: g\n(بدأت بالتسوق، البحث عن هدية للعم، رؤية القدح على الرف، إعجاب الأم به، رفعه لرؤية السعر وسكب القهوة، اكتشاف أنه قدح البائعة، والشعور بالإحراج الشديد)"
+                  },
+                  {
+                    "q": "Story 2 Order (Wendy Hill - The Museum):",
+                    "q_ar": "ترتيب القصة الثانية (قصة ويندي في المتحف):",
+                    "a": "1: a ➔ 2: g ➔ 3: b ➔ 4: e ➔ 5: c ➔ 6: d ➔ 7: f ➔ 8: h\n(الذهاب للمتحف، النظر للسيارة القديمة، الالتفات وعدم رؤية الوالد، القلق والمناداة، رؤية الوالد والركض نحوه، الاصطدام بالمرآة الكبيرة، اسوداد العين، والشعور بالإحراج)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_l7_ex1",
+                "num": "Exercise 1 (Pages 16 - 17)",
+                "title": "Find the words in the text in your Student's Book. Tick (✓) the correct meaning.",
+                "title_ar": "اختر المعنى الصحيح للكلمات الواردة في نص القصتين بوضع علامة (✓):",
+                "questions": [
+                  {
+                    "q": "a. embarrassed",
+                    "q_ar": "معنى كلمة محرج (embarrassed):",
+                    "a": "to feel shy and silly [✓] (الشعور بالخجل والارتباك)"
+                  },
+                  {
+                    "q": "b. spilt",
+                    "q_ar": "معنى كلمة سكب / أراق (spilt):",
+                    "a": "made a liquid flow out [✓] (جعل السائل ينسكب ويتدفق بالخطأ)"
+                  },
+                  {
+                    "q": "c. mug",
+                    "q_ar": "معنى كلمة قدح كبير (mug):",
+                    "a": "a big cup [✓] (كوب أو قدح كبير للشاي والقهوة)"
+                  },
+                  {
+                    "q": "d. mirror",
+                    "q_ar": "معنى كلمة مرآة (mirror):",
+                    "a": "a glass you can see in [✓] (لوح زجاجي مصقول ترى فيه انعكاس صورتك)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          16,
+          17
         ]
       },
       {
@@ -109,7 +918,51 @@ window.CURRICULUM_DATA = [
             "page": 11,
             "heading": "AB Unit Lesson 8: The Global Youth Magazine O Read the advertisement for the Global Youth Magazine's competition. Would you like to go? Why/Why not? CLURL yevni NRCRZINE (cm) Tell us about yourself and win a chance to join the editorial team on a road trip around Europe, starting in „. LONDON! Are you a writer, a designer, a reporter, a photographer, an editor? Are you interested in the world around you? Do you want to learn from people in lots Of different countries? Fill out the application form below and maybe, just maybe, we'll see you in London. (Applicants should be between the ages of 14—17 and available between the 15th June—Pt August.) London Sionehenge-æ Munich Alps Aziz Age: 15 Address: 39, 2, 14, Qusr, Basra, Iraq Tell us about your experience of working on magazines: I've always beeg. veru 'wterested photography. t have worked the school magazivve for three eears, east year, wow the photogra•pher Award here Iraq. Why do you want to join the GYM team? wavvt to Leana. about people the world. believe that we eaoh Other a Little better. Which other countries have you been to? t have beer. to cavyada, Which languages do you speak? t speaæ Arabic, ayvd little Frevveh, What do you do in your spare time? reaLLU ewjOU eawoeivvg awd rowivvg. Love oowweoted to the water. But t always have camera with me. A school magazine Unit 1 11",
             "text": "AB Unit Lesson 8: The Global Youth Magazine O Read the advertisement for the Global Youth Magazine's competition. Would you like to go? Why/Why not? CLURL yevni NRCRZINE (cm) Tell us about yourself and win a chance to join the editorial team on a road trip around Europe, starting in „. LONDON! Are you a writer, a designer, a reporter, a photographer, an editor? Are you interested in the world around you? Do you want to learn from people in lots Of different countries? Fill out the application form below and maybe, just maybe, we'll see you in London. (Applicants should be between the ages of 14—17 and available between the 15th June—Pt August.) London Sionehenge-æ Munich Alps Aziz Age: 15 Address: 39, 2, 14, Qusr, Basra, Iraq Tell us about your experience of working on magazines: I've always beeg. veru 'wterested photography. t have worked the school magazivve for three eears, east year, wow the photogra•pher Award here Iraq. Why do you want to join the GYM team? wavvt to Leana. about people the world. believe that we eaoh Other a Little better. Which other countries have you been to? t have beer. to cavyada, Which languages do you speak? t speaæ Arabic, ayvd little Frevveh, What do you do in your spare time? reaLLU ewjOU eawoeivvg awd rowivvg. Love oowweoted to the water. But t always have camera with me. A school magazine Unit 1 11"
+          },
+          {
+            "id": 49801,
+            "is_activity_book": true,
+            "activity_book_page": 18,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 18 و 19): التمارين والحلول النموذجية المعتمدة",
+            "text": "Unit 1 Lesson 8: Activity Book (pp. 18-19)\n\nExercise 1 (Page 18): Read about Johnny Miller and Paolo Guidi. Compare them with Jad:\n- Things Jad, Johnny and Paolo have in common (أوجه التشابه):\n  1. They all have experience working on school magazines and writing/photography.\n  2. They all speak English and French.\n  3. They all want to join the GYM team to learn about the world and make it a better place.\n- Things they don't have in common (أوجه الاختلاف):\n  1. Age: Johnny is 14, Jad is 15, Paolo is 16.\n  2. Home city & country: Johnny is from Ashby, England; Jad is from Basra, Iraq; Paolo is from Comacchio, Italy.\n  3. Travel abroad: Johnny has never left England; Jad has been to Canada; Paolo has been to Spain and Morocco.\n  4. Hobbies: Jad loves canoeing and rowing; Paolo loves keeping a diary of funny events; Johnny loves writing poems and articles.\n\nExercise 2 (Page 19): Do you think the boys will be friends? Why/Why not?\nYes, definitely! Because they share a passion for youth journalism, learning from different cultures, and communicating ideas to build international understanding.\n\nExercise 3 (Page 19): Filling out the GYM application form with personal details.",
+            "exercises": [
+              {
+                "id": "u1_l8_ex1",
+                "num": "Exercise 1 (Page 18)",
+                "title": "Read about Johnny and Paolo. Compare them with Jad (Things in common vs Things NOT in common).",
+                "title_ar": "قارن بين شخصيات جاد وجوني وباولو موضحاً أوجه التشابه وأوجه الاختلاف:",
+                "questions": [
+                  {
+                    "q": "Things Jad, Johnny and Paolo have in common:",
+                    "q_ar": "الأمور المشتركة بين الفتيان الثلاثة:",
+                    "a": "• 1. They have all worked on school magazines and enjoy writing, reporting, and media.\n• 2. They all speak English and French.\n• 3. They all want to join the GYM team to promote world understanding and friendship."
+                  },
+                  {
+                    "q": "Things Jad, Johnny and Paolo do NOT have in common:",
+                    "q_ar": "أوجه الاختلاف بين الفتيان الثلاثة:",
+                    "a": "• 1. Ages: Johnny is 14, Jad is 15, Paolo is 16.\n• 2. Countries: Johnny is from England, Jad is from Iraq, Paolo is from Italy.\n• 3. Travel: Johnny has never left his country, Jad went to Canada, Paolo visited Spain & Morocco.\n• 4. Spare time: Jad loves rowing/canoeing, Paolo keeps a diary, Johnny writes stories."
+                  }
+                ]
+              },
+              {
+                "id": "u1_l8_ex2",
+                "num": "Exercise 2 (Page 19)",
+                "title": "Do you think the boys will be friends? Why/Why not?",
+                "title_ar": "هل تعتقد أن الفتيان سيكونون أصدقاء مقربين؟ ولماذا؟",
+                "questions": [
+                  {
+                    "q": "Will they be friends?",
+                    "q_ar": "الإجابة والتعليل:",
+                    "a": "Yes, I think they will be great friends because they are all enthusiastic about making the world better through writing, learning languages, and sharing diverse cultural experiences."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          18,
+          19
         ]
       },
       {
@@ -122,7 +975,78 @@ window.CURRICULUM_DATA = [
             "page": 12,
             "heading": "صفحة 12",
             "text": "AB 20 Unit I Round up In this unit, you have practised: Asking for and making suggestions Why don't we start a magazine? What sections shall we have? 2 3 4 5 6 12 Let's have articles about the school. Talking about things you like or dislike I love horse riding. I hate gardening. Describing people with adjectives and relative clauses I like helpful people. orl like people who help others. I hate noisy people. or I hate people who are noisy. Saying how long you have done something I have known my friend for three years. We have lived in our new house since September. Asking for and giving opinions What do you think of Zaid's story? Which story is the best? I think that Khalid's story is the funniest. Let's choose his. And you have worked out the meanings of new words and idioms while you were reading. • decided what to put in your magazine. answered interview questions. learnt how to read notes, written a short story, • filled in an application form. Unit I A school magazine"
+          },
+          {
+            "id": 49901,
+            "is_activity_book": true,
+            "activity_book_page": 20,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 20): مراجعة الوحدة الشاملة والحلول النموذجية",
+            "text": "Unit 1 Round up: Activity Book (Page 20)\n\nExercise 1 (Page 20): Write the sentences again using I like or I don't like (with 'who'):\nExample: They never do their homework. -> I don't like people who never do their homework.\na. They tell jokes. -> I like people who tell jokes.\nb. They laugh at me. -> I don't like people who laugh at me.\nc. They copy my homework. -> I don't like people who copy my homework.\nd. They tell lies. -> I don't like people who tell lies.\n\nExercise 2 (Page 20): Punctuation of paragraph:\nNoora and Dana wrote stories for the class magazine. Both stories are very good, but the editor says she can only print one. Which of the girls' stories will the team choose? 'I think Noora's is the best,' Sara said. Everyone agreed, so Noora's story will be in the magazine.\n\nExercise 3 (Page 20): Decipher shorthand messages into full sentences:\na. Pls. go to shop. I'm v. hungry. -> Please go to the shop. I am very hungry.\nb. Do your h.w. I'm v. tired. -> Do your homework. I am very tired.",
+            "exercises": [
+              {
+                "id": "u1_roundup_ex1",
+                "num": "Exercise 1 (Page 20)",
+                "title": "Write the sentences again using 'I like' or 'I don't like' with 'who'.",
+                "title_ar": "أعد كتابة الجمل معبراً عن إعجابك أو عدم إعجابك بسلوك الأشخاص باستخدام (who):",
+                "questions": [
+                  {
+                    "q": "a. They tell jokes.",
+                    "q_ar": "هم يلقون النكات الطريفة:",
+                    "a": "I like people who tell jokes. (أحب الأشخاص الذين يلقون النكات)"
+                  },
+                  {
+                    "q": "b. They laugh at me.",
+                    "q_ar": "هم يسخرون مني ويضحكون علي:",
+                    "a": "I don't like people who laugh at me. (لا أحب الأشخاص الذين يسخرون مني)"
+                  },
+                  {
+                    "q": "c. They copy my homework.",
+                    "q_ar": "هم ينقلون واجبي البيتي:",
+                    "a": "I don't like people who copy my homework. (لا أحب الأشخاص الذين ينقلون واجبي البيتي)"
+                  },
+                  {
+                    "q": "d. They tell lies.",
+                    "q_ar": "هم يكذبون ويقولون الأكاذيب:",
+                    "a": "I don't like people who tell lies. (لا أحب الأشخاص الذين يكذبون)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_roundup_ex2",
+                "num": "Exercise 2 (Page 20)",
+                "title": "Write the paragraph with the correct punctuation (capital letters, full stops, question mark, speech marks).",
+                "title_ar": "أعد كتابة الفقرة التالية بوضع علامات الترقيم الصحيحة والحروف الكبيرة:",
+                "questions": [
+                  {
+                    "q": "Paragraph punctuation:",
+                    "q_ar": "النص بعد تصحيح الترقيم بالكامل:",
+                    "a": "Noora and Dana wrote stories for the class magazine. Both stories are very good, but the editor says she can only print one. Which of the girls' stories will the team choose? \"I think Noora's is the best,\" Sara said. Everyone agreed, so Noora's story will be in the magazine."
+                  }
+                ]
+              },
+              {
+                "id": "u1_roundup_ex3",
+                "num": "Exercise 3 (Page 20)",
+                "title": "Work out the shorthand messages and write them as full grammatically correct sentences.",
+                "title_ar": "فك شفرة الرسائل النصية المختصرة واكتبها جملاً كاملة صحيحة قواعدياً وإملائياً:",
+                "questions": [
+                  {
+                    "q": "a. Pls. go to shop. I'm v. hungry.",
+                    "q_ar": "الرسالة الأولى:",
+                    "a": "Please go to the shop. I am very hungry. (رجاءً اذهب إلى المتجر، فأنا جائع جداً)"
+                  },
+                  {
+                    "q": "b. Do your h.w. I'm v. tired.",
+                    "q_ar": "الرسالة الثانية:",
+                    "a": "Do your homework. I am very tired. (أنجز واجبك البيتي، فأنا متعب للغاية)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          20
         ]
       },
       {
@@ -141,7 +1065,90 @@ window.CURRICULUM_DATA = [
             "page": 14,
             "heading": "Story Jad and Johnny - A tour of London time 14 Our seats were next to the window, and we saw lots of interesting things as the minibus drove through London's busy streets. There were very tall buildings, expensive shops and people in strange clothes. Then something very strange happened. The minibus turned off the road and started driving towards the River Thames. 'Jad! What's going on?' I asked. But Jad didn't know either. 'Excuse me,' I said to the driver, but he just smiled. 'Excuse me!' I shouted this time. But the driver just kept on smiling and driving into the river. 'Aaaaaarrrgghhh! STOP!' I cried. But when the bus went into the river, it didn't sink. Instead, it floated - the minibus turned into a boat! The driver laughed at me and so did the other passengers. I felt silly, but I laughed, too. Our tour went along the river, and we saw some famous tourist attractions, like Big Ben and St Paul's Cathedral. Jad took lots of photographs, and I started writing about our tour. Then, as we reached a bridge, the boat slowed down. I didn't know what was happening. 'I've seen this on TV,' said Jad. 'This is Tower Bridge.' Everyone watched as Unit 1 A school magazine part of the bridge lifted up and made space for boats to go through. 'That's so cool!' I said. After two hours, the tour finished. 'Now our boat is a bus again,' I laughed. I opened the door and stepped out. 'Johnny! Stop!' shouted Jad but he was too late. It was the wrong door, and I was standing in the river! The water reached up to my knees. 'Oh, no!' I shouted. Before Jad helped me, he took out his camera and took a photograph. 'That's my favourite photograph of the day,' he laughed. 'At least I've got something funny to write about in my article,' I said, and I laughed, too.",
             "text": "Story Jad and Johnny - A tour of London time 14 Our seats were next to the window, and we saw lots of interesting things as the minibus drove through London's busy streets. There were very tall buildings, expensive shops and people in strange clothes. Then something very strange happened. The minibus turned off the road and started driving towards the River Thames. 'Jad! What's going on?' I asked. But Jad didn't know either. 'Excuse me,' I said to the driver, but he just smiled. 'Excuse me!' I shouted this time. But the driver just kept on smiling and driving into the river. 'Aaaaaarrrgghhh! STOP!' I cried. But when the bus went into the river, it didn't sink. Instead, it floated - the minibus turned into a boat! The driver laughed at me and so did the other passengers. I felt silly, but I laughed, too. Our tour went along the river, and we saw some famous tourist attractions, like Big Ben and St Paul's Cathedral. Jad took lots of photographs, and I started writing about our tour. Then, as we reached a bridge, the boat slowed down. I didn't know what was happening. 'I've seen this on TV,' said Jad. 'This is Tower Bridge.' Everyone watched as Unit 1 A school magazine part of the bridge lifted up and made space for boats to go through. 'That's so cool!' I said. After two hours, the tour finished. 'Now our boat is a bus again,' I laughed. I opened the door and stepped out. 'Johnny! Stop!' shouted Jad but he was too late. It was the wrong door, and I was standing in the river! The water reached up to my knees. 'Oh, no!' I shouted. Before Jad helped me, he took out his camera and took a photograph. 'That's my favourite photograph of the day,' he laughed. 'At least I've got something funny to write about in my article,' I said, and I laughed, too."
+          },
+          {
+            "id": 491001,
+            "is_activity_book": true,
+            "activity_book_page": 21,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 21): أسئلة القصة الاستيعابية والحلول النموذجية",
+            "text": "Unit 1 Story Time: Jad and Johnny - A Tour of London (Activity Book Page 21)\n\nExercise 1 (Page 21): Story Card:\n- Title: Jad and Johnny - A Tour of London\n- Characters: Jad, Johnny, Mr Miller, the DUCK tour guide/driver, passengers\n- What it is about: Jad travels from Iraq to London to join the GYM team. He meets Johnny, and they take an exciting amphibious DUCK bus tour around London. Johnny has two funny, embarrassing mishaps, but his great sense of humor keeps everyone laughing.\n- Why I liked the story: It is full of funny moments, London landmarks, and teaches self-confidence.\n- New words: amphibious, DUCK bus, splash, aisle, landmark.\n\nExercise 2 (Page 21): Comprehension Questions & Model Answers:\na. In which city are Jad and Johnny? -> In London.\nb. Why are they there? -> To work on the Global Youth Magazine (GYM).\nc. What do the new friends decide to do? -> To take a tour of London on a DUCK bus.\nd. Why is the DUCK tour special? -> Because the vehicle is amphibious; it travels on roads and floats on the river.\ne. What were the two embarrassing things that happened to Johnny during the tour? -> 1. He fell off his seat into the aisle when the bus splashed into the Thames. 2. He dropped his ice cream onto a passenger's jacket.\nf. Why wasn't Johnny embarrassed? -> Because he has a great sense of humour, laughed at himself, and made the other passengers laugh.",
+            "exercises": [
+              {
+                "id": "u1_story_ex1",
+                "num": "Exercise 1 (Page 21)",
+                "title": "Complete the Story Analysis Card for 'Jad and Johnny - A Tour of London'.",
+                "title_ar": "أكمل بطاقة التحليل الأدبي لقصة (جاد وجوني - جولة في لندن):",
+                "questions": [
+                  {
+                    "q": "a. Title:",
+                    "q_ar": "عنوان القصة:",
+                    "a": "Jad and Johnny - A Tour of London (جاد وجوني - جولة في لندن)"
+                  },
+                  {
+                    "q": "b. Characters:",
+                    "q_ar": "الشخصيات الرئيسية:",
+                    "a": "Jad (from Iraq), Johnny (from England), Mr Miller (Johnny's dad), the tour driver, passengers."
+                  },
+                  {
+                    "q": "c. What it is about:",
+                    "q_ar": "عن ماذا تدور القصة؟",
+                    "a": "It is about Jad meeting Johnny in London for the GYM magazine. They take an amphibious DUCK bus tour along London streets and the River Thames, experiencing humorous adventures."
+                  },
+                  {
+                    "q": "d. Why I liked / didn't like the story:",
+                    "q_ar": "لماذا أعجبتك القصة؟",
+                    "a": "I liked it very much because it is funny, teaches us to laugh at embarrassing moments, and shows wonderful London landmarks (Big Ben, London Eye, Tower Bridge)."
+                  },
+                  {
+                    "q": "e. New words:",
+                    "q_ar": "أهم الكلمات الجديدة المستفادة:",
+                    "a": "amphibious (برمائي), DUCK tour (حافلة سياحية برمائية), splash (يتطاير الماء / يغطس برذاذ), aisle (ممر الحافلة), drop (يسقط)."
+                  }
+                ]
+              },
+              {
+                "id": "u1_story_ex2",
+                "num": "Exercise 2 (Page 21)",
+                "title": "Answer the comprehension questions about the story.",
+                "title_ar": "أجب عن الأسئلة الاستيعابية والامتحانية المقررة عن القصة:",
+                "questions": [
+                  {
+                    "q": "a. In which city are Jad and Johnny?",
+                    "q_ar": "في أي مدينة يتواجد جاد وجوني؟",
+                    "a": "In London, England. (في العاصمة البريطانية لندن)"
+                  },
+                  {
+                    "q": "b. Why are they there?",
+                    "q_ar": "لماذا هما متواجدان هناك؟",
+                    "a": "To meet the team and work on the Global Youth Magazine (GYM). (للمشاركة في فريق عمل مجلة الشباب العالمية)"
+                  },
+                  {
+                    "q": "c. What do the new friends decide to do?",
+                    "q_ar": "ماذا قرر الصديقان الجديدان أن يفعلا؟",
+                    "a": "To take a sight-seeing tour of London on a DUCK bus. (القيام بجولة سياحية لرؤية معالم لندن على متن الحافلة البرمائية)"
+                  },
+                  {
+                    "q": "d. Why is the DUCK tour special?",
+                    "q_ar": "ما الذي يجعل جولة حافلة البطة (DUCK tour) مميزة وفريدة؟",
+                    "a": "Because the vehicle is amphibious: it can drive on roads and float on water like a boat. (لأن المركبة برمائية تسير على الأرض كالحافلة وتعوم في نهر التايمز كالقارب)"
+                  },
+                  {
+                    "q": "e. What were the two embarrassing things that happened to Johnny during the tour?",
+                    "q_ar": "ما هما الموقفان المحرجان اللذان حدثا لجوني أثناء الجولة؟",
+                    "a": "1. When the bus entered the River Thames with a splash, he fell out of his seat into the aisle.\n2. He dropped his ice cream onto a passenger's jacket."
+                  },
+                  {
+                    "q": "f. Why wasn't Johnny embarrassed?",
+                    "q_ar": "لماذا لم يشعر جوني بالخجل أو الضيق من تلك المواقف؟",
+                    "a": "Because he has a wonderful sense of humour, laughed heartily at himself, and made everyone else laugh with him."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          21
         ]
       },
       {
@@ -160,7 +1167,123 @@ window.CURRICULUM_DATA = [
             "page": 16,
             "heading": "صفحة 16",
             "text": "p Project 1: My first day at school Read about Adam and Rawan's first day at school. Complete the texts using words from Exercises B and C. Listen and check. Monday was my first day at school. My first lesson was Maths, and my was Mr Hassan. He wrote some questions on the 2. They were difficult, and we couldn't use our new 3! | sat next to my 4, Ali. He's a My first lesson was Geography, and my teacher was Mrs Noor. She pointed to a on the wall and told us about the different countries. There are 36 8 in my class, but I don't know all their names yet. After lunch, we had English. The teacher friendly boy. After Maths, we had a 5, and I ate a snack. Then we had my favourite subject - 6! We played football today, and my team won. gave us a 9 to check our English level. I'm good at English, and so it was easy for me. Then she gave us some 10 to do at the weekend. We have to write an about our first day at school! Work with a partner. Say differences between your first day at school and Adam and Rawan's first day. Adam's first lesson was Maths. My first lesson was Science. O information about: There are 36 students in Rawan's class. There are 45 students in my class. Now write about your first day at school for the school magazine. Include the subjects other students and friends 16 the classroom the teachers Project My first day at school"
+          },
+          {
+            "id": 491101,
+            "is_activity_book": true,
+            "activity_book_page": 62,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 62): الأنشطة الإضافية الموسعة والحلول النموذجية",
+            "text": "Unit 1 Extra Activities: Activity Book (Page 62)\n\nExercise 1 (Page 62): Punctuation with dialogue speech marks:\na. \"Mum!\" I shouted. \"Come here!\"\nb. \"What's the matter?\" she asked.\nc. \"I've broken my brother's computer,\" I answered.\nd. \"He won't be very happy about that,\" she said.\n\nExercise 2 (Page 62): Listening comprehension (Track 37) - Match person to section:\na. Maysam -> 5 School news\nb. Tanya -> 1 Sports news\nc. Nadia -> 3 Problem page\nd. Rasha -> 4 Interview\ne. Mona -> 2 TV review\nf. Abla -> 6 Story\n\nExercise 3 (Page 62): Past Simple and Past Continuous narrative text:\nLast Friday, I was walking in the park when I saw my brother. He was playing on his skateboard.\n'Look at me,' he said and went off down the path very fast.\n'Careful!' I shouted.\nSuddenly, he fell off, and I started to laugh.\nWe walked home very slowly. Now my brother has a black eye.",
+            "exercises": [
+              {
+                "id": "u1_extra_ex1",
+                "num": "Exercise 1 (Page 62)",
+                "title": "Write the sentences with the correct punctuation (Speech marks, exclamation marks, commas).",
+                "title_ar": "أعد كتابة الجمل التالية بوضع علامات الترقيم والتنصيص والنداء الصحيحة:",
+                "questions": [
+                  {
+                    "q": "a. mum i shouted come here",
+                    "q_ar": "الجملة a:",
+                    "a": "\"Mum!\" I shouted. \"Come here!\""
+                  },
+                  {
+                    "q": "b. whats the matter she asked",
+                    "q_ar": "الجملة b:",
+                    "a": "\"What's the matter?\" she asked."
+                  },
+                  {
+                    "q": "c. ive broken my brothers computer i answered",
+                    "q_ar": "الجملة c:",
+                    "a": "\"I've broken my brother's computer,\" I answered."
+                  },
+                  {
+                    "q": "d. he wont be very happy about that she said",
+                    "q_ar": "الجملة d:",
+                    "a": "\"He won't be very happy about that,\" she said."
+                  }
+                ]
+              },
+              {
+                "id": "u1_extra_ex2",
+                "num": "Exercise 2 (Page 62)",
+                "title": "Listen to Track 37 and match the student (a—f) to the section (1—6) they write for.",
+                "title_ar": "استمع للمقطع الصوتي (37) وطابق كل طالبة مع قسم المجلة الذي ستكتب فيه:",
+                "questions": [
+                  {
+                    "q": "a. Maysam ➔",
+                    "q_ar": "ميثم:",
+                    "a": "5. School news (أخبار المدرسة)"
+                  },
+                  {
+                    "q": "b. Tanya ➔",
+                    "q_ar": "تانيا:",
+                    "a": "1. Sports news (الأخبار الرياضية)"
+                  },
+                  {
+                    "q": "c. Nadia ➔",
+                    "q_ar": "نادية:",
+                    "a": "3. Problem page (صفحة حل المشاكل)"
+                  },
+                  {
+                    "q": "d. Rasha ➔",
+                    "q_ar": "رشا:",
+                    "a": "4. Interview (المقابلة الصحفية)"
+                  },
+                  {
+                    "q": "e. Mona ➔",
+                    "q_ar": "منى:",
+                    "a": "2. TV review (مراجعة البرامج التلفزيونية)"
+                  },
+                  {
+                    "q": "f. Abla ➔",
+                    "q_ar": "عبلة:",
+                    "a": "6. Story (القصة القصيرة)"
+                  }
+                ]
+              },
+              {
+                "id": "u1_extra_ex3",
+                "num": "Exercise 3 (Page 62)",
+                "title": "Read and complete the story using the correct form of the verbs (Past Simple & Past Continuous).",
+                "title_ar": "أكمل القصة بتصريف الأفعال بالصيغة الصحيحة (الماضي البسيط والماضي المستمر):",
+                "questions": [
+                  {
+                    "q": "Last Friday, I (walk) _______ in the park when I (see) _______ my brother.",
+                    "q_ar": "يوم الجمعة الماضي كنت أمشي عندما رأيت أخي:",
+                    "a": "was walking / saw (حدث مستمر قطعه حدث ماضٍ بسيط)"
+                  },
+                  {
+                    "q": "He (play) _______ on his skateboard.",
+                    "q_ar": "كان يلعب على لوح التزلج:",
+                    "a": "was playing (ماضٍ مستمر)"
+                  },
+                  {
+                    "q": "'Look at me,' he (say) _______ and (go) _______ off down the path very fast.",
+                    "q_ar": "قال وانطلق مسرعاً:",
+                    "a": "said / went (أفعال ماضية بسيطة متعاقبة)"
+                  },
+                  {
+                    "q": "'Careful!' I (shout) _______.",
+                    "q_ar": "صرخت منبهاً:",
+                    "a": "shouted (ماضٍ بسيط)"
+                  },
+                  {
+                    "q": "Suddenly, he (fall) _______ off, and I (start) _______ to laugh.",
+                    "q_ar": "فجأة سقط وبدأت أضحك:",
+                    "a": "fell / started (سقط وبدأ)"
+                  },
+                  {
+                    "q": "We (walk) _______ home very slowly. Now my brother (have) _______ a black eye.",
+                    "q_ar": "مشينا للمنزل، والآن أخي يعاني من اسوداد عينه:",
+                    "a": "walked / has (مشينا في الماضي، ولديه الآن علامة في عينه)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          62
         ]
       }
     ]
