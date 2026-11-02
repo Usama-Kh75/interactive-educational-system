@@ -2696,6 +2696,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          40,
+          41
         ]
       },
       {
@@ -2835,6 +2839,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          42,
+          43
         ]
       },
       {
@@ -2951,6 +2959,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          44,
+          45
         ]
       },
       {
@@ -3098,6 +3110,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          46,
+          47
         ]
       },
       {
@@ -3212,6 +3228,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          48,
+          49
         ]
       },
       {
@@ -3315,6 +3335,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          50,
+          51
         ]
       },
       {
@@ -3456,6 +3480,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          52,
+          53
         ]
       },
       {
@@ -3587,6 +3615,10 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          54,
+          55
         ]
       },
       {
@@ -3742,6 +3774,9 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          56
         ]
       },
       {
@@ -3846,6 +3881,9 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          57
         ]
       },
       {
@@ -3936,6 +3974,9 @@ window.CURRICULUM_DATA = [
               }
             ]
           }
+        ],
+        "activity_book_pages": [
+          64
         ]
       }
     ]
@@ -3955,7 +3996,104 @@ window.CURRICULUM_DATA = [
             "page": 43,
             "heading": "Unit 4 Lesson 1: Review - Listening Skills & Strategies (صفحة 43)",
             "text": "Remember! Listening can be hard work. You have to do it yourself. Nobody else can do it for you.\nRead the Listening tips carefully:\n\n★ Listening Tip 1 — Look and listen for clues:\n• Think about what you have to listen for before the audio starts.\n• Look for clues in the title, pictures, diagram, and questions.\n• If there are no pictures or titles, listen for clues in the first few sentences of the audio.\n• Example: Hearing words like 'order', 'bill', 'menu' tells you the speakers are in a restaurant.\n\n★ Listening Tip 2 — Keep listening!:\n• If you do not understand a single word or miss a detail, do NOT stop listening! Keep following the conversation.\n• You can often guess the meaning of unfamiliar words from context.\n• Often, you do not even need to know every single word to understand the main message.\n• Example: Listening to sports news on the radio to find out a match score:\n  'And now, sport. At the end of an exciting game at the new National Stadium, the score was Iraq 3, Bahrain 3.'\n\n★ Listening Tip 3 — Write notes & make your own abbreviations:\n• When you listen and have to write answers, you do NOT have time to write full sentences.\n• Write short notes and use abbreviations first, then write out complete sentences later.\n• Make sure your abbreviations are clear so you can decode them afterwards!\n\nWorked examples of student abbreviations (Restaurant Orders):\n1. What did Mr Andrews order?\n   Notes: fm chick. - r. + sal. — choc. c. — app.ju.\n   Decoded full answer: Fried chicken with rice and salad, chocolate cake for dessert, and an apple juice to drink.\n2. What did Mrs Andrews order?\n   Notes: gr.-fish - Frs. + sal. — fru. sal. - min. wa+.\n   Decoded full answer: Grilled fish with French fries and salad, fruit salad for dessert, and mineral water to drink.\n\nListening Audio Transcripts (نصوص الاستماع المعتمدة للدرس):\n[Conversation 1: In the Doctor's Waiting Room]\nMan 1: Can you pass me a magazine, please?\nMan 2: This one? Yeah. Thanks. How long have you been here?\nMan 1: Half an hour. I came in just five minutes before you. Why do we always have to wait so long?\nMan 2: I don't have time to sit here. I came in with an earache. Now I have a headache as well. What about you?\nMan 1: Pain in my back. Sitting on chairs like these doesn't help! The doctor will probably give us pills and tell us to rest.\n\n[Conversation 2: In a Restaurant - The Andrews Family]\nWaiter: Are you ready to order now, sir?\nMr Andrews: Yes, we are. I'd like fried chicken with rice, please.\nWaiter: Salad?\nMr Andrews: Yes, please.\nWaiter: Madam?\nMrs Andrews: Grilled fish, please, with fries. And I'll have salad, too.\nWaiter: Grilled fish, fries and salad. And for dessert?\nMrs Andrews: Fruit salad, please.\nMr Andrews: And chocolate cake for me.\nWaiter: One chocolate cake and one fruit salad. Anything to drink?\nMr Andrews: Apple juice for me.\nMrs Andrews: And mineral water for me.\nWaiter: Apple juice and mineral water. Thank you, madam, sir.\n\n[Conversation 3: Radio Sports News]\nAnnouncer: And now, sport. At the end of an exciting game at the new National Stadium, the score was Iraq 3, Bahrain 3.\n\n[Conversation 4: Wendy and the Teacher Consultation]\nTeacher: Come in, Wendy. Don't be shy. Sit down. What is the matter?\nWendy: Well, I can't sleep at night, and I get headaches all the time.\nTeacher: Are you worried about exams?\nWendy: No, I'm doing very well at school and never worry about exams. It's just that I can't sleep, and every morning I have a headache.\nTeacher: Have you seen a doctor? Do you take pills?\nWendy: No, pills give me a stomach ache.\nTeacher: What time do you eat in the evening?\nWendy: We have dinner at 7:30, and then I have a glass of lemonade and a packet of crisps just before going to bed at 10:00.\nTeacher: That's the problem! You shouldn't have lemonade or crisps just before bed. Have a glass of warm milk or water instead.\nWendy: And what about my headaches?\nTeacher: You live only one kilometre away, but your father drives you. You should walk to school and walk home! Regular exercise will make your headaches go away."
+          },
+          {
+            "id": 53001,
+            "page": 43,
+            "is_activity_book": true,
+            "activity_book_page": 58,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 58): مهارات الاستماع وتدوين الملاحظات والحلول النموذجية المعتمدة",
+            "text": "Unit 4 Lesson 1: Listening Skills & Strategies (Activity Book p. 58)\n\nExercise 1 (Page 58): Work out the student notes below (Restaurant Orders):\n1. What did Mr Andrews order?\n   Notes: fr. chck. — r. + sal. — choc. c. — app. ju.\n   Full answer: Fried chicken with rice and salad, chocolate cake, and apple juice.\n2. What did Mrs Andrews order?\n   Notes: gr. fish — fr-s. + sal. — fru. sal. — min. wat.\n   Full answer: Grilled fish with French fries and salad, fruit salad, and mineral water.\n\nExercise 2 (Page 58): Wendy's Health Problem & Topics Order:\na. What is Wendy's problem?\n   Answer: She can't sleep at night and she gets bad headaches all the time.\nb. Number the topics in the order you hear them:\n   1. Exams (الامتحانات)\n   2. Food and drink (الطعام والشراب)\n   3. Taking exercise (ممارسة الرياضة والتمارين)\n   4. Taking pills (تناول الحبوب والأدوية)\n\nExercise 3 (Page 58): Multiple Choice Comprehension (Wendy):\na. Does Wendy worry about exams? -> Never.\nb. Who thinks that Wendy does not have a problem? -> her parents.\nc. Why does Wendy not take any pills? -> She gets a stomach ache.\nd. What does Wendy have just before she goes to bed? -> a glass of lemonade and crisps.\ne. What should she have? -> a glass of warm milk or water.\nf. Why doesn't Wendy play tennis? -> She has too much schoolwork.\ng. How should she come to school? -> She should walk.\nh. How will this be good for Wendy? -> Her headaches will go away and she will sleep better.",
+            "exercises": [
+              {
+                "id": "u4_l1_ex1",
+                "num": "Exercise 1 (Page 58)",
+                "title": "Work out the student notes below. Then listen and check.",
+                "title_ar": "حلل ودقق ملاحظات واختصارات الطالب التالية لتحديد طلبات الطعام في المطعم:",
+                "questions": [
+                  {
+                    "q": "1. What did Mr Andrews order? (Notes: fr. chck. — r. + sal. — choc. c. — app. ju.)",
+                    "q_ar": "ماذا طلب السيد أندروز بناءً على ملاحظات الطالب المختصرة؟",
+                    "a": "Fried chicken with rice and salad, chocolate cake, and apple juice. (دجاج مقلي مع الأرز والسلطة، وكعكة الشوكولاتة، وعصير التفاح)."
+                  },
+                  {
+                    "q": "2. What did Mrs Andrews order? (Notes: gr. fish — fr-s. + sal. — fru. sal. — min. wat.)",
+                    "q_ar": "ماذا طلبت السيدة أندروز بناءً على الملاحظات المختصرة؟",
+                    "a": "Grilled fish with French fries and salad, fruit salad, and mineral water. (سمك مشوي مع البطاطا المقلية والسلطة، وسلطة فواكه، ومياه معدنية)."
+                  }
+                ]
+              },
+              {
+                "id": "u4_l1_ex2",
+                "num": "Exercise 2 (Page 58)",
+                "title": "Listen and answer the questions about Wendy.",
+                "title_ar": "استمع وأجب عن الأسئلة المتعلقة بمشكلة ويندي الصحية ورتب الموضوعات:",
+                "questions": [
+                  {
+                    "q": "a. What is Wendy's problem?",
+                    "q_ar": "ما هي مشكلة ويندي الأساسية التي تشكو منها؟",
+                    "a": "She can't sleep at night and she gets bad headaches all the time. (لا تستطيع النوم ليلاً وتعاني من صداع مستمر طوال الوقت)."
+                  },
+                  {
+                    "q": "b. Number the topics in the order you hear them in the conversation: Taking pills, Taking exercise, Food and drink, Exams.",
+                    "q_ar": "رتب الموضوعات حسب تسلسل ورودها في المحادثة المسجلة:",
+                    "a": "1. Exams (الامتحانات)\n2. Food and drink (الطعام والشراب)\n3. Taking exercise (ممارسة التمارين والرياضة)\n4. Taking pills (تناول الأدوية والحبوب)"
+                  }
+                ]
+              },
+              {
+                "id": "u4_l1_ex3",
+                "num": "Exercise 3 (Page 58)",
+                "title": "Listen again. Tick (✓) the correct answers.",
+                "title_ar": "استمع مجدداً واختر الإجابة الصحيحة لكل من الأسئلة التالية:",
+                "questions": [
+                  {
+                    "q": "a. Does Wendy worry about exams? (never / sometimes / usually)",
+                    "q_ar": "هل تقلق ويندي بشأن الامتحانات المدرسية؟",
+                    "a": "never (لا تقلق أبداً - لأنها متفوقة في دراستها وتؤدي جيداً)."
+                  },
+                  {
+                    "q": "b. Who thinks that Wendy does not have a problem? (her doctor / her friend / her parents)",
+                    "q_ar": "من يعتقد أن ويندي ليس لديها أي مشكلة؟",
+                    "a": "her parents (والداها)."
+                  },
+                  {
+                    "q": "c. Why does Wendy not take any pills? (She has not been to the doctor / She gets a stomach ache / Her parents don't like pills)",
+                    "q_ar": "لماذا لا تتناول ويندي أية حبوب للصداع؟",
+                    "a": "She gets a stomach ache (لأن الحبوب تسبب لها مغصاً وألماً في المعدة)."
+                  },
+                  {
+                    "q": "d. What does Wendy have just before she goes to bed? (a glass of lemonade / dinner / a cup of tea)",
+                    "q_ar": "ماذا تتناول ويندي مباشرة قبل ذهابها للنوم؟",
+                    "a": "a glass of lemonade (and crisps) (كأس من الليموناضة ورقائق البطاطا المقرمشة)."
+                  },
+                  {
+                    "q": "e. What should she have? (a cup of coffee / some crisps / a glass of milk)",
+                    "q_ar": "ما الذي ينبغي عليها تناوله بدلاً من ذلك ليلاً؟",
+                    "a": "a glass of milk (كأس من الحليب الدافئ)."
+                  },
+                  {
+                    "q": "f. Why doesn't Wendy play tennis? (She can't play tennis / She doesn't like tennis / She has too much schoolwork)",
+                    "q_ar": "لماذا لا تلعب ويندي التنس؟",
+                    "a": "She has too much schoolwork (لأن لديها الكثير من الواجبات المدرسية)."
+                  },
+                  {
+                    "q": "g. How should she come to school? (by car / She should run / She should walk)",
+                    "q_ar": "كيف ينبغي عليها القدوم إلى المدرسة؟",
+                    "a": "She should walk (ينبغي عليها المشي على الأقدام ذهاباً وإياباً)."
+                  },
+                  {
+                    "q": "h. How will this be good for Wendy? (She will sleep better / Her headaches will go away / She will get thinner)",
+                    "q_ar": "كيف ستفيد هذه التمارين المنتظمة ويندي؟",
+                    "a": "Her headaches will go away (سيزول عنها الصداع وستنام نوماً أفضل)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          58
         ]
       },
       {
@@ -3968,7 +4106,61 @@ window.CURRICULUM_DATA = [
             "page": 44,
             "heading": "Unit 4 Lesson 2: Review - Reading Strategies & Vocabulary Building (صفحة 44)",
             "text": "Read the Reading tips. Use them every time you read English texts!\n\n★ Reading Tip 2 — Before you read:\n• Before you start reading, look at the title and any subheadings or pictures.\n• Ask yourself: 'What do I already know about this topic?'\n• Activating your prior knowledge makes reading and understanding new information much easier.\n• Example: If the title of an article is 'Cleaner streets', think about street rubbish, recycling bins, city cleaners, and public cleanliness campaigns.\n\n★ Reading Tip 3 — Finding different kinds of information:\nAlways read the questions carefully and decide what kind of information you need:\n1. Skimming (القراءة السريعة للمعنى العام):\n   • When looking for general meaning, read the whole text quickly without stopping at difficult words.\n   • Look for Topic Sentences (usually the first sentence of each paragraph) which summarize the main point.\n2. Scanning (القراءة المسحية لاستخراج الحقائق والأرقام):\n   • When looking for specific facts, ask yourself: Am I searching for a name, a number, a date, a place, an adjective, or a time?\n   • Move your eyes across the page quickly until you locate the target keyword.\n\n★ Reading Tip 4 — Dealing with new words:\n• Don't be afraid of new or difficult words!\n• Often, you do not need to understand every single word to comprehend the text.\n• Look for context clues in the same sentence or surrounding sentences.\n• Example: 'I am very, very shy. When the teacher asks me a question, I go red.' -> The clue 'I go red' helps explain that 'shy' means feeling nervous and embarrassed in front of others.\n• Example: 'I have to share a computer with my brother. He always wants it when I need it.' -> Clues show 'share' means dividing usage between two people.\n\n★ Reading Tip 5 — Collecting words in your notebook (Word Groups):\nOrganize your vocabulary notebook by categorizing words into grammatical groups:\n1. Nouns (الأسماء):\n   • Names of food: burger, fries, rice, salad, chocolate cake, lemonade, mineral water.\n   • Names of buildings & facilities: sports centre, stadium, clinic, hospital, printing press.\n   • Names of sports: football, volleyball, karate, judo, gymnastics, swimming.\n2. Adjectives (الصفات):\n   • Describing feelings: shy, embarrassed, afraid, worried, fit, unfit.\n   • Describing places and things: delicious, interesting, exciting, crowded, fantastic, awful.\n3. Adverbs (الظروف):\n   • Describing how people do things (manner): quickly, slowly, clearly, well, easily.\n   • Describing frequency: always, usually, often, sometimes, never, regularly.\n\n★ Golden Habit for Language Mastery:\n• Practise all the words you have learnt in class regularly.\n• Expand your independent vocabulary: 'Try to learn five new words every day!'"
+          },
+          {
+            "id": 53101,
+            "page": 44,
+            "is_activity_book": true,
+            "activity_book_page": 59,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 59): استراتيجيات القراءة واستيعاب نص الفريق الأخضر والحلول النموذجية",
+            "text": "Unit 4 Lesson 2: Reading Strategies & Cleaner Streets (Activity Book p. 59)\n\nExercise 1 (Page 59): Prediction before reading:\n• Heading: 'Cleaner streets'\n• Prediction: The text will be about cleaning up rubbish and litter from neighbourhood streets, voluntary community work, recycling, and making the district a cleaner, healthier, and nicer place to live.\n\nExercise 2 (Page 59): Comprehension Questions on 'Cleaner streets':\na. Why do you think the brothers and their helpers became known as the Green Team?\n   Answer: Because the colour green is associated with nature, cleanliness, and protecting the environment.\nb. How long did it take the Green Team to remove ten tonnes of rubbish from the streets?\n   Answer: In the first 365 days (in their first year).\nc. How many vans did the Green Team have by their third year?\n   Answer: Four vans.\nd. Name three things which prove the Green Team was a success:\n   1. More than 200 volunteers joined them to clean up the streets by the end of the first year.\n   2. They removed more than ten tonnes of rubbish and made the whole district a nicer and better-smelling place to live in.\n   3. Companies supported them with money and materials, they grew to have four vans, and the brothers appeared on local and national TV and radio talk shows.",
+            "exercises": [
+              {
+                "id": "u4_l2_ex1",
+                "num": "Exercise 1 (Page 59)",
+                "title": "Look at the heading 'Cleaner streets' and predict what the text will be about.",
+                "title_ar": "توقع موضوع النص قبل القراءة بالاعتماد على العنوان الرئيسي (شوارع أكثر نظافة):",
+                "questions": [
+                  {
+                    "q": "What do you think the text will be about from the heading 'Cleaner streets'?",
+                    "q_ar": "عن ماذا تعتقد أن يدور النص استناداً إلى العنوان؟",
+                    "a": "It will be about cleaning the streets, picking up rubbish and litter, young volunteers helping their community, and making the neighbourhood clean and environmentally friendly. (سيدور النص حول تنظيف الشوارع وجمع النفايات، وعمل تطوعي يقوم به الشباب لتحسين بيئة حيهم وجعله مكاناً صحياً وجميلاً للعيش)."
+                  }
+                ]
+              },
+              {
+                "id": "u4_l2_ex2",
+                "num": "Exercise 2 (Page 59)",
+                "title": "Read the questions and answer them using the text 'Cleaner streets'.",
+                "title_ar": "اقرأ الأسئلة وأجب عنها استناداً إلى نص (شوارع أكثر نظافة):",
+                "questions": [
+                  {
+                    "q": "a. Why do you think the brothers and their helpers became known as the Green Team?",
+                    "q_ar": "لماذا برأيك أُطلق على الإخوة ومساعديهم اسم 'الفريق الأخضر'؟",
+                    "a": "Because the colour green represents nature, cleanliness, recycling, and protecting the environment. (لأن اللون الأخضر يرمز للطبيعة والنظافة وحماية البيئة وإعادة التدوير)."
+                  },
+                  {
+                    "q": "b. How long did it take the Green Team to remove ten tonnes of rubbish from the streets?",
+                    "q_ar": "كم استغرق الفريق الأخضر لإزالة 10 أطنان من القمامة من الشوارع؟",
+                    "a": "In the first 365 days / in their first year. (خلال أول 365 يوماً / في عامهم الأول)."
+                  },
+                  {
+                    "q": "c. How many vans did the Green Team have by their third year?",
+                    "q_ar": "كم عدد الشاحنات الصغيرة (الفانات) التي امتلكها الفريق بحلول عامهم الثالث؟",
+                    "a": "Four vans. (أربع شاحنات صغيرة مخصصة لجمع ونقل النفايات بعد توسع مبادرتهم)."
+                  },
+                  {
+                    "q": "d. Name three things which prove the Green Team was a success.",
+                    "q_ar": "اذكر ثلاثة أدلة تثبت أن مبادرة الفريق الأخضر حققت نجاحاً باهراً:",
+                    "a": "1. More than 200 volunteers joined them to help clean the streets. (انضمام أكثر من 200 متطوع لمساعدتهم).\n2. They removed more than ten tonnes of rubbish and made the district look and smell better. (إزالة أكثر من 10 أطنان من النفايات وجعل شوارع الحي أنظف وأجمل رائحة بيئية).\n3. Companies gave them money and materials, they had four vans, and they appeared on national TV and radio talk shows. (مساهمة الشركات بالدعم المالي والمعدات وامتلاك 4 شاحنات والظهور في برامج التلفاز والإذاعة الوطنية)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          59
         ]
       },
       {
@@ -3981,7 +4173,66 @@ window.CURRICULUM_DATA = [
             "page": 45,
             "heading": "Unit 4 Lesson 3: Review - Speaking Fluency & Question Intonation (صفحة 45)",
             "text": "\"Practice makes perfect.\"\nYou will only improve your speaking fluency if you practise speaking aloud regularly.\n\n★ Speaking Tip 3 — Reading aloud in chunks (Word Groups):\n• Always speak clearly and loudly enough for listeners to hear you.\n• Pronounce words accurately as you heard them on the audio recordings.\n• Do NOT stop awkwardly after each single word! In English, words are spoken in connected groups (chunks).\n• Keep your eyes moving ahead: while saying one word, your eyes should already look at the words following it!\n\nPractice reading these sentences aloud smoothly:\n1. \"It's very hot today.\" (4 words, 1 smooth chunk)\n2. \"It was very hot / and windy yesterday.\" (2 connected chunks)\n3. \"It was very hot and windy / when we went to the beach / last weekend.\" (3 rhythmic chunks)\n\n★ Speaking Tip 4 — Asking Questions & Intonation (تنغيم ونبرة الصوت):\nIntonation is the way your voice rises and falls when speaking:\n\n1. Wh- Questions (Voice goes DOWN ➘ - Falling Intonation):\n   • When asking questions that begin with question words: What? Why? Who? When? How? Which?, your voice goes DOWN at the end.\n   • Examples:\n     - \"How are you? ➘\" (نبرة هابطة)\n     - \"When do you have swimming lessons? ➘\" (نبرة هابطة)\n     - \"What would you like to drink? ➘\" (نبرة هابطة)\n     - \"Where did you go at the weekend? ➘\" (نبرة هابطة)\n\n2. Yes/No and Auxiliary Questions (Voice goes UP ➚ - Rising Intonation):\n   • When asking questions that begin with auxiliary or modal verbs: Is, Are, Do, Does, Did, Have, Has, Can, Would, your voice goes UP at the end.\n   • Examples:\n     - \"Have you been to the doctor? ➚\" (نبرة صاعدة)\n     - \"Can I help you? ➚\" (نبرة صاعدة)\n     - \"Are you good at swimming? ➚\" (نبرة صاعدة)\n     - \"Do you like playing tennis? ➚\" (نبرة صاعدة)\n\n★ Interactive Dialogues for Speaking Practice:\n[Dialogue 1: Checking on a Sick Friend]\nGirl 1: How are you? ➘ You look tired.\nGirl 2: I feel awful, and I have a headache.\nGirl 1: Have you been to the doctor? ➚\nGirl 2: No. I'll go this afternoon.\n\n[Dialogue 2: Inquiring at the Sports Centre]\nReceptionist: Can I help you? ➚\nBoy: When do you have swimming lessons? ➘\nReceptionist: Are you good at swimming? ➚\nBoy: No, I'm a beginner.\nReceptionist: The beginners' class is at ten o'clock on Saturday morning."
+          },
+          {
+            "id": 53201,
+            "page": 45,
+            "is_activity_book": true,
+            "activity_book_page": 60,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 60): مهارات التحدث والنبر الصوتي وتكوين الأسئلة والحلول النموذجية",
+            "text": "Unit 4 Lesson 3: Speaking Fluency & Sentence Chunking (Activity Book p. 60)\n\nExercise 1 (Page 60): Backward chaining chunking practice:\n• Build up: volleyball -> play volleyball -> like to play volleyball -> I'd like to play volleyball.\n• Speech rhythm groups:\n  a. Can / I / help you?\n  b. Are you / good at tennis?\n  c. I've never / played tennis.\n  d. I've got / a headache.\n  e. I've got a stomach ache, / and I feel sick.\n  f. What / would you like?\n  g. I'd like / a lemonade, / please.\n\nExercise 2 (Page 60): Writing possible questions for answers:\na. Answer: 'I've never played. I'd like to learn.'\n   Question: Can you play tennis / volleyball? (or: Have you ever played chess?)\nb. Answer: 'I'd like to go to the beach.'\n   Question: Where would you like to go this afternoon / weekend?\nc. Answer: 'I'd like some ice cream, please.'\n   Question: What would you like for dessert / to eat?\nd. Answer: 'At three o'clock. I've got a toothache.'\n   Question: What time is your dentist appointment, and why are you going?",
+            "exercises": [
+              {
+                "id": "u4_l3_ex1",
+                "num": "Exercise 1 (Page 60)",
+                "title": "Practise sentence rhythm and chunking from the last word.",
+                "title_ar": "تدرب على تقسيم الجمل إلى مجموعات نطقية متناسقة للحديث بطلاقة طبيعية:",
+                "questions": [
+                  {
+                    "q": "Practise the model example: volleyball -> play volleyball -> like to play volleyball -> I'd like to play volleyball.",
+                    "q_ar": "تدرب على النموذج التراكمي العكسي لبناء الجملة الإنجليزية بسلاسة وبدون تردد:",
+                    "a": "volleyball -> play volleyball -> like to play volleyball -> I'd like to play volleyball. (كرة الطائرة -> ألعب كرة الطائرة -> أرغب بلعب كرة الطائرة -> أود أن ألعب كرة الطائرة)."
+                  },
+                  {
+                    "q": "Now separate these sentences into speech groups and practise reading them with natural rhythm:\na. Can I help you?\nb. Are you good at tennis?\nc. I've never played tennis.\nd. I've got a headache.\ne. I've got a stomach ache, and I feel sick.\nf. What would you like?\ng. I'd like a lemonade, please.",
+                    "q_ar": "قسم الجمل التالية إلى مقاطع نطقية إيقاعية وتدرب على قراءتها بنبرة صوتية صحيحة:",
+                    "a": "a. Can / I / help you? (نغمة صاعدة ➚ في السؤال المباشر)\nb. Are you / good at tennis? (نغمة صاعدة ➚)\nc. I've never / played tennis. (نغمة تقريرية هابطة ➘)\nd. I've got / a headache. (نغمة هابطة ➘)\ne. I've got a stomach ache, / and I feel sick. (وقفة قصيرة بين شطري العبارة)\nf. What / would you like? (نغمة هابطة ➘ في أسئلة أداة الاستفهام Wh)\ng. I'd like / a lemonade, / please. (نغمة طلب مهذب)"
+                  }
+                ]
+              },
+              {
+                "id": "u4_l3_ex2",
+                "num": "Exercise 2 (Page 60)",
+                "title": "Look at the answers. Write the possible questions. Then practise your dialogues.",
+                "title_ar": "طابق الإجابات التالية مع الأسئلة المناسبة وكون حوارات تفاعلية متكاملة:",
+                "questions": [
+                  {
+                    "q": "a. Answer: 'I've never played. I'd like to learn.'",
+                    "q_ar": "الإجابة: لم ألعبها من قبل قط. أود أن أتعلمها.",
+                    "a": "Question: Can you play tennis / volleyball? (or: Have you ever played tennis / chess?) -> [هل تجيد لعب التنس؟ / هل سبق لك أن لعبت التنس؟]."
+                  },
+                  {
+                    "q": "b. Answer: 'I'd like to go to the beach.'",
+                    "q_ar": "الإجابة: أود الذهاب إلى شاطئ البحر.",
+                    "a": "Question: Where would you like to go this afternoon / at the weekend? -> [أين تود الذهاب بعد ظهر هذا اليوم / في عطلة نهاية الأسبوع؟]."
+                  },
+                  {
+                    "q": "c. Answer: 'I'd like some ice cream, please.'",
+                    "q_ar": "الإجابة: أود بعض المثلجات (الآيس كريم) من فضلك.",
+                    "a": "Question: What would you like for dessert? (or: What would you like to have?) -> [ماذا ترغب في تناوله للتحلية؟]."
+                  },
+                  {
+                    "q": "d. Answer: 'At three o'clock. I've got a toothache.'",
+                    "q_ar": "الإجابة: عند الساعة الثالثة تماماً. أعاني من ألم في الأسنان.",
+                    "a": "Question: When is your appointment with the dentist, and why are you going? -> [متى موعدك مع طبيب الأسنان ولماذا تذهب إليه؟]."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          60
         ]
       },
       {
@@ -3994,7 +4245,46 @@ window.CURRICULUM_DATA = [
             "page": 46,
             "heading": "Unit 4 Lesson 4: Review - Writing Skills & Paragraph Planning (صفحة 46)",
             "text": "Writing is a creative and structured process. Follow these expert tips to write excellent paragraphs and stories:\n\n★ Writing Tip 3 — Check your writing (Editing & Proofreading):\nAfter writing your first draft, always review it with a critical eye. Check four vital elements:\n1. Spelling (الإملاء): Verify difficult words and silent letters.\n2. Punctuation (علامات الترقيم): Capital letters at start of sentences and names, commas in lists, full stops at ends, question marks for questions.\n3. Wrong words (الكلمات غير المناسبة): Replace awkward words with accurate vocabulary.\n4. Missing words (الكلمات الناقصة): Ensure articles (a, an, the), prepositions (in, on, at), and auxiliary verbs are not dropped.\n-> After editing, write a final, polished copy in your cleanest handwriting!\n\n★ Writing Tip 4 — Paint a picture with words:\n• When writing a story, help the reader visualize what is happening.\n• Use vivid adjectives (e.g. delicious, awful, exhausting, magnificent) and descriptive adverbs (e.g. nervously, cheerfully, rapidly).\n• Example: Instead of 'The car went down the road', write: 'The noisy red sports car sped rapidly down the dusty road.'\n\n★ Writing Tip 5 — Make your writing interesting:\n• Think about what will entertain, inform, or surprise your reader.\n• Include your personal thoughts and emotions ('I was so excited that I couldn't sleep!').\n• Make your reader smile or laugh with humorous observations.\n\n★ Writing Tip 6 — Organize and plan each paragraph:\n1. Topic Sentences (جملة الموضوع الافتتاحية):\n   • Always begin each paragraph with a clear Topic Sentence stating what the whole paragraph is about.\n   • Example topic: 'My Weekend'\n     Topic sentence: 'I did lots of exciting things at the weekend.'\n\n2. The Spidergram / Mind Map (المخطط العنكبوتي للعصف الذهني):\n   • Write your central topic in the middle box: 'I did lots of nice things at the weekend.'\n   • Draw radiating branches (arms) for each activity:\n     - Branch 1: Visited grandmother in the morning.\n     - Branch 2: Played football match with friends in the park.\n     - Branch 3: Watched an action movie and ate pizza with family.\n   • Number the notes in logical chronological order (1, 2, 3).\n   • Expand each branch into connected sentences to produce your first paragraph draft!"
+          },
+          {
+            "id": 53301,
+            "page": 46,
+            "is_activity_book": true,
+            "activity_book_page": 61,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 61): مهارات تدقيق وتصحيح البطاقة البريدية (Postcard) والحلول النموذجية",
+            "text": "Unit 4 Lesson 4: Writing Skills & Editing Postcards (Activity Book p. 61)\n\nExercise 1 (Page 61): Analysis of Errors in Draft Postcard:\nOriginal draft:\n'Dear jalal, The hotel is nise. I lik the beach. A big dog chased me on the beach tomorrow. We afe a burger restaurant. if was good, buf I droppd my drink I got very wet. From, Huhannad'\n\nErrors and Corrections:\n1. Capitalization: 'jalal' -> 'Jalal' (proper nouns begin with a capital letter).\n2. Spelling: 'nise' -> 'nice'.\n3. Spelling: 'lik' -> 'like'.\n4. Tense clash: 'chased ... tomorrow' -> 'chased ... yesterday' (past tense verb requires past time adverb).\n5. Typo: 'afe' -> 'ate' (past tense of eat).\n6. Missing preposition: 'at a burger restaurant'.\n7. Pronoun & Capital: 'if' -> 'It' (subject pronoun with capital I).\n8. Spelling: 'buf' -> 'but'.\n9. Spelling: 'droppd' -> 'dropped' (double p before -ed).\n10. Conjunction: 'and I got very wet' (connecting clauses).\n11. Sender name typo: 'Huhannad' -> 'Muhannad'.\n\nExercise 2 (Page 61): The Improved Final Postcard:\nDear Jalal,\nThe hotel is nice. I like the beach. A big dog chased me on the beach yesterday. We ate at a burger restaurant. It was good, but I dropped my drink and I got very wet!\nFrom,\nMuhannad",
+            "exercises": [
+              {
+                "id": "u4_l4_ex1",
+                "num": "Exercise 1 (Page 61)",
+                "title": "Use the tips in your Student's Book to improve the postcard.",
+                "title_ar": "حدد الأخطاء الإملائية والقواعدية وعلامات الترقيم في مسودة البطاقة البريدية واشرح تصويبها:",
+                "questions": [
+                  {
+                    "q": "Examine the uncorrected draft and list all errors:\n'Dear jalal, The hotel is nise. I lik the beach. A big dog chased me on the beach tomorrow. We afe a burger restaurant. if was good, buf I droppd my drink I got very wet. From, Huhannad'",
+                    "q_ar": "استخرج الأخطاء الإملائية والزمنية والترقيمية من المسودة أعلاه:",
+                    "a": "قائمة الأخطاء وتصويبها الدقيق:\n1. 'jalal' -> 'Jalal' (أسماء العلم تبدأ بحرف كبير Capital J).\n2. 'nise' -> 'nice' (خطأ إملائي صوته /s/ ويكتب ce).\n3. 'lik' -> 'like' (خطأ إملائي بنقص e الصامتة).\n4. 'tomorrow' -> 'yesterday' (تناقض زمني صريح؛ لأن الفعل الماضي chased يتطلب ظرف زمان ماضٍ مثل أمس).\n5. 'afe' -> 'ate' (خطأ مطبعي في الماضي من eat).\n6. نقص حرف الجر -> 'at a burger restaurant'.\n7. 'if' -> 'It' (خطأ في الضمير مع وجوب البدء بحرف كبير Capital I).\n8. 'buf' -> 'but' (خطأ إملائي في أداة الربط).\n9. 'droppd' -> 'dropped' (مضاعفة الحرف الساكن p قبل إضافة ed).\n10. ربط الجملة بحرف عطف -> 'and I got very wet'.\n11. 'Huhannad' -> 'Muhannad' (تصحيح اسم الراسل مهند)."
+                  }
+                ]
+              },
+              {
+                "id": "u4_l4_ex2",
+                "num": "Exercise 2 (Page 61)",
+                "title": "Write the improved postcard in your best handwriting below.",
+                "title_ar": "الصيغة النموذجية المعتمدة للبطاقة البريدية بعد التدقيق والتصحيح مع الترجمة الكاملة:",
+                "questions": [
+                  {
+                    "q": "Write out the final, fully edited postcard:",
+                    "q_ar": "النص النهائي المعتمد للبطاقة البريدية بخط واضح وأسلوب سليم:",
+                    "a": "Dear Jalal,\n\nThe hotel is nice. I like the beach. A big dog chased me on the beach yesterday. We ate at a burger restaurant. It was good, but I dropped my drink and I got very wet!\n\nFrom,\nMuhannad\n\n(الترجمة المعتمدة:\nعزيزي جلال،\nالفندق جميل، وأنا أحب الشاطئ. طاردني كلب كبير على الشاطئ أمس! تناولنا الطعام في مطعم برغر وكان لذيذاً، لكني أسقطت شرابي وابتللت كثيراً!\nمن،\nمهند)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          61
         ]
       },
       {
@@ -4007,7 +4297,59 @@ window.CURRICULUM_DATA = [
             "page": 46,
             "heading": "Unit 4 Lesson 5: Semester 1 Master Grammar & Skills Consolidation (صفحات 43 - 46)",
             "text": "Comprehensive Master Review of Semester 1 (Units 1, 2, 3 and 4):\n\nThis master review consolidates the essential grammar, vocabulary, and macro-skills mastered across the first four units:\n\n1. Unit 1 Grammar Essentials:\n• Possessive 's:\n  - Singular noun: The boy's bag (one boy).\n  - Regular plural ending in s: The boys' bags (more than one boy).\n  - Irregular plural: The children's books, the men's cars.\n• Present Perfect with For & Since:\n  - Since + specific point in time: since Monday, since 2018, since 8 o'clock.\n  - For + duration of time: for three hours, for ten years, for a long time.\n• Preferences and Feelings:\n  - like, love, enjoy, hate, dislike + Verb-ing (e.g. I enjoy reading stories).\n• Relative Pronouns:\n  - Who connects descriptive information about people: 'He is the reporter who wrote the article.'\n\n2. Unit 2 Grammar Essentials:\n• Giving Advice with Should and Shouldn't:\n  - You should eat plenty of fruit and vegetables.\n  - You shouldn't drink too much fizzy lemonade before sleeping.\n• Quantifiers with Countable vs Uncountable Nouns:\n  - Uncountable nouns: too much, a little (water, sugar, sleep).\n  - Countable plural nouns: too many, a few (crisps, apples, hours).\n  - Both countable & uncountable: a lot of, plenty of.\n• Aches and Health Complaints:\n  - I have got a headache / stomach ache / toothache / earache.\n• English Limerick Form:\n  - 5-line humorous poem with AABBA rhyme scheme and bouncy rhythm.\n\n3. Unit 3 Grammar Essentials:\n• Sports Verbs:\n  - Play + Ball sports and team games: play football, play tennis, play volleyball.\n  - Go + Activities ending in -ing: go swimming, go horse riding, go sailing.\n  - Do + Martial arts and individual exercise: do judo, do karate, do gymnastics.\n• Used to + Infinitive:\n  - Expresses habits or states in the past that are no longer true today:\n    'I used to be shy, but now I am confident.'\n    'He used to play computer games all day, but now he does athletics.'\n\n4. Unit 4 Communication Strategies:\n• Question Intonation:\n  - Wh- questions -> Falling tone ➘ at the end ('What is your favourite sport? ➘').\n  - Yes/No questions -> Rising tone ➚ at the end ('Are you ready to order? ➚').\n• Four Steps of Paragraph Writing:\n  - Brainstorm with Spidergram -> Number notes in order -> Draft with Topic Sentence -> Edit draft for spelling and punctuation."
+          },
+          {
+            "id": 533101,
+            "page": 46,
+            "is_activity_book": true,
+            "activity_book_page": 65,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 65): الأنشطة الإضافية ومخطط كتابة الإنشاء وصيغة Used to والحلول النموذجية",
+            "text": "Unit 4 Extra Activities: Writing with 'Used to' & Spidergram (Activity Book p. 65)\n\nExercise 1 (Page 65): Brainstorming and Spidergram for Paragraph Writing:\n• Step 1: Central Topic Sentence.\n• Step 2: Mind map radiating branches (arms) comparing past (used to) with present (now).\n• Step 3: First draft linking sentences with conjunctions.\n• Step 4: Editing spelling, grammar (used to + infinitive), and punctuation.\n• Step 5: Final neat paragraph of about 80 words.\n\nExercise 2 (Page 65): Model Paragraph Topic A (Changes in your town since five years ago):\nMy town has changed a lot over the past five years. It used to be very quiet and small, but now it is bustling and modern. There used to be only narrow dirt roads, but now wide paved streets connect all the districts. In the past, people used to shop at small local markets, but now two huge shopping malls have opened. We didn't use to have a public park, but now there is a beautiful green park where children play football. I really love my town's new look!\n\nExercise 3 (Page 65): Model Paragraph Topic B (Changes in my life since I started a new sport):\nStarting swimming lessons completely transformed my everyday life. Before joining the sports centre, I used to be unfit and lazy. I used to spend hours sitting on the sofa playing video games and eating unhealthy snacks. Because of that, I used to feel tired all the time and got breathless easily. Now, I go swimming three times a week. I have become much stronger, energetic, and confident. Exercise also helps me sleep deeply and concentrate better at school.",
+            "exercises": [
+              {
+                "id": "u4_l5_ex1",
+                "num": "Exercise 1 (Page 65)",
+                "title": "Brainstorming and Spidergram for Paragraph Writing with 'Used to'.",
+                "title_ar": "خطوات التخطيط والعصف الذهني للمخطط العنكبوتي وصياغة جملة الموضوع (Topic Sentence):",
+                "questions": [
+                  {
+                    "q": "Explain the 5 essential steps to write an 80-word paragraph using a spidergram and 'used to':",
+                    "q_ar": "اشرح الخطوات الخمس لكتابة مقطع إنشائي منظم باستخدام المخطط العنكبوتي وقاعدة used to:",
+                    "a": "1. Topic Sentence (جملة الموضوع الافتتاحية): كتابة فكرة المقطع العامة في الدائرة المركزية للمخطط.\n2. Radiating Arms (أذرع المخطط): رسم 4 إلى 5 فروع تدون عليها أفكار مختصرة تقارن بين الماضي (used to) والحاضر (now).\n3. Draft Paragraph (المسودة الأولى): توسيع الملاحظات إلى جمل كاملة وربطها بأدوات الربط (and, but, because, however).\n4. Editing & Proofreading (التدقيق والتنقيح): التأكد من سلامة تصريف الفعل بعد used to (فعل مجرد)، والتأكد من علامات الترقيم والإملاء.\n5. Final Copy (النسخة النهائية المعتمدة): كتابة المقطع بوضوح وأناقة في حدود 80 كلمة."
+                  }
+                ]
+              },
+              {
+                "id": "u4_l5_ex2",
+                "num": "Exercise 2 (Page 65)",
+                "title": "Model Paragraph Topic A: Changes in your town since five years ago.",
+                "title_ar": "إنشاء نموذجي (الموضوع أ): التغيرات في مدينتي خلال السنوات الخمس الماضية باستخدام Used to:",
+                "questions": [
+                  {
+                    "q": "Write a paragraph of about 80 words about: 'Changes in my town since five years ago' using 'used to':",
+                    "q_ar": "مقطع إنشائي نموذجي متكامل مع الترجمة المعتمدة:",
+                    "a": "Changes in My Town (التغيرات في مدينتي)\n\nMy town has changed a lot over the past five years. It used to be very quiet and small, but now it is bustling and modern. There used to be only narrow dirt roads, but now wide paved streets connect all the districts. In the past, people used to shop at small local markets, but now two huge shopping malls have opened. We didn't use to have a public park, but now there is a beautiful green park where children play football. I really love my town's new look!\n\n(الترجمة المعتمدة:\nلقد تغيرت مدينتي كثيراً خلال السنوات الخمس الماضية. كانت هادئة وصغيرة، لكنها الآن مفعمة بالحيوية وحديثة. كانت هناك طرق ترابية ضيقة فقط، لكن الشوارع المعبدة العريضة تربط الآن جميع الأحياء. في الماضي، اعتاد الناس التسوق من متاجر محلية صغيرة، أما الآن فقد افتتح مركزان تجاريان ضخمان. لم نكن نمتلك حديقة عامة، أما اليوم فتوجد حديقة خضراء جميلة يلعب فيها الأطفال كرة القدم. أنا حقاً أحب المظهر الجديد لمدينتي!)."
+                  }
+                ]
+              },
+              {
+                "id": "u4_l5_ex3",
+                "num": "Exercise 3 (Page 65)",
+                "title": "Model Paragraph Topic B: Changes in my life since I started a new sport.",
+                "title_ar": "إنشاء نموذجي (الموضوع ب): التغيرات في حياتي منذ بدأت ممارسة رياضة جديدة:",
+                "questions": [
+                  {
+                    "q": "Write a paragraph of about 80 words about: 'Changes in my life since I started swimming' using 'used to':",
+                    "q_ar": "مقطع إنشائي نموذجي متكامل مع الترجمة المعتمدة:",
+                    "a": "How Swimming Changed My Life (كيف غيرت السباحة حياتي)\n\nStarting swimming lessons completely transformed my everyday life. Before joining the sports centre, I used to be unfit and lazy. I used to spend hours sitting on the sofa playing video games and eating unhealthy snacks. Because of that, I used to feel tired all the time and got breathless easily. Now, I go swimming three times a week. I have become much stronger, energetic, and confident. Exercise also helps me sleep deeply and concentrate better at school.\n\n(الترجمة المعتمدة:\nأدى بدء دروس السباحة إلى تغيير حياتي اليومية تماماً. قبل الانضمام للمركز الرياضي، كنت غير لائق بدنياً وكسولاً. اعتدت قضاء ساعات جالساً على الأريكة ألعب ألعاب الفيديو وأتناول وجبات خفيفة غير صحية. بسبب ذلك، كنت أشعر بالتعب طوال الوقت وينقطع نفسي بسرعة. أما الآن، فأنا أمارس السباحة ثلاث مرات أسبوعياً. أصبحت أقوى بكثير، وأكثر نشاطاً وثقة بنفسي. كما تساعدني التمارين على النوم بعمق والتركيز بشكل أفضل في المدرسة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          65
         ]
       }
     ]
@@ -4027,7 +4369,117 @@ window.CURRICULUM_DATA = [
             "page": 47,
             "heading": "Unit 5 Lesson 1: Old ways of sending information (صفحة 47)",
             "text": "Read and use the photographs to work out the meanings of the words:\ndrum, flag, horse, lighthouse, pigeon, signal, smoke.\n\n1. In the Arab world, men used to ride for hours, carrying messages. When one horse was tired, they got another one. This messenger service started in 670. It was called Al-Barid.\n2. In parts of Africa, people used to use drums to send messages.\n3. People used to build lighthouses near the sea. The lighthouses warned ships of danger.\n4. People used to light fires on the tops of mountains and send messages using smoke signals.\n5. People used to send messages using flags.\n6. People used to use pigeons to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping."
+          },
+          {
+            "id": 53401,
+            "page": 47,
+            "is_activity_book": true,
+            "activity_book_page": 66,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 66 و 67): وسائل الاتصال القديمة وصيغة used to والحلول النموذجية المعتمدة",
+            "text": "Unit 5 Lesson 1: Old Ways of Sending Information (Activity Book pp. 66-67)\n\nExercise 1 (Page 66): Vocabulary Completion:\nWords: [Damascus, drums, lighthouses, pigeons, signals]\na. In Africa, people used drums to send messages.\nb. The capital city of Syria is Damascus.\nc. Lighthouses warn ships of danger.\nd. Smoke signals can send messages.\ne. Pigeons can fly from Cairo to Damascus.\n\nExercise 2 (Page 66): Contrasting Past & Present with 'used to ... but now ...':\na. walk to school - bicycle:\n   I used to walk to school, but now I ride a bicycle.\nb. buy food from a small shop - supermarket:\n   I used to buy food from a small shop, but now I buy food from the supermarket.\nc. use landline phone - mobile phone:\n   I used to use a landline phone, but now I use a mobile phone.\nd. eat too much - want to get fit:\n   I used to eat too much, but now I don't because I want to get fit.\ne. watch TV - a lot of homework:\n   I used to watch TV, but now I don't because I have a lot of homework.\nf. people write letters - send emails:\n   People used to write letters, but now they send emails.\n\nExercise 3 (Page 67): Guided Essay (Getting and Sending Information - Past vs Present):\nIn the past, it was difficult and slow to get and send messages and information. People used to rely on smoke signals, drums, messenger horses, and carrier pigeons. Now, modern technology makes communication instant and effortless.\nToday, it is very easy to find out what is happening in our country and across the world. Through satellite television news channels, online newspapers, and news apps, we receive real-time updates about global events within seconds.\nFurthermore, getting specialized information has never been simpler. If you want to research a historical figure like Saladdin or study a science project, you can instantly search encyclopedias and educational websites online.\nFinally, staying connected with friends and family abroad is easier than ever. Social media platforms, instant messaging apps, and video calls allow people to share pictures and talk face-to-face anytime for free.",
+            "exercises": [
+              {
+                "id": "u5_l1_ex1",
+                "num": "Exercise 1 (Page 66)",
+                "title": "Complete the sentences. Use the words from the box.",
+                "title_ar": "أكمل الجمل التالية باستخدام الكلمات المناسبة من الصندوق:",
+                "words_box": [
+                  "Damascus",
+                  "drums",
+                  "lighthouses",
+                  "pigeons",
+                  "signals"
+                ],
+                "questions": [
+                  {
+                    "q": "a. In Africa, people used ________ to send messages.",
+                    "q_ar": "في إفريقيا، اعتاد الناس استخدام الطبول لإرسال الرسائل.",
+                    "a": "drums (الطبول)"
+                  },
+                  {
+                    "q": "b. The capital city of Syria is ________.",
+                    "q_ar": "العاصمة السورية هي دمشق.",
+                    "a": "Damascus (دمشق)"
+                  },
+                  {
+                    "q": "c. ________ warn ships of danger.",
+                    "q_ar": "المنارات تحذر السفن من المخاطر البحرية.",
+                    "a": "Lighthouses (المنارات)"
+                  },
+                  {
+                    "q": "d. Smoke ________ can send messages.",
+                    "q_ar": "الإشارات الدخانية يمكنها نقل الرسائل.",
+                    "a": "signals (إشارات - smoke signals)"
+                  },
+                  {
+                    "q": "e. ________ can fly from Cairo to Damascus.",
+                    "q_ar": "الحمام الزاجل يستطيع الطيران من القاهرة إلى دمشق دون توقف.",
+                    "a": "Pigeons (الحمام الزاجل)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l1_ex2",
+                "num": "Exercise 2 (Page 66)",
+                "title": "Use the words to write sentences like the example (used to ... but now ...).",
+                "title_ar": "كون جملاً توضح التغير بين الماضي والحاضر باستخدام صيغة (used to ... but now ...):",
+                "questions": [
+                  {
+                    "q": "Example: ride a bicycle - accident",
+                    "q_ar": "المثال المحلول: ركوب الدراجة - حادث",
+                    "a": "I used to ride a bicycle, but now I don't because I had an accident. (كنت معتاداً على ركوب الدراجة، لكني لا أفعل الآن لأني تعرضت لحادث)."
+                  },
+                  {
+                    "q": "a. walk to school - bicycle",
+                    "q_ar": "المشي إلى المدرسة - دراجة هوائية",
+                    "a": "I used to walk to school, but now I ride a bicycle. (كنت معتاداً على المشي إلى المدرسة، لكني الآن أركب الدراجة الهوائية)."
+                  },
+                  {
+                    "q": "b. buy food from a small shop - supermarket",
+                    "q_ar": "شراء الطعام من متجر صغير - السوبرماركت",
+                    "a": "I used to buy food from a small shop, but now I buy food from the supermarket. (كنت معتاداً على شراء الطعام من دكان صغير، لكني الآن أشتريه من السوبرماركت)."
+                  },
+                  {
+                    "q": "c. use landline phone - mobile phone",
+                    "q_ar": "استخدام الهاتف الأرضي - الهاتف المحمول",
+                    "a": "I used to use a landline phone, but now I use a mobile phone. (كنت معتاداً على استخدام الهاتف الأرضي، لكني الآن أستخدم الهاتف المحمول)."
+                  },
+                  {
+                    "q": "d. eat too much - want to get fit",
+                    "q_ar": "تناول الكثير من الطعام - الرغبة باكتساب اللياقة",
+                    "a": "I used to eat too much, but now I don't because I want to get fit. (كنت معتاداً على الإفراط في الأكل، لكني توقفت الآن لأني أريد اكتساب اللياقة البدنية)."
+                  },
+                  {
+                    "q": "e. watch TV - a lot of homework",
+                    "q_ar": "مشاهدة التلفاز - الكثير من الواجبات المدرسية",
+                    "a": "I used to watch TV, but now I don't because I have a lot of homework. (كنت معتاداً على مشاهدة التلفاز كثيراً، لكني لا أفعل الآن لأن لدي الكثير من الواجبات)."
+                  },
+                  {
+                    "q": "f. people write letters - send emails",
+                    "q_ar": "كتابة الرسائل البريدية - إرسال رسائل البريد الإلكتروني",
+                    "a": "People used to write letters, but now they send emails. (اعتاد الناس في الماضي كتابة الرسائل الورقية، أما الآن فهم يرسلون رسائل البريد الإلكتروني)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l1_ex3",
+                "num": "Exercise 3 (Page 67)",
+                "title": "Write about getting and sending messages and information. Follow the plan.",
+                "title_ar": "مقال إنشائي منظم من 3 فقرات حول تطور وسائل تلقي وإرسال المعلومات بين الماضي والحاضر:",
+                "questions": [
+                  {
+                    "q": "Write a 3-paragraph essay about getting and sending information (Past vs Present):",
+                    "q_ar": "مقال نموذجي متكامل بمقدمة و3 فقرات وخاتمة مع الترجمة الشاملة:",
+                    "a": "Getting and Sending Information: Past and Present\n\nIn the past, it was difficult and slow to get and send messages and information. People used to rely on smoke signals, drums, messenger horses, and carrier pigeons. Now, modern technology makes communication instant and effortless.\n\nToday, it is very easy to find out what is happening in our country and across the world. Through satellite television news channels, online newspapers, and news apps, we receive real-time updates about global events within seconds.\n\nFurthermore, getting specialized information has never been simpler. If you want to research a historical figure like Saladdin or study a science project, you can instantly search encyclopedias and educational websites online.\n\nFinally, staying connected with friends and family abroad is easier than ever. Social media platforms, instant messaging apps, and video calls allow people to share pictures and talk face-to-face anytime for free.\n\n(الترجمة المعتمدة:\nتلقي وإرسال المعلومات بين الماضي والحاضر: في الماضي، كان نقل وتلقي المعلومات صعباً وبطيئاً؛ حيث اعتمد الناس على إشارات الدخان، والطبول، وخيول البريد، والحمام الزاجل. أما الآن، فإن التكنولوجيا الحديثة جعلت التواصل فورياً وبلا عناء. اليوم، من السهل جداً معرفة ما يجري في بلدنا وفي العالم عبر القنوات الفضائية والمواقع والتطبيقات الإخبارية. كما أصبح الحصول على المعلومات التخصصية متاحاً فوراً عبر محركات البحث والموسوعات. وأخيراً، أتاح التواصل مع الأصدقاء بالخارج بالصوت والصورة عبر تطبيقات المراسلة مجاناً وبكل سهولة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          66,
+          67
         ]
       },
       {
@@ -4040,7 +4492,127 @@ window.CURRICULUM_DATA = [
             "page": 48,
             "heading": "Unit 5 Lesson 2: Accessing information (صفحة 48)",
             "text": "Nowadays, we have access to huge amounts of information.\n• You can use an encyclopedia in the library if you want to find out about history.\n• If you want to know what the capital of Madagascar is, you can look it up in an atlas.\n• Or you can go straight to the internet for all the answers.\n\nCritical Reading:\nRemember, a lot of information does not always mean good information! We need to think critically about what we are reading:\n• Who wrote the information?\n• Why did they write it?\n• Can we find the same information in different sources?\n• Are there references we can check?"
+          },
+          {
+            "id": 53501,
+            "page": 48,
+            "is_activity_book": true,
+            "activity_book_page": 68,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 68 و 69): مصادر الوصول للمعلومات وقصة كمبيوتر نبيل والحلول النموذجية",
+            "text": "Unit 5 Lesson 2: Accessing Information & Nabeel's Computer (Activity Book pp. 68-69)\n\nExercise 1 (Page 68): Complete sentences with words from the box:\nWords: [access, find out, looked it up, references, sources]\na. I didn't know what this word meant, so I looked it up.\nb. I'm interested in Saladdin, so I'm going to find out more about him.\nc. I heard the same information from three different sources.\nd. Check the list of references — it looks like the author only used Wikipedia.\ne. With this password you can access your emails.\n\nExercise 2 (Page 68): Listening table: Three people need information:\n• Saad: Needs info about: How to repair and oil his bicycle chain. / Where to find it: On the internet / a video on YouTube or cycling maintenance guide.\n• Maysam: Needs info about: History of the Abbasid Palace in Baghdad. / Where to find it: In the school library / history books and encyclopedias.\n• Khalid: Needs info about: The weather forecast for the weekend trip. / Where to find it: Weather app on mobile phone / weather forecast website.\n\nExercise 3 (Page 69): Read 'Nabeel's new computer' and answer the questions:\na. What did Nabeel want a computer for?\n   Answer: To send emails and use social networking sites.\nb. How long did Nabeel spend in the shop?\n   Answer: An hour.\nc. What happened when Nabeel took the computer home?\n   Answer: Nothing happened; the computer didn't work.\nd. How did Nabeel feel?\n   Answer: He was not pleased / angry and annoyed.\ne. Was the shopkeeper's assistant helpful?\n   Answer: No, he wasn't. (He wanted to send it away for two weeks).\nf. Finish this sentence: Nabeel said, 'Either give me...'\n   Answer: 'Either give me another new computer, or give me my money back.'\ng. What did Nabeel get in the end?\n   Answer: A new computer that worked properly.",
+            "exercises": [
+              {
+                "id": "u5_l2_ex1",
+                "num": "Exercise 1 (Page 68)",
+                "title": "Complete the sentences. Use the words and phrases from the box.",
+                "title_ar": "أكمل الجمل التالية باستخدام المصطلحات الدقيقة من الصندوق:",
+                "words_box": [
+                  "access",
+                  "find out",
+                  "looked it up",
+                  "references",
+                  "sources"
+                ],
+                "questions": [
+                  {
+                    "q": "a. I didn't know what this word meant, so I ________.",
+                    "q_ar": "لم أكن أعرف معنى هذه الكلمة، لذا بحثت عنها في المعجم.",
+                    "a": "looked it up (بحثت عنها في المعجم)"
+                  },
+                  {
+                    "q": "b. I'm interested in Saladdin, so I'm going to ________ more about him.",
+                    "q_ar": "أنا مهتم بسيرة صلاح الدين، لذا سأبحث وأكتشف المزيد عنه.",
+                    "a": "find out (أكتشف / أتقصى المزيد)"
+                  },
+                  {
+                    "q": "c. I heard the same information from three different ________.",
+                    "q_ar": "سمعت نفس المعلومة من ثلاثة مصادر مختلفة.",
+                    "a": "sources (مصادر)"
+                  },
+                  {
+                    "q": "d. Check the list of ________ — it looks like the author only used Wikipedia.",
+                    "q_ar": "دقق قائمة المراجع والمصادر - يبدو أن الكاتب اعتمد ويكيبيديا فقط.",
+                    "a": "references (المراجع / المصادر التوثيقية)"
+                  },
+                  {
+                    "q": "e. With this password you can ________ your emails.",
+                    "q_ar": "باستخدام كلمة المرور هذه يمكنك الوصول لبريدك الإلكتروني.",
+                    "a": "access (الوصول والدخول)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l2_ex2",
+                "num": "Exercise 2 (Page 68)",
+                "title": "Three people need information. Listen to their conversations and fill in the table.",
+                "title_ar": "جدول الاستماع: تحديد احتياج كل شخص ومصدر الحصول على المعلومة:",
+                "questions": [
+                  {
+                    "q": "Saad: Needs information about? Where to find it?",
+                    "q_ar": "سعد: ما المعلومة التي يحتاجها وأين يجدها؟",
+                    "a": "Needs info about: How to repair and oil his bicycle chain. / Where to find it: On the internet / a video on YouTube or maintenance manual. (يحتاج معلومة حول: كيفية تصليح وتزييت سلسلة دراجته / أين يجدها: على الإنترنت / فيديو تعليمي على يوتيوب)."
+                  },
+                  {
+                    "q": "Maysam: Needs information about? Where to find it?",
+                    "q_ar": "ميسم: ما المعلومة التي تحتاجها وأين تجدها؟",
+                    "a": "Needs info about: History of the Abbasid Palace in Baghdad. / Where to find it: In the school library / history books and encyclopedias. (تحتاج معلومة حول: تاريخ القصر العباسي في بغداد / أين تجدها: في مكتبة المدرسة / كتب التاريخ والموسوعات)."
+                  },
+                  {
+                    "q": "Khalid: Needs information about? Where to find it?",
+                    "q_ar": "خالد: ما المعلومة التي يحتاجها وأين يجدها؟",
+                    "a": "Needs info about: The weather forecast for the weekend camping trip. / Where to find it: Weather app on mobile phone / weather forecast website. (يحتاج معلومة حول: النشرة الجوية وتوقعات الطقس لعطلة نهاية الأسبوع / أين يجدها: تطبيق الطقس في الهاتف الذكي)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l2_ex3",
+                "num": "Exercise 3 (Page 69)",
+                "title": "Read the story and answer the questions. Write short answers.",
+                "title_ar": "اقرأ قصة كمبيوتر نبيل وأجب عن الأسئلة الاستيعابية بإجابات نموذجية قصيرة ومحددة:",
+                "questions": [
+                  {
+                    "q": "a. What did Nabeel want a computer for?",
+                    "q_ar": "لماذا أراد نبيل شراء جهاز حاسوب؟",
+                    "a": "To send emails and use social networking sites. (لإرسال رسائل البريد الإلكتروني واستخدام مواقع التواصل الاجتماعي)."
+                  },
+                  {
+                    "q": "b. How long did Nabeel spend in the shop?",
+                    "q_ar": "كم من الوقت أمضى نبيل داخل المتجر؟",
+                    "a": "An hour. (ساعة واحدة يتفحص مختلف الأجهزة والمعروضات)."
+                  },
+                  {
+                    "q": "c. What happened when Nabeel took the computer home?",
+                    "q_ar": "ماذا حدث عندما أخذ نبيل الحاسوب إلى المنزل وشغله؟",
+                    "a": "Nothing happened; the computer didn't work. (لم يعمل الجهاز ولم يحدث شيء إطلاقاً رغم محاولته 5 أو 6 مرات)."
+                  },
+                  {
+                    "q": "d. How did Nabeel feel?",
+                    "q_ar": "بماذا شعر نبيل حيال ذلك؟",
+                    "a": "He was not pleased / angry and annoyed. (لم يكن مسروراً وكان غاضباً ومحبطاً)."
+                  },
+                  {
+                    "q": "e. Was the shopkeeper's assistant helpful?",
+                    "q_ar": "هل كان مساعد البائع متعاوناً في البداية؟",
+                    "a": "No, he wasn't. (لا، لم يكن متعاوناً؛ بل أخبره بأن فحص الجهاز سيستغرق أسبوعين كاملاً)."
+                  },
+                  {
+                    "q": "f. Finish this sentence: Nabeel said, 'Either give me...'",
+                    "q_ar": "أكمل جملة نبيل الحازمة للمساعد:",
+                    "a": "'Either give me another new computer, or give me my money back.' (إما أن تعطيني حاسوباً جديداً آخر، أو تعيد لي نقودي بالكامل)."
+                  },
+                  {
+                    "q": "g. What did Nabeel get in the end?",
+                    "q_ar": "ماذا نال نبيل في نهاية المطاف؟",
+                    "a": "He got another new computer that worked properly. (حصل على حاسوب جديد آخر تم اختباره في المحل وكان يعمل بشكل ممتاز)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          68,
+          69
         ]
       },
       {
@@ -4053,7 +4625,135 @@ window.CURRICULUM_DATA = [
             "page": 49,
             "heading": "AB 70-71 Unit 5 Lesson 3: Working out meanings (صفحة 49)",
             "text": "Reading tip 6 — Dictionaries\nWe need dictionaries to find the meanings of words and to check their spelling.\nRemember:\n1. All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well. (bus, bright, bag, but, book, box, boy, belt, bicycle, build, blue, better).\n2. It is also important to know the meaning of the abbreviations below:\n(prep.) preposition - حرف جر\n(conj.) conjunction - أداة ربط\n(adv.) adverb - ظرف / حال\n(pron.) pronoun - ضمير\n(n.) noun - اسم\n(adj.) adjective - صفة\n(v.) verb - فعل\nExample: The (art.) black (adj.) horse (n.) ran (v.) fast (adv.), so (conj.) it (pron.) won (v.) the race easily (adv.).\n\n3. A word can have more than one meaning, and you will find all of them in a dictionary. It is important to choose the correct meaning:\nbank (n.) 1. a place where you keep money. 2. a piece of ground higher than the ground around it. 3. a piece of ground next to a river. 4. a piece of ground, usually sand or rock, in the sea, near or above the top of the water.\nbank (v.) 5. to keep money in or put money into a bank. 6. to turn a plane left or right.\na. He sat on the grassy bank and put his feet in the water. (Definition 3, noun)\nb. The plane banked to the left as it got near the airport. (Definition 6, verb)\nc. He wanted to see better, so he walked to the top of the bank. (Definition 2, noun)\nd. She banks her money twice a week. (Definition 5, verb)"
+          },
+          {
+            "id": 53601,
+            "page": 49,
+            "is_activity_book": true,
+            "activity_book_page": 70,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 70 و 71): أقسام الكلام ومعاني الكلمات والسياق والحلول النموذجية",
+            "text": "Unit 5 Lesson 3: Working Out Meanings & Parts of Speech (Activity Book pp. 70-71)\n\nExercise 1 (Page 70): Classifying words into parts of speech:\n• Conjunctions: and, but, or, so, when\n• Prepositions: above, across, at, in, under\n• Pronouns: he/she, them, him, me, you\n\nExercise 2 (Page 70): Sentence parts of speech breakdown:\na. Put (v.) your (pron.) book (n.) on (prep.) my (pron.) desk (n.).\nb. I (pron.) was (v.) tired (adj.), so (conj.) I (pron.) walked (v.) home (adv./n.) slowly (adv.).\nc. Sami's (n.) new (adj.) motorbike (n.) goes (v.) fast (adv.).\n\nExercise 3 (Page 71): Working out meanings from context clues ('chesterfield'):\na. 'We have a chesterfield.' -> All 3 meanings possible (cat, plant, furniture).\nb. 'We have a green chesterfield.' -> Plant or piece of furniture (green cat is unlikely).\nc. 'We have a green chesterfield that is very comfortable to sit on.' -> 3. a piece of furniture (sofa / couch).\n\nExercise 4 (Page 71): Context Synonyms:\na. depressed -> sad\nb. speechless -> not able to talk\nc. cautious -> careful\nd. apologetic -> sorry",
+            "exercises": [
+              {
+                "id": "u5_l3_ex1",
+                "num": "Exercise 1 (Page 70)",
+                "title": "Write the words in the correct column (Conjunction, Preposition, Pronoun).",
+                "title_ar": "صنف الكلمات التالية في العمود الصحيح (أدوات ربط، حروف جر، ضمائر):",
+                "words_box": [
+                  "above",
+                  "she",
+                  "across",
+                  "so",
+                  "and",
+                  "at",
+                  "them",
+                  "but",
+                  "under",
+                  "him",
+                  "in",
+                  "when",
+                  "me",
+                  "or",
+                  "you"
+                ],
+                "questions": [
+                  {
+                    "q": "Conjunction (أدوات الربط):",
+                    "q_ar": "اذكر جميع أدوات الربط من القائمة:",
+                    "a": "and, but, or, so, when (و، لكن، أو، لذلك، عندما)."
+                  },
+                  {
+                    "q": "Preposition (حروف الجر):",
+                    "q_ar": "اذكر جميع حروف الجر من القائمة:",
+                    "a": "above, across, at, in, under (فوق/أعلى، عبر، عند/في، في، تحت)."
+                  },
+                  {
+                    "q": "Pronoun (الضمائر):",
+                    "q_ar": "اذكر جميع الضمائر من القائمة:",
+                    "a": "she, them, him, me, you (هي، هم/هن، هو/ـه، أنا/ـني، أنت/أنتم)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l3_ex2",
+                "num": "Exercise 2 (Page 70)",
+                "title": "Read the sentences. What part of speech is each word? Write the abbreviations.",
+                "title_ar": "حدد نوع وقسم الكلام (part of speech) لكل كلمة في الجمل التالية باستخدام الاختصارات المعتمدة:",
+                "questions": [
+                  {
+                    "q": "a. Put your book on my desk.",
+                    "q_ar": "ضع كتابك على مكتبي:",
+                    "a": "1. Put = v. (verb - فعل أمر)\n2. your = pron. / poss. det. (ضمير ملكية)\n3. book = n. (noun - اسم)\n4. on = prep. (preposition - حرف جر)\n5. my = pron. / poss. det. (ضمير ملكية)\n6. desk = n. (noun - اسم)"
+                  },
+                  {
+                    "q": "b. I was tired, so I walked home slowly.",
+                    "q_ar": "كنت متعباً، لذلك مشيت إلى المنزل ببطء:",
+                    "a": "1. I = pron. (ضمير فاعل)\n2. was = v. (فعل ماضٍ)\n3. tired = adj. (adjective - صفة)\n4. so = conj. (conjunction - أداة ربط تفيد النتيجة)\n5. I = pron. (ضمير)\n6. walked = v. (فعل ماضٍ)\n7. home = adv. / n. (ظرف مكان / اسم)\n8. slowly = adv. (adverb - ظرف حال يدل على البطء)"
+                  },
+                  {
+                    "q": "c. Sami's new motorbike goes fast.",
+                    "q_ar": "دراجة سامي النارية الجديدة تسير بسرعة:",
+                    "a": "1. Sami's = n. (اسم علم مع 's التملك)\n2. new = adj. (adjective - صفة للدراجة)\n3. motorbike = n. (noun - اسم)\n4. goes = v. (verb - فعل مضارع بسيط)\n5. fast = adv. (adverb - ظرف حال بمعنى بسرعة فائقة)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l3_ex3",
+                "num": "Exercise 3 (Page 71)",
+                "title": "Reading tip: Working out meanings from context. What is a 'chesterfield'?",
+                "title_ar": "استنتاج معاني الكلمات من السياق التدريجي: ما معنى كلمة (chesterfield)؟",
+                "questions": [
+                  {
+                    "q": "a. 'We have a chesterfield.' (1. a kind of cat, 2. a kind of plant, 3. a piece of furniture)",
+                    "q_ar": "لدينا chesterfield (السياق عام جداً وبدون أي قرينة):",
+                    "a": "All three meanings are possible clues (الخيارات الثلاثة محتملة تماماً لعدم توفر قرينة تحدد ماهية الشيء)."
+                  },
+                  {
+                    "q": "b. 'We have a green chesterfield.' (1. cat, 2. plant, 3. piece of furniture)",
+                    "q_ar": "لدينا chesterfield أخضر اللون:",
+                    "a": "Plant or piece of furniture are possible; a green cat is unlikely! (النبات أو الأثاث كلاهما محتمل ومألوف باللون الأخضر، بينما القطة الخضراء مستبعدة منطقياً في الواقع)."
+                  },
+                  {
+                    "q": "c. 'We have a green chesterfield that is very comfortable to sit on.'",
+                    "q_ar": "لدينا chesterfield أخضر مريح جداً للجلوس عليه:",
+                    "a": "3. a piece of furniture (نوع من الأثاث - أريكة وكنبة مريحة مبطنة sofa/couch). القرينة الحاسمة التي حسمت المعنى هي: comfortable to sit on."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l3_ex4",
+                "num": "Exercise 4 (Page 71)",
+                "title": "Read each sentence. Tick (✓) the word or phrase that means the same as the underlined word.",
+                "title_ar": "اختر المرادف الصحيح للكلمات المحددة في سياق الجمل التالية:",
+                "questions": [
+                  {
+                    "q": "a. Noora was depressed because her best friend was in hospital. (happy / sad / excited)",
+                    "q_ar": "كانت نورة depressed لأن صديقتها المقربة في المستشفى:",
+                    "a": "sad (حزينة / كئيبة ومهمومة)"
+                  },
+                  {
+                    "q": "b. Jameel was speechless when he saw what was in the box. (not able to talk / happy / angry)",
+                    "q_ar": "عقدت الدهشة لسان جميل وبات speechless عندما رأى ما بداخل الصندوق:",
+                    "a": "not able to talk (عاجز عن الكلام من شدة المفاجأة والذهول)"
+                  },
+                  {
+                    "q": "c. Nadia is a cautious girl. She always looks left and right before crossing the street. (tidy / careful / lazy)",
+                    "q_ar": "نادية فتاة cautious، فهي تنظر دائماً يميناً ويساراً قبل عبور الشارع:",
+                    "a": "careful (حذرة / منتبهة ومحترسة)"
+                  },
+                  {
+                    "q": "d. Muna was very, very apologetic when she broke my Science project. (careful / sorry / excited)",
+                    "q_ar": "كانت منى apologetic جداً عندما كسرت مجسم مشروعي للعلوم:",
+                    "a": "sorry (معتذرة / أسفة ونادمة عما بدر منها)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          70,
+          71
         ]
       },
       {
@@ -4066,7 +4766,144 @@ window.CURRICULUM_DATA = [
             "page": 50,
             "heading": "AB 72-73 Unit 5 Lesson 4: From Cairo to Baghdad (Part A) (صفحة 50)",
             "text": "How long does it take for an article to get from a reporter in Cairo to a reader in Baghdad?\n\n1. On Monday morning, an article is written in Cairo by a reporter.\n2. Next, it is sent by email to a newspaper office in Baghdad across 1,300 km. This takes less than a minute.\n3. When the article arrives, it is read by an editor.\n4. If the editor likes the article, it is edited and inserted into the newspaper layout."
+          },
+          {
+            "id": 53701,
+            "page": 50,
+            "is_activity_book": true,
+            "activity_book_page": 72,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 72 و 73): رحلة المقال والمبني للمجهول في المضارع والحلول النموذجية",
+            "text": "Unit 5 Lesson 4: From Cairo to Baghdad - Part A (Activity Book pp. 72-73)\n\nExercise 1 (Page 72): Complete with Present Simple Passive:\nWords: [edit, insert, print, read (x2), sell, send (x3), write]\na. On Monday morning, an article is written in Cairo.\nb. Next, it is sent by email to a newspaper office in Baghdad.\nc. When the article arrives, it is read by an editor.\nd. If the editor likes the article, it is edited and inserted into the newspaper.\ne. Then, it is sent to the printing press, and at night, the newspapers are printed.\nf. Early on Tuesday morning, the newspapers are sent to the shops.\ng. When the shops open, the newspapers are sold.\nh. Finally, the article is read.\n\nExercise 2 (Page 73): Rewrite passive sentences in the active form:\na. A lot of football is played. -> People play a lot of football.\nb. A lot of newspapers are bought. -> People buy a lot of newspapers.\nc. A lot of tea is drunk. -> People drink a lot of tea.\nd. Baklava is eaten during Ramadan. -> People eat baklava during Ramadan.\ne. Gold is exported from Iraq. -> Iraq exports gold.\nf. A lot of dates are grown in Iraq. -> Farmers grow a lot of dates in Iraq.\n\nExercise 3 (Page 73): Active & Passive Sentences about life in Iraq:\n• eat: Active: Iraqis eat delicious masgouf by the river. / Passive: Delicious masgouf is eaten by the river.\n• play: Active: Children play football in the parks every Friday. / Passive: Football is played in the parks every Friday.\n• watch: Active: Families watch historical drama series on TV. / Passive: Historical drama series are watched on TV.",
+            "exercises": [
+              {
+                "id": "u5_l4_ex1",
+                "num": "Exercise 1 (Page 72)",
+                "title": "Complete the article journey using Present Simple Passive.",
+                "title_ar": "أكمل مراحل رحلة المقال الصحفي باستخدام المبني للمجهول في زمن المضارع البسيط (is/are + P.P.):",
+                "words_box": [
+                  "edit",
+                  "insert",
+                  "print",
+                  "read (x2)",
+                  "sell",
+                  "send (x3)",
+                  "write"
+                ],
+                "questions": [
+                  {
+                    "q": "a. On Monday morning, an article ________ in Cairo.",
+                    "q_ar": "في صباح يوم الاثنين، يُكتب المقال في القاهرة.",
+                    "a": "is written (يُكتَب - مفرد)"
+                  },
+                  {
+                    "q": "b. Next, it ________ by email to a newspaper office in Baghdad.",
+                    "q_ar": "بعد ذلك، يُرسل عبر البريد الإلكتروني إلى مكتب الجريدة في بغداد.",
+                    "a": "is sent (يُرسَل)"
+                  },
+                  {
+                    "q": "c. When the article arrives, it ________ by an editor.",
+                    "q_ar": "عند وصول المقال، يُقرأ من قبل المحرر.",
+                    "a": "is read (يُقرَأ)"
+                  },
+                  {
+                    "q": "d. If the editor likes the article, it ________ and ________ into the newspaper.",
+                    "q_ar": "إذا أعجب المقال المحرر، فإنه يُحرر ويُدرج في صفحات الجريدة.",
+                    "a": "is edited and inserted (يُحرَّر ويُدرَج)"
+                  },
+                  {
+                    "q": "e. Then, it ________ to the printing press, and at night, the newspapers ________.",
+                    "q_ar": "ثم يُرسل إلى المطبعة، وفي الليل تُطبع الصحف.",
+                    "a": "is sent ... are printed (يُرسَل ... تُطبَع)"
+                  },
+                  {
+                    "q": "f. Early on Tuesday morning, the newspapers ________ to the shops.",
+                    "q_ar": "في الصباح الباكر من يوم الثلاثاء، تُرسل الصحف إلى المتاجر والأكشاك.",
+                    "a": "are sent (تُرسَل - جمع)"
+                  },
+                  {
+                    "q": "g. When the shops open, the newspapers ________.",
+                    "q_ar": "عندما تفتح المحال أبوابها، تُباع الصحف للجمهور.",
+                    "a": "are sold (تُباع - جمع)"
+                  },
+                  {
+                    "q": "h. Finally, the article ________.",
+                    "q_ar": "وأخيراً، يُقرأ المقال من قبل القراء.",
+                    "a": "is read (يُقرَأ)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l4_ex2",
+                "num": "Exercise 2 (Page 73)",
+                "title": "Write the sentences again in the active form.",
+                "title_ar": "أعد كتابة الجمل المبنية للمجهول بصيغة المبني للمعلوم (Active form) بذكر الفاعل الصريح:",
+                "questions": [
+                  {
+                    "q": "Example: A lot of fish is eaten. -> People eat a lot of fish.",
+                    "q_ar": "المثال: يُؤكل الكثير من السمك -> الناس يأكلون الكثير من السمك.",
+                    "a": "People eat a lot of fish."
+                  },
+                  {
+                    "q": "a. A lot of football is played.",
+                    "q_ar": "تُلعب الكثير من كرة القدم.",
+                    "a": "People play a lot of football. (الناس / الشباب يلعبون الكثير من كرة القدم)."
+                  },
+                  {
+                    "q": "b. A lot of newspapers are bought.",
+                    "q_ar": "تُشترى الكثير من الصحف.",
+                    "a": "People buy a lot of newspapers. (الناس يشترون الكثير من الصحف)."
+                  },
+                  {
+                    "q": "c. A lot of tea is drunk.",
+                    "q_ar": "يُشرب الكثير من الشاي.",
+                    "a": "People drink a lot of tea. (الناس يشربون الكثير من الشاي)."
+                  },
+                  {
+                    "q": "d. Baklava is eaten during Ramadan.",
+                    "q_ar": "تُؤكل البقلاوة خلال شهر رمضان.",
+                    "a": "People eat baklava during Ramadan. (الناس يتناولون البقلاوة في رمضان)."
+                  },
+                  {
+                    "q": "e. Gold is exported from Iraq.",
+                    "q_ar": "يُصدَّر الذهب من العراق.",
+                    "a": "Iraq exports gold. (العراق يصدّر الذهب)."
+                  },
+                  {
+                    "q": "f. A lot of dates are grown in Iraq.",
+                    "q_ar": "تُزرع الكثير من التمور في العراق.",
+                    "a": "Farmers grow a lot of dates in Iraq. (المزارعون يزرعون الكثير من التمور في العراق)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l4_ex3",
+                "num": "Exercise 3 (Page 73)",
+                "title": "Now write three more active and passive sentences about life in Iraq (eat, play, watch).",
+                "title_ar": "اكتب ثلاث جمل إضافية في المبني للمعلوم والمبني للمجهول عن الحياة في العراق:",
+                "questions": [
+                  {
+                    "q": "Verb 1: eat (يأكل)",
+                    "q_ar": "جملة مبني للمعلوم والمجهول مع الفعل eat:",
+                    "a": "Active: Iraqis eat delicious masgouf by the river. (العراقيون يأكلون السمك المسكوف اللذيذ عند النهر).\nPassive: Delicious masgouf is eaten by the river. (يُؤكل المسكوف اللذيذ عند ضفاف النهر)."
+                  },
+                  {
+                    "q": "Verb 2: play (يلعب)",
+                    "q_ar": "جملة مبني للمعلوم والمجهول مع الفعل play:",
+                    "a": "Active: Children play traditional games in the neighborhood. (الأطفال يلعبون ألعاباً تقليدية في الحي).\nPassive: Traditional games are played in the neighborhood. (تُلعب الألعاب التقليدية في الحي)."
+                  },
+                  {
+                    "q": "Verb 3: watch (يشاهد)",
+                    "q_ar": "جملة مبني للمعلوم والمجهول مع الفعل watch:",
+                    "a": "Active: Families watch historical drama series in the evening. (العائلات تشاهد المسلسلات التاريخية في المساء).\nPassive: Historical drama series are watched in the evening. (تُشاهَد المسلسلات التاريخية في المساء)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          72,
+          73
         ]
       },
       {
@@ -4079,7 +4916,57 @@ window.CURRICULUM_DATA = [
             "page": 51,
             "heading": "AB 74-75 Unit 5 Lesson 5: From Cairo to Baghdad (Part B) (صفحة 51)",
             "text": "5. Then, it is sent to the printing press, and at night, the newspapers are printed.\n6. Early on Tuesday morning, the newspapers are sent to the shops.\n7. When the shops open, the newspapers are sold to readers.\n\nActive and Passive Voice:\n• Active: A reporter writes an article in Cairo.\n• Passive: An article is written in Cairo.\n• Active: Next, she sends it to Baghdad.\n• Passive: Next, it is sent to Baghdad.\n\nWhen we say what people and things do, we use active verb forms like write and send.\nWhen we say what happens to people and things, we use passive verb forms like is written and is sent.\nNotice we don't need to add 'by a reporter' because the action is more important than who did it!\nTo form the present passive, use the verb be (am / is / are) + past participle of the verb:\n• Books are sold in Al Mutanabbi Street."
+          },
+          {
+            "id": 53801,
+            "page": 51,
+            "is_activity_book": true,
+            "activity_book_page": 74,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 74 و 75): تصاريف الأفعال ومراحل صيد وتوزيع الأسماك بالمجهول والحلول النموذجية",
+            "text": "Unit 5 Lesson 5: From Cairo to Baghdad - Part B & Fish Journey (Activity Book pp. 74-75)\n\nExercise 1 (Page 74): Irregular & Regular Verb Table:\n1. catch -> caught -> caught\n2. bring -> brought -> brought\n3. sell -> sold -> sold\n4. take -> took -> taken\n5. send -> sent -> sent\n6. make -> made -> made\n7. write -> wrote -> written\n8. wash -> washed -> washed\n9. cook -> cooked -> cooked\n10. put -> put -> put\n\nExercise 2 (Pages 74-75): Present Passive Fish Journey:\n1. Catch & Put: First, fish are caught in large nets from the sea and put into cold ice boxes on the boats.\n2. Bring to land: Then, the fish are brought to land by the fishermen.\n3. Take: Next, the fish are taken by refrigerated trucks to the fish factory.\n4. Wash & Clean: At the factory, they are washed, cleaned and sorted.\n5. Send: After that, the fish are packed and sent to supermarkets.\n6. Display & Sell: Finally, the fresh fish are displayed on ice and sold to customers.",
+            "exercises": [
+              {
+                "id": "u5_l5_ex1",
+                "num": "Exercise 1 (Page 74)",
+                "title": "Complete the table of irregular and regular verb forms (Infinitive, Past tense, Past participle).",
+                "title_ar": "أكمل جدول تصاريف الأفعال الشاذة والقياسية (المجرد، الماضي البسيط، والتصريف الثالث P.P.):",
+                "questions": [
+                  {
+                    "q": "Complete the forms for all 10 verbs in the table:",
+                    "q_ar": "التصريف الكامل للأفعال الأساسية الواردة في المنهج:",
+                    "a": "1. catch -> caught -> caught (يمسك / يصيد)\n2. bring -> brought -> brought (يجلب / يحضر)\n3. sell -> sold -> sold (يبيع)\n4. take -> took -> taken (يأخذ / ينقل)\n5. send -> sent -> sent (يرسل)\n6. make -> made -> made (يصنع / يجعل)\n7. write -> wrote -> written (يكتب)\n8. wash -> washed -> washed (يغسل / ينظف)\n9. cook -> cooked -> cooked (يطبخ / يطهو)\n10. put -> put -> put (يضع)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l5_ex2",
+                "num": "Exercise 2 (Pages 74-75)",
+                "title": "Look at the pictures and describe how the fish get from the sea to the shops. Use Present Passive.",
+                "title_ar": "صف مراحل رحلة الأسماك من البحر إلى السوبرماركت بصيغة المبني للمجهول (is/are + P.P.):",
+                "questions": [
+                  {
+                    "q": "Stage 1 & 2: Catching and bringing fish to land (catch, put, bring to land)",
+                    "q_ar": "المرحلة 1 و 2: صيد الأسماك ونقلها إلى الشاطئ:",
+                    "a": "First, fish are caught in large nets from the sea and put into cold ice boxes on the boats. Then, they are brought to land by the fishermen. (أولاً، تُصاد الأسماك بالشباك الكبيرة من البحر وتوضع في صناديق ثلج مبردة على متن القوارب، ثم تُجلب إلى اليابسة من قبل الصيادين)."
+                  },
+                  {
+                    "q": "Stage 3 & 4: Transporting to factory and washing (take, wash)",
+                    "q_ar": "المرحلة 3 و 4: النقل إلى المصنع والغسيل:",
+                    "a": "Next, the fish are taken by refrigerated trucks to the fish factory. At the factory, they are washed, cleaned and sorted according to size. (بعد ذلك، تُنقل الأسماك بشاحنات مبردة إلى مصنع الأسماك، حيث تُغسل وتُنظف وتُفرز بحسب الحجم)."
+                  },
+                  {
+                    "q": "Stage 5 & 6: Sending and displaying in supermarkets (send, display, sell)",
+                    "q_ar": "المرحلة 5 و 6: الإرسال إلى السوبرماركت والعرض والبيع:",
+                    "a": "After that, the fresh fish are packed in boxes and sent to supermarkets. Finally, they are displayed on ice and sold to customers. (عقب ذلك، تُعبأ الأسماك وتُرسل إلى المتاجر الكبرى، وأخيراً تُعرض على ألواح الثلج وتُباع للمشترين)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          74,
+          75
         ]
       },
       {
@@ -4092,7 +4979,153 @@ window.CURRICULUM_DATA = [
             "page": 52,
             "heading": "AB 76-77 Unit 5 Lesson 6: Great inventions (صفحة 52)",
             "text": "John Baird (1888—1946):\nIn London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen. The pictures were not very good, and they did not move. In 1927, however, he was able to send moving pictures from London to Scotland using telephone wires. The following year (1928), he sent pictures to America using radio waves. Baird continued working and, finally, he helped to develop colour television.\n\nGuglielmo Marconi (1874—1937):\nAfter the invention of the telephone by Alexander Bell (1847—1922), inventors worked on radio waves instead of electric signals to carry sound. Marconi, an Italian, was the first to do this. In 1896, he sent a radio message over a distance of more than 1.5 kilometres. The following year (1897), he sent a message from land to a ship at sea, a distance of 29 kilometres. Finally, in 1902, he sent a radio message from America to England across the Atlantic Ocean.\n\nPast Active and Past Passive tenses:\n• Past Active: Marconi invented the radio. | Baird showed pictures on a television screen.\n• Past Passive: The radio was invented by Marconi. | Pictures were shown on a television screen by Baird.\nRule: Subject + was / were + Past Participle (+ by + agent)."
+          },
+          {
+            "id": 53901,
+            "page": 52,
+            "is_activity_book": true,
+            "activity_book_page": 76,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 76 و 77): اختراعات عظيمة والمبني للمجهول في الماضي والحلول النموذجية",
+            "text": "Unit 5 Lesson 6: Great Inventions & Past Passive (Activity Book pp. 76-77)\n\nExercise 1 (Page 76): Vocabulary definitions from the text:\na. the opposite of 'dead' -> alive\nb. verb from the noun 'invention' -> invent\nc. a large boat -> ship\nd. the next year -> the following year\ne. how far one place is from another -> distance\nf. Baird first used telephone wires to send pictures and then radio waves.\n\nExercise 2 (Page 76): True / False Statements:\na. John Baird died in 1888. -> F (He was born in 1888).\nb. Baird sent moving pictures to America in 1928. -> T.\nc. Marconi invented the telephone. -> F (Alexander Graham Bell invented the telephone).\nd. Marconi used radio waves to carry sound. -> T.\ne. In 1902, Marconi sent a radio message to America. -> T.\n\nExercise 3 (Page 76): Active & Past Passive Re-writing:\na. A radio wave was sent 29 kilometres from land to a ship in 1897 (by Marconi).\nb. Marconi sent a radio message from America to England in 1902.\nc. The first sound and moving pictures were sent by Baird in 1927.\nd. Baird showed the first pictures on a television screen in 1926.\n\nExercise 4 & 5 (Page 77): Inventions Timeline & Past Passive:\n1. canned food -> 1810\n2. washing machine -> 1901\n3. sticky notes -> 1980\n4. smartphone -> 2007\nSentences:\na. The first washing machine was used in 1901.\nb. The first food in cans was eaten in 1810.\nc. The first smartphone was sold in 2007.\nd. Sticky notes were invented in 1980.",
+            "exercises": [
+              {
+                "id": "u5_l6_ex1",
+                "num": "Exercise 1 (Page 76)",
+                "title": "Find the words in the text in your Student's Book.",
+                "title_ar": "استخرج الكلمات الدالة على التعاريف من نص كتاب الطالب:",
+                "questions": [
+                  {
+                    "q": "a. the opposite of 'dead'",
+                    "q_ar": "عكس كلمة 'ميت':",
+                    "a": "alive (حي / على قيد الحياة)"
+                  },
+                  {
+                    "q": "b. verb from the noun: 'invention'",
+                    "q_ar": "الفعل المشتق من الاسم 'اختراع':",
+                    "a": "invent (يخترع)"
+                  },
+                  {
+                    "q": "c. a large boat",
+                    "q_ar": "قارب كبير الحجم:",
+                    "a": "ship (سفينة)"
+                  },
+                  {
+                    "q": "d. the next year",
+                    "q_ar": "العام التالي / القادم:",
+                    "a": "the following year (العام الذي يليه)"
+                  },
+                  {
+                    "q": "e. how far one place is from another",
+                    "q_ar": "المسافة أو البعد بين مكان وآخر:",
+                    "a": "distance (المسافة)"
+                  },
+                  {
+                    "q": "f. Baird first used ________ to send pictures and then ________.",
+                    "q_ar": "استخدم بيرد أولاً أسلاك الهاتف لنقل الصور ثم الموجات اللاسلكية:",
+                    "a": "telephone wires ... radio waves (أسلاك الهاتف ... موجات الراديو اللاسلكية)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l6_ex2",
+                "num": "Exercise 2 (Page 76)",
+                "title": "Are the sentences true or false? Write T or F.",
+                "title_ar": "حدد صحة أو خطأ العبارات التالية عن بيرد وماركوني مع تصحيح الخطأ:",
+                "questions": [
+                  {
+                    "q": "a. John Baird died in 1888.",
+                    "q_ar": "توفي جون بيرد عام 1888:",
+                    "a": "F - False. (خطأ - ولد جون بيرد عام 1888 وتوفي عام 1946)."
+                  },
+                  {
+                    "q": "b. Baird sent moving pictures to America in 1928.",
+                    "q_ar": "أرسل بيرد صوراً متحركة إلى أمريكا عام 1928:",
+                    "a": "T - True. (صح - أرسل صوراً تلفزيونية عبر المحيط الأطلسي عام 1928)."
+                  },
+                  {
+                    "q": "c. Marconi invented the telephone.",
+                    "q_ar": "ماركوني هو من اخترع الهاتف:",
+                    "a": "F - False. (خطأ - مخترع الهاتف هو ألكسندر غراهام بيل، بينما اخترع ماركوني الراديو والموجات اللاسلكية)."
+                  },
+                  {
+                    "q": "d. Marconi used radio waves to carry sound.",
+                    "q_ar": "استخدم ماركوني موجات الراديو لنقل الصوت الإشاري:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "e. In 1902, Marconi sent a radio message to America.",
+                    "q_ar": "في عام 1902، أرسل ماركوني رسالة لاسلكية عبر الراديو إلى أمريكا:",
+                    "a": "T - True. (صح)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l6_ex3",
+                "num": "Exercise 3 (Page 76)",
+                "title": "Write the sentences again using the active or passive form.",
+                "title_ar": "أعد كتابة الجمل بالتحويل بين المبني للمعلوم والمبني للمجهول في زمن الماضي البسيط (was/were + P.P.):",
+                "questions": [
+                  {
+                    "q": "a. Marconi sent a radio wave 29 kilometres from land to a ship in 1897. -> (Passive)",
+                    "q_ar": "أرسل ماركوني موجة راديو لمسافة 29 كم من اليابسة إلى سفينة في 1897:",
+                    "a": "A radio wave was sent 29 kilometres from land to a ship in 1897 (by Marconi). (أُرسلت موجة راديو لمسافة 29 كم من اليابسة إلى سفينة في عام 1897)."
+                  },
+                  {
+                    "q": "b. A radio message was sent from America to England in 1902. -> (Active)",
+                    "q_ar": "أُرسلت رسالة راديو من أمريكا إلى إنجلترا عام 1902:",
+                    "a": "Marconi sent a radio message from America to England in 1902. (أرسل ماركوني رسالة راديو من أمريكا إلى إنجلترا عام 1902)."
+                  },
+                  {
+                    "q": "c. Baird sent the first sound and moving images in 1927. -> (Passive)",
+                    "q_ar": "أرسل بيرد أول صور وصوت متحرك عام 1927:",
+                    "a": "The first sound and moving pictures were sent by Baird in 1927. (أُرسلت أول صور متحركة وصوت من قبل بيرد عام 1927)."
+                  },
+                  {
+                    "q": "d. The first pictures were shown on a television screen in 1926. -> (Active)",
+                    "q_ar": "عُرضت أول صور على شاشة التلفاز عام 1926:",
+                    "a": "Baird showed the first pictures on a television screen in 1926. (عرض بيرد أول صور على شاشة التلفزيون عام 1926)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l6_ex4",
+                "num": "Exercise 4 & 5 (Page 77)",
+                "title": "Historical inventions timeline and Past Passive sentences.",
+                "title_ar": "الترتيب الزمني للاختراعات وتكوين جمل المبني للمجهول في الماضي:",
+                "questions": [
+                  {
+                    "q": "Match the inventions to the years (1810, 1901, 1980, 2007) and order them 1 to 4:",
+                    "q_ar": "طابق كل اختراع مع سنة ابتكاره ورتبها زمنياً من الأقدم للأحدث:",
+                    "a": "1. canned food (الطعام المعلب) -> 1810\n2. washing machine (الغسالة الكهربائية) -> 1901\n3. sticky notes (الملاحظات اللاصقة) -> 1980\n4. smartphone (الهاتف الذكي الحديث) -> 2007"
+                  },
+                  {
+                    "q": "a. The first washing machine ________ (use) in 1901.",
+                    "q_ar": "استُخدمت أول غسالة كهربائية عام 1901:",
+                    "a": "was used"
+                  },
+                  {
+                    "q": "b. The first food in cans ________ (eat) in 1810.",
+                    "q_ar": "أُكل أول طعام معلب عام 1810:",
+                    "a": "was eaten"
+                  },
+                  {
+                    "q": "c. The first smartphone ________ (sell) in 2007.",
+                    "q_ar": "بيع أول هاتف ذكي حديث عام 2007:",
+                    "a": "was sold"
+                  },
+                  {
+                    "q": "d. Sticky notes ________ (invent) in 1980.",
+                    "q_ar": "اُخترعت الملاحظات اللاصقة عام 1980:",
+                    "a": "were invented"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          76,
+          77
         ]
       },
       {
@@ -4105,7 +5138,133 @@ window.CURRICULUM_DATA = [
             "page": 53,
             "heading": "AB 78-79 Unit 5 Lesson 7: Telephones (صفحة 53)",
             "text": "Landline Phones:\nA landline phone sends and receives signals through a wire. The wire is called the landline. All landlines are connected, so you can phone people all over the world. Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable.\n\nMobile Phones:\nA mobile phone does not need a landline because it sends signals to a special mast, using radio waves. The mast sends the radio waves to another phone. There are mobile phone masts in most places, so mobile phones can be used almost anywhere. Many mobile phones can also be used to take photographs, play music and access the internet. These are called 'smartphones'.\n\nPresent Passive with Can:\n• Landline phones can only be used in one place.\n• Mobile phones can be used almost anywhere.\n• Mobile phones cannot be used without batteries.\nRule: Object + can / cannot + be + Past Participle."
+          },
+          {
+            "id": 54001,
+            "page": 53,
+            "is_activity_book": true,
+            "activity_book_page": 78,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 78 و 79): الهواتف وتطبيقاتها والمبني للمجهول مع Can be والحلول النموذجية",
+            "text": "Unit 5 Lesson 7: Telephones & Smart Apps (Activity Book pp. 78-79)\n\nExercise 1 (Page 78): Complete Layla's text message:\nWords: [buy, did, likes, message, one, very, wants, was wearing]\n'I had a text (a) [message] from Tamara yesterday. She asked 'Where (b) [did] you (c) [buy] the red dress you (d) [were wearing] last Tuesday?' She (e) [likes] it (f) [very] much, and she (g) [wants] to buy (h) [one].'\n\nExercise 2 (Page 78): True, False, Doesn't Say (DS):\n1. A landline sends and receives signals through radio waves. -> F (It uses wires).\n2. Smartphones can access the internet. -> T.\n3. Some mobile phones are waterproof. -> DS.\n4. Landline phones are often more reliable than mobile phones. -> T.\n5. Mobile phones can be used to phone people all over the world. -> T.\n6. Landline phones can be used to take photographs. -> F.\n\nExercise 3 (Page 79): Match adverts to passive modal features (can be + P.P.):\n1. Heart rate -> f. Your heart rate can be measured.\n2. Time on phone -> a. The time you spend on your phone can be controlled.\n3. Step counter -> d. Your steps can be counted.\n4. Share food -> c. Food can be shared.\n5. Find phone -> e. Your phone can be found.\n6. Sunrise alarm -> b. You can be woken gently.\n\nExercise 4 (Page 79): Smart home app features:\nThis app can be used to control the lights in your house. The TV can be turned on and off automatically. Visitors at the door can be seen on your phone, and music can be turned up or down from anywhere.",
+            "exercises": [
+              {
+                "id": "u5_l7_ex1",
+                "num": "Exercise 1 (Page 78)",
+                "title": "Layla's mobile phone is not working properly. Complete the message. Use the words from the box.",
+                "title_ar": "أكمل رسالة ليلى النصية بالكلمات المناسبة من الصندوق:",
+                "words_box": [
+                  "buy",
+                  "did",
+                  "likes",
+                  "message",
+                  "one",
+                  "very",
+                  "wants",
+                  "was wearing"
+                ],
+                "questions": [
+                  {
+                    "q": "Complete the missing words in Layla's message (a to h):",
+                    "q_ar": "النص الكامل لرسالة ليلى بعد ملء الفراغات:",
+                    "a": "I had a text (a) [message] from Tamara yesterday. She asked 'Where (b) [did] you (c) [buy] the red dress you (d) [were wearing] last Tuesday?' She (e) [likes] it (f) [very] much, and she (g) [wants] to buy (h) [one].\n\n(تلقيت رسالة نصية من تمارا أمس. سألتني: من أين اشتريتِ الفستان الأحمر الذي كنتِ ترتدينه يوم الثلاثاء الماضي؟ لقد أعجبها كثيراً وتريد شراء واحد مثله)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l7_ex2",
+                "num": "Exercise 2 (Page 78)",
+                "title": "Read the statements below and write T for true, F for false or DS if the texts don't say.",
+                "title_ar": "اقرأ العبارات عن الهواتف وصنفها (صح T، خطأ F، أو لم يُذكر في النص DS):",
+                "questions": [
+                  {
+                    "q": "1. A landline sends and receives signals through radio waves.",
+                    "q_ar": "الهاتف الأرضي يرسل ويستقبل الإشارات عبر موجات الراديو:",
+                    "a": "F - False. (خطأ - يرسل الإشارات عبر سلك أرضي wire)."
+                  },
+                  {
+                    "q": "2. Smartphones can access the internet.",
+                    "q_ar": "الهواتف الذكية تستطيع الاتصال بشبكة الإنترنت وتصفحها:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "3. Some mobile phones are waterproof.",
+                    "q_ar": "بعض الهواتف المحمولة مقاومة للماء:",
+                    "a": "DS - Doesn't Say. (لم يرد ذكره في النص المنهجي)."
+                  },
+                  {
+                    "q": "4. Landline phones are often more reliable than mobile phones.",
+                    "q_ar": "الهواتف الأرضية غالباً ما تكون أكثر اعتمادية وثباتاً من الهواتف المحمولة:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "5. Mobile phones can be used to phone people all over the world.",
+                    "q_ar": "الهواتف المحمولة يمكن استخدامها للاتصال بالناس في جميع أنحاء العالم:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "6. Landline phones can be used to take photographs.",
+                    "q_ar": "الهواتف الأرضية يمكن استخدامها لالتقاط الصور الفوتوغرافية:",
+                    "a": "F - False. (خطأ - الهواتف الذكية فقط مزودة بكاميرات تصوير)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l7_ex3",
+                "num": "Exercise 3 (Page 79)",
+                "title": "Now read what the apps can do. Match the app features (a—f) to the adverts (1—6).",
+                "title_ar": "طابق إعلانات التطبيقات الذكية مع جمل المبني للمجهول بصيغة (can be + P.P.):",
+                "questions": [
+                  {
+                    "q": "1. Check your heart rate with this app.",
+                    "q_ar": "افحص نبضات قلبك بهذا التطبيق:",
+                    "a": "f. Your heart rate can be measured. (يمكن قياس نبضات قلبك)."
+                  },
+                  {
+                    "q": "2. Don't spend all day on your phone.",
+                    "q_ar": "لا تقضِ كل يومك ممسكاً بهاتفك:",
+                    "a": "a. The time you spend on your phone can be controlled. (يمكن التحكم في الوقت الذي تقضيه على هاتفك)."
+                  },
+                  {
+                    "q": "3. Are you doing enough exercise? Use this app to count your steps.",
+                    "q_ar": "هل تمارس تمارين كافية؟ استخدم هذا التطبيق لعد خطواتك:",
+                    "a": "d. Your steps can be counted. (يمكن عد وإحصاء خطواتك اليومية)."
+                  },
+                  {
+                    "q": "4. Too much food? Share it around.",
+                    "q_ar": "طعام فائض؟ شاركه مع المحتاجين:",
+                    "a": "c. Food can be shared. (يمكن مشاركة الطعام الفائض)."
+                  },
+                  {
+                    "q": "5. Where's my phone? Let this app help you.",
+                    "q_ar": "أين هاتفي؟ دع هذا التطبيق يساعدك في إيجاده:",
+                    "a": "e. Your phone can be found. (يمكن العثور على هاتفك المفقود)."
+                  },
+                  {
+                    "q": "6. The light on your phone slowly gets brighter.",
+                    "q_ar": "ضوء هاتفك يزداد سطوعاً بالتدريج لإيقاظك بهدوء:",
+                    "a": "b. You can be woken gently. (يمكن إيقاظك من النوم بلطف وهدوء)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l7_ex4",
+                "num": "Exercise 4 (Page 79)",
+                "title": "Write about what the smart home app can do using passive forms.",
+                "title_ar": "اكتب وصفاً لما يستطيع تطبيق المنزل الذكي القيام به باستخدام صيغة المبني للمجهول:",
+                "questions": [
+                  {
+                    "q": "Complete the description: 'This app can be used to...'",
+                    "q_ar": "صياغة فقرة متكاملة بالمبني للمجهول عن التطبيق الذكي:",
+                    "a": "This app can be used to control the lights in your house. The TV can be turned on and off automatically. Visitors at the door can be seen on your phone screen, and the music volume can be turned up or down from anywhere. (يمكن استخدام هذا التطبيق للتحكم بإضاءة منزلك، وتشغيل وإطفاء التلفاز تلقائياً، ورؤية من يقف على باب المنزل عبر الشاشة، والتحكم بمستوى صوت الموسيقى من أي مكان)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          78,
+          79
         ]
       },
       {
@@ -4118,7 +5277,110 @@ window.CURRICULUM_DATA = [
             "page": 54,
             "heading": "Unit 5 Lesson 8: Making telephone calls (صفحة 54)",
             "text": "Advice for making an important phone call (SPEAK UP! by Susan Ayad, Grade 8):\n1. DO introduce yourself immediately. Always say who you are ('Anas Abdullah here' / 'Anas speaking'). DON'T wait for the other person to ask who you are; that is not polite.\n2. DO say why you are calling clearly ('I'm calling about tomorrow's appointment'). DON'T start before the other person knows what your call is about.\n3. DO think about what you want to say before you make the call. DON'T waste time trying to think of things as you speak.\n4. DO speak slowly and clearly. Remember that the other person can't see your face or gestures. DON'T speak too fast even if you are nervous.\n\nUseful Phrases on the Phone:\n• What you say: 'Anas Abdullah here.' | 'I\\'d like to make an appointment, please.' | 'Could I speak to Dr Salim, please?'\n• What you hear: 'Hold on a moment, please.' | 'I\\'m sorry, could you repeat that, please?' | 'Can you spell your name, please?' | 'Can I take a message?'"
+          },
+          {
+            "id": 54101,
+            "page": 54,
+            "is_activity_book": true,
+            "activity_book_page": 80,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 80 و 81): آداب وإجراء المكالمات الهاتفية وتدوين الرسائل والحلول النموذجية",
+            "text": "Unit 5 Lesson 8: Making Telephone Calls (Activity Book pp. 80-81)\n\nExercise 1 (Page 80): Anas making an appointment notes:\na. What is Anas' family name? -> Al-Hassan / Al-Najjar.\nb. What does he want to do? -> Make an appointment to see the doctor.\nc. What is wrong with him? -> He has a severe stomach ache and fever.\nd. How long has he been ill? -> Since yesterday evening.\ne. When will he see the doctor? -> At four o'clock this afternoon.\n\nExercise 2 (Page 80): Polite responses to receptionist:\na. 'Who's speaking, please?' -> 'My name is Anas Al-Hassan.'\nb. 'Could you spell that, please?' -> 'A - N - A - S, and A - L - H - A - S - S - A - N.'\nc. 'Are you registered at the medical centre?' -> 'Yes, I am. My date of birth is 12th March 2011.'\nd. 'What's the problem?' -> 'I have a severe stomach ache and a fever.'\ne. 'How long has your stomach been hurting?' -> 'It has been hurting since yesterday evening.'\nf. 'When can you come to see the doctor?' -> 'I can come at four o'clock this afternoon, please.'\n\nExercise 3 (Page 81): Phone dialogue simulations (Shopping, Homework):\n• Topic A (Calling about a T-shirt in a shop):\n  Customer: Hello, could I speak to the clothing department, please? Do you still have the blue T-shirt in size medium?\n  Assistant: Yes, we have two left. It costs 25,000 Dinars. Would you like me to hold one for you?\n• Topic D (Calling about missed English homework):\n  Ali: Hi Tariq! Could you tell me if there is any English homework for tomorrow?\n  Tariq: Yes, we have to do page 72 exercises 1 and 2 in the Activity Book about the Present Passive!",
+            "exercises": [
+              {
+                "id": "u5_l8_ex1",
+                "num": "Exercise 1 (Page 80)",
+                "title": "Listen to Anas making an appointment. This time, he is following Susan's advice. Write notes.",
+                "title_ar": "استمع لأنس أثناء حجزه موعداً لدى الطبيب ودون الملاحظات بدقة:",
+                "questions": [
+                  {
+                    "q": "a. What is Anas' family name?",
+                    "q_ar": "ما هو اسم عائلة (لقب) أنس؟",
+                    "a": "Al-Hassan / Al-Najjar (الحسن / النجار)."
+                  },
+                  {
+                    "q": "b. What does he want to do?",
+                    "q_ar": "ماذا يريد أن يفعل من خلال اتصاله؟",
+                    "a": "He wants to make an appointment to see the doctor. (يريد حجز موعد لمقابلة الطبيب)."
+                  },
+                  {
+                    "q": "c. What is wrong with him?",
+                    "q_ar": "ما هي الشكوى الصحية التي يعاني منها؟",
+                    "a": "He has a severe stomach ache and feels sick. (يعاني من مغص وألم حاد في المعدة وشعور بالغثيان)."
+                  },
+                  {
+                    "q": "d. How long has he been ill?",
+                    "q_ar": "منذ متى وهو مريض؟",
+                    "a": "Since yesterday evening / for two days. (منذ مساء أمس)."
+                  },
+                  {
+                    "q": "e. When will he see the doctor?",
+                    "q_ar": "متى سيكون موعده مع الطبيب؟",
+                    "a": "At four o'clock this afternoon. (عند الساعة الرابعة بعد ظهر اليوم)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l8_ex2",
+                "num": "Exercise 2 (Page 80)",
+                "title": "Read the receptionist's questions. Write possible answers.",
+                "title_ar": "اكتب إجابات نموذجية مهذبة لأسئلة موظف الاستقبال في المركز الصحي:",
+                "questions": [
+                  {
+                    "q": "a. Receptionist: 'Who's speaking, please?'",
+                    "q_ar": "موظف الاستقبال: من المتحدث من فضلك؟",
+                    "a": "'My name is Anas Al-Hassan.' (اسمي أنس الحسن)."
+                  },
+                  {
+                    "q": "b. Receptionist: 'Could you spell that, please?'",
+                    "q_ar": "هل يمكنك تهجئة الاسم من فضلك؟",
+                    "a": "'Yes, of course. A - N - A - S, and A - L - H - A - S - S - A - N.' (نعم بالطبع: أ - ن - س ، ا - ل - ح - س - ن)."
+                  },
+                  {
+                    "q": "c. Receptionist: 'Are you registered at the medical centre?'",
+                    "q_ar": "هل أنت مسجل مسبقاً في المركز الطبي؟",
+                    "a": "'Yes, I am. My date of birth is the 12th of March 2011.' (نعم مسجل، وتاريخ ميلادي 12 مارس 2011)."
+                  },
+                  {
+                    "q": "d. Receptionist: 'What's the problem?'",
+                    "q_ar": "ما هي مشكلتك الصحية؟",
+                    "a": "'I have a terrible stomach ache and I can't eat anything.' (أعاني من ألم شديد في بطني ولا أستطيع تناول أي طعام)."
+                  },
+                  {
+                    "q": "e. Receptionist: 'How long has your stomach been hurting?'",
+                    "q_ar": "منذ متى تؤلمك معدتك؟",
+                    "a": "'It has been hurting since yesterday evening.' (تؤلمني منذ مساء يوم أمس)."
+                  },
+                  {
+                    "q": "f. Receptionist: 'When can you come to see the doctor?'",
+                    "q_ar": "متى يمكنك الحضور لمقابلة الطبيب؟",
+                    "a": "'I can come at four o'clock this afternoon, please.' (أستطيع الحضور عند الساعة الرابعة عصراً من فضلك)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l8_ex3",
+                "num": "Exercise 3 (Page 81)",
+                "title": "Simulated Telephone Conversations following etiquette tips.",
+                "title_ar": "نماذج حوارات هاتفية متكاملة وفق قواعد وآداب الاتصال المنهجية لمختلف المواقف:",
+                "questions": [
+                  {
+                    "q": "Topic A: Calling a clothing shop about a dress/T-shirt:",
+                    "q_ar": "محادثة هاتفية للاستفسار عن قميص في متجر ملابس:",
+                    "a": "Customer: Hello. Could I speak to someone in the menswear department, please?\nAssistant: Speaking, how can I help you?\nCustomer: I saw a blue polo T-shirt in your shop window yesterday. Do you still have size medium?\nAssistant: Yes, we still have two in stock. It costs 25,000 Iraqi Dinars.\nCustomer: Wonderful! Could you please hold one for me? I'll come by at five.\nAssistant: Certainly. What is your name, please?\nCustomer: Zaid Kareem. Thank you very much for your help!"
+                  },
+                  {
+                    "q": "Topic D: Calling a classmate to ask about missed English homework:",
+                    "q_ar": "محادثة هاتفية بين زميلين للسؤال عن واجب اللغة الإنجليزية الفائت:",
+                    "a": "Ali: Hello Tariq, it's Ali speaking.\nTariq: Hi Ali! We missed you at school today. Are you feeling better?\nAli: Yes, much better, thanks. Could you tell me if we have any English homework for tomorrow?\nTariq: Yes, we have to do Exercises 1 and 2 on page 72 of the Activity Book about the Present Passive.\nAli: Great! Did the teacher set a date for the test?\nTariq: Yes, the monthly test will be next Monday.\nAli: Thanks a lot for the notes, Tariq. See you tomorrow!"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          80,
+          81
         ]
       },
       {
@@ -4131,7 +5393,157 @@ window.CURRICULUM_DATA = [
             "page": 55,
             "heading": "AB 82 Unit 5 Round up (صفحة 55)",
             "text": "In Unit 5, you have practised:\n1. Using abbreviations in a dictionary entry: (n.) noun, (v.) verb, (adj.) adjective, (adv.) adverb, (prep.) preposition, (conj.) conjunction, (pron.) pronoun.\n2. Forming and using the Passive Voice:\n• Present Passive (is / are + p.p.): The article is written in Cairo. It is edited in Baghdad. Then it is printed in newspapers the same night. They are sold in shops the next day.\n• Past Passive (was / were + p.p.): Radio was invented by Marconi. Pictures were shown on a television screen by Baird.\n• Passive with Can (can + be + p.p.): Mobile phones can be used almost anywhere. In remote places, landlines and mobiles cannot be used.\n3. Making telephone calls properly: Introduce yourself, state the purpose of the call, speak slowly and clearly, and use polite request formulas.\n4. Working out meanings without a dictionary using context clues."
+          },
+          {
+            "id": 54201,
+            "page": 55,
+            "is_activity_book": true,
+            "activity_book_page": 82,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 82): المراجعة الشاملة للوحدة الخامسة وقواعد المجهول والإملاء والحلول النموذجية",
+            "text": "Unit 5 Lesson 9: Unit 5 Round Up (Activity Book p. 82)\n\nExercise 1 (Page 82): Fill in missing letters (Spelling):\na. message (ss)\nb. passive (ss)\nc. possible (ss)\nd. satellite (ll)\ne. traveller (ll)\nf. screen (ee)\n\nExercise 2 (Page 82): Definitions:\na. library (مكتبة)\nb. bank (مصرف / بنك)\nc. dictionary (قاموس / معجم)\nd. newspaper (جريدة / صحيفة)\n\nExercise 3 (Page 82): Re-ordering text message lines:\nOrder: (e) -> (c) -> (a) -> (d) -> (b)\n'Jassim says he can't come to team practice on Wednesdays because he works in his father's shop then. If we can practise on Thursdays, he will be able to come.'\n\nExercise 4 (Page 82): Complete passive sentences:\na. Assur was built over 4,000 years ago.\nb. My bike was stolen last week.\nc. Plastic bottles and coffee cups can be recycled to make new football shirts.\nd. Kofta kebabs are made from lamb, chicken or vegetables.\ne. The car was fixed last week, but now it's broken down again.\nf. A lot of time is wasted looking at social media sites.\ng. The lion that escaped from the zoo was caught two days later.\nh. Around 80 million bikes are made in China every year.\ni. Mobile phones can be dropped in water, but it's not a good idea!\nj. Around five million electric cars were sold in 2021.",
+            "exercises": [
+              {
+                "id": "u5_l9_ex1",
+                "num": "Exercise 1 (Page 82)",
+                "title": "Fill in the missing letters.",
+                "title_ar": "الإملاء: أكمل الحروف المزدوجة الناقصة في الكلمات التالية:",
+                "questions": [
+                  {
+                    "q": "a. me _ _ age",
+                    "q_ar": "رسالة:",
+                    "a": "message (الحرفان الناقصان: ss)"
+                  },
+                  {
+                    "q": "b. pa _ _ ive",
+                    "q_ar": "المبني للمجهول:",
+                    "a": "passive (الحرفان الناقصان: ss)"
+                  },
+                  {
+                    "q": "c. po _ _ ible",
+                    "q_ar": "ممكن:",
+                    "a": "possible (الحرفان الناقصان: ss)"
+                  },
+                  {
+                    "q": "d. sate _ _ ite",
+                    "q_ar": "قمر صناعي:",
+                    "a": "satellite (الحرفان الناقصان: ll)"
+                  },
+                  {
+                    "q": "e. trave _ _ er",
+                    "q_ar": "مسافر:",
+                    "a": "traveller (الحرفان الناقصان: ll)"
+                  },
+                  {
+                    "q": "f. scr _ _ n",
+                    "q_ar": "شاشة:",
+                    "a": "screen (الحرفان الناقصان: ee)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l9_ex2",
+                "num": "Exercise 2 (Page 82)",
+                "title": "Read the definitions and write the words.",
+                "title_ar": "اقرأ التعاريف واكتب الكلمة المناسبة لكل منها:",
+                "questions": [
+                  {
+                    "q": "a. a building that has many hundreds of books",
+                    "q_ar": "مبنى يضم مئات وآلاف الكتب:",
+                    "a": "library (المكتبة)"
+                  },
+                  {
+                    "q": "b. a building where you can keep money",
+                    "q_ar": "مبنى يمكنك حفظ وإيداع أموالك فيه بأمان:",
+                    "a": "bank (المصرف / البنك)"
+                  },
+                  {
+                    "q": "c. a book that gives you the meanings of words",
+                    "q_ar": "كتاب يعطيك معاني الكلمات وطريقة تهجئتها:",
+                    "a": "dictionary (القاموس / المعجم)"
+                  },
+                  {
+                    "q": "d. something to read that you can buy every day",
+                    "q_ar": "مطبوعة تقرأها ويمكنك شراؤها يومياً:",
+                    "a": "newspaper (الجريدة / الصحيفة)"
+                  }
+                ]
+              },
+              {
+                "id": "u5_l9_ex3",
+                "num": "Exercise 3 (Page 82)",
+                "title": "Put the lines of the text message in the correct order.",
+                "title_ar": "رتب أسطر الرسالة النصية غير المرتبة لتكوين رسالة صحيحة ومتماسكة:",
+                "questions": [
+                  {
+                    "q": "Scrambled lines: (a) works in his father's shop then. If / (b) will be able to come. / (c) practice on Wednesdays because he / (d) we can practise on Thursdays, he / (e) Jassim says he can't come to team",
+                    "q_ar": "الترتيب المنطقي للأسطر مع نص الرسالة الكامل:",
+                    "a": "Correct order: (e) -> (c) -> (a) -> (d) -> (b)\n\nFull Message:\n'Jassim says he can't come to team practice on Wednesdays because he works in his father's shop then. If we can practise on Thursdays, he will be able to come.'\n\n(يقول جاسم إنه لا يستطيع الحضور لتدريب الفريق أيام الأربعاء لأنه يعمل في متجر والده حينها. أما إذا استطعنا التدرب أيام الخميس، فسيكون بمقدوره الحضور)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l9_ex4",
+                "num": "Exercise 4 (Page 82)",
+                "title": "Complete the sentences using the correct passive form of the verbs in brackets.",
+                "title_ar": "أكمل الجمل بصيغة المبني للمجهول الصحيحة (مضارع بسيط، ماضٍ بسيط، أو مع Modal can):",
+                "questions": [
+                  {
+                    "q": "a. Assur ________ (build) over 4,000 years ago.",
+                    "q_ar": "بُنيت مدينة آشور التاريخية قبل أكثر من 4000 عام:",
+                    "a": "was built (ماضٍ مفرد)"
+                  },
+                  {
+                    "q": "b. My bike ________ (steal) last week.",
+                    "q_ar": "سُرقت دراجتي الأسبوع الماضي:",
+                    "a": "was stolen (ماضٍ مفرد)"
+                  },
+                  {
+                    "q": "c. Plastic bottles and coffee cups can ________ (recycle) to make new football shirts.",
+                    "q_ar": "القناني البلاستيكية وأكواب القهوة يمكن إعادة تدويرها لصنع قمصان كرة القدم:",
+                    "a": "be recycled (can + be + P.P.)"
+                  },
+                  {
+                    "q": "d. Kofta kebabs ________ (make) from lamb, chicken or vegetables.",
+                    "q_ar": "تُصنع كباب الكفتة من لحم الضأن أو الدجاج أو الخضار:",
+                    "a": "are made (مضارع جمع)"
+                  },
+                  {
+                    "q": "e. The car ________ (fix) last week, but now it's broken down again.",
+                    "q_ar": "أُصلحت السيارة الأسبوع الماضي، لكنها تعطلت مجدداً الآن:",
+                    "a": "was fixed (ماضٍ مفرد)"
+                  },
+                  {
+                    "q": "f. A lot of time ________ (waste) looking at social media sites.",
+                    "q_ar": "يُهدَر الكثير من الوقت في تصفح مواقع التواصل الاجتماعي:",
+                    "a": "is wasted (مضارع غير معدود مفرد)"
+                  },
+                  {
+                    "q": "g. The lion that escaped from the zoo ________ (catch) two days later.",
+                    "q_ar": "أُمسك بالأسد الذي هرب من حديقة الحيوان بعد يومين:",
+                    "a": "was caught (ماضٍ مفرد)"
+                  },
+                  {
+                    "q": "h. Around 80 million bikes ________ (make) in China every year.",
+                    "q_ar": "يُصنَع قرابة 80 مليون دراجة هوائية في الصين سنوياً:",
+                    "a": "are made (مضارع جمع حقائق متكررة)"
+                  },
+                  {
+                    "q": "i. Mobile phones can ________ (drop) in water, but it's not a good idea!",
+                    "q_ar": "الهواتف المحمولة يمكن أن تسقط في الماء، لكنها فكرة سيئة:",
+                    "a": "be dropped (can + be + P.P.)"
+                  },
+                  {
+                    "q": "j. Around five million electric cars ________ (sell) in 2021.",
+                    "q_ar": "بيع قرابة 5 ملايين سيارة كهربائية عام 2021:",
+                    "a": "were sold (ماضٍ جمع)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          82
         ]
       },
       {
@@ -4150,7 +5562,101 @@ window.CURRICULUM_DATA = [
             "page": 57,
             "heading": "Story time: Jad and Johnny - The gondola trip (Part 2 - صفحة 57)",
             "text": "But he was too late. Our boat bumped into another gondola, and Marcus fell. Luckily, Jad and Aziz caught him before he fell in the water.\n'Thanks, guys,' he said, 'but, where's my phone? Oh, no!' We all looked and saw his phone sinking into the water.\n'Can we go for a pizza now?' said Jad.\n'I think I need to go to a phone shop,' said Marcus.\nWe got out of the gondola and looked for a pizza restaurant, but none of them had a table for five people. 'There are a lot of people in Venice,' I said. 'Yes,' said Paolo. 'And they're all tourists, looking for pizza!'\nWe walked for half an hour, but we only found restaurants with tables for two people. 'I'm sorry, Jad,' said Paolo. 'No pizza for us tonight ... Jad?' But Jad had disappeared into the crowd. We couldn't see him anywhere. I took out my phone and dialled his number, but there was no answer. Then we noticed Marcus had disappeared, too. We were worried. We looked everywhere for Jad and Marcus. Then, after 20 minutes, we saw them — in a pizza restaurant!\n'Hey!' I said. 'What happened?'\n'I'm sorry,' answered Jad with his mouth full of pizza. 'I couldn't wait any longer.'\n'You guys got a pizza without us!' said Paolo.\n'And I got a new phone,' said Marcus.\nThen the people at the next table stood up and left. Paolo, Aziz and I quickly sat down.\n'Oh great,' said Jad. 'Now you can order some more pizza.'\n'No, Jad,' I said. I took his plate and put it on our table. Paolo and Aziz both picked up slices. 'Now you can order some more pizza!'"
+          },
+          {
+            "id": 54301,
+            "page": 56,
+            "is_activity_book": true,
+            "activity_book_page": 83,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 83): وقت القصة (رحلة الجندول في البندقية) والحلول النموذجية المعتمدة",
+            "text": "Unit 5 Lesson 10: Story Time - The Gondola Trip (Activity Book p. 83)\n\nExercise 1 (Page 83): Story Analysis Card:\na. Title: Jad and Johnny - The gondola trip\nb. Characters: Jad, Johnny, Paolo, Aziz, Marcus, the gondolier\nc. What it is about: The boys visit Venice, where cars are banned. They take a gondola ride along the canal. While Marcus stands up to take a selfie and call his father, the boat bumps and his phone falls into the water! Afterwards, they search for pizza and find Jad and Marcus already enjoying a big pizza in a restaurant.\nd. Why I liked it: It was exciting, humorous, and full of lively dialogue. It also taught us about Venice's canals, vaporetti, and traditional gondolas.\ne. New words: gondola, canal, vaporetti, banned, steer, bump into, selfie, crowd.\n\nExercise 2 (Page 83): Comprehension Questions:\na. What's the first thing Jad wants to do? -> Eat Italian pizza / gelato.\nb. Why is Paolo happy to be back in Venice? -> Because Italy is his home country and he loves Venice.\nc. Why are there so many people in Venice? -> Because they are tourists from all around the world visiting the sights.\nd. Why can't the friends take a bus tour? -> Because cars and buses are banned in Venice; there are only canals and waterways!\ne. Why doesn't Marcus fall in the water? -> Because Jad and Aziz caught him quickly before he fell in.\nf. What happened to Marcus' phone? -> It slipped from his hand and fell into the canal water!\ng. Where do Jad and Marcus go? -> To a phone shop to buy a new phone, and then to a pizza restaurant.\nh. How does Jad feel at the end of the story? -> Relieved, full, and very happy after eating his pizza!",
+            "exercises": [
+              {
+                "id": "u5_l10_ex1",
+                "num": "Exercise 1 (Page 83)",
+                "title": "Story Analysis Card: Jad and Johnny - The gondola trip.",
+                "title_ar": "بطاقة تحليل القصة الاستيعابية الشاملة:",
+                "questions": [
+                  {
+                    "q": "a. Title (عنوان القصة):",
+                    "q_ar": "اكتب عنوان القصة:",
+                    "a": "Jad and Johnny - The gondola trip (جاد وجوني - رحلة الجندول)."
+                  },
+                  {
+                    "q": "b. Characters (الشخصيات):",
+                    "q_ar": "شخصيات القصة الواردة:",
+                    "a": "Jad, Johnny, Paolo, Aziz, Marcus, the gondolier (جاد، جوني، باولو، عزيز، ماركوس، سائق الجندول)."
+                  },
+                  {
+                    "q": "c. What it is about (موضوع القصة ومحور الأحداث):",
+                    "q_ar": "عن ماذا تدور القصة باختصار؟",
+                    "a": "The friends visit Venice, where cars are banned. They take a gondola ride along the canal. While Marcus stands up to take a selfie and call his father, the boat bumps and his phone falls into the water! Afterwards, they search for pizza and find Jad and Marcus already enjoying a big pizza in a restaurant.\n(تدور القصة حول زيارة الأصدقاء لمدينة البندقية المائية، وركوبهم قارب الجندول التقليدي، وسقوط هاتف ماركوس في القناة المائية أثناء تصويره سيلفي لمحادثة والده، ومغامرتهم في البحث عن مطعم بيتزا)."
+                  },
+                  {
+                    "q": "d. Why I liked / didn't like the story (رأيي الشخصي في القصة):",
+                    "q_ar": "لماذا أعجبتك القصة؟",
+                    "a": "I loved the story because it was entertaining and funny, especially when Marcus lost his phone and Jad cared only about eating pizza! It also taught us about Venice's canals and traditional transport.\n(أحببت القصة لأنها مسلية ومرحة جداً، خاصة انشغال جاد بالطعام وفقدان ماركوس لهاتفه، كما عرفتنا بمعالم مدينة البندقية الإيطالية)."
+                  },
+                  {
+                    "q": "e. New words (أهم المفردات الجديدة):",
+                    "q_ar": "مفردات القصة الجديدة ومعانيها:",
+                    "a": "gondola (قارب جندول)، canal (قناة مائية)، vaporetti (حافلات مائية)، banned (ممنوعة/محظورة)، steer (يوجّه/يقود)، bump into (يصطدم بـ)، selfie (صورة شخصية)، crowd (حشد من الناس)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l10_ex2",
+                "num": "Exercise 2 (Page 83)",
+                "title": "Comprehension Questions: Read the story and answer.",
+                "title_ar": "أسئلة الاستيعاب الدقيقة حول أحداث قصة رحلة الجندول في البندقية:",
+                "questions": [
+                  {
+                    "q": "a. What's the first thing Jad wants to do?",
+                    "q_ar": "ما هو أول شيء يرغب جاد بفعله عند وصولهم؟",
+                    "a": "He wants to eat Italian pizza / gelato. (يريد تناول البيتزا الإيطالية اللذيذة)."
+                  },
+                  {
+                    "q": "b. Why is Paolo happy to be back in Venice?",
+                    "q_ar": "لماذا يشعر باولو بالسعادة لعودته إلى البندقية؟",
+                    "a": "Because Italy is his home country and he loves Venice. (لأن إيطاليا هي وطنه الأم وهو يعشق معالم البندقية)."
+                  },
+                  {
+                    "q": "c. Why are there so many people in Venice?",
+                    "q_ar": "لماذا يوجد هذا العدد الهائل من الناس في البندقية؟",
+                    "a": "Because they are tourists from all around the world visiting the famous sights and looking for restaurants. (لأنهم سياح قادمون من جميع أنحاء العالم لزيارة معالمها الشهيرة وتناول أطعمتها)."
+                  },
+                  {
+                    "q": "d. Why can't the friends take a bus tour?",
+                    "q_ar": "لماذا لا يستطيع الأصدقاء القيام بجولة في حافلة سياحية؟",
+                    "a": "Because cars and buses are banned in Venice; there are no roads, only canals and waterways! (لأن السيارات والحافلات ممنوعة ومحظورة في البندقية، فلا توجد شوارع مسفلتة بل قنوات مائية وممرات للمشاة)."
+                  },
+                  {
+                    "q": "e. Why doesn't Marcus fall in the water?",
+                    "q_ar": "لماذا لم يسقط ماركوس في مياه القناة عندما تعثر؟",
+                    "a": "Because Jad and Aziz caught him quickly by his jacket before he fell in. (لأن جاد وعزيز أمسكاه بسرعة من سترته قبل أن يهوي في الماء)."
+                  },
+                  {
+                    "q": "f. What happened to Marcus' phone?",
+                    "q_ar": "ماذا حدث لهاتف ماركوس الذكي؟",
+                    "a": "It slipped from his hand and sank to the bottom of the canal. (انزلق من يده وغرق في قاع القناة المائية)."
+                  },
+                  {
+                    "q": "g. Where do Jad and Marcus go after getting off the gondola?",
+                    "q_ar": "إلى أين ذهب جاد وماركوس بعد نزولهم من القارب؟",
+                    "a": "They went to a phone shop to buy a new phone for Marcus, and then to a pizza restaurant. (ذهبا إلى متجر هواتف لشراء هاتف بديل لماركوس، ثم إلى مطعم بيتزا)."
+                  },
+                  {
+                    "q": "h. How does Jad feel at the end of the story?",
+                    "q_ar": "بماذا يشعر جاد في نهاية القصة؟",
+                    "a": "He feels full and happy because he finally got his favourite pizza, and he teases Johnny to order more! (يشعر بالشبع والسعادة لأنه تناول البيتزا المفضلة لديه ومازح جوني لطلب المزيد)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          83
         ]
       },
       {
@@ -4169,7 +5675,71 @@ window.CURRICULUM_DATA = [
             "page": 59,
             "heading": "Project 3: A chat forum (Part 2 - صفحة 59)",
             "text": "Writing a For-and-Against Essay for the school magazine:\nStructure of the essay (4 Paragraphs):\n1. In the first paragraph, introduce the topic clearly.\n2. In the second paragraph, present the arguments FOR the topic (e.g. money buys good healthcare, education, comfortable living, and travel).\n3. In the third paragraph, present the arguments AGAINST the topic (e.g. money cannot buy true friends, family love, genuine health, or inner peace).\n4. In the fourth paragraph, summarize both sides and state your personal conclusion and balanced opinion."
+          },
+          {
+            "id": 54501,
+            "page": 58,
+            "is_activity_book": true,
+            "activity_book_page": 124,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 124): الأنشطة الإضافية وكتابة البريد الإلكتروني لصديق المراسلة والحلول النموذجية",
+            "text": "Unit 5 Extra Activities: Listening & Penfriend Email to Germany (Activity Book p. 124)\n\nExercise 1 (Page 124): Listening True / False (Noora and Zeena):\na. Noora is going to a restaurant. -> F (She is going to an internet café).\nb. She wants to browse the internet. -> T.\nc. A telephone call is cheaper than an email. -> F (Emails are cheaper and faster).\nd. Noora has a penfriend in Germany. -> T (Her name is Helga).\ne. Noora will meet Helga in the holiday. -> T.\nf. Noora and Helga have met before. -> F (They have only exchanged letters/emails).\n\nExercise 2 (Page 124): Writing an Email to a Penfriend (Noora to Helga):\nSubject: Exciting news! My trip to Germany\n\nDear Helga,\nI hope you are doing well and having a wonderful week! I have fantastic news that I can't wait to share with you. My family and I are finally coming to visit Germany next month during the summer holiday!\nWe will arrive in Munich on the 10th of July, and we are planning to stay for two weeks. We will spend five days in Munich and then travel to Berlin. I would be thrilled if we could meet up in person! I really want us to visit the famous museums together, walk in the beautiful city parks, and try traditional German food.\nI am so excited because we have been penfriends for more than a year, and now we will finally meet face-to-face. Please write back soon and let me know if those dates suit you.\nBest wishes,\nNoora",
+            "exercises": [
+              {
+                "id": "u5_l11_ex1",
+                "num": "Exercise 1 (Page 124)",
+                "title": "Read the sentences. Then listen to Noora and Zeena and write T for true and F for false.",
+                "title_ar": "استمع إلى محادثة نورة وزينة وحدد صحة أو خطأ العبارات التالية مع تصحيح الخطأ:",
+                "questions": [
+                  {
+                    "q": "a. Noora is going to a restaurant.",
+                    "q_ar": "نورة ذاهبة إلى مطعم:",
+                    "a": "F - False. (خطأ - هي ذاهبة إلى مقهى إنترنت أو مركز اتصالات لإرسال إيميل)."
+                  },
+                  {
+                    "q": "b. She wants to browse the internet.",
+                    "q_ar": "تريد تصفح الإنترنت واستخدامه:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "c. A telephone call is cheaper than an email.",
+                    "q_ar": "المكالمة الهاتفية الدولية أرخص من البريد الإلكتروني:",
+                    "a": "F - False. (خطأ - البريد الإلكتروني أسرع وأرخص بكثير من المكالمات الدولية)."
+                  },
+                  {
+                    "q": "d. Noora has a penfriend in Germany.",
+                    "q_ar": "لدى نورة صديقة مراسلة تعيش في ألمانيا:",
+                    "a": "T - True. (صح - واسمها هيلغا Helga)."
+                  },
+                  {
+                    "q": "e. Noora will meet Helga in the holiday.",
+                    "q_ar": "ستلتقي نورة بصديقتها هيلغا أثناء العطلة الصيفية:",
+                    "a": "T - True. (صح)."
+                  },
+                  {
+                    "q": "f. Noora and Helga have met before.",
+                    "q_ar": "سبق لنورة وهيلغا أن التقتا شخصياً وجهاً لوجه من قبل:",
+                    "a": "F - False. (خطأ - لم يسبق لهما اللقاء شخصياً بل كان تواصلهما بالمراسلة فقط)."
+                  }
+                ]
+              },
+              {
+                "id": "u5_l11_ex2",
+                "num": "Exercise 2 (Page 124)",
+                "title": "Write the email that Noora might send Helga.",
+                "title_ar": "كتابة البريد الإلكتروني النموذجي لصديقة المراسلة في ألمانيا (بين نورة وهيلغا):",
+                "questions": [
+                  {
+                    "q": "Write a complete, friendly email from Noora to Helga covering: greeting, travel dates to Germany, length of stay, activities planned, and feelings:",
+                    "q_ar": "رسالة بريد إلكتروني نموذجية معتمدة مع الترجمة الشاملة:",
+                    "a": "Subject: Exciting news! My trip to Germany\n\nDear Helga,\n\nI hope you are doing well and having a wonderful week! I have fantastic news that I can't wait to share with you. My family and I are finally coming to visit Germany next month during the summer holiday!\n\nWe will arrive in Munich on the 10th of July, and we are planning to stay for two weeks. We will spend five days in Munich and then travel to Berlin. I would be thrilled if we could meet up in person! I really want us to visit the famous museums together, walk in the beautiful city parks, and try traditional German food.\n\nI am so excited because we have been penfriends for more than a year, and now we will finally meet face-to-face. Please write back soon and let me know if those dates suit you.\n\nBest wishes,\nNoora\n\n(الترجمة المعتمدة:\nالموضوع: أخبار رائعة! رحلتي إلى ألمانيا\n\nعزيزتي هيلغا،\nأتمنى أن تكوني بخير وبأحسن حال! لدي أخبار رائعة لا أطيق الانتظار لمشاركتها معك. أنا وعائلتي قادمون أخيراً لزيارة ألمانيا الشهر القادم خلال العطلة الصيفية!\nسنصل إلى ميونيخ في العاشر من تموز (يوليو)، ونخطط للبقاء لمدة أسبوعين؛ خمسة أيام في ميونيخ ثم ننتقل إلى برلين. سأكون في غاية السعادة إن تمكنا من اللقاء شخصياً! أرغب حقاً بزيارة المتاحف الشهيرة معاً، والتنزه في الحدائق الجميلة، وتذوق الأطعمة الألمانية التقليدية.\nأنا متحمسة للغاية لأننا صديقتا مراسلة منذ أكثر من عام، والآن سنلتقي وجهاً لوجه أخيراً. أرجو أن تردي عليّ قريباً وتخبريني إن كانت هذه المواعيد تناسبك.\nأطيب التمنيات،\nنورة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          124
         ]
       }
     ]
@@ -4189,7 +5759,193 @@ window.CURRICULUM_DATA = [
             "page": 60,
             "heading": "Unit 6 Lesson 1: What do they do? - المهن والوظائف الأساسية (صفحة 60)",
             "text": "Unit 6 Jobs - Lesson 1: What do they do?\nListen and read the descriptions. Then match them to the photographs:\n• A businesswoman works in an office and runs a business. She is very good at working with money.\n• A mechanic works in a workshop or a garage and repairs people's cars.\n• A pilot flies a plane and takes people to different countries. They have to wear a uniform.\n• An architect plans and designs buildings. They work in an office.\n• An engineer works outside or in an office. They design, build or repair machines, roads and bridges.\n• A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop.\n• A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes."
+          },
+          {
+            "id": 54701,
+            "page": 60,
+            "is_activity_book": true,
+            "activity_book_page": 84,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 84 و 85): المهن والوظائف ومطابقة الأوصاف وأماكن العمل والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 1: What do they do? (Activity Book pp. 84-85)\n\nExercise A (Page 84): Descriptions and Photograph Matching (Track 43):\n• Photo 1: d (A mechanic works in a workshop or a garage and repairs people's cars).\n• Photo 2: b (A pilot flies a plane and takes people to different countries. They have to wear a uniform).\n• Photo 3: g (A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes).\n• Photo 4: a (A businesswoman works in an office and runs a business. She is very good at working with money).\n• Photo 5: e (An engineer works outside or in an office. They design, build or repair machines, roads and bridges).\n• Photo 6: f (A shop assistant works for a shopkeeper or shop owner. They help customers, the people who want to buy things in the shop).\n• Photo 7: c (An architect plans and designs buildings. They work in an office).\n\nExercise 1 (Page 84): Compound Job Words:\nMatching beginnings and endings of job titles:\na. business + woman = businesswoman | b. engin + eer = engineer | c. archi + tect = architect\nd. pi + lot = pilot | e. mechan + ic = mechanic | f. den + tist = dentist\ng. fire + fighter = firefighter | h. teach + er = teacher | i. doct + or = doctor.\n\nExercise 2 (Page 85): Job Role Questions:\nWho works in an office? (A businesswoman / An office manager / An architect)\nWho writes articles for a newspaper? (A reporter / journalist)\nWho wears a uniform? (A pilot / A firefighter / A police officer / A nurse)\nWho corrects mistakes in articles? (An editor)\nWho takes care of sick people? (A doctor / A nurse)\nWho takes care of other people's teeth? (A dentist)\nWho repairs cars? (A mechanic)\nWho works in a shop? (A shop assistant)\nWho brings food to your table in a café? (A waiter / waitress).\n\nExercise 3 (Page 85): Situational Clues and Emergency Needs:\nMatching everyday spoken clues to the right professional for immediate help.",
+            "exercises": [
+              {
+                "id": "u6_l1_ex1",
+                "num": "Exercise 1 (Page 84)",
+                "title": "Match the beginnings and endings to make the names of nine jobs.",
+                "title_ar": "طابق بدايات ونهايات الكلمات لتكوين أسماء تسع مهن ووظائف أساسية:",
+                "questions": [
+                  {
+                    "q": "a. business + ________",
+                    "q_ar": "سيدة أعمال",
+                    "a": "woman -> businesswoman (سيدة أعمال)"
+                  },
+                  {
+                    "q": "b. engin + ________",
+                    "q_ar": "مهندس",
+                    "a": "eer -> engineer (مهندس)"
+                  },
+                  {
+                    "q": "c. archi + ________",
+                    "q_ar": "مهندس معماري",
+                    "a": "tect -> architect (مهندس معماري)"
+                  },
+                  {
+                    "q": "d. pi + ________",
+                    "q_ar": "طيار مدني",
+                    "a": "lot -> pilot (طيار مدني)"
+                  },
+                  {
+                    "q": "e. mechan + ________",
+                    "q_ar": "ميكانيكي سيارات",
+                    "a": "ic -> mechanic (ميكانيكي)"
+                  },
+                  {
+                    "q": "f. den + ________",
+                    "q_ar": "طبيب أسنان",
+                    "a": "tist -> dentist (طبيب أسنان)"
+                  },
+                  {
+                    "q": "g. fire + ________",
+                    "q_ar": "رجل إطفاء وإنقاذ",
+                    "a": "fighter -> firefighter (رجل إطفاء)"
+                  },
+                  {
+                    "q": "h. teach + ________",
+                    "q_ar": "معلم / مدرس",
+                    "a": "er -> teacher (معلم / مدرس)"
+                  },
+                  {
+                    "q": "i. doct + ________",
+                    "q_ar": "طبيب بشري",
+                    "a": "or -> doctor (طبيب بشري)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l1_ex2",
+                "num": "Exercise 2 (Page 85)",
+                "title": "Ask and answer the questions about jobs.",
+                "title_ar": "أجب عن الأسئلة التالية بتحديد اسم المهنة المناسبة:",
+                "questions": [
+                  {
+                    "q": "a. Who works in an office?",
+                    "q_ar": "من الذي يعمل في المكتب؟",
+                    "a": "A businesswoman / An office manager / An architect (سيدة أعمال / مدير مكتب / مهندس معماري)"
+                  },
+                  {
+                    "q": "b. Who writes articles for a newspaper?",
+                    "q_ar": "من الذي يكتب مقالات للصحيفة؟",
+                    "a": "A reporter / journalist (صحفي أو مراسل صحفي)"
+                  },
+                  {
+                    "q": "c. Who wears a uniform?",
+                    "q_ar": "من الذي يرتدي زياً رسمياً موحداً؟",
+                    "a": "A pilot / A firefighter / A police officer / A nurse (الطيار، رجل الإطفاء، ضابط الشرطة، الممرض)"
+                  },
+                  {
+                    "q": "d. Who corrects mistakes in articles?",
+                    "q_ar": "من الذي يصحح ويدقق الأخطاء في المقالات؟",
+                    "a": "An editor (المحرر الصحفي)"
+                  },
+                  {
+                    "q": "e. Who takes care of sick people?",
+                    "q_ar": "من الذي يعتني بالمرضى ويساعدهم على الشفاء؟",
+                    "a": "A doctor / A nurse (الطبيب / الممرض)"
+                  },
+                  {
+                    "q": "f. Who takes care of other people's teeth?",
+                    "q_ar": "من الذي يعتني بأسنان الناس؟",
+                    "a": "A dentist (طبيب الأسنان)"
+                  },
+                  {
+                    "q": "g. Who repairs cars?",
+                    "q_ar": "من الذي يصلح السيارات في ورشة العمل؟",
+                    "a": "A mechanic (الميكانيكي)"
+                  },
+                  {
+                    "q": "h. Who works in a shop?",
+                    "q_ar": "من الذي يعمل في متجر ويساعد الزبائن؟",
+                    "a": "A shop assistant (مساعد البائع / عامل المتجر)"
+                  },
+                  {
+                    "q": "i. Who brings food to your table in a café?",
+                    "q_ar": "من الذي يقدم الطعام إلى طاولتك في المقهى والمطعم؟",
+                    "a": "A waiter / waitress (النادل / النادلة)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l1_ex3",
+                "num": "Exercise 3 (Page 85)",
+                "title": "Read the texts. Whose help do they need?",
+                "title_ar": "اقرأ العبارات والمواقف الحياتية التالية، وحدد مَن مِن أصحاب المهن يحتاجون إلى مساعدته:",
+                "questions": [
+                  {
+                    "q": "a. 'I can smell smoke. Quick! Everybody out!'",
+                    "q_ar": "'أشم رائحة دخان كثيف، بسرعة ليخرج الجميع!'",
+                    "a": "A firefighter (رجل الإطفاء لإخماد الحريق)"
+                  },
+                  {
+                    "q": "b. 'Is the bridge strong enough to carry that weight?'",
+                    "q_ar": "'هل الجسر قوي كفاية لتحمل تلك الأوزان الثقيلة؟'",
+                    "a": "An engineer (المهندس المدني لحساب القوة الهندسية)"
+                  },
+                  {
+                    "q": "c. 'I looked at the plans. Do you think we need to move the door and add a window to let in more light?'",
+                    "q_ar": "'نظرتُ في المخططات.. هل تعتقد أننا بحاجة لنقل مكان الباب وإضافة نافذة لمزيد من الضوء؟'",
+                    "a": "An architect (المهندس المعماري لتعديل المخطط الإنشائي)"
+                  },
+                  {
+                    "q": "d. 'Ow! My tooth hurts.'",
+                    "q_ar": "'آه! ضرسي يؤلمني بشدة.'",
+                    "a": "A dentist (طبيب الأسنان لمعالجة الألم)"
+                  },
+                  {
+                    "q": "e. 'Look, there's smoke coming out of the engine.'",
+                    "q_ar": "'انظر، هناك دخان يتصاعد من محرك السيارة.'",
+                    "a": "A mechanic (ميكانيكي السيارات لفحص العطل وإصلاحه)"
+                  },
+                  {
+                    "q": "f. 'I want 200 of these chairs every month. Can we talk about the price?'",
+                    "q_ar": "'أريد 200 من هذه الكراسي شهرياً.. هل يمكننا التفاوض على السعر والكمية؟'",
+                    "a": "A businesswoman / businessman (سيدة أو رجل أعمال للتفاوض التجاري)"
+                  },
+                  {
+                    "q": "g. 'Have you all looked at the menu? Good, let's see if we can find someone to take our order.'",
+                    "q_ar": "'هل قرأتم قائمة الطعام جميعاً؟ ممتاز، دعونا نبحث عن أحد ليسجل طلباتنا.'",
+                    "a": "A waiter / waitress (النادل لتسجيل وجبات الطعام)"
+                  },
+                  {
+                    "q": "h. 'That's a deep cut. I think you need someone to look at it.'",
+                    "q_ar": "'هذا جرح عميق، أعتقد أنك بحاجة لمن يفحصه ويعقمه.'",
+                    "a": "A doctor / nurse (طبيب أو ممرض لخياطة الجرح وتضميده)"
+                  },
+                  {
+                    "q": "i. 'I don't understand the homework. I'm going to fail this class.'",
+                    "q_ar": "'لا أفهم هذا الواجب البيتي، وأخشى أن أرسب في هذا الدرس.'",
+                    "a": "A teacher (المعلم لشرح المادة وتبسيط الواجب)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l1_ex4",
+                "num": "Exercise 4 (Page 85)",
+                "title": "What do you want to be? Think about a typical day. Write the things you might have to do.",
+                "title_ar": "ماذا تريد أن تصبح في المستقبل؟ اكتب عن يوم عمل نموذجي والمهام التي ستقوم بها:",
+                "questions": [
+                  {
+                    "q": "Write a short model describing your future typical day at work:",
+                    "q_ar": "نموذج معتمد لمهنة الطبيب أو المهندس في يوم عمل اعتيادي:",
+                    "a": "Example (Doctor): 'I want to be a doctor. In a typical day, I listen to people's chests, examine patients, prescribe medicines, and perform surgeries in hospital.'\n(مهندس معماري: 'I want to be an architect. In a typical day, I draw plans on my computer, visit building sites, and talk to clients about new designs.')"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          84,
+          85
         ]
       },
       {
@@ -4202,7 +5958,135 @@ window.CURRICULUM_DATA = [
             "page": 61,
             "heading": "Unit 6 Lesson 2: Two jobs - د. سلوى وحنان ومقارنة متطلبات المهن (صفحة 61)",
             "text": "Unit 6 Lesson 2: Two jobs (صفحة 61)\nRead the two paragraphs and study the vocabulary:\n• Dr Salwa works in a hospital. She takes care of sick people and makes them better. She is very hard-working. She usually works eight hours a day, but she sometimes has to work 12 hours. At school, she was very clever and good in all subjects. After school, she went to university. She had to study for six years. She likes being a doctor because in this job she can help people.\n• Hanan is an office manager. She answers phone calls, and she sends and receives emails on a computer. She usually works every day from 8 a.m. to 2 p.m., but she sometimes has to work in the afternoon. Sometimes she has to go to different countries. Her best subjects at school were Maths and English. After school, she went to college to study Business Administration. She had to study for four years. She enjoys her job because she meets a lot of different people. She also enjoys travelling.\n\nKey Vocabulary:\n1. hard-working: the opposite of 'lazy' (مجتهد / مثابر).\n2. university, college: places to study higher education (جامعة / كلية).\n3. to study: to spend time learning about something (يدرس / يذاكر).\n4. subjects: things you learn at school like Maths, English, Science (مواد دراسية).\n5. clever: quick to learn and understand (ذكي / سريع الفهم)."
+          },
+          {
+            "id": 54801,
+            "page": 61,
+            "is_activity_book": true,
+            "activity_book_page": 86,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 86 و 87): مقارنة مهنتي الطب وإدارة الأعمال وأسئلة المقابلة للممرضة نادية والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 2: Two jobs (Activity Book pp. 86-87)\n\nExercise A (Page 86): Vocabulary and Definition Matching:\n1. hard-working -> the opposite of 'lazy' (مجتهد / مثابر)\n2. university / college -> places to study higher education (جامعة / كلية)\n3. to study -> to spend time learning about something (يدرس / يذاكر)\n4. subjects -> things you learn at school like Maths, English (مواد دراسية)\n5. clever -> quick to learn and understand (ذكي / سريع البديهة)\n\nExercise 1 (Page 86): Comparison Table (Dr Salwa vs Hanan):\nComparing workplace, tasks, daily working hours, educational place, and years of study.\n\nExercise 2 (Page 86): Question Formulation based on headings.\n\nExercise 3 (Page 87): Writing Interview Questions for Nurse Nadia (Track 44):\nDeducing the exact questions asked to Nadia from her spoken responses.",
+            "exercises": [
+              {
+                "id": "u6_l2_ex1",
+                "num": "Exercise 1 (Page 86)",
+                "title": "Read the two paragraphs in your Student's Book again and make notes in the table.",
+                "title_ar": "اقرأ قطعتي كتاب الطالب (د. سلوى وحنان) ودون الملاحظات في جدول المقارنة:",
+                "questions": [
+                  {
+                    "q": "1. Where she works (مكان العمل):",
+                    "q_ar": "أين تعمل كل منهما؟",
+                    "a": "• The doctor (Dr Salwa): In a hospital (في المستشفى).\n• The office manager (Hanan): In an office (في المكتب)."
+                  },
+                  {
+                    "q": "2. What she does (طبيعة عملها):",
+                    "q_ar": "ما هي المهام التي تؤديها كل منهما؟",
+                    "a": "• The doctor: Takes care of sick people and makes them better (تعتني بالمرضى وتساعدهم على الشفاء).\n• The office manager: Answers phone calls, sends and receives emails, and sometimes travels to different countries (تجيب على الاتصالات، ترسل وتستقبل الإيميلات، وتسافر للخارج أحياناً)."
+                  },
+                  {
+                    "q": "3. How long she usually works (ساعات العمل اليومية):",
+                    "q_ar": "كم ساعة تعمل كل منهما عادة في اليوم؟",
+                    "a": "• The doctor: Usually 8 hours a day, but sometimes has to work 12 hours (عادة 8 ساعات وأحياناً تصل إلى 12 ساعة).\n• The office manager: Usually every day from 8 a.m. to 2 p.m., but sometimes works in the afternoon (من 8 صباحاً إلى 2 ظهراً وأحياناً مساءً)."
+                  },
+                  {
+                    "q": "4. Where she studied (مكان الدراسة التخصصية):",
+                    "q_ar": "أين درست كل منهما بعد التخرج من المدرسة؟",
+                    "a": "• The doctor: At university (في الجامعة - كلية الطب).\n• The office manager: At college (Business Administration) (في الكلية - تخصص إدارة أعمال)."
+                  },
+                  {
+                    "q": "5. How long she had to study (مدة الدراسة):",
+                    "q_ar": "كم سنة كان عليها أن تدرس؟",
+                    "a": "• The doctor: Six years (ست سنوات).\n• The office manager: Four years (أربع سنوات)."
+                  }
+                ]
+              },
+              {
+                "id": "u6_l2_ex2",
+                "num": "Exercise 2 (Page 86)",
+                "title": "Check your notes with your partner. Use the headings in the table to make questions.",
+                "title_ar": "استخدم عناوين الجدول لصياغة أسئلة صحيحة نحوياً:",
+                "questions": [
+                  {
+                    "q": "Example: where she works ->",
+                    "q_ar": "أين تعمل؟",
+                    "a": "Where does she work? (أين تعمل؟)"
+                  },
+                  {
+                    "q": "a. what she does ->",
+                    "q_ar": "ماذا تعمل؟",
+                    "a": "What does she do? (ماذا تفعل / ما طبيعة عملها؟)"
+                  },
+                  {
+                    "q": "b. how long she usually works ->",
+                    "q_ar": "كم ساعة تعمل عادة؟",
+                    "a": "How long does she usually work? (كم ساعة تعمل في العادة؟)"
+                  },
+                  {
+                    "q": "c. where she studied ->",
+                    "q_ar": "أين درست؟",
+                    "a": "Where did she study? (أين درست بعد المدرسة؟)"
+                  },
+                  {
+                    "q": "d. how long she had to study ->",
+                    "q_ar": "كم سنة استغرقت دراستها؟",
+                    "a": "How long did she have to study? (كم سنة كان عليها أن تدرس؟)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l2_ex3",
+                "num": "Exercise 3 (Page 87)",
+                "title": "Write questions for the interview with nurse Nadia (Track 44).",
+                "title_ar": "اكتب الأسئلة التي طُرحت على الممرضة نادية استناداً إلى إجاباتها:",
+                "questions": [
+                  {
+                    "q": "a. Answer: 'I work at the Red Crescent Hospital.' ->",
+                    "q_ar": "'أعمل في مستشفى الهلال الأحمر.'",
+                    "a": "Where do you work? (أين تعملين؟)"
+                  },
+                  {
+                    "q": "b. Answer: 'Yes. I have to wear a uniform at work.' ->",
+                    "q_ar": "'نعم، يتعين علي ارتداء الزي الرسمي في العمل.'",
+                    "a": "Do you have to wear a uniform at work? (هل ترتدين زياً رسمياً في عملك؟)"
+                  },
+                  {
+                    "q": "c. Answer: 'Yes. I like my job very much.' ->",
+                    "q_ar": "'نعم، أحب عملي كثيراً جداً.'",
+                    "a": "Do you like your job? (هل تحبين عملكِ؟)"
+                  },
+                  {
+                    "q": "d. Answer: 'Oh, I usually have to work ten hours a day.' ->",
+                    "q_ar": "'أعمل عادة عشر ساعات يومياً.'",
+                    "a": "How long / How many hours do you usually work a day? (كم ساعة تعملين يومياً؟)"
+                  },
+                  {
+                    "q": "e. Answer: 'Yes. It's very hard work, but I like taking care of sick people.' ->",
+                    "q_ar": "'نعم، إنه عمل شاق، ولكني أحب رعاية المرضى.'",
+                    "a": "Is it hard work? (هل هو عمل شاق؟)"
+                  },
+                  {
+                    "q": "f. Answer: 'I had to study for four years.' ->",
+                    "q_ar": "'كان علي أن أدرس لمدة أربع سنوات.'",
+                    "a": "How long did you have to study? (كم سنة كان عليكِ أن تدرسي؟)"
+                  },
+                  {
+                    "q": "g. Answer: 'No, I don't want to be a doctor. I love my job.' ->",
+                    "q_ar": "'لا، لا أريد أن أكون طبيبة؛ فأنا أحب عملي الحالي.'",
+                    "a": "Do you want to be a doctor? (هل ترغبين في أن تصبحي طبيبة؟)"
+                  },
+                  {
+                    "q": "h. Answer: 'Every day? Oh, I usually see about 40 or 50 people every day.' ->",
+                    "q_ar": "'كل يوم؟ في العادة أرى ما بين 40 إلى 50 مريضاً يومياً.'",
+                    "a": "How many people do you usually see every day? (كم مريضاً ترين كل يوم؟)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          86,
+          87
         ]
       },
       {
@@ -4215,7 +6099,125 @@ window.CURRICULUM_DATA = [
             "page": 62,
             "heading": "Unit 6 Lesson 3: A day in the life of a firefighter - يوميات رجل الإطفاء مازن (صفحة 62)",
             "text": "Unit 6 Lesson 3: A day in the life of a firefighter (صفحة 62)\nFirefighter Mazin talked about a day in his life. He began like this:\n'When I arrived at the fire station yesterday morning, I checked my equipment at 10:05.\nAt 10:00, an urgent call arrived: \"The supermarket is on fire! Come quickly! People are trapped inside!\"\nWe drove the fire engines fast with sirens on. When we arrived, the supermarket was blazing with thick smoke. We went bravely into the building. We put out the fire and we saved all the people trapped inside.\nAt 14:00 (2:00 p.m.), another call came: \"Accident on the ring road!\"\nWe rushed to the ring road and found a terrible car crash. A car was upside down and on fire! The driver was trapped inside. We fought the flames, used special cutting equipment, and safely pulled the driver out alive.'\n\nMazin showed bravery, teamwork, and readiness in dangerous emergency situations."
+          },
+          {
+            "id": 54901,
+            "page": 62,
+            "is_activity_book": true,
+            "activity_book_page": 88,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 88 و 89): يوميات رجل الإطفاء مازن وترتيب الأحداث ومعاني المفردات والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 3: A day in the life of a firefighter (Activity Book pp. 88-89)\n\nExercise 1 (Page 88): Chronological Ordering of Firefighter Mazin's Day:\nIntro: When I arrived at the fire station yesterday morning, I checked my equipment as usual. We had our first call at ten o'clock.\n1. g: We were told there was a fire in a supermarket in the middle of town.\n2. d: We drove through the streets as fast as possible.\n3. a: When we got there, the fire was burning strongly.\n4. f: The heat was terrible, and some people were trapped inside. We had to get them out quickly.\n5. e: We got out our hoses and pointed them at the building.\n6. b: Twenty minutes later, the fire was out, and we were able to go into the building.\n7. c: We saved all the people, but some had to go to hospital.\n8. j: At two o'clock, we were called to an accident on the ring road.\n9. k: The police helped us get there very fast.\n10. m: One car was on fire and another was upside down on the road.\n11. i: Fortunately, the driver of the burning car was standing by the side of the road.\n12. h: However, the driver of the other car was trapped.\n13. n: We put the fire out quickly and got the second driver out.\n14. l: He was badly injured.\nConclusion: At the end of the day, I was tired and upset about the accident. But it's all in a day's work for a firefighter. We do our best.\n\nExercise 3 (Page 89): Vocabulary Definitions:\nMatching crucial emergency words to their precise definitions.",
+            "exercises": [
+              {
+                "id": "u6_l3_ex1",
+                "num": "Exercise 1 (Page 88)",
+                "title": "Put the sentences of Mazin's day in the correct order (1 to 14).",
+                "title_ar": "رتب أحداث قصة يوم رجل الإطفاء مازن بالترتيب الزمني الصحيح (من 1 إلى 14):",
+                "questions": [
+                  {
+                    "q": "Step 1 (First call at 10:00):",
+                    "q_ar": "الخطوة الأولى: بلاغ حريق السوق التجاري",
+                    "a": "1 -> g (We were told there was a fire in a supermarket in the middle of town - أُبلغنا بوجود حريق في سوبرماركت وسط المدينة)."
+                  },
+                  {
+                    "q": "Step 2 & 3 (Arrival at scene):",
+                    "q_ar": "الخطوتان 2 و 3: الانطلاق والوصول",
+                    "a": "2 -> d (We drove through the streets as fast as possible)\n3 -> a (When we got there, the fire was burning strongly)"
+                  },
+                  {
+                    "q": "Step 4, 5 & 6 (Fighting the supermarket fire):",
+                    "q_ar": "الخطوات 4 و 5 و 6: المحاصرون وخراطيم المياه وإخماد اللهب",
+                    "a": "4 -> f (The heat was terrible, and some people were trapped inside. We had to get them out quickly)\n5 -> e (We got out our hoses and pointed them at the building)\n6 -> b (Twenty minutes later, the fire was out, and we were able to go into the building)"
+                  },
+                  {
+                    "q": "Step 7 (Rescue outcome):",
+                    "q_ar": "الخطوة 7: إنقاذ المحاصرين",
+                    "a": "7 -> c (We saved all the people, but some had to go to hospital - أنقذنا جميع الناس ولكن نُقل بعضهم للمستشفى)."
+                  },
+                  {
+                    "q": "Step 8 & 9 (Second call at 14:00):",
+                    "q_ar": "الخطوتان 8 و 9: حادث الطريق الحلقي",
+                    "a": "8 -> j (At two o'clock, we were called to an accident on the ring road)\n9 -> k (The police helped us get there very fast)"
+                  },
+                  {
+                    "q": "Step 10 & 11 (Accident scene condition):",
+                    "q_ar": "الخطوتان 10 و 11: سيارة مشتعلة وسائق آمن",
+                    "a": "10 -> m (One car was on fire and another was upside down on the road)\n11 -> i (Fortunately, the driver of the burning car was standing by the side of the road)"
+                  },
+                  {
+                    "q": "Step 12, 13 & 14 (Rescuing trapped second driver):",
+                    "q_ar": "الخطوات 12 و 13 و 14: إنقاذ السائق المحاصر وإسعافه",
+                    "a": "12 -> h (However, the driver of the other car was trapped)\n13 -> n (We put the fire out quickly and got the second driver out)\n14 -> l (He was badly injured - كان مصاباً بجروح بالغة)."
+                  }
+                ]
+              },
+              {
+                "id": "u6_l3_ex3",
+                "num": "Exercise 3 (Page 89)",
+                "title": "Tick the correct meaning of each word.",
+                "title_ar": "اختر المعنى الصحيح والدقيق لكل كلمة من الكلمات التالية:",
+                "questions": [
+                  {
+                    "q": "a. equipment",
+                    "q_ar": "المعدات والتجهيزات",
+                    "a": "things needed for a job (الأشياء والمعدات اللازمة لأداء العمل)"
+                  },
+                  {
+                    "q": "b. trapped",
+                    "q_ar": "محاصر",
+                    "a": "not able to get out (غير قادر على الخروج أو الهروب)"
+                  },
+                  {
+                    "q": "c. upside down",
+                    "q_ar": "مقلوب رأساً على عقب",
+                    "a": "the wrong way up (مقلوب على ظهره / بالاتجاه المعكوس)"
+                  },
+                  {
+                    "q": "d. terrible",
+                    "q_ar": "فظيع / شديد جداً",
+                    "a": "very bad (سيئ أو شديد للغاية)"
+                  },
+                  {
+                    "q": "e. injured",
+                    "q_ar": "مصاب / جريح",
+                    "a": "hurt (مصاب أو متأذٍ بدنياً)"
+                  },
+                  {
+                    "q": "f. put the fire out",
+                    "q_ar": "يخمد الحريق",
+                    "a": "stop the fire (يطفئ النار ويوقف انتشارها)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l3_ex4",
+                "num": "Exercise 4 (Page 89)",
+                "title": "Answer the questions about firefighters.",
+                "title_ar": "أجب عن الأسئلة التالية المتعلقة بمهنة رجل الإطفاء:",
+                "questions": [
+                  {
+                    "q": "a. What do you think is the best thing about being a firefighter?",
+                    "q_ar": "ما هو أفضل جانب في مهنة رجل الإطفاء؟",
+                    "a": "Saving people's lives and protecting our city from disasters (إنقاذ أرواح الناس وحماية المدينة من الكوارث)."
+                  },
+                  {
+                    "q": "b. What is the worst thing about being a firefighter?",
+                    "q_ar": "ما هو الجانب الأصعب والأسوأ في مهنة رجل الإطفاء؟",
+                    "a": "Facing extreme danger and seeing people injured or trapped (مواجهة المخاطر ورؤية الناس مصابين)."
+                  },
+                  {
+                    "q": "c. Think of two adjectives that describe the job of a firefighter:",
+                    "q_ar": "اذكر صفتين تصفان عمل رجل الإطفاء بدقة:",
+                    "a": "Dangerous (خطير) and Heroic / Brave (بطولي / شجاع)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          88,
+          89
         ]
       },
       {
@@ -4228,7 +6230,153 @@ window.CURRICULUM_DATA = [
             "page": 63,
             "heading": "Unit 6 Lesson 4: What's my job? - لعبة تخمين المهن وموسوعة الوظائف (صفحة 63)",
             "text": "Unit 6 Lesson 4: What's my job? (صفحة 63)\nRead the instructions for playing job guessing games:\n• Game A: Student 1 thinks of a job without saying it. Student 2 asks up to five 'yes' or 'no' questions (e.g., Do you work outside? Do you wear a uniform? Is your job dangerous?).\n• Game B: Student 1 writes a job title and sticks it on partner's back. Partner asks questions to guess.\n• Game C: Student 1 gives five clues one by one until the other guesses the profession.\n\nThe 23 Professions Encyclopedia:\narchitect (مهندس معماري), artist (فنان), astronaut (رائد فضاء), author (مؤلف/كاتب), baker (خباز), builder (بناء), bus driver (سائق حافلة), businesswoman (سيدة أعمال), dentist (طبيب أسنان), doctor (طبيب), editor (محرر صحفي), engineer (مهندس), farmer (مزارع), firefighter (إطفائي), mechanic (ميكانيكي), nurse (ممرض/ممرضة), park-keeper (حارس حديقة), photographer (مصور), pilot (طيار), police officer (ضابط شرطة), reporter (مراسل صحفي), secretary (سكرتير), shepherd (راعي أغنام), shop assistant (مساعد بائع), singer (مغني), teacher (معلم)."
+          },
+          {
+            "id": 55001,
+            "page": 63,
+            "is_activity_book": true,
+            "activity_book_page": 90,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 90 و 91): موسوعة وتخمين المهن وتصنيف الكلمات والكلمة الغريبة والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 4: What's my job? (Activity Book pp. 90-91)\n\nExercise 1 (Page 90): Match job descriptions to titles.\nExercise 2 (Page 90): Connecting word groups to profession names.\nExercise 3 (Page 90): Circle the odd one out with clear justifications.\nExercise 4 (Page 91): Sorting 11 interview questions into three distinct professions (Reporter, Mechanic, Singer/Actor).",
+            "exercises": [
+              {
+                "id": "u6_l4_ex1",
+                "num": "Exercise 1 (Page 90)",
+                "title": "Match the descriptions to the jobs.",
+                "title_ar": "طابق الوصف المذكور باسم المهنة المناسبة:",
+                "questions": [
+                  {
+                    "q": "a. 'I help people. I work in a hospital.'",
+                    "q_ar": "'أساعد الناس وأعمل في المستشفى.'",
+                    "a": "2 doctor (الطبيب)"
+                  },
+                  {
+                    "q": "b. 'My job is dangerous. I wear a uniform.'",
+                    "q_ar": "'عملي خطير وأرتدي زياً رسمياً خاصاً.'",
+                    "a": "4 firefighter (رجل الإطفاء)"
+                  },
+                  {
+                    "q": "c. 'I wear a uniform. I work outside.'",
+                    "q_ar": "'أرتدي زياً رسمياً وأعمل في الهواء الطلق في الشوارع.'",
+                    "a": "3 police officer (ضابط الشرطة)"
+                  },
+                  {
+                    "q": "d. 'I don't work in an office. I work at the airport.'",
+                    "q_ar": "'لا أعمل في مكتب، بل أعمل في المطار وأقود الطائرات.'",
+                    "a": "1 pilot (الطيار)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l4_ex2",
+                "num": "Exercise 2 (Page 90)",
+                "title": "Which jobs connect the words? Write the names of the jobs.",
+                "title_ar": "ما هي المهنة التي ترتبط بها الكلمات الثلاث التالية؟",
+                "questions": [
+                  {
+                    "q": "a. newspaper / story / article ->",
+                    "q_ar": "صحيفة / قصة / مقال",
+                    "a": "reporter / journalist (صحفي / مراسل)"
+                  },
+                  {
+                    "q": "b. fire / danger / water ->",
+                    "q_ar": "نار / خطر / ماء",
+                    "a": "firefighter (رجل إطفاء)"
+                  },
+                  {
+                    "q": "c. building / plan / draw ->",
+                    "q_ar": "مبنى / مخطط / رسم هندسي",
+                    "a": "architect (مهندس معماري)"
+                  },
+                  {
+                    "q": "d. letter / telephone / computer ->",
+                    "q_ar": "رسالة / هاتف / حاسوب",
+                    "a": "office manager / secretary (مدير مكتب / سكرتير)"
+                  },
+                  {
+                    "q": "e. lesson / board / class ->",
+                    "q_ar": "درس / سبورة / صف دراسي",
+                    "a": "teacher (معلم / مدرس)"
+                  },
+                  {
+                    "q": "f. plane / airport / fly ->",
+                    "q_ar": "طائرة / مطار / طيران",
+                    "a": "pilot (طيار)"
+                  },
+                  {
+                    "q": "g. car / repair / workshop ->",
+                    "q_ar": "سيارة / تصليح / ورشة عمل",
+                    "a": "mechanic (ميكانيكي)"
+                  },
+                  {
+                    "q": "h. teeth / take care / chair ->",
+                    "q_ar": "أسنان / رعاية / كرسي خاص",
+                    "a": "dentist (طبيب أسنان)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l4_ex3",
+                "num": "Exercise 3 (Page 90)",
+                "title": "Circle the odd one out.",
+                "title_ar": "استخرج الكلمة الغريبة أو الشاذة من كل مجموعة مع ذكر السبب:",
+                "questions": [
+                  {
+                    "q": "a. burn / put out / teach",
+                    "q_ar": "يحرق / يخمد النار / يعلّم",
+                    "a": "teach (الكلمة الغريبة لأن burn و put out يرتبطان بالنار، بينما teach يرتبط بالتعليم)"
+                  },
+                  {
+                    "q": "b. pilot / mechanic / bus driver",
+                    "q_ar": "طيار / ميكانيكي / سائق حافلة",
+                    "a": "mechanic (الكلمة الغريبة لأن pilot و bus driver يقودان وسائل النقل، بينما mechanic يصلحها)"
+                  },
+                  {
+                    "q": "c. green / patient / kind",
+                    "q_ar": "أخضر / صبور / طيب",
+                    "a": "green (الكلمة الغريبة لأن patient و kind صفتان شخصيتان، بينما green لون)"
+                  },
+                  {
+                    "q": "d. university / college / office",
+                    "q_ar": "جامعة / كلية / مكتب",
+                    "a": "office (الكلمة الغريبة لأن university و college مؤسستان للتعليم العالي، بينما office مكان عمل)"
+                  },
+                  {
+                    "q": "e. equipment / uniform / trousers",
+                    "q_ar": "معدات / زي رسمي / بنطال",
+                    "a": "equipment (الكلمة الغريبة لأن uniform و trousers من الملابس، بينما equipment تعني أدوات)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l4_ex4",
+                "num": "Exercise 4 (Page 91)",
+                "title": "Organize the questions into three groups. Which three jobs are being described?",
+                "title_ar": "صنف الأسئلة إلى ثلاث مجموعات تمثل ثلاث مهن مختلفة:",
+                "questions": [
+                  {
+                    "q": "Job 1: Reporter / Journalist (الصحفي والمراسل):",
+                    "q_ar": "الأسئلة المتعلقة بمهنة الصحفي:",
+                    "a": "1. Do you talk to famous people?\n2. Do you interview people?\n3. Do you need to write well?\n4. Do you need to use a computer?"
+                  },
+                  {
+                    "q": "Job 2: Mechanic (ميكانيكي السيارات):",
+                    "q_ar": "الأسئلة المتعلقة بمهنة الميكانيكي:",
+                    "a": "1. Do you fix cars?\n2. Do you work in a garage?\n3. Do you get dirty?"
+                  },
+                  {
+                    "q": "Job 3: Singer / Actor (المغني أو الممثل):",
+                    "q_ar": "الأسئلة المتعلقة بمهنة المغني أو الممثل:",
+                    "a": "1. Do you stand on a stage?\n2. Do you use a microphone?\n3. Do you have to practise?\n4. Do you get nervous?"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          90,
+          91
         ]
       },
       {
@@ -4241,7 +6389,115 @@ window.CURRICULUM_DATA = [
             "page": 64,
             "heading": "Unit 6 Lesson 5: A train timetable - جدول مواعيد القطارات ونظام الـ 24 ساعة (صفحة 64)",
             "text": "Unit 6 Lesson 5: A train timetable (صفحة 64)\nStudy the Eurostar train timetable from London to Paris:\n• Stations: London St Pancras -> Ashford -> Calais -> Paris Gare du Nord.\n• Departures & Arrivals:\n  - Train 1: Dep London 06:55 | Calais 09:30 | Arr Paris 11:30\n  - Train 2: Dep London 08:30 | Arr Paris 12:55\n  - Train 3: Dep London 12:55 | Arr Paris 18:35\n  - Train 4: Dep London 18:30 | Calais 20:05 | Arr Paris 22:00\n  - Train 5: Dep London 20:00 | Arr Paris 23:25\n\nPractical Travel Situations:\n1. If a football match starts at 3:00 p.m. in Paris, you must arrive before 15:00, so the 06:55 train (arriving 11:30) is the best choice!\n2. Useful Polite Enquiries:\n   • 'Excuse me, can you help me, please?'\n   • 'What time is the first train to Paris? - The first train leaves at 06:55.'\n   • 'Which train should I catch to arrive before four o'clock? - The 08:30 train.'"
+          },
+          {
+            "id": 55101,
+            "page": 64,
+            "is_activity_book": true,
+            "activity_book_page": 92,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 92 و 93): جدول مواعيد القطارات ومحادثات المسافرين والعبارات المهذبة والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 5: A train timetable (Activity Book pp. 92-93)\n\nExercise B & 1 (Page 92 - Track 47): Passenger Inquiries at London Station:\n• Conversation a: The passenger forgot her passport. She's going to go home and get her passport.\n• Conversation b: The passenger wants to go to Calais. He is going to catch the train at 16:25.\n• Conversation c: The passenger wants to be in Paris before ten o'clock. She is going to catch the train at 6:55.\n\nExercise 2 & 3 (Page 93): Polite Travel Inquiries (Track 49):\nMastering polite phrases for customer service, ticket desks, and station information.",
+            "exercises": [
+              {
+                "id": "u6_l5_ex1",
+                "num": "Exercise 1 (Page 92)",
+                "title": "Listen to the passengers (Track 47) and tick the correct answers.",
+                "title_ar": "استمع للمحادثات واختر الإجابة الصحيحة لكل مسافر:",
+                "questions": [
+                  {
+                    "q": "Conversation a: 1. The passenger ... | 2. She's going to ...",
+                    "q_ar": "المحادثة (a): نسيان الجواز والتصرف المطلوب",
+                    "a": "1. forgot her passport (نسيت جواز سفرها)\n2. go home and get her passport (ستعود إلى المنزل لجلب الجواز)"
+                  },
+                  {
+                    "q": "Conversation b: 1. The passenger ... | 2. He is going to catch the train at ...",
+                    "q_ar": "المحادثة (b): وجهة السفر ووقت القطار",
+                    "a": "1. wants to go to Calais (يريد السفر إلى كاليه بفرنسا)\n2. 16:25 (الساعة 4:25 عصراً)"
+                  },
+                  {
+                    "q": "Conversation c: 1. The passenger wants to be in Paris ... | 2. She is going to ...",
+                    "q_ar": "المحادثة (c): الوصول إلى باريس والقطار المناسب",
+                    "a": "1. before ten o'clock (قبل الساعة العاشرة)\n2. catch the train at 6:55 (ستلحق بقطار الساعة 6:55 صباحاً)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l5_ex2",
+                "num": "Exercise 2 (Page 93)",
+                "title": "How did each conversation in Exercise C start politely?",
+                "title_ar": "كيف بدأت كل محادثة بأسلوب مهذب ورسمي؟",
+                "questions": [
+                  {
+                    "q": "Conversation 1 opener:",
+                    "q_ar": "افتتاحية المحادثة الأولى:",
+                    "a": "Excuse me, can you help me, please? (المعذرة، هل يمكنك مساعدتي رجاءً؟)"
+                  },
+                  {
+                    "q": "Conversation 2 opener:",
+                    "q_ar": "افتتاحية المحادثة الثانية:",
+                    "a": "Hello. Could you give me some information, please? (مرحباً، هل يمكنك تزويدي ببعض المعلومات رجاءً؟)"
+                  },
+                  {
+                    "q": "Conversation 3 opener:",
+                    "q_ar": "افتتاحية المحادثة الثالثة:",
+                    "a": "Good morning. Can I ask something, please? (صباح الخير، هل يمكنني الاستفسار عن شيء لو سمحت؟)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l5_ex3",
+                "num": "Exercise 3 (Page 93)",
+                "title": "Complete the expressions with polite words.",
+                "title_ar": "أكمل العبارات المهذبة بالكلمات المناسبة:",
+                "questions": [
+                  {
+                    "q": "a. ________ ticket, please?",
+                    "q_ar": "هل يمكنني رؤية تذكرتك رجاءً؟",
+                    "a": "Can I see your ticket, please?"
+                  },
+                  {
+                    "q": "b. Yes, ________. Here ________.",
+                    "q_ar": "نعم بالطبع، تفضل.",
+                    "a": "Yes, of course. Here you are."
+                  },
+                  {
+                    "q": "c. ________ this ticket ________ train to Paris?",
+                    "q_ar": "هل يمكنني تغيير هذه التذكرة؟",
+                    "a": "Can I change this ticket for the next train to Paris?"
+                  },
+                  {
+                    "q": "d. ________ something, please?",
+                    "q_ar": "هل يمكنني الاستفسار عن أمر ما؟",
+                    "a": "Can I ask something, please?"
+                  },
+                  {
+                    "q": "e. ________ help?",
+                    "q_ar": "كيف يمكنني مساعدتك؟",
+                    "a": "How can I help?"
+                  },
+                  {
+                    "q": "f. ________ check.",
+                    "q_ar": "دعني أتحقق من ذلك.",
+                    "a": "Let me check."
+                  },
+                  {
+                    "q": "g. ________ late.",
+                    "q_ar": "لا تتأخر عن موعد القطار.",
+                    "a": "Don't be late."
+                  },
+                  {
+                    "q": "h. ________ welcome.",
+                    "q_ar": "على الرحب والسعة.",
+                    "a": "You're welcome."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          92,
+          93
         ]
       },
       {
@@ -4254,7 +6510,148 @@ window.CURRICULUM_DATA = [
             "page": 65,
             "heading": "Unit 6 Lesson 6: What are they going to be? - فراس وهالة والتخطيط المهني (صفحة 65)",
             "text": "Unit 6 Lesson 6: What are they going to be? (صفحة 65)\nRead about Firas and Halla and study the future plans:\n• Firas is 17. His favourite school subjects are History, Geography and Art. He loves animals. Every Friday, he goes to the zoo and takes photographs of birds and animals. Sometimes he has to wait for a long time to take a good photograph, but he is very patient. Next year, he is going to take his final school exam. If he passes, he is going to go to university to study animals. He wants to be a zoologist.\n• Halla is 18. Her favourite school subjects are Biology and Chemistry. She is also very good at English and Physics. She is interested in helping people. She is very kind and friendly. Sometimes she visits a hospital where some patients have no visitors; Halla brings them flowers and sits and talks with them. At school, she works hard because she does not want to fail her exams. When she finishes school, she is going to be a doctor.\n\nWork with Words:\n• patient (n.): somebody who is taken care of by a doctor (مريض).\n• patient (adj.): able to wait for a long time without getting angry (صبور).\n• patiently (adv.): He waited patiently for the train (بصبر).\n• take an exam (يؤدي الامتحان) | pass an exam (ينجح) | fail an exam (يرسب)."
+          },
+          {
+            "id": 55201,
+            "page": 65,
+            "is_activity_book": true,
+            "activity_book_page": 94,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 94 و 95): التخطيط المستقبلي لفراس وهالة ومصطلحات الامتحانات والتنبؤ مع going to والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 6: What are they going to be? (Activity Book pp. 94-95)\n\nExercise 1 (Page 94): Reading Comprehension - Firas:\nFavourite subjects: History, Geography, and Art. Hobby: Taking photographs of birds and animals. Personality: Very patient. Future career: Zoologist.\n\nExercise 2 (Page 94): Reading Comprehension - Halla:\nGood at: Biology and Chemistry. Interested in: Helping people. Personality: Kind and friendly. Special action: Takes flowers to patients with no visitors. Future career: Doctor.\n\nExercise 3 (Page 94): Exam Verbs: [take an exam, fail an exam, pass an exam].\n\nExercise 5 (Page 95): Matching Evidence to Future Predictions with 'going to':\n• She's at medical school -> She's going to be a doctor.\n• He's a chef -> The meal is going to be delicious.\n• It's raining -> You're going to get wet.\n• Look at the dark clouds -> It's going to rain.\n• There's a lot of traffic -> I'm going to be late.\n• Watch out! -> She's going to fall.",
+            "exercises": [
+              {
+                "id": "u6_l6_ex1",
+                "num": "Exercise 1 (Page 94)",
+                "title": "Read the first text (Firas) in your Student's Book again and answer the questions.",
+                "title_ar": "أجب عن الأسئلة الخاصة بقطعة الطالب فراس واهتماماته:",
+                "questions": [
+                  {
+                    "q": "a. What are Firas' favourite school subjects?",
+                    "q_ar": "ما هي المواد الدراسية المفضلة لدى فراس؟",
+                    "a": "History, Geography, and Art (التاريخ والجغرافيا والفنية)"
+                  },
+                  {
+                    "q": "b. What is his hobby?",
+                    "q_ar": "ما هي هوايته المفضلة؟",
+                    "a": "Taking photographs of birds and animals (التقاط صور الطيور والحيوانات)"
+                  },
+                  {
+                    "q": "c. What do you know about his personality?",
+                    "q_ar": "ماذا تعرف عن صفات شخصية فراس؟",
+                    "a": "He is very patient (إنه صبور جداً ويستطيع الانتظار طويلاً لالتقاط صورة جيدة)"
+                  },
+                  {
+                    "q": "d. What is he going to be?",
+                    "q_ar": "ماذا يخطط أن يصبح في المستقبل؟",
+                    "a": "A zoologist (عالم حيوان وباحث في الحياة البرية)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l6_ex2",
+                "num": "Exercise 2 (Page 94)",
+                "title": "Read the second text (Halla) in your Student's Book again and answer the questions.",
+                "title_ar": "أجب عن الأسئلة الخاصة بقطعة الطالبة هالة واهتماماتها:",
+                "questions": [
+                  {
+                    "q": "a. What is Halla good at?",
+                    "q_ar": "بأي المواد الدراسية تتميز هالة؟",
+                    "a": "Biology and Chemistry (علم الأحياء والكيمياء)"
+                  },
+                  {
+                    "q": "b. What is she interested in?",
+                    "q_ar": "بماذا تهتم هالة بشغف؟",
+                    "a": "Helping people (مساعدة الناس ورعايتهم)"
+                  },
+                  {
+                    "q": "c. What do you know about Halla's personality?",
+                    "q_ar": "ما هي أبرز صفات شخصية هالة؟",
+                    "a": "She is very kind and friendly (طيبة وعطوفة وودودة للغاية)"
+                  },
+                  {
+                    "q": "d. Which patients does she take flowers to?",
+                    "q_ar": "لمن من المرضى تأخذ الزهور في المستشفى؟",
+                    "a": "Patients who have no visitors (المرضى الذين ليس لديهم زوار وأقارب)"
+                  },
+                  {
+                    "q": "e. What is she going to be?",
+                    "q_ar": "ماذا تخطط هالة أن تصبح مستقبلاً؟",
+                    "a": "A doctor (طبيبة بشرية)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l6_ex3",
+                "num": "Exercise 3 (Page 94)",
+                "title": "Complete the sentences about exams. Use the words from the box.",
+                "title_ar": "أكمل الجمل التالية بأفعال الامتحانات المناسبة من الصندوق:",
+                "words_box": [
+                  "fail",
+                  "pass",
+                  "take"
+                ],
+                "questions": [
+                  {
+                    "q": "a. At the end of each semester, I have to ________ an exam.",
+                    "q_ar": "في نهاية كل فصل دراسي، يتعين علي أن أؤدي امتحاناً.",
+                    "a": "take (take an exam = يؤدي أو يخوض امتحاناً)"
+                  },
+                  {
+                    "q": "b. If I get bad marks, I will ________ the exam.",
+                    "q_ar": "إذا حصلت على درجات متدنية، فسأرسب في الامتحان.",
+                    "a": "fail (fail the exam = يرسب في الامتحان)"
+                  },
+                  {
+                    "q": "c. If I get good marks, I will ________ the exam.",
+                    "q_ar": "إذا حصلت على درجات ممتازة، فسأنجح في الامتحان.",
+                    "a": "pass (pass the exam = يجتاز أو ينجح في الامتحان)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l6_ex5",
+                "num": "Exercise 5 (Page 95)",
+                "title": "Match the sentences (Cause & Prediction with 'going to').",
+                "title_ar": "طابق بين السبب والدليل الحاضر وبين التنبؤ المستقبلي باستخدام going to:",
+                "questions": [
+                  {
+                    "q": "a. She's at medical school. ->",
+                    "q_ar": "إنها تدرس في كلية الطب.",
+                    "a": "4 She's going to be a doctor. (ستصبح طبيبة)"
+                  },
+                  {
+                    "q": "b. He's a chef. ->",
+                    "q_ar": "إنه طاهٍ محترف.",
+                    "a": "1 The meal is going to be delicious. (ستكون الوجبة شهية ولذيذة)"
+                  },
+                  {
+                    "q": "c. It's raining. ->",
+                    "q_ar": "السماء تمطر في الخارج.",
+                    "a": "6 You're going to get wet. (سوف تتبلل إذا خرجت)"
+                  },
+                  {
+                    "q": "d. Look at the dark clouds. ->",
+                    "q_ar": "انظر إلى تلك الغيوم الداكنة المتراكمة.",
+                    "a": "5 It's going to rain. (السماء ستمطر قريباً)"
+                  },
+                  {
+                    "q": "e. There's a lot of traffic. ->",
+                    "q_ar": "هناك ازدحام مروري خانق.",
+                    "a": "3 I'm going to be late. (سأتأخر عن الموعد)"
+                  },
+                  {
+                    "q": "f. Watch out! ->",
+                    "q_ar": "انتبه واحذر!",
+                    "a": "2 She's going to fall. (إنها على وشك السقوط)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          94,
+          95
         ]
       },
       {
@@ -4267,7 +6664,90 @@ window.CURRICULUM_DATA = [
             "page": 66,
             "heading": "Unit 6 Lesson 7: Career plans (Part A) - سارة وعادل: الميول والصفات الشخصية (صفحة 66)",
             "text": "Unit 6 Lesson 7: Career plans (Part A) (صفحة 66)\nRead Sara and Adel's career plans and analyze their personality traits:\n• Sara (aged 14): 'I think I'm quite friendly and hard-working. At school, I'm good at Biology, Chemistry and English. I love animals very much. In my spare time, I volunteer at an animal shelter. When I finish school, I'm going to university to study Veterinary Medicine. I want to be a vet and take care of sick animals.'\n• Adel (aged 15): 'I'm calm, quiet and patient. I'm very good at French, English and Information Technology (IT). I'm not very good at Geography. I love computers and learning languages. Next year, I'm going to take my final secondary exams. If I get high marks, I'm going to study Computer Science and Artificial Intelligence.'\n\nCore Personality Adjectives:\nfriendly (ودود), hard-working (مجتهد), patient (صبور), quiet (هادئ), polite (مهذب), helpful (متعاون)."
+          },
+          {
+            "id": 55301,
+            "page": 66,
+            "is_activity_book": true,
+            "activity_book_page": 96,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 96 و 97): الخطط المهنية لسارة وعادل وقاعدة be good at وتصحيح الجمل والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 7: Career plans (Part A) (Activity Book pp. 96-97)\n\nExercise 1 (Page 96): Guided Text Completion:\n• Sara: friendly, hard-working, passed, good at languages, at English and French, not very good at Science.\n• Adel: hard-working, patient, angry, working with animals, working with horses, at Biology.\n\nGrammar Rule (Page 97): `be + good at / not good at + noun or -ing`.\nRemember that after 'good at', you must use a noun or a verb ending in -ing.\n• I am good at Maths.\n• I am good at speaking English.\n• I am not very good at drawing.",
+            "exercises": [
+              {
+                "id": "u6_l7_ex1",
+                "num": "Exercise 1 (Page 96)",
+                "title": "Complete the texts for Sara and Adel with the missing words.",
+                "title_ar": "أكمل نصي سارة وعادل بالكلمات المفقودة بدقة:",
+                "questions": [
+                  {
+                    "q": "Sara's Text missing words (a to g):",
+                    "q_ar": "الكلمات المفقودة في نص سارة:",
+                    "a": "a: friendly | b: hard | c: passed | d: good | e: at | f: not | g: good\n(النص الكامل: 'I'm 14 years old. I think I'm quite friendly and hard-working. I passed all my exams last year. At school, I'm good at languages. I'm very good at English and French. I'm not very good at Science. When I finish school...')"
+                  },
+                  {
+                    "q": "Adel's Text missing words (h to m):",
+                    "q_ar": "الكلمات المفقودة في نص عادل:",
+                    "a": "h: working | i: patient | j: angry | k: working | l: working | m: at\n(النص الكامل: 'I'm very hard-working and patient. I have two little brothers, and they never make me angry. At the weekend, I always go and help on a friend's farm because I love working with animals. I enjoy working with horses most. At school, I'm good at Biology...')"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l7_ex2",
+                "num": "Exercise 2 (Page 97)",
+                "title": "Write sentences about things you are good at and not good at.",
+                "title_ar": "اكتب جملاً تعبر فيها عما تجيده وما لا تجيده باستخدام good at:",
+                "questions": [
+                  {
+                    "q": "a. Something you are good at (noun):",
+                    "q_ar": "شيء تجيده (باستخدام اسم):",
+                    "a": "I am very good at English and Geography. (أنا جيد جداً في مادتي الإنجليزية والجغرافيا)"
+                  },
+                  {
+                    "q": "b. Something you are good at (verb-ing):",
+                    "q_ar": "نشاط تجيده (باستخدام فعل مضاف له -ing):",
+                    "a": "I am good at playing basketball and swimming. (أنا ماهر في لعب كرة السلة والسباحة)"
+                  },
+                  {
+                    "q": "c. Something you are not good at:",
+                    "q_ar": "شيء لست جيداً فيه:",
+                    "a": "I am not very good at drawing or singing. (لست جيداً في الرسم أو الغناء)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l7_ex3",
+                "num": "Exercise 3 (Page 97)",
+                "title": "Correct the sentences.",
+                "title_ar": "صحح الأخطاء النحوية في الجمل التالية:",
+                "questions": [
+                  {
+                    "q": "a. I'm not very good French.",
+                    "q_ar": "الخطأ: غياب حرف الجر at بعد good",
+                    "a": "Correction: I'm not very good at French. (إضافة حرف الجر at)"
+                  },
+                  {
+                    "q": "b. My favourite subject is English. I'm good at learn vocabulary.",
+                    "q_ar": "الخطأ: الفعل learn بعد at لم يضف له -ing",
+                    "a": "Correction: My favourite subject is English. I'm good at learning vocabulary. (تحويل الفعل إلى gerund: learning)"
+                  },
+                  {
+                    "q": "c. I'm also good Geography.",
+                    "q_ar": "الخطأ: نقص حرف الجر at",
+                    "a": "Correction: I'm also good at Geography."
+                  },
+                  {
+                    "q": "d. I don't like Science. I not very good at it.",
+                    "q_ar": "الخطأ: غياب فعل الكينونة am",
+                    "a": "Correction: I don't like Science. I am not very good at it. (إضافة am)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          96,
+          97
         ]
       },
       {
@@ -4280,7 +6760,132 @@ window.CURRICULUM_DATA = [
             "page": 67,
             "heading": "Unit 6 Lesson 8: Career plans (Part B) - خالد ودانية وقاعدة when (صفحة 67)",
             "text": "Unit 6 Lesson 8: Career plans (Part B) (صفحة 67)\nRead Khalid and Dania's plans and study the grammar of 'when':\n• Khalid: 'I think I'm quite friendly. At school, I'm good at Maths, but I'm not very good at the other subjects. However, I'm very good at making things with my hands. We have a lesson in Woodwork twice a week, and I love it! I make things at home as well: tables, shelves and cupboards. When I finish school, I'm going to be a carpenter and furniture maker.'\n• Dania: 'I'm very hard-working. I'm also very fit and healthy because I do a lot of sport. My favourite school subjects are Science and IT. I'm also very good at Geography and English. After school, I'm going to study Science at university. When I finish studying, I'm going to fly to the Moon in a spacecraft as an astronaut!'\n\nGrammar Focus: Talking about the future with 'when':\n• Form: When + Subject + Present Simple, Subject + be going to + infinitive.\n• Example: When I finish school, I am going to study Science at university.\n• Notice: Even though the whole sentence refers to future time, we must use the Present Simple tense in the 'when' clause!"
+          },
+          {
+            "id": 55401,
+            "page": 67,
+            "is_activity_book": true,
+            "activity_book_page": 98,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 98 و 99): الخطط المهنية لخالد ودانية وبنك صفات الشخصية والإنشاء والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 8: Career plans (Part B) (Activity Book pp. 98-99)\n\nExercise 1 (Page 98): Identifying Career Aspirations:\n• Adel: 'I'm going to go to college to learn how to make sick animals better. I'm going to be a vet.'\n• Khalid: 'I'm going to go to a vocational school to train to be a carpenter.'\n• Sara: 'I'm going to study French at university because I want to be a translator.'\n• Dania: 'I'm going to be an astronaut.'\n\nExercise 2 (Pages 98-99): Personality Adjectives:\nBox: [fit, friendly, hard-working, healthy, impatient, lazy, patient, unfit, unfriendly, unhealthy].\n\nExercise 3 & 4 (Page 99): Guided Career Plan Essay Model.",
+            "exercises": [
+              {
+                "id": "u6_l8_ex1",
+                "num": "Exercise 1 (Page 98)",
+                "title": "Read the texts from Lesson 7 and Lesson 8 again. Who says the following?",
+                "title_ar": "من قائل كل عبارة من العبارات التالية؟",
+                "questions": [
+                  {
+                    "q": "a. 'I'm going to go to college to learn how to make sick animals better. I'm going to be a vet.'",
+                    "q_ar": "'سأذهب للكلية لأتعلم كيف أعالج الحيوانات المريضة، وسأصبح طبيباً بيطرياً.'",
+                    "a": "Adel (عادل)"
+                  },
+                  {
+                    "q": "b. 'I'm going to go to a vocational school to train to be a carpenter.'",
+                    "q_ar": "'سألتحق بمدرسة مهنية لأتدرب وأصبح نجاراً ماهراً.'",
+                    "a": "Khalid (خالد)"
+                  },
+                  {
+                    "q": "c. 'I'm going to study French at university because I want to be a translator.'",
+                    "q_ar": "'سأدرس اللغة الفرنسية في الجامعة لأني أريد أن أصبح مترجمة.'",
+                    "a": "Sara (سارة)"
+                  },
+                  {
+                    "q": "d. 'I'm going to be an astronaut.'",
+                    "q_ar": "'سأصبح رائدة فضاء وأسافر في الفضاء الخارجي.'",
+                    "a": "Dania (دانية)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l8_ex2",
+                "num": "Exercise 2 (Pages 98-99)",
+                "title": "Read the sentences. Use the words from the box to describe the people.",
+                "title_ar": "صف كل شخص بالصفة المناسبة من الصندوق:",
+                "words_box": [
+                  "fit",
+                  "friendly",
+                  "hard-working",
+                  "healthy",
+                  "impatient",
+                  "lazy",
+                  "patient",
+                  "unfit",
+                  "unfriendly",
+                  "unhealthy"
+                ],
+                "questions": [
+                  {
+                    "q": "a. 'I always try to smile and say hello. I like to make people feel comfortable.'",
+                    "q_ar": "'أبتسم دائماً وأرحب بالآخرين وأحب أن يشعر الناس بالراحة.'",
+                    "a": "friendly (ودود / اجتماعي)"
+                  },
+                  {
+                    "q": "b. 'It's OK, take your time. There's no hurry.'",
+                    "q_ar": "'لا بأس، خذ وقتك فليس هناك داعٍ للاستعجال.'",
+                    "a": "patient (صبور)"
+                  },
+                  {
+                    "q": "c. 'No, sorry, I can't. I have to finish my homework.'",
+                    "q_ar": "'لا، أعتذر، لا أستطيع الخروج لأن علي إنهاء واجبي أولاً.'",
+                    "a": "hard-working (مجتهد ومثابر)"
+                  },
+                  {
+                    "q": "d. 'I go swimming on Mondays and Wednesdays, I play football on Saturdays...'",
+                    "q_ar": "'أمارس السباحة مرتين في الأسبوع وألعب كرة القدم بانتظام.'",
+                    "a": "fit (رشيق / لائق بدنياً)"
+                  },
+                  {
+                    "q": "e. 'She always looks angry, and she never smiles.'",
+                    "q_ar": "'تبدو دائماً غاضبة ولا تبتسم أبداً.'",
+                    "a": "unfriendly (غير ودودة / جافة)"
+                  },
+                  {
+                    "q": "f. 'I need to eat more fresh food. I always wake up tired and with a headache.'",
+                    "q_ar": "'أستيقظ دائماً متعباً مع صداع وبحاجة لطعام صحي.'",
+                    "a": "unhealthy (غير صحي)"
+                  },
+                  {
+                    "q": "g. 'Come on, hurry up, I don't have time.'",
+                    "q_ar": "'هيا أسرع، ليس لدي وقت كافٍ للانتظار.'",
+                    "a": "impatient (غير صبور / نافد الصبر)"
+                  },
+                  {
+                    "q": "h. 'It's OK. I'll finish my homework on my way to school.'",
+                    "q_ar": "'لا بأس، سأحل واجبي وأنا في الطريق إلى المدرسة.'",
+                    "a": "lazy (كسول ومماطل)"
+                  },
+                  {
+                    "q": "i. 'I spend all day playing computer games. I should do more exercise.'",
+                    "q_ar": "'أقضي اليوم بطوله في ألعاب الفيديو ولست قادراً على الجري.'",
+                    "a": "unfit (غير لائق بدنياً / خامل)"
+                  },
+                  {
+                    "q": "j. 'I try to eat lots of fruit and vegetables every day.'",
+                    "q_ar": "'أحرص على تناول الفواكه والخضار الطازجة يومياً.'",
+                    "a": "healthy (صحي)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l8_ex3",
+                "num": "Exercise 3 (Page 99)",
+                "title": "Write your own career plan. Make sure you answer the questions.",
+                "title_ar": "اكتب خطتك المهنية المستقبلية مستعيناً بالأسئلة التوجيهية:",
+                "questions": [
+                  {
+                    "q": "Write a model paragraph for your Career Plan (الإنشاء المعتمد للخطة المهنية):",
+                    "q_ar": "نموذج الإنشاء الوزاري المعتمد للخطة المهنية المستقبلية:",
+                    "a": "Model Essay (إنشاء نموذجي معتمد):\n'I am 14 years old. I think I am hard-working, patient, and friendly. At school, I am very good at English and Information Technology, but I am not very good at Art. In my spare time, I enjoy reading books and learning computer coding.\nWhen I finish school, I am going to study Computer Science at university because I want to become a successful software engineer and design useful mobile applications. To achieve my dream, I am going to study hard for my exams and never give up.'"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          98,
+          99
         ]
       },
       {
@@ -4293,7 +6898,165 @@ window.CURRICULUM_DATA = [
             "page": 68,
             "heading": "Unit 6 Lesson 9: Round Up - مراجعة الوحدة السادسة الشاملة (صفحة 68)",
             "text": "Unit 6 Lesson 9: Round Up (صفحة 68)\nIn Unit 6, you have practiced:\n1. Saying what jobs people do and defining them:\n   • He's a mechanic. She's an architect.\n   • An architect is someone who designs buildings.\n2. Talking about timetables and asking polite travel questions:\n   • 'Excuse me, can you help me, please?'\n   • 'What time is the first train to Paris? It leaves at 06:55.'\n   • 'Which train should I catch to arrive before four o'clock?'\n3. Describing planned future events with (be going to):\n   • When I finish school, I'm going to be a nurse.\n   • If he passes his exams, he is going to study zoology.\n4. Making predictions based on present evidence:\n   • Look at those dark clouds! It's going to rain.\n   • You haven't done any revision; you're going to fail the exam!\n5. Expressing ability and academic strengths:\n   • I'm good at Maths and Biology, but I'm not good at Geography.\n   • She is very good at working with money.\n6. Reading skills:\n   • Skimming for the main idea and scanning quickly for specific details (like train times and phone numbers)."
+          },
+          {
+            "id": 55501,
+            "page": 68,
+            "is_activity_book": true,
+            "activity_book_page": 100,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 100): مراجعة الوحدة الشاملة (Round up) وتصنيف المهن والمواد الدراسية والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 9: Unit 6 Round up (Activity Book p. 100)\n\nExercise 1: Missing letters of key professions.\nExercise 2: Identifying who performs each specialized role.\nExercise 3: Categorizing school subjects to core scientific domains.\nExercise 4: Constructing grammatically sound questions for future plan answers.",
+            "exercises": [
+              {
+                "id": "u6_l9_ex1",
+                "num": "Exercise 1 (Page 100)",
+                "title": "Fill in the missing letters to complete the names of professions.",
+                "title_ar": "أكمل الحروف المفقودة لكتابة أسماء المهن بصورة إملائية صحيحة:",
+                "questions": [
+                  {
+                    "q": "a. me _ _ anic",
+                    "q_ar": "ميكانيكي سيارات",
+                    "a": "mechanic (الحرفان المفقودان: ch)"
+                  },
+                  {
+                    "q": "b. b _ s dr _ _ er",
+                    "q_ar": "سائق حافلة",
+                    "a": "bus driver (الحروف المفقودة: u, iv)"
+                  },
+                  {
+                    "q": "c. ar _ _ itect",
+                    "q_ar": "مهندس معماري",
+                    "a": "architect (الحرفان المفقودان: ch)"
+                  },
+                  {
+                    "q": "d. astron _ _ t",
+                    "q_ar": "رائد فضاء",
+                    "a": "astronaut (الحرفان المفقودان: au)"
+                  },
+                  {
+                    "q": "e. translat _ _",
+                    "q_ar": "مترجم لغات",
+                    "a": "translator (الحرفان المفقودان: or)"
+                  },
+                  {
+                    "q": "f. carp _ nt _ _",
+                    "q_ar": "نجار خشب",
+                    "a": "carpenter (الحروف المفقودة: e, er)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l9_ex2",
+                "num": "Exercise 2 (Page 100)",
+                "title": "Answer the questions with words from Exercise 1.",
+                "title_ar": "أجب عن الأسئلة التالية باستخدام أسماء المهن من التمرين الأول:",
+                "questions": [
+                  {
+                    "q": "a. Who wears a uniform?",
+                    "q_ar": "من الذي يرتدي زياً رسمياً؟",
+                    "a": "A bus driver / astronaut / mechanic (سائق الحافلة أو رائد الفضاء)"
+                  },
+                  {
+                    "q": "b. Who knows other languages?",
+                    "q_ar": "من الذي يتقن لغات أجنبية أخرى؟",
+                    "a": "A translator (المترجم)"
+                  },
+                  {
+                    "q": "c. Who flies in a spacecraft?",
+                    "q_ar": "من الذي يحلق في مركبة فضائية؟",
+                    "a": "An astronaut (رائد الفضاء)"
+                  },
+                  {
+                    "q": "d. Who designs buildings?",
+                    "q_ar": "من الذي يصمم المباني والمنازل؟",
+                    "a": "An architect (المهندس المعماري)"
+                  },
+                  {
+                    "q": "e. Who repairs cars?",
+                    "q_ar": "من الذي يصلح السيارات المعطلة؟",
+                    "a": "A mechanic (الميكانيكي)"
+                  },
+                  {
+                    "q": "f. Who makes things with wood?",
+                    "q_ar": "من الذي يصنع الأثاث والأشياء من الخشب؟",
+                    "a": "A carpenter (النجار)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l9_ex3",
+                "num": "Exercise 3 (Page 100)",
+                "title": "Each of the words or phrases in the box is connected to a school subject. Write them next to the correct subject.",
+                "title_ar": "طابق كل موضوع أو عبارة من الصندوق بالمادة الدراسية المناسبة:",
+                "words_box": [
+                  "computers",
+                  "heat and light",
+                  "living things",
+                  "numbers and shapes",
+                  "paint",
+                  "weather and population"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Physics ->",
+                    "q_ar": "مادة الفيزياء",
+                    "a": "heat and light (الحرارة والضوء والطاقة)"
+                  },
+                  {
+                    "q": "b. Geography ->",
+                    "q_ar": "مادة الجغرافيا",
+                    "a": "weather and population (الطقس وتوزيع السكان وتضاريس الأرض)"
+                  },
+                  {
+                    "q": "c. Biology ->",
+                    "q_ar": "مادة علم الأحياء",
+                    "a": "living things (الكائنات الحية والنباتات والحيوانات)"
+                  },
+                  {
+                    "q": "d. Maths ->",
+                    "q_ar": "مادة الرياضيات",
+                    "a": "numbers and shapes (الأرقام والعمليات الحسابية والأشكال الهندسية)"
+                  },
+                  {
+                    "q": "e. Art ->",
+                    "q_ar": "مادة التربية الفنية",
+                    "a": "paint (الرسم والتلوين والأعمال الفنية)"
+                  },
+                  {
+                    "q": "f. Information Technology (IT) ->",
+                    "q_ar": "مادة الحاسوب وتكنولوجيا المعلومات",
+                    "a": "computers (الحواسيب والبرمجيات وشبكة الإنترنت)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l9_ex4",
+                "num": "Exercise 4 (Page 100)",
+                "title": "Read the answers below and write the questions.",
+                "title_ar": "اقرأ الإجابات التالية وصغ الأسئلة المناسبة لها بدقة:",
+                "questions": [
+                  {
+                    "q": "a. Answer: 'When I finish school, I'm going to be a newspaper reporter.'",
+                    "q_ar": "'عندما أنهي دراستي، سأصبح مراسلاً صحفياً.'",
+                    "a": "Question: What are you going to be when you finish school? (ماذا ستصبح عندما تنهي المدرسة؟)"
+                  },
+                  {
+                    "q": "b. Answer: 'I'm going to study Maths at university.'",
+                    "q_ar": "'سأدرس الرياضيات في الجامعة.'",
+                    "a": "Question: What are you going to study at university? (ماذا ستدرس في الجامعة؟)"
+                  },
+                  {
+                    "q": "c. Answer: 'I'm going to work at the airport.'",
+                    "q_ar": "'سأعمل في المطار الدولي.'",
+                    "a": "Question: Where are you going to work? (أين ستعمل؟)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          100
         ]
       },
       {
@@ -4306,7 +7069,109 @@ window.CURRICULUM_DATA = [
             "page": 69,
             "heading": "Unit 6 Lesson 10: Story Time - جاد وجوني في جبال الألب (الجزء الأول: رحلة التلفريك) (صفحة 69)",
             "text": "Unit 6 Lesson 10: Story Time - Jad and Johnny in the Alps (Part 1 - صفحة 69)\nListen, read and find out:\n'Tom! Can you drive slowly, please?' shouted Marcus. 'Don't worry,' said Tom. 'I know what I'm doing.'\nWe were all in the minibus, and we were driving through the Alps, the biggest mountain range in Europe. We were very high up. There were tall mountains on one side of the road and a huge drop on the other side.\n'This is so cool,' said Aziz. 'Maybe I'm going to be a bus driver when I'm older.'\nJad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said.\n'What are we doing here anyway, Tom?' asked Marcus. 'We're all going to go skiing,' Tom replied.\n'Yes! I'm good at skiing,' said Marcus. 'Me too!' said Paolo. 'I'm going to be a ski instructor when I'm older.'\n'What are you going to be when you're older, Johnny?' asked Jad. 'I don't know,' I said.\n'Just remember, Johnny,' said Tom, 'you're going to go down a blue route. That's the one for beginners.'\n'Paolo and I are going to ski down the red route,' said Marcus. 'That's more difficult.'\n'And nobody is going to go down a black route,' said Tom. 'They are the most difficult.'\n'Blue, red, black...' I said to myself, 'that's confusing.'\nWe got on the chairlift that takes people up the mountain. I was sitting next to Jad."
+          },
+          {
+            "id": 55601,
+            "page": 69,
+            "is_activity_book": true,
+            "activity_book_page": 101,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 101): وقت القصة (Story time: جاد وجوني في جبال الألب - الجزء الأول) والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 10: Story time - Jad and Johnny: The Alps (Activity Book p. 101)\n\nExercise 1: Story Information Card:\n• Title: Jad and Johnny - The Alps\n• Characters: Jad, Johnny, Aziz, Paolo, Marcus\n• What it is about: The boys are on a skiing holiday in the European Alps. Johnny accidentally enters a dangerous black ski slope and unintentionally wins the downhill race!\n• Why I liked/didn't like the story: It was very funny and exciting seeing Johnny speed down the mountain terrified while winning the race.\n• New words: piste, route, slope, trophy, cheering, ski lift, competitor.\n\nExercise 2: Ski Route Colour Codes:\n• easy: blue (or green) | • difficult: red | • most difficult: black.\n\nExercise 3: Detailed Comprehension Questions.",
+            "exercises": [
+              {
+                "id": "u6_l10_ex1",
+                "num": "Exercise 1 (Page 101)",
+                "title": "Read the story and complete the information below.",
+                "title_ar": "أكمل بطاقة معلومات قصة جاد وجوني في جبال الألب:",
+                "questions": [
+                  {
+                    "q": "a. Title (عنوان القصة):",
+                    "q_ar": "عنوان القصة الأدبية:",
+                    "a": "Jad and Johnny - The Alps (جاد وجوني - جبال الألب)"
+                  },
+                  {
+                    "q": "b. Characters (الشخصيات):",
+                    "q_ar": "شخصيات القصة الرئيسية:",
+                    "a": "Jad, Johnny, Aziz, Paolo, and Marcus (جاد، جوني، عزيز، باولو، وماركوس)"
+                  },
+                  {
+                    "q": "c. What it is about (فكرة وموضوع القصة):",
+                    "q_ar": "عن ماذا تدور أحداث القصة؟",
+                    "a": "The boys are on a skiing trip in the Alps. Johnny takes the steep black slope by mistake, cannot stop, and accidentally wins the trophy in a ski race! (رحلة التزلج في الألب، ودخول جوني عن غير قصد في المنحدر الأسود وفوزه بكأس السباق)."
+                  },
+                  {
+                    "q": "d. Why I liked/didn't like the story (رأيك في القصة):",
+                    "q_ar": "لماذا أعجبتك القصة؟",
+                    "a": "I liked it because it was extremely funny, fast-paced, and full of hilarious misunderstandings (أعجبتني لأنها مضحكة ومليئة بالإثارة والمواقف الكوميدية)."
+                  },
+                  {
+                    "q": "e. New words (المفردات الجديدة):",
+                    "q_ar": "أبرز الكلمات والمصطلحات الجديدة:",
+                    "a": "slope (منحدر), piste (مسار تزلج), route (طريق), trophy (كأس بطولة), cheering (هتاف وتشجيع), ski lift (مصعد التزلج)."
+                  }
+                ]
+              },
+              {
+                "id": "u6_l10_ex2",
+                "num": "Exercise 2 (Page 101)",
+                "title": "What colour is for each route in the ski resort?",
+                "title_ar": "ما هي الألوان المعتمدة لكل مستوى من مسارات التزلج الجبلية؟",
+                "questions": [
+                  {
+                    "q": "a. easy route ->",
+                    "q_ar": "المسار السهل للمبتدئين:",
+                    "a": "blue (الأزرق - أو الأخضر)"
+                  },
+                  {
+                    "q": "b. difficult route ->",
+                    "q_ar": "المسار الصعب للمتمرسين:",
+                    "a": "red (الأحمر)"
+                  },
+                  {
+                    "q": "c. most difficult route ->",
+                    "q_ar": "المسار الأكثر صعوبة وخطورة للمحترفين:",
+                    "a": "black (الأسود)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l10_ex3",
+                "num": "Exercise 3 (Page 101)",
+                "title": "Answer the questions about the story events.",
+                "title_ar": "أجب عن الأسئلة الاستيعابية التالية حول أحداث القصة:",
+                "questions": [
+                  {
+                    "q": "a. What do the boys say they are going to be when they're older?",
+                    "q_ar": "ماذا قال كل من الأولاد عما سيصبح عليه في المستقبل؟",
+                    "a": "• Aziz: a flight attendant or pilot (مضيف طيران أو طيار)\n• Paolo: a ski instructor (مدرب تزلج على الجليد)\n• Jad: a photographer or journalist (مصور صحفي)\n• Johnny: a famous champion skier (بطل تزلج مشهور)"
+                  },
+                  {
+                    "q": "b. What do the boys say Johnny is going to be when he's older?",
+                    "q_ar": "بماذا مازح الأولاد جوني حول مهنته المستقبلية؟",
+                    "a": "They teased him that he would be a comedian or a funny clown because of his clumsiness (مازحوه بأنه سيكون ممثلاً كوميدياً أو مهرجاً لكثرة تعثره)."
+                  },
+                  {
+                    "q": "c. What routes do the boys say they are going to go down?",
+                    "q_ar": "ما هي المسارات التي اختارها الأولاد للتزلج؟",
+                    "a": "Johnny chose the blue route (easy), while Paolo and Marcus chose the red route (difficult)."
+                  },
+                  {
+                    "q": "d. Why was Johnny very surprised at the end?",
+                    "q_ar": "لماذا تفاجأ جوني بشدة عند وصوله إلى نهاية المنحدر؟",
+                    "a": "Because a cheering crowd welcomed him, took photos, and handed him the championship trophy for winning the race! (لأن حشداً من الناس كان يهتف له وقدموا له كأس المركز الأول في سباق التزلج السريع)."
+                  },
+                  {
+                    "q": "e. Why didn't Johnny stop during his descent?",
+                    "q_ar": "لماذا لم يتوقف جوني أثناء انحداره السريع؟",
+                    "a": "Because he was on the steep black slope, moving too fast, and had completely lost control of his skis (لأن المنحدر كان شديد الانحدار ولم يستطع السيطرة على زلاجاته لإيقافها)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          101
         ]
       },
       {
@@ -4319,7 +7184,155 @@ window.CURRICULUM_DATA = [
             "page": 70,
             "heading": "Unit 6 Lesson 11: Story Time - جاد وجوني في جبال الألب (الجزء الثاني: الفوز بالسباق والميدالية الذهبية) (صفحة 70)",
             "text": "Unit 6 Lesson 11: Story Time - Jad and Johnny in the Alps (Part 2 - صفحة 70)\n'This is so beautiful,' Jad said. 'I'm going to take lots of photographs.' He took out his camera and kept clicking.\nAfter a few minutes, I saw the sign telling us to get off the lift. 'Jad,' I said. 'We're going to get off here.'\n'Yeah, OK,' he replied. 'I just need to take one more photograph.'\nI got off the lift, and it kept on moving. I looked up and Jad was still sitting down! 'Jad! You need to get off!'\nJad took his photograph and tried to slide off the lift. But it was too high, and he landed on his back! He wasn't hurt, but he was covered from head to toe in white snow. 'This is not a very good start,' he laughed.\nWe started to ski down the mountain, and we were having lots of fun. We sometimes fell over, but it wasn't steep, and we weren't going very fast. 'Let's race!' said Jad suddenly, and he skied past me.\n'Wait!' I shouted. I wasn't fast enough, and Jad disappeared down the mountain.\nAfter a few minutes, I reached a fork in the path with a signpost. It showed a blue route to the left and a black route to the right. I tried to remember what Tom had said about the colours.\n'I think Tom said the black routes are easy,' I mistakenly said to myself, and I started skiing down the black route!\n'Aaaaarggghhh!' I screamed. Suddenly, I was skiing down a terribly steep slope, weaving between trees at lightning speed! I was going so fast, I was overtaking dozens of experienced skiers. I wanted to stop, but I didn't know how!\nThen I saw a big sign that said 'FINISH'. Tom and the other boys were standing next to the sign, and their jaws dropped in astonishment when I zoomed past them across the finish line! Finally, I fell into a soft snowdrift and stopped.\n'Amazing!' said Paolo. 'You won the race, Johnny!' cheered Marcus. 'What race?!' I asked, bewildered.\n'Congratulations, young man!' said an official, and he placed a glittering gold medal around my neck.\nJad walked over with a broad grin: 'I think I know what you're going to be when you're older, Johnny... A professional skier!'"
+          },
+          {
+            "id": 55701,
+            "page": 70,
+            "is_activity_book": true,
+            "activity_book_page": 125,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 125): الأنشطة الإضافية التراكمية (Extra activities) للوحدة السادسة والحلول النموذجية المعتمدة",
+            "text": "Unit 6 Lesson 11: Extra activities (Activity Book p. 125)\n\nExercise 1 (Page 125 - Track 62): Listening to career choices:\nTicking the exact job each young person talks about:\na: cook | b: teacher | c: pilot | d: doctor | e: vet | f: architect.\n\nExercise 2 (Page 125): Determining Workplaces:\nIdentifying the work environment for each profession.\n\nExercise 3 (Page 125): Sentence Completion with Core Vocabulary:\nBox: [career, fail, for certain, patient, repair, study, take, uniform].",
+            "exercises": [
+              {
+                "id": "u6_l11_ex1",
+                "num": "Exercise 1 (Page 125)",
+                "title": "Listen (Track 62) and tick the job each person is going to do.",
+                "title_ar": "استمع للمتحدثين (التسجيل 62) وضع علامة (✓) بجانب المهنة التي سيختارها كل شخص:",
+                "questions": [
+                  {
+                    "q": "a. Person a choice: [businessman / reporter / cook]",
+                    "q_ar": "مهنة الشخص (a):",
+                    "a": "cook (طاهٍ / طباخ)"
+                  },
+                  {
+                    "q": "b. Person b choice: [cook / teacher / translator]",
+                    "q_ar": "مهنة الشخص (b):",
+                    "a": "teacher (معلم)"
+                  },
+                  {
+                    "q": "c. Person c choice: [astronaut / bus driver / pilot]",
+                    "q_ar": "مهنة الشخص (c):",
+                    "a": "pilot (طيار)"
+                  },
+                  {
+                    "q": "d. Person d choice: [doctor / ski instructor / teacher]",
+                    "q_ar": "مهنة الشخص (d):",
+                    "a": "doctor (طبيب)"
+                  },
+                  {
+                    "q": "e. Person e choice: [nurse / vet / farmer]",
+                    "q_ar": "مهنة الشخص (e):",
+                    "a": "vet (طبيب بيطري)"
+                  },
+                  {
+                    "q": "f. Person f choice: [office manager / architect / zoologist]",
+                    "q_ar": "مهنة الشخص (f):",
+                    "a": "architect (مهندس معماري)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l11_ex2",
+                "num": "Exercise 2 (Page 125)",
+                "title": "What kind of workplace do you think each job will be in?",
+                "title_ar": "حدد مكان وبيئة العمل النموذجية لكل مهنة من المهن المذكورة في التمرين الأول:",
+                "questions": [
+                  {
+                    "q": "a. cook ->",
+                    "q_ar": "مكان عمل الطاهي:",
+                    "a": "In a restaurant / hotel kitchen (في مطبخ مطعم أو فندق)"
+                  },
+                  {
+                    "q": "b. teacher ->",
+                    "q_ar": "مكان عمل المعلم:",
+                    "a": "In a school / classroom (في مدرسة أو صف دراسي)"
+                  },
+                  {
+                    "q": "c. pilot ->",
+                    "q_ar": "مكان عمل الطيار:",
+                    "a": "In an aeroplane / at the airport (في قمرة قيادة الطائرة / في المطار)"
+                  },
+                  {
+                    "q": "d. doctor ->",
+                    "q_ar": "مكان عمل الطبيب:",
+                    "a": "In a hospital / clinic (في مستشفى أو عيادة طبية)"
+                  },
+                  {
+                    "q": "e. vet ->",
+                    "q_ar": "مكان عمل الطبيب البيطري:",
+                    "a": "In an animal hospital / surgery / on a farm (في عيادة بيطرية أو مزرعة)"
+                  },
+                  {
+                    "q": "f. architect ->",
+                    "q_ar": "مكان عمل المهندس المعماري:",
+                    "a": "In an office / design studio (في مكتب هندسي / استوديو تصميم)"
+                  }
+                ]
+              },
+              {
+                "id": "u6_l11_ex3",
+                "num": "Exercise 3 (Page 125)",
+                "title": "Complete the sentences. Use the words from the box.",
+                "title_ar": "أكمل الجمل التالية باستخدام الكلمات المناسبة من الصندوق:",
+                "words_box": [
+                  "career",
+                  "fail",
+                  "for certain",
+                  "patient",
+                  "repair",
+                  "study",
+                  "take",
+                  "uniform"
+                ],
+                "questions": [
+                  {
+                    "q": "a. My car isn't working, so I'll ask the mechanic to ________ it.",
+                    "q_ar": "سيارتي معطلة، لذلك سأطلب من الميكانيكي أن يصلحها.",
+                    "a": "repair (يصلح)"
+                  },
+                  {
+                    "q": "b. When I finish school, I'm going to ________ English at university.",
+                    "q_ar": "عندما أنهي المدرسة، سأدرس اللغة الإنجليزية في الجامعة.",
+                    "a": "study (يدرس)"
+                  },
+                  {
+                    "q": "c. In my last year at school, I have to ________ an important exam.",
+                    "q_ar": "في سنتي الأخيرة بالمدرسة، يتعين علي تأدية امتحان مصيري هام.",
+                    "a": "take (يؤدي امتحاناً - take an exam)"
+                  },
+                  {
+                    "q": "d. If I don't work hard, I'll ________ the exam.",
+                    "q_ar": "إن لم أجتهد وأثابر، فسأرسب في الامتحان.",
+                    "a": "fail (يرسب في الامتحان)"
+                  },
+                  {
+                    "q": "e. Our teacher never gets angry with us. She's very ________.",
+                    "q_ar": "معلمتنا لا تغضب منا أبداً، إنها صبورة للغاية.",
+                    "a": "patient (صبورة)"
+                  },
+                  {
+                    "q": "f. Use 'going to' when you know ________ what will happen.",
+                    "q_ar": "نستخدم صيغة going to عندما نعرف على وجه التأكيد واليقين ما سيحدث.",
+                    "a": "for certain (على وجه اليقين والتأكيد)"
+                  },
+                  {
+                    "q": "g. Before I finish school, I'll make a plan for my future ________.",
+                    "q_ar": "قبل أن أنهي دراستي المدرسية، سأضع خطة لمسيرتي المهنية المستقبلية.",
+                    "a": "career (مسيرة مهنية / مستقبل وظيفي)"
+                  },
+                  {
+                    "q": "h. I don't want to be a policeman because I don't want to wear a ________.",
+                    "q_ar": "لا أرغب في أن أصبح شرطياً لأني لا أحب ارتداء الزي الموحد.",
+                    "a": "uniform (زي رسمي موحد)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          101,
+          125
         ]
       }
     ]
@@ -4339,7 +7352,102 @@ window.CURRICULUM_DATA = [
             "page": 71,
             "heading": "Unit 7 Lesson 1: World problems & Environmental Headlines - مشاكل العالم وعناوين الأخبار (صفحة 71)",
             "text": "Unit 7: The world around us - Lesson 1: World problems\nRead the newspaper headlines from around the world and match them to the photographs:\n\n1. Brazil:\n\"More and more of the rainforest being destroyed\"\n(Scientists warn that massive clearing of Amazon trees threatens global weather patterns and releases carbon.)\n\n2. Kenya:\n\"Sixteen elephants found dead\"\n(Park rangers discovered elephants killed by illegal poachers hunting for valuable ivory tusks.)\n\n3. Egypt:\n\"Population reaches 100 million\"\n(The nation's population crosses the 100 million milestone, increasing demand for housing, food and water.)\n\n4. Japan:\n\"Air pollution a danger to young and old, doctor warns\"\n(Harmful emissions from motor vehicles and manufacturing plants cause respiratory illnesses in urban centres.)\n\n5. France:\n\"Litter drowns town!\"\n(Excessive packaging and domestic waste accumulate on streets and parks after municipal disposal problems.)\n\n6. Water pollution:\n\"Waste from factory pollutes town's water supply\"\n(Toxic chemical discharges from local industrial facilities contaminate drinking water and kill river fish.)\n\nTalk about the questions:\n• What do you know about the problems in the newspaper headlines?\n• Do you know the reasons for them?\n• What can we do about them?\n\nGrammar & Headline Language Features (خصائص لغة العناوين الصحفية):\nNewspaper headlines are usually not complete sentences:\n• Auxiliary verbs (is, are, was, were) and articles (a, an, the) are omitted to save space and attract attention:\n  - Headline: \"World getting warmer, scientists say.\"\n    Full sentence: \"The world is getting warmer, scientists say.\"\n  - Headline: \"Sixteen elephants found dead.\"\n    Full sentence: \"Sixteen elephants were found dead.\"\n  - Headline: \"Litter drowns town!\"\n    Full sentence: \"Litter is drowning the town!\""
+          },
+          {
+            "id": 30012,
+            "page": 71,
+            "is_activity_book": true,
+            "activity_book_page": 102,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 102 و 103): مشاكل البيئة وصياغة عناوين الصحف وتقرير حملة النظافة الكبرى والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 1: World problems (Activity Book pp. 102-103)\n\nExercise A & 1 (Page 102): Converting Sentences to Newspaper Headlines:\nHeadlines omit articles (a, an, the) and auxiliary verbs (is, are), using present simple for recent events:\n• The moving desert is swallowing up Iraq -> MOVING DESERT SWALLOWS UP IRAQ\n• A Green Team are cleaning up Iraq's streets -> GREEN TEAM CLEANS IRAQ'S STREETS\n• The number of wild leopards is in sharp decline -> WILD LEOPARD POPULATION IN SHARP DECLINE\n• Water pollution is a huge danger to the local population and wildlife -> WATER POLLUTION THREATENS POPULATION AND WILDLIFE\n\nExercise 2 (Page 103): Reading Comprehension - 'The big clean-up':\nHundreds of volunteers cleaning streets, parks, and picnic sites over three months to protect children and nature.",
+            "exercises": [
+              {
+                "id": "u7_l1_ex1",
+                "num": "Exercise 1 (Page 102)",
+                "title": "Write the sentences again as newspaper headlines.",
+                "title_ar": "أعد كتابة الجمل التالية بأسلوب عناوين الصحف (حذف أدوات التعريف وأفعال الكينونة واستخدام المضارع البسيط):",
+                "questions": [
+                  {
+                    "q": "a. The moving desert is swallowing up Iraq.",
+                    "q_ar": "الصحراء المتحركة تبتلع الأراضي الزراعية في العراق.",
+                    "a": "MOVING DESERT SWALLOWS UP IRAQ (الصحراء المتحركة تبتلع العراق)"
+                  },
+                  {
+                    "q": "b. A Green Team are cleaning up Iraq's streets.",
+                    "q_ar": "فريق بيئي أخضر ينظف شوارع العراق.",
+                    "a": "GREEN TEAM CLEANS IRAQ'S STREETS (فريق أخضر ينظف شوارع العراق)"
+                  },
+                  {
+                    "q": "c. The number of wild leopards is in sharp decline.",
+                    "q_ar": "أعداد النمور البرية تشهد انخفاضاً وتراجعاً حاداً.",
+                    "a": "WILD LEOPARD POPULATION IN SHARP DECLINE (أعداد النمور البرية في تراجع حاد)"
+                  },
+                  {
+                    "q": "d. Water pollution is a huge danger to the local population and wildlife.",
+                    "q_ar": "تلوث المياه يمثل خطراً جسيماً على السكان والحياة البرية.",
+                    "a": "WATER POLLUTION THREATENS POPULATION AND WILDLIFE (تلوث المياه يهدد السكان والحياة البرية)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l1_ex2",
+                "num": "Exercise 2 (Page 103)",
+                "title": "Read the newspaper report and tick the best headline. Then answer the questions.",
+                "title_ar": "اختر أفضل عنوان لتقرير الصحيفة حول حملة النظافة ثم أجب عن الأسئلة:",
+                "questions": [
+                  {
+                    "q": "Best Headline choice: [a. Litter / b. The big clean-up / c. Lots of people go out picking up litter]",
+                    "q_ar": "اختيار العنوان الصحفي الأنسب للتقرير:",
+                    "a": "b. The big clean-up (حملة النظافة الكبرى - هو العنوان الأكثر دقة وجاذبية)"
+                  },
+                  {
+                    "q": "a. When did people help to clean up litter?",
+                    "q_ar": "متى شارك المتطوعون في جمع القمامة وتنظيف المدينة؟",
+                    "a": "For the past three months, in their spare time (خلال الأشهر الثلاثة الماضية في أوقات فراغهم)."
+                  },
+                  {
+                    "q": "b. In which two places did university students work?",
+                    "q_ar": "في أي موقعين عمل طلبة الجامعة؟",
+                    "a": "In different streets in the town, and in a local park (في شوارع مختلفة من المدينة، وفي حديقة عامة)."
+                  },
+                  {
+                    "q": "c. Where did schoolchildren work?",
+                    "q_ar": "أين عمل تلاميذ المدارس؟",
+                    "a": "In picnic places outside the city (في متنزهات وأماكن النزهات العائلية خارج المدينة)."
+                  },
+                  {
+                    "q": "d. How did Jameela describe these places?",
+                    "q_ar": "كيف وصفت الطالبة جميلة تلك الأماكن؟",
+                    "a": "As lovely places where children can play and run about safely, but ruined by old cans, bottles, and plastic bags (أماكن جميلة وآمنة للعب الأطفال لولا القمامة والعلب البلاستيكية المشوهة لها)."
+                  },
+                  {
+                    "q": "e. What makes them dangerous?",
+                    "q_ar": "ما الذي يجعل القمامة خطرة على الأطفال؟",
+                    "a": "Sharp metal cans, broken glass bottles, and dirty rotting food waste (العلب المعدنية الحادة، والزجاج المكسور، وبقايا الطعام المتعفنة)."
+                  },
+                  {
+                    "q": "f. Think of one reason why litter can be dangerous to children:",
+                    "q_ar": "اذكر سبباً واضحاً لخطورة القمامة على الأطفال:",
+                    "a": "Children can cut themselves badly on broken glass or catch diseases from germs and dirty waste (قد يجرح الأطفال أنفسهم بالزجاج الحاد أو يصابون بالأمراض)."
+                  },
+                  {
+                    "q": "g. Who might be the youngest worker?",
+                    "q_ar": "من هي أصغر متطوعة شاركت في الحملة؟",
+                    "a": "Little Muna, who is only four years old (الطفلة منى، وعمرها أربع سنوات فقط)."
+                  },
+                  {
+                    "q": "h. What is your opinion of what Saeed Abdullah said?",
+                    "q_ar": "ما رأيك فيما قاله السيد سعيد عبد الله عن تعليم الأطفال النظافة؟",
+                    "a": "I completely agree with him; teaching children civic duty and environmental cleanliness from an early age builds a responsible society (أتفق معه تماماً؛ فتوعية الأطفال منذ الصغر تضمن حماية بيئة الوطن مدى الحياة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          102,
+          103
         ]
       },
       {
@@ -4352,7 +7460,118 @@ window.CURRICULUM_DATA = [
             "page": 72,
             "heading": "Unit 7 Lesson 2: How can we help? - السوق الخيري لمساعدة التعليم وقاعدة should و must (صفحة 72)",
             "text": "Unit 7 Lesson 2: How can we help?\nSara was very upset when she read the article. Read it and find out why:\n\n\"Send a child to school for 100 dollars!\nIn many African countries, people have to pay to go to school. Unfortunately, many parents are too poor to do this, so their children must go without education. This is very bad for their future and for the future of their country. In some countries, just 100 dollars can pay for one child to go to school for a whole year.\"\n\nDialogue - Sara and her friends decide to act:\nNoora: We should do something.\nSara: No. We must do something!\nDalia: But what?\nLayla: We must collect money to send some children to school.\nDalia: I know! Let's have a bring-and-buy sale.\nLayla: What's that?\nNoora: Everyone brings something to be sold. And everyone buys something.\nSara: That's a great idea. We can advertise it in the school magazine.\nDalia: Wonderful! I have some CDs. I'll bring those.\nLayla: I can help. I'll bring some plants. I grow them in our garden.\nNoora: And I have lots of clothes.\nSara: I'll bake some cakes.\nDalia: Wait! Wait! Where are we going to have this sale?\nLayla: In the school playground, I hope. Let's go and ask the headmistress.\nNoora: Good idea.\n\nGrammar Focus - should and must:\n1. Should (نصيحة - Advice):\n   • We use 'should' to give advice to someone:\n     - Example: You should work harder. You'll get better marks in your exam.\n     - Negative: You shouldn't eat that. It's not good for you.\n2. Must (إلزام وواجب قاطع - Strong Obligation / Rule):\n   • 'Must' is much stronger than 'should'. It means 'have to' or 'have got to':\n     - Example: You must work harder. If you don't, you'll fail your exam.\n     - Negative (نهي وتحريم): You mustn't throw litter in the street.\n3. Making Offers with 'I will / I'll':\n   • Spontaneous decisions and voluntary offers:\n     - I'll bring some plants.\n     - I'll bake some cakes.\n     - I'll bring my old camera."
+          },
+          {
+            "id": 30022,
+            "page": 72,
+            "is_activity_book": true,
+            "activity_book_page": 104,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 104 و 105): النبر الصوتي وقاعدة should و must والسوق الخيري المدرسي والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 2: How can we help? (Activity Book pp. 104-105)\n\nExercise 1 (Page 104 - Track 52): Syllable Stress:\nUnderlining the stressed syllable in compound and multisyllabic words:\n• something | • advertise | • everyone | • playground | • headmistress.\n\nExercise 2 (Page 104): Modals of Obligation and Advice (should vs must):\n• must = strong legal, safety, or mandatory obligation (إلزام إجباري وقانوني حتمي).\n• should = good advice or moral recommendation (نصيحة وتوجيه أخلاقي مفيد).\n\nExercise 3 & 5 (Pages 104-105): Bring-and-Buy School Charity Sale and Letter Model.",
+            "exercises": [
+              {
+                "id": "u7_l2_ex1",
+                "num": "Exercise 1 (Page 104)",
+                "title": "Underline the strong syllable in the words (Track 52). Then listen and check.",
+                "title_ar": "ضع خطاً تحت المقطع الصوتي القوي (المشدد) في الكلمات التالية:",
+                "questions": [
+                  {
+                    "q": "a. something ->",
+                    "q_ar": "المقطع المشدد في كلمة شيء ما:",
+                    "a": "'some-thing (المقطع الأول: some هو المشدد)"
+                  },
+                  {
+                    "q": "b. advertise ->",
+                    "q_ar": "المقطع المشدد في كلمة يعلن:",
+                    "a": "'ad-ver-tise (المقطع الأول: ad هو المشدد)"
+                  },
+                  {
+                    "q": "c. everyone ->",
+                    "q_ar": "المقطع المشدد في كلمة الجميع:",
+                    "a": "'eve-ry-one (المقطع الأول: eve هو المشدد)"
+                  },
+                  {
+                    "q": "d. playground ->",
+                    "q_ar": "المقطع المشدد في كلمة باحة اللعب:",
+                    "a": "'play-ground (المقطع الأول: play هو المشدد)"
+                  },
+                  {
+                    "q": "e. headmistress ->",
+                    "q_ar": "المقطع المشدد في كلمة مديرة المدرسة:",
+                    "a": "head-'mis-tress (المقطع الثاني: mis هو المشدد)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l2_ex2",
+                "num": "Exercise 2 (Page 104)",
+                "title": "Complete the sentences using should or must.",
+                "title_ar": "أكمل الجمل التالية باستخدام should (للنصيحة) أو must (للإلزام الحتمي والقانوني):",
+                "questions": [
+                  {
+                    "q": "a. We ________ do our homework.",
+                    "q_ar": "يتعين علينا أداء واجبنا المدرسي بانتظام.",
+                    "a": "must (إلزام مدرسي واجب: must)"
+                  },
+                  {
+                    "q": "b. We ________ eat five pieces of fruit or vegetables every day.",
+                    "q_ar": "ينبغي لنا تناول خمس حصص من الفواكه والخضار يومياً.",
+                    "a": "should (نصيحة وإرشاد صحي: should)"
+                  },
+                  {
+                    "q": "c. People ________ do what they say they are going to do.",
+                    "q_ar": "ينبغي على الناس الوفاء بوعودهم وتنفيذ ما يقولونه.",
+                    "a": "should (نصيحة وتوجيه أخلاقي: should)"
+                  },
+                  {
+                    "q": "d. You ________ wear a seat belt on a plane when it is taking off and landing.",
+                    "q_ar": "يجب عليك ربط حزام الأمان في الطائرة أثناء الإقلاع والهبوط.",
+                    "a": "must (قانون سلامة إجباري وحتمي: must)"
+                  },
+                  {
+                    "q": "e. You ________ take a test before you can drive a car.",
+                    "q_ar": "يجب عليك اجتياز اختبار القيادة قبل قيادة السيارة.",
+                    "a": "must (شرط وقانون رسمي إلزامي: must)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l2_ex3",
+                "num": "Exercise 3 (Page 104)",
+                "title": "Listen (Track 53) and write notes about the bring-and-buy sale.",
+                "title_ar": "استمع للتسجيل 53 ودون ملاحظات عن المساهمات في السوق الخيري:",
+                "questions": [
+                  {
+                    "q": "a. What are the three girls going to bring?",
+                    "q_ar": "ماذا ستجلب كل من الطالبات الثلاث للبيع الخيري؟",
+                    "a": "• Suhad: books and puzzles (كتب وقصص وألغاز ذكاء)\n• Wisal: homemade cakes and biscuits (كعك وبسكويت منزلي الصنع)\n• Widad: toys and games (ألعاب ودمى للأطفال)"
+                  },
+                  {
+                    "q": "b. When are they going to hold the sale?",
+                    "q_ar": "متى سيقام السوق الخيري المدرسي؟",
+                    "a": "Next Thursday afternoon in the school playground (بعد ظهر يوم الخميس القادم في ساحة المدرسة)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l2_ex5",
+                "num": "Exercise 5 (Page 105)",
+                "title": "Write a short letter to a friend telling them about the bring-and-buy sale.",
+                "title_ar": "اكتب رسالة قصيرة لصديق تخبره فيها عن فعاليات السوق الخيري المدرسي:",
+                "questions": [
+                  {
+                    "q": "Model Letter (رسالة نموذجية معتمدة):",
+                    "q_ar": "نموذج الرسالة المعتمد للسوق الخيري المدرسي:",
+                    "a": "Dear Ahmed,\nI hope you are doing well. I want to tell you about our school bring-and-buy sale held last Thursday. It was organized to raise money for orphan children and poor families. Hundreds of students, parents, and teachers attended. My friend and I brought homemade cakes and some English stories, and I bought a wonderful science encyclopaedia. The atmosphere was joyful, and the sale brought in over 750,000 Iraqi Dinars! It made us all very proud.\nBest wishes,\nAli"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          104,
+          105
         ]
       },
       {
@@ -4365,7 +7584,146 @@ window.CURRICULUM_DATA = [
             "page": 73,
             "heading": "Unit 7 Lesson 3: Animals in danger (Part A) - خمسة حيوانات مهددة بالانقراض (صفحة 73)",
             "text": "Unit 7 Lesson 3: Animals in danger (Part A)\nRead about the animals and find two reasons why they are in danger:\n\n1. Snow leopard (نمر الثلوج):\nThe fur of this beautiful animal is grey with biggish black spots and much smaller spots. Nobody knows exactly how many there are, but there are very few. It is hunted for its luxurious fur. It lives in high, cold mountain ranges.\n\n2. Wild Ibex / Mountain Horned Goat (الوعل الجبلي البري):\nHunted for its impressive, sweeping horns which measure between 70 to 140 centimetres long. Its coat is reddish brown to greyish brown. If it is not protected immediately by strict laws, it will soon disappear forever.\n\n3. Golden toad (الضفدع الذهبي):\nThe male toad is brilliant bright gold in colour, while the female is much darker. People are draining water from the wetlands where they live and breed. When the water goes completely, the golden toad will disappear.\n\n4. Blue whale (الحوت الأزرق العملاق):\nThis is the largest animal alive today, reaching up to 29 metres in length. Blue whales were hunted heavily in the past for their valuable whale oil and blubber, and almost became extinct. Now they are protected by international conservation laws.\n\n5. Polar bear (الدب القطبي):\nPolar bears live on sea ice in the Arctic, one of the coldest environments on Earth. Their thick white coat covers a dense layer of insulating body fat which keeps them warm. In the past, polar bears were hunted for their thick fur. Today, they face greater danger because the Arctic sea ice is melting rapidly as a direct result of global climate change."
+          },
+          {
+            "id": 30032,
+            "page": 73,
+            "is_activity_book": true,
+            "activity_book_page": 106,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 106 و 107): الحيوانات المهددة بالانقراض والتعبير عن الاتفاق والاختلاف وصح/خطأ والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 3: Animals in danger (Part A) (Activity Book pp. 106-107)\n\nExercise 1 (Page 106): Threats to Endangered Species:\n• Snow leopard is hunted for its fur.\n• Ibex is hunted for its horns (and meat).\n• Blue whale was hunted for its oil.\n• People are draining water from where the golden toad lives.\n• Polar bears live on sea ice which is melting.\n\nExercise 3 (Page 106): Expressing Agreement & Disagreement:\nBox: [agree, disagree, right, sea, wetlands, you're wrong].\n\nExercise 4 (Page 106): True (T) or False (F) Biological Facts.\n\nExercise 5 & 6 (Page 107): Research & Paragraph on Endangered Iraqi Wildlife.",
+            "exercises": [
+              {
+                "id": "u7_l3_ex1",
+                "num": "Exercise 1 (Page 106)",
+                "title": "What do you remember about the animals? Complete the sentences.",
+                "title_ar": "أكمل الجمل التالية بما تتذكره من أسباب تهديد الحيوانات بالانقراض:",
+                "questions": [
+                  {
+                    "q": "a. The snow leopard is hunted for its ________.",
+                    "q_ar": "يُصاد نمر الثلوج من أجل فرائه الثمين.",
+                    "a": "fur (الفراء الجميل الناعم)"
+                  },
+                  {
+                    "q": "b. The ibex is hunted for its ________.",
+                    "q_ar": "يُصاد الوعل الجبلي من أجل قرونه ولحمه.",
+                    "a": "horns (قرونه الكبيرة المقوسة ولحمه)"
+                  },
+                  {
+                    "q": "c. The blue whale was hunted for its ________.",
+                    "q_ar": "كان الحوت الأزرق يُصاد قديماً من أجل زيوته وشحمه.",
+                    "a": "oil (زيت الحوت والشحم)"
+                  },
+                  {
+                    "q": "d. People are draining ________ from where the golden toad lives.",
+                    "q_ar": "يقوم البشر بتجفيف وتصريف المياه من مواطن الضفدع الذهبي.",
+                    "a": "water (المياه من الغابات الرطبة)"
+                  },
+                  {
+                    "q": "e. Polar bears live on sea ice which is ________.",
+                    "q_ar": "تعيش الدببة القطبية على جليد البحر الذي يذوب بسبب الاحتباس الحراري.",
+                    "a": "melting (يذوب بفعل ارتفاع درجات الحرارة)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l3_ex3",
+                "num": "Exercise 3 (Page 106)",
+                "title": "Complete the conversations. Use the words from the box.",
+                "title_ar": "أكمل المحادثات للتعبير عن الاتفاق والاختلاف باستخدام كلمات الصندوق:",
+                "words_box": [
+                  "agree",
+                  "disagree",
+                  "right",
+                  "sea",
+                  "wetlands",
+                  "you're wrong"
+                ],
+                "questions": [
+                  {
+                    "q": "a. 'Blue whales live in the forest.' ->",
+                    "q_ar": "'تعيش الحيتان الزرقاء في الغابات.'",
+                    "a": "I [disagree]. Blue whales live in the [sea]. (أنا لا أوافق؛ فالحيتان الزرقاء تعيش في البحر والبحار المفتوحة)."
+                  },
+                  {
+                    "q": "b. 'Golden toads live in the desert.' ->",
+                    "q_ar": "'تعيش الضفادع الذهبية في الصحراء.'",
+                    "a": "I think [you're wrong]. Golden toads live in the [wetlands]. (أعتقد أنك مخطئ؛ فالضفادع الذهبية تعيش في الأراضي الرطبة والغابات المطرية)."
+                  },
+                  {
+                    "q": "c. 'Snow leopards live in high, cold places.' ->",
+                    "q_ar": "'تعيش نمور الثلوج في المرتفعات الباردة والمناطق الجبلية.'",
+                    "a": "I [agree]. You're [right]. (أنا أوافقك الرأي؛ أنت على حق تماماً)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l3_ex4",
+                "num": "Exercise 4 (Page 106)",
+                "title": "Are the sentences true or false? Write T or F.",
+                "title_ar": "حدد ما إذا كانت العبارات التالية صحيحة (T) أو خاطئة (F):",
+                "questions": [
+                  {
+                    "q": "a. The snow leopard is hunted for its meat.",
+                    "q_ar": "يُصاد نمر الثلوج من أجل لحمه.",
+                    "a": "F (False - يُصاد من أجل فرائه الثمين وليس للحمه)"
+                  },
+                  {
+                    "q": "b. Scientists know how many leopards there are.",
+                    "q_ar": "يعرف العلماء أعداد نمور الثلوج بدقة.",
+                    "a": "F (False - يصعب إحصاؤها لعيشها في قمم جبلية نائية ووعرة)"
+                  },
+                  {
+                    "q": "c. The ibex lives in the mountains.",
+                    "q_ar": "يعيش الوعل في المناطق الجبلية العالية.",
+                    "a": "T (True - يعيش على المنحدرات الصخرية الجبلية)"
+                  },
+                  {
+                    "q": "d. The ibex is in danger.",
+                    "q_ar": "حيوان الوعل معرض لخطر الانقراض.",
+                    "a": "T (True - بسبب الصيد الجائر وتدمير الموطن)"
+                  },
+                  {
+                    "q": "e. People are still allowed to hunt blue whales.",
+                    "q_ar": "ما يزال صيد الحيتان الزرقاء مسموحاً به قانونياً اليوم.",
+                    "a": "F (False - حُظر صيد الحيتان الزرقاء دولياً منذ عام 1966)"
+                  },
+                  {
+                    "q": "f. Male and female golden toads are different colours.",
+                    "q_ar": "ذكور وإناث الضفادع الذهبية تختلف في ألوانها.",
+                    "a": "T (True - الذكور لونها برتقالي ذهبي ساطع والإناث داكنة)"
+                  },
+                  {
+                    "q": "g. People hunted polar bears for their fur.",
+                    "q_ar": "اصطاد البشر الدببة القطبية من أجل فرائها السميك.",
+                    "a": "T (True)"
+                  },
+                  {
+                    "q": "h. Polar bears' fur helps them keep warm.",
+                    "q_ar": "فراء الدب القطبي يساعده على الاحتفاظ بحرارة جسمه.",
+                    "a": "T (True - يعزله عن برودة القطب الشديدة)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l3_ex6",
+                "num": "Exercise 6 (Page 107)",
+                "title": "Write a short paragraph about an animal in danger in Iraq.",
+                "title_ar": "اكتب فقرة إنشائية قصيرة عن حيوان مهدد بالانقراض في العراق:",
+                "questions": [
+                  {
+                    "q": "Model Paragraph (The Wild Ibex in Iraq):",
+                    "q_ar": "الفقرة النموذجية المعتمدة (الوعل الجبلي في العراق):",
+                    "a": "The Wild Ibex is one of the most magnificent wild animals living in the rugged northern mountains of Iraq. It has long, curved horns and is an agile climber on rocky cliffs. Unfortunately, the wild ibex is in grave danger of extinction due to illegal hunting and the destruction of its natural mountain habitat. To protect this beautiful animal, the Iraqi government and wildlife organizations must establish protected national reserves and strictly enforce anti-poaching laws."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          106,
+          107
         ]
       },
       {
@@ -4378,7 +7736,125 @@ window.CURRICULUM_DATA = [
             "page": 74,
             "heading": "Unit 7 Lesson 4: Animals in danger (Part B) - البيئات الطبيعية والتعبير عن الرأي والاتفاق (صفحة 74)",
             "text": "Unit 7 Lesson 4: Animals in danger (Part B)\nLook at the photographs. Where do you think the animals from Lesson 3 live? Why?\n\nNatural Habitats (البيئات الطبيعية):\n1. Wetlands (المستنقعات والأراضي الرطبة) - Golden toad lives near shallow freshwater and marshes.\n2. High, cold mountains (الجبال الشاهقة الباردة) - Snow leopards and mountain goats climb rocky cliffs.\n3. Sea / Oceans (البحار والمحيطات) - Blue whales migrate across deep marine waters.\n4. Desert (الصحراء القاحلة) - Lizards, camels, and desert foxes adapted to arid heat.\n5. Mountain forest (الغابات الجبلية) - Dense trees sheltering birds and mammals.\n6. Arctic (المنطقة القطبية المتجمدة) - Endless frozen sea ice, hunting ground of the polar bear.\n\nWhich animals were killed to make products in luxury rooms?\n• Leopard fur coats and rugs (Snow leopard)\n• Mounted horn trophies and ornaments (Wild Ibex)\n• Whale oil lamps and cosmetics (Blue whale)\n\nExpressing Agreement & Disagreement (التعبير عن الاتفاق والاختلاف في المحادثة):\n• Agreeing (الموافقة والتأييد):\n  - I agree.\n  - You're right.\n  - I think you're right.\n  - Example: \"I think golden toads live in wetlands.\" -> \"I agree. You're right. Toads always live near water.\"\n• Disagreeing (الاعتراض والاختلاف المهذب):\n  - I disagree.\n  - I think you're wrong.\n  - Example: \"Polar bears live in warm desert areas.\" -> \"I disagree. I think you're wrong. They live on Arctic sea ice.\""
+          },
+          {
+            "id": 30042,
+            "page": 74,
+            "is_activity_book": true,
+            "activity_book_page": 108,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 108 و 109): المواطن الطبيعية للحيوانات وتصنيفها والمناقشة البيئية والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 4: Animals in danger (Part B) (Activity Book pp. 108-109)\n\nExercise 1 (Page 108): Habitats Classification:\n• Wetlands: pelican, otter.\n• Desert: camel, fennec fox.\n• Arctic: Arctic fox, orca, seal.\n• Mountains: llama, mountain goat.\n\nExercise 2 (Page 109): Descriptive Animal Clues.\n\nExercise 4 (Page 109): Environmental Perspectives & Critical Thinking:\nDebating littering, nature protection, Iraq's air quality, biodiversity, and climate action.",
+            "exercises": [
+              {
+                "id": "u7_l4_ex1",
+                "num": "Exercise 1 (Page 108)",
+                "title": "Think. In which habitat do the animals live? Match animals to habitats.",
+                "title_ar": "صنف الحيوانات التسعة حسب موطنها الطبيعي الملائم:",
+                "questions": [
+                  {
+                    "q": "a. Animals living in Wetlands (الأراضي الرطبة والأهوار):",
+                    "q_ar": "حيوانات الأراضي الرطبة والمسطحات المائية:",
+                    "a": "pelican (طائر البجع) and otter (كلب الماء / القضاعة)"
+                  },
+                  {
+                    "q": "b. Animals living in the Desert (الصحراء والبيئات الجافة):",
+                    "q_ar": "حيوانات الصحراء القاحلة:",
+                    "a": "camel (الجمل) and fennec fox (ثعلب الفنك الصحراوي)"
+                  },
+                  {
+                    "q": "c. Animals living in the Arctic (المناطق القطبية الجليدية):",
+                    "q_ar": "حيوانات القطب الشمالي والبحار الباردة:",
+                    "a": "Arctic fox (الثعلب القطبي), seal (فقمة البحر), and orca (الحوت القاتل / الأوركا)"
+                  },
+                  {
+                    "q": "d. Animals living in the Mountains (المناطق الجبلية الشاهقة):",
+                    "q_ar": "حيوانات الجبال والمنحدرات الصخرية:",
+                    "a": "llama (حيوان اللاما) and goat / mountain goat (الماعز الجبلي)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l4_ex2",
+                "num": "Exercise 2 (Page 109)",
+                "title": "Read. Which animals in Exercise 1 do the sentences describe?",
+                "title_ar": "حدد اسم الحيوان الذي تصفه كل عبارة من عبارات التمرين الأول:",
+                "questions": [
+                  {
+                    "q": "a. They live in very cold places. They use their fat to keep warm.",
+                    "q_ar": "تعيش في أماكن شديدة البرودة وتستخدم طبقة الشحم لتدفئة جسمها.",
+                    "a": "seal (الفقمة - أو الدب القطبي)"
+                  },
+                  {
+                    "q": "b. Their fur turns white, so they can hide in the snow.",
+                    "q_ar": "يتحول فراؤها إلى اللون الأبيض في الشتاء للتخفي في الثلج.",
+                    "a": "Arctic fox (الثعلب القطبي)"
+                  },
+                  {
+                    "q": "c. They eat fish, seals and penguins and can eat more than 200 kilograms a day.",
+                    "q_ar": "تتغذى على الأسماك والفقمات وتأكل أكثر من 200 كغم يومياً.",
+                    "a": "orca (الحوت القاتل / الأوركا)"
+                  },
+                  {
+                    "q": "d. Their feet are very strong, so they can climb mountains.",
+                    "q_ar": "أقدامها وحوافرها قوية جداً لتسلق الجبال الصخرية الوعرة.",
+                    "a": "goat / mountain goat (الماعز الجبلي / اللاما)"
+                  },
+                  {
+                    "q": "e. They can live in very dry places because they store food and water in their humps.",
+                    "q_ar": "تتحمل العيش في الصحراء الجافة لأنها تخزن الدهون والماء في سنامها.",
+                    "a": "camel (الجمل - سفينة الصحراء)"
+                  },
+                  {
+                    "q": "f. Their beaks are very long to help them catch fish.",
+                    "q_ar": "مناقيرها طويلة ومزودة بجراب لصيد الأسماك من الماء.",
+                    "a": "pelican (طائر البجع)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l4_ex4",
+                "num": "Exercise 4 (Page 109)",
+                "title": "Read the statements. Do you agree or disagree? Explain why.",
+                "title_ar": "هل توافق أو تعارض الآراء البيئية التالية؟ وضح سبب وجهة نظرك:",
+                "questions": [
+                  {
+                    "q": "a. 'I can throw litter. Someone else can pick it up.'",
+                    "q_ar": "'يمكنني رمي القمامة وسيقوم شخص آخر بجمعها.'",
+                    "a": "I disagree. Keeping our environment clean is everyone's personal responsibility (أعارض بشدة؛ فالحفاظ على النظافة مسؤولية كل فرد)."
+                  },
+                  {
+                    "q": "b. 'We're doing all we can to protect nature.'",
+                    "q_ar": "'إننا نبذل كل ما في وسعنا لحماية الطبيعة.'",
+                    "a": "I disagree. We must do much more: stop wasting plastic, plant green belts, and reduce fossil fuels (أعارض؛ فما يزال علينا بذل المزيد في التشجير وإعادة التدوير)."
+                  },
+                  {
+                    "q": "c. 'Air pollution isn't a problem in Iraq.'",
+                    "q_ar": "'تلوث الهواء ليس مشكلة في العراق.'",
+                    "a": "I disagree. Air pollution is a serious health problem in Iraqi cities due to heavy car exhaust and generators (أعارض؛ فعوادم السيارات والمولدات تسبب تلوثاً ملحوظاً في المدن)."
+                  },
+                  {
+                    "q": "d. 'It doesn't matter if animals like the ibex disappear.'",
+                    "q_ar": "'لا يهم إذا انقرضت حيوانات مثل الوعل الجبلي.'",
+                    "a": "I disagree. Every single animal plays a vital role in keeping our ecosystem balanced (أعارض تماماً؛ فكل كائن حي يحافظ على التوازن البيئي والتنوع الحيوي)."
+                  },
+                  {
+                    "q": "e. 'Pollution is a global problem.'",
+                    "q_ar": "'التلوث مشكلة عالمية مشتركة.'",
+                    "a": "I agree. Winds, rivers, and oceans carry pollution across borders, affecting all humanity (أوافق؛ فالتلوث والمناخ يؤثران على كوكب الأرض بأسره دون حدود)."
+                  },
+                  {
+                    "q": "f. 'We have to do something about climate change.'",
+                    "q_ar": "'يتعين علينا اتخاذ إجراءات عاجلة للحد من التغير المناخي.'",
+                    "a": "I agree. We must act now with clean energy to protect the planet for future generations (أوافق حتماً؛ لحماية كوكبنا ومستقبل الأجيال القادمة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          108,
+          109
         ]
       },
       {
@@ -4391,7 +7867,115 @@ window.CURRICULUM_DATA = [
             "page": 75,
             "heading": "Unit 7 Lesson 5: Please keep the rivers clean - نظافة أنهار العراق والحلول البيئية (صفحة 75)",
             "text": "Unit 7 Lesson 5: Please keep the rivers clean\nRead the text and match the paragraphs to the topics:\n\nParagraph 1: Water in Iraq (واقع المياه في العراق):\nIraq, with its two great rivers running the length of the country (the Tigris and Euphrates), is unable to provide clean drinking water for most of its people. There are a lot fewer fish than there were before.\n\nParagraph 2: Water pollution in rivers (أسباب تلوث الأنهار ومخاطره):\nThe two rivers are polluted with untreated sewage, rubbish and industrial waste. Millions of tonnes of waste go into the rivers and streams every year. This destroys the natural habitats of wildlife and damages our beautiful rivers. It also causes huge damage to public health and spreads diseases.\n\nParagraph 3: What needs to be done (ما يجب فعله):\nThe river water must be safe for drinking, fishing, swimming and boating. We can make our rivers safer and healthier for wildlife and people. In fact, everyone should do something to keep the rivers clean.\n\nParagraph 4: The solution (الحل العملي):\nFirst, we must stop littering. We can make teams of volunteers to pick up rubbish along the banks. The river will clean itself if we stop littering! Then, we can also lead river clean-up efforts. People can force the government to do something to stop sewage and waste from factories, hospitals and power stations flowing into the rivers.\nRemember: You are the solution to river pollution! If we want to have clean rivers, we must have clean minds!\n\nVocabulary Definitions:\n• volunteer (متطوع): a person who does a job or service willingly without pay.\n• litter (قمامة / يرمي قمامة): to drop rubbish carelessly on the ground; discarded waste.\n• pollute (يلوث): to add harmful and toxic chemicals to water, air or soil.\n• habitat (موطن طبيعي): the natural environment where an animal or plant normally lives."
+          },
+          {
+            "id": 30052,
+            "page": 75,
+            "is_activity_book": true,
+            "activity_book_page": 110,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 110 و 111): حماية مياه الأنهار في العراق وتلويث المياه واقتراحات الاجتماع المدرسي والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 5: Please keep the rivers clean! (Activity Book pp. 110-111)\n\nExercise 1 (Page 110): Rivers of Iraq & Pollution Dynamics:\n• Two great rivers: The Tigris and Euphrates (دجلة والفرات).\n• Negative effects: Kills wildlife and fish, contaminates drinking water, destroys scenic beauty.\n• Clean-up actions: Stop dumping toxic wastewater, organize clean-ups, impose fines.\n• Leisure activities: Swimming, boating, fishing, picnicking.\n• Polluting facilities: Factories, hospitals, power stations, sewage outlets.\n\nExercise 2 & 3 (Pages 110-111): 'THE RIVERBANK NEEDS OUR HELP!' School Campaign.\n\nExercise 5 (Page 111): Evaluating Environmental Proposals at Student Meeting.",
+            "exercises": [
+              {
+                "id": "u7_l5_ex1",
+                "num": "Exercise 1 (Page 110)",
+                "title": "Read the text in your Student's Book and answer the questions. Write short answers.",
+                "title_ar": "أجب عن الأسئلة الخاصة بنهري دجلة والفرات وحماية مياههما من التلوث:",
+                "questions": [
+                  {
+                    "q": "a. How many great rivers are there in Iraq?",
+                    "q_ar": "كم نهراً عظيماً يوجد في العراق؟",
+                    "a": "Two (The Tigris and the Euphrates - نهران هما دجلة والفرات)"
+                  },
+                  {
+                    "q": "b. Name three negative effects of river pollution:",
+                    "q_ar": "اذكر ثلاثة آثار سلبية لتلوث الأنهار:",
+                    "a": "1. Kills fish and river wildlife (قتل الأسماك والأحياء المائية).\n2. Harms human health and drinking water (الإضرار بصحة الإنسان ومياه الشرب).\n3. Spoils the beauty of nature (تشويه المظهر الجمالي الطبيعي)."
+                  },
+                  {
+                    "q": "c. Name two things that can be done to clean up Iraq's rivers:",
+                    "q_ar": "اذكر أمرين يمكن القيام بهما لتنظيف أنهار العراق:",
+                    "a": "1. Stop discharging untreated sewage and factory chemicals (منع تصريف مياه الصرف والمخلفات الصناعية).\n2. Pass strict laws against littering and organize community clean-up teams (سن قوانين صارمة ضد رمي النفايات وتنظيم حملات تنظيف)."
+                  },
+                  {
+                    "q": "d. Name two activities people can enjoy in clean rivers:",
+                    "q_ar": "اذكر نشاطين يستمتع بهما الناس عند نظافة الأنهار:",
+                    "a": "Swimming and boating / fishing (السباحة وركوب القوارب وصيد الأسماك)"
+                  },
+                  {
+                    "q": "e. Which three buildings create sewage and waste in the rivers?",
+                    "q_ar": "ما هي المنشآت الثلاث التي تصرف المخلفات في الأنهار؟",
+                    "a": "Factories, hospitals, and power stations (المصانع، المستشفيات، ومحطات توليد الطاقة الكهربائية)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l5_ex3",
+                "num": "Exercise 3 (Page 111)",
+                "title": "Answer the questions about the school article 'THE RIVERBANK NEEDS OUR HELP!'.",
+                "title_ar": "أجب عن الأسئلة المتعلقة بحملة تنظيف ضفاف النهر بالمجلة المدرسية:",
+                "questions": [
+                  {
+                    "q": "a. Why does the writer want to pick up litter?",
+                    "q_ar": "لماذا يريد الكاتب جمع القمامة من ضفة النهر؟",
+                    "a": "Because the riverbank is too dirty and ruined by plastic, and they want the birds and fish to return (لأن ضفة النهر مليئة بالبلاستيك ويريدون عودة الطيور والأسماك للبيئة النظيفة)."
+                  },
+                  {
+                    "q": "b. What is the purpose of the meeting on Wednesday 7th April?",
+                    "q_ar": "ما هو الهدف من الاجتماع البيئي في قاعة المدرسة؟",
+                    "a": "To organize a volunteer group to pick up litter regularly and share ideas on keeping the river clean (لتشكيل فريق تطوعي دوري لجمع القمامة وحماية النهر باستمرار)."
+                  },
+                  {
+                    "q": "c. Imagine the meeting is in your school. Will you go? Why/Why not?",
+                    "q_ar": "لو كان هذا الاجتماع في مدرستك، هل ستحضره؟ ولماذا؟",
+                    "a": "Yes, definitely! I want to help protect our city's river and keep the environment clean and safe for our community (نعم بالتأكيد؛ للمساهمة في حماية نهر مدينتنا وبيئتنا)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l5_ex5",
+                "num": "Exercise 5 (Page 111)",
+                "title": "Below are some things your schoolmates said at the meeting. Say if you agree or disagree and why.",
+                "title_ar": "بين موافقتك أو معارضتك لآراء الزملاء في الاجتماع البيئي مع توضيح السبب:",
+                "questions": [
+                  {
+                    "q": "a. 'We need to get permission.'",
+                    "q_ar": "'نحتاج إلى الحصول على إذن وموافقة رسمية.'",
+                    "a": "Agree. Official permission ensures student safety and community cooperation (أوافق؛ لضمان سلامة الطلبة والتنسيق الرسمي)."
+                  },
+                  {
+                    "q": "b. 'Let's take photographs so we can compare before and after.'",
+                    "q_ar": "'دعونا نلتقط صوراً لنقارن الموقع قبل الحملة وبعدها.'",
+                    "a": "Agree. Before-and-after photos prove the success of the campaign and inspire others (أوافق؛ لإبراز التغيير الإيجابي وتحفيز الآخرين)."
+                  },
+                  {
+                    "q": "c. 'What's the point? It'll be full of litter again next week!'",
+                    "q_ar": "'ما الفائدة؟ ستمتلئ بالقمامة مجدداً الأسبوع المقبل!'",
+                    "a": "Disagree. Continuous cleaning combined with awareness signs and bins will change public habits (أعارض؛ فالتوعية وتوفير الحاويات يغيران السلوكيات الخاطئة)."
+                  },
+                  {
+                    "q": "d. 'The problem isn't the litter; the problem is the chemical factory nearby.'",
+                    "q_ar": "'المشكلة ليست في القمامة بل في مصنع المواد الكيميائية القريب.'",
+                    "a": "Partially agree. Both are harmful; individuals must clean litter while authorities stop industrial waste (أتفق جزئياً؛ فكلاهما ملوث، والمصانع تتطلب رقابة حكومية صارمة)."
+                  },
+                  {
+                    "q": "e. 'We need to wear gloves and a mask.'",
+                    "q_ar": "'يتعين علينا ارتداء قفازات وكمامات واقية.'",
+                    "a": "Agree. Essential protective gear to prevent infections and cuts from sharp objects (أوافق تماماً؛ لحماية أيدينا من الجروح والملوثات والجراثيم)."
+                  },
+                  {
+                    "q": "f. 'We can make some signs that say: \"Do not drop litter!\".'",
+                    "q_ar": "'يمكننا صنع لافتات إرشادية تقول: ممنوع رمي القمامة!'",
+                    "a": "Agree. Clear signs remind visitors to keep the public park clean (أوافق؛ لتذكير رواد النهر بالحفاظ على النظافة)."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          110,
+          111
         ]
       },
       {
@@ -4404,7 +7988,158 @@ window.CURRICULUM_DATA = [
             "page": 76,
             "heading": "Unit 7 Lesson 6: A warmer world - أسباب ونتائج الاحتباس الحراري وقاعدة may و might (صفحة 76)",
             "text": "Unit 7 Lesson 6: A warmer world\nRead an interview with an environmental scientist and discover the causes and results of global warming:\n\nQ: Is the world getting warmer?\nScientist: Yes, it is.\n\nQ: Why is this happening?\nScientist: There may be other causes, but it is mainly our fault!\n\nQ: Why is it our fault?\nScientist: We are burning fossil fuels like coal, gas, oil and wood. And we are driving millions of petrol-burning cars.\n\nQ: I don't understand.\nScientist: All of these activities produce greenhouse gases that trap heat in the Earth's atmosphere, acting like a blanket around the planet.\n\nQ: If the world gets warmer, what will happen?\nScientist: The polar ice caps will melt, so the sea level will rise. This means low-lying land and coastal areas will disappear underwater. Also, it is possible that global weather will change drastically.\n\nQ: In what way?\nScientist: We might have much hotter summers and wetter, stormier winters. In some hot countries, there may be less rain, and fertile farmland might become barren desert.\n\nQ: Will all this happen soon?\nScientist: Some things are already happening today, but others may take 30 or 40 years.\n\nQ: Can we stop it happening?\nScientist: We can if we want to! We must act now to reduce carbon emissions and adopt clean energy.\n\nGrammar Focus - may and might:\n• We use 'may' and 'might' to say there is a chance that something is true or that it is possible something will happen.\n• Both express possibility in the present or future and are followed by the infinitive without 'to':\n  - Formula: Subject + may / might + Base Verb\n• Difference in certainty:\n  - 'May' expresses a good possibility (50% likelihood): \"There may be less rain.\"\n  - 'Might' expresses a weaker possibility / less certain (30-40% likelihood): \"Farmland might become desert.\"\n• Examples:\n  - I may not be at school tomorrow.\n  - It might be too windy to go sailing this afternoon.\n  - We might turn parts of the desert into green zones if we plant trees."
+          },
+          {
+            "id": 30062,
+            "page": 76,
+            "is_activity_book": true,
+            "activity_book_page": 112,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 112 و 113): الاحتباس الحراري وقاعدة الاحتمالية may و might وخطوات حماية المناخ والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 6: A warmer world (Activity Book pp. 112-113)\n\nExercise 1 (Page 112): Global Warming Questions:\n• Scientific proof: Global temperatures are recorded rising.\n• Burning fossil fuels (petrol, coal, gas) produces greenhouse gases trapping heat.\n• Melting polar ice raises sea levels, threatening coastal areas.\n• Impact on Iraq: More heatwaves, severe droughts, and dust storms.\n\nExercise 2 (Page 112): Word Order with Modals of Possibility (may / might):\nSubject + may/might + base verb (infinitive).\n\nExercise 4 (Page 113): Climate Action Commitments (I will / won't / may / might).",
+            "exercises": [
+              {
+                "id": "u7_l6_ex1",
+                "num": "Exercise 1 (Page 112)",
+                "title": "Answer the questions about the text 'A warmer world' in your Student's Book.",
+                "title_ar": "أجب عن الأسئلة العلمية حول الاحتباس الحراري وتأثيراته على المناخ والعراق:",
+                "questions": [
+                  {
+                    "q": "a. Do we know that the world is getting warmer?",
+                    "q_ar": "هل نعلم على وجه اليقين أن كوكب الأرض يزداد دفئاً؟",
+                    "a": "Yes, scientists have recorded rising global temperatures over the last century (نعم، تؤكد السجلات العلمية ارتفاع درجات الحرارة العالمية باطراد)."
+                  },
+                  {
+                    "q": "b. Why do cars make the world warmer?",
+                    "q_ar": "لماذا تساهم عوادم السيارات في تسخين الغلاف الجوي؟",
+                    "a": "Because burning petrol releases carbon dioxide and greenhouse gases that trap heat in the atmosphere (لأن احتراق الوقود يطلق غازات الدفيئة التي تحبس الحرارة)."
+                  },
+                  {
+                    "q": "c. What do we get when ice melts?",
+                    "q_ar": "ماذا ينتج عن ذوبان الجليد في القطبين؟",
+                    "a": "Water that flows into the oceans (مياه تتدفق إلى المحيطات والبحار)."
+                  },
+                  {
+                    "q": "d. Why will the sea level rise?",
+                    "q_ar": "لماذا سيرتفع منسوب مياه البحار والمحيطات؟",
+                    "a": "Because massive glaciers and polar ice caps are melting into the oceans (بسبب ذوبان كميات هائلة من الجليد القطبي وصبها في المحيطات)."
+                  },
+                  {
+                    "q": "e. Which of the fuels do you think factories burn?",
+                    "q_ar": "ما هي أنواع الوقود الأحفوري التي تحرقها المصانع ومحطات الطاقة؟",
+                    "a": "Coal, oil, and natural gas (الفحم، والنفط، والغاز الطبيعي)."
+                  },
+                  {
+                    "q": "f. If the world carries on getting warmer, what might happen to Iraq?",
+                    "q_ar": "إذا استمر كوكب الأرض في الاحترار، ماذا قد يحدث للعراق؟",
+                    "a": "Iraq might face severe droughts, extreme summer heatwaves, water shortages, and frequent dust storms (قد يواجه العراق موجات جفاف حادة، وعواصف ترابية، ونقصاً في المياه)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l6_ex2",
+                "num": "Exercise 2 (Page 112)",
+                "title": "Put the words in the correct order to make sentences.",
+                "title_ar": "رتب الكلمات المبعثرة لتكوين جمل صحيحة باستخدام may و might:",
+                "questions": [
+                  {
+                    "q": "a. my / be / arm / I / broken / might / think / !",
+                    "q_ar": "أعتقد أن ذراعي قد تكون مكسورة!",
+                    "a": "I think my arm might be broken!"
+                  },
+                  {
+                    "q": "b. might / There / life / on / Mars / be",
+                    "q_ar": "قد توجد حياة على كوكب المريخ.",
+                    "a": "There might be life on Mars."
+                  },
+                  {
+                    "q": "c. with / to / be / homework / your / able / I / help / you / may",
+                    "q_ar": "قد أتمكن من مساعدتك في أداء واجبك البيتي.",
+                    "a": "I may be able to help you with your homework."
+                  },
+                  {
+                    "q": "d. think / this / bag / might / I / be / your",
+                    "q_ar": "أعتقد أن هذه الحقيبة قد تكون حقيبتك.",
+                    "a": "I think this might be your bag."
+                  },
+                  {
+                    "q": "e. are / may / grey, / it / very / The / clouds / rain",
+                    "q_ar": "الغيوم داكنة جداً، ربما تمطر السماء.",
+                    "a": "The clouds are very grey, it may rain."
+                  },
+                  {
+                    "q": "f. pass / might / study, / If / you / not / don't / you",
+                    "q_ar": "إن لم تدرس باجتهاد، فقد لا تنجح في الامتحان.",
+                    "a": "If you don't study, you might not pass."
+                  },
+                  {
+                    "q": "g. may / job / offer / think / me / I / they / the",
+                    "q_ar": "أعتقد أنهم قد يعرضون علي الوظيفة.",
+                    "a": "I think they may offer me the job."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l6_ex4",
+                "num": "Exercise 4 (Page 113)",
+                "title": "What can you do to reduce the effects of climate change? Write sentences using the phrases from the box.",
+                "title_ar": "ماذا يمكنك فعله للحد من التغير المناخي؟ اكتب جملاً باستخدام will, won't, may, might:",
+                "words_box": [
+                  "I may",
+                  "I may not",
+                  "I might",
+                  "I might not",
+                  "I will",
+                  "I won't"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Eat less meat ->",
+                    "q_ar": "تناول كميات أقل من اللحوم الحمراء:",
+                    "a": "I might eat less meat to help reduce agricultural greenhouse emissions."
+                  },
+                  {
+                    "q": "b. Use less water ->",
+                    "q_ar": "ترشيد استهلاك المياه:",
+                    "a": "I will use less water by turning off the tap while brushing my teeth."
+                  },
+                  {
+                    "q": "c. Recycle more ->",
+                    "q_ar": "زيادة إعادة التدوير في المنزل:",
+                    "a": "I will recycle more plastic containers, paper, and aluminium cans at home."
+                  },
+                  {
+                    "q": "d. Turn off the lights when I leave the room ->",
+                    "q_ar": "إطفاء الأنوار عند مغادرة الغرفة:",
+                    "a": "I will always turn off the lights and air conditioner when I leave a room."
+                  },
+                  {
+                    "q": "e. Use public transport more often ->",
+                    "q_ar": "استخدام النقل العام والحافلات أكثر:",
+                    "a": "I may use public transport instead of asking for a car ride."
+                  },
+                  {
+                    "q": "f. Walk more often ->",
+                    "q_ar": "المشي بدلاً من ركوب السيارة:",
+                    "a": "I will walk to school and nearby shops every day."
+                  },
+                  {
+                    "q": "g. Use fewer plastic bottles ->",
+                    "q_ar": "تقليل استخدام القناني البلاستيكية:",
+                    "a": "I won't buy single-use plastic water bottles; I will carry a refillable flask."
+                  },
+                  {
+                    "q": "h. Eat more food grown locally ->",
+                    "q_ar": "تناول المنتجات الزراعية المحلية:",
+                    "a": "I will eat more delicious fruits and vegetables grown locally in Iraq."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          112,
+          113
         ]
       },
       {
@@ -4417,7 +8152,57 @@ window.CURRICULUM_DATA = [
             "page": 77,
             "heading": "Unit 7 Lesson 7: Throwing things away - محاربة التبذير وصيغ الأمر والنهي (صفحة 77)",
             "text": "Unit 7 Lesson 7: Throwing things away\nThe people in these situations are being wasteful. What reasons do they give, and what should a careful person say?\n\nSituation 1: Food Waste (Tamara and her Father):\n• Father: Tamara! You haven't finished your food!\n• Tamara: Yes, I have, Dad.\n• Father: No, you haven't. Just look at all that food left on your plate!\n• Tamara: I can't eat it. I took too much.\n• Father: That's so wasteful, Tamara. Millions of people around the world are hungry. Think of them next time!\n\nSituation 2: Water Waste (James and his Mother):\n• Mother: James, you're wasting clean water!\n• James: No, I'm not. I'm just brushing my teeth.\n• Mother: But you don't need to keep the tap running all the time! It's very wasteful.\n• James: But we have plenty of water.\n• Mother: Yes, we have now, but we may not always have plenty. Turn the tap off!\n\nSituation 3: Electricity Waste (Nasser and Kamal):\n• Kamal: Nasser, I thought your house was on fire!\n• Nasser: On fire! Why?\n• Kamal: There are bright lights blazing everywhere in every room!\n• Nasser: Yes, isn't it lovely?\n• Kamal: No, I don't think it is. I think it's terrible to waste electricity like this. You should switch most of them off. Remember the proverb: \"Waste not, want not!\"\n\nEnvironmental Imperatives & Directives (صيغ الأمر والنهي لحماية البيئة):\n• Direct Negative Imperatives (صيغ النهي والمنع بـ Don't):\n  - Don't drop litter in the street!\n  - Don't throw rubbish out of your car window!\n  - Don't leave plastic bags and bottles on the beach!\n  - Don't leave the tap running while brushing your teeth!\n• Positive Imperatives (صيغ الأمر والتوجيه بالفعل المجرد):\n  - Put all rubbish in the bin!\n  - Turn off the water tap!\n  - Switch off the lights when you leave the room!"
+          },
+          {
+            "id": 30072,
+            "page": 77,
+            "is_activity_book": true,
+            "activity_book_page": 114,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 114 و 115): الحد من النفايات (Waste not, want not) ومقال تنظيف ضفاف النهر والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 7: Throwing things away (Activity Book pp. 114-115)\n\nExercise 1 (Page 114 - Track 54): Responsible Reusing & Recycling Advice:\n• Tamara: Bought a new phone; father advises donating old one or recycling electronics.\n• James: Outgrown clothes; mother advises giving them to a local charity shop.\n• Nasser: Old textbooks and notebooks; Kamal advises passing them to younger students.\n\nProverb: 'Waste not, want not' (لا تسرف ولا تهدر كي لا تحتاج).\n\nExercise 3 (Page 115): Writing an Article on the Riverbank Clean-up Campaign for the school magazine.",
+            "exercises": [
+              {
+                "id": "u7_l7_ex1",
+                "num": "Exercise 1 (Page 114)",
+                "title": "Listen again (Track 54) and write notes about what Tamara, James, and Nasser should do.",
+                "title_ar": "استمع للتسجيل ودون ملاحظات عن نصائح ترشيد الاستهلاك وإعادة التدوير:",
+                "questions": [
+                  {
+                    "q": "a. What is Tamara's reason? | b. What is her father's advice?",
+                    "q_ar": "سبب تمارا ونصيحة والدها:",
+                    "a": "• Reason: She bought a new mobile phone and wants to throw the old one away.\n• Father's advice: She shouldn't throw it in the rubbish; she can give it to her younger cousin or take it to an electronic recycling point."
+                  },
+                  {
+                    "q": "c. What is James' reason? | d. What is his mother's advice?",
+                    "q_ar": "سبب جيمس ونصيحة والدته:",
+                    "a": "• Reason: He has lots of good clothes that are now too small for him.\n• Mother's advice: Take them neatly to a charity shop so other families can benefit from them."
+                  },
+                  {
+                    "q": "e. What is Nasser's reason? | f. What is Kamal's advice?",
+                    "q_ar": "سبب ناصر ونصيحة كمال:",
+                    "a": "• Reason: He has finished his school exams and has piles of old textbooks and paper notebooks.\n• Kamal's advice: Pass the textbooks on to younger students who need them, and put paper notes in the recycling bin."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l7_ex3",
+                "num": "Exercise 3 (Page 115)",
+                "title": "Write an article for the school magazine about your experience in the riverbank clean-up campaign.",
+                "title_ar": "اكتب مقالاً صحفياً للمجلة المدرسية عن مشاركتك في حملة تنظيف ضفة النهر:",
+                "questions": [
+                  {
+                    "q": "Model Article for School Magazine (مقال صحفي نموذجي معتمد):",
+                    "q_ar": "المقال الصحفي النموذجي المعتمد لحملة النظافة النهرية:",
+                    "a": "Our Riverbank Clean-Up Day\nBy Ali Hassan\n\nLast Wednesday afternoon, over fifty eager students and teachers from our school gathered by the Tigris riverbank for a special clean-up campaign. The area was previously littered with plastic bags, drink cans, and discarded food containers, which spoiled the natural beauty and harmed local wildlife.\n\nWearing protective gloves and carrying heavy-duty sacks, we spent two hours collecting rubbish along the water's edge. Despite the hot weather, everyone worked with great enthusiasm and team spirit. In total, we collected over 60 large bags of litter, which were safely transported to the recycling centre.\n\nBy 4:30 p.m., the riverbank looked immaculate, green, and inviting once more. In my opinion, this campaign taught us that keeping Iraq clean is our collective duty. We plan to organize monthly clean-ups and put up educational signs to encourage visitors to protect our beloved river."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          114,
+          115
         ]
       },
       {
@@ -4430,7 +8215,135 @@ window.CURRICULUM_DATA = [
             "page": 78,
             "heading": "Unit 7 Lesson 8: The moving desert - زحف الرمال ومشاريع الحزام الأخضر وإحياء الأهوار (صفحة 78)",
             "text": "Unit 7 Lesson 8: The moving desert\nRead the newspaper article about environmental challenges in Iraq:\n\n\"THE MOVING DESERT\nThe moving desert is a danger from which many countries around the world suffer. It is caused by social, political, economic or natural factors. It harms both the environment and the people who live there. It damages all aspects of life and is a challenge to many in Iraq.\n\nThousands of donams* in Iraq are lost every year as a result of the moving desert. This causes many problems to the environment, the economy and society. Moving sand dunes are one of these problems. Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone.\n\nMany fertile agricultural areas have disappeared. The desert is moving and expanding rapidly. This is happening in Al Anbar, west Karbala, west Muthanna, west Nasiriya and west Basra.\n\nOne way to stop the moving desert in Iraq is to start 'green belt' projects (planting rows of trees). There are two projects already established, in west Al Anbar and west Karbala.\n\nThe marshes in southern Iraq were drained in the 1990s, and very few plants survived. The lush wetlands turned into dry dust, which moves when it is blown by the wind - creating a moving desert. Today, the marshlands tell an inspiring story, and the picture is improving. Fresh water now flows into some of the dry areas, and as a result, wildlife is beginning to return. Much of the land is now covered with water, as it was many years ago.\"\n\n(*Note: A donam is a traditional Iraqi unit of land area equivalent to 2,500 square metres.)\n\nCritical Thinking Questions:\n• What are the main causes of the moving desert in Iraq? (Low rainfall, tree cutting, sand dunes, oil well fires).\n• What is the good news mentioned in the article? (The return of fresh water and wildlife to the southern Iraqi marshes, and green belt projects in Al Anbar and Karbala)."
+          },
+          {
+            "id": 30082,
+            "page": 78,
+            "is_activity_book": true,
+            "activity_book_page": 116,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 116 و 117): الصحراء المتحركة ومكافحة التصحر في العراق وتجارب زراعة الأشجار العالمية والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 8: The moving desert (Activity Book pp. 116-117)\n\nExercise 1 (Page 116): Contextual Definitions from Student's Book:\n• desert: an area of land where nothing grows.\n• wildlife: animals and plants.\n• habitat: the place where plants and animals live.\n• drained: to have water removed.\n• problem: a difficult situation.\n• fertile: able to support plants and crops.\n• team: an organized group of people.\n• tract: an area of land.\n\nExercise 2 (Page 116): Desertification in Iraq & The Marshes.\n\nExercise 3 (Page 117): Tree-Planting Initiatives (Ethiopia Campaign & Jadev Payeng's 40-year forest).",
+            "exercises": [
+              {
+                "id": "u7_l8_ex1",
+                "num": "Exercise 1 (Page 116)",
+                "title": "Find words in the article in your Student's Book that mean the same as the definitions.",
+                "title_ar": "جد الكلمات المطابقة للتعاريف التالية من مقال الصحراء المتحركة في كتاب الطالب:",
+                "questions": [
+                  {
+                    "q": "a. an area of land where nothing grows ->",
+                    "q_ar": "مساحة من الأرض الجافة لا ينبت فيها زرع:",
+                    "a": "desert (صحراء)"
+                  },
+                  {
+                    "q": "b. animals and plants ->",
+                    "q_ar": "الحيوانات والنباتات الطبيعية:",
+                    "a": "wildlife (الحياة البرية / الكائنات الحية)"
+                  },
+                  {
+                    "q": "c. the place where plants and animals live ->",
+                    "q_ar": "المكان الطبيعي الذي تعيش فيه النباتات والحيوانات:",
+                    "a": "habitat (الموطن الطبيعي / البيئة الحيوية)"
+                  },
+                  {
+                    "q": "d. to have water removed ->",
+                    "q_ar": "سحب وتصريف المياه وتجفيف الأرض:",
+                    "a": "drained (مُجفَّف / مصرَّف المياه)"
+                  },
+                  {
+                    "q": "e. a difficult situation ->",
+                    "q_ar": "موقف معقد وصعب:",
+                    "a": "problem / crisis (مشكلة أو أزمة بيئية)"
+                  },
+                  {
+                    "q": "f. able to support plants and crops ->",
+                    "q_ar": "أرض صالحة لنمو النباتات والمحاصيل الزراعية:",
+                    "a": "fertile (أرض خصبة ومنتجة)"
+                  },
+                  {
+                    "q": "g. an organized group of people ->",
+                    "q_ar": "مجموعة منظمة من الناس تعمل معاً:",
+                    "a": "team / organisation (فريق عمل أو منظمة)"
+                  },
+                  {
+                    "q": "h. an area of land ->",
+                    "q_ar": "رقعة أو مساحة واسعة من الأرض:",
+                    "a": "tract / region (مساحة ممتدة من الأرض)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l8_ex2",
+                "num": "Exercise 2 (Page 116)",
+                "title": "Now write short answers to the questions about the moving desert in Iraq.",
+                "title_ar": "اكتب إجابات دقيقة وموجزة عن أسئلة التصحر والأهوار في العراق:",
+                "questions": [
+                  {
+                    "q": "a. List three places in Iraq which are affected by the moving desert:",
+                    "q_ar": "اذكر ثلاث مناطق في العراق تتأثر بزحف الرمال والتصحر:",
+                    "a": "Al-Anbar, Muthanna, and Karbala (محافظات الأنبار والمثنى وكربلاء وأطراف الفرات الأوسط)."
+                  },
+                  {
+                    "q": "b. What happens to the land when the desert moves?",
+                    "q_ar": "ماذا يحدث للأراضي الزراعية عند زحف الكثبان الرملية؟",
+                    "a": "Fertile agricultural topsoil is buried under sand and becomes barren desert (تُطمر التربة الخصبة وتتحول إلى أراضٍ بور غير صالحة للزراعة)."
+                  },
+                  {
+                    "q": "c. What is the best way to stop the desert moving?",
+                    "q_ar": "ما هي أفضل وسيلة لوقف زحف الرمال ومكافحة التصحر؟",
+                    "a": "Planting green belts of trees and vegetation (إنشاء الأحزمة الخضراء وزراعة مصدات الأشجار والنباتات)."
+                  },
+                  {
+                    "q": "d. When were the marshes drained?",
+                    "q_ar": "متى جُففت أهوار جنوب العراق؟",
+                    "a": "In the 1990s (في حقبة التسعينيات من القرن الماضي)."
+                  },
+                  {
+                    "q": "e. Are the marshes still dry today?",
+                    "q_ar": "هل ما تزال الأهوار جافة حتى اليوم؟",
+                    "a": "No, they were reflooded, but they still face water shortages and climate threats (لا، تمت إعادة غمرها بالمياه، لكنها تواجه شح المياه وتغير المناخ)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l8_ex3",
+                "num": "Exercise 3 (Page 117)",
+                "title": "Read three newspaper articles and answer the questions.",
+                "title_ar": "اقرأ المقالات الثلاث حول تجارب التشجير واجب عن الأسئلة:",
+                "questions": [
+                  {
+                    "q": "a. Why do you think Ethiopia needed a tree-planting campaign? Could Iraq do something similar?",
+                    "q_ar": "لماذا احتاجت إثيوبيا لحملة تشجير ضخمة؟ وهل يمكن للعراق تطبيق تجربة مماثلة؟",
+                    "a": "Ethiopia suffered from massive forest loss and soil erosion. Yes, Iraq can definitely plant millions of date palms and desert trees to create protective green belts against dust storms."
+                  },
+                  {
+                    "q": "b. What do you think 'crazy' means in the article? [very clever / not normal / incredible]",
+                    "q_ar": "ماذا يقصد القرويون بوصف جاديف بأنه 'مجنون'؟",
+                    "a": "not normal / incredible (غير عادي واستثنائي في صبره؛ لأنه قضى 40 عاماً يزرع الأشجار بمفرده)."
+                  },
+                  {
+                    "q": "c. Why did the villagers say Jadev was crazy?",
+                    "q_ar": "لماذا قال القرويون عنه ذلك؟",
+                    "a": "Because he started planting trees alone on a dry, barren sandbar in the river until it turned into a huge thriving forest full of wildlife!"
+                  },
+                  {
+                    "q": "d. Why are young trees like human babies?",
+                    "q_ar": "لماذا تشبه الأشجار الفتية الأطفال الصغار؟",
+                    "a": "Because they are delicate and need constant watering, care, and protection until they grow deep roots and survive on their own (لأنها رقيقة وتحتاج للرعاية والسقي حتى تشتد جذورها)."
+                  },
+                  {
+                    "q": "e. Do you have a favourite tree?",
+                    "q_ar": "ما هي شجرتك المفضلة ولماذا؟",
+                    "a": "The Date Palm (نخلة التمر العراقية) - because it withstands harsh desert climates, provides delicious nutritious fruit, and represents Iraq's heritage."
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          116,
+          117
         ]
       },
       {
@@ -4443,7 +8356,172 @@ window.CURRICULUM_DATA = [
             "page": 79,
             "heading": "Unit 7 Lesson 9: Unit 7 Round Up - المراجعة التراكمية الشاملة للوحدة السابعة (صفحة 79)",
             "text": "Unit 7 Lesson 9: Round up\nIn this unit, you have practised and mastered:\n\n1. Reading headlines and understanding their grammatical structure:\n   • Headline: \"World getting warmer, scientists say.\"\n     -> Full form: \"The world is getting warmer, scientists say.\"\n   • Headline: \"Sixteen elephants found dead.\"\n     -> Full form: \"Sixteen elephants were found dead.\"\n   • Headline: \"Waste from factory pollutes town's water supply.\"\n     -> Full form: \"Waste from a factory has polluted the town's water supply.\"\n\n2. Using 'should' and 'must':\n   • \"We should do something to help poor children in Africa.\" (giving advice/suggestion)\n   • \"No. We must do something. We have to.\" (obligation/duty)\n   • \"You must not throw litter on the street.\" (prohibition)\n\n3. Making offers with 'I will / I'll':\n   • \"I have some CDs. I'll bring these.\"\n   • \"I'll bring some plants from our garden.\"\n   • \"I'll bake delicious cakes for the sale.\"\n\n4. Expressing agreement and disagreement politely:\n   • Agreement: \"I agree.\", \"You're right.\", \"I think you're right.\"\n   • Disagreement: \"I disagree.\", \"I think you're wrong.\"\n\n5. Describing possible future events with 'may' and 'might':\n   • \"There may be less rain next summer.\"\n   • \"Farmland might become a desert if we do not protect it.\"\n   • \"If we plant trees, we may turn parts of the desert into green zones.\"\n\n6. Practical Environmental Competencies:\n   • Listening to real-world conversations and recording accurate notes.\n   • Formulating practical solutions for plastic pollution and river clean-ups.\n   • Distinguishing between renewable and non-renewable habits."
+          },
+          {
+            "id": 30092,
+            "page": 79,
+            "is_activity_book": true,
+            "activity_book_page": 118,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 118): مراجعة الوحدة الشاملة (Round up) والتهجئة والمفردات والعناوين والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 9: Unit 7 Round up (Activity Book p. 118)\n\nExercise 1: Missing letters in key environmental vocabulary.\nExercise 2: Sentence completion from word box.\nExercise 3: Expanding newspaper headlines into grammatically complete sentences.\nExercise 4: Application of 'should' (advice) vs 'must' (obligation).\nExercise 5: Environmental opinion statements and debates.",
+            "exercises": [
+              {
+                "id": "u7_l9_ex1",
+                "num": "Exercise 1 (Page 118)",
+                "title": "Fill in the missing letters to spell the words correctly.",
+                "title_ar": "أكمل الحروف المفقودة لكتابة الكلمات البيئية بصورة إملائية صحيحة:",
+                "questions": [
+                  {
+                    "q": "a. pol _ u _ _ on ->",
+                    "q_ar": "التلوث البيئي",
+                    "a": "pollution (الحروف المفقودة: l, ti)"
+                  },
+                  {
+                    "q": "b. edu _ a _ _ n ->",
+                    "q_ar": "التعليم والدراسة",
+                    "a": "education (الحروف المفقودة: c, tio)"
+                  },
+                  {
+                    "q": "c. dis _ pp _ _ r ->",
+                    "q_ar": "يختفي أو يتلاشى",
+                    "a": "disappear (الحروف المفقودة: a, ea)"
+                  },
+                  {
+                    "q": "d. c _ at ->",
+                    "q_ar": "معطف أو غطاء جلدي",
+                    "a": "coat (الحرف المفقود: o)"
+                  },
+                  {
+                    "q": "e. c _ _ st ->",
+                    "q_ar": "ساحل البحر",
+                    "a": "coast (الحرفان المفقودان: oa)"
+                  },
+                  {
+                    "q": "f. c _ _ l ->",
+                    "q_ar": "معتدل البرودة أو منعش",
+                    "a": "cool (الحرفان المفقودان: oo)"
+                  },
+                  {
+                    "q": "g. tr _ _ k ->",
+                    "q_ar": "مسار أو أثر",
+                    "a": "track (الحرفان المفقودان: ac)"
+                  },
+                  {
+                    "q": "h. E _ _ th ->",
+                    "q_ar": "كوكب الأرض",
+                    "a": "Earth (الحرفان المفقودان: ar)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l9_ex2",
+                "num": "Exercise 2 (Page 118)",
+                "title": "Complete the sentences. Use the words from the box.",
+                "title_ar": "أكمل الجمل التالية باستخدام الكلمات المناسبة من الصندوق:",
+                "words_box": [
+                  "desert",
+                  "education",
+                  "hunted",
+                  "litter",
+                  "melt",
+                  "nets",
+                  "rise",
+                  "wasteful"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Children in some countries are too poor to get any ________.",
+                    "q_ar": "الأطفال في بعض الدول فقراء جداً ولا يحصلون على أي قسط من التعليم.",
+                    "a": "education (التعليم)"
+                  },
+                  {
+                    "q": "b. If the ice caps ________, the sea level will ________.",
+                    "q_ar": "إذا ذابت القمم الجليدية، فإن منسوب مياه البحر سيرتفع.",
+                    "a": "melt / rise (melt = يذوب، rise = يرتفع)"
+                  },
+                  {
+                    "q": "c. Polar bears are ________ for their fur.",
+                    "q_ar": "تتعرض الدببة القطبية للصيد الجائر بسبب فرائها.",
+                    "a": "hunted (تُصاد - hunted)"
+                  },
+                  {
+                    "q": "d. ________ on the streets looks terrible.",
+                    "q_ar": "القمامة والنفايات الملقاة في الشوارع تعطي مظهراً سيئاً للغاية.",
+                    "a": "Litter (القمامة والفضلات)"
+                  },
+                  {
+                    "q": "e. Leaving all the lights on is very ________.",
+                    "q_ar": "ترك المصابيح الكهربائية مضاءة دون داعٍ هو تصرف مبدد ومسرف.",
+                    "a": "wasteful (مسرف / مبدد للموارد)"
+                  },
+                  {
+                    "q": "f. ________ are used to catch fish.",
+                    "q_ar": "الشباك تُستخدم لصيد الأسماك من النهر والبحر.",
+                    "a": "Nets (شباك الصيد)"
+                  },
+                  {
+                    "q": "g. The moving ________ is harmful for the environment and people of Iraq.",
+                    "q_ar": "الصحراء المتحركة وزحف الكثبان الرملية يضران ببيئة وسكان العراق.",
+                    "a": "desert (الصحراء - the moving desert)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l9_ex3",
+                "num": "Exercise 3 (Page 118)",
+                "title": "Write the headlines as full sentences.",
+                "title_ar": "أعد كتابة عناوين الأخبار بصيغة جمل كاملة نحوياً:",
+                "questions": [
+                  {
+                    "q": "a. 'Not my fault,' driver said ->",
+                    "q_ar": "'ليس خطأي'، هكذا قال السائق.",
+                    "a": "The driver said that it was not his fault."
+                  },
+                  {
+                    "q": "b. Race stopped by bad weather ->",
+                    "q_ar": "توقف السباق بسبب سوء الأحوال الجوية.",
+                    "a": "The race was stopped because of bad weather."
+                  },
+                  {
+                    "q": "c. Two killed in hotel fire ->",
+                    "q_ar": "مقتل شخصين في حريق الفندق.",
+                    "a": "Two people were killed in a hotel fire."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l9_ex4",
+                "num": "Exercise 4 (Page 118)",
+                "title": "Complete the sentences using should or must.",
+                "title_ar": "أكمل الجمل باستخدام should أو must حسب قوة الإلزام:",
+                "questions": [
+                  {
+                    "q": "a. People who need glasses ________ have an eye test.",
+                    "q_ar": "من يحتاج لنظارة يجب أن يفحص عينيه طبياً.",
+                    "a": "must (إلزام طبي لا غنى عنه: must)"
+                  },
+                  {
+                    "q": "b. We ________ all eat plenty of fruit and vegetables. It's good for us.",
+                    "q_ar": "ينبغي لنا جميعاً تناول الكثير من الفواكه والخضار.",
+                    "a": "should (نصيحة غذائية صحية: should)"
+                  },
+                  {
+                    "q": "c. People ________ stop and think before they drop litter.",
+                    "q_ar": "ينبغي للناس أن يتوقفوا ويفكروا قبل رمي القمامة.",
+                    "a": "should (توعية ونصح سلوكي: should)"
+                  },
+                  {
+                    "q": "d. A mechanic ________ know how to repair a car.",
+                    "q_ar": "يجب على الميكانيكي أن يعرف كيفية إصلاح السيارات.",
+                    "a": "must (شرط وواجب مهني حتمي: must)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          118
         ]
       },
       {
@@ -4456,7 +8534,101 @@ window.CURRICULUM_DATA = [
             "page": 80,
             "heading": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower - مغامرة باريس وبرج إيفل (صفحات 80-81)",
             "text": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (Part 1 - At the Eiffel Tower)\n\n'It's nearly time for you all to go back to your own countries, boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.'\n'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip.\n'That's right!' said Tom. 'Make sure you take some photographs for the magazine.'\n'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!'\n\nWe were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue.\n'Look at all these people!' said Aziz. 'We're going to be here for hours!'\n'It might move quickly,' I said.\n'But it might not,' said Jad. 'I've got an idea.'\nHe walked boldly to the front of the queue. We saw him talking politely to a man, and then he turned and waved to us! We followed him past the other people in the queue, and we all stepped into the lift.\n\n'How did you do that?' I asked Jad in amazement.\n'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international youth magazine!'\n'But that's not true!' said Paolo.\n'It's not true now,' smiled Jad. 'But it might be true in the future!'\n\nThe doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded.\n'There are so many people here!' said Marcus. We tried to get to the front railing, but we couldn't get past people.\n'Excuse me,' I said. But nobody moved.\n'Can I get past, please?' said Jad. But nobody moved.\nJad held his camera up high above the crowd to take photographs. Then suddenly, some people in the crowd turned around and started walking towards us. We turned around, too, and were pushed right back into the lift!\n'Wait!' I cried. 'We haven't seen anything yet!'\nBut the doors of the lift closed, and we started going back down again!\n\nAt the bottom of the tower, Jad looked through his photographs.\n'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. 'All I can see is the back of your head, Johnny!'\nI laughed, too. 'I'm going to miss you, Jad,' I said.\nJad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.'\n'Great idea, Jad!'\n\nPart 2 - The International Video Chat:\n'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' smiling faces on the screen.\n'It's not the morning here in Iraq, Johnny. It's the afternoon,' smiled Jad.\n'It's 7 a.m. here in the USA,' yawned Marcus. 'You woke me up!'\n'Sorry, but I wanted to check. Did Tom send you the published magazine?'\n'Yes!' they all cheered.\n'It looks great,' said Aziz. 'I love your story about Stonehenge, Johnny.'\n'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!'\n'The one of Johnny standing in the River Thames is good, too,' laughed Paolo.\n'I think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face!'\nI laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor!\nI heard Marcus call out through the speaker: 'Why didn't you catch it, Johnny?'\nAnd then I heard them all laughing together and shouting the same famous phrase:\n'Use your hands!'\n'Very funny, guys!' I said, and I laughed, too."
+          },
+          {
+            "id": 30102,
+            "page": 80,
+            "is_activity_book": true,
+            "activity_book_page": 119,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 119): وقت القصة (Story time: جاد وجوني في برج إيفل بباريس) والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 10: Story time - Jad and Johnny: The Eiffel Tower (Activity Book p. 119)\n\nExercise 1: Story Information File Card:\n• Title: Jad and Johnny - The Eiffel Tower\n• Characters: Jad, Johnny, Aziz, Paolo, Marcus\n• What it is about: The boys are visiting Paris and climb the Eiffel Tower. Jad takes a magnificent photograph for the school magazine cover, and the friends agree to stay connected forever.\n• Why I liked/didn't like the story: A touching and funny adventure about international friendship and world wonders.\n• New words: queue, guard, breathtaking, view, lift, drop, video call.\n\nExercise 2: True (T) or False (F) Reading Comprehension Statements.",
+            "exercises": [
+              {
+                "id": "u7_l10_ex1",
+                "num": "Exercise 1 (Page 119)",
+                "title": "Read the story and complete the information below.",
+                "title_ar": "أكمل بطاقة معلومات قصة جاد وجوني عند برج إيفل في باريس:",
+                "questions": [
+                  {
+                    "q": "a. Title (عنوان القصة):",
+                    "q_ar": "عنوان القصة:",
+                    "a": "Jad and Johnny - The Eiffel Tower (جاد وجوني - برج إيفل)"
+                  },
+                  {
+                    "q": "b. Characters (شخصيات القصة):",
+                    "q_ar": "الشخصيات الرئيسية:",
+                    "a": "Jad, Johnny, Aziz, Paolo, and Marcus (جاد، جوني، عزيز، باولو، وماركوس)"
+                  },
+                  {
+                    "q": "c. What it is about (موضوع القصة):",
+                    "q_ar": "عن ماذا تدور أحداث القصة؟",
+                    "a": "The boys visit the Eiffel Tower in Paris, take photos for their school magazine cover, and conclude their European adventure by promising to stay in touch through weekly video calls (زيارة برج إيفل بباريس والتقاط صورة الغلاف للمجلة المدرسية والاتفاق على التواصل الأسبوعي بالفيديو)."
+                  },
+                  {
+                    "q": "d. Why I liked/didn't like the story (انطباعك عن القصة):",
+                    "q_ar": "لماذا أعجبتك القصة؟",
+                    "a": "I loved it because it was full of warmth, friendship, breathtaking Paris views, and amusing moments with Johnny (أحببتها لروعة الصداقة والمشاهد الخلابة لباريس والمواقف الطريفة)."
+                  },
+                  {
+                    "q": "e. New words (المفردات الجديدة):",
+                    "q_ar": "أهم الكلمات الجديدة في القصة:",
+                    "a": "queue (طابور انتظار), guard (حارس أمن), breathtaking (خلاب ويخطف الأنفاس), lift (مصعد كهربائي), video call (مكالمة فيديو مرئية)."
+                  }
+                ]
+              },
+              {
+                "id": "u7_l10_ex2",
+                "num": "Exercise 2 (Page 119)",
+                "title": "Are the statements true or false? Write T or F.",
+                "title_ar": "حدد ما إذا كانت العبارات صحيحة (T) أم خاطئة (F) مع التعليل:",
+                "questions": [
+                  {
+                    "q": "a. The boys are visiting the Eiffel Tower.",
+                    "q_ar": "الأولاد يزورون برج إيفل في باريس.",
+                    "a": "T (True - يزورون معلم فرنسا الشهير برج إيفل)"
+                  },
+                  {
+                    "q": "b. Jad lies to a guard so they can jump the queue.",
+                    "q_ar": "كذب جاد على الحارس ليتجاوزوا طابور الانتظار.",
+                    "a": "F (False - جاد صادق ومهذب ولم يكذب على الحارس إطلاقاً)"
+                  },
+                  {
+                    "q": "c. The boys think the view from the top of the tower is beautiful.",
+                    "q_ar": "يرى الأولاد أن المنظر من قمة البرج ساحر وجميل للغاية.",
+                    "a": "T (True - المنظر البانورامي لمدينة باريس كان خلاباً)"
+                  },
+                  {
+                    "q": "d. Jad takes a photograph from the top to use for the magazine's cover.",
+                    "q_ar": "التقط جاد صورة فوتوغرافية رائعة لتكون غلافاً للمجلة المدرسية.",
+                    "a": "T (True)"
+                  },
+                  {
+                    "q": "e. The boys decided to have a video call every week.",
+                    "q_ar": "قرر الأصدقاء إجراء مكالمة فيديو كل أسبوع للبقاء على اتصال.",
+                    "a": "T (True)"
+                  },
+                  {
+                    "q": "f. Johnny is woken up by the video call.",
+                    "q_ar": "استيقظ جوني من نومه على رنين مكالمة الفيديو.",
+                    "a": "T (True - بسبب فرق التوقيت بين البلدان)"
+                  },
+                  {
+                    "q": "g. The boys are happy with the finished magazine.",
+                    "q_ar": "شعر الأولاد بسعادة وفخر كبيرين بإنجاز مجلتهم المدرسية.",
+                    "a": "T (True)"
+                  },
+                  {
+                    "q": "h. Johnny drops his phone from laughing too much.",
+                    "q_ar": "سقط هاتف جوني من يده بسبب شدة الضحك والمزاح.",
+                    "a": "T (True)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          119
         ]
       },
       {
@@ -4469,7 +8641,111 @@ window.CURRICULUM_DATA = [
             "page": 82,
             "heading": "Unit 7 Lesson 11: Project 4: Recycling at home - إعادة التدوير المنزلي ودليل صناعة حافظة أقلام (صفحات 82-85)",
             "text": "Unit 7 Lesson 11: Project 4: Recycling at home (المشروع الرابع: إعادة التدوير المنزلي)\n\n1. The Global Rubbish Crisis (صفحة 82):\nOne of the biggest problems facing the modern world today is rubbish. Countries and cities across the globe have to deal with mountains of solid trash every single day. As we know, this causes immense problems for people, wildlife and our fragile environment.\nRight now, there are practical steps you and your family can take at home to reduce waste:\n• Use paper carefully and write on both sides of every sheet.\n• Try to reuse plastic water bottles instead of throwing them away.\n• Find creative ways to use old newspapers (wrapping gifts, cleaning, crafts).\n• Donate or repurpose outgrown clothes.\n• Think before you throw anything in the bin!\n\n2. The Rubbish Competition - Creative Upcycling (صفحة 83):\nIngenious items made entirely from household rubbish:\n• Present Tag: Cut out of scrap paper into a heart shape and tied with string.\n• Lampshade: Crafted using plastic drinking cups fastened together with paper clips.\n• Toy Rocket: Created for children using a cardboard paper towel tube and brightly coloured scraps.\n• Glass Bottle House: An astounding real building constructed from 4,000 recycled glass bottles!\n\n3. Useful or Not Useful? (صفحة 84):\nEvaluating home recycling inventions:\n• Does it replace a new plastic product?\n• Is it sturdy and safe for daily use?\n• How much waste does it divert from landfills?\n\n4. DIY Step-by-Step Recycling Project (صفحة 85):\n\"Make a Handy Pencil Case from Recycled Plastic Bottles!\"\nYou will need:\n- Two clean plastic bottles\n- One zipper fastener\n- A pair of scissors\n- Strong glue or glue gun\n\nInstructions:\n1. Use the scissors to cut the top off each bottle so that one bottle remains tall (for holding pencils) and the other is cut short (to serve as the lid).\n2. Use glue to stick one side of the zipper fastener neatly around the inside upper edge of the tall bottle.\n3. Glue the other side of the zipper fastener along the inside rim of the short bottle.\n4. Allow the glue to dry completely, then zip the two halves together.\n5. Put your pens, pencils and erasers in your new eco-friendly pencil case!\n\nShare your DIY recycling project with your classmates and publish your photo in the school magazine!"
+          },
+          {
+            "id": 30112,
+            "page": 82,
+            "is_activity_book": true,
+            "activity_book_page": 126,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 126): الأنشطة الإضافية التراكمية (Extra activities) للوحدة السابعة والحلول النموذجية المعتمدة",
+            "text": "Unit 7 Lesson 11: Extra activities (Activity Book p. 126)\n\nExercise 1 (Page 126 - Track 63): Listening to Riverbank Cleanup (Yassir and Jamal):\n• Boys are in the park by the river.\n• They see piles of cans and rubbish left behind.\n• Yassir insists on picking it up to protect nature.\n• They use heavy-duty plastic bags and protective gloves.\n\nExercise 2 (Page 126): Vocabulary Definitions Matching:\ndesert, habitat, factory, playground, headmistress, forest, solution, headline, population.",
+            "exercises": [
+              {
+                "id": "u7_l11_ex1",
+                "num": "Exercise 1 (Page 126)",
+                "title": "Listen to some boys (Track 63) and answer the questions.",
+                "title_ar": "استمع للتسجيل 63 واجب عن الأسئلة الخاصة بحملة النظافة النهرية:",
+                "questions": [
+                  {
+                    "q": "a. Where are the boys?",
+                    "q_ar": "أين يتواجد الأولاد؟",
+                    "a": "In the public park by the river (في المتنزه العام على ضفة النهر)"
+                  },
+                  {
+                    "q": "b. What do they see?",
+                    "q_ar": "ماذا رأوا على الأرض؟",
+                    "a": "Lots of litter, plastic bags, and cans left by picnickers (كميات كبيرة من القمامة والأكياس والعلب المتروكة)"
+                  },
+                  {
+                    "q": "c. What does Yassir say they must do?",
+                    "q_ar": "ماذا قال ياسر إنه يتعين عليهم فعله؟",
+                    "a": "They must pick up the litter and clean the area (يجب عليهم جمع القمامة وتنظيف المكان)"
+                  },
+                  {
+                    "q": "d. What do they collect it in?",
+                    "q_ar": "في ماذا يجمعون القمامة؟",
+                    "a": "In large plastic bags / sacks (في أكياس قمامة بلاستيكية كبيرة)"
+                  },
+                  {
+                    "q": "e. Is Jamal happy to do it?",
+                    "q_ar": "هل كان جمال سعيداً ومتحمساً في البداية؟",
+                    "a": "Not at first, but then he agrees it's important and helps (ليس في البداية، ولكنه اقتنع بأهميتها وساعد بحماس)"
+                  },
+                  {
+                    "q": "f. What does Yassir tell Jamal to do?",
+                    "q_ar": "بماذا نصح ياسر جمال قبل لمس النفايات؟",
+                    "a": "To put on protective gloves before picking up dirty rubbish (ارتداء القفازات الواقية لحماية يديه)"
+                  }
+                ]
+              },
+              {
+                "id": "u7_l11_ex2",
+                "num": "Exercise 2 (Page 126)",
+                "title": "Read the definitions and write the words.",
+                "title_ar": "اقرأ التعاريف التالية واكتب الكلمة الإنجليزية المناسبة لكل تعريف:",
+                "questions": [
+                  {
+                    "q": "a. an infertile area of land covered in sand and dust ->",
+                    "q_ar": "أرض غير خصبة مغطاة بالرمال والغبار:",
+                    "a": "desert (صحراء)"
+                  },
+                  {
+                    "q": "b. the natural environment of animals and plants ->",
+                    "q_ar": "البيئة الطبيعية التي تعيش فيها الحيوانات والنباتات:",
+                    "a": "habitat (الموطن الطبيعي)"
+                  },
+                  {
+                    "q": "c. a place where things like cars are made ->",
+                    "q_ar": "مكان تُصنع فيه الأشياء والسيارات:",
+                    "a": "factory (مصنع)"
+                  },
+                  {
+                    "q": "d. a place outside school where you can go between lessons ->",
+                    "q_ar": "ساحة في الهواء الطلق بالمدرسة يقضي فيها الطلاب الاستراحة:",
+                    "a": "playground (ساحة أو باحة المدرسة)"
+                  },
+                  {
+                    "q": "e. a woman who is head of a school ->",
+                    "q_ar": "سيدة تتولى إدارة المدرسة:",
+                    "a": "headmistress (مديرة المدرسة)"
+                  },
+                  {
+                    "q": "f. a place with lots of trees ->",
+                    "q_ar": "مكان واسع يضم عدداً كبيراً من الأشجار:",
+                    "a": "forest (غابة)"
+                  },
+                  {
+                    "q": "g. a way to fix a problem ->",
+                    "q_ar": "طريقة أو وسيلة لمعالجة المشكلة وحلها:",
+                    "a": "solution (حل)"
+                  },
+                  {
+                    "q": "h. the title of a news article ->",
+                    "q_ar": "عنوان مقال أو خبر صحفي:",
+                    "a": "headline (عنوان رئيسي / مانشيت)"
+                  },
+                  {
+                    "q": "i. the number of people living in a certain area ->",
+                    "q_ar": "عدد الأشخاص الذين يعيشون في منطقة محددة:",
+                    "a": "population (عدد السكان / التعداد السكاني)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          126
         ]
       }
     ]
@@ -4477,19 +8753,136 @@ window.CURRICULUM_DATA = [
   {
     "id": 197,
     "title": "الوحدة 8: المراجعة الشاملة 2 (Unit 8: Review 2)",
-    "description": "صفحات 86 - 89 (كتاب الطالب) | صفحات 120 - 125 (كتاب النشاط)",
+    "description": "صفحات 86 - 89 (كتاب الطالب) | صفحات 120 - 123 و 127 (كتاب النشاط)",
     "lessons": [
       {
         "id": 3021,
         "title": "Lesson 1: Review - Listening Skills & Accurate Note-Taking (مهارات الاستماع الدقيق والتقاط التفاصيل وتدوين الملاحظات)",
-        "summary": "صفحة 86 من كتاب الطالب (SB) وصفحة 120 من كتاب النشاط (AB 120) مع نصوص الاستماع الكاملة من صفحة 106.",
+        "summary": "صفحة 86 من كتاب الطالب (SB) وصفحة 120 من كتاب النشاط (AB 120) مع نصوص الاستماع الكاملة من صفحة 106-107.",
         "chunks": [
           {
             "id": 30211,
             "page": 86,
             "heading": "Unit 8 Lesson 1: Review - Listening Skills & Accurate Note-Taking (صفحة 86)",
             "text": "Unit 8 Review - Lesson 1: Listening Skills & Strategy Practice (صفحة 86 من كتاب الطالب و 120 من كتاب النشاط AB 120):\n\n★ Key Learning Strategy: Listening for Particular Information:\nSometimes we need to listen very carefully for particular information (names, telephone numbers, addresses, appointment dates and times).\nIf we don't hear the information, or if we don't note it down correctly, we may have lots of serious problems - like the people in the pictures below.\n\nLook at the pictures and situations on page 86:\n1. Susan:\n   - Susan is phoning a friend: \"What? She must be there! She gave me her number and told me to phone at six o'clock.\"\n   - What did Susan get wrong?\n     Susan wrote down the wrong telephone number! She dialled 432147, but a stranger answered saying no one named Liz lives there.\n   - Recommended strategy for Susan:\n     She should have checked the number with Liz when writing it down, or read it back aloud: \"Is that 432147?\"\n\n2. Jalal:\n   - Jalal has just arrived in England in a taxi at night: \"There's nobody at home. What can I do?\"\n   - What did Jalal get wrong?\n     Jalal wrote down the wrong address! He gave the taxi driver \"24 West Street\", but the house was dark and empty. His friend Dave might live on West Road, West Drive, or a different number.\n   - Recommended strategy for Jalal:\n     He should have written down the full, precise address including the street suffix (Road / Street / Drive) and postcode, and kept Dave's phone number as backup.\n\n3. Jane Smith:\n   - Jane Smith arrives at an office reception: \"My name's Jane Smith. I have an interview at four o'clock.\"\n   - Receptionist: \"I don't think so, Miss Smith. It's true you had an interview, but it was yesterday! Miss Brown has already hired another secretary.\"\n   - What did Jane get wrong?\n     Jane wrote down the appointment on the wrong day in her diary!\n   - Recommended strategy for Jane:\n     She should have written the appointment carefully in her diary and confirmed both the day of the week and date (e.g. \"Tuesday, 14th May at 4:00 PM\").\n\n★ Complete Listening Audio Transcripts (نصوص الاستماع المعتمدة من صفحة 106):\n[Part 1: What did Susan get wrong?]\nSusan: Hello, this is Susan. Can I speak to Liz, please?\nWoman: Liz! There's nobody here called Liz.\nSusan: What? She must be there! She gave me her number and told me to phone at six o'clock. It's very important. I have to...\nWoman: Hold on, hold on! I've told you, there's nobody.\nSusan: But she gave me this number - 432147 - and I wrote it down.\nWoman: Well, I'm afraid you wrote down the wrong number. 432147 is my number, and I'm not Liz. I can't help you. Goodbye.\nSusan: But... Oh, dear! Now what can I do?\n\n[Part 2: What did Jalal get wrong?]\nJalal: There's nobody at home. What can I do?\nTaxi driver: Ring the bell again.\nJalal: I rang it and rang it. The house is completely dark.\nTaxi driver: There must be somebody there. You've come to stay with them for a holiday, you told me.\nJalal: Yes, I have.\nTaxi driver: Are you sure this is the correct address - 24 West Street?\nJalal: Of course it is. My friend Dave phoned me, and I wrote it down on this piece of paper.\nTaxi driver: Perhaps it's the wrong number. Or perhaps it's West Road - or Drive or...\nJalal: What can I do? I don't know anyone else in England!\nTaxi driver: Well, let's see. You can...\n\n[Part 3: What did Jane Smith get wrong?]\nReceptionist: Can I help you?\nJane: Oh, yes. My name's Jane Smith. I have an interview at four o'clock. With Miss Brown.\nReceptionist: I don't think so, Miss Smith.\nJane: What do you mean?\nReceptionist: I don't think you have an interview with Miss Brown at four o'clock.\nJane: But I have! It's about a job as a secretary.\nReceptionist: Yes, Miss Brown was looking for a new secretary. And she's found one, I'm pleased to say.\nJane: She can't do that! What about my interview? I want that job. I'm a really good secretary. I'm...\nReceptionist: Miss Smith. Please calm down. It's true, you did have an interview. But it was yesterday. You didn't come for it.\nJane: It wasn't yesterday. It's today.\nReceptionist: I'm afraid you're wrong. Look at my diary. I phoned you and told you the day and the time. You said it was all right.\nJane: Oh, dear! I must have written it down on the wrong day!\n\n★ Summary of Essential Listening Rules:\n1. Always listen for specific details: numbers, times, dates, and locations.\n2. Read back phone numbers and dates to verify them with the speaker before concluding the conversation.\n3. Keep essential backup details (e.g. emergency phone contacts, email confirmation)."
+          },
+          {
+            "id": 30212,
+            "page": 86,
+            "is_activity_book": true,
+            "activity_book_page": 120,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 120): مهارات الاستماع وتدوين الملاحظات ونصوص الاستماع الإذاعي والمقابلة والحلول النموذجية المعتمدة",
+            "text": "Unit 8 Review - Lesson 1: Listening Skills & Strategy Practice (كراس النشاط صفحة 120):\n\n★ Key Learning Focus: Listening for Particular Information (الاستماع الدقيق لالتقاط تفاصيل محددة):\nIn this lesson, students listen to two distinct authentic audio recordings (Track 57 & Track 58) and train on recording accurate notes under real-time listening conditions:\n1. Radio News Report (Track 57): A breaking news report covering a residential house fire in Castle Street, midnight rescue operations by courageous neighbours and firefighters, and crucial safety rules.\n2. Interview with Kamal Mustafa (Track 58): A career story of an inspirational IT teacher working in Al Anbar, explaining his educational background, volunteer teaching in Haditha, and teaching computers.\n\n★ Exercise 1 (Page 120) — Choosing the Best Headline:\nWhen selecting a news headline, choose the summary that encapsulates the whole story (the disaster and the human survival/rescue), rather than just a single secondary detail.\n\n★ Exercise 2 (Page 120) — Answering Questions on the News Report (Track 57):\nKey facts extracted from the news report:\n• People in the house: Three (Mrs Sarah Brown and her two daughters, Ann, 5, and Kate, 3).\n• Their action: They were asleep upstairs.\n• The father's situation: Mr Brown was working (he works night shifts, so he was not in the house).\n• The caller: Mr Sam White, a neighbour returning home at midnight, smelled smoke, saw fire under the door, and dialed emergency on his mobile phone.\n• Neighbour's advice: He shouted at Mrs Brown to jump from the upstairs window.\n• Mother's reaction: She refused to leave without her daughters (\"Not without the girls!\").\n• Firefighter's command: He warned her that going through the bedroom door would be fatal due to heat and toxic smoke; she must evacuate immediately and let professionals handle the rescue.\n• Children's location: Found safe in the bathroom, which insulated them and saved their lives.\n\n★ Exercise 3 (Page 120) — Teacher Kamal Mustafa Interview (Track 58):\nKey points from Kamal's educational and professional life:\n• School exams surprise: He passed his final exams despite being quite lazy in school.\n• University study: He graduated in Mathematics (Maths).\n• Hard work motive: He was motivated because all university peers were studying diligently.\n• Volunteering in Haditha: He worked for one year as an unpaid volunteer teacher, discovering his true passion for teaching.\n• Career in Al Anbar: Has been teaching for 5 years in Al Anbar after moving away from the big city of Ramadi.\n• Subject taught: Computers and Information Technology.",
+            "exercises": [
+              {
+                "id": "u8_l1_ex1",
+                "num": "Exercise 1 (Page 120)",
+                "title": "You are going to hear a news report on the radio. Listen and tick (✓) the best answer.",
+                "title_ar": "استمع إلى التقرير الإخباري الإذاعي (Track 57) واختر العنوان الأنسب والأشمل للتقرير الإخباري:",
+                "questions": [
+                  {
+                    "q": "Which is the best headline for the news report?\n[ ] Fire ruins home - family saved\n[ ] Firefighter put out fire\n[ ] Mother of two in hospital after fire",
+                    "q_ar": "ما هو أفضل عنوان رئيسي يختصر التقرير الإخباري بدقة؟",
+                    "a": "✓ Fire ruins home - family saved (حريق يدمر منزلاً - وإنقاذ العائلة بالكامل)\n\nالتعليل: هذا العنوان يلخص ركني الخبر الرئيسيين: تدمير المنزل بسبب الحريق ونجاة وإنقاذ العائلة بالكامل."
+                  }
+                ]
+              },
+              {
+                "id": "u8_l1_ex2",
+                "num": "Exercise 2 (Page 120)",
+                "title": "Listen again and answer the questions. Write short answers.",
+                "title_ar": "استمع مرة أخرى إلى التقرير الإخباري (Track 57) وأجب عن الأسئلة بإجابات قصيرة ومحددة:",
+                "questions": [
+                  {
+                    "q": "a. How many people were in the house?",
+                    "q_ar": "كم عدد الأشخاص الذين كانوا داخل المنزل وقت الحريق؟",
+                    "a": "Three (Mrs Sarah Brown and her two daughters, Ann and Kate) (ثلاثة أشخاص: الأم وطفلتاها)"
+                  },
+                  {
+                    "q": "b. What were they doing?",
+                    "q_ar": "ماذا كانوا يفعلون؟",
+                    "a": "They were asleep upstairs. (كانوا نائمين في غرف النوم بالطابق العلوي)"
+                  },
+                  {
+                    "q": "c. What was the father doing?",
+                    "q_ar": "أين كان الأب وماذا كان يفعل؟",
+                    "a": "He was at work / working (he works at night). (كان في عمله الليلي خارج المنزل)"
+                  },
+                  {
+                    "q": "d. Who called the firefighters?",
+                    "q_ar": "من الذي اتصل بفرق الإطفاء؟",
+                    "a": "Mr Sam White (a neighbour) on his mobile phone. (الجار سام وايت بهاتفه النقال)"
+                  },
+                  {
+                    "q": "e. What did he tell Mrs Brown to do?",
+                    "q_ar": "ماذا طلب الجار من السيدة براون أن تفعل؟",
+                    "a": "To jump out of the window. (أن تقفز من نافذة الطابق العلوي)"
+                  },
+                  {
+                    "q": "f. What did she want to do?",
+                    "q_ar": "ماذا كانت السيدة براون تريد أن تفعل؟",
+                    "a": "She wanted to get to her children / not to leave without them. (أرادت الوصول إلى طفلتيها ورفضت المغادرة دونهما)"
+                  },
+                  {
+                    "q": "g. What did the firefighter say she must do?",
+                    "q_ar": "ماذا أمرها رجل الإطفاء أن تفعل؟",
+                    "a": "She must leave now and let them do their job. (أن تغادر فوراً وتترك رجال الإطفاء يؤدون عملهم لأن الدخان قاتل)"
+                  },
+                  {
+                    "q": "h. Where did the firefighters find the children?",
+                    "q_ar": "أين عثر رجال الإطفاء على الطفلتين؟",
+                    "a": "In the bathroom (not in their bedroom). (في الحمام، مما أسهم في إنقاذ حياتهما)"
+                  }
+                ]
+              },
+              {
+                "id": "u8_l1_ex3",
+                "num": "Exercise 3 (Page 120)",
+                "title": "Kamal Mustafa is a teacher at a school in Al Anbar. Listen and answer the questions. Write short answers.",
+                "title_ar": "استمع إلى مقابلة الأستاذ كمال مصطفى (Track 58) وأجب عن الأسئلة بإجابات قصيرة:",
+                "questions": [
+                  {
+                    "q": "a. Why was Kamal surprised when he passed his school exams?",
+                    "q_ar": "لماذا تفاجأ كمال باجتياز امتحاناته المدرسية النهائية؟",
+                    "a": "Because he was quite lazy. (لأنه كان كسولاً نوعاً ما أثناء المدرسة)"
+                  },
+                  {
+                    "q": "b. What did he study at university?",
+                    "q_ar": "ماذا درس في الجامعة؟",
+                    "a": "Maths / Mathematics. (علم الرياضيات)"
+                  },
+                  {
+                    "q": "c. Why did he work hard at university?",
+                    "q_ar": "لماذا اجتهد ودرس بجد في الجامعة؟",
+                    "a": "Because all the other students worked hard, so he did, too. (لأن جميع الطلاب الآخرين كانوا مجتهدين فتشجع مثلهم)"
+                  },
+                  {
+                    "q": "d. What did he do in Haditha?",
+                    "q_ar": "ماذا عمل في قضاء حديثة؟",
+                    "a": "He worked as a volunteer teacher for a year (without pay). (عمل معلماً متطوعاً لسنة واحدة دون مقابل واكتشف حبه للتدريس)"
+                  },
+                  {
+                    "q": "e. How long has he worked as a teacher in Al Anbar?",
+                    "q_ar": "كم سنة يعمل معلماً في محافظة الأنبار؟",
+                    "a": "For five years (5 years). (لمدة خمس سنوات)"
+                  },
+                  {
+                    "q": "f. Why did he leave Ramadi?",
+                    "q_ar": "لماذا غادر مدينة الرمادي؟",
+                    "a": "Because he didn't enjoy living in a big city. (لأنه لم يستمتع بالحياة في المدينة الكبيرة وفضل الريف)"
+                  },
+                  {
+                    "q": "g. What subject does he teach?",
+                    "q_ar": "ما المادة التي يدرسها للطلاب؟",
+                    "a": "Computers / Computing / IT (how to work with computers). (مادة الحاسوب وتكنولوجيا المعلومات)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          120
         ]
       },
       {
@@ -4502,7 +8895,156 @@ window.CURRICULUM_DATA = [
             "page": 87,
             "heading": "Unit 8 Lesson 2: Review - Speaking Fluency, Expression & Telephone Skills (صفحة 87)",
             "text": "Unit 8 Review - Lesson 2: Speaking Fluency & Communication Practice (صفحة 87 من كتاب الطالب و 121 من كتاب النشاط AB 121):\n\n★ Part 1 — Reading Aloud with Expression (القراءة الجهرية التعبيرية):\nRemember:\n• When you're reading aloud, don't stop after each single word! We say words in connected groups (chunks / thought units).\n• When you are saying a word, your eyes need to be looking ahead at the words that come after it.\n• Always try to show how the speaker feels using your tone of voice!\n\nPractise reading the two speech bubbles with appropriate emotional intonation:\nBubble 1 (Negative Emotion — Disappointment & Dissatisfaction):\n\"I went to a new restaurant last night, but it was awful. The food was bad, and the waiters were very slow. Worst of all, they weren't even polite.\"\n-> Voice tone: Low, disappointed, complaining, emphasizing \"awful\", \"bad\", \"very slow\", and \"weren't even polite\".\n\nBubble 2 (Positive Emotion — Delight & Satisfaction):\n\"I went to a new restaurant last night, and it was fantastic! The food was delicious, and the waiters were really good. They were helpful and friendly.\"\n-> Voice tone: High, lively, cheerful, smiling tone, emphasizing \"fantastic!\", \"delicious\", \"really good\", \"helpful and friendly\".\n\n★ Part 2 — Memory and Vocabulary Game: 'Going on Holiday' (لعبة الذاكرة وتراكم القائمة):\nIn this game, players practise pronunciation, memory recall, and list intonation (rising tone ➚ on items, falling tone ➘ on the last item):\n1. Player 1: \"I'm going to take a toothbrush.\"\n2. Player 2: \"I'm going to take a toothbrush and toothpaste.\"\n3. Player 3: \"I'm going to take a toothbrush, toothpaste and sunglasses.\"\n4. Player 4: \"I'm going to take a toothbrush, toothpaste, sunglasses and a guidebook.\"\n5. Player 5: \"I'm going to take a toothbrush, toothpaste, sunglasses, a guidebook and a pair of shoes.\"\nRule: If a player forgets any item from the list (e.g. forgets the guidebook), they lose that turn and the group starts again!\n\n★ Part 3 — Role-play: Making Job Inquiries by Telephone (المكالمات الهاتفية للتقديم على الوظائف المعروضة):\nReview telephone language from Unit 5 (page 54). Imagine you want one of the following advertised jobs:\n\nJob Advertisement 1:\n\"Garden help wanted. Schoolgirl or schoolboy once a week for 2 or 3 hours. Tel: 327 444\"\n\nJob Advertisement 2:\n\"Play with my children! Mother wants afternoon help with children aged 5, 7 and 9. Lovely garden and lots of toys. Tel: 596 369\"\n\nModel Telephone Dialogue for Job Application:\nEmployer: Hello, 327 444.\nStudent: Hello. My name is Ali. I'm calling about the advertisement for garden help in the newspaper.\nEmployer: Hello, Ali. Thank you for calling. Are you a schoolboy?\nStudent: Yes, I am. I am in the second intermediate class.\nEmployer: Have you got any experience of gardening?\nStudent: Yes, I often help my father in our garden. I know how to water plants, cut grass, and weed flower beds.\nEmployer: That sounds wonderful. We need help on Saturday mornings for three hours. Can you come then?\nStudent: Yes, Saturday morning suits me perfectly.\nEmployer: Excellent! Can you come for a short meeting this Friday at 4 o'clock?\nStudent: Yes, of course. Thank you very much!\nEmployer: You're welcome, Ali. Goodbye."
+          },
+          {
+            "id": 30222,
+            "page": 87,
+            "is_activity_book": true,
+            "activity_book_page": 121,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 121): طلاقة التحدث وسلاسل الكلمات ولعبة التخمين وشجرة الكلمات (Word Tree) والحلول النموذجية المعتمدة",
+            "text": "Unit 8 Review - Lesson 2: Speaking Fluency & Word Associations (كراس النشاط صفحة 121):\n\n★ Key Learning Focus: Vocabulary Recall, Spoken Fluency & Problem Solving (تطوير الطلاقة وحل الألغاز):\nThis lesson develops speaking speed, thematic word connections, inductive deductive questioning, and vocabulary spelling:\n\n1. Word Chains Game (لعبة سلاسل الكلمات - تمرين 1):\nA rapid cognitive game where each student links a word with the preceding one based on semantic relationships (synonyms, collocations, categories, or thematic contexts).\n\n2. 20-Questions Deductive Animal Game (لعبة الأسئلة المغلقة لتخمين الحيوانات - تمرين 2):\nFormulating precise Yes/No questions (Can it...? Does it have...? Is it...?) to narrow down options systematically.\n\n3. The Word Tree Puzzle (شجرة الكلمات المتقاطعة والمهنة الرأسية السرية - تمرين 3):\nA multi-skill lexical puzzle reviewing key definitions from Units 5 to 7:\n• Row a: Spots on fur -> LEOPARD (L-E-O-P-[A]-R-D) -> 5th letter = A\n• Row b: Infertile dry land -> DESERT (D-E-S-E-[R]-T) -> 5th letter = R\n• Row c: Frozen water -> ICE (I-[C]-E) -> 2nd letter = C\n• Row d: Car repairer -> MECHANIC (M-E-C-[H]-A-N-I-C) -> 4th letter = H\n• Row e: Uniform attire -> UNIFORM (U-N-[I]-F-O-R-M) -> 3rd letter = I\n• Row f: Wood craftsman -> CARPENTER (C-A-R-P-E-N-[T]-E-R) -> 7th letter = T\n• Row g: Rubbish synonym -> LITTER (L-I-T-T-[E]-R) -> 5th letter = E\n• Row h: Sports instructor -> COACH (C-O-A-[C]-H) -> 4th letter = C\n• Row i: Tooth doctor -> DENTIST (D-E-N-[T]-I-S-T) -> 4th letter = T\n★ Vertical Hidden Job: ARCHITECT (مهندس معماري).",
+            "exercises": [
+              {
+                "id": "u8_l2_ex1",
+                "num": "Exercise 1 (Page 121)",
+                "title": "Play Word chains. Think of words that go with the ones before.",
+                "title_ar": "لعبة سلاسل الكلمات المترابطة (Word chains) لتنمية سرعة التداعي اللفظي والربط الدلالي:",
+                "words_box": [
+                  "chair",
+                  "father",
+                  "Geography",
+                  "job",
+                  "monkey",
+                  "nurse",
+                  "win"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Chain starting with 'chair':",
+                    "q_ar": "سلسلة تبدأ بكلمة كرسي (chair):",
+                    "a": "chair -> table -> desk -> room -> house -> school"
+                  },
+                  {
+                    "q": "b. Chain starting with 'father':",
+                    "q_ar": "سلسلة تبدأ بكلمة أب (father):",
+                    "a": "father -> mother -> parents -> family -> children -> home"
+                  },
+                  {
+                    "q": "c. Chain starting with 'Geography':",
+                    "q_ar": "سلسلة تبدأ بمادة الجغرافيا (Geography):",
+                    "a": "Geography -> map -> world -> rivers -> mountains -> desert"
+                  },
+                  {
+                    "q": "d. Chain starting with 'job':",
+                    "q_ar": "سلسلة تبدأ بكلمة وظيفة (job):",
+                    "a": "job -> career -> office -> work -> salary -> company"
+                  },
+                  {
+                    "q": "e. Chain starting with 'monkey':",
+                    "q_ar": "سلسلة تبدأ بكلمة قرد (monkey):",
+                    "a": "monkey -> jungle -> wild -> trees -> bananas -> zoo"
+                  },
+                  {
+                    "q": "f. Chain starting with 'nurse':",
+                    "q_ar": "سلسلة تبدأ بكلمة ممرضة (nurse):",
+                    "a": "nurse -> doctor -> hospital -> patient -> medicine -> health"
+                  },
+                  {
+                    "q": "g. Chain starting with 'win':",
+                    "q_ar": "سلسلة تبدأ بفعل يفوز (win):",
+                    "a": "win -> match -> game -> sports -> trophy -> celebration"
+                  }
+                ]
+              },
+              {
+                "id": "u8_l2_ex2",
+                "num": "Exercise 2 (Page 121)",
+                "title": "Play a game: Student 1 thinks of an animal. Student 2 asks up to 8 Yes/No questions.",
+                "title_ar": "لعبة تخمين الحيوان بالأسئلة المغلقة (Yes/No Questions) وفق النمط المعتمد:",
+                "words_box": [
+                  "Can it fly?",
+                  "Does it have legs?",
+                  "Does it live in the wild?",
+                  "Does it live in water?",
+                  "Is it brown?",
+                  "Is it more than one colour?"
+                ],
+                "questions": [
+                  {
+                    "q": "Example 1 — Guessing 'Falcon' (الصقر):",
+                    "q_ar": "تطبيق استراتيجي لتخمين الصقر:",
+                    "a": "Q1: Can it fly? -> Yes.\nQ2: Does it live in the wild? -> Yes.\nQ3: Does it live in water? -> No.\nQ4: Is it brown? -> Yes.\n-> Guess: Is it a falcon? -> Yes, that's right!"
+                  },
+                  {
+                    "q": "Example 2 — Guessing 'Dolphin' (الدلفين):",
+                    "q_ar": "تطبيق استراتيجي لتخمين الدلفين:",
+                    "a": "Q1: Can it fly? -> No.\nQ2: Does it live in water? -> Yes.\nQ3: Does it have legs? -> No.\nQ4: Is it friendly to humans? -> Yes.\n-> Guess: Is it a dolphin? -> Yes, correct!"
+                  }
+                ]
+              },
+              {
+                "id": "u8_l2_ex3",
+                "num": "Exercise 3 (Page 121)",
+                "title": "Fill in the word tree and identify the mystery vertical job.",
+                "title_ar": "أكمل شجرة الكلمات واكتشف اسم المهنة العمودية السرية (Word Tree):",
+                "questions": [
+                  {
+                    "q": "a. An animal with spots on its fur.",
+                    "q_ar": "حيوان تكسو فروته رقط وبقع ملونة:",
+                    "a": "LEOPARD (L - E - O - P - [A] - R - D) -> الحرف في العمود: A"
+                  },
+                  {
+                    "q": "b. A dry, infertile area of land.",
+                    "q_ar": "أرض جافة وقاحلة قليلة النبات والماء:",
+                    "a": "DESERT (D - E - S - E - [R] - T) -> الحرف في العمود: R"
+                  },
+                  {
+                    "q": "c. Frozen water.",
+                    "q_ar": "ماء متجمد:",
+                    "a": "ICE (I - [C] - E) -> الحرف في العمود: C"
+                  },
+                  {
+                    "q": "d. Someone who repairs cars.",
+                    "q_ar": "الشخص الميكانيكي الذي يصلح السيارات:",
+                    "a": "MECHANIC (M - E - C - [H] - A - N - I - C) -> الحرف في العمود: H"
+                  },
+                  {
+                    "q": "e. Policemen and nurses have to wear this.",
+                    "q_ar": "الزي الرسمي الموحد لرجال الشرطة والممرضات:",
+                    "a": "UNIFORM (U - N - [I] - F - O - R - M) -> الحرف في العمود: I"
+                  },
+                  {
+                    "q": "f. This person makes things with wood.",
+                    "q_ar": "الشخص الذي يصنع الأثاث والأشياء من الخشب (النجار):",
+                    "a": "CARPENTER (C - A - R - P - E - N - [T] - E - R) -> الحرف في العمود: T"
+                  },
+                  {
+                    "q": "g. Another word for 'rubbish'.",
+                    "q_ar": "مرادف آخر لكلمة نفايات أو قمامة:",
+                    "a": "LITTER (L - I - T - T - [E] - R) -> الحرف في العمود: E"
+                  },
+                  {
+                    "q": "h. This person teaches people to play football, netball, etc.",
+                    "q_ar": "المدرب الرياضي الذي يعلم مهارات اللعب:",
+                    "a": "COACH (C - O - A - [C] - H) -> الحرف في العمود: C"
+                  },
+                  {
+                    "q": "i. This person takes care of your teeth.",
+                    "q_ar": "طبيب الأسنان الذي يعتني بصحة الأسنان:",
+                    "a": "DENTIST (D - E - N - [T] - I - S - T) -> الحرف في العمود: T"
+                  },
+                  {
+                    "q": "★ What job is this? (اسم المهنة العمودية بالترتيب من a إلى i):",
+                    "q_ar": "ما هي المهنة الناتجة في العمود المظلل رأسياً؟",
+                    "a": "ARCHITECT (A-R-C-H-I-T-E-C-T) = مهندس معماري (الشخص الذي يصمم المباني)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          121
         ]
       },
       {
@@ -4515,7 +9057,85 @@ window.CURRICULUM_DATA = [
             "page": 88,
             "heading": "Unit 8 Lesson 3: Review - Reading Comprehension & Topic Sentences (صفحة 88)",
             "text": "Unit 8 Review - Lesson 3: Reading Skills & Topic Sentences (صفحة 88 من كتاب الطالب و 122 من كتاب النشاط AB 122):\n\n★ Reading Strategy: Topic Sentences (جمل الموضوع الافتتاحية):\n• A topic sentence is usually the first sentence of a paragraph.\n• It tells the reader what the entire paragraph is going to be about.\n• When reading quickly (skimming), looking at topic sentences allows you to understand the structure and main ideas of the text in seconds.\n\n★ Full Reading Text: A HIGH-FLYING JOB (وظيفة التحليق عالياً):\n\nParagraph 1:\n\"Muhammad has always wanted to be a pilot. When he was a little boy, he played with toy planes when other boys played with their cars and trains. He used to sit in the garden and look up at the sky, waiting for a plane to pass over his head. His father sometimes took him to the airport to see the planes.\"\n-> Topic Sentence: \"Muhammad has always wanted to be a pilot.\"\n-> Main Idea: Muhammad's lifelong passion and childhood ambition to fly.\n\nParagraph 2:\n\"Muhammad did very well at school. He worked hard at everything, but especially at Maths and English because he needed these subjects to be a pilot. He knew that English is the 'language of the air', so he did a lot of extra work on English in his spare time.\"\n-> Topic Sentence: \"Muhammad did very well at school.\"\n-> Main Idea: Academic diligence and focus on Maths and English as essential pilot requirements.\n\nParagraph 3:\n\"Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to be a pilot.\"\n-> Topic Sentence: \"Muhammad got top marks in his final school exams, and he was able to go to an aviation college in Germany to train to be a pilot.\"\n-> Main Idea: High exam scores leading to acceptance at an international aviation academy.\n\nParagraph 4:\n\"Muhammad will never forget his time at the college or the people he met there. On the day when he took off on his first solo flight, he was a little nervous, but he was also excited to be flying a plane by himself. 'It was really exciting,' he told his friends afterwards.\"\n-> Topic Sentence: \"Muhammad will never forget his time at the college or the people he met there.\"\n-> Main Idea: Unforgettable training memories and the thrilling experience of his first solo flight.\n\nParagraph 5:\n\"Muhammad also had to take written exams, which were very difficult. However, he passed them all. 'The day I got my pilot's certificate was the best day of my life,' he said.\"\n-> Topic Sentence: \"Muhammad also had to take written exams, which were very difficult.\"\n-> Main Idea: Rigorous written aeronautical assessments and obtaining his official pilot's license.\n\n★ Key Vocabulary & Contextual Deductions (المفردات التخصصية واستنتاج المعاني من السياق):\n1. especially: particularly; more than all other things (خصوصاً / لاسيما).\n   - Muhammad worked hard at all school subjects, especially Maths and English.\n2. language of the air: the international standard language used globally by pilots and air traffic controllers (English) (لغة الطيران الدولية).\n   - All international aviation communications and airport tower controls must be conducted in English.\n3. extra: additional; beyond what is normally required (إضافي).\n   - Muhammad did extra English practice in his spare time.\n4. aviation college: a specialised higher education academy that trains students in aerodynamics, flight control, and navigation to become professional pilots (كلية الطيران).\n5. solo flight: a flight where a pilot trainee flies an aircraft completely alone, without a flight instructor on board (طيران منفرد).\n6. pilot's certificate: official formal license and accreditation awarded to a person certifying they have mastered all theoretical and practical requirements to operate an aircraft safely (شهادة / رخصة الطيران)."
+          },
+          {
+            "id": 30232,
+            "page": 88,
+            "is_activity_book": true,
+            "activity_book_page": 122,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 122): استيعاب المقروء (نص هوايتي My hobby) وأسئلة الفهم والمفردات والحلول النموذجية المعتمدة",
+            "text": "Unit 8 Review - Lesson 3: Reading Comprehension & Text Structure (كراس النشاط صفحة 122):\n\n★ Reading Text Analysis: 'My hobby' (تحليل نص هوايتي):\nThe passage illustrates topic sentences, descriptive development, and personal narrative:\n• Paragraph 1: How the writer's hobby began as a 10-year-old boy when his mother gave him a large glass bowl that became his first aquarium; his initial surprise that baby goldfish hatch black and only turn golden as they mature.\n• Paragraph 2: The transition from home aquariums to observing marine apex predators in the wild; the writer's deep admiration for the great white shark (despite 333 documented attacks since 1580); his journey to Australia to see a 5-meter shark alongside their boat.\n\n★ Topic Sentence Identification:\n• Paragraph 1 Topic Sentence: \"My hobby began when I was a boy.\" (Sets up the chronological background of collecting and studying fish).\n• Paragraph 2 Topic Sentence: \"My favourite fish is the great white shark.\" (Establishes his passion for this majestic sea creature).\n\n★ Vocabulary & Definitions:\n• Aquarium: A glass home for keeping and observing fish and aquatic life.\n• Expensive: Not cheap; costing a substantial amount of money.",
+            "exercises": [
+              {
+                "id": "u8_l3_ex1",
+                "num": "Exercise 1 (Page 122)",
+                "title": "Read the article below quickly and answer the questions.",
+                "title_ar": "اقرأ مقال (هوايتي - My hobby) قراءة استطلاعية سريعة وأجب عن الأسئلة:",
+                "questions": [
+                  {
+                    "q": "a. What is each paragraph about?\n• Paragraph 1:\n• Paragraph 2:",
+                    "q_ar": "ما الفكرة الرئيسية لكل فقرة من فقرتي المقال؟",
+                    "a": "• Paragraph 1: The writer's hobby of keeping fish, his first aquarium, and discovering that baby goldfish are born black.\n• Paragraph 2: The writer's favourite fish (the great white shark) and his trip to Australia to see one in the wild."
+                  },
+                  {
+                    "q": "b. Find in the article:\n1. two kinds of fish:\n2. two homes for fish:",
+                    "q_ar": "استخرج من النص نوعين من الأسماك وموطنين لعيش الأسماك:",
+                    "a": "1. Two kinds of fish: Goldfish (سمك الزينة الذهبي) and (Great white) shark (سمك القرش الأبيض).\n2. Two homes for fish: Aquarium / glass bowl (حوض زجاجي) and In the wild / the sea / ocean (البيئة الطبيعية / البحر والمحيط)."
+                  }
+                ]
+              },
+              {
+                "id": "u8_l3_ex2",
+                "num": "Exercise 2 (Page 122)",
+                "title": "Read the article again and write short answers to the questions.",
+                "title_ar": "أعد قراءة المقال بدقة وأجب عن الأسئلة التالية بإجابات نموذجية موجزة وطابق الكلمات بمعانيها:",
+                "words_box": [
+                  "not cheap",
+                  "a glass home for fish"
+                ],
+                "questions": [
+                  {
+                    "q": "a. Is the writer a fisherman?",
+                    "q_ar": "هل كاتب المقال صياد سمك؟",
+                    "a": "No, he isn't. (He collects fish, learns about them, and observes them in aquariums). (كلا، هو هاوٍ لتربية ودراسة الأسماك)"
+                  },
+                  {
+                    "q": "b. What was his first aquarium?",
+                    "q_ar": "ماذا كان حوضه المائي الأول؟",
+                    "a": "A big glass bowl (given by his mother). (وعاء زجاجي كبير أعطته له أمه)"
+                  },
+                  {
+                    "q": "c. What did he put in it?",
+                    "q_ar": "ماذا وضع داخل الوعاء؟",
+                    "a": "Some stones and plants, water, and goldfish. (بعض الأحجار والنباتات وملأه بالماء ووضع فيه أسماك الزينة)"
+                  },
+                  {
+                    "q": "d. What surprised him about the baby goldfish?",
+                    "q_ar": "ما الذي فاجأه بخصوص صغار سمك الزينة الذهبي؟",
+                    "a": "They were black. (They change colour to gold as they get older). (أنها ولدت سوداء اللون، ثم يتغير لونها للذهبي مع تقدم العمر)"
+                  },
+                  {
+                    "q": "e. What is his favourite fish?",
+                    "q_ar": "ما هي سمكته المفضلة؟",
+                    "a": "The great white shark. (سمك القرش الأبيض الكبير)"
+                  },
+                  {
+                    "q": "f. Where can you see the great white shark in the wild?",
+                    "q_ar": "أين يمكنك رؤية القرش الأبيض الكبير في بيئته الطبيعية في النص؟",
+                    "a": "In Australia (in the ocean off Australia). (في أستراليا بالمحيط)"
+                  },
+                  {
+                    "q": "g. Match the phrases from the box to their meanings:\n1. aquarium:\n2. expensive:",
+                    "q_ar": "طابق المفردات مع تعريفاتها من صندوق الكلمات:",
+                    "a": "1. aquarium: a glass home for fish (حوض زجاجي لتربية الأسماك)\n2. expensive: not cheap (غالٍ / ثمين - ليس رخيصاً)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          122
         ]
       },
       {
@@ -4528,20 +9148,203 @@ window.CURRICULUM_DATA = [
             "page": 89,
             "heading": "Unit 8 Lesson 4: Review - Writing Mastery & Editing Strategies (صفحة 89)",
             "text": "Unit 8 Review - Lesson 4: Writing Skills & Editing Strategies (صفحة 89 من كتاب الطالب و 123 من كتاب النشاط AB 123):\n\n★ Self-Reflection at the End of the Year:\n\"At the end of the year, is your writing better than it was at the beginning? Do you have any problems? What are you doing about them?\"\nTo become an accomplished, confident writer in English, master the five golden writing tips:\n\n★ Writing Tip 7 — Spelling (إتقان الإملاء):\nYou have to learn how to spell words for yourself. Try this proven routine:\n• Look at five words in a list every night.\n• Spell them aloud letter by letter.\n• Cover them and write them down from memory.\n• Ask a classmate or family member to test you.\n• Practise writing difficult words (e.g. friend, Wednesday, because, beautiful, daughter, scissors, environment).\n\n★ Writing Tip 8 — Punctuation (علامات الترقيم الأساسية):\nMaster when to use each essential punctuation mark:\n1. Capital Letters:\n   - Beginning of every sentence (e.g. \"She went home.\").\n   - Proper nouns: names of people (Muhammad, Sarah), countries (Iraq, England), cities (Baghdad, Erbil), languages/school subjects (Arabic, English, Maths), days of the week (Monday, Friday), months (April, October).\n   - The pronoun \"I\" is ALWAYS capitalized, even in the middle of a sentence.\n2. Full Stops (.):\n   - At the end of every complete affirmative or negative statement.\n3. Question Marks (?):\n   - At the end of every direct question (e.g. \"What time is it?\").\n4. Apostrophes ('):\n   - Contractions: where letters are omitted (you've = you have, don't = do not, I'm = I am, it's = it is).\n   - Possession: after singular nouns (the boy's bag) or regular plurals (the boys' bags).\n5. Speech Marks (\"...\"):\n   - To enclose the exact direct words spoken by a person.\n6. Commas (,):\n   - To separate items in a list of three or more items (e.g. \"apples, bananas, oranges and pears\").\n   - To separate direct speech from reporting verbs (e.g. \"I love flying,\" he said.).\n   - Before coordinating conjunctions joining two main clauses (e.g. \"..., but what about...\").\n\n★ Worked Punctuation Exercise from Student's Book:\nUnpunctuated text:\n\"youve done well in maths english and arabic my mother said but what about history your mark is very bad\"\n\nCorrectly punctuated sentence:\n\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"\n\nDetailed breakdown:\n• Capital 'Y' in \"You've\" (start of direct speech) + apostrophe in \"You've\" (contraction of you have).\n• Capital 'M' in \"Maths\", capital 'E' in \"English\", comma after \"Maths\", capital 'A' in \"Arabic\".\n• Comma after \"Arabic\" inside closing quotation mark.\n• Speech resumed: opening quotation mark before \"but\", comma before \"but\", capital 'H' in \"History\".\n• Question mark after \"History?\" (it is a question).\n• Capital 'Y' in \"Your\" (new sentence), and full stop after \"bad.\"\n\n★ Writing Tip 9 — Grammar & Tense Checking in Drafts (تدقيق القواعد والأزمنة):\nWhen checking your draft, examine all verbs and ask yourself:\n1. Am I writing about the present, the past, or the future? Check time markers:\n   - Past: yesterday, last week, last Friday, last year, two days ago, when I was young.\n   - Present: now, currently, at the moment, every day, usually.\n   - Future: tomorrow, next week, next year, soon.\n2. Is this the right form of the verb (subject-verb agreement, irregular past tense, past continuous)?\n\n★ Worked Grammar Exercise from Student's Book:\nComplete the text with the correct form of the verbs in brackets:\n\"I live in Ranya, but my best friend lives in Sulaymaniyah. His family moved there last year. We like to meet at weekends. Last Friday, we went to the mountains with my friend's parents. When we were climbing, a little boy went to the edge of the cliff and nearly fell. My father saved him. The little boy said, 'I must be more careful.'\"\n\nAnalysis of verb forms:\n• live: Present simple habitual for speaker (\"I live\").\n• lives: Present simple with 3rd person singular subject (\"my best friend lives\").\n• moved: Past simple triggered by past time marker \"last year\".\n• like: Present simple expressing general preference (\"We like to meet\").\n• went: Irregular past simple triggered by \"Last Friday\".\n• were climbing: Past continuous background action interrupted while climbing (\"When we were climbing...\").\n• went & fell: Past simple completed actions (\"went to the edge and nearly fell\").\n• saved: Past simple completed action (\"My father saved him\").\n\n★ Writing Tip 10 — Joining Words (أدوات الربط والتماسك النصي):\nUse connectors to show logical relationships between ideas:\n• Addition: and, also, furthermore.\n• Contrast: but, however, although.\n• Cause and effect: because, so, as a result.\n• Time sequence: first, then, after that, when, while, finally.\n\n★ Writing Tip 11 — Adjectives & Adverbs (الصفات والظروف لإثراء التعبير):\nUse vivid descriptive adjectives and adverbs to paint a mental picture for the reader:\n• Weak sentence: \"We went on a walk. The view was nice.\"\n• Enriched sentence: \"We went on an exhilarating mountain hike, and the panoramic view across the snow-capped peaks was absolutely breathtaking.\""
+          },
+          {
+            "id": 30242,
+            "page": 89,
+            "is_activity_book": true,
+            "activity_book_page": 123,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 123): مهارات علامات الترقيم وتصريف وتدقيق أزمنة الأفعال وكتابة الإنشاء النموذجي والحلول المعتمدة",
+            "text": "Unit 8 Review - Lesson 4: Writing Skills & Paragraph Editing (كراس النشاط صفحة 123):\n\n★ Key Learning Focus: Punctuation, Tense Coherence & Narrative Writing (مهارات التحرير والترقيم والإنشاء):\nThis lesson consolidates the three pillars of proficient English writing:\n1. Punctuation Rules (علامات الترقيم - تمرين B):\nDirect speech quotation conventions:\n• Open speech marks before the spoken words: \"You've...\n• Capitalize proper nouns: Maths, English, Arabic, History.\n• Use commas to separate list items and before attribution clauses.\n• Question mark placed inside quotes when direct speech asks a question: ...History?\"\n• End sentence with full stop: ...very bad.\"\n\n2. Verb Tenses in Context (تصريف الأفعال وتناغم الأزمنة - تمرين C):\n• Habitual present: \"I live in Ranya, but my best friend lives in Sulaymaniyah.\"\n• Completed past action: \"His family moved there last year.\"\n• General preference: \"We like to meet at weekends.\"\n• Specific past occasion: \"Last Friday, we went to the mountains...\"\n• Interrupted past actions: \"When we were climbing (longer action), a little boy went to the edge... and nearly fell (sudden quick actions).\"\n• Past completed action: \"My father saved him.\"\n\n3. Model Composition: The Best Day of My Life (الإنشاء المعتمد - تمرين 1):\nA model narrative paragraph of ~80 words describing an unforgettable family trip to the scenic waterfalls of Bekhal in northern Iraq, featuring proper paragraph structure, connecting words, vivid sensory adjectives, and correct punctuation.",
+            "exercises": [
+              {
+                "id": "u8_l4_exB",
+                "num": "Exercise B (Page 123)",
+                "title": "Write the sentence with the correct punctuation.",
+                "title_ar": "أعد كتابة الجملة التالية مطبقاً القواعد المعتمدة لعلامات الترقيم والحروف الكبيرة:",
+                "questions": [
+                  {
+                    "q": "youve done well in maths english and arabic my mother said but what about history your mark is very bad",
+                    "q_ar": "أعد كتابة الجملة بعلامات ترقيم دقيقة وحروف كبيرة مناسبة:",
+                    "a": "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"\n\n📌 خطوات التصحيح النموذجية:\n1. وضع علامة تنصيص وحرف كبير Y في You've مع فاصلة عليا للاختصار.\n2. تكبير الحرف الأول للمواد الدراسية: Maths و English و Arabic و History.\n3. وضع فاصلة بين Maths و English وفاصلة قبل إغلاق علامة التنصيص الأولى: Arabic,\".\n4. استئناف الاقتباس مع علامة تنصيص قبل but.\n5. وضع علامة استفهام ? بعد History? لأنها صيغة سؤال.\n6. بدء جملة جديدة بحرف كبير Your mark is very bad ونقطة في النهاية."
+                  }
+                ]
+              },
+              {
+                "id": "u8_l4_exC",
+                "num": "Exercise C (Page 123)",
+                "title": "Complete the text. Use the correct form of the verbs in brackets.",
+                "title_ar": "أكمل النص بتصريف الأفعال بين الأقواس في الأزمنة المناسبة (المضارع والماضي والماضي المستمر):",
+                "questions": [
+                  {
+                    "q": "1. I (live) [live] in Ranya, but my best friend (live) [2] in Sulaymaniyah.",
+                    "q_ar": "تصريف الفعل live مع الفاعل المفرد الغائب (my best friend):",
+                    "a": "lives (مضارع بسيط مع المفرد الغائب he)"
+                  },
+                  {
+                    "q": "2. His family (move) [3] there last year.",
+                    "q_ar": "تصريف move مع الدلالة الزمنية الماضية last year:",
+                    "a": "moved (ماضي بسيط منتظم)"
+                  },
+                  {
+                    "q": "3. We (like) [4] to meet at weekends.",
+                    "q_ar": "تصريف like للتعبير عن التفضيل والعادة الدائمة:",
+                    "a": "like (مضارع بسيط للتعبير عن عادة)"
+                  },
+                  {
+                    "q": "4. Last Friday, we (go) [5] to the mountains with my friend's parents.",
+                    "q_ar": "تصريف go مع الدلالة الزمنية الماضية Last Friday:",
+                    "a": "went (ماضي بسيط شاذ لفعل go)"
+                  },
+                  {
+                    "q": "5. When we (climb) [6], a little boy (go) [7] to the edge of the cliff and nearly (fall) [8].",
+                    "q_ar": "تصريف climb و go و fall في جملة الربط مع When:",
+                    "a": "were climbing / went / fell (الحدث المستمر: were climbing ماضي مستمر؛ والأحداث القاطعة: went و fell ماضي بسيط)"
+                  },
+                  {
+                    "q": "6. My father (save) [9] him. The little boy said, 'I must be more careful.'",
+                    "q_ar": "تصريف save كحدث ماضٍ مكتمل:",
+                    "a": "saved (ماضي بسيط منتظم)"
+                  }
+                ]
+              },
+              {
+                "id": "u8_l4_ex1",
+                "num": "Exercise 1 (Page 123)",
+                "title": "Write a paragraph of about 80 words about 'The best day of my life'.",
+                "title_ar": "إنشاء الوحدة الثامنة المعتمد: اكتب فقرة إنشائية من حوالي 80 كلمة بعنوان (أفضل يوم في حياتي):",
+                "questions": [
+                  {
+                    "q": "Model Composition: The Best Day of My Life (~80 words):",
+                    "q_ar": "النموذج الإنشائي الوزاري المعتمد لموضوع (أفضل يوم في حياتي) مع الترجمة العربية:",
+                    "a": "\"The best day of my life was the day my family and I travelled to northern Iraq during the spring holiday. We woke up very early in the morning and drove to the breathtaking waterfalls in Bekhal. The weather was cool and refreshing, and the surrounding mountains looked magnificent under the morning sun. We had a wonderful picnic by the river, took lots of memorable photographs, and laughed together all afternoon. It was an extraordinary day that I will cherish forever.\"\n\n📌 الترجمة العربية المعتمدة:\n\"كان أفضل يوم في حياتي هو اليوم الذي سافرت فيه مع عائلتي إلى شمال العراق خلال عطلة الربيع. استيقظنا باكراً جداً في الصباح وتوجهنا بالسيارة إلى شلالات بيخال الأخاذة. كان الطقس عليلاً ومنعشاً، وبدت الجبال المحيطة رائعة الجمال تحت شمس الصباح. تناولنا وجبة نزهة شهية قرب النهر، والتقطنا العديد من الصور التذكارية الجميلة، وقضينا بعد الظهر في فرح وسرور. لقد كان يوماً استثنائياً سيبقى محفوراً في ذاكرتي إلى الأبد.\""
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          123
         ]
       },
       {
         "id": 3025,
         "title": "Lesson 5: Unit 8 Round Up - Semester 2 Master Grammar & Comprehensive Review (المراجعة الشاملة وتطبيقات وخلاصة قواعد الفصل الدراسي الثاني)",
-        "summary": "صفحات 86 - 89 من كتاب الطالب (SB) وصفحات 120 - 125 من كتاب النشاط (AB 120-125) - المراجعة الختامية الكبرى لمنهج اللغة الإنجليزية للصف الثاني متوسط.",
+        "summary": "صفحات 86 - 89 من كتاب الطالب (SB) وصفحة 127 من كتاب النشاط (AB 127: Extra Activities) - المراجعة الختامية الكبرى لمنهج اللغة الإنجليزية للصف الثاني متوسط.",
         "chunks": [
           {
             "id": 30251,
             "page": 86,
             "heading": "Unit 8 Lesson 5: Semester 2 Master Grammar & Skills Consolidation (صفحات 86 - 89)",
             "text": "Unit 8 Lesson 5: Semester 2 Master Grammar & Comprehensive Review (المراجعة الختامية الكبرى لقواعد وكفايات الفصل الدراسي الثاني - إعداد المهندس أسامة خليل هاشم):\n\n★ Consolidating Semester 2 Grammar Essentials (الوحدات 5 و 6 و 7 و 8):\n\n1. Unit 5 Master Grammar — Passive Voice (صيغ المبني للمجهول):\nWe use the passive voice when the action is more important than who or what did it, or when the agent is unknown.\n• Present Simple Passive:\n  Rule: Object + am / is / are + Past Participle (p.p.)\n  - Active: \"Reporters write articles in Cairo.\"\n  - Passive: \"Articles are written in Cairo.\"\n  - \"The newspaper is printed in Baghdad every morning.\"\n• Past Simple Passive:\n  Rule: Object + was / were + Past Participle (p.p.)\n  - Active: \"Fire ruined a house in Castle Street.\"\n  - Passive: \"A house in Castle Street was ruined by fire.\"\n  - \"The telephone was invented by Alexander Graham Bell.\"\n• Modal Passive with Can / Cannot:\n  Rule: Object + can / cannot + be + Past Participle (p.p.)\n  - \"Mobile phones can be recycled to protect nature.\"\n• Dictionary Abbreviations:\n  - n. = noun | v. = verb | adj. = adjective | adv. = adverb | prep. = preposition | pron. = pronoun | conj. = conjunction.\n\n2. Unit 6 Master Grammar — Future Intentions & Defining Relative Clauses:\n• Future with 'be going to' (المستقبل المخطط له مسبقاً والتنبؤ بدليل):\n  Rule: Subject + am / is / are + going to + Base Verb\n  - \"Muhammad is going to study aviation in Germany.\"\n  - \"Look at those dark clouds! It is going to rain.\"\n• Future with 'will' (القرارات الفورية، الوعود، والتنبؤات العامة):\n  Rule: Subject + will ('ll) + Base Verb\n  - \"I'll help you carry those heavy bags.\"\n• Future with Time Clause (When):\n  Rule: Future Clause (going to / will) + when + Present Simple Clause\n  - \"What are you going to do when you leave school?\"\n  - \"When I finish my exams, I am going to relax.\"\n• Defining Relative Pronouns:\n  - Who: for people (\"He is the pilot who flew across the ocean.\").\n  - Which / That: for things and animals (\"This is the aeroplane which broke the speed record.\").\n• Obligation:\n  - have to / has to: present necessity (\"Pilots have to speak English fluently.\").\n  - had to: past necessity (\"He had to take very difficult written exams.\").\n\n3. Unit 7 Master Grammar — Adverbs, Word Order & Environmental Directives:\n• Adverbs of Manner:\n  - Regular: Adjective + -ly (slow -> slowly, careful -> carefully, polite -> politely).\n  - Irregular: fast -> fast, hard -> hard, good -> well.\n• Order of Adverbs Formula (M - P - T):\n  Rule: Manner (كيف؟) + Place (أين؟) + Time (متى؟)\n  - Example: \"Sami ran fast (M) in the race (P) yesterday (T).\"\n  - Example: \"They worked hard (M) at school (P) all year (T).\"\n• Modals of Possibility:\n  - May / Might + Base Verb: expressing possibility in present or future.\n  - \"The climate may get warmer if we don't reduce pollution.\"\n• Environmental Directives (Imperatives):\n  - Do: \"Recycle your plastic bottles.\"\n  - Don't: \"Don't drop litter in the river.\"\n  - Must / Mustn't: legal/moral necessity (\"You mustn't hunt endangered animals.\").\n• Present Perfect Continuous:\n  Rule: have / has been + Verb-ing\n  - \"Scientists have been studying climate change for many years.\"\n\n4. Unit 8 Master Macro-skills & Exam Success Blueprint:\n• Listening: Always listen for key nouns and numbers; verify by repeating back.\n• Speaking: Speak in thought groups; vary voice tone to reflect emotions; practice telephone formality.\n• Reading: Skim topic sentences to get the main ideas quickly; deduce unknown words from sentence clues.\n• Writing: Use the editing checklist:\n  - Did I start with capital letters and end with punctuation?\n  - Are all verb tenses consistent with time markers?\n  - Did I use connectors (and, but, so, because) to link thoughts?\n  - Did I enrich the description with vivid adjectives and adverbs?"
+          },
+          {
+            "id": 30252,
+            "page": 86,
+            "is_activity_book": true,
+            "activity_book_page": 127,
+            "heading": "📝 كراس النشاط (Activity Book - صفحة 127): الأنشطة الإضافية التراكمية (Unit 8 Extra Activities) ومراجعة قواعد الفصل الثاني الشاملة والحلول النموذجية المعتمدة",
+            "text": "Unit 8 Review - Lesson 5: Semester 2 Extra Activities & Master Grammar (كراس النشاط صفحة 127):\n\n★ Key Learning Focus: Master Grammar Review of Semester 2 (المراجعة النحوية الشاملة لقواعد الفصل الثاني):\nThis final consolidation page tests students' mastery of core grammatical structures taught across Units 5, 6, 7 and 8:\n\n1. Verb Tenses & Formulaic Structures (تمرين 1):\n• Present Perfect with ever: Have you ever + P.P (seen) for life experiences.\n• Future intentions with be going to / will: \"From now on, I am going to work hard...\" followed by present simple want.\n• Past time adverbials: Last week triggers past simple saw and was.\n• Habitual past with used to: used to + infinitive (take), contrasted with present negation don't have.\n• Interrupted / specific past time: Last Monday with past simple was and past continuous was playing.\n\n2. Modals of Obligation & Advice (should vs must - تمرين 2):\n• must: Expresses strong objective necessity, legal requirements, or strict institutional rules (e.g. studying medicine at university, police uniforms).\n• should: Expresses moral advice, polite social etiquette, and recommended best practice (e.g. consideration for neighbours, environmental protection).\n\n3. Passive Voice Transformations (صيغ المبني للمجهول - تمرين 3):\nFormula: Subject (Object of Active) + appropriate form of 'be' (is/are/was/were) + Past Participle (P.P) + (by agent / rest of sentence):\n• Active: \"People in Japan make lots of cars.\" -> Passive: \"Lots of cars are made in Japan.\"\n• Active: \"People still use drums to send messages.\" -> Passive: \"Drums are still used to send messages.\"\n• Active: \"People send most messages by email today.\" -> Passive: \"Most messages are sent by email today.\"\n• Active: \"People often do job interviews online these days.\" -> Passive: \"Job interviews are often done online these days.\"",
+            "exercises": [
+              {
+                "id": "u8_l5_ex1",
+                "num": "Exercise 1 (Page 127)",
+                "title": "Complete the sentences. Use the correct form of the verbs in brackets.",
+                "title_ar": "أكمل الجمل التالية بتصريف الأفعال بين الأقواس وفق القواعد الصحيحة للأزمنة والتركيبات:",
+                "questions": [
+                  {
+                    "q": "a. Have you ever (see) _____ a leopard in the wild?",
+                    "q_ar": "تصريف see في صيغة المضارع التام بعد Have you ever:",
+                    "a": "seen -> \"Have you ever seen a leopard in the wild?\" (تصريف ثالث P.P بعد have ever)"
+                  },
+                  {
+                    "q": "b. From now on, I (work) _____ hard at English because I (want) _____ to be an English teacher.",
+                    "q_ar": "تصريف work للنية المستقبلية و want للرغبة في الحاضر:",
+                    "a": "am going to work (or will work) / want -> \"From now on, I am going to work hard at English because I want to be an English teacher.\""
+                  },
+                  {
+                    "q": "c. When I (see) _____ a whale in the sea last week, I (be) _____ very excited.",
+                    "q_ar": "تصريف see و be في جملة ماضية بوجود last week:",
+                    "a": "saw / was -> \"When I saw a whale in the sea last week, I was very excited.\""
+                  },
+                  {
+                    "q": "d. I used to (take) _____ photographs of birds, but now I (not have) _____ time.",
+                    "q_ar": "تصريف take بعد used to ونفي have في الحاضر بعد but now:",
+                    "a": "take / don't have -> \"I used to take photographs of birds, but now I don't have time.\""
+                  },
+                  {
+                    "q": "e. My sister (be) _____ not at home last Monday. She (play) _____ tennis.",
+                    "q_ar": "تصريف be في الماضي وتصريف play في الماضي المستمر أو البسيط:",
+                    "a": "was / was playing (or played) -> \"My sister was not at home last Monday. She was playing tennis.\""
+                  }
+                ]
+              },
+              {
+                "id": "u8_l5_ex2",
+                "num": "Exercise 2 (Page 127)",
+                "title": "Complete the sentences using should or must.",
+                "title_ar": "أكمل الجمل باستخدام should (للنصيحة والتوصية) أو must (للإلزام والقواعد الإجبارية):",
+                "words_box": [
+                  "should",
+                  "must"
+                ],
+                "questions": [
+                  {
+                    "q": "a. People _____ study at university if they want to be doctors.",
+                    "q_ar": "يجب على الناس الدراسة في الجامعة ليصبحوا أطباء (إلزام وشرط أكاديمي وقانوني حتمي):",
+                    "a": "must -> \"People must study at university if they want to be doctors.\""
+                  },
+                  {
+                    "q": "b. People _____ think of their neighbours and not play music too loudly.",
+                    "q_ar": "ينبغي على الناس مراعاة الجيران وعدم تشغيل الموسيقى بصوت عالٍ (نصيحة وسلوك اجتماعي مهذب):",
+                    "a": "should -> \"People should think of their neighbours and not play music too loudly.\""
+                  },
+                  {
+                    "q": "c. We _____ protect wild animals if we can.",
+                    "q_ar": "ينبغي علينا حماية الحيوانات البرية إن استطعنا (واجب أخلاقي وتوصية بيئية):",
+                    "a": "should (or must) -> \"We should protect wild animals if we can.\""
+                  },
+                  {
+                    "q": "d. Police officers _____ wear their uniform when they are at work.",
+                    "q_ar": "يجب على ضباط الشرطة ارتداء زيهم الرسمي أثناء العمل (قاعدة وظيفية إلزامية صارمة):",
+                    "a": "must -> \"Police officers must wear their uniform when they are at work.\""
+                  }
+                ]
+              },
+              {
+                "id": "u8_l5_ex3",
+                "num": "Exercise 3 (Page 127)",
+                "title": "Write the sentences again in the passive form. Begin with the underlined words or phrases.",
+                "title_ar": "أعد كتابة الجمل بصيغة المبني للمجهول (Passive Voice) مبتدئاً بالكلمات المحددة (المفعول به):",
+                "questions": [
+                  {
+                    "q": "a. People in Japan make lots of cars. (lots of cars)",
+                    "q_ar": "تحويل جملة (صناعة الكثير من السيارات في اليابان) إلى المبني للمجهول:",
+                    "a": "Lots of cars are made in Japan. (مفعول به جمع lots of cars + are + تصريف ثالث made + شبه الجملة)"
+                  },
+                  {
+                    "q": "b. People still use drums to send messages. (drums)",
+                    "q_ar": "تحويل جملة (استخدام الطبول لإرسال الرسائل) إلى المبني للمجهول:",
+                    "a": "Drums are still used to send messages. (مفعول به جمع drums + are + still + تصريف ثالث used + تكملة)"
+                  },
+                  {
+                    "q": "c. People send most messages by email today. (most messages)",
+                    "q_ar": "تحويل جملة (إرسال معظم الرسائل عبر البريد الإلكتروني اليوم) إلى المبني للمجهول:",
+                    "a": "Most messages are sent by email today. (مفعول به جمع most messages + are + تصريف ثالث sent + تكملة)"
+                  },
+                  {
+                    "q": "d. People often do job interviews online these days. (job interviews)",
+                    "q_ar": "تحويل جملة (إجراء مقابلات العمل عبر الإنترنت هذه الأيام) إلى المبني للمجهول:",
+                    "a": "Job interviews are often done online these days. (مفعول به جمع job interviews + are + often + تصريف ثالث done + تكملة)"
+                  }
+                ]
+              }
+            ]
           }
+        ],
+        "activity_book_pages": [
+          127
         ]
       }
     ]
@@ -4801,1533 +9604,6 @@ window.CURRICULUM_DATA = [
         ]
       }
     ]
-  }
-] ;
-
-window.GRAMMAR_RULES = [
-  {
-    "id": "possessive_s",
-    "unit": 1,
-    "title": "s التملك (Possessive 's')",
-    "level": "مهم جداً - الوحدة 1",
-    "page": 4,
-    "formula": "المفرد: الاسم + 's  |  الجمع العادي: الاسم الجمع + '  |  الجمع الشاذ: الاسم + 's",
-    "explanation": "تُستخدم فاصلة التملك للتعبير عن ملكية شيء لشخص أو جهة. إذا كان المالك مفرداً نضع فاصلة قبل الـ s، وإذا كان المالك جمعاً ينتهي بـ s نضع الفاصلة بعد الـ s فقط لمنع التكرار.",
-    "examples": [
-      {
-        "en": "Go and get the boy's bag.",
-        "ar": "اذهب واجلب حقيبة الولد. (ولد واحد)"
-      },
-      {
-        "en": "Go and get the boys' bags.",
-        "ar": "اذهب واجلب حقائب الأولاد. (أكثر من ولد)"
-      },
-      {
-        "en": "The school's magazine is interesting.",
-        "ar": "مجلة المدرسة ممتعة. (مدرسة واحدة)"
-      },
-      {
-        "en": "The schools' magazines are interesting.",
-        "ar": "مجلات المدارس ممتعة. (مجموعة مدارس)"
-      },
-      {
-        "en": "These are the children's books.",
-        "ar": "هذه كتب الأطفال. (جمع شاذ نضيف 's)"
-      }
-    ],
-    "quiz": {
-      "question": "Which sentence refers to bags belonging to MORE THAN ONE boy?",
-      "options": [
-        "The boy's bags are new.",
-        "The boys' bags are new.",
-        "The boys bags are new.",
-        "The boy bags is new."
-      ],
-      "correct": 1,
-      "explanation": "في حالة الجمع نضع الفاصلة العليا بعد حرف الـ s: (boys')."
-    }
-  },
-  {
-    "id": "for_and_since",
-    "unit": 1,
-    "category": "tenses",
-    "title": "المضارع التام مع For و Since",
-    "level": "قاعدة أساسية - الوحدة 1",
-    "page": 7,
-    "formula": "Since + نقطة البداية المحددة  |  For + طول الفترة الزمنية الإجمالية",
-    "explanation": "نستخدم since عندما نحدد نقطة انطلاق الحدث في الماضي (سنة، يوم، مناسبة مثل: since 2020, since yesterday, since 8 o'clock). ونستخدم for عند حساب المدة الزمنية كعدد (ساعات، أيام، سنوات مثل: for 3 hours, for 5 years, for a long time).",
-    "examples": [
-      {
-        "en": "I have lived in Ashby since I was born.",
-        "ar": "أعيش في آشبي منذ أن ولدت."
-      },
-      {
-        "en": "I have lived in Basra since 2018.",
-        "ar": "أنا أعيش في البصرة منذ عام 2018."
-      },
-      {
-        "en": "I have been in this school for three years.",
-        "ar": "أنا في هذه المدرسة لمدة ثلاث سنوات."
-      },
-      {
-        "en": "He has been ill for two days.",
-        "ar": "هو مريض منذ يومين (لمدة يومين)."
-      }
-    ],
-    "quiz": {
-      "question": "I have studied English _______ five years.",
-      "options": [
-        "since",
-        "for",
-        "ago",
-        "in"
-      ],
-      "correct": 1,
-      "explanation": "نستخدم for لأن خمس سنوات (five years) تمثل طول فترة زمنية إجمالية."
-    }
-  },
-  {
-    "id": "likes_dislikes",
-    "unit": 1,
-    "title": "التعبير عن الإعجاب وعدم الإعجاب (Likes & Dislikes)",
-    "level": "الوحدة 1",
-    "page": 7,
-    "formula": "Subject + (like / love / enjoy / hate / dislike) + Verb-ing / Noun",
-    "explanation": "أفعال المشاعر مثل (like, love, enjoy, hate, dislike) يأتي بعدها الفعل مضافاً إليه ing أو يأتي بعدها اسم صريح.",
-    "examples": [
-      {
-        "en": "I like cooking.",
-        "ar": "أنا أحب الطبخ."
-      },
-      {
-        "en": "I don't like cleaning up.",
-        "ar": "أنا لا أحب التنظيف."
-      },
-      {
-        "en": "I dislike cleaning up.",
-        "ar": "أنا أكره التنظيف (dislike تعادل don't like)."
-      },
-      {
-        "en": "She enjoys playing football.",
-        "ar": "هي تستمتع بلعب كرة القدم."
-      }
-    ],
-    "quiz": {
-      "question": "He dislikes _______ the house after the party.",
-      "options": [
-        "clean",
-        "to clean",
-        "cleaning",
-        "cleaned"
-      ],
-      "correct": 2,
-      "explanation": "الفعل dislike يتبعه فعل مضاف إليه -ing دائماً (cleaning)."
-    }
-  },
-  {
-    "id": "relative_clauses_who",
-    "unit": 1,
-    "title": "وصف الأشخاص بجمل الوصل (Relative Pronoun: Who)",
-    "level": "الوحدة 1",
-    "page": 7,
-    "formula": "Subject + like/dislike + people + WHO + Verb...",
-    "explanation": "نستخدم ضمير الوصل who للإشارة إلى الأشخاص ووصف صفاتهم وسلوكياتهم.",
-    "examples": [
-      {
-        "en": "I like people who help others.",
-        "ar": "أنا أحب الأشخاص الذين يساعدون الآخرين."
-      },
-      {
-        "en": "I dislike people who are noisy.",
-        "ar": "أنا لا أحب الأشخاص الذين يثيرون الإزعاج."
-      },
-      {
-        "en": "I love teachers who explain clearly.",
-        "ar": "أنا أحب المعلمين الذين يشرحون بوضوح."
-      }
-    ],
-    "quiz": {
-      "question": "I like students _______ do their homework on time.",
-      "options": [
-        "which",
-        "who",
-        "where",
-        "whose"
-      ],
-      "correct": 1,
-      "explanation": "نستخدم who للإشارة إلى العاقل (students)."
-    }
-  },
-  {
-    "id": "present_simple_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن المضارع البسيط (Present Simple Tense)",
-    "level": "أساسيات الأزمنة - صفحة 110",
-    "page": 110,
-    "formula": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
-    "explanation": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week.",
-    "examples": [
-      {
-        "en": "The sun rises in the east.",
-        "ar": "الشمس تشرق من الشرق (حقيقة علمية ثابتة)."
-      },
-      {
-        "en": "Muna usually walks to school every morning.",
-        "ar": "منى عادةً تمشي إلى المدرسة كل صباح (عادة وروتين مع ظرف التكرار usually)."
-      },
-      {
-        "en": "They don't eat junk food on weekdays.",
-        "ar": "هم لا يتناولون الوجبات السريعة خلال أيام الأسبوع (نفي مع don't)."
-      },
-      {
-        "en": "Does Ali play tennis on Fridays?",
-        "ar": "هل يلعب علي التنس في أيام الجمعة؟ (سؤال يبدأ بـ Does والفاعل مفرد)."
-      }
-    ],
-    "quiz": {
-      "question": "Ali always _______ his homework before dinner.",
-      "options": [
-        "finish",
-        "finishes",
-        "finished",
-        "finishing"
-      ],
-      "correct": 1,
-      "explanation": "مع الفاعل المفرد الغائب (Ali) نضيف s/es إلى نهاية الفعل في المضارع البسيط (finishes)."
-    }
-  },
-  {
-    "id": "past_simple_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن الماضي البسيط (Past Simple Tense)",
-    "level": "أساسيات الأزمنة - صفحة 111",
-    "page": 111,
-    "formula": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
-    "explanation": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020.",
-    "examples": [
-      {
-        "en": "We visited the national museum in Baghdad yesterday.",
-        "ar": "زرنا المتحف الوطني في بغداد بالأمس (فعل منتظم ينتهي بـ ed)."
-      },
-      {
-        "en": "Zaid went to the market and bought some fruit.",
-        "ar": "ذهب زيد إلى السوق واشترى بعض الفاكهة (أفعال شاذة: went و bought)."
-      },
-      {
-        "en": "I didn't watch television last night.",
-        "ar": "لم أشاهد التلفاز الليلة الماضية (في النفي مع didn't يعود الفعل لمصدره watch)."
-      },
-      {
-        "en": "Did you see Noor at the library?",
-        "ar": "هل رأيت نور في المكتبة؟ (سؤال في الماضي يبدأ بـ Did يليه مجرد see)."
-      }
-    ],
-    "quiz": {
-      "question": "My brother _______ a new bicycle two days ago.",
-      "options": [
-        "buy",
-        "bought",
-        "buys",
-        "buying"
-      ],
-      "correct": 1,
-      "explanation": "وجود دلالة الماضي (two days ago) يقتضي استخدام صيغة الماضي الشاذ للفعل buy وهي (bought)."
-    }
-  },
-  {
-    "id": "past_continuous_tense",
-    "unit": 1,
-    "category": "tenses",
-    "title": "زمن الماضي المستمر (Past Continuous Tense)",
-    "level": "أساسيات الأزمنة - صفحة 111",
-    "page": 111,
-    "formula": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
-    "explanation": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They).",
-    "examples": [
-      {
-        "en": "I was doing my homework at 8 o'clock yesterday evening.",
-        "ar": "كنت أحل واجبي في تمام الساعة الثامنة مساء أمس (فعل استمر في وقت محدد بالماضي)."
-      },
-      {
-        "en": "The boys were playing football in the park all afternoon.",
-        "ar": "كان الأولاد يلعبون كرة القدم في المنتزه طوال فترة بعد الظهر."
-      },
-      {
-        "en": "She wasn't sleeping when I called her.",
-        "ar": "لم تكن نائمة عندما اتصلتُ بها (نفي الماضي المستمر مع wasn't)."
-      },
-      {
-        "en": "What were you doing at this time yesterday?",
-        "ar": "ماذا كنت تفعل في مثل هذا الوقت بالأمس؟"
-      }
-    ],
-    "quiz": {
-      "question": "They _______ for the bus when the rain started.",
-      "options": [
-        "was waiting",
-        "were waiting",
-        "is waiting",
-        "are waiting"
-      ],
-      "correct": 1,
-      "explanation": "مع الفاعل الجمع (They) في زمن الماضي المستمر نستخدم (were waiting)."
-    }
-  },
-  {
-    "id": "past_simple_continuous_when_while",
-    "unit": 1,
-    "category": "tenses",
-    "title": "الربط بين الماضي البسيط والمستمر (When & While)",
-    "level": "مهم جداً للامتحانات - صفحة 112",
-    "page": 112,
-    "formula": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
-    "explanation": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث.",
-    "examples": [
-      {
-        "en": "While we were having lunch, a bird flew into the kitchen.",
-        "ar": "بينما كنا نتناول الغداء (مستمر طويل)، طار طائر إلى المطبخ (بسيط قاطع بعد While)."
-      },
-      {
-        "en": "Ahmed was riding his bicycle when he fell over.",
-        "ar": "كان أحمد يقود دراجته (مستمر) عندما سقط أرضاً (بسيط قاطع بعد when)."
-      },
-      {
-        "en": "While she was reading a story, the doorbell rang.",
-        "ar": "بينما كانت تقرأ قصة، رن جرس الباب."
-      },
-      {
-        "en": "What were they doing when the teacher entered the classroom?",
-        "ar": "ماذا كانوا يفعلون عندما دخل المعلم الصف؟"
-      }
-    ],
-    "quiz": {
-      "question": "While I _______ to school, I met my best friend.",
-      "options": [
-        "was walking",
-        "walked",
-        "walk",
-        "am walking"
-      ],
-      "correct": 0,
-      "explanation": "بعد أداة While يأتي دائماً ماضٍ مستمر، ومع الضمير I نختار (was walking)."
-    }
-  },
-  {
-    "id": "giving_advice_should",
-    "unit": 2,
-    "title": "إعطاء النصيحة (Giving Advice: Should / Shouldn't)",
-    "level": "الوحدة 2",
-    "page": 17,
-    "formula": "You + should / shouldn't + مصدر الفعل (Infinitive)",
-    "explanation": "تُستخدم should لتقديم نصيحة بفعل شيء جيد، و shouldn't للنصيحة بتجنب شيء ضار. يأتي بعدهما الفعل مجرداً دائماً بدون أي إضافة.",
-    "examples": [
-      {
-        "en": "You should take more exercise.",
-        "ar": "ينبغي عليك ممارسة المزيد من التمارين الرياضية."
-      },
-      {
-        "en": "You shouldn't eat too much crisps and sweets.",
-        "ar": "لا ينبغي أن تأكل الكثير من المقرمشات والحلويات."
-      },
-      {
-        "en": "You should drink plenty of water every day.",
-        "ar": "يجب عليك شرب الكثير من الماء يومياً."
-      }
-    ],
-    "quiz": {
-      "question": "You _______ watch TV for hours; it hurts your eyes.",
-      "options": [
-        "should",
-        "shouldn't",
-        "must",
-        "can"
-      ],
-      "correct": 1,
-      "explanation": "نستخدم shouldn't لتقديم نصيحة بعدم الإفراط في مشاهدة التلفاز."
-    }
-  },
-  {
-    "id": "frequency_expressions_unit2",
-    "unit": 2,
-    "title": "تعبيرات وظروف التكرار (Expressions of Frequency: How often...?)",
-    "level": "الوحدة 2",
-    "page": 17,
-    "formula": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
-    "explanation": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً).",
-    "examples": [
-      {
-        "en": "How often do you take exercise? - I go walking every day.",
-        "ar": "كم مرة تمارس الرياضة؟ - أذهب للمشي كل يوم."
-      },
-      {
-        "en": "I play football twice a week with my friends.",
-        "ar": "ألعب كرة القدم مرتين في الأسبوع مع أصدقائي."
-      },
-      {
-        "en": "You should put these drops in your ear twice a day.",
-        "ar": "ينبغي أن تضع هذه القطرات في أذنك مرتين يومياً."
-      }
-    ],
-    "quiz": {
-      "question": "\"_______ do you go swimming?\" - \"Twice a week.\"",
-      "options": [
-        "How long",
-        "How often",
-        "How much",
-        "How many"
-      ],
-      "correct": 1,
-      "explanation": "نستخدم How often للسؤال عن معدل تكرار الحدث."
-    }
-  },
-  {
-    "id": "quantifiers_too_much_many",
-    "unit": 2,
-    "title": "محددات الكمية: Too much, Too many, A few, A little, A lot of",
-    "level": "الوحدة 2",
-    "page": 18,
-    "formula": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
-    "explanation": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة.",
-    "examples": [
-      {
-        "en": "Too much sugar is bad for your teeth.",
-        "ar": "الكثير جداً من السكر ضار بأسنانك (اسم غير معدود)."
-      },
-      {
-        "en": "You shouldn't eat too many crisps and sweets.",
-        "ar": "لا ينبغي أن تأكل الكثير جداً من المقرمشات والحلويات (اسم معدود جمع)."
-      },
-      {
-        "en": "A few biscuits are all right, but not too many.",
-        "ar": "بضع بسكويتات لا بأس بها، ولكن ليس الكثير جداً."
-      },
-      {
-        "en": "Add a little salt to your soup.",
-        "ar": "أضف القليل من الملح إلى حسائك."
-      },
-      {
-        "en": "We should drink a lot of water every day.",
-        "ar": "ينبغي علينا شرب الكثير من الماء يومياً."
-      }
-    ],
-    "quiz": {
-      "question": "Eating too _______ sweets is bad for your health.",
-      "options": [
-        "much",
-        "many",
-        "little",
-        "few"
-      ],
-      "correct": 1,
-      "explanation": "كلمة sweets اسم معدود جمع، لذا نستخدم معه too many."
-    }
-  },
-  {
-    "id": "expressing_aches_illnesses",
-    "unit": 2,
-    "title": "التعبير عن الأوجاع والأمراض (Aches and Pains)",
-    "level": "الوحدة 2",
-    "page": 20,
-    "formula": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
-    "explanation": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers).",
-    "examples": [
-      {
-        "en": "I've got a terrible headache. My head aches.",
-        "ar": "أعاني من صداع فظيع. رأسي يؤلمني."
-      },
-      {
-        "en": "Jameel has got a toothache. He should see a dentist.",
-        "ar": "جميل لديه ألم أسنان، ينبغي عليه مراجعة طبيب الأسنان."
-      },
-      {
-        "en": "My right ear hurts badly.",
-        "ar": "أذني اليمنى تؤلمني بشدة."
-      },
-      {
-        "en": "Take these two painkillers with water.",
-        "ar": "تناول هذين المسكنين مع الماء."
-      }
-    ],
-    "quiz": {
-      "question": "Anas has got a stomach ache. His stomach _______.",
-      "options": [
-        "hurts",
-        "aches",
-        "hurting",
-        "both hurts and aches are correct"
-      ],
-      "correct": 3,
-      "explanation": "يمكن القول His stomach hurts أو His stomach aches فكلاهما صحيح بالمعنى ذاته."
-    }
-  },
-  {
-    "id": "limericks_rules_unit2",
-    "unit": 2,
-    "title": "قواعد وهيكل قصائد الليمريك (Limerick Poetry: AABBA)",
-    "level": "الوحدة 2",
-    "page": 24,
-    "formula": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
-    "explanation": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان).",
-    "examples": [
-      {
-        "en": "Lines 1, 2, and 5 rhyme (Peru / blue / shampoo).",
-        "ar": "الأسطر 1 و 2 و 5 تشترك في القافية الأولى A."
-      },
-      {
-        "en": "Lines 3 and 4 rhyme together (faint / paint).",
-        "ar": "السطران 3 و 4 يشتركان في القافية الثانية B."
-      }
-    ],
-    "quiz": {
-      "question": "What is the rhyme scheme of a limerick?",
-      "options": [
-        "ABAB A",
-        "AABBA",
-        "AABB B",
-        "ABBA A"
-      ],
-      "correct": 1,
-      "explanation": "قافية الليمريك هي دائماً AABBA."
-    }
-  },
-  {
-    "id": "want_pattern_unit2",
-    "unit": 2,
-    "title": "صيغة الرغبة والتوجيه: Want + Pronoun + to + Infinitive",
-    "level": "الوحدة 2",
-    "page": 25,
-    "formula": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
-    "explanation": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد.",
-    "examples": [
-      {
-        "en": "My mother wants me to eat more vegetables.",
-        "ar": "تريدني والدتي أن آكل المزيد من الخضار."
-      },
-      {
-        "en": "Your father wants you to help him in his shop.",
-        "ar": "يريدك والدك أن تساعده في دكانه."
-      },
-      {
-        "en": "The coach wants us to take exercise regularly.",
-        "ar": "يريد منا المدرب أن نتدرب بانتظام."
-      }
-    ],
-    "quiz": {
-      "question": "The teacher wants the students _______ arrive on time.",
-      "options": [
-        "to",
-        "for",
-        "in",
-        "at"
-      ],
-      "correct": 0,
-      "explanation": "التركيب الصحيح هو want + someone + to + infinitive."
-    }
-  },
-  {
-    "id": "present_continuous_tense",
-    "unit": 2,
-    "category": "tenses",
-    "title": "زمن المضارع المستمر (Present Continuous Tense)",
-    "level": "أساسيات الأزمنة - صفحة 110",
-    "page": 110,
-    "formula": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
-    "explanation": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم).",
-    "examples": [
-      {
-        "en": "The students are studying English in the classroom now.",
-        "ar": "الطلاب يدرسون اللغة الإنجليزية في الصف الآن (حدث يقع في هذه اللحظة)."
-      },
-      {
-        "en": "Listen! The baby is crying.",
-        "ar": "استمع! الطفل يبكي (تنبيه لحدث يقع حالياً Listen)."
-      },
-      {
-        "en": "I am not playing video games at the moment.",
-        "ar": "أنا لا ألعب ألعاب الفيديو في الوقت الحالي (نفي المضارع المستمر)."
-      },
-      {
-        "en": "Is Sarah preparing her school project today?",
-        "ar": "هل سارة تعد مشروعها المدرسي اليوم؟"
-      }
-    ],
-    "quiz": {
-      "question": "Look! It _______ heavily outside.",
-      "options": [
-        "rains",
-        "rained",
-        "is raining",
-        "rain"
-      ],
-      "correct": 2,
-      "explanation": "كلمة التنبيه (!Look) تدل على حدث يقع الآن في هذه اللحظة، فنستخدم المضارع المستمر (is raining)."
-    }
-  },
-  {
-    "id": "verbs_of_preference_unit2",
-    "unit": 2,
-    "title": "أفعال التفضيل والمشاعر: like, enjoy, hate, dislike, avoid",
-    "level": "الوحدة 2",
-    "page": 111,
-    "formula": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
-    "explanation": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية.",
-    "examples": [
-      {
-        "en": "He enjoys cycling in the park.",
-        "ar": "هو يستمتع بركوب الدراجة في الحديقة (Verb + -ing)."
-      },
-      {
-        "en": "She dislikes fast games.",
-        "ar": "هي لا تحب الألعاب السريعة (Adjective + noun)."
-      },
-      {
-        "en": "You should avoid eating too much fat.",
-        "ar": "ينبغي عليك تجنب تناول الكثير من الدهون."
-      },
-      {
-        "en": "I love running in the morning.",
-        "ar": "أنا أحب الجري في الصباح."
-      }
-    ],
-    "quiz": {
-      "question": "Zaid avoids _______ exercise because he gets tired quickly.",
-      "options": [
-        "take",
-        "taking",
-        "took",
-        "takes"
-      ],
-      "correct": 1,
-      "explanation": "الفعل avoid يتبعه الفعل بصيغة -ing (Gerund)."
-    }
-  },
-  {
-    "id": "sports_verbs",
-    "unit": 3,
-    "title": "أفعال الرياضات: Play, Go, Do",
-    "level": "مهم جداً - الوحدة 3",
-    "page": 32,
-    "formula": "Play + رياضات الكرة | Go + رياضات تنتهي بـ ing | Do + رياضات فردية وقتالية",
-    "explanation": "نستخدم Play مع ألعاب الكرة والألعاب التنافسية (football, tennis, basketball, volleyball). نستخدم Go مع الرياضات والأنشطة الحركية المنتهية بـ -ing (swimming, horse riding, running, sailing). نستخدم Do مع الفنون القتالية والجمباز والأنشطة الفردية (judo, karate, gymnastics, athletics).",
-    "examples": [
-      {
-        "en": "I play football with my school team.",
-        "ar": "ألعب كرة القدم مع فريق مدرستي."
-      },
-      {
-        "en": "She goes swimming on Fridays.",
-        "ar": "تذهب للسباحة في أيام الجمعة."
-      },
-      {
-        "en": "Saad does judo to get strong and fit.",
-        "ar": "يمارس سعد رياضة الجودو ليصبح قوياً ونشيطاً."
-      },
-      {
-        "en": "I'd like to play volleyball.",
-        "ar": "أود لعب كرة الطائرة."
-      }
-    ],
-    "quiz": {
-      "question": "My friends _______ cycling at the weekend.",
-      "options": [
-        "do",
-        "play",
-        "go",
-        "make"
-      ],
-      "correct": 2,
-      "explanation": "الرياضة المنتهية بـ -ing مثل cycling تأخذ الفعل go."
-    }
-  },
-  {
-    "id": "used_to",
-    "unit": 3,
-    "category": "tenses",
-    "title": "الاعتياد في الماضي (Used to)",
-    "level": "الوحدة 3",
-    "page": 36,
-    "formula": "Subject + used to + Base Verb (مصدر مجرد) ... but now + Present Simple",
-    "explanation": "تُستخدم صيغة Used to للتعبير عن عادات أو حالات أو صفات كانت موجودة بانتظام في الماضي ولكنها لم تعد موجودة الآن (تغيرت في الحاضر). يتبعها دائماً فعل مصدر مجرد (Base Verb)، وغالباً ما تُربط بـ (but now...) في المضارع البسيط.",
-    "examples": [
-      {
-        "en": "I used to be very shy, but now I am confident.",
-        "ar": "كنت خجولاً جداً في الماضي، لكني الآن واثق من نفسي."
-      },
-      {
-        "en": "I used to have no friends, but now I have lots.",
-        "ar": "لم يكن لدي أصدقاء في الماضي، أما الآن فلدي الكثير."
-      },
-      {
-        "en": "I used to be lazy, but now I train every day.",
-        "ar": "كنت كسولاً في الماضي، لكني الآن أتدرب كل يوم."
-      },
-      {
-        "en": "I used to be bad at schoolwork, but now I get good marks.",
-        "ar": "كنت ضعيفاً في الدراسة، لكني الآن أحصل على درجات ممتازة."
-      }
-    ],
-    "quiz": {
-      "question": "She didn't _______ like vegetables when she was young.",
-      "options": [
-        "used to",
-        "use to",
-        "uses to",
-        "using to"
-      ],
-      "correct": 1,
-      "explanation": "بعد didn't نحذف الـ d ونستخدم الصيغة المجردة use to."
-    }
-  },
-  {
-    "id": "passive_present",
-    "unit": 5,
-    "category": "tenses",
-    "isTense": true,
-    "title": "المبني للمجهول في زمن المضارع البسيط (Present Simple Passive)",
-    "level": "الوحدة 5",
-    "page": 51,
-    "formula": "المفعول به (Subject) + am / is / are + Past Participle (التصريف الثالث) + (by + الفاعل)",
-    "explanation": "يُستخدم عندما يكون الحدث أو الفعل نفسه أهم بكثير من ذكر الفاعل الذي قام به، أو عندما يكون الفاعل غير معروف أو بديهياً:\n• المفرد يأخذ is + p.p.\n• الجمع وضمائر الجمع (we / they / you) تأخذ are + p.p.\n• الضمير I يأخذ am + p.p.\n• في النفي: is not / are not + past participle.\n• في السؤال: Is / Are + المفعول به + past participle ?",
-    "examples": [
-      {
-        "en": "On Monday morning, an article is written in Cairo.",
-        "ar": "في صباح يوم الاثنين، يُكتب المقال في القاهرة (المفعول به مفرد أخذ is written)."
-      },
-      {
-        "en": "At night, the newspapers are printed in Baghdad.",
-        "ar": "في الليل، تُطبع الصحف في بغداد (المفعول به جمع أخذ are printed)."
-      },
-      {
-        "en": "Next, it is sent by email to a newspaper office.",
-        "ar": "بعد ذلك، يُرسل عبر البريد الإلكتروني إلى مكتب الجريدة."
-      },
-      {
-        "en": "Books are sold in Al Mutanabbi Street.",
-        "ar": "الكتب تُباع في شارع المتنبي."
-      }
-    ],
-    "quiz": {
-      "question": "Early on Tuesday morning, the newspapers _______ to the shops.",
-      "options": [
-        "are sent",
-        "is sent",
-        "send",
-        "are sending"
-      ],
-      "correct": 0,
-      "explanation": "المفعول به (newspapers) جمع في زمن المضارع البسيط، لذا نستخدم are + التصريف الثالث (are sent)."
-    }
-  },
-  {
-    "id": "passive_past",
-    "unit": 5,
-    "category": "tenses",
-    "isTense": true,
-    "title": "المبني للمجهول في زمن الماضي البسيط (Past Simple Passive)",
-    "level": "الوحدة 5",
-    "page": 52,
-    "formula": "المفعول به (Subject) + was / were + Past Participle (التصريف الثالث) + (by + الفاعل)",
-    "explanation": "يُستخدم للحديث عن اختراعات أو أحداث تاريخية اكتملت في الماضي مع التركيز على النتيجة أو الشيء المخترَع:\n• المفرد (I / He / She / It) يأخذ was + p.p.\n• الجمع (We / You / They) يأخذ were + p.p.\n• عندما نذكر الفاعل نضعه في نهاية الجملة مسبوقاً بحرف الجر (by).",
-    "examples": [
-      {
-        "en": "The radio was invented by Marconi in the late nineteenth century.",
-        "ar": "الراديو اختُرع بواسطة ماركوني في أواخر القرن التاسع عشر."
-      },
-      {
-        "en": "The first television pictures were shown by Baird in London in 1926.",
-        "ar": "أولى صور التلفزيون عُرضت بواسطة بيرد في لندن عام 1926."
-      },
-      {
-        "en": "A radio message was sent across the Atlantic Ocean in 1902.",
-        "ar": "أُرسلت رسالة لاسلكية عبر المحيط الأطلسي عام 1902."
-      },
-      {
-        "en": "In ancient times, messages were carried by pigeons.",
-        "ar": "في العصور القديمة، كانت الرسائل تُنقل بواسطة الحمام."
-      }
-    ],
-    "quiz": {
-      "question": "The television _______ by John Logie Baird in 1926.",
-      "options": [
-        "was invented",
-        "were invented",
-        "invented",
-        "is invented"
-      ],
-      "correct": 0,
-      "explanation": "المبني للمجهول في الماضي البسيط للمفرد (The television): was + التصريف الثالث (was invented)."
-    }
-  },
-  {
-    "id": "passive_modals",
-    "unit": 5,
-    "category": "grammar",
-    "title": "المبني للمجهول مع الأفعال الناقصة (Passive with: Can / Cannot)",
-    "level": "الوحدة 5",
-    "page": 53,
-    "formula": "المفعول به (Subject) + can / cannot + be + Past Participle (التصريف الثالث)",
-    "explanation": "يُستخدم للتعبير عن الإمكانية أو الاستطاعة العامة (أو منع الاستخدام) بصيغة المجهول:\n• الإثبات: can be + past participle (يمكن أن يُفعل).\n• النفي: cannot be + past participle (لا يمكن أن يُفعل).\n• السؤال: Can + المفعول به + be + past participle ?",
-    "examples": [
-      {
-        "en": "Mobile phones can be used almost anywhere.",
-        "ar": "الهواتف المحمولة يمكن استخدامها في أي مكان تقريباً."
-      },
-      {
-        "en": "Landline phones can only be used in one place.",
-        "ar": "الهواتف الأرضية يمكن استخدامها في مكان واحد فقط."
-      },
-      {
-        "en": "Mobile phones cannot be used without charged batteries.",
-        "ar": "الهواتف المحمولة لا يمكن استخدامها بدون بطاريات مشحونة."
-      },
-      {
-        "en": "High quality photographs can be taken with modern smartphones.",
-        "ar": "الصور عالية الجودة يمكن التقاطها بالهواتف الذكية الحديثة."
-      }
-    ],
-    "quiz": {
-      "question": "Important messages can _______ instantly across long distances.",
-      "options": [
-        "be sent",
-        "sent",
-        "be send",
-        "are sent"
-      ],
-      "correct": 0,
-      "explanation": "المبني للمجهول بعد الفعل المساعد can يتطلب be متبوعة بالتصريف الثالث (be sent)."
-    }
-  },
-  {
-    "id": "dictionary_abbreviations",
-    "unit": 5,
-    "category": "vocabulary",
-    "title": "اختصارات القاموس وأقسام الكلام (Dictionary Abbreviations & Word Categories)",
-    "level": "الوحدة 5",
-    "page": 49,
-    "formula": "n. (noun) | v. (verb) | adj. (adjective) | adv. (adverb) | prep. (preposition) | conj. (conjunction) | pron. (pronoun)",
-    "explanation": "دليل الرموز والاختصارات النحوية المستخدمة في قواميس اللغة الإنجليزية لمعرفة وظيفة الكلمة:\n• n. = اسم (noun) مثل: horse, bank, phone, messenger\n• v. = فعل (verb) مثل: ride, warn, invent, send\n• adj. = صفة (adjective) مثل: black, fast, clever, great\n• adv. = ظرف أو حال (adverb) مثل: easily, fast, slowly, critically\n• prep. = حرف جر (preposition) مثل: in, on, at, from, to, across\n• conj. = أداة ربط أو عطف (conjunction) مثل: and, but, so, because\n• pron. = ضمير (pronoun) مثل: he, she, it, they, we\n\nتنبيه: بعض الكلمات تملك أكثر من معنى ووظيفة (مثل bank: اسم بمعنى مصرف أو ضفة نهر، وفعل بمعنى يودع مالاً أو تنعطف الطائرة).",
-    "examples": [
-      {
-        "en": "The black horse ran fast, so it won the race easily.",
-        "ar": "black صفة (adj.)، horse اسم (n.)، ran فعل (v.)، fast ظرف (adv.)، so أداة ربط (conj.)، it ضمير (pron.)، won فعل (v.)، easily ظرف (adv.)."
-      },
-      {
-        "en": "He sat on the grassy bank (n.) of the river.",
-        "ar": "جلس على ضفة النهر العشبية (bank هنا اسم تعني ضفة)."
-      },
-      {
-        "en": "The pilot banked (v.) the plane to the left.",
-        "ar": "أمال الطيار الطائرة وانعطف يساراً (bank هنا فعل ماضٍ)."
-      }
-    ],
-    "quiz": {
-      "question": "In a learner's dictionary, what does the abbreviation '(conj.)' mean?",
-      "options": [
-        "conjunction (أداة ربط أو عطف)",
-        "content (محتوى)",
-        "condition (حالة)",
-        "conversation (محادثة)"
-      ],
-      "correct": 0,
-      "explanation": "الرمز (conj.) اختصار لـ conjunction وهي أداة الربط بين الكلمات أو الجمل مثل (and, but, so, because)."
-    }
-  },
-  {
-    "id": "phone_etiquette",
-    "unit": 5,
-    "category": "functions",
-    "title": "آداب وتعبيرات المكالمات الهاتفية (Telephone Etiquette & Communication Phrases)",
-    "level": "الوحدة 5",
-    "page": 54,
-    "formula": "Introduce yourself (Anas here) ➔ State purpose (I'm calling about) ➔ Speak clearly ➔ Polite requests",
-    "explanation": "أصول المحادثة الهاتفية المعتمدة في المنهج الدراسي:\n1. التعريف بالنفس فوراً: Always say who you are immediately (e.g. Layla Ahmed here / Layla speaking).\n2. توضيح سبب الاتصال: State clearly why you are calling (e.g. I'm calling about tomorrow's appointment).\n3. التحدث بتمهل ووضوح: Speak slowly and clearly because the other person cannot see you.\n4. عبارات الاستيضاح والرد المهذب: Could you repeat that, please? | Can you spell that, please? | Hold on a moment, please.",
-    "examples": [
-      {
-        "en": "Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.",
-        "ar": "معكم ليلى أحمد، أنا أتصل بخصوص رحلة الغد إلى البحرين."
-      },
-      {
-        "en": "Hello, could I speak to Dr Salim, please? - Hold on a moment, please.",
-        "ar": "مرحباً، هل يمكنني التحدث إلى الدكتور سليم من فضلك؟ - انتظر لحظة لو سمحت."
-      },
-      {
-        "en": "I'm sorry, could you repeat that, please? Can you spell your surname?",
-        "ar": "أعتذر منك، هل يمكنك تكرار ذلك؟ وهل تتهجى اسم عائلتك؟"
-      }
-    ],
-    "quiz": {
-      "question": "When making an important phone call, what should you do first according to Susan's advice?",
-      "options": [
-        "Introduce yourself and say who you are immediately",
-        "Wait for the other person to guess who you are",
-        "Speak as fast as possible to save time",
-        "Hang up if you feel nervous"
-      ],
-      "correct": 0,
-      "explanation": "نصيحة كتاب الطالب صفحة 54: Do introduce yourself immediately. Always say who you are ('Anas Abdullah here')."
-    }
-  },
-  {
-    "id": "must_vs_should",
-    "unit": 7,
-    "category": "modals",
-    "isTense": false,
-    "title": "الإلزام والقوانين مقابل النصيحة (Must / Mustn't vs Should / Shouldn't)",
-    "level": "الوحدة 7 - صفحة 72 و 119",
-    "page": 72,
-    "formula": "Subject + must / should / mustn't / shouldn't + Infinitive (مصدر مجرد بدون to)",
-    "explanation": "نستخدم (must و should) للتعبير عن مستويين مختلفين تماماً من الإلزام والتوجيه:\n\n1. Should / Shouldn't (تقديم النصيحة - Giving Advice):\n   • نستخدم should لتقديم نصيحة ودية أو اقتراح شخصي، والطرف الآخر حر في اتباعه أو تركه:\n     - You should work harder. You'll get better marks in your exam.\n     - You shouldn't eat so much junk food; it's bad for you.\n     - What should I do to improve my English?\n\n2. Must / Mustn't (الإلزام الصارم والقوانين - Strong Obligation & Prohibition):\n   • نستخدم must للتعبير عن واجب حتمي، أو قانون إجباري، أو ضرورة قاطعة لا تحتمل الخيار:\n     - You must work harder. If you don't, you will fail your exam.\n     - We must change our habits to reduce the effects of climate change.\n     - We must collect money to send some poor children to school.\n   • نستخدم mustn't للتعبير عن التحريم والمنع التام والقوانين التي يمنع خرقها:\n     - You mustn't throw litter on the street. Always put it in the bin!\n     - You mustn't drive through a red traffic light.\n\n3. الملاحظات الهيكلية (Form Notes):\n   • الفعل بعد must و should يأتي دائماً في المصدر المجرد الخالي من to (Infinitive without to).\n   • في حالة السؤال، نضع must أو should قبل الفاعل: Should we help them? / Must you go now? (مع ملاحظة أن استخدام have to في الأسئلة أكثر شيوعاً من must).",
-    "examples": [
-      {
-        "en": "We should do something to help poor children in Africa.",
-        "ar": "ينبغي لنا أن نفعل شيئاً لمساعدة الأطفال الفقراء في أفريقيا (نصيحة واقتراح should)."
-      },
-      {
-        "en": "No, we must do something! We have to help them get an education.",
-        "ar": "كلا، يجب علينا حتماً أن نفعل شيئاً! إنه واجب إنساني حتمي (إلزام قوي must)."
-      },
-      {
-        "en": "You mustn't drop plastic bottles in the river; it destroys the habitat.",
-        "ar": "يُحظر عليك تماماً إلقاء القناني البلاستيكية في النهر؛ فهذا يدمر الموطن البيئي (تحريم قاطع mustn't)."
-      }
-    ],
-    "quiz": {
-      "question": "Drivers ________ stop completely when the traffic light turns red. It is a strict law.",
-      "options": [
-        "must",
-        "should",
-        "may",
-        "might"
-      ],
-      "correct": 0,
-      "explanation": "إشارة المرور الحمراء قانون إلزامي صارم يترتب عليه عقوبة ومخالفة، لذا نستخدم must وليس should."
-    }
-  },
-  {
-    "id": "may_and_might",
-    "unit": 7,
-    "category": "modals",
-    "isTense": false,
-    "title": "الاحتمالية في الحاضر والمستقبل (Possibility: May & Might)",
-    "level": "الوحدة 7 - صفحة 76 و 119",
-    "page": 76,
-    "formula": "Subject + may / might + Infinitive (مصدر مجرد بدون to)",
-    "explanation": "نستخدم (may و might) للتحدث عن احتمالية حدوث شيء في الحاضر أو المستقبل دون تأكيد جازم:\n\n1. صيغة التركيب (Form):\n   • الإثبات: الفاعل + may / might + مصدر مجرد بدون to:\n     - Subject + may/might + base verb.\n   • النفي: الفاعل + may not / might not + مصدر مجرد بدون to:\n     - We may not reduce global temperatures without serious action.\n   • السؤال: نضع might قبل الفاعل:\n     - If we plant thousands of trees, might we turn the desert into a green area?\n     (ملاحظة: من النادر جداً استخدام may في صيغة السؤال التخميني).\n\n2. الاستخدام والفرق بينهما (Use & Distinction):\n   • نستخدم may و might عندما نعتقد أن هناك فرصة أو احتمالاً لحدوث الأمر لكننا غير متأكدين تماماً.\n   • الفرق بينهما دقيق جداً:\n     - may تدل على درجة احتمال معتدلة (حوالي 50% تأكيد).\n     - might تدل على درجة احتمال أقل وأضعف وأقل تأكيداً (Less certain - حوالي 30% إلى 40%).\n   • كلاهما صالح للتعبير عن المستقبل أو الحاضر.",
-    "examples": [
-      {
-        "en": "If the world gets warmer, some farmland might become desert.",
-        "ar": "إذا أصبح العالم أكثر دفئاً، فربما تتحول بعض الأراضي الزراعية إلى صحراء (احتمال ضعيف might)."
-      },
-      {
-        "en": "There may be less rain in some hot countries over the next thirty years.",
-        "ar": "قد تكون هناك أمطار أقل في بعض البلدان الحارة خلال الأعوام الثلاثين القادمة (احتمال معتدل may)."
-      },
-      {
-        "en": "I may not be at school tomorrow because I have a doctor's appointment.",
-        "ar": "قد لا أكون في المدرسة غداً لأن لدي موعداً مع الطبيب (احتمال منفي)."
-      }
-    ],
-    "quiz": {
-      "question": "Look at those faint distant clouds. It ________ rain later, but nobody is certain.",
-      "options": [
-        "might",
-        "must",
-        "should to",
-        "has to"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم might للتعبير عن احتمالية ضعيفة وغير مؤكدة (nobody is certain) متبوعة بالمصدر rain."
-    }
-  },
-  {
-    "id": "question-intonation",
-    "title": "نبرات الصوت عند طرح الأسئلة (Question Intonation: Falling & Rising Tone)",
-    "unit": 4,
-    "badge": "الوحدة 4 (مراجعة)",
-    "category": "Functions & Phonology",
-    "summary": "قاعدة انخفاض أو ارتفاع نبرة الصوت في نهاية الأسئلة باللغة الإنجليزية حسب نوع السؤال.",
-    "rule": "1) أسئلة Wh (What, Why, Who, When, How, Which): تنخفض نبرة الصوت في نهاية السؤال (Voice goes DOWN ➘ - Falling Intonation).\n2) أسئلة Yes/No والأفعال المساعدة (Are, Is, Do, Have, Can): ترتفع نبرة الصوت في نهاية السؤال (Voice goes UP ➚ - Rising Intonation).",
-    "examples": [
-      {
-        "en": "How are you? ➘",
-        "ar": "كيف حالك؟ (نبرة هابطة لأن السؤال يبدأ بأداة استفهام Wh)."
-      },
-      {
-        "en": "When do you have swimming lessons? ➘",
-        "ar": "متى تبدأ دروس السباحة لديك؟ (نبرة هابطة)."
-      },
-      {
-        "en": "Have you been to the doctor? ➚",
-        "ar": "هل ذهبت إلى الطبيب؟ (نبرة صاعدة لأن السؤال يبدأ بفعل مساعد Have)."
-      },
-      {
-        "en": "Are you good at swimming? ➚",
-        "ar": "هل تجيد السباحة؟ (نبرة صاعدة)."
-      }
-    ],
-    "quiz": {
-      "question": "What is the intonation pattern for the question: 'Can I help you?'",
-      "options": [
-        "Voice goes UP at the end (Rising Intonation)",
-        "Voice goes DOWN at the end (Falling Intonation)",
-        "Voice stays flat with no change",
-        "Voice goes down then up"
-      ],
-      "correct": 0,
-      "explanation": "'Can I help you?' is an auxiliary/modal Yes-No question, so the voice goes UP at the end (Rising Intonation)."
-    }
-  },
-  {
-    "id": "topic-sentence-paragraph",
-    "title": "تنظيم الفقرة الإنشائية وجملة الموضوع (Topic Sentences & Spidergrams)",
-    "unit": 4,
-    "badge": "الوحدة 4 (مراجعة)",
-    "category": "Writing Skills",
-    "summary": "منهجية كتابة وتنظيم الفقرة الإنشائية باللغة الإنجليزية باستخدام جملة الموضوع ومخطط العصف الذهني.",
-    "rule": "تبدأ الفقرة الإنشائية دائماً بجملة الموضوع (Topic Sentence) التي تلخص الفكرة الرئيسية، ويتم التخطيط لها برسم مخطط عنكبوتي (Spidergram) لتفريغ الأفكار وترتيبها زمنياً قبل كتابة المسودة ومراجعة الإملاء وعلامات الترقيم.",
-    "examples": [
-      {
-        "en": "Topic Sentence: I did lots of exciting things at the weekend.",
-        "ar": "جملة الموضوع: قمت بالكثير من الأشياء الممتعة في عطلة نهاية الأسبوع."
-      },
-      {
-        "en": "Proofreading check: Check spelling, punctuation, wrong words and missing words.",
-        "ar": "مراجعة المسودة: فحص الإملاء وعلامات الترقيم والكلمات الخاطئة والناقصة."
-      }
-    ],
-    "quiz": {
-      "question": "What is the purpose of a 'Topic Sentence' at the beginning of a paragraph?",
-      "options": [
-        "It states what the whole paragraph is about",
-        "It lists the dictionary definitions of new words",
-        "It is always the longest sentence in the story",
-        "It ends the paragraph with a question mark"
-      ],
-      "correct": 0,
-      "explanation": "A topic sentence begins a paragraph and clearly tells the reader the main idea of that paragraph."
-    }
-  },
-  {
-    "id": "future_going_to",
-    "unit": 6,
-    "category": "future",
-    "isTense": true,
-    "title": "المستقبل المخطط له والتنبؤ بدليل (Future with: be going to)",
-    "level": "الوحدة 6 - صفحة 65 و 118",
-    "page": 65,
-    "formula": "Subject + am / is / are + going to + Base Verb (المصدر المجرد)",
-    "explanation": "نستخدم صيغة (be going to) في حالتين أساسيتين:\n1. التعبير عن النوايا والخطط المستقبلية المؤكدة التي قررنا القيام بها مسبقاً:\n   • I am going to study medicine.\n   • She is going to be a doctor.\n2. التنبؤ بحدث مستقبلي بناءً على دليل مرئي أو ملموس في الوقت الحاضر:\n   • Look at those dark clouds! It is going to rain.\n   • You haven't done any revision. You are going to fail!\n\nفي النفي: نضع not بعد فعل be:\n   • I am not going to write books.\n   • She is not going to fail.\n\nفي السؤال: نقدم فعل be على الفاعل:\n   • Are you going to go to university?\n   • What is he going to be?",
-    "examples": [
-      {
-        "en": "Firas is going to go to university to study animals.",
-        "ar": "فراس سوف يذهب إلى الجامعة لدراسة الحيوانات (خطة مؤكدة)."
-      },
-      {
-        "en": "Look at those dark clouds! It is going to rain soon.",
-        "ar": "انظر إلى تلك الغيوم الداكنة! إنها ستمطر قريباً (تنبؤ استناداً إلى دليل مرئي)."
-      },
-      {
-        "en": "What are you going to be when you finish school?",
-        "ar": "ماذا سوف تصبح عندما تنهي المدرسة؟"
-      }
-    ],
-    "quiz": {
-      "question": "Look at the dark clouds! It ________ rain soon.",
-      "options": [
-        "is going to",
-        "was",
-        "has",
-        "goes to"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم is going to للتنبؤ بحدوث شيء في المستقبل لوجود دليل واضح في الحاضر (dark clouds)."
-    }
-  },
-  {
-    "id": "future_going_to_when",
-    "unit": 6,
-    "category": "future",
-    "isTense": true,
-    "title": "المستقبل مع جملة الوصل الزمنية (Future with be going to + When)",
-    "level": "الوحدة 6 - صفحة 67 و 118",
-    "page": 67,
-    "formula": "When + Subject + Present Simple (مضارع بسيط) , Subject + be going to + Base Verb",
-    "explanation": "عند التحدث عن المستقبل باستخدام (be going to) وأداة الربط الزمنية (when) في نفس الجملة:\n• نستخدم دائماً زمن المضارع البسيط (Present Simple) في الشق الذي يلي when مباشرةً، حتى وإن كان المعنى دالاً على المستقبل بالكامل.\n• بينما يحتوي الشق الآخر على صيغة المستقبل (be going to + infinitive).\n\nأمثلة على الصيغة:\n• When I finish school, I am going to be a nurse.\n• What are you going to do when you leave university?\n• When she grows up, she is going to be a businesswoman.",
-    "examples": [
-      {
-        "en": "When I finish school, I'm going to study Science at university.",
-        "ar": "عندما أنهي المدرسة (مضارع بسيط)، سأدرس العلوم في الجامعة (مستقبل بـ going to)."
-      },
-      {
-        "en": "She is going to be a businesswoman when she grows up.",
-        "ar": "ستكون سيدة أعمال عندما تكبر (استخدام المضارع البسيط grows up بعد when)."
-      }
-    ],
-    "quiz": {
-      "question": "What are you going to do when you ________ school?",
-      "options": [
-        "finish",
-        "finished",
-        "are finishing",
-        "will finish"
-      ],
-      "correct": 0,
-      "explanation": "في الجمل التي تعبر عن المستقبل باستخدام when، نستخدم زمن المضارع البسيط (finish) بعد when دائماً."
-    }
-  },
-  {
-    "id": "good_at_ability",
-    "unit": 6,
-    "category": "functions",
-    "isTense": false,
-    "title": "التعبير عن المهارة والبراعة (Expressing Ability: good at / not good at)",
-    "level": "الوحدة 6 - صفحة 66 و 118",
-    "page": 66,
-    "formula": "Subject + am / is / are + (very / quite) good at / not good at + [Noun أو Verb-ing]",
-    "explanation": "نستخدم التركيب (be + good at / not good at) للتحدث عن الأشياء والمهام التي نجيدها أو لا نجيدها:\n1. متبوعة باسم مادة دراسية أو مجال (Noun):\n   • I'm good at Maths and Biology.\n   • She is not good at Geography.\n2. متبوعة بفعل مضاف إليه -ing (Gerund) للتعبير عن نشاط أو مهارة:\n   • He is very good at working with money.\n   • I'm good at running and swimming.\n   • He is not good at playing computer games.\n\nيمكن إضافة ظروف التقوية والتلطيف:\n• very good at (بارع جداً في)\n• quite good at (جيد إلى حد ما في)\n• not very good at (ليس جيداً كثيراً في)",
-    "examples": [
-      {
-        "en": "A businesswoman is very good at working with money.",
-        "ar": "سيدة الأعمال بارعة جداً في التعامل مع الأموال (فعل مضاف له ing)."
-      },
-      {
-        "en": "Sara is very good at Biology and Chemistry.",
-        "ar": "سارة ممتازة جداً في الأحياء والكيمياء (متبوعة باسم مادة علمية)."
-      },
-      {
-        "en": "Are the art students good at drawing and painting?",
-        "ar": "هل طلاب الفنون بارعون في الرسم والتلوين؟"
-      }
-    ],
-    "quiz": {
-      "question": "Adel is very good at ________ foreign languages.",
-      "options": [
-        "learning",
-        "learn",
-        "learned",
-        "to learn"
-      ],
-      "correct": 0,
-      "explanation": "حرف الجر at في التركيب good at يجب أن يتبعه اسم أو فعل ينتهي بـ -ing (learning)."
-    }
-  },
-  {
-    "id": "relative_clauses_who",
-    "unit": 6,
-    "category": "relative_clauses",
-    "isTense": false,
-    "title": "ضمائر الوصل لتعريف المهن والأشخاص (Defining Jobs with: who)",
-    "level": "الوحدة 6 - صفحة 60 و 68",
-    "page": 60,
-    "formula": "A / An + Job Title + is someone who + verb in singular (s / es)",
-    "explanation": "نستخدم ضمير الوصل (who) لربط الجمل وإعطاء تعريف وتوصيف دقيق للمهن والأشخاص:\n• who تعود على العاقل (People / Person / Someone).\n• يليها فعل بصيغة المفرد (مع s الشخص الثالث) لأننا نعرف مهنة مفردة:\n  - A mechanic is someone who repairs cars.\n  - An architect is someone who designs buildings.\n  - A pilot is someone who flies planes.\n  - A firefighter is someone who puts out fires.",
-    "examples": [
-      {
-        "en": "An architect is someone who plans and designs buildings.",
-        "ar": "المهندس المعماري هو شخص يصمم ويخطط المباني."
-      },
-      {
-        "en": "A shop assistant is someone who helps customers in a shop.",
-        "ar": "مساعد البائع هو شخص يساعد الزبائن في المتجر."
-      }
-    ],
-    "quiz": {
-      "question": "A mechanic is someone ________ repairs people's cars.",
-      "options": [
-        "who",
-        "which",
-        "where",
-        "whose"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم ضمير الوصل who للإشارة إلى العاقل وتوصيف المهن (A mechanic is someone who...)."
-    }
-  },
-  {
-    "id": "obligation_have_to",
-    "unit": 6,
-    "category": "modals",
-    "isTense": false,
-    "title": "التعبير عن الالتزام والواجب المهني (Obligation with: have to / has to / had to)",
-    "level": "الوحدة 6 - صفحة 61 و 68",
-    "page": 61,
-    "formula": "Subject + have to / has to + infinitive (الحاضر) | had to + infinitive (الماضي)",
-    "explanation": "نستخدم (have to / has to / had to) للتعبير عن الضرورة والإلزام المفروض بقوانين العمل والمهنة أو الظروف الخارجية:\n• في الحاضر:\n  - المفرد (He / She / It) يأخذ has to + infinitive:\n    * A pilot has to wear a uniform.\n    * She has to work 12 hours sometimes.\n  - الجمع و I (I / We / They / You) تأخذ have to + infinitive:\n    * Firefighters have to be very brave.\n• في الماضي: نستخدم had to مع جميع الضمائر:\n  - Dr Salwa had to study for six years at university.\n  - Mazin had to check his equipment.",
-    "examples": [
-      {
-        "en": "Pilots have to wear an official uniform.",
-        "ar": "يجب على الطيارين ارتداء زي رسمي (إلزام بقواعد المهنة)."
-      },
-      {
-        "en": "Dr Salwa had to study for six years to become a doctor.",
-        "ar": "كان على د. سلوى أن تدرس لمدة ست سنوات لتصبح طبيبة (ضرورة في الماضي)."
-      }
-    ],
-    "quiz": {
-      "question": "Hanan ________ study for four years at college to earn her degree.",
-      "options": [
-        "had to",
-        "has",
-        "having",
-        "have to"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم had to للحديث عن الضرورة والالتزام الذي تم في الماضي (فترة دراستها بالكلية)."
-    }
-  },
-  {
-    "id": "asking_timetables",
-    "unit": 6,
-    "category": "functions",
-    "isTense": false,
-    "title": "الاستفسار عن المواعيد والقطارات (Asking about Timetables & 24-Hour Time)",
-    "level": "الوحدة 6 - صفحة 64 و 68",
-    "page": 64,
-    "formula": "What time does the train leave / arrive? | Which train should I catch?",
-    "explanation": "عند قراءة جداول الرحلات والتنقل في محطات القطار والمطارات:\n1. عبارات الاستفسار والطلب المهذب:\n   • Excuse me, can you help me, please?\n   • What time is the next train to Paris?\n   • What time does the first train leave?\n   • Which train should I catch to arrive before 4 o'clock?\n2. نظام التوقيت الـ 24 ساعة (24-Hour System):\n   • 06:55 = Six fifty-five a.m. (five to seven)\n   • 14:00 = Two o'clock in the afternoon (2 p.m.)\n   • 22:00 = Ten o'clock at night (10 p.m.)",
-    "examples": [
-      {
-        "en": "What time is the first train to Paris? - It leaves at 06:55.",
-        "ar": "في أي وقت يغادر أول قطار إلى باريس؟ - يغادر في تمام الساعة 06:55."
-      },
-      {
-        "en": "Which train should I catch? - You should catch the 08:30 train.",
-        "ar": "أي قطار ينبغي أن أستقل؟ - ينبغي أن تستقل قطار الساعة 08:30."
-      }
-    ],
-    "quiz": {
-      "question": "Excuse me, what time ________ the first train leave for Paris?",
-      "options": [
-        "does",
-        "is",
-        "do",
-        "has"
-      ],
-      "correct": 0,
-      "explanation": "في السؤال في زمن المضارع البسيط عن المواعيد المجدولة مع الفاعل المفرد (the first train) نستخدم الفعل المساعد does."
-    }
-  },
-  {
-    "id": "expressing_agreement_disagreement",
-    "unit": 7,
-    "category": "functions",
-    "isTense": false,
-    "title": "التعبير عن الاتفاق والاختلاف في الرأي (Agreeing & Disagreeing)",
-    "level": "الوحدة 7 - صفحة 74 و 79",
-    "page": 74,
-    "formula": "Agreeing: I agree. / You're right. | Disagreeing: I disagree. / I think you're wrong.",
-    "explanation": "في المحادثات والمناقشات الصفية وتبادل الآراء العلمية والبيئية، نستخدم تراكيب محددة للتعبير عن الاتفاق أو الاعتراض بأدب:\n\n1. صيغ الاتفاق والتأييد (Expressing Agreement):\n   • I agree. (أنا أتفق معك)\n   • You're right. (أنت محق / معك حق)\n   • I think you're right. (أعتقد أنك محق)\n   • مثال:\n     - A: \"I think the golden toads live in wetlands because toads need water.\"\n     - B: \"I agree. You're right.\"\n\n2. صيغ الاختلاف والاعتراض المهذب (Expressing Disagreement):\n   • I disagree. (أنا لا أتفق معك / أعترض)\n   • I think you're wrong. (أعتقد أنك مخطئ)\n   • ثم نذكر التبرير المنطقي أو الحقيقة العلمية:\n     - A: \"Polar bears live in warm tropical deserts.\"\n     - B: \"I disagree. I think you're wrong. They live on Arctic sea ice!\"",
-    "examples": [
-      {
-        "en": "A: 'We must stop factory waste flowing into the rivers.' -> B: 'I agree. You're right.'",
-        "ar": "أ: يجب أن نوقف نفايات المصانع المتدفقة في الأنهار. -> ب: أتفق معك، أنت على حق تماماً."
-      },
-      {
-        "en": "A: 'Throwing plastic bottles in the street is fine.' -> B: 'I disagree! It destroys the environment.'",
-        "ar": "أ: رمي القناني البلاستيكية في الشارع أمر لا بأس به. -> ب: أعترض بشدة! فهذا يدمر البيئة."
-      }
-    ],
-    "quiz": {
-      "question": "A: 'Blue whales are the largest animals on Earth.' — B: '________. You're right.'",
-      "options": [
-        "I agree",
-        "I disagree",
-        "I am agree",
-        "I not agree"
-      ],
-      "correct": 0,
-      "explanation": "الصيغة الإنجليزية الصحيحة للتعبير عن الاتفاق هي (I agree) كفعل مجرد بدون فعل الكينونة am."
-    }
-  },
-  {
-    "id": "environmental_imperatives",
-    "unit": 7,
-    "category": "imperatives",
-    "isTense": false,
-    "title": "صيغ التوجيه والأمر والنهي لحماية البيئة (Environmental Imperatives: Do & Don't)",
-    "level": "الوحدة 7 - صفحة 75 و 77 و 85",
-    "page": 77,
-    "formula": "الأمر الإيجابي: Base Verb (فعل مجرد) | النهي والمنع: Don't + Base Verb",
-    "explanation": "تُستخدم صيغ الأمر والنهي (Imperatives) لإعطاء تعليمات بيئية مباشرة، وتوجيهات مجتمعية، وقواعد سلوكية صريحة:\n\n1. صيغ الأمر الإيجابي (Positive Imperatives):\n   • تبدأ الجملة مباشرة بالفعل المصدري المجرد الخالي من أي إضافات:\n     - Turn off the water tap while brushing your teeth!\n     - Switch off the lights when you leave the room!\n     - Put your rubbish in the recycling bin!\n     - Use both sides of the paper!\n\n2. صيغ النهي والمنع (Negative Imperatives / Prohibitions):\n   • تبدأ الجملة دائماً بـ Don't متبوعة بالفعل المصدري المجرد:\n     - Don't drop litter in the street!\n     - Don't throw rubbish out of your car window!\n     - Don't leave plastic bags on the beach!\n     - Don't waste electricity!",
-    "examples": [
-      {
-        "en": "Don't leave the tap running; turn it off!",
-        "ar": "لا تترك صنبور الماء مفتوحاً؛ أغلقه فوراً! (نهي بـ Don't ثم أمر مجرد)."
-      },
-      {
-        "en": "Use the scissors carefully to cut the top of the bottle.",
-        "ar": "استخدم المقص بحذر لقطع قمة الزجاجة (أمر إرشادي في خطوات المشروع)."
-      }
-    ],
-    "quiz": {
-      "question": "________ drop plastic rubbish in the park; always use the bin!",
-      "options": [
-        "Don't",
-        "Not",
-        "Doesn't",
-        "No"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم Don't في بداية الجملة لصياغة النهي المباشر (Negative Imperative)."
-    }
-  },
-  {
-    "id": "newspaper_headline_rules",
-    "unit": 7,
-    "category": "writing",
-    "isTense": false,
-    "title": "قواعد وخصائص العناوين الصحفية (Grammar Features of Newspaper Headlines)",
-    "level": "الوحدة 7 - صفحة 71 و 79",
-    "page": 71,
-    "formula": "حذف أدوات التعريف (a / an / the) + حذف أفعال الكينونة (is / are / was / were)",
-    "explanation": "تتميز لغة العناوين في الصحف والمواقع الإخبارية بالإيجاز الشديد لجذب انتباه القارئ وتوفير المساحة:\n\n1. الخصائص الأساسية للغة العناوين (Headline Grammar Rules):\n   • حذف أدوات النكرة والتعريف (Articles: a, an, the).\n   • حذف أفعال الكينونة المساعدة (Auxiliary verbs: is, are, was, were).\n   • استخدام صيغة التصريف الثالث (Past Participle) بمفردها للدلالة على المبني للمجهول في الماضي.\n   • استخدام صيغة المضارع البسيط (Present Simple) للدلالة على أحداث وقعت حديثاً في الماضي القريب.\n   • استخدام صيغة (Verb-ing) بمفردها للدلالة على حدث مستمر يقع في الوقت الحاضر.\n\n2. أمثلة المقارنة بين العنوان والجملة الكاملة:\n   • العنوان: \"World getting warmer, scientists say.\"\n     - الجملة الكاملة: \"The world is getting warmer, scientists say.\"\n   • العنوان: \"Sixteen elephants found dead.\"\n     - الجملة الكاملة: \"Sixteen elephants were found dead.\"\n   • العنوان: \"Waste from factory pollutes town's water supply.\"\n     - الجملة الكاملة: \"Waste from a factory has polluted the town's water supply.\"",
-    "examples": [
-      {
-        "en": "Headline: 'Rainforest destroyed' -> Full: 'The rainforest has been destroyed.'",
-        "ar": "عنوان صحفي: تم حذف أداة التعريف وفعل الكينونة لتكثيف الرسالة الإخبارية."
-      },
-      {
-        "en": "Headline: 'Doctor warns of air pollution' -> Full: 'A doctor warns people about air pollution.'",
-        "ar": "عنوان صحفي: استخدام المضارع البسيط warns للتعبير عن تصريح وتحذير حديث."
-      }
-    ],
-    "quiz": {
-      "question": "What is the full grammatical sentence for the headline: 'Litter drowns town!'?",
-      "options": [
-        "Litter is drowning the town!",
-        "Litter was drown a town.",
-        "A litter have drowned town.",
-        "Litter drown town."
-      ],
-      "correct": 0,
-      "explanation": "العنوان الصحفي 'Litter drowns town!' يُفهم بجملة كاملة مع أداة التعريف وفعل الكينونة المستمر: 'Litter is drowning the town!'."
-    }
-  },
-  {
-    "id": "making_offers_contributions",
-    "unit": 7,
-    "category": "functions",
-    "isTense": false,
-    "title": "تقديم العروض والمبادرات التطوعية (Making Offers with: I will / I'll)",
-    "level": "الوحدة 7 - صفحة 72 و 79 و 104",
-    "page": 72,
-    "formula": "I'll + Base Verb (مصدر مجرد)  |  Shall I + Base Verb ...?",
-    "explanation": "عند المشاركة في فعاليات العمل الخيري والتطوعي (مثل السوق الخيري Bring-and-buy sale أو حملات تنظيف الأنهار):\n\n1. صيغة القرار التلقائي والعرض المباشر (Spontaneous Decision / Offer):\n   • نستخدم الصيغة المختصرة (I'll + base verb) للتعبير عن الرغبة الفورية في التبرع أو المشاركة:\n     - I have some CDs; I'll bring those.\n     - I can help. I'll bring some plants.\n     - I'll bake some delicious cakes for the sale.\n     - I'll bring my old camera; it still works.\n\n2. صيغة السؤال المهذب لتقديم المساعدة (Polite Offers):\n   • نستخدم (Shall I + base verb ...?):\n     - Shall I take them to your house?\n     - Shall I help you carry those boxes?",
-    "examples": [
-      {
-        "en": "I've got lots of storybooks; I'll bring the ones I've read.",
-        "ar": "لدي الكثير من كتب القصص؛ سأجلب تلك التي قرأتها للتبرع بها في السوق الخيري."
-      },
-      {
-        "en": "Shall I bring some clothes to the playground at quarter to four?",
-        "ar": "هل أجلب بعض الملابس إلى ساحة المدرسة في الرابعة إلا ربعاً؟"
-      }
-    ],
-    "quiz": {
-      "question": "I want to help with the charity sale. I ________ some flowers from our garden.",
-      "options": [
-        "will bring",
-        "brought",
-        "am bringing to",
-        "bringed"
-      ],
-      "correct": 0,
-      "explanation": "نستخدم will bring (أو I'll bring) لتقديم عرض عفوي وتطوعي للمساعدة (Making an offer)."
-    }
-  },
-  {
-    "id": "active-listening-verification",
-    "title": "استراتيجية تدوين الملاحظات والتحقق من التفاصيل (Active Listening & Note Verification)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة)",
-    "category": "Listening & Study Skills",
-    "summary": "قواعد الاستماع الفعال وتدوين الأرقام والعناوين والتواريخ والتحقق منها لتفادي الأخطاء الكارثية.",
-    "rule": "1) عند الاستماع لمعلومات دقيقة (أرقام هواتف، عناوين، مواعيد): استخدم اختصارات واضحة ولا تحاول كتابة جمل كاملة.\n2) أعد قراءة الأرقام والتفاصيل على المتحدث فوراً للتأكد (Verification) قبل إنهاء المكالمة أو اللقاء.\n3) احتفظ دائماً ببيانات بديلة للتواصل عند الطوارئ.",
-    "examples": [
-      {
-        "en": "Susan dialled 432147 because she wrote down the wrong number. She should have confirmed with Liz.",
-        "ar": "اتصلت سوزان بالرقم 432147 لأنها سجلت رقماً خاطئاً. كان ينبغي عليها تأكيد الرقم مع ليز."
-      },
-      {
-        "en": "Jalal had the wrong address (24 West Street instead of Road or Drive) and arrived at an empty house.",
-        "ar": "كان لدى جلال عنوان خاطئ (شارع ويست بدلاً من طريق ويست) فوصل إلى منزل مظلم وخالٍ."
-      },
-      {
-        "en": "Jane Smith wrote her job interview in her diary on the wrong day, so she missed the secretary post.",
-        "ar": "كتبت جين سميث موعد المقابلة في يوم خاطئ ففاتتها وظيفة السكرتيرة."
-      }
-    ],
-    "quiz": {
-      "question": "What is the most reliable way to prevent mistakes when taking down a telephone number?",
-      "options": [
-        "Repeat the number back to the speaker to confirm it",
-        "Trust your memory and write it down hours later",
-        "Hang up quickly so you do not waste telephone credit",
-        "Only write down the first three digits"
-      ],
-      "correct": 0,
-      "explanation": "Page 86 & 106: Always repeat back numbers and details to confirm accuracy before hanging up."
-    }
-  },
-  {
-    "id": "expressive-reading-intonation",
-    "title": "القراءة الجهرية التعبيرية ونبرة المشاعر (Expressive Reading Aloud & Emotional Intonation)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة)",
-    "category": "Speaking & Phonology",
-    "summary": "مهارات القراءة بطلاقة عبر تجميع الكلمات في وحدات دلالية وإظهار المشاعر بنبرة الصوت.",
-    "rule": "1) لا تتوقف بعد كل كلمة منفردة، بل اقرأ الكلمات في مجموعات ذات معنى (Thought Groups).\n2) حرّك عينيك للأمام على الكلمات التالية أثناء نطقك للكلمات الحالية (Eye-Voice Span).\n3) غيّر نبرة صوتك لتعكس مشاعر المتحدث:\n   - نبرة الإحباط والاستياء: نبرة منخفضة متباطئة مع كلمات مثل awful, bad, slow.\n   - نبرة الحماس والبهجة: نبرة عالية مفعمة بالحيوية مع كلمات مثل fantastic, delicious, wonderful.",
-    "examples": [
-      {
-        "en": "Disappointment: 'The food was bad, and the waiters were very slow. Worst of all, they weren't polite.'",
-        "ar": "نبرة استياء: كان الطعام سيئاً والنوادل بطيئين ولم يكونوا مهذبين."
-      },
-      {
-        "en": "Enthusiasm: 'I went to a new restaurant last night, and it was fantastic! The food was delicious.'",
-        "ar": "نبرة بهجة وحماس: ذهبت إلى مطعم جديد وكانت تجربة رائعة! الطعام كان لذيذاً جداً."
-      }
-    ],
-    "quiz": {
-      "question": "When reading aloud in English, why shouldn't you pause after every word?",
-      "options": [
-        "Because words are spoken in connected groups, and pausing breaks meaning and fluency",
-        "Because English grammar forbids pausing under any circumstance",
-        "Because the listener will think you are reading too slowly",
-        "Because punctuation only exists in writing, not speaking"
-      ],
-      "correct": 0,
-      "explanation": "Page 87: We say words in connected groups; pausing after every word damages natural speech rhythm and comprehension."
-    }
-  },
-  {
-    "id": "topic-sentences-reading",
-    "title": "جمل الموضوع واستنتاج المعاني من السياق (Topic Sentences & Contextual Vocabulary)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة)",
-    "category": "Reading & Vocabulary",
-    "summary": "استراتيجية تحديد جملة الموضوع الافتتاحية لكل فقرة واستنتاج معاني الكلمات التخصصية من السياق.",
-    "rule": "1) جملة الموضوع (Topic Sentence): هي أول جملة في الفقرة عادة، وتقدم الفكرة الرئيسية لها.\n2) قراءة جمل الموضوع فقط (Skimming) تمكّنك من معرفة هيكل النص ومضمونه في ثوانٍ.\n3) استنتاج المعاني: ابحث عن الدلائل في نفس الجملة أو الجمل المحيطة لتخمين معنى المفردات الصعبة.",
-    "examples": [
-      {
-        "en": "Topic sentence: 'Muhammad has always wanted to be a pilot.' (Introduces his boyhood ambition).",
-        "ar": "جملة موضوع: كان محمد يرغب دائماً في أن يصبح طياراً (تلخص الفقرة الأولى)."
-      },
-      {
-        "en": "Context deduction: 'aviation college' = college that trains people to fly aeroplanes and become pilots.",
-        "ar": "استنتاج من السياق: كلية الطيران تعني كلية متخصصة لتدريب وتخريج الطيارين."
-      },
-      {
-        "en": "English is the 'language of the air' because all international flight communications use English.",
-        "ar": "الإنجليزية هي لغة الطيران الدولية لأن كل اتصالات الطيارين وأبراج المراقبة تعتمدها حصراً."
-      }
-    ],
-    "quiz": {
-      "question": "What is the primary function of a 'Topic Sentence' in an English paragraph?",
-      "options": [
-        "It expresses the main idea of the paragraph, usually at the beginning",
-        "It provides the final concluding remark of the whole essay",
-        "It is always the shortest sentence with no adjectives",
-        "It contains the names of all characters in the text"
-      ],
-      "correct": 0,
-      "explanation": "Page 88: The topic sentence introduces the core subject of the paragraph to guide the reader."
-    }
-  },
-  {
-    "id": "master-punctuation-rules",
-    "title": "علامات الترقيم الشاملة وقواعد كتابة الجمل الإنجليزية (Comprehensive Punctuation & Sentence Mechanics)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة)",
-    "category": "Writing Mechanics",
-    "summary": "القواعد الكاملة لاستخدام الحروف الكبيرة، النقطة، الفواصل، علامات الاستفهام، الفاصلة العليا وعلامات الاقتباس.",
-    "rule": "1) الحروف الكبيرة (Capital Letters): بداية الجمل، أسماء العلم، اللغات والمواد الدراسية (Maths, English, Arabic)، الدول والمدن، والضمير I.\n2) النقطة (.): نهاية الجمل الخبرية التامة.\n3) علامة الاستفهام (?): نهاية الأسئلة المباشرة.\n4) الفاصلة العليا ('): للاختصارات (You've, don't, I'm) والتملك (boy's, boys').\n5) الفاصلة (,): لفصل عناصر القائمة، وبعد الجمل الظرفية التمهيدية، وقبل أدوات الربط (but, so)، وفصل الكلام المباشر.\n6) علامات الاقتباس (\"...\"): لإحاطة الكلمات المنقولة نصياً.",
-    "examples": [
-      {
-        "en": "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
-        "ar": "جملة ترقيم نموذجية شاملة لكل علامات الترقيم من كتاب الطالب صفحة 89."
-      },
-      {
-        "en": "I live in Ranya, but my friend lives in Sulaymaniyah.",
-        "ar": "حرف كبير لأسماء المدن والضمير I، وفاصلة قبل أداة الربط but."
-      }
-    ],
-    "quiz": {
-      "question": "Which sentence has the 100% correct punctuation according to Page 89 of the textbook?",
-      "options": [
-        "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
-        "youve done well in maths english and arabic my mother said but what about history your mark is very bad.",
-        "\"Youve done well in maths, english and arabic\" my mother said \"but what about History. Your mark is very bad\"",
-        "You've done well in Maths English and Arabic my mother said, but what about History, your mark is very bad."
-      ],
-      "correct": 0,
-      "explanation": "Page 89 Writing Tip 8: Proper capitalization of subjects (Maths, English, Arabic, History), speech marks around direct dialogue, apostrophe in You've, and question mark after History."
-    }
-  },
-  {
-    "id": "proofreading-tenses-connectors",
-    "title": "تدقيق الأزمنة وأدوات الربط والصفات والظروف في المسودة (Proofreading: Tenses, Connectors, Adjectives & Adverbs)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة)",
-    "category": "Writing & Grammar",
-    "summary": "خطوات مراجعة المسودة وتدقيق تطابق أزمنة الأفعال مع الدلالات الزمنية واستخدام أدوات الربط والصفات والظروف.",
-    "rule": "1) تدقيق الأفعال: حدد هل تكتب عن الماضي أو الحاضر أو المستقبل؟ استخدم دلالات الوقت (yesterday, last Friday, now, tomorrow) لتصحيح صيغة الفعل.\n2) أدوات الربط (Joining words): استخدم and للإضافة، but للتباين، because للسبب، so للنتيجة، when و while للروابط الزمنية.\n3) إثراء النص بالصفات والظروف: أضف صفات جذابة وظروف حال لترسم صورة ممتعة في ذهن القارئ.",
-    "examples": [
-      {
-        "en": "Last Friday, we went to the mountains. When we were climbing, a little boy went to the edge and nearly fell.",
-        "ar": "تدقيق الأزمنة: went (ماضي بسيط مع Last Friday) و were climbing (ماضي مستمر أثناء الحدث)."
-      },
-      {
-        "en": "My father saved him heroically, and the boy said, 'I must be more careful.'",
-        "ar": "استخدام ظرف الحال heroically وأداة الربط and."
-      }
-    ],
-    "quiz": {
-      "question": "In the sentence: 'When we ______ (climb), a little boy ______ (go) to the edge of the cliff', what are the correct verb forms?",
-      "options": [
-        "were climbing / went",
-        "climbed / was going",
-        "are climbing / goes",
-        "climb / will go"
-      ],
-      "correct": 0,
-      "explanation": "Page 89 Writing Tip 9: When + past continuous ('were climbing') for the background ongoing action, and past simple ('went') for the interrupting event."
-    }
-  },
-  {
-    "id": "semester-2-master-grammar",
-    "title": "الخلاصة الكبرى لقواعد الفصل الدراسي الثاني (Semester 2 Master Grammar Consolidation)",
-    "unit": 8,
-    "badge": "الوحدة 8 (مراجعة شاملة)",
-    "category": "Grammar Master Bank",
-    "summary": "الموسوعة الختامية لقواعد الكورس الثاني: المبني للمجهول، المستقبل، ترتيب الظروف، والوصل.",
-    "rule": "1) المبني للمجهول (Passive Voice):\n   - مضارع بسيط: Object + is / are + p.p. (e.g. The articles are written in Cairo).\n   - ماضي بسيط: Object + was / were + p.p. (e.g. A house was ruined by fire).\n   - أفعال ناقصة: Object + can be + p.p. (e.g. Plastic bottles can be recycled).\n2) المستقبل (Future Forms):\n   - be going to + verb: للنوايا والخطط والتنبؤ بدليل.\n   - will + verb: للوعود والقرارات الفورية.\n   - Future + when + Present Simple: (e.g. What are you going to do when you leave school?).\n3) ترتيب الظروف (Order of Adverbs - M-P-T):\n   - Manner (حال) + Place (مكان) + Time (زمان).\n   - مثال: He played well (M) in the stadium (P) yesterday (T).\n4) ضمائر الوصل (Relative Pronouns):\n   - who: للعاقل (e.g. The pilot who flew the plane).\n   - which / that: لغير العاقل والحيوان (e.g. The aeroplane which landed safely).",
-    "examples": [
-      {
-        "en": "The letter was delivered yesterday (Past Passive).",
-        "ar": "تم تسليم الرسالة يوم أمس (مبني للمجهول في الماضي البسيط)."
-      },
-      {
-        "en": "Ali drove carefully (Manner) on the highway (Place) this morning (Time).",
-        "ar": "ترتيب الظروف الثلاثي: حال (carefully) ثم مكان (on the highway) ثم زمان (this morning)."
-      },
-      {
-        "en": "She is going to study medicine when she finishes high school.",
-        "ar": "مستقبل مخطط مع جملة الوصل الزمنية when + مضارع بسيط finishes."
-      }
-    ],
-    "quiz": {
-      "question": "Which of the following sentences correctly follows the Manner-Place-Time (M-P-T) adverb order rule?",
-      "options": [
-        "Mazin sang beautifully (M) in the concert (P) last night (T)",
-        "Mazin sang last night (T) in the concert (P) beautifully (M)",
-        "Mazin sang in the concert (P) beautifully (M) last night (T)",
-        "Mazin beautifully (M) last night (T) sang in the concert (P)"
-      ],
-      "correct": 0,
-      "explanation": "Page 73 & 88: The Golden Adverb Rule is M-P-T: Manner (beautifully) + Place (in the concert) + Time (last night)."
-    }
   }
 ];
 

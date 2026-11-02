@@ -22,6 +22,7 @@
   <script src="curriculum_data_islamic.js"></script>
   <script src="curriculum_data_physics.js"></script>
   <script src="curriculum_diagrams_physics.js"></script>
+  <script src="curriculum_data_math.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -2839,7 +2840,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v3.8.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v4.5.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3508,6 +3509,9 @@
       <!-- شريط اختيار المادة الامتحانية -->
       <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
         <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر المادة الامتحانية:</span>
+        <button id="btnExamSubjectMath" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('math')" style="font-weight: 800; font-size: 0.78rem;">
+          📐 مادة الرياضيات (نموذجان وزاري وفصلي)
+        </button>
         <button id="btnExamSubjectPhy" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('phy')" style="font-weight: 800; font-size: 0.78rem;">
           ⚛️ مادة الفيزياء (5 نماذج معتمدة)
         </button>
@@ -3633,7 +3637,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v3.8.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v4.5.0</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3658,7 +3662,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v3.8.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v4.5.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3667,6 +3671,11 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v4.3.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة اللغة العربية (الجزء الأول) للصف الثاني المتوسط كاملاً (9 وحدات شاملة: 67 تمريناً و 147 سؤالاً مع الإعراب والتطبيق والشواهد والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
+                      <div>• <strong style="color: var(--primary);">v4.2.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة الفيزياء للصف الثاني المتوسط كاملاً (6 فصول شاملة: 32 تمريناً و 149 سؤالاً نموذجياً مع القوانين والمسائل الحسابية خطوة بخطوة وتفسير الأشكال والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.1.0 (نوفمبر 2026):</strong> استكمال إدراج تمارين وحلول كراس النشاط للوحدة الثامنة في منهج اللغة الإنجليزية كاملاً مع الحلول النموذجية التفاعلية وإتمام كراس النشاط بالكامل (127 صفحة) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.0.0 (نوفمبر 2026):</strong> استكمال إدراج تمارين وحلول كراس النشاط للوحدتين السادسة والسابعة في منهج اللغة الإنجليزية كاملاً مع الحلول النموذجية التفاعلية وصور الصفحات بدقة عالية - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v3.9.0 (نوفمبر 2026):</strong> استكمال إدراج تمارين وحلول كراس النشاط للوحدتين الرابعة والخامسة في منهج اللغة الإنجليزية كاملاً مع الحلول النموذجية التفاعلية - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.5.0 (أكتوبر 2026):</strong> تصميم واجهة 2: اعتماد الأزرار الحصرية للانتقال بين الوظائف والمناهج وجعل الصور توضيحية فقط تعكس طبيعة النظام التعليمي - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v3.4.2 (أكتوبر 2026):</strong> تطوير طريقة عرض واختيار المناهج على الهواتف الذكية بنظام التبويبات الفردية وشريط الوصول السريع بالرئيسية - إعداد المهندس أسامة خليل هاشم.</div>
               <div>• <strong style="color: var(--primary);">v3.4.1 (أكتوبر 2026):</strong> تخصيص الواجهات وإلغاء أزرار القراءة الصوتية وفلاتر الإنجليزية من مناهج اللغة العربية والتربية الإسلامية وحصر الصوت بمنهج اللغة الإنجليزية - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3711,7 +3720,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v3.8.0</span>
+        <span class="version-badge" id="footerVersionBadge">v4.5.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3900,6 +3909,257 @@
   </div>
 
 
+
+  <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الرياضيات -->
+  <div class="modal-overlay hidden" id="mathChapterReviewsModal" onclick="if(event.target === this) closeMathReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #faf5ff; color: #7e22ce; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            📐
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #581c87; margin: 0;">مركز الحلول النموذجية لمراجعات فصول الرياضيات</h3>
+            <span style="font-size: 0.76rem; color: #7e22ce; font-weight: 800;">منهج الرياضيات للصف الثاني المتوسط (7 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllMathModalSolutions()" id="btnToggleAllModalMathSols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #faf5ff; color: #7e22ce; border: 1px solid #d8b4fe; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeMathReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 7 Math Chapters -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="mathReviewChaptersNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Chapter Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #faf5ff; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #e9d5ff;" id="mathReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="mathModalChapterBadge" style="background: #7e22ce; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الفصل 1</span>
+          <strong id="mathModalChapterTitle" style="font-size: 0.95rem; color: var(--slate-900);">مراجعة الفصل الأول</strong>
+          <span id="mathModalChapterPages" style="font-size: 0.76rem; color: #7e22ce; font-weight: 700;">الصفحات 30 - 33</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalMathReviewInStudy" onclick="openCurrentModalMathReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; box-shadow: 0 2px 6px rgba(126,34,206,0.25);">
+            🚀 فتح المراجعة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalMathBookPage" onclick="openCurrentModalMathBookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #7e22ce; border: 1px solid #d8b4fe;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="mathModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الفيزياء -->
+  <div class="modal-overlay hidden" id="physicsChapterReviewsModal" onclick="if(event.target === this) closePhysicsReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            ⚛️
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #075985; margin: 0;">مركز الحلول النموذجية لمراجعات فصول الفيزياء</h3>
+            <span style="font-size: 0.76rem; color: #0284c7; font-weight: 800;">منهج الفيزياء للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllPhysicsModalSolutions()" id="btnToggleAllModalPhySols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #f0f9ff; color: #0284c7; border: 1px solid #bae6fd; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closePhysicsReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 6 Physics Chapters -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="physicsReviewChaptersNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Chapter Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #f8fafc; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #e2e8f0;" id="physicsReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="physicsModalChapterBadge" style="background: #0284c7; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الفصل 1</span>
+          <strong id="physicsModalChapterTitle" style="font-size: 0.95rem; color: var(--slate-900);">مراجعة الفصل الأول</strong>
+          <span id="physicsModalChapterPages" style="font-size: 0.76rem; color: var(--slate-500); font-weight: 700;">الصفحات 21 - 23</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalReviewInStudy" onclick="openCurrentModalReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #0284c7, #0369a1); border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.25);">
+            🚀 فتح المراجعة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalBookPage" onclick="openCurrentModalBookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #0284c7; border: 1px solid #bae6fd;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="physicsModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة لمادة اللغة العربية (الجزء الأول) -->
+  <div class="modal-overlay hidden" id="arabicP1ChapterReviewsModal" onclick="if(event.target === this) closeArabicP1ReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            📙
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #065f46; margin: 0;">مركز الحلول النموذجية لمراجعات وتمارين اللغة العربية (الجزء الأول)</h3>
+            <span style="font-size: 0.76rem; color: #059669; font-weight: 800;">كتاب اللغة العربية للصف الثاني المتوسط (9 وحدات معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllArabicP1ModalSolutions()" id="btnToggleAllModalArP1Sols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeArabicP1ReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 9 Arabic Units -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="arabicP1ReviewUnitsNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Unit Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #f0fdf4; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #d1fae5;" id="arabicP1ReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="arabicP1ModalUnitBadge" style="background: #059669; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الوحدة 1</span>
+          <strong id="arabicP1ModalUnitTitle" style="font-size: 0.95rem; color: var(--slate-900);">الوحدة الأولى: رعاية الله ووعده</strong>
+          <span id="arabicP1ModalUnitPages" style="font-size: 0.76rem; color: #047857; font-weight: 700;">كتاب الطالب: الصفحات (5 - 21)</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalArP1ReviewInStudy" onclick="openCurrentModalArP1ReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #059669, #047857); border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.25);">
+            🚀 فتح الوحدة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalArP1BookPage" onclick="openCurrentModalArP1BookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #059669; border: 1px solid #a7f3d0;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="arabicP1ModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة لمادة اللغة العربية (الجزء الثاني) -->
+  <div class="modal-overlay hidden" id="arabicP2ChapterReviewsModal" onclick="if(event.target === this) closeArabicP2ReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #ecfdf5; color: #047857; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            📗
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #065f46; margin: 0;">مركز الحلول النموذجية لمراجعات وتمارين اللغة العربية (الجزء الثاني)</h3>
+            <span style="font-size: 0.76rem; color: #059669; font-weight: 800;">كتاب اللغة العربية للصف الثاني المتوسط (9 وحدات معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllArabicP2ModalSolutions()" id="btnToggleAllModalArP2Sols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeArabicP2ReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 9 Arabic Part 2 Units -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="arabicP2ReviewUnitsNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Unit Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #f0fdf4; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #d1fae5;" id="arabicP2ReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="arabicP2ModalUnitBadge" style="background: #047857; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الوحدة 1</span>
+          <strong id="arabicP2ModalUnitTitle" style="font-size: 0.95rem; color: var(--slate-900);">الوحدة الأولى: فداءٌ لِوَطَنِي</strong>
+          <span id="arabicP2ModalUnitPages" style="font-size: 0.76rem; color: #047857; font-weight: 700;">كتاب الطالب (الجزء الثاني): الصفحات (3 - 17)</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalArP2ReviewInStudy" onclick="openCurrentModalArP2ReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #047857, #059669); border: none; box-shadow: 0 2px 6px rgba(4,120,87,0.25);">
+            🚀 فتح الوحدة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalArP2BookPage" onclick="openCurrentModalArP2BookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #047857; border: 1px solid #a7f3d0;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="arabicP2ModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات ومناقشات الفصول والحلول النموذجية الشاملة لمادة التربية الإسلامية -->
+  <div class="modal-overlay hidden" id="islamicChapterReviewsModal" onclick="if(event.target === this) closeIslamicReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #f0fdfa; color: #0d9488; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            🕌
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #0f766e; margin: 0;">مركز الحلول النموذجية لمراجعات ومناقشات مادة التربية الإسلامية</h3>
+            <span style="font-size: 0.76rem; color: #0d9488; font-weight: 800;">كتاب التربية الإسلامية للصف الثاني المتوسط (6 وحدات معتمدة: 37 مبحثاً و 192 سؤالاً) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllIslamicModalSolutions()" id="btnToggleAllModalIslamicSols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeIslamicReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 6 Islamic Units -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="islamicReviewUnitsNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Unit Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #f0fdfa; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #99f6e4;" id="islamicReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="islamicModalUnitBadge" style="background: #0d9488; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الوحدة 1</span>
+          <strong id="islamicModalUnitTitle" style="font-size: 0.95rem; color: var(--slate-900);">الوحدة الأولى: القرآن الكريم والعقيدة والحديث</strong>
+          <span id="islamicModalUnitPages" style="font-size: 0.76rem; color: #0f766e; font-weight: 700;">كتاب الطالب: الصفحات (7 - 29)</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalIslamicReviewInStudy" onclick="openCurrentModalIslamicReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #0d9488, #0f766e); border: none; box-shadow: 0 2px 6px rgba(13,148,136,0.25);">
+            🚀 فتح الوحدة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalIslamicBookPage" onclick="openCurrentModalIslamicBookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #0d9488; border: 1px solid #99f6e4;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="islamicModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
   <!-- نافذة مودال: استوديو ضبط ومعاينة الصوت البشري المتقدم -->
   <div class="modal-overlay hidden" id="voiceStudioModal">
     <div class="modal-box" style="max-width: 650px; width: 95vw; max-height: 90vh; overflow-y: auto; padding: 1.5rem;">
@@ -4079,7 +4339,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v3.8.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v4.5.0</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4107,13 +4367,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v3.8.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v4.5.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v3.8.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v4.5.0</span>
         </div>
       </div>
 
@@ -4161,9 +4421,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '3.8.0';
-    const CURRENT_VERSION_LABEL = 'v3.8.0';
-    const SYSTEM_VERSION = 'v3.8.0';
+    const CURRENT_VERSION = '4.5.0';
+    const CURRENT_VERSION_LABEL = 'v4.5.0';
+    const SYSTEM_VERSION = 'v4.5.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -5281,6 +5541,7 @@
       if (id === 5) return window.ARABIC_CURRICULUM_P2 || [];
       if (id === 6) return window.ISLAMIC_CURRICULUM || [];
       if (id === 7) return window.PHYSICS_CURRICULUM || [];
+      if (id === 8) return window.MATH_CURRICULUM || [];
       return window.CURRICULUM_DATA || [];
     }
 
@@ -5343,6 +5604,18 @@
         image_folder: 'physics',
         description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الفيزياء: الحركة والقوة، قوانين الحركة لنيوتن والجاذبية، الشغل والقدرة والطاقة، الآلات البسيطة والعتلات، الحركة الموجية والصوت، والضوء والمرايا والعدسات مع القراءة الصوتية وعارض الصفحات الأصلية.',
         chapters: physicsChapters
+      };
+
+      const mathChapters = window.MATH_CURRICULUM || [];
+      const mathCurr = {
+        id: 8,
+        name: 'الرياضيات - الثاني متوسط',
+        subject: 'الرياضيات',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'math',
+        description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الرياضيات (الجزء الأول والثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات والمقادير الجبرية، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات مع بنك القوانين والنظريات ونماذج الامتحانات والحلول النموذجية الشاملة.',
+        chapters: mathChapters
       };
 
       // 1. تنقية المناهج واستبعاد أي وثائق مواصفات داخلية للنظام
@@ -5448,8 +5721,26 @@
         appData.curriculums.push(physicsCurr);
       }
 
+      // 7. تحديث وتثبيت منهج الرياضيات
+      const existingMathIndex = appData.curriculums.findIndex(c => 
+        c.id === 8 || 
+        (c.name && c.name.includes('الرياضيات')) || 
+        (c.subject && c.subject.includes('رياضيات'))
+      );
+
+      if (existingMathIndex >= 0) {
+        appData.curriculums[existingMathIndex] = {
+          ...appData.curriculums[existingMathIndex],
+          ...mathCurr,
+          id: 8,
+          chapters: (mathChapters && mathChapters.length > 0) ? mathChapters : (appData.curriculums[existingMathIndex].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(mathCurr);
+      }
+
       // ضمان اختيار منهج صالح
-      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7].includes(appData.currentCurriculumId)) {
+      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8].includes(appData.currentCurriculumId)) {
         appData.currentCurriculumId = 3;
       }
       saveData();
@@ -5551,6 +5842,8 @@
             currentCurriculumViewTab = 6;
           } else if (appData.currentCurriculumId === 7) {
             currentCurriculumViewTab = 7;
+          } else if (appData.currentCurriculumId === 8) {
+            currentCurriculumViewTab = 8;
           } else {
             currentCurriculumViewTab = 3;
           }
@@ -5575,6 +5868,7 @@
       const isAr2Active = appData.currentCurriculumId === 5;
       const isIsActive = appData.currentCurriculumId === 6;
       const isPhyActive = appData.currentCurriculumId === 7;
+      const isMathActive = appData.currentCurriculumId === 8;
 
       container.innerHTML = `
         <!-- زر 1: مادة اللغة الإنجليزية -->
@@ -5636,6 +5930,18 @@
             <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">3 وحدات • 6 فصول • 88 ص</div>
           </div>
         </button>
+
+        <!-- زر 6: مادة الرياضيات -->
+        <button class="curr-nav-btn math-btn ${isMathActive ? 'active-curr' : ''}" onclick="selectCurriculumInDashboard(8)" title="تحديد منهج الرياضيات">
+          <div class="curr-btn-icon-box" style="font-size: 1.6rem; width: 44px; height: 44px; border-radius: 10px; background: #faf5ff; color: #7e22ce; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📐</div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.3rem;">
+              <strong style="font-size: 0.92rem; color: var(--slate-900);">الرياضيات</strong>
+              ${isMathActive ? '<span style="background: #7e22ce; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #faf5ff; color: #7e22ce; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">معتمد</span>'}
+            </div>
+            <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">7 فصول • 43 درساً • 252 ص</div>
+          </div>
+        </button>
       `;
     }
 
@@ -5651,6 +5957,8 @@
           currentCurriculumViewTab = 6;
         } else if (appData.currentCurriculumId === 7) {
           currentCurriculumViewTab = 7;
+        } else if (appData.currentCurriculumId === 8) {
+          currentCurriculumViewTab = 8;
         } else {
           currentCurriculumViewTab = 3;
         }
@@ -5676,6 +5984,11 @@
           <span>⚛️</span>
           <span>الفيزياء</span>
           <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 7 ? 'background: #e0f2fe; color: #0369a1;' : 'background: #e2e8f0; color: #475569;'}">88 ص</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 8 ? 'active math' : ''}" onclick="setCurriculumViewTab(8)">
+          <span>📐</span>
+          <span>الرياضيات</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 8 ? 'background: #f3e8ff; color: #7e22ce;' : 'background: #e2e8f0; color: #475569;'}">7 فصول</span>
         </button>
         <button class="curricula-tab-btn ${currentCurriculumViewTab === 'all' ? 'active all' : ''}" onclick="setCurriculumViewTab('all')">
           <span>🌐</span>
@@ -5706,6 +6019,8 @@
           officialSubjects.add('arabic');
         } else if (n.includes('فيزياء') || s.includes('فيزياء') || c.id === 7) {
           officialSubjects.add('physics');
+        } else if (n.includes('رياضيات') || s.includes('رياض') || c.id === 8) {
+          officialSubjects.add('math');
         } else if (n.includes('إسلامية') || s.includes('إسلام') || c.id === 6) {
           officialSubjects.add('islamic');
         } else if (n.includes('انجليزية') || s.includes('eng') || c.id === 3) {
@@ -5731,7 +6046,8 @@
       const arGrammarCount = (window.ARABIC_GRAMMAR_RULES || []).length || 18;
       const isGrammarCount = (window.ISLAMIC_RULES || []).length || 15;
       const phyRulesCount = (window.PHYSICS_RULES || []).length || 18;
-      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount;
+      const mathRulesCount = (window.MATH_RULES || []).length || 22;
+      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount + mathRulesCount;
 
       document.getElementById('statChapters').innerText = totalChapters || 42;
       document.getElementById('statLessons').innerText = totalLessons || 214;
@@ -5763,6 +6079,7 @@
       const showArab = currentCurriculumViewTab === 'arabic' || currentCurriculumViewTab === 'all';
       const showIslamic = currentCurriculumViewTab === 6 || currentCurriculumViewTab === 'all';
       const showPhysics = currentCurriculumViewTab === 7 || currentCurriculumViewTab === 'all';
+      const showMath = currentCurriculumViewTab === 8 || currentCurriculumViewTab === 'all';
 
       // 1. بطاقة منهج اللغة الإنجليزية
       if (showEng) {
@@ -5894,8 +6211,11 @@
                 </div>
                 
                 <div style="border-top: 1px solid #e2e8f0; padding-top: 0.85rem; display: flex; gap: 0.5rem;">
-                  <button class="btn btn-primary" onclick="openSubjectTab(4)" style="flex: 1; font-weight: 800; background: linear-gradient(135deg, #059669, #10b981); border: none; padding: 0.55rem 1rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);">
+                  <button class="btn btn-primary" onclick="openSubjectTab(4)" style="flex: 1; min-width: 130px; font-weight: 800; background: linear-gradient(135deg, #059669, #10b981); border: none; padding: 0.55rem 1rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);">
                     📖 مذاكرة الجزء الأول ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openArabicP1ReviewsModal()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.85rem;" title="مراجعات وحلول الوحدات">
+                    🎯 المراجعات والحلول (9 وحدات)
                   </button>
                   <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(4); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 0.85rem;" title="قواعد الجزء الأول">
                     💡 القواعد
@@ -5933,6 +6253,9 @@
                 <div style="border-top: 1px solid #e2e8f0; padding-top: 0.85rem; display: flex; gap: 0.5rem;">
                   <button class="btn btn-primary" onclick="openSubjectTab(5)" style="flex: 1; font-weight: 800; background: linear-gradient(135deg, #047857, #059669); border: none; padding: 0.55rem 1rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(4, 120, 87, 0.25);">
                     📖 مذاكرة الجزء الثاني ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openArabicP2ReviewsModal()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.85rem;" title="مراجعات وحلول الوحدات">
+                    🎯 المراجعات والحلول (9 وحدات)
                   </button>
                   <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(5); switchTab('grammar');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 0.85rem;" title="قواعد الجزء الثاني">
                     💡 القواعد
@@ -6030,6 +6353,9 @@
               <button class="btn btn-primary" onclick="openSubjectTab(6)" style="font-weight: 800; background: linear-gradient(135deg, #0d9488, #0f766e); border: none; padding: 0.65rem 1.25rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);">
                 📖 دخول قاعة المذاكرة والدروس ⮞
               </button>
+              <button class="btn btn-secondary" onclick="openIslamicReviewsModal()" style="background: #f0fdfa; color: #0d9488; border-color: #99f6e4; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎯 مناقشات ومراجعات الفصول والحلول النموذجية (6 وحدات)
+              </button>
               <button class="btn btn-secondary" onclick="selectCurriculumForStudy(6); switchTab('grammar'); setGrammarSubjectMode('is');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
                 💡 بنك أحكام وقواعد التربية الإسلامية
               </button>
@@ -6098,8 +6424,80 @@
               <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${phyCardCurr.id}); switchTab('grammar'); setGrammarSubjectMode('phy');" style="background: #f0f9ff; color: #0369a1; border-color: #7dd3fc; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
                 💡 بنك القوانين والمفاهيم
               </button>
+              <button class="btn btn-secondary" onclick="openPhysicsReviewsModal()" style="background: #e0f2fe; color: #0284c7; border-color: #bae6fd; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+              </button>
               <button class="btn btn-secondary" onclick="openDigitalLibraryReader(${phyCardCurr.id}, 1)" style="background: #ffffff; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
                 📖 تصفح الكتاب الأصلي
+              </button>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      }
+      }
+
+      // 5. بطاقة منهج الرياضيات
+      if (showMath) {
+      const mathCardCurr = currs.find(c => c.id === 8);
+      if (mathCardCurr) {
+        const div = document.createElement('div');
+        div.className = 'card curr-card';
+        div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1.5px solid #d8b4fe; box-shadow: 0 10px 25px -5px rgba(126, 34, 206, 0.15); grid-column: 1 / -1; margin-bottom: 1.75rem; background: #ffffff;';
+        div.innerHTML = `
+          <div style="padding: 1.5rem 1.75rem 1.25rem; background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border-bottom: 1.5px solid #e9d5ff;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                  <span class="curr-badge" style="background: #7e22ce; color: #ffffff; font-weight: 900; font-size: 0.78rem; padding: 0.25rem 0.75rem; border-radius: 6px;">مقرر وزاري معتمد</span>
+                  <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الكامل (الجزء الأول والثاني • 7 فصول) • مكتمل 100%</span>
+                  <span style="background: #ffffff; color: var(--slate-700); border: 1px solid var(--slate-200); padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: الثاني متوسط</span>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 900; margin: 0 0 0.4rem; color: #581c87; display: flex; align-items: center; gap: 0.6rem;">
+                  <span style="font-size: 1.75rem;">📐</span>
+                  <span>مادة الرياضيات - الصف الثاني المتوسط</span>
+                </h3>
+                <p style="font-size: 0.88rem; color: #6b21a8; line-height: 1.65; margin: 0; max-width: 900px;">
+                  المنهج الرسمي المعتمد لوزارة التربية العراقية بكامل فصوله ومسائله ونظرياته: الأعداد النسبية، الأعداد الحقيقية وخواص العمليات، الحدوديات والتحليل الجبري، المعادلات والمتباينات في R، الهندسة والقياس وتطابق المثلثات، الهندسة الإحداثية والميل، والإحصاء والاحتمالات (43 درساً تفاعلياً، 252 صفحة معتمدة، 22 قانوناً ونظرية ومفهوماً مدعماً بالحلول النموذجية الشاملة).
+                </p>
+              </div>
+
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span style="background: #ffffff; color: #7e22ce; border: 1.5px solid #d8b4fe; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
+                  📖 7 فصول شاملة
+                </span>
+                <span style="background: #ffffff; color: #b45309; border: 1.5px solid #fde68a; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
+                  💡 22 قانوناً ونظرية
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 1.25rem 1.75rem; background: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 75px; height: 105px; border-radius: 8px; overflow: hidden; flex-shrink: 0; box-shadow: -3px 4px 10px rgba(126,34,206,0.2); background: #581c87; cursor: default; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <span style="font-size: 2.2rem;">📐</span>
+                <span style="font-size: 0.65rem; font-weight: 800; margin-top: 0.2rem;">الرياضيات</span>
+              </div>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الجزأين 1 و 2)</div>
+                <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">4 وحدات كبرى • 7 فصول • 43 درساً تفاعلياً • بنك النظريات والقوانين</div>
+                <div style="font-size: 0.76rem; color: #7e22ce; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="openSubjectTab(${mathCardCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(126, 34, 206, 0.3);">
+                📖 دخول قاعة المذاكرة والدروس ⮞
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${mathCardCurr.id}); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                💡 بنك القوانين والنظريات
+              </button>
+              <button class="btn btn-secondary" onclick="openMathReviewsModal()" style="background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${mathCardCurr.id}); switchTab('exams'); setExamSubjectMode('math');" style="background: #ffffff; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                📝 الامتحانات الوزارية
               </button>
             </div>
           </div>
@@ -6111,8 +6509,7 @@
       // المقررات القادمة ضمن خطة التوسع الأكاديمي
       if (currentCurriculumViewTab === 'all') {
       const upcoming = [
-        { title: 'الرياضيات', icon: '📐', grade: 'الصف الثاني متوسط', status: 'المقرر القادم • قيد الإعداد والبرمجة' },
-        { title: 'العلوم العامة', icon: '🔬', grade: 'الصف الثاني متوسط', status: 'قيد الإعداد والبرمجة' }
+        { title: 'العلوم العامة', icon: '🔬', grade: 'الصف الثاني متوسط', status: 'المقرر القادم • قيد الإعداد والبرمجة' }
       ];
 
       const upcomingHeader = document.createElement('div');
@@ -6205,8 +6602,18 @@
         select.appendChild(opt);
       }
 
-      // 4. أي مناهج أخرى
-      currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6).forEach(c => {
+      // 5. مادة الرياضيات
+      const math = currs.find(c => c.id === 8);
+      if (math) {
+        const opt = document.createElement('option');
+        opt.value = 8;
+        opt.innerText = '📐 الرياضيات (7 فصول معتمدة - 43 درساً تفاعلياً)';
+        if (appData.currentCurriculumId === 8) opt.selected = true;
+        select.appendChild(opt);
+      }
+
+      // 6. أي مناهج أخرى
+      currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7 && c.id !== 8).forEach(c => {
         const opt = document.createElement('option');
         opt.value = c.id;
         opt.innerText = c.name;
@@ -6220,7 +6627,8 @@
       appData.currentCurriculumId = idNum;
       appData.currentLessonId = null;
       saveData();
-      if (idNum === 7) currentCurriculumViewTab = 7;
+      if (idNum === 8) currentCurriculumViewTab = 8;
+      else if (idNum === 7) currentCurriculumViewTab = 7;
       else if (idNum === 6) currentCurriculumViewTab = 6;
       else if (idNum === 4 || idNum === 5) currentCurriculumViewTab = 'arabic';
       else if (idNum === 3) currentCurriculumViewTab = 3;
@@ -6312,9 +6720,13 @@
 
         (chap.lessons || []).forEach(les => {
           const item = document.createElement('div');
+          const isReviewLes = les.title && les.title.includes('مراجعة');
           item.className = `tree-item ${les.id === appData.currentLessonId ? 'active' : ''}`;
           item.innerHTML = `
-            <span>${les.title}</span>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 0.35rem;">
+              <span>${les.title}</span>
+              ${isReviewLes ? '<span style="background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; font-size: 0.62rem; font-weight: 800; padding: 0.1rem 0.35rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0;">🎯 حلول معتمدة</span>' : ''}
+            </div>
             <span style="font-size: 0.68rem; color: var(--slate-400);">${les.summary || ''}</span>
           `;
           item.onclick = () => {
@@ -6481,6 +6893,11 @@
                 🔬 الرسم التوضيحي للدرس
               </button>
             ` : ''}
+            ${(chunks || []).some(ch => ch.exercises && ch.exercises.length > 0) ? `
+              <button class="btn btn-sm" id="toggleAllChunkReviewSolsBtn" onclick="toggleAllReviewSolutionsInPage()" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #0284c7; color: #ffffff; border: none; font-weight: 800; box-shadow: 0 1px 3px rgba(2,132,199,0.3); border-radius: 6px;">
+                🎯 إظهار كافة الحلول النموذجية
+              </button>
+            ` : ''}
           </div>
         `;
       }
@@ -6502,68 +6919,151 @@
         const heading = ch.heading || `المقطع ${idx + 1}`;
         const isActivity = Boolean(ch.is_activity_book || ch.activity_book);
 
+        const hasExercises = Boolean(ch.exercises && ch.exercises.length > 0);
+        const isReviewChunk = Boolean(ch.is_review || (activeLesson && activeLesson.title && activeLesson.title.includes('مراجعة')));
         const box = document.createElement('div');
-        box.className = isActivity ? 'chunk-box chunk-box-activity' : 'chunk-box';
+        box.className = (isActivity || isReviewChunk) ? 'chunk-box chunk-box-activity' : 'chunk-box';
         box.id = `chunk-box-${idx}`;
 
         let innerContentHtml = '';
 
-        if (isActivity && ch.exercises && ch.exercises.length > 0) {
-          innerContentHtml = `
-            <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: #e6fffa; border: 1px solid #b2f5ea; padding: 0.45rem 0.75rem; border-radius: 8px;">
-              <span style="font-size: 0.82rem; font-weight: 800; color: #0d9488;">
-                🎯 تمارين كتاب النشاط الرسمية والحلول النموذجية المعتمدة
-              </span>
-              <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; font-weight: 700; background: white;">
-                👁️ إظهار / إخفاء جميع الحلول
-              </button>
-            </div>
-            <div class="activity-exercises-list" id="activityExercisesList_${idx}">
-          `;
+        if (hasExercises) {
+          let bannerHtml = '';
+          const isArP1 = (appData.currentCurriculumId === 4);
+          if (isActivity) {
+            bannerHtml = `
+              <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: #e6fffa; border: 1px solid #b2f5ea; padding: 0.45rem 0.75rem; border-radius: 8px;">
+                <span style="font-size: 0.82rem; font-weight: 800; color: #0d9488;">
+                  🎯 تمارين كتاب النشاط الرسمية والحلول النموذجية المعتمدة
+                </span>
+                <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; font-weight: 700; background: white;">
+                  👁️ إظهار / إخفاء جميع الحلول
+                </button>
+              </div>
+            `;
+          } else if (isArP1) {
+            bannerHtml = `
+              <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1.5px solid #a7f3d0; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(5,150,105,0.08);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <span style="font-size: 0.88rem; font-weight: 800; color: #065f46; display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <span>📙</span> تمرينات ومراجعة الوحدة والحلول النموذجية المعتمدة (اللغة العربية - الجزء الأول)
+                  </span>
+                  <span class="badge" style="background: #059669; color: white; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                    ✨ حل نموذجي وزاري معتمد
+                  </span>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #059669; border: 1px solid #a7f3d0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                  👁️ إظهار / إخفاء كافة حلول التمرينات
+                </button>
+              </div>
+            `;
+          } else if (isReviewChunk || appData.currentCurriculumId === 7) {
+            bannerHtml = `
+              <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1.5px solid #7dd3fc; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(2,132,199,0.08);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <span style="font-size: 0.88rem; font-weight: 800; color: #0369a1; display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <span>⚛️</span> مراجعة الفصل والحلول النموذجية المعتمدة (الفيزياء)
+                  </span>
+                  <span class="badge" style="background: #0284c7; color: white; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                    ✨ حل نموذجي وزاري معتمد
+                  </span>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #0284c7; border: 1px solid #7dd3fc; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                  👁️ إظهار / إخفاء كافة حلول المراجعة
+                </button>
+              </div>
+            `;
+          } else {
+            bannerHtml = `
+              <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.45rem 0.75rem; border-radius: 8px;">
+                <span style="font-size: 0.82rem; font-weight: 800; color: var(--slate-800);">
+                  🎯 الأسئلة والحلول النموذجية المعتمدة
+                </span>
+                <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; font-weight: 700; background: white;">
+                  👁️ إظهار / إخفاء جميع الحلول
+                </button>
+              </div>
+            `;
+          }
+
+          innerContentHtml = bannerHtml + `<div class="activity-exercises-list" id="activityExercisesList_${idx}">`;
 
           ch.exercises.forEach((ex, exIdx) => {
             const exId = ex.id || `ex_${idx}_${exIdx}`;
             let wordsBoxHtml = '';
             if (ex.words_box && ex.words_box.length > 0) {
+              const wbBorder = isEnCurr ? '#cbd5e1' : (isArP1 ? '#a7f3d0' : '#7dd3fc');
+              const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isArP1 ? '#065f46' : '#0369a1');
+              const wbTagBg = isEnCurr ? '#f1f5f9' : (isArP1 ? '#ecfdf5' : '#f0f9ff');
+              const wbTagBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : '#bae6fd');
+              const wbTagColor = isEnCurr ? '#0f172a' : (isArP1 ? '#064e3b' : '#0c4a6e');
+
               wordsBoxHtml = `
-                <div style="background: #ffffff; border: 1px dashed #cbd5e1; border-radius: 6px; padding: 0.4rem 0.65rem; margin: 0.4rem 0; font-size: 0.82rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                  <strong style="color: var(--slate-700);">📦 الكلمات / الخيارات:</strong>
-                  ${ex.words_box.map(w => `<span style="background: #f1f5f9; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; color: #0f172a;">${w}</span>`).join('')}
+                <div style="background: #ffffff; border: 1px dashed ${wbBorder}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+                  <strong style="color: ${wbTitleColor};">📦 الكلمات / الخيارات المتاحة:</strong>
+                  ${ex.words_box.map(w => `<span style="background: ${wbTagBg}; border: 1px solid ${wbTagBorder}; padding: 0.18rem 0.5rem; border-radius: 5px; font-weight: 700; color: ${wbTagColor};">${w}</span>`).join('')}
                 </div>
               `;
             }
 
             let qListHtml = '';
             if (ex.questions && ex.questions.length > 0) {
-              qListHtml = ex.questions.map((qObj, qIdx) => `
-                <div style="margin-bottom: 0.6rem; padding-bottom: 0.45rem; border-bottom: 1px solid #f1f5f9;">
-                  <div style="font-weight: 700; color: var(--slate-900); font-size: 0.88rem; direction: ltr; text-align: left; line-height: 1.5;">
-                    ${qObj.q}
+              qListHtml = ex.questions.map((qObj, qIdx) => {
+                const isEnglishText = /[a-zA-Z]{3,}/.test(qObj.q) && isEnCurr;
+                const qDir = isEnglishText ? 'ltr' : 'rtl';
+                const qAlign = isEnglishText ? 'left' : 'right';
+                const ansIsEnglish = /[a-zA-Z]{3,}/.test(qObj.a) && isEnCurr;
+                const aDir = ansIsEnglish ? 'ltr' : 'rtl';
+                const aAlign = ansIsEnglish ? 'left' : 'right';
+
+                const solBorderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : '#0284c7');
+                const solBgColor = isEnCurr ? '#f0fdfa' : (isArP1 ? '#f0fdf4' : '#f0f9ff');
+                const solHeaderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : '#0284c7');
+                const solBodyColor = isEnCurr ? '#065f46' : (isArP1 ? '#064e3b' : '#0c4a6e');
+
+                return `
+                  <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+                    <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: ${qDir}; text-align: ${qAlign}; line-height: 1.6;">
+                      ${qObj.q}
+                    </div>
+                    ${(qObj.options && qObj.options.length > 0) ? `
+                      <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: ${qDir};">
+                        ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                      </div>
+                    ` : ''}
+                    ${qObj.q_ar ? `<div style="font-size: 0.76rem; color: var(--slate-500); margin-top: 0.15rem;">${qObj.q_ar}</div>` : ''}
+                    <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.6rem 0.85rem; font-size: 0.85rem; border-left: 3.5px solid ${solBorderColor}; background: ${solBgColor}; border-radius: 6px;">
+                      <div style="font-weight: 800; color: ${solHeaderColor}; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                        <span>✅</span> الحل النموذجي المعتمد والشرح:
+                      </div>
+                      <div style="direction: ${aDir}; text-align: ${aAlign}; font-weight: 600; color: ${solBodyColor}; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                    </div>
                   </div>
-                  ${qObj.q_ar ? `<div style="font-size: 0.76rem; color: var(--slate-500); margin-top: 0.15rem;">${qObj.q_ar}</div>` : ''}
-                  <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.35rem; padding: 0.45rem 0.75rem; font-size: 0.82rem; border-left: 3px solid #0d9488;">
-                    <div style="font-weight: 800; color: #0d9488; margin-bottom: 0.2rem;">✅ الحل النموذجي المعتمد:</div>
-                    <div style="direction: ${/[a-zA-Z]{2,}/.test(qObj.a) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(qObj.a) ? 'left' : 'right'}; font-weight: 700; color: #065f46; white-space: pre-wrap;">${qObj.a}</div>
-                  </div>
-                </div>
-              `).join('');
+                `;
+              }).join('');
             }
 
+            const cardBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : '#bae6fd');
+            const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isArP1 ? '#ecfdf5' : '#e0f2fe');
+            const cardBadgeColor = isEnCurr ? '#0f766e' : (isArP1 ? '#065f46' : '#0284c7');
+
             innerContentHtml += `
-              <div class="activity-exercise-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.85rem; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.4rem;">
+              <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid ${cardBorder}; border-radius: 12px; padding: 0.95rem; margin-bottom: 0.85rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
                   <div>
-                    <span class="badge" style="background: #ccfbf1; color: #0f766e; font-weight: 800; font-size: 0.74rem;">${ex.num || `التمرين ${exIdx+1}`}</span>
-                    <h4 style="display: inline; font-size: 0.92rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-800);">${ex.title}</h4>
-                    ${ex.title_ar ? `<div style="font-size: 0.78rem; color: var(--slate-500); margin-top: 0.15rem;">${ex.title_ar}</div>` : ''}
+                    <span class="badge" style="background: ${cardBadgeBg}; color: ${cardBadgeColor}; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
+                    <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
+                    ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isArP1 ? '#059669' : 'var(--slate-500)'}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
                   </div>
                   <div style="display: flex; gap: 0.35rem; align-items: center;">
-                    <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})">
+                    <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : ''}>
                       <span>👁️</span> إظهار الحل
                     </button>
-                    <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(ex.title + '. ' + (ex.questions || []).map(q => q.q).join(' '))}\`, 'en')">
-                      🔊 استماع
-                    </button>
+                    ${isEnCurr ? `
+                      <button class="mini-listen-btn" onclick="speakSnippet(\`${escapeForAttribute(ex.title + '. ' + (ex.questions || []).map(q => q.q).join(' '))}\`, 'en')">
+                        🔊 استماع
+                      </button>
+                    ` : ''}
                   </div>
                 </div>
                 ${wordsBoxHtml}
@@ -6639,7 +7139,7 @@
       if (audioPlayer.isPlaying) audioPlayer.stop();
       const isEn = (currentModalBookCurrId === 3);
       const isAct = isEn && (currentModalEnglishBookType === 'activity');
-      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
+      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : (currentModalBookCurrId === 8 ? 252 : 136)));
       let nextP = currentModalBookPage + delta;
       if (nextP < 1) nextP = 1;
       if (nextP > maxPages) nextP = maxPages;
@@ -6651,7 +7151,7 @@
       if (audioPlayer.isPlaying) audioPlayer.stop();
       const isEn = (currentModalBookCurrId === 3);
       const isAct = isEn && (currentModalEnglishBookType === 'activity');
-      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : 136));
+      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : (currentModalBookCurrId === 8 ? 252 : 136)));
       let targetP = Number(p);
       if (isNaN(targetP) || targetP < 1) targetP = 1;
       if (targetP > maxPages) targetP = maxPages;
@@ -6678,6 +7178,7 @@
       const isP2 = currId === 5;
       const isIslamic = currId === 6;
       const isPhysics = currId === 7;
+      const isMath = currId === 8;
 
       let folder = '';
       let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
@@ -6701,6 +7202,10 @@
         folder = 'physics/';
         bookName = 'كتاب الفيزياء (الصف الثاني المتوسط)';
         maxPages = 88;
+      } else if (isMath) {
+        folder = 'math/';
+        bookName = 'كتاب الرياضيات (الصف الثاني المتوسط)';
+        maxPages = 252;
       }
 
       // محول نمط الكتاب للمنهج الإنجليزي (كتاب الطالب مقابل كراس النشاط)
@@ -6782,8 +7287,8 @@
       }
     }
 
-    function openBookPageModal(pageNum, lessonTitle, bookType = 'student') {
-      currentModalBookCurrId = appData.currentCurriculumId || 3;
+    function openBookPageModal(pageNum, lessonTitle, bookType = 'student', customCurrId = null) {
+      currentModalBookCurrId = customCurrId || appData.currentCurriculumId || 3;
       currentModalEnglishBookType = bookType || 'student';
       currentModalBookPage = Number(pageNum) || 1;
       renderDigitalLibraryPage(lessonTitle);
@@ -6833,6 +7338,28 @@
           ? '<span>🙈</span> إخفاء الحل' 
           : '<span>👁️</span> إظهار الحل';
       });
+    }
+
+    function toggleAllReviewSolutionsInPage() {
+      const container = document.getElementById('lessonChunksContainer');
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
+      const topBtn = document.getElementById('toggleAllChunkReviewSolsBtn');
+      if (topBtn) {
+        topBtn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول النموذجية' : '🎯 إظهار كافة الحلول النموذجية';
+      }
     }
 
     function updateBookPageAudioUI(isPlaying) {
@@ -7457,10 +7984,55 @@
 
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
       let greeting = '';
+      if (isMath) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1.5px solid #d8b4fe; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(126, 34, 206, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(126,34,206,0.25); background: #581c87; cursor: default; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <span style="font-size: 3rem;">📐</span>
+                <span style="font-size: 0.75rem; font-weight: 800; margin-top: 0.5rem; text-align: center; padding: 0 0.25rem;">كتاب الرياضيات</span>
+              </div>
+              <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #7e22ce; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                    <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول كاملة (252 صفحة)</span>
+                    <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 22 قانوناً ونظرية ومفهوماً</span>
+                  </div>
+                  <h3 style="font-size: 1.4rem; font-weight: 900; color: #581c87; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📐</span>
+                    <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
+                  </h3>
+                  <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
+                    المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 43 درساً تفاعلياً، بنك النظريات والقوانين الرياضية، ونماذج الامتحانات المحلولة).
+                  </p>
+                </div>
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(8)" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                    💡 بنك القوانين والنظريات
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openMathReviewsModal()" style="background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; font-weight: 800; padding: 0.55rem 1rem;">
+                    🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('exams'); setExamSubjectMode('math');" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                    📝 الامتحانات الوزارية والشهرية
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
       if (isPhysics) {
         greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الفيزياء (الصف الثاني المتوسط)</strong> ⚛️.<br>` +
                    `اسألني عن أي قانون رياضي، أو مسألة حسابية، أو مفهوم علمي، أو تفسير ظاهرة فيزيائية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والمعادلات الدقيقة.`;
@@ -8917,7 +9489,8 @@
     let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar', 'is'
 
     function setGrammarSubjectMode(mode) {
-      if (mode === 'phy') appData.currentCurriculumId = 7;
+      if (mode === 'math') appData.currentCurriculumId = 8;
+      else if (mode === 'phy') appData.currentCurriculumId = 7;
       else if (mode === 'is') appData.currentCurriculumId = 6;
       else if (mode === 'ar') {
         if (appData.currentCurriculumId !== 4 && appData.currentCurriculumId !== 5) {
@@ -8944,7 +9517,8 @@
       // تحديد نمط المادة حصراً للمنهج النشط حالياً لمنع أي تداخل بين المواد
       const currId = Number(appData.currentCurriculumId || 3);
       let currentMode = 'en';
-      if (currId === 7) currentMode = 'phy';
+      if (currId === 8) currentMode = 'math';
+      else if (currId === 7) currentMode = 'phy';
       else if (currId === 6) currentMode = 'is';
       else if (currId === 4 || currId === 5) currentMode = 'ar';
       else currentMode = 'en';
@@ -8980,6 +9554,10 @@
         if (titleEl) titleEl.innerText = '⚛️ المرجع الشامل لقوانين ومفاهيم الفيزياء (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي لقوانين الحركة والقوة، الشغل والقدرة والطاقة، الآلات البسيطة، الموجات والصوت، والضوء والمرايا والعدسات.';
         if (searchInput) searchInput.placeholder = 'ابحث في قوانين ومفاهيم الفيزياء (مثلاً: نيوتن، الشغل، القدرة، العتلات، الصدى، الانكسار)...';
+      } else if (currentMode === 'math') {
+        if (titleEl) titleEl.innerText = '📐 المرجع الشامل لقوانين ونظريات الرياضيات (الصف الثاني المتوسط)';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي لقوانين الأعداد والعمليات، الجبر والتحليل، حل المعادلات والمتباينات، نظريات الهندسة والمثلثات والمجسمات، الهندسة الإحداثية، والإحصاء والاحتمالات.';
+        if (searchInput) searchInput.placeholder = 'ابحث في قوانين ونظريات ومفاهيم الرياضيات (مثلاً: فيثاغورس، الميل، العامل المشترك، المتباينة، متوازي الأضلاع، الوسيط)...';
       }
 
       // تحديث وتوليد فلاتر الوحدات والأقسام المخصصة لكل منهج ديناميكياً
@@ -9032,7 +9610,84 @@
             <button class="btn ${currentActiveGrammarFilter === 'light' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('light', this)">💡 الضوء والمرايا والعدسات (فصل 6)</button>
             <button class="btn btn-sm" onclick="openAllPhysicsDiagramsGallery()" style="background: #0284c7; color: #ffffff; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.3); margin-right: 0.5rem;">🎨 استعراض بنك الرسوم التوضيحية (15 لوحة)</button>
           `;
+        } else if (currentMode === 'math') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع القوانين والنظريات (22)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'numbers' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('numbers', this)">🔢 الأعداد والعمليات (فصل 1 و 2)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'algebra' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('algebra', this)">🔣 الجبر والحدوديات (فصل 3)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'equations' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('equations', this)">⚖️ المعادلات والمتباينات (فصل 4)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'geometry' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('geometry', this)">📐 الهندسة والقياس (فصل 5)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'coord' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('coord', this)">📈 الهندسة الإحداثية والميل (فصل 6)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'stats' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('stats', this)">📊 الإحصاء والاحتمالات (فصل 7)</button>
+          `;
         }
+      }
+
+      if (currentMode === 'math') {
+        // عرض بنك قوانين ونظريات ومفاهيم الرياضيات
+        const mathRules = window.MATH_RULES || [];
+        const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+        const filteredMath = mathRules.filter(r => {
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') {
+            matchesFilter = true;
+          } else if (currentActiveGrammarFilter === 'numbers') {
+            matchesFilter = r.category && (r.category.includes('الأعداد') || r.category.includes('العمليات') || r.category.includes('فصل 1') || r.category.includes('فصل 2'));
+          } else if (currentActiveGrammarFilter === 'algebra') {
+            matchesFilter = r.category && (r.category.includes('الجبر') || r.category.includes('الحدوديات') || r.category.includes('فصل 3'));
+          } else if (currentActiveGrammarFilter === 'equations') {
+            matchesFilter = r.category && (r.category.includes('المعادلات') || r.category.includes('المتباينات') || r.category.includes('فصل 4'));
+          } else if (currentActiveGrammarFilter === 'geometry') {
+            matchesFilter = r.category && (r.category.includes('الهندسة والقياس') || r.category.includes('فصل 5'));
+          } else if (currentActiveGrammarFilter === 'coord') {
+            matchesFilter = r.category && (r.category.includes('الهندسة الإحداثية') || r.category.includes('فصل 6'));
+          } else if (currentActiveGrammarFilter === 'stats') {
+            matchesFilter = r.category && (r.category.includes('الإحصاء') || r.category.includes('الاحتمالات') || r.category.includes('فصل 7'));
+          }
+          const matchesSearch = !search || 
+            (r.title && r.title.toLowerCase().includes(search)) || 
+            (r.category && r.category.toLowerCase().includes(search)) || 
+            (r.summary && r.summary.toLowerCase().includes(search)) || 
+            (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
+        });
+
+        if (filteredMath.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
+          empty.innerText = 'لا توجد قوانين أو نظريات رياضية مطابقة للفلتر أو البحث المحدد.';
+          container.appendChild(empty);
+          return;
+        }
+
+        filteredMath.forEach(rule => {
+          const card = document.createElement('div');
+          card.className = 'grammar-card';
+          card.style.cssText = 'background: white; border: 1px solid var(--slate-200); border-right: 4px solid #7e22ce; border-radius: 12px; padding: 1.15rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;';
+          card.innerHTML = `
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
+                <span class="badge" style="background: #faf5ff; color: #7e22ce; font-size: 0.72rem; font-weight: 800;">${rule.category}</span>
+                <span style="font-size: 0.7rem; color: var(--slate-400); font-weight: 700;">الرياضيات</span>
+              </div>
+              <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #581c87;">${rule.title}</h4>
+              <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #6b21a8; line-height: 1.6; margin-bottom: 0.65rem;">
+                <strong>💡 نص القانون والنظرية:</strong> ${rule.summary}
+              </div>
+              <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
+                ${rule.details}
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.6rem; margin-top: 0.4rem;">
+              <span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700;">الصف الثاني المتوسط • مقرر وزاري</span>
+              <button class="btn btn-sm btn-secondary" onclick="selectCurriculumForStudy(8); switchTab('study');" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: #7e22ce; border-color: #d8b4fe; font-weight: 700;">
+                📖 تطبيق في الدروس
+              </button>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        return;
       }
 
       if (currentMode === 'phy') {
@@ -12884,6 +13539,7 @@
       if (!mode || mode === 'auto') {
         mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
       }
+      if (mode === 'math') return window.MATH_PAST_EXAMS || {};
       if (mode === 'phy') return window.PHYSICS_PAST_EXAMS || {};
       if (mode === 'is') return window.ISLAMIC_PAST_EXAMS || {};
       if (mode === 'ar') return window.ARABIC_PAST_EXAMS || {};
@@ -12892,6 +13548,7 @@
 
     // مطابقة معرّف المنهج مع نمط المادة الامتحانية
     function resolveCurriculumToExamSubject(currId) {
+      if (currId === 8) return 'math';
       if (currId === 7) return 'phy';
       if (currId === 6) return 'is';
       if (currId === 4 || currId === 5) return 'ar';
@@ -12906,7 +13563,7 @@
       currentExamSubjectMode = mode;
 
       // تحديث مظهر أزرار المواد الأربعة
-      const subjectModes = ['phy', 'is', 'ar', 'en'];
+      const subjectModes = ['math', 'phy', 'is', 'ar', 'en'];
       subjectModes.forEach(m => {
         const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
         const btn = document.getElementById(btnId);
@@ -12941,7 +13598,9 @@
 
       // اختيار النموذج الافتراضي للمادة
       let defaultExamId = examKeys[0];
-      if (mode === 'phy') {
+      if (mode === 'math') {
+        defaultExamId = exams['math_final'] ? 'math_final' : (exams['math_midyear'] ? 'math_midyear' : examKeys[0]);
+      } else if (mode === 'phy') {
         defaultExamId = exams['phy_midyear'] ? 'phy_midyear' : (exams['phy_final'] ? 'phy_final' : examKeys[0]);
       } else if (mode === 'is') {
         defaultExamId = exams['is_midyear'] ? 'is_midyear' : (exams['is_final'] ? 'is_final' : examKeys[0]);
@@ -13401,6 +14060,22 @@
         `;
       }
 
+      // 5. مفتاح منهج الرياضيات
+      const mathCurrPill = currs.find(c => c.id === 8);
+      if (mathCurrPill) {
+        const isMathActive = appData.currentCurriculumId === 8;
+        html += `
+          <div class="curr-selector-pill ${isMathActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(8)">
+            <span style="font-size: 1.5rem;">📐</span>
+            <div>
+              <div class="curr-pill-title">الرياضيات (الثاني متوسط)</div>
+              <div class="curr-pill-sub">وزارة التربية العراقية • 7 فصول شاملة</div>
+            </div>
+            <span class="curr-pill-badge" style="${isMathActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #faf5ff; color: #7e22ce;'}">مكتمل 100%</span>
+          </div>
+        `;
+      }
+
       // 5. أي مناهج إضافية أخرى مستقبلاً
       currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7).forEach(c => {
         const isActive = c.id === appData.currentCurriculumId;
@@ -13469,6 +14144,9 @@
                   <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(7); switchTab('grammar'); setGrammarSubjectMode('phy');" style="background: #f0f9ff; color: #0369a1; border-color: #7dd3fc; font-weight: 800; padding: 0.55rem 1rem;">
                     💡 بنك القوانين والمفاهيم
                   </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openPhysicsReviewsModal()" style="background: #e0f2fe; color: #0284c7; border-color: #bae6fd; font-weight: 800; padding: 0.55rem 1rem;">
+                    🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+                  </button>
                   <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(7, 1)" style="background: #ffffff; color: #0369a1; border-color: #7dd3fc; font-weight: 800; padding: 0.55rem 1rem;">
                     📖 تصفح الكتاب الأصلي (88 صفحة)
                   </button>
@@ -13506,6 +14184,9 @@
                 <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
                   <button class="btn btn-primary" onclick="openSubjectTab(6)" style="font-weight: 800; background: linear-gradient(135deg, #0d9488, #0f766e); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);">
                     📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openIslamicReviewsModal()" style="background: #f0fdfa; color: #0f766e; border-color: #99f6e4; font-weight: 800; padding: 0.55rem 1rem;">
+                    🎯 المناقشات والحلول النموذجية (6 وحدات)
                   </button>
                   <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(6); switchTab('grammar'); setGrammarSubjectMode('is');" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
                     💡 بنك الأحكام والقواعد
@@ -13586,6 +14267,15 @@
                 <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, ${partColor}, #10b981); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);">
                   📖 دخول قاعة المذاكرة والدروس ⮞
                 </button>
+                ${activePartNum === 1 ? `
+                  <button class="btn btn-secondary btn-sm" onclick="openArabicP1ReviewsModal()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
+                    🎯 مراجعات وتمارين الوحدات والحلول النموذجية (9 وحدات)
+                  </button>
+                ` : `
+                  <button class="btn btn-secondary btn-sm" onclick="openArabicP2ReviewsModal()" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
+                    🎯 مراجعات وتمارين الوحدات والحلول النموذجية (9 وحدات)
+                  </button>
+                `}
                 <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(${curr.id}, 1)" style="background: #ffffff; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.55rem 0.95rem;">
                   📖 تصفح الكتاب الأصلي (136 صفحة)
                 </button>
@@ -14090,6 +14780,1015 @@
     }
 
     // عرض نافذة ما الجديد
+
+    // ----------------------------------------------------
+    // دوال نافذة مركز مراجعات فصول الفيزياء والحلول النموذجية الشاملة
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    const PHYSICS_REVIEW_CHAPTERS_META = [
+      { id: 7014, chapterNum: 1, title: 'الفصل 1: الحركة', subtitle: 'القياس، الحركة والسرعة، والتعجيل', pages: '21 - 23', startPage: 21 },
+      { id: 7023, chapterNum: 2, title: 'الفصل 2: قوانين الحركة', subtitle: 'قوانين نيوتن الثلاثة، الجاذبية، والسقوط الحر', pages: '32 - 33', startPage: 32 },
+      { id: 7033, chapterNum: 3, title: 'الفصل 3: الشغل والقدرة والطاقة', subtitle: 'حسابات الشغل، القدرة، الطاقة وتحولاتها', pages: '43 - 45', startPage: 43 },
+      { id: 7043, chapterNum: 4, title: 'الفصل 4: الآلات البسيطة', subtitle: 'العتلات بأنواعها الثلاث، البكرات، وكفاءة الآلة', pages: '54 - 55', startPage: 54 },
+      { id: 7053, chapterNum: 5, title: 'الفصل 5: الحركة الموجية والصوت', subtitle: 'الموجات، سرعة الصوت والصدى، والموجات فوق الصوتية', pages: '68 - 70', startPage: 68 },
+      { id: 7064, chapterNum: 6, title: 'الفصل 6: الضوء', subtitle: 'الانعكاس والمرايا، الانكسار والعدسات، وتفسير الرؤية', pages: '87 - 88', startPage: 87 }
+    ];
+
+    // ==========================================
+    // مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الرياضيات
+    // إعداد المهندس أسامة خليل هاشم
+    // ==========================================
+    let currentMathModalReviewLessonId = 8015;
+
+    function openMathReviewsModal(reviewLessonId = 8015) {
+      currentMathModalReviewLessonId = Number(reviewLessonId) || 8015;
+      renderMathReviewsModal();
+      const modal = document.getElementById('mathChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeMathReviewsModal() {
+      const modal = document.getElementById('mathChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchMathModalReviewChapter(reviewLessonId) {
+      currentMathModalReviewLessonId = Number(reviewLessonId);
+      renderMathReviewsModal();
+    }
+
+    function renderMathReviewsModal() {
+      const navContainer = document.getElementById('mathReviewChaptersNav');
+      const contentContainer = document.getElementById('mathModalReviewsContent');
+      const badgeEl = document.getElementById('mathModalChapterBadge');
+      const titleEl = document.getElementById('mathModalChapterTitle');
+      const pagesEl = document.getElementById('mathModalChapterPages');
+
+      const metaList = window.MATH_REVIEW_CHAPTERS_META || [];
+      const activeMeta = metaList.find(m => m.id === currentMathModalReviewLessonId) || metaList[0];
+
+      if (badgeEl) badgeEl.innerText = `الفصل ${activeMeta.chapterNum}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + activeMeta.subtitle;
+      if (pagesEl) pagesEl.innerText = `الصفحات (${activeMeta.pages})`;
+
+      // Render Chapters Nav
+      if (navContainer) {
+        navContainer.innerHTML = metaList.map(meta => {
+          const isActive = meta.id === currentMathModalReviewLessonId;
+          return `
+            <button class="btn btn-sm" onclick="switchMathModalReviewChapter(${meta.id})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #7e22ce; color: white; border: none; box-shadow: 0 2px 6px rgba(126,34,206,0.3);' : 'background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find the lesson in window.MATH_CURRICULUM
+      const curr = window.MATH_CURRICULUM || [];
+      let targetLesson = null;
+      for (const u of curr) {
+        for (const l of u.lessons || []) {
+          if (l.id === currentMathModalReviewLessonId) {
+            targetLesson = l;
+            break;
+          }
+        }
+        if (targetLesson) break;
+      }
+
+      if (!contentContainer) return;
+
+      if (!targetLesson || !targetLesson.chunks || targetLesson.chunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعة الفصل...</div>';
+        return;
+      }
+
+      let html = '';
+
+      targetLesson.chunks.forEach((ch, chunkIdx) => {
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #e9d5ff; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border-bottom: 1.5px solid #e9d5ff; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📌</span>
+                <strong style="color: #6b21a8; font-size: 0.92rem;">${ch.heading || ('مراجعة الفصل - صفحة ' + pageNum)}</strong>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('math_modal_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #7e22ce; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_math_modal_${chunkIdx}">
+        `;
+
+        if (exercises.length > 0) {
+          exercises.forEach((ex, exIdx) => {
+            const exId = `math_modal_${chunkIdx}_${ex.id || exIdx}`;
+            html += `
+              <div class="exercise-item" style="border: 1px solid #f3e8ff; border-radius: 10px; margin-bottom: 0.85rem; padding: 0.75rem; background: #faf5ff;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
+                  <div>
+                    <span style="background: #7e22ce; color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">
+                      ${ex.num || ('تمرين ' + (exIdx + 1))}
+                    </span>
+                    <strong style="color: #581c87; font-size: 0.85rem; margin-inline-start: 0.35rem;">${ex.title || ''}</strong>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" onclick="toggleActivitySolution('${exId}')" id="btnToggleSol_${exId}" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #ffffff; border-color: #d8b4fe; color: #7e22ce; font-weight: 700;">
+                    💡 الحل النموذجي
+                  </button>
+                </div>
+
+                <div class="exercise-questions" style="margin-top: 0.5rem;">
+                  ${(ex.questions || []).map((qObj, qIdx) => `
+                    <div style="background: #ffffff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 0.6rem 0.75rem; margin-bottom: 0.45rem;">
+                      <div style="font-size: 0.82rem; color: var(--slate-800); font-weight: 700; margin-bottom: 0.3rem;">
+                        ${qObj.q}
+                      </div>
+                      <div class="activity-solution-block hidden" id="sol_${exId}_${qIdx}" style="background: #fdf4ff; border: 1px dashed #d8b4fe; border-radius: 6px; padding: 0.55rem 0.7rem; font-size: 0.82rem; color: #701a75; line-height: 1.6; margin-top: 0.35rem; white-space: pre-wrap;">
+                        ${qObj.a}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          html += `<div style="font-size: 0.85rem; color: var(--slate-700); line-height: 1.7; white-space: pre-wrap;">${ch.text || ''}</div>`;
+        }
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    function toggleAllMathModalSolutions() {
+      const container = document.getElementById('mathModalReviewsContent');
+      if (!container) return;
+      const allSols = container.querySelectorAll('.activity-solution-block');
+      const btn = document.getElementById('btnToggleAllModalMathSols');
+      let anyHidden = false;
+      allSols.forEach(s => {
+        if (s.classList.contains('hidden')) anyHidden = true;
+      });
+      allSols.forEach(s => {
+        if (anyHidden) s.classList.remove('hidden');
+        else s.classList.add('hidden');
+      });
+      if (btn) btn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
+    }
+
+    function openCurrentModalMathReviewInStudy() {
+      closeMathReviewsModal();
+      appData.currentCurriculumId = 8;
+      appData.currentLessonId = currentMathModalReviewLessonId;
+      saveData();
+      selectCurriculumForStudy(8);
+      scrollToStudyContent();
+    }
+
+    function openCurrentModalMathBookPage() {
+      const metaList = window.MATH_REVIEW_CHAPTERS_META || [];
+      const activeMeta = metaList.find(m => m.id === currentMathModalReviewLessonId) || metaList[0];
+      const p = activeMeta ? activeMeta.startPage : 30;
+      closeMathReviewsModal();
+      openDigitalLibraryReader(8, p);
+    }
+
+    let currentPhysicsModalReviewLessonId = 7014;
+
+    function openPhysicsReviewsModal(reviewLessonId = 7014) {
+      currentPhysicsModalReviewLessonId = Number(reviewLessonId) || 7014;
+      renderPhysicsReviewsModal();
+      const modal = document.getElementById('physicsChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closePhysicsReviewsModal() {
+      const modal = document.getElementById('physicsChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchPhysicsModalReviewChapter(reviewLessonId) {
+      currentPhysicsModalReviewLessonId = Number(reviewLessonId);
+      renderPhysicsReviewsModal();
+    }
+
+    function renderPhysicsReviewsModal() {
+      const navContainer = document.getElementById('physicsReviewChaptersNav');
+      const contentContainer = document.getElementById('physicsModalReviewsContent');
+      const badgeEl = document.getElementById('physicsModalChapterBadge');
+      const titleEl = document.getElementById('physicsModalChapterTitle');
+      const pagesEl = document.getElementById('physicsModalChapterPages');
+
+      const activeMeta = PHYSICS_REVIEW_CHAPTERS_META.find(m => m.id === currentPhysicsModalReviewLessonId) || PHYSICS_REVIEW_CHAPTERS_META[0];
+
+      if (badgeEl) badgeEl.innerText = `الفصل ${activeMeta.chapterNum}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + activeMeta.subtitle;
+      if (pagesEl) pagesEl.innerText = `كتاب الطالب: الصفحات (${activeMeta.pages})`;
+
+      // Render Chapters Nav
+      if (navContainer) {
+        navContainer.innerHTML = PHYSICS_REVIEW_CHAPTERS_META.map(meta => {
+          const isActive = meta.id === currentPhysicsModalReviewLessonId;
+          return `
+            <button class="btn btn-sm" onclick="switchPhysicsModalReviewChapter(${meta.id})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #0284c7; color: white; border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.3);' : 'background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find the lesson in window.PHYSICS_CURRICULUM
+      const curr = window.PHYSICS_CURRICULUM || [];
+      let targetLesson = null;
+      for (const u of curr) {
+        for (const l of u.lessons || []) {
+          if (l.id === currentPhysicsModalReviewLessonId) {
+            targetLesson = l;
+            break;
+          }
+        }
+        if (targetLesson) break;
+      }
+
+      if (!contentContainer) return;
+
+      if (!targetLesson || !targetLesson.chunks || targetLesson.chunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى المراجعة...</div>';
+        return;
+      }
+
+      let html = '';
+
+      targetLesson.chunks.forEach((ch, chunkIdx) => {
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-bottom: 1.5px solid #bae6fd; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📌</span>
+                <strong style="color: #0369a1; font-size: 0.92rem;">${ch.heading || ('مراجعة الفصل - صفحة ' + pageNum)}</strong>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(targetLesson.title)}\`, 'student')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #0284c7; border: 1px solid #7dd3fc; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #0284c7; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_${chunkIdx}">
+        `;
+
+        if (exercises.length > 0) {
+          exercises.forEach((ex, exIdx) => {
+            const exId = `modal_${chunkIdx}_${ex.id || exIdx}`;
+            let wordsBoxHtml = '';
+            if (ex.words_box && ex.words_box.length > 0) {
+              wordsBoxHtml = `
+                <div style="background: #f8fafc; border: 1px dashed #7dd3fc; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+                  <strong style="color: #0369a1;">📦 الكلمات / الخيارات المتاحة:</strong>
+                  ${ex.words_box.map(w => `<span style="background: #f0f9ff; border: 1px solid #bae6fd; padding: 0.18rem 0.5rem; border-radius: 5px; font-weight: 700; color: #0c4a6e;">${w}</span>`).join('')}
+                </div>
+              `;
+            }
+
+            let qListHtml = '';
+            if (ex.questions && ex.questions.length > 0) {
+              qListHtml = ex.questions.map((qObj, qIdx) => `
+                <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+                  <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6;">
+                    ${qObj.q}
+                  </div>
+                  ${(qObj.options && qObj.options.length > 0) ? `
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
+                      ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                    </div>
+                  ` : ''}
+                  <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.6rem 0.85rem; font-size: 0.85rem; border-left: 3.5px solid #0284c7; background: #f0f9ff; border-radius: 6px;">
+                    <div style="font-weight: 800; color: #0284c7; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                      <span>✅</span> الحل النموذجي المعتمد والشرح:
+                    </div>
+                    <div style="direction: rtl; text-align: right; font-weight: 600; color: #0c4a6e; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                  </div>
+                </div>
+              `).join('');
+            }
+
+            html += `
+              <div class="activity-exercise-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.9rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+                  <div>
+                    <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
+                    <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
+                    ${ex.title_ar ? `<div style="font-size: 0.78rem; color: var(--slate-500); margin-top: 0.15rem;">${ex.title_ar}</div>` : ''}
+                  </div>
+                  <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})">
+                    <span>👁️</span> إظهار الحل
+                  </button>
+                </div>
+                ${wordsBoxHtml}
+                <div style="margin-top: 0.6rem;">
+                  ${qListHtml}
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          html += `<div style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.8; color: var(--slate-800);">${ch.text || ''}</div>`;
+        }
+
+        html += `</div></div>`;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    function toggleAllPhysicsModalSolutions() {
+      const container = document.getElementById('physicsModalReviewsContent');
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
+      const topBtn = document.getElementById('btnToggleAllModalPhySols');
+      if (topBtn) {
+        topBtn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalReviewInStudy() {
+      appData.currentCurriculumId = 7;
+      appData.currentLessonId = currentPhysicsModalReviewLessonId;
+      saveData();
+      closePhysicsReviewsModal();
+      switchTab('study');
+      renderStudyView();
+    }
+
+    function openCurrentModalBookPage() {
+      const activeMeta = PHYSICS_REVIEW_CHAPTERS_META.find(m => m.id === currentPhysicsModalReviewLessonId) || PHYSICS_REVIEW_CHAPTERS_META[0];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student');
+    }
+
+    // ----------------------------------------------------
+    // إدارة مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة للغة العربية (الجزء الأول)
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    const ARABIC_P1_REVIEW_UNITS_META = [
+      { id: 401, unitNum: 1, title: 'الوحدة 1: رعاية الله ووعده', subtitle: 'علامات الإعراب الأصلية والفرعية، سورة القصص، الخط القياسي وغير القياسي، والنص التقويمي', pages: '5 - 21', startPage: 8, primaryLessonId: 4013 },
+      { id: 402, unitNum: 2, title: 'الوحدة 2: الإخاء', subtitle: 'الأسماء الخمسة، الأخوة في الإسلام حديث شريف، ووصية أب لابنه', pages: '22 - 33', startPage: 25, primaryLessonId: 4023 },
+      { id: 403, unitNum: 3, title: 'الوحدة 3: الطموح وعلو الهمة', subtitle: 'الميزان الصرفي، قصيدة الشابي إرادة الحياة، ورسم الهمزة على السطر', pages: '34 - 50', startPage: 37, primaryLessonId: 4033 },
+      { id: 404, unitNum: 4, title: 'الوحدة 4: المرء يخلد بعلمه وعمله', subtitle: 'الفعل اللازم والفعل المتعدي، العلم والعمل، والتطبيقات النحوية', pages: '51 - 63', startPage: 54, primaryLessonId: 4043 },
+      { id: 405, unitNum: 5, title: 'الوحدة 5: نحن وعلوم العربية', subtitle: 'نائب الفاعل، لغتنا الجميلة ومكانتها، ورسم الهمزة على الواو والياء', pages: '64 - 80', startPage: 68, primaryLessonId: 4053 },
+      { id: 406, unitNum: 6, title: 'الوحدة 6: أمجادنا وحضارتنا', subtitle: 'المفعول فيه ظرفا الزمان والمكان، وحضارة وادي الرافدين', pages: '81 - 92', startPage: 84, primaryLessonId: 4063 },
+      { id: 407, unitNum: 7, title: 'الوحدة 7: من عجائب عالم الحيوان', subtitle: 'المفعول المطلق وأنواعه، غرائب الطيور والحيوانات، وهجرة الحيوانات', pages: '93 - 104', startPage: 97, primaryLessonId: 4073 },
+      { id: 408, unitNum: 8, title: 'الوحدة 8: النهر والحياة', subtitle: 'الحال وأنواعه وصاحب الحال، القرية والنهر، وقصيدة النهر والمدينة', pages: '105 - 118', startPage: 109, primaryLessonId: 4083 },
+      { id: 409, unitNum: 9, title: 'الوحدة 9: أحباب الله', subtitle: 'الاستثناء بـ إلا وأركانه، يوم الطفل العالمي، وقصة بائعة الكبريت', pages: '119 - 132', startPage: 122, primaryLessonId: 4093 }
+    ];
+
+    let currentArabicP1ModalUnitId = 401;
+
+    function openArabicP1ReviewsModal(unitId = 401) {
+      currentArabicP1ModalUnitId = Number(unitId) || 401;
+      renderArabicP1ReviewsModal();
+      const modal = document.getElementById('arabicP1ChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeArabicP1ReviewsModal() {
+      const modal = document.getElementById('arabicP1ChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchArabicP1ModalReviewUnit(unitId) {
+      currentArabicP1ModalUnitId = Number(unitId);
+      renderArabicP1ReviewsModal();
+    }
+
+    function renderArabicP1ReviewsModal() {
+      const navContainer = document.getElementById('arabicP1ReviewUnitsNav');
+      const contentContainer = document.getElementById('arabicP1ModalReviewsContent');
+      const badgeEl = document.getElementById('arabicP1ModalUnitBadge');
+      const titleEl = document.getElementById('arabicP1ModalUnitTitle');
+      const pagesEl = document.getElementById('arabicP1ModalUnitPages');
+
+      const activeMeta = ARABIC_P1_REVIEW_UNITS_META.find(m => m.id === currentArabicP1ModalUnitId) || ARABIC_P1_REVIEW_UNITS_META[0];
+
+      if (badgeEl) badgeEl.innerText = `الوحدة ${activeMeta.unitNum}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + activeMeta.subtitle;
+      if (pagesEl) pagesEl.innerText = `كتاب الطالب: الصفحات (${activeMeta.pages})`;
+
+      // Render Units Nav
+      if (navContainer) {
+        navContainer.innerHTML = ARABIC_P1_REVIEW_UNITS_META.map(meta => {
+          const isActive = meta.id === currentArabicP1ModalUnitId;
+          return `
+            <button class="btn btn-sm" onclick="switchArabicP1ModalReviewUnit(${meta.id})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #059669; color: white; border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.3);' : 'background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find all chunks with exercises in this unit from window.ARABIC_CURRICULUM_P1
+      const curr = window.ARABIC_CURRICULUM_P1 || [];
+      const targetUnit = curr.find(u => u.id === currentArabicP1ModalUnitId) || curr[0];
+
+      if (!contentContainer) return;
+
+      if (!targetUnit) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعات الوحدة...</div>';
+        return;
+      }
+
+      // Collect chunks that have exercises
+      const reviewChunks = [];
+      (targetUnit.lessons || []).forEach(lesson => {
+        (lesson.chunks || []).forEach(chunk => {
+          if (chunk.exercises && chunk.exercises.length > 0) {
+            reviewChunks.push({ chunk, lesson });
+          }
+        });
+      });
+
+      if (reviewChunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد تمرينات مسجلة لهذه الوحدة حالياً.</div>';
+        return;
+      }
+
+      let html = '';
+
+      reviewChunks.forEach((item, chunkIdx) => {
+        const ch = item.chunk;
+        const lesson = item.lesson;
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #a7f3d0; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-bottom: 1.5px solid #a7f3d0; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📙</span>
+                <div>
+                  <strong style="color: #065f46; font-size: 0.92rem;">${ch.heading || ('تمرينات صفحة ' + pageNum)}</strong>
+                  <span style="font-size: 0.74rem; color: #047857; margin-inline-start: 0.4rem; font-weight: 700;">• ${lesson.title}</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', 4)" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_ar_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #059669; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_ar_${chunkIdx}">
+        `;
+
+        exercises.forEach((ex, exIdx) => {
+          const exId = `modal_ar_${chunkIdx}_${ex.id || exIdx}`;
+          let wordsBoxHtml = '';
+          if (ex.words_box && ex.words_box.length > 0) {
+            wordsBoxHtml = `
+              <div style="background: #f8fafc; border: 1px dashed #a7f3d0; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+                <strong style="color: #065f46;">📦 الكلمات / الخيارات المتاحة:</strong>
+                ${ex.words_box.map(w => `<span style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.18rem 0.5rem; border-radius: 5px; font-weight: 700; color: #064e3b;">${w}</span>`).join('')}
+              </div>
+            `;
+          }
+
+          let qListHtml = '';
+          if (ex.questions && ex.questions.length > 0) {
+            qListHtml = ex.questions.map((qObj, qIdx) => `
+              <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6;">
+                  ${qObj.q}
+                </div>
+                ${(qObj.options && qObj.options.length > 0) ? `
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
+                    ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                  </div>
+                ` : ''}
+                <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.6rem 0.85rem; font-size: 0.85rem; border-left: 3.5px solid #059669; background: #f0fdf4; border-radius: 6px;">
+                  <div style="font-weight: 800; color: #059669; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                    <span>✅</span> الحل النموذجي المعتمد والشرح:
+                  </div>
+                  <div style="direction: rtl; text-align: right; font-weight: 600; color: #064e3b; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                </div>
+              </div>
+            `).join('');
+          }
+
+          html += `
+            <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid #d1fae5; border-radius: 10px; padding: 0.9rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+                <div>
+                  <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
+                  <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
+                  ${ex.title_ar ? `<div style="font-size: 0.78rem; color: #059669; margin-top: 0.15rem; font-weight: 700;">${ex.title_ar}</div>` : ''}
+                </div>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+                  <span>👁️</span> إظهار الحل
+                </button>
+              </div>
+              ${wordsBoxHtml}
+              <div style="margin-top: 0.6rem;">
+                ${qListHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        html += `</div></div>`;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    function toggleAllArabicP1ModalSolutions() {
+      const container = document.getElementById('arabicP1ModalReviewsContent');
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
+      const topBtn = document.getElementById('btnToggleAllModalArP1Sols');
+      if (topBtn) {
+        topBtn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalArP1ReviewInStudy() {
+      appData.currentCurriculumId = 4;
+      const activeMeta = ARABIC_P1_REVIEW_UNITS_META.find(m => m.id === currentArabicP1ModalUnitId) || ARABIC_P1_REVIEW_UNITS_META[0];
+      appData.currentLessonId = activeMeta.primaryLessonId;
+      saveData();
+      closeArabicP1ReviewsModal();
+      switchTab('study');
+      renderStudyView();
+    }
+
+    function openCurrentModalArP1BookPage() {
+      const activeMeta = ARABIC_P1_REVIEW_UNITS_META.find(m => m.id === currentArabicP1ModalUnitId) || ARABIC_P1_REVIEW_UNITS_META[0];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student', 4);
+    }
+
+    // ----------------------------------------------------
+    // إدارة مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة للغة العربية (الجزء الثاني)
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    const ARABIC_P2_REVIEW_UNITS_META = [
+      { id: 501, unitNum: 1, title: 'الوحدة 1: فداءٌ لِوَطَنِي', subtitle: 'النداء وأنواع المنادى، تميم البرغوثي، الهمزة المتوسطة على السطر، وحارث السوداني', pages: '3 - 17', startPage: 7, primaryLessonId: 5013 },
+      { id: 502, unitNum: 2, title: 'الوحدة 2: هَلْ جَزَاءُ الإِحْسَانِ إِلَّا الإِحْسَانُ', subtitle: 'الاستفهام وأدواته، حكاية الطائي والنعمان، وقصة شيما والأسد', pages: '18 - 33', startPage: 22, primaryLessonId: 5023 },
+      { id: 503, unitNum: 3, title: 'الوحدة 3: نِسَاءٌ فِي القِمَّةِ', subtitle: 'بناء الفعل المضارع، نازك الملائكة، الألف اللينة، وابنة السهروردي', pages: '34 - 48', startPage: 37, primaryLessonId: 5033 },
+      { id: 504, unitNum: 4, title: 'الوحدة 4: الرَّبِيعُ', subtitle: 'المثنى والملحق به، قصيدة أبي تمام، ودنيا الرافعي في جمال الطبيعة', pages: '49 - 60', startPage: 53, primaryLessonId: 5043 },
+      { id: 505, unitNum: 5, title: 'الوحدة 5: كُنُــــوزُ العِــــلْمِ', subtitle: 'جمع المذكر السالم، جابر بن حيان، علامات الترقيم، وبيت الحكمة', pages: '61 - 79', startPage: 65, primaryLessonId: 5053 },
+      { id: 506, unitNum: 6, title: 'الوحدة 6: إِرَادَةُ الحَيَاةِ', subtitle: 'جمع المؤنث السالم والملحق به، قصيدة الشابي، وإرادة الكفاح', pages: '80 - 92', startPage: 83, primaryLessonId: 5063 },
+      { id: 507, unitNum: 7, title: 'الوحدة 7: جَمَــــالُ بِلاَدِي', subtitle: 'جمع التكسير (أوزان القلة والكثرة وصيغ منتهى الجموع)، الجواهري، وشارع الأميرات', pages: '93 - 105', startPage: 97, primaryLessonId: 5073 },
+      { id: 508, unitNum: 8, title: 'الوحدة 8: نُورٌ مِنَ السَّمَاءِ', subtitle: 'الأسماء: المقصور والمنقوص والممدود، فاروق جويدة، والرحمة النبوية', pages: '106 - 120', startPage: 110, primaryLessonId: 5083 },
+      { id: 509, unitNum: 9, title: 'الوحدة 9: الغَرْسُ الطَّيِّبُ', subtitle: 'الممنوع من الصرف وأحكامه، الغرس والعطاء، والصخور الكبيرة في الحياة', pages: '121 - 132', startPage: 124, primaryLessonId: 5093 }
+    ];
+
+    let currentArabicP2ModalUnitId = 501;
+
+    function openArabicP2ReviewsModal(unitId = 501) {
+      currentArabicP2ModalUnitId = Number(unitId) || 501;
+      renderArabicP2ReviewsModal();
+      const modal = document.getElementById('arabicP2ChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeArabicP2ReviewsModal() {
+      const modal = document.getElementById('arabicP2ChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchArabicP2ModalReviewUnit(unitId) {
+      currentArabicP2ModalUnitId = Number(unitId);
+      renderArabicP2ReviewsModal();
+    }
+
+    function renderArabicP2ReviewsModal() {
+      const navContainer = document.getElementById('arabicP2ReviewUnitsNav');
+      const contentContainer = document.getElementById('arabicP2ModalReviewsContent');
+      const badgeEl = document.getElementById('arabicP2ModalUnitBadge');
+      const titleEl = document.getElementById('arabicP2ModalUnitTitle');
+      const pagesEl = document.getElementById('arabicP2ModalUnitPages');
+
+      const activeMeta = ARABIC_P2_REVIEW_UNITS_META.find(m => m.id === currentArabicP2ModalUnitId) || ARABIC_P2_REVIEW_UNITS_META[0];
+
+      if (badgeEl) badgeEl.innerText = `الوحدة ${activeMeta.unitNum}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + activeMeta.subtitle;
+      if (pagesEl) pagesEl.innerText = `كتاب الطالب (الجزء الثاني): الصفحات (${activeMeta.pages})`;
+
+      // Render Units Nav
+      if (navContainer) {
+        navContainer.innerHTML = ARABIC_P2_REVIEW_UNITS_META.map(meta => {
+          const isActive = meta.id === currentArabicP2ModalUnitId;
+          return `
+            <button class="btn btn-sm" onclick="switchArabicP2ModalReviewUnit(${meta.id})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #047857; color: white; border: none; box-shadow: 0 2px 6px rgba(4,120,87,0.3);' : 'background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find all chunks with exercises in this unit from window.ARABIC_CURRICULUM_P2
+      const curr = window.ARABIC_CURRICULUM_P2 || [];
+      const targetUnit = curr.find(u => u.id === currentArabicP2ModalUnitId) || curr[0];
+
+      if (!contentContainer) return;
+
+      if (!targetUnit) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعات الوحدة...</div>';
+        return;
+      }
+
+      // Collect chunks that have exercises
+      const reviewChunks = [];
+      (targetUnit.lessons || []).forEach(lesson => {
+        (lesson.chunks || []).forEach(chunk => {
+          if (chunk.exercises && chunk.exercises.length > 0) {
+            reviewChunks.push({ chunk, lesson });
+          }
+        });
+      });
+
+      if (reviewChunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد تمرينات مسجلة لهذه الوحدة حالياً.</div>';
+        return;
+      }
+
+      let html = '';
+
+      reviewChunks.forEach((item, chunkIdx) => {
+        const ch = item.chunk;
+        const lesson = item.lesson;
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #a7f3d0; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-bottom: 1.5px solid #a7f3d0; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📗</span>
+                <div>
+                  <strong style="color: #065f46; font-size: 0.92rem;">${ch.heading || ('تمرينات صفحة ' + pageNum)}</strong>
+                  <span style="font-size: 0.74rem; color: #047857; margin-inline-start: 0.4rem; font-weight: 700;">• ${lesson.title}</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', 5)" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_ar_p2_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #047857; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_ar_p2_${chunkIdx}">
+        `;
+
+        exercises.forEach((ex, exIdx) => {
+          const exId = `modal_ar_p2_${chunkIdx}_${ex.id || exIdx}`;
+          let wordsBoxHtml = '';
+          if (ex.words_box && ex.words_box.length > 0) {
+            wordsBoxHtml = `
+              <div style="background: #f8fafc; border: 1px dashed #a7f3d0; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+                <strong style="color: #065f46;">📦 الكلمات / الخيارات المتاحة:</strong>
+                ${ex.words_box.map(w => `<span style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.18rem 0.5rem; border-radius: 5px; font-weight: 700; color: #064e3b;">${w}</span>`).join('')}
+              </div>
+            `;
+          }
+
+          let qListHtml = '';
+          if (ex.questions && ex.questions.length > 0) {
+            qListHtml = ex.questions.map((qObj, qIdx) => `
+              <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6;">
+                  ${qObj.q}
+                </div>
+                ${(qObj.options && qObj.options.length > 0) ? `
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
+                    ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                  </div>
+                ` : ''}
+                <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.6rem 0.85rem; font-size: 0.85rem; border-left: 3.5px solid #047857; background: #f0fdf4; border-radius: 6px;">
+                  <div style="font-weight: 800; color: #047857; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                    <span>✅</span> الحل النموذجي المعتمد والشرح:
+                  </div>
+                  <div style="direction: rtl; text-align: right; font-weight: 600; color: #064e3b; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                </div>
+              </div>
+            `).join('');
+          }
+
+          html += `
+            <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid #d1fae5; border-radius: 10px; padding: 0.9rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+                <div>
+                  <span class="badge" style="background: #ecfdf5; color: #065f46; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
+                  <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
+                  ${ex.title_ar ? `<div style="font-size: 0.78rem; color: #059669; margin-top: 0.15rem; font-weight: 700;">${ex.title_ar}</div>` : ''}
+                </div>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+                  <span>👁️</span> إظهار الحل
+                </button>
+              </div>
+              ${wordsBoxHtml}
+              <div style="margin-top: 0.6rem;">
+                ${qListHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        html += `</div></div>`;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    function toggleAllArabicP2ModalSolutions() {
+      const container = document.getElementById('arabicP2ModalReviewsContent');
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
+      const topBtn = document.getElementById('btnToggleAllModalArP2Sols');
+      if (topBtn) {
+        topBtn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalArP2ReviewInStudy() {
+      appData.currentCurriculumId = 5;
+      const activeMeta = ARABIC_P2_REVIEW_UNITS_META.find(m => m.id === currentArabicP2ModalUnitId) || ARABIC_P2_REVIEW_UNITS_META[0];
+      appData.currentLessonId = activeMeta.primaryLessonId;
+      saveData();
+      closeArabicP2ReviewsModal();
+      switchTab('study');
+      renderStudyView();
+    }
+
+    function openCurrentModalArP2BookPage() {
+      const activeMeta = ARABIC_P2_REVIEW_UNITS_META.find(m => m.id === currentArabicP2ModalUnitId) || ARABIC_P2_REVIEW_UNITS_META[0];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student', 5);
+    }
+
+    // ----------------------------------------------------
+    // إدارة مركز مراجعات ومناقشات الوحدات والحلول النموذجية الشاملة للتربية الإسلامية
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    const ISLAMIC_REVIEW_UNITS_META = [
+      { id: 600, unitNum: 'أحكام التلاوة', title: 'أحكام التلاوة: المد العارض للسكون', subtitle: 'تعريف المد العارض وشروطه ومقداره وتطبيقاته مع مد اللين وعلامات الوقف', pages: '4 - 6', startPage: 4, primaryLessonId: 6001 },
+      { id: 601, unitNum: 1, title: 'الوحدة 1: سورة النبأ، المعجزة، علامات المنافق، الصلاة، فتح مكة، وآداب عامة', subtitle: 'القرآن والعقيدة والحديث والعبادات والسيرة والتهذيب', pages: '7 - 29', startPage: 7, primaryLessonId: 6011 },
+      { id: 602, unitNum: 2, title: 'الوحدة 2: سورة القيامة، معجزات الرسول، الأمر بالمعروف، صلاة الجماعة والليل، أخلاق الرسول، وآداب شخصية', subtitle: 'أهوال الساعة، دلائل النبوة، صلاة الجماعة، الشمائل المحمدية، وآداب التكنولوجيا', pages: '30 - 52', startPage: 30, primaryLessonId: 6021 },
+      { id: 603, unitNum: 3, title: 'الوحدة 3: سورة المزمل، معجزات موسى، حرمة المسلم، صلاة الآيات، أمهات المؤمنين وعمر بن الخطاب، والإيثار', subtitle: 'ترتيل القرآن، فلق البحر، صلاة الكسوف والخسوف، أمهات المؤمنين، والفاروق', pages: '53 - 77', startPage: 53, primaryLessonId: 6031 },
+      { id: 604, unitNum: 4, title: 'الوحدة 4: سورة الجمعة، معجزات عيسى، في الأخلاق، الصوم، عثمان بن عفان وجعفر الطيار، والإسراف والتبذير', subtitle: 'صلاة الجمعة، معجزات عيسى، فريضة الصيام، ذو النورين وجعفر الطيار، ومحاربة التبذير', pages: '78 - 99', startPage: 78, primaryLessonId: 6041 },
+      { id: 605, unitNum: 5, title: 'الوحدة 5: سورة الصف، أصحاب البستان، في منع الضرر، السجود لله، أسماء بنت أبي بكر وجليبيب، وصلة الرحم', subtitle: 'التجارة الرابحة، قصة البستان، مثل السفينة، فقه السجود، ذات النطاقين وجليبيب، وبر الأرحام', pages: '100 - 118', startPage: 100, primaryLessonId: 6051 }
+    ];
+
+    let currentIslamicModalUnitId = 601;
+
+    function openIslamicReviewsModal(unitId = 601) {
+      currentIslamicModalUnitId = Number(unitId) || 601;
+      renderIslamicReviewsModal();
+      const modal = document.getElementById('islamicChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeIslamicReviewsModal() {
+      const modal = document.getElementById('islamicChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchIslamicModalReviewUnit(unitId) {
+      currentIslamicModalUnitId = Number(unitId);
+      renderIslamicReviewsModal();
+    }
+
+    function renderIslamicReviewsModal() {
+      const navContainer = document.getElementById('islamicReviewUnitsNav');
+      const contentContainer = document.getElementById('islamicModalReviewsContent');
+      const badgeEl = document.getElementById('islamicModalUnitBadge');
+      const titleEl = document.getElementById('islamicModalUnitTitle');
+      const pagesEl = document.getElementById('islamicModalUnitPages');
+
+      const activeMeta = ISLAMIC_REVIEW_UNITS_META.find(m => m.id === currentIslamicModalUnitId) || ISLAMIC_REVIEW_UNITS_META[1];
+
+      if (badgeEl) badgeEl.innerText = typeof activeMeta.unitNum === 'number' ? `الوحدة ${activeMeta.unitNum}` : activeMeta.unitNum;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + activeMeta.subtitle;
+      if (pagesEl) pagesEl.innerText = `كتاب الطالب: الصفحات (${activeMeta.pages})`;
+
+      // Render Units Nav
+      if (navContainer) {
+        navContainer.innerHTML = ISLAMIC_REVIEW_UNITS_META.map(meta => {
+          const isActive = meta.id === currentIslamicModalUnitId;
+          const shortTitle = typeof meta.unitNum === 'number' ? `الوحدة ${meta.unitNum}` : 'أحكام التلاوة';
+          return `
+            <button class="btn btn-sm" onclick="switchIslamicModalReviewUnit(${meta.id})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #0d9488; color: white; border: none; box-shadow: 0 2px 6px rgba(13,148,136,0.3);' : 'background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;'}">
+              <span>${shortTitle}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find all chunks with exercises in this unit from window.ISLAMIC_CURRICULUM
+      const curr = window.ISLAMIC_CURRICULUM || [];
+      const targetUnit = curr.find(u => u.id === currentIslamicModalUnitId) || curr[1];
+
+      if (!contentContainer) return;
+
+      if (!targetUnit) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعات الوحدة...</div>';
+        return;
+      }
+
+      // Collect chunks that have exercises
+      const reviewChunks = [];
+      (targetUnit.lessons || []).forEach(lesson => {
+        (lesson.chunks || []).forEach(chunk => {
+          if (chunk.exercises && chunk.exercises.length > 0) {
+            reviewChunks.push({ chunk, lesson });
+          }
+        });
+      });
+
+      if (reviewChunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد مناقشات مسجلة لهذه الوحدة حالياً.</div>';
+        return;
+      }
+
+      let html = '';
+
+      reviewChunks.forEach((item, chunkIdx) => {
+        const ch = item.chunk;
+        const lesson = item.lesson;
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%); border-bottom: 1.5px solid #99f6e4; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">🕌</span>
+                <div>
+                  <strong style="color: #0f766e; font-size: 0.92rem;">${ch.heading || ('مناقشة صفحة ' + pageNum)}</strong>
+                  <span style="font-size: 0.74rem; color: #0d9488; margin-inline-start: 0.4rem; font-weight: 700;">• ${lesson.title}</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', 6)" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #0f766e; border: 1px solid #99f6e4; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_is_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #0d9488; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_is_${chunkIdx}">
+        `;
+
+        exercises.forEach((ex, exIdx) => {
+          const exId = `modal_is_${chunkIdx}_${ex.id || exIdx}`;
+          let qListHtml = '';
+          if (ex.questions && ex.questions.length > 0) {
+            qListHtml = ex.questions.map((qObj, qIdx) => `
+              <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6;">
+                  ${qObj.q}
+                </div>
+                ${(qObj.options && qObj.options.length > 0) ? `
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
+                    ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                  </div>
+                ` : ''}
+                <div class="exam-model-answer-box hidden" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.6rem 0.85rem; font-size: 0.85rem; border-left: 3.5px solid #0d9488; background: #f0fdfa; border-radius: 6px;">
+                  <div style="font-weight: 800; color: #0d9488; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                    <span>✅</span> الحل النموذجي المعتمد والشرح:
+                  </div>
+                  <div style="direction: rtl; text-align: right; font-weight: 600; color: #134e4a; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                </div>
+              </div>
+            `).join('');
+          }
+
+          html += `
+            <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid #ccfbf1; border-radius: 10px; padding: 0.9rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+                <div>
+                  <span class="badge" style="background: #f0fdfa; color: #0f766e; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `المبحث ${exIdx+1}`}</span>
+                  <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
+                  ${ex.title_ar ? `<div style="font-size: 0.78rem; color: #0d9488; margin-top: 0.15rem; font-weight: 700;">${ex.title_ar}</div>` : ''}
+                </div>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" style="background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;">
+                  <span>👁️</span> إظهار الحل
+                </button>
+              </div>
+              <div style="margin-top: 0.6rem;">
+                ${qListHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        html += `</div></div>`;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    function toggleAllIslamicModalSolutions() {
+      const container = document.getElementById('islamicModalReviewsContent');
+      if (!container) return;
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      let anyHidden = false;
+      solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
+      solBoxes.forEach(b => {
+        if (anyHidden) b.classList.remove('hidden');
+        else b.classList.add('hidden');
+      });
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = anyHidden 
+          ? '<span>🙈</span> إخفاء الحل' 
+          : '<span>👁️</span> إظهار الحل';
+      });
+      const topBtn = document.getElementById('btnToggleAllModalIslamicSols');
+      if (topBtn) {
+        topBtn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalIslamicReviewInStudy() {
+      appData.currentCurriculumId = 6;
+      const activeMeta = ISLAMIC_REVIEW_UNITS_META.find(m => m.id === currentIslamicModalUnitId) || ISLAMIC_REVIEW_UNITS_META[1];
+      appData.currentLessonId = activeMeta.primaryLessonId;
+      saveData();
+      closeIslamicReviewsModal();
+      switchTab('study');
+      renderStudyView();
+    }
+
+    function openCurrentModalIslamicBookPage() {
+      const activeMeta = ISLAMIC_REVIEW_UNITS_META.find(m => m.id === currentIslamicModalUnitId) || ISLAMIC_REVIEW_UNITS_META[1];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student', 6);
+    }
+
+
     async function showWhatsNewModal(fromUpdateBanner = false) {
       let dataToDisplay = null;
 
