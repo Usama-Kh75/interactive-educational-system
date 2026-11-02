@@ -23,7 +23,8 @@
 !manifest.json
 !sw.js
 
-# 4. ملفات بيانات المناهج الدراسية والرسوم التوضيحية المعتمدة
+# 4. ملفات بيانات المناهج الدراسية وبنوك الاختبارات والرسوم التوضيحية المعتمدة
+!curriculum_chapter_quizzes.js
 !curriculum_data.js
 !curriculum_data_*.js
 !curriculum_diagrams_*.js

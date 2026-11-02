@@ -9607,6 +9607,1635 @@ window.CURRICULUM_DATA = [
   }
 ];
 
+window.GRAMMAR_RULES = [
+  {
+    "id": "possessive_s",
+    "unit": 1,
+    "title": "s التملك (Possessive 's')",
+    "level": "مهم جداً - الوحدة 1",
+    "page": 4,
+    "formula": "المفرد: الاسم + 's  |  الجمع العادي: الاسم الجمع + '  |  الجمع الشاذ: الاسم + 's",
+    "explanation": "تُستخدم فاصلة التملك للتعبير عن ملكية شيء لشخص أو جهة. إذا كان المالك مفرداً نضع فاصلة قبل الـ s، وإذا كان المالك جمعاً ينتهي بـ s نضع الفاصلة بعد الـ s فقط لمنع التكرار.",
+    "examples": [
+      {
+        "en": "Go and get the boy's bag.",
+        "ar": "اذهب واجلب حقيبة الولد. (ولد واحد)"
+      },
+      {
+        "en": "Go and get the boys' bags.",
+        "ar": "اذهب واجلب حقائب الأولاد. (أكثر من ولد)"
+      },
+      {
+        "en": "The school's magazine is interesting.",
+        "ar": "مجلة المدرسة ممتعة. (مدرسة واحدة)"
+      },
+      {
+        "en": "The schools' magazines are interesting.",
+        "ar": "مجلات المدارس ممتعة. (مجموعة مدارس)"
+      },
+      {
+        "en": "These are the children's books.",
+        "ar": "هذه كتب الأطفال. (جمع شاذ نضيف 's)"
+      }
+    ],
+    "quiz": {
+      "question": "Which sentence refers to bags belonging to MORE THAN ONE boy?",
+      "options": [
+        "The boy's bags are new.",
+        "The boys' bags are new.",
+        "The boys bags are new.",
+        "The boy bags is new."
+      ],
+      "correct": 1,
+      "explanation": "في حالة الجمع نضع الفاصلة العليا بعد حرف الـ s: (boys')."
+    },
+    "rule": "المفرد: الاسم + 's  |  الجمع العادي: الاسم الجمع + '  |  الجمع الشاذ: الاسم + 's",
+    "summary": "تُستخدم فاصلة التملك للتعبير عن ملكية شيء لشخص أو جهة. إذا كان المالك مفرداً نضع فاصلة قبل الـ s، وإذا كان المالك جمعاً ينتهي بـ s نضع الفاصلة بعد الـ s فقط لمنع التكرار."
+  },
+  {
+    "id": "for_and_since",
+    "unit": 1,
+    "category": "tenses",
+    "title": "المضارع التام مع For و Since",
+    "level": "قاعدة أساسية - الوحدة 1",
+    "page": 7,
+    "formula": "Since + نقطة البداية المحددة  |  For + طول الفترة الزمنية الإجمالية",
+    "explanation": "نستخدم since عندما نحدد نقطة انطلاق الحدث في الماضي (سنة، يوم، مناسبة مثل: since 2020, since yesterday, since 8 o'clock). ونستخدم for عند حساب المدة الزمنية كعدد (ساعات، أيام، سنوات مثل: for 3 hours, for 5 years, for a long time).",
+    "examples": [
+      {
+        "en": "I have lived in Ashby since I was born.",
+        "ar": "أعيش في آشبي منذ أن ولدت."
+      },
+      {
+        "en": "I have lived in Basra since 2018.",
+        "ar": "أنا أعيش في البصرة منذ عام 2018."
+      },
+      {
+        "en": "I have been in this school for three years.",
+        "ar": "أنا في هذه المدرسة لمدة ثلاث سنوات."
+      },
+      {
+        "en": "He has been ill for two days.",
+        "ar": "هو مريض منذ يومين (لمدة يومين)."
+      }
+    ],
+    "quiz": {
+      "question": "I have studied English _______ five years.",
+      "options": [
+        "since",
+        "for",
+        "ago",
+        "in"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم for لأن خمس سنوات (five years) تمثل طول فترة زمنية إجمالية."
+    },
+    "rule": "Since + نقطة البداية المحددة  |  For + طول الفترة الزمنية الإجمالية",
+    "summary": "نستخدم since عندما نحدد نقطة انطلاق الحدث في الماضي (سنة، يوم، مناسبة مثل: since 2020, since yesterday, since 8 o'clock). ونستخدم for عند حساب المدة الزمنية كعدد (ساعات، أيام، سنوات مثل: for 3 hours, for 5 years, for a long time)."
+  },
+  {
+    "id": "likes_dislikes",
+    "unit": 1,
+    "title": "التعبير عن الإعجاب وعدم الإعجاب (Likes & Dislikes)",
+    "level": "الوحدة 1",
+    "page": 7,
+    "formula": "Subject + (like / love / enjoy / hate / dislike) + Verb-ing / Noun",
+    "explanation": "أفعال المشاعر مثل (like, love, enjoy, hate, dislike) يأتي بعدها الفعل مضافاً إليه ing أو يأتي بعدها اسم صريح.",
+    "examples": [
+      {
+        "en": "I like cooking.",
+        "ar": "أنا أحب الطبخ."
+      },
+      {
+        "en": "I don't like cleaning up.",
+        "ar": "أنا لا أحب التنظيف."
+      },
+      {
+        "en": "I dislike cleaning up.",
+        "ar": "أنا أكره التنظيف (dislike تعادل don't like)."
+      },
+      {
+        "en": "She enjoys playing football.",
+        "ar": "هي تستمتع بلعب كرة القدم."
+      }
+    ],
+    "quiz": {
+      "question": "He dislikes _______ the house after the party.",
+      "options": [
+        "clean",
+        "to clean",
+        "cleaning",
+        "cleaned"
+      ],
+      "correct": 2,
+      "explanation": "الفعل dislike يتبعه فعل مضاف إليه -ing دائماً (cleaning)."
+    },
+    "rule": "Subject + (like / love / enjoy / hate / dislike) + Verb-ing / Noun",
+    "summary": "أفعال المشاعر مثل (like, love, enjoy, hate, dislike) يأتي بعدها الفعل مضافاً إليه ing أو يأتي بعدها اسم صريح."
+  },
+  {
+    "id": "relative_clauses_who",
+    "unit": 1,
+    "title": "وصف الأشخاص بجمل الوصل (Relative Pronoun: Who)",
+    "level": "الوحدة 1",
+    "page": 7,
+    "formula": "Subject + like/dislike + people + WHO + Verb...",
+    "explanation": "نستخدم ضمير الوصل who للإشارة إلى الأشخاص ووصف صفاتهم وسلوكياتهم.",
+    "examples": [
+      {
+        "en": "I like people who help others.",
+        "ar": "أنا أحب الأشخاص الذين يساعدون الآخرين."
+      },
+      {
+        "en": "I dislike people who are noisy.",
+        "ar": "أنا لا أحب الأشخاص الذين يثيرون الإزعاج."
+      },
+      {
+        "en": "I love teachers who explain clearly.",
+        "ar": "أنا أحب المعلمين الذين يشرحون بوضوح."
+      }
+    ],
+    "quiz": {
+      "question": "I like students _______ do their homework on time.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم who للإشارة إلى العاقل (students)."
+    },
+    "rule": "Subject + like/dislike + people + WHO + Verb...",
+    "summary": "نستخدم ضمير الوصل who للإشارة إلى الأشخاص ووصف صفاتهم وسلوكياتهم."
+  },
+  {
+    "id": "present_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن المضارع البسيط (Present Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
+    "explanation": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week.",
+    "examples": [
+      {
+        "en": "The sun rises in the east.",
+        "ar": "الشمس تشرق من الشرق (حقيقة علمية ثابتة)."
+      },
+      {
+        "en": "Muna usually walks to school every morning.",
+        "ar": "منى عادةً تمشي إلى المدرسة كل صباح (عادة وروتين مع ظرف التكرار usually)."
+      },
+      {
+        "en": "They don't eat junk food on weekdays.",
+        "ar": "هم لا يتناولون الوجبات السريعة خلال أيام الأسبوع (نفي مع don't)."
+      },
+      {
+        "en": "Does Ali play tennis on Fridays?",
+        "ar": "هل يلعب علي التنس في أيام الجمعة؟ (سؤال يبدأ بـ Does والفاعل مفرد)."
+      }
+    ],
+    "quiz": {
+      "question": "Ali always _______ his homework before dinner.",
+      "options": [
+        "finish",
+        "finishes",
+        "finished",
+        "finishing"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل المفرد الغائب (Ali) نضيف s/es إلى نهاية الفعل في المضارع البسيط (finishes)."
+    },
+    "rule": "الإثبات: Subject + V(s/es) مع (He/She/It) أو V(مجرد) مع (I/You/We/They)\nالنفي: don't / doesn't + فعل مجرد\nالسؤال: Do / Does + Subject + فعل مجرد؟",
+    "summary": "يُستخدم المضارع البسيط للتعبير عن:\n1) الحقائق العلمية والثابتة (Facts).\n2) العادات والروتين اليومي المتكرر (Habits & Routines).\nظروف التكرار المصاحبة (Adverbs of Frequency): always, usually, often, sometimes, never، وتأتي قبل الفعل الرئيسي أو بعد am/is/are، وتعبيرات مثل: every day, every week."
+  },
+  {
+    "id": "past_simple_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي البسيط (Past Simple Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
+    "explanation": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020.",
+    "examples": [
+      {
+        "en": "We visited the national museum in Baghdad yesterday.",
+        "ar": "زرنا المتحف الوطني في بغداد بالأمس (فعل منتظم ينتهي بـ ed)."
+      },
+      {
+        "en": "Zaid went to the market and bought some fruit.",
+        "ar": "ذهب زيد إلى السوق واشترى بعض الفاكهة (أفعال شاذة: went و bought)."
+      },
+      {
+        "en": "I didn't watch television last night.",
+        "ar": "لم أشاهد التلفاز الليلة الماضية (في النفي مع didn't يعود الفعل لمصدره watch)."
+      },
+      {
+        "en": "Did you see Noor at the library?",
+        "ar": "هل رأيت نور في المكتبة؟ (سؤال في الماضي يبدأ بـ Did يليه مجرد see)."
+      }
+    ],
+    "quiz": {
+      "question": "My brother _______ a new bicycle two days ago.",
+      "options": [
+        "buy",
+        "bought",
+        "buys",
+        "buying"
+      ],
+      "correct": 1,
+      "explanation": "وجود دلالة الماضي (two days ago) يقتضي استخدام صيغة الماضي الشاذ للفعل buy وهي (bought)."
+    },
+    "rule": "الإثبات: Subject + V-ed (أو فعل شاذ Irregular)\nالنفي: Subject + didn't + مصدر الفعل (مجرد)\nالسؤال: Did + Subject + مصدر الفعل (مجرد)؟",
+    "summary": "يُستخدم الماضي البسيط للتعبير عن حدث وقع وانتهى تماماً في الماضي في وقت محدد.\nالأفعال إما منتظمة (Regular) بإضافة ed مثل (played, visited)، أو شاذة (Irregular) تحفظ مثل (go ➔ went, see ➔ saw, buy ➔ bought).\nالظروف الدالة: yesterday (أمس), last night/week/year (الماضي), ago (مضت), in 2020."
+  },
+  {
+    "id": "past_continuous_tense",
+    "unit": 1,
+    "category": "tenses",
+    "title": "زمن الماضي المستمر (Past Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 111",
+    "page": 111,
+    "formula": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
+    "explanation": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They).",
+    "examples": [
+      {
+        "en": "I was doing my homework at 8 o'clock yesterday evening.",
+        "ar": "كنت أحل واجبي في تمام الساعة الثامنة مساء أمس (فعل استمر في وقت محدد بالماضي)."
+      },
+      {
+        "en": "The boys were playing football in the park all afternoon.",
+        "ar": "كان الأولاد يلعبون كرة القدم في المنتزه طوال فترة بعد الظهر."
+      },
+      {
+        "en": "She wasn't sleeping when I called her.",
+        "ar": "لم تكن نائمة عندما اتصلتُ بها (نفي الماضي المستمر مع wasn't)."
+      },
+      {
+        "en": "What were you doing at this time yesterday?",
+        "ar": "ماذا كنت تفعل في مثل هذا الوقت بالأمس؟"
+      }
+    ],
+    "quiz": {
+      "question": "They _______ for the bus when the rain started.",
+      "options": [
+        "was waiting",
+        "were waiting",
+        "is waiting",
+        "are waiting"
+      ],
+      "correct": 1,
+      "explanation": "مع الفاعل الجمع (They) في زمن الماضي المستمر نستخدم (were waiting)."
+    },
+    "rule": "Subject + (was / were) + Verb-ing\nالنفي: wasn't / weren't + Verb-ing\nالسؤال: Was / Were + Subject + Verb-ing؟",
+    "summary": "يُستخدم الماضي المستمر للتعبير عن حدث كان مستمراً وممتداً في وقت محدد في الماضي.\nنستخدم was مع المفرد والضمائر (I, He, She, It)، ونستخدم were مع الجمع والضمائر (We, You, They)."
+  },
+  {
+    "id": "past_simple_continuous_when_while",
+    "unit": 1,
+    "category": "tenses",
+    "title": "الربط بين الماضي البسيط والمستمر (When & While)",
+    "level": "مهم جداً للامتحانات - صفحة 112",
+    "page": 112,
+    "formula": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
+    "explanation": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث.",
+    "examples": [
+      {
+        "en": "While we were having lunch, a bird flew into the kitchen.",
+        "ar": "بينما كنا نتناول الغداء (مستمر طويل)، طار طائر إلى المطبخ (بسيط قاطع بعد While)."
+      },
+      {
+        "en": "Ahmed was riding his bicycle when he fell over.",
+        "ar": "كان أحمد يقود دراجته (مستمر) عندما سقط أرضاً (بسيط قاطع بعد when)."
+      },
+      {
+        "en": "While she was reading a story, the doorbell rang.",
+        "ar": "بينما كانت تقرأ قصة، رن جرس الباب."
+      },
+      {
+        "en": "What were they doing when the teacher entered the classroom?",
+        "ar": "ماذا كانوا يفعلون عندما دخل المعلم الصف؟"
+      }
+    ],
+    "quiz": {
+      "question": "While I _______ to school, I met my best friend.",
+      "options": [
+        "was walking",
+        "walked",
+        "walk",
+        "am walking"
+      ],
+      "correct": 0,
+      "explanation": "بعد أداة While يأتي دائماً ماضٍ مستمر، ومع الضمير I نختار (was walking)."
+    },
+    "rule": "While + ماضي مستمر (was/were + ing) , ماضي بسيط (ed)\nWhen + ماضي بسيط (ed) , ماضي مستمر (was/were + ing)",
+    "summary": "عندما يتقاطع حدثان في الماضي، أحدهما طويل كان مستمراً (ماضي مستمر) والآخر قصير قاطعه (ماضي بسيط):\n1) قاعدة While (بينما): يأتي بعدها مباشرة الماضي المستمر الطويل (was / were + v-ing).\n2) قاعدة When (عندما): يأتي بعدها مباشرة الماضي البسيط القصير الذي قاطع الحدث."
+  },
+  {
+    "id": "giving_advice_should",
+    "unit": 2,
+    "title": "إعطاء النصيحة (Giving Advice: Should / Shouldn't)",
+    "level": "الوحدة 2",
+    "page": 17,
+    "formula": "You + should / shouldn't + مصدر الفعل (Infinitive)",
+    "explanation": "تُستخدم should لتقديم نصيحة بفعل شيء جيد، و shouldn't للنصيحة بتجنب شيء ضار. يأتي بعدهما الفعل مجرداً دائماً بدون أي إضافة.",
+    "examples": [
+      {
+        "en": "You should take more exercise.",
+        "ar": "ينبغي عليك ممارسة المزيد من التمارين الرياضية."
+      },
+      {
+        "en": "You shouldn't eat too much crisps and sweets.",
+        "ar": "لا ينبغي أن تأكل الكثير من المقرمشات والحلويات."
+      },
+      {
+        "en": "You should drink plenty of water every day.",
+        "ar": "يجب عليك شرب الكثير من الماء يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "You _______ watch TV for hours; it hurts your eyes.",
+      "options": [
+        "should",
+        "shouldn't",
+        "must",
+        "can"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم shouldn't لتقديم نصيحة بعدم الإفراط في مشاهدة التلفاز."
+    },
+    "rule": "You + should / shouldn't + مصدر الفعل (Infinitive)",
+    "summary": "تُستخدم should لتقديم نصيحة بفعل شيء جيد، و shouldn't للنصيحة بتجنب شيء ضار. يأتي بعدهما الفعل مجرداً دائماً بدون أي إضافة."
+  },
+  {
+    "id": "frequency_expressions_unit2",
+    "unit": 2,
+    "title": "تعبيرات وظروف التكرار (Expressions of Frequency: How often...?)",
+    "level": "الوحدة 2",
+    "page": 17,
+    "formula": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
+    "explanation": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً).",
+    "examples": [
+      {
+        "en": "How often do you take exercise? - I go walking every day.",
+        "ar": "كم مرة تمارس الرياضة؟ - أذهب للمشي كل يوم."
+      },
+      {
+        "en": "I play football twice a week with my friends.",
+        "ar": "ألعب كرة القدم مرتين في الأسبوع مع أصدقائي."
+      },
+      {
+        "en": "You should put these drops in your ear twice a day.",
+        "ar": "ينبغي أن تضع هذه القطرات في أذنك مرتين يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "\"_______ do you go swimming?\" - \"Twice a week.\"",
+      "options": [
+        "How long",
+        "How often",
+        "How much",
+        "How many"
+      ],
+      "correct": 1,
+      "explanation": "نستخدم How often للسؤال عن معدل تكرار الحدث."
+    },
+    "rule": "How often do you...? ➔ every day / once a week / twice a week / three times a week / regularly",
+    "summary": "نستخدم السؤال بـ How often لمعرفة معدل تكرار نشاط أو عادة صحية، وتكون الإجابات بتعبيرات زمنية محددة مثل: every day (كل يوم)، once a week (مرة أسبوعياً)، twice a week (مرتين أسبوعياً)."
+  },
+  {
+    "id": "quantifiers_too_much_many",
+    "unit": 2,
+    "title": "محددات الكمية: Too much, Too many, A few, A little, A lot of",
+    "level": "الوحدة 2",
+    "page": 18,
+    "formula": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
+    "explanation": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة.",
+    "examples": [
+      {
+        "en": "Too much sugar is bad for your teeth.",
+        "ar": "الكثير جداً من السكر ضار بأسنانك (اسم غير معدود)."
+      },
+      {
+        "en": "You shouldn't eat too many crisps and sweets.",
+        "ar": "لا ينبغي أن تأكل الكثير جداً من المقرمشات والحلويات (اسم معدود جمع)."
+      },
+      {
+        "en": "A few biscuits are all right, but not too many.",
+        "ar": "بضع بسكويتات لا بأس بها، ولكن ليس الكثير جداً."
+      },
+      {
+        "en": "Add a little salt to your soup.",
+        "ar": "أضف القليل من الملح إلى حسائك."
+      },
+      {
+        "en": "We should drink a lot of water every day.",
+        "ar": "ينبغي علينا شرب الكثير من الماء يومياً."
+      }
+    ],
+    "quiz": {
+      "question": "Eating too _______ sweets is bad for your health.",
+      "options": [
+        "much",
+        "many",
+        "little",
+        "few"
+      ],
+      "correct": 1,
+      "explanation": "كلمة sweets اسم معدود جمع، لذا نستخدم معه too many."
+    },
+    "rule": "غير المعدود: (too much / a little) | المعدود الجمع: (too many / a few) | كلاهما: (a lot of)",
+    "summary": "تُستخدم too much و a little مع الأسماء غير المعدودة (مثل sugar, salt, fat, water). بينما تُستخدم too many و a few مع الأسماء المعدودة الجمع (مثل crisps, sweets, biscuits, apples). وتُستخدم a lot of مع النوعين للتعبير عن الكثرة."
+  },
+  {
+    "id": "expressing_aches_illnesses",
+    "unit": 2,
+    "title": "التعبير عن الأوجاع والأمراض (Aches and Pains)",
+    "level": "الوحدة 2",
+    "page": 20,
+    "formula": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
+    "explanation": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers).",
+    "examples": [
+      {
+        "en": "I've got a terrible headache. My head aches.",
+        "ar": "أعاني من صداع فظيع. رأسي يؤلمني."
+      },
+      {
+        "en": "Jameel has got a toothache. He should see a dentist.",
+        "ar": "جميل لديه ألم أسنان، ينبغي عليه مراجعة طبيب الأسنان."
+      },
+      {
+        "en": "My right ear hurts badly.",
+        "ar": "أذني اليمنى تؤلمني بشدة."
+      },
+      {
+        "en": "Take these two painkillers with water.",
+        "ar": "تناول هذين المسكنين مع الماء."
+      }
+    ],
+    "quiz": {
+      "question": "Anas has got a stomach ache. His stomach _______.",
+      "options": [
+        "hurts",
+        "aches",
+        "hurting",
+        "both hurts and aches are correct"
+      ],
+      "correct": 3,
+      "explanation": "يمكن القول His stomach hurts أو His stomach aches فكلاهما صحيح بالمعنى ذاته."
+    },
+    "rule": "I've got a [headache / stomach ache / toothache / earache] OR My [part] hurts",
+    "summary": "للتعبير عن الألم والمرض، نستخدم صيغة have got a متبوعة باسم الوجع، أو نذكر العضو المصاب متبوعاً بالفعل hurts (يؤلم). وتأتي النصيحة دائماً بـ should (مثل: visit a dentist, take painkillers)."
+  },
+  {
+    "id": "limericks_rules_unit2",
+    "unit": 2,
+    "title": "قواعد وهيكل قصائد الليمريك (Limerick Poetry: AABBA)",
+    "level": "الوحدة 2",
+    "page": 24,
+    "formula": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
+    "explanation": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان).",
+    "examples": [
+      {
+        "en": "Lines 1, 2, and 5 rhyme (Peru / blue / shampoo).",
+        "ar": "الأسطر 1 و 2 و 5 تشترك في القافية الأولى A."
+      },
+      {
+        "en": "Lines 3 and 4 rhyme together (faint / paint).",
+        "ar": "السطران 3 و 4 يشتركان في القافية الثانية B."
+      }
+    ],
+    "quiz": {
+      "question": "What is the rhyme scheme of a limerick?",
+      "options": [
+        "ABAB A",
+        "AABBA",
+        "AABB B",
+        "ABBA A"
+      ],
+      "correct": 1,
+      "explanation": "قافية الليمريك هي دائماً AABBA."
+    },
+    "rule": "5 lines | Rhyme Scheme: AABBA | Beats: 3-3-2-2-3 | Humorous and witty",
+    "summary": "الليمريك هي قصيدة فكاهية إنجليزية تتكون من 5 أسطر بدقة. الأسطر 1 و 2 و 5 تتطابق في القافية وتكون أطول (3 نبضات إيقاعية). والسطران 3 و 4 يتطابقان في القافية ويكونا أقصر (نبضتان)."
+  },
+  {
+    "id": "want_pattern_unit2",
+    "unit": 2,
+    "title": "صيغة الرغبة والتوجيه: Want + Pronoun + to + Infinitive",
+    "level": "الوحدة 2",
+    "page": 25,
+    "formula": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
+    "explanation": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد.",
+    "examples": [
+      {
+        "en": "My mother wants me to eat more vegetables.",
+        "ar": "تريدني والدتي أن آكل المزيد من الخضار."
+      },
+      {
+        "en": "Your father wants you to help him in his shop.",
+        "ar": "يريدك والدك أن تساعده في دكانه."
+      },
+      {
+        "en": "The coach wants us to take exercise regularly.",
+        "ar": "يريد منا المدرب أن نتدرب بانتظام."
+      }
+    ],
+    "quiz": {
+      "question": "The teacher wants the students _______ arrive on time.",
+      "options": [
+        "to",
+        "for",
+        "in",
+        "at"
+      ],
+      "correct": 0,
+      "explanation": "التركيب الصحيح هو want + someone + to + infinitive."
+    },
+    "rule": "Subject + want/wants + (me / you / him / her / them / noun) + to + مصدر مجرد",
+    "summary": "عندما نريد من شخص آخر أن يقوم بفعل ما، نستخدم الفعل want متبوعاً بضمير المفعول به ثم to والمصدر المجرد."
+  },
+  {
+    "id": "present_continuous_tense",
+    "unit": 2,
+    "category": "tenses",
+    "title": "زمن المضارع المستمر (Present Continuous Tense)",
+    "level": "أساسيات الأزمنة - صفحة 110",
+    "page": 110,
+    "formula": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
+    "explanation": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم).",
+    "examples": [
+      {
+        "en": "The students are studying English in the classroom now.",
+        "ar": "الطلاب يدرسون اللغة الإنجليزية في الصف الآن (حدث يقع في هذه اللحظة)."
+      },
+      {
+        "en": "Listen! The baby is crying.",
+        "ar": "استمع! الطفل يبكي (تنبيه لحدث يقع حالياً Listen)."
+      },
+      {
+        "en": "I am not playing video games at the moment.",
+        "ar": "أنا لا ألعب ألعاب الفيديو في الوقت الحالي (نفي المضارع المستمر)."
+      },
+      {
+        "en": "Is Sarah preparing her school project today?",
+        "ar": "هل سارة تعد مشروعها المدرسي اليوم؟"
+      }
+    ],
+    "quiz": {
+      "question": "Look! It _______ heavily outside.",
+      "options": [
+        "rains",
+        "rained",
+        "is raining",
+        "rain"
+      ],
+      "correct": 2,
+      "explanation": "كلمة التنبيه (!Look) تدل على حدث يقع الآن في هذه اللحظة، فنستخدم المضارع المستمر (is raining)."
+    },
+    "rule": "Subject + (am / is / are) + Verb-ing\nالنفي: am/is/are + not + Verb-ing\nالسؤال: Am/Is/Are + Subject + Verb-ing؟",
+    "summary": "يُستخدم المضارع المستمر للتعبير عن حدث مستمر ويقع أثناء لحظة الكلام الآن، أو تغييرات ومواقف مؤقتة.\nالكلمات الدالة: now (الآن), at the moment (في هذه اللحظة), Look! (انظر!), Listen! (استمع!), today (اليوم)."
+  },
+  {
+    "id": "verbs_of_preference_unit2",
+    "unit": 2,
+    "title": "أفعال التفضيل والمشاعر: like, enjoy, hate, dislike, avoid",
+    "level": "الوحدة 2",
+    "page": 111,
+    "formula": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
+    "explanation": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية.",
+    "examples": [
+      {
+        "en": "He enjoys cycling in the park.",
+        "ar": "هو يستمتع بركوب الدراجة في الحديقة (Verb + -ing)."
+      },
+      {
+        "en": "She dislikes fast games.",
+        "ar": "هي لا تحب الألعاب السريعة (Adjective + noun)."
+      },
+      {
+        "en": "You should avoid eating too much fat.",
+        "ar": "ينبغي عليك تجنب تناول الكثير من الدهون."
+      },
+      {
+        "en": "I love running in the morning.",
+        "ar": "أنا أحب الجري في الصباح."
+      }
+    ],
+    "quiz": {
+      "question": "Zaid avoids _______ exercise because he gets tired quickly.",
+      "options": [
+        "take",
+        "taking",
+        "took",
+        "takes"
+      ],
+      "correct": 1,
+      "explanation": "الفعل avoid يتبعه الفعل بصيغة -ing (Gerund)."
+    },
+    "rule": "Subject + (like / enjoy / hate / dislike / avoid) + [Noun / Verb-ing / Adjective+Noun]",
+    "summary": "تتبع أفعال التفضيل والمشاعر إما باسم مباشر (Noun)، أو بفعل ينتهي بـ -ing (Gerund)، أو بصفة واسم. وهي تستخدم بكثرة لوصف العادات الرياضية والصحية."
+  },
+  {
+    "id": "sports_verbs",
+    "unit": 3,
+    "title": "أفعال الرياضات: Play, Go, Do",
+    "level": "مهم جداً - الوحدة 3",
+    "page": 32,
+    "formula": "Play + رياضات الكرة | Go + رياضات تنتهي بـ ing | Do + رياضات فردية وقتالية",
+    "explanation": "نستخدم Play مع ألعاب الكرة والألعاب التنافسية (football, tennis, basketball, volleyball). نستخدم Go مع الرياضات والأنشطة الحركية المنتهية بـ -ing (swimming, horse riding, running, sailing). نستخدم Do مع الفنون القتالية والجمباز والأنشطة الفردية (judo, karate, gymnastics, athletics).",
+    "examples": [
+      {
+        "en": "I play football with my school team.",
+        "ar": "ألعب كرة القدم مع فريق مدرستي."
+      },
+      {
+        "en": "She goes swimming on Fridays.",
+        "ar": "تذهب للسباحة في أيام الجمعة."
+      },
+      {
+        "en": "Saad does judo to get strong and fit.",
+        "ar": "يمارس سعد رياضة الجودو ليصبح قوياً ونشيطاً."
+      },
+      {
+        "en": "I'd like to play volleyball.",
+        "ar": "أود لعب كرة الطائرة."
+      }
+    ],
+    "quiz": {
+      "question": "My friends _______ cycling at the weekend.",
+      "options": [
+        "do",
+        "play",
+        "go",
+        "make"
+      ],
+      "correct": 2,
+      "explanation": "الرياضة المنتهية بـ -ing مثل cycling تأخذ الفعل go."
+    },
+    "rule": "Play + رياضات الكرة | Go + رياضات تنتهي بـ ing | Do + رياضات فردية وقتالية",
+    "summary": "نستخدم Play مع ألعاب الكرة والألعاب التنافسية (football, tennis, basketball, volleyball). نستخدم Go مع الرياضات والأنشطة الحركية المنتهية بـ -ing (swimming, horse riding, running, sailing). نستخدم Do مع الفنون القتالية والجمباز والأنشطة الفردية (judo, karate, gymnastics, athletics)."
+  },
+  {
+    "id": "used_to",
+    "unit": 3,
+    "category": "tenses",
+    "title": "الاعتياد في الماضي (Used to)",
+    "level": "الوحدة 3",
+    "page": 36,
+    "formula": "Subject + used to + Base Verb (مصدر مجرد) ... but now + Present Simple",
+    "explanation": "تُستخدم صيغة Used to للتعبير عن عادات أو حالات أو صفات كانت موجودة بانتظام في الماضي ولكنها لم تعد موجودة الآن (تغيرت في الحاضر). يتبعها دائماً فعل مصدر مجرد (Base Verb)، وغالباً ما تُربط بـ (but now...) في المضارع البسيط.",
+    "examples": [
+      {
+        "en": "I used to be very shy, but now I am confident.",
+        "ar": "كنت خجولاً جداً في الماضي، لكني الآن واثق من نفسي."
+      },
+      {
+        "en": "I used to have no friends, but now I have lots.",
+        "ar": "لم يكن لدي أصدقاء في الماضي، أما الآن فلدي الكثير."
+      },
+      {
+        "en": "I used to be lazy, but now I train every day.",
+        "ar": "كنت كسولاً في الماضي، لكني الآن أتدرب كل يوم."
+      },
+      {
+        "en": "I used to be bad at schoolwork, but now I get good marks.",
+        "ar": "كنت ضعيفاً في الدراسة، لكني الآن أحصل على درجات ممتازة."
+      }
+    ],
+    "quiz": {
+      "question": "She didn't _______ like vegetables when she was young.",
+      "options": [
+        "used to",
+        "use to",
+        "uses to",
+        "using to"
+      ],
+      "correct": 1,
+      "explanation": "بعد didn't نحذف الـ d ونستخدم الصيغة المجردة use to."
+    },
+    "rule": "Subject + used to + Base Verb (مصدر مجرد) ... but now + Present Simple",
+    "summary": "تُستخدم صيغة Used to للتعبير عن عادات أو حالات أو صفات كانت موجودة بانتظام في الماضي ولكنها لم تعد موجودة الآن (تغيرت في الحاضر). يتبعها دائماً فعل مصدر مجرد (Base Verb)، وغالباً ما تُربط بـ (but now...) في المضارع البسيط."
+  },
+  {
+    "id": "passive_present",
+    "unit": 5,
+    "category": "tenses",
+    "isTense": true,
+    "title": "المبني للمجهول في زمن المضارع البسيط (Present Simple Passive)",
+    "level": "الوحدة 5",
+    "page": 51,
+    "formula": "المفعول به (Subject) + am / is / are + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "explanation": "يُستخدم عندما يكون الحدث أو الفعل نفسه أهم بكثير من ذكر الفاعل الذي قام به، أو عندما يكون الفاعل غير معروف أو بديهياً:\n• المفرد يأخذ is + p.p.\n• الجمع وضمائر الجمع (we / they / you) تأخذ are + p.p.\n• الضمير I يأخذ am + p.p.\n• في النفي: is not / are not + past participle.\n• في السؤال: Is / Are + المفعول به + past participle ?",
+    "examples": [
+      {
+        "en": "On Monday morning, an article is written in Cairo.",
+        "ar": "في صباح يوم الاثنين، يُكتب المقال في القاهرة (المفعول به مفرد أخذ is written)."
+      },
+      {
+        "en": "At night, the newspapers are printed in Baghdad.",
+        "ar": "في الليل، تُطبع الصحف في بغداد (المفعول به جمع أخذ are printed)."
+      },
+      {
+        "en": "Next, it is sent by email to a newspaper office.",
+        "ar": "بعد ذلك، يُرسل عبر البريد الإلكتروني إلى مكتب الجريدة."
+      },
+      {
+        "en": "Books are sold in Al Mutanabbi Street.",
+        "ar": "الكتب تُباع في شارع المتنبي."
+      }
+    ],
+    "quiz": {
+      "question": "Early on Tuesday morning, the newspapers _______ to the shops.",
+      "options": [
+        "are sent",
+        "is sent",
+        "send",
+        "are sending"
+      ],
+      "correct": 0,
+      "explanation": "المفعول به (newspapers) جمع في زمن المضارع البسيط، لذا نستخدم are + التصريف الثالث (are sent)."
+    },
+    "rule": "المفعول به (Subject) + am / is / are + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "summary": "يُستخدم عندما يكون الحدث أو الفعل نفسه أهم بكثير من ذكر الفاعل الذي قام به، أو عندما يكون الفاعل غير معروف أو بديهياً:\n• المفرد يأخذ is + p.p.\n• الجمع وضمائر الجمع (we / they / you) تأخذ are + p.p.\n• الضمير I يأخذ am + p.p.\n• في النفي: is not / are not + past participle.\n• في السؤال: Is / Are + المفعول به + past participle ?"
+  },
+  {
+    "id": "passive_past",
+    "unit": 5,
+    "category": "tenses",
+    "isTense": true,
+    "title": "المبني للمجهول في زمن الماضي البسيط (Past Simple Passive)",
+    "level": "الوحدة 5",
+    "page": 52,
+    "formula": "المفعول به (Subject) + was / were + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "explanation": "يُستخدم للحديث عن اختراعات أو أحداث تاريخية اكتملت في الماضي مع التركيز على النتيجة أو الشيء المخترَع:\n• المفرد (I / He / She / It) يأخذ was + p.p.\n• الجمع (We / You / They) يأخذ were + p.p.\n• عندما نذكر الفاعل نضعه في نهاية الجملة مسبوقاً بحرف الجر (by).",
+    "examples": [
+      {
+        "en": "The radio was invented by Marconi in the late nineteenth century.",
+        "ar": "الراديو اختُرع بواسطة ماركوني في أواخر القرن التاسع عشر."
+      },
+      {
+        "en": "The first television pictures were shown by Baird in London in 1926.",
+        "ar": "أولى صور التلفزيون عُرضت بواسطة بيرد في لندن عام 1926."
+      },
+      {
+        "en": "A radio message was sent across the Atlantic Ocean in 1902.",
+        "ar": "أُرسلت رسالة لاسلكية عبر المحيط الأطلسي عام 1902."
+      },
+      {
+        "en": "In ancient times, messages were carried by pigeons.",
+        "ar": "في العصور القديمة، كانت الرسائل تُنقل بواسطة الحمام."
+      }
+    ],
+    "quiz": {
+      "question": "The television _______ by John Logie Baird in 1926.",
+      "options": [
+        "was invented",
+        "were invented",
+        "invented",
+        "is invented"
+      ],
+      "correct": 0,
+      "explanation": "المبني للمجهول في الماضي البسيط للمفرد (The television): was + التصريف الثالث (was invented)."
+    },
+    "rule": "المفعول به (Subject) + was / were + Past Participle (التصريف الثالث) + (by + الفاعل)",
+    "summary": "يُستخدم للحديث عن اختراعات أو أحداث تاريخية اكتملت في الماضي مع التركيز على النتيجة أو الشيء المخترَع:\n• المفرد (I / He / She / It) يأخذ was + p.p.\n• الجمع (We / You / They) يأخذ were + p.p.\n• عندما نذكر الفاعل نضعه في نهاية الجملة مسبوقاً بحرف الجر (by)."
+  },
+  {
+    "id": "passive_modals",
+    "unit": 5,
+    "category": "grammar",
+    "title": "المبني للمجهول مع الأفعال الناقصة (Passive with: Can / Cannot)",
+    "level": "الوحدة 5",
+    "page": 53,
+    "formula": "المفعول به (Subject) + can / cannot + be + Past Participle (التصريف الثالث)",
+    "explanation": "يُستخدم للتعبير عن الإمكانية أو الاستطاعة العامة (أو منع الاستخدام) بصيغة المجهول:\n• الإثبات: can be + past participle (يمكن أن يُفعل).\n• النفي: cannot be + past participle (لا يمكن أن يُفعل).\n• السؤال: Can + المفعول به + be + past participle ?",
+    "examples": [
+      {
+        "en": "Mobile phones can be used almost anywhere.",
+        "ar": "الهواتف المحمولة يمكن استخدامها في أي مكان تقريباً."
+      },
+      {
+        "en": "Landline phones can only be used in one place.",
+        "ar": "الهواتف الأرضية يمكن استخدامها في مكان واحد فقط."
+      },
+      {
+        "en": "Mobile phones cannot be used without charged batteries.",
+        "ar": "الهواتف المحمولة لا يمكن استخدامها بدون بطاريات مشحونة."
+      },
+      {
+        "en": "High quality photographs can be taken with modern smartphones.",
+        "ar": "الصور عالية الجودة يمكن التقاطها بالهواتف الذكية الحديثة."
+      }
+    ],
+    "quiz": {
+      "question": "Important messages can _______ instantly across long distances.",
+      "options": [
+        "be sent",
+        "sent",
+        "be send",
+        "are sent"
+      ],
+      "correct": 0,
+      "explanation": "المبني للمجهول بعد الفعل المساعد can يتطلب be متبوعة بالتصريف الثالث (be sent)."
+    },
+    "rule": "المفعول به (Subject) + can / cannot + be + Past Participle (التصريف الثالث)",
+    "summary": "يُستخدم للتعبير عن الإمكانية أو الاستطاعة العامة (أو منع الاستخدام) بصيغة المجهول:\n• الإثبات: can be + past participle (يمكن أن يُفعل).\n• النفي: cannot be + past participle (لا يمكن أن يُفعل).\n• السؤال: Can + المفعول به + be + past participle ?"
+  },
+  {
+    "id": "dictionary_abbreviations",
+    "unit": 5,
+    "category": "vocabulary",
+    "title": "اختصارات القاموس وأقسام الكلام (Dictionary Abbreviations & Word Categories)",
+    "level": "الوحدة 5",
+    "page": 49,
+    "formula": "n. (noun) | v. (verb) | adj. (adjective) | adv. (adverb) | prep. (preposition) | conj. (conjunction) | pron. (pronoun)",
+    "explanation": "دليل الرموز والاختصارات النحوية المستخدمة في قواميس اللغة الإنجليزية لمعرفة وظيفة الكلمة:\n• n. = اسم (noun) مثل: horse, bank, phone, messenger\n• v. = فعل (verb) مثل: ride, warn, invent, send\n• adj. = صفة (adjective) مثل: black, fast, clever, great\n• adv. = ظرف أو حال (adverb) مثل: easily, fast, slowly, critically\n• prep. = حرف جر (preposition) مثل: in, on, at, from, to, across\n• conj. = أداة ربط أو عطف (conjunction) مثل: and, but, so, because\n• pron. = ضمير (pronoun) مثل: he, she, it, they, we\n\nتنبيه: بعض الكلمات تملك أكثر من معنى ووظيفة (مثل bank: اسم بمعنى مصرف أو ضفة نهر، وفعل بمعنى يودع مالاً أو تنعطف الطائرة).",
+    "examples": [
+      {
+        "en": "The black horse ran fast, so it won the race easily.",
+        "ar": "black صفة (adj.)، horse اسم (n.)، ran فعل (v.)، fast ظرف (adv.)، so أداة ربط (conj.)، it ضمير (pron.)، won فعل (v.)، easily ظرف (adv.)."
+      },
+      {
+        "en": "He sat on the grassy bank (n.) of the river.",
+        "ar": "جلس على ضفة النهر العشبية (bank هنا اسم تعني ضفة)."
+      },
+      {
+        "en": "The pilot banked (v.) the plane to the left.",
+        "ar": "أمال الطيار الطائرة وانعطف يساراً (bank هنا فعل ماضٍ)."
+      }
+    ],
+    "quiz": {
+      "question": "In a learner's dictionary, what does the abbreviation '(conj.)' mean?",
+      "options": [
+        "conjunction (أداة ربط أو عطف)",
+        "content (محتوى)",
+        "condition (حالة)",
+        "conversation (محادثة)"
+      ],
+      "correct": 0,
+      "explanation": "الرمز (conj.) اختصار لـ conjunction وهي أداة الربط بين الكلمات أو الجمل مثل (and, but, so, because)."
+    },
+    "rule": "n. (noun) | v. (verb) | adj. (adjective) | adv. (adverb) | prep. (preposition) | conj. (conjunction) | pron. (pronoun)",
+    "summary": "دليل الرموز والاختصارات النحوية المستخدمة في قواميس اللغة الإنجليزية لمعرفة وظيفة الكلمة:\n• n. = اسم (noun) مثل: horse, bank, phone, messenger\n• v. = فعل (verb) مثل: ride, warn, invent, send\n• adj. = صفة (adjective) مثل: black, fast, clever, great\n• adv. = ظرف أو حال (adverb) مثل: easily, fast, slowly, critically\n• prep. = حرف جر (preposition) مثل: in, on, at, from, to, across\n• conj. = أداة ربط أو عطف (conjunction) مثل: and, but, so, because\n• pron. = ضمير (pronoun) مثل: he, she, it, they, we\n\nتنبيه: بعض الكلمات تملك أكثر من معنى ووظيفة (مثل bank: اسم بمعنى مصرف أو ضفة نهر، وفعل بمعنى يودع مالاً أو تنعطف الطائرة)."
+  },
+  {
+    "id": "phone_etiquette",
+    "unit": 5,
+    "category": "functions",
+    "title": "آداب وتعبيرات المكالمات الهاتفية (Telephone Etiquette & Communication Phrases)",
+    "level": "الوحدة 5",
+    "page": 54,
+    "formula": "Introduce yourself (Anas here) ➔ State purpose (I'm calling about) ➔ Speak clearly ➔ Polite requests",
+    "explanation": "أصول المحادثة الهاتفية المعتمدة في المنهج الدراسي:\n1. التعريف بالنفس فوراً: Always say who you are immediately (e.g. Layla Ahmed here / Layla speaking).\n2. توضيح سبب الاتصال: State clearly why you are calling (e.g. I'm calling about tomorrow's appointment).\n3. التحدث بتمهل ووضوح: Speak slowly and clearly because the other person cannot see you.\n4. عبارات الاستيضاح والرد المهذب: Could you repeat that, please? | Can you spell that, please? | Hold on a moment, please.",
+    "examples": [
+      {
+        "en": "Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.",
+        "ar": "معكم ليلى أحمد، أنا أتصل بخصوص رحلة الغد إلى البحرين."
+      },
+      {
+        "en": "Hello, could I speak to Dr Salim, please? - Hold on a moment, please.",
+        "ar": "مرحباً، هل يمكنني التحدث إلى الدكتور سليم من فضلك؟ - انتظر لحظة لو سمحت."
+      },
+      {
+        "en": "I'm sorry, could you repeat that, please? Can you spell your surname?",
+        "ar": "أعتذر منك، هل يمكنك تكرار ذلك؟ وهل تتهجى اسم عائلتك؟"
+      }
+    ],
+    "quiz": {
+      "question": "When making an important phone call, what should you do first according to Susan's advice?",
+      "options": [
+        "Introduce yourself and say who you are immediately",
+        "Wait for the other person to guess who you are",
+        "Speak as fast as possible to save time",
+        "Hang up if you feel nervous"
+      ],
+      "correct": 0,
+      "explanation": "نصيحة كتاب الطالب صفحة 54: Do introduce yourself immediately. Always say who you are ('Anas Abdullah here')."
+    },
+    "rule": "Introduce yourself (Anas here) ➔ State purpose (I'm calling about) ➔ Speak clearly ➔ Polite requests",
+    "summary": "أصول المحادثة الهاتفية المعتمدة في المنهج الدراسي:\n1. التعريف بالنفس فوراً: Always say who you are immediately (e.g. Layla Ahmed here / Layla speaking).\n2. توضيح سبب الاتصال: State clearly why you are calling (e.g. I'm calling about tomorrow's appointment).\n3. التحدث بتمهل ووضوح: Speak slowly and clearly because the other person cannot see you.\n4. عبارات الاستيضاح والرد المهذب: Could you repeat that, please? | Can you spell that, please? | Hold on a moment, please."
+  },
+  {
+    "id": "must_vs_should",
+    "unit": 7,
+    "category": "modals",
+    "isTense": false,
+    "title": "الإلزام والقوانين مقابل النصيحة (Must / Mustn't vs Should / Shouldn't)",
+    "level": "الوحدة 7 - صفحة 72 و 119",
+    "page": 72,
+    "formula": "Subject + must / should / mustn't / shouldn't + Infinitive (مصدر مجرد بدون to)",
+    "explanation": "نستخدم (must و should) للتعبير عن مستويين مختلفين تماماً من الإلزام والتوجيه:\n\n1. Should / Shouldn't (تقديم النصيحة - Giving Advice):\n   • نستخدم should لتقديم نصيحة ودية أو اقتراح شخصي، والطرف الآخر حر في اتباعه أو تركه:\n     - You should work harder. You'll get better marks in your exam.\n     - You shouldn't eat so much junk food; it's bad for you.\n     - What should I do to improve my English?\n\n2. Must / Mustn't (الإلزام الصارم والقوانين - Strong Obligation & Prohibition):\n   • نستخدم must للتعبير عن واجب حتمي، أو قانون إجباري، أو ضرورة قاطعة لا تحتمل الخيار:\n     - You must work harder. If you don't, you will fail your exam.\n     - We must change our habits to reduce the effects of climate change.\n     - We must collect money to send some poor children to school.\n   • نستخدم mustn't للتعبير عن التحريم والمنع التام والقوانين التي يمنع خرقها:\n     - You mustn't throw litter on the street. Always put it in the bin!\n     - You mustn't drive through a red traffic light.\n\n3. الملاحظات الهيكلية (Form Notes):\n   • الفعل بعد must و should يأتي دائماً في المصدر المجرد الخالي من to (Infinitive without to).\n   • في حالة السؤال، نضع must أو should قبل الفاعل: Should we help them? / Must you go now? (مع ملاحظة أن استخدام have to في الأسئلة أكثر شيوعاً من must).",
+    "examples": [
+      {
+        "en": "We should do something to help poor children in Africa.",
+        "ar": "ينبغي لنا أن نفعل شيئاً لمساعدة الأطفال الفقراء في أفريقيا (نصيحة واقتراح should)."
+      },
+      {
+        "en": "No, we must do something! We have to help them get an education.",
+        "ar": "كلا، يجب علينا حتماً أن نفعل شيئاً! إنه واجب إنساني حتمي (إلزام قوي must)."
+      },
+      {
+        "en": "You mustn't drop plastic bottles in the river; it destroys the habitat.",
+        "ar": "يُحظر عليك تماماً إلقاء القناني البلاستيكية في النهر؛ فهذا يدمر الموطن البيئي (تحريم قاطع mustn't)."
+      }
+    ],
+    "quiz": {
+      "question": "Drivers ________ stop completely when the traffic light turns red. It is a strict law.",
+      "options": [
+        "must",
+        "should",
+        "may",
+        "might"
+      ],
+      "correct": 0,
+      "explanation": "إشارة المرور الحمراء قانون إلزامي صارم يترتب عليه عقوبة ومخالفة، لذا نستخدم must وليس should."
+    },
+    "rule": "Subject + must / should / mustn't / shouldn't + Infinitive (مصدر مجرد بدون to)",
+    "summary": "نستخدم (must و should) للتعبير عن مستويين مختلفين تماماً من الإلزام والتوجيه:\n\n1. Should / Shouldn't (تقديم النصيحة - Giving Advice):\n   • نستخدم should لتقديم نصيحة ودية أو اقتراح شخصي، والطرف الآخر حر في اتباعه أو تركه:\n     - You should work harder. You'll get better marks in your exam.\n     - You shouldn't eat so much junk food; it's bad for you.\n     - What should I do to improve my English?\n\n2. Must / Mustn't (الإلزام الصارم والقوانين - Strong Obligation & Prohibition):\n   • نستخدم must للتعبير عن واجب حتمي، أو قانون إجباري، أو ضرورة قاطعة لا تحتمل الخيار:\n     - You must work harder. If you don't, you will fail your exam.\n     - We must change our habits to reduce the effects of climate change.\n     - We must collect money to send some poor children to school.\n   • نستخدم mustn't للتعبير عن التحريم والمنع التام والقوانين التي يمنع خرقها:\n     - You mustn't throw litter on the street. Always put it in the bin!\n     - You mustn't drive through a red traffic light.\n\n3. الملاحظات الهيكلية (Form Notes):\n   • الفعل بعد must و should يأتي دائماً في المصدر المجرد الخالي من to (Infinitive without to).\n   • في حالة السؤال، نضع must أو should قبل الفاعل: Should we help them? / Must you go now? (مع ملاحظة أن استخدام have to في الأسئلة أكثر شيوعاً من must)."
+  },
+  {
+    "id": "may_and_might",
+    "unit": 7,
+    "category": "modals",
+    "isTense": false,
+    "title": "الاحتمالية في الحاضر والمستقبل (Possibility: May & Might)",
+    "level": "الوحدة 7 - صفحة 76 و 119",
+    "page": 76,
+    "formula": "Subject + may / might + Infinitive (مصدر مجرد بدون to)",
+    "explanation": "نستخدم (may و might) للتحدث عن احتمالية حدوث شيء في الحاضر أو المستقبل دون تأكيد جازم:\n\n1. صيغة التركيب (Form):\n   • الإثبات: الفاعل + may / might + مصدر مجرد بدون to:\n     - Subject + may/might + base verb.\n   • النفي: الفاعل + may not / might not + مصدر مجرد بدون to:\n     - We may not reduce global temperatures without serious action.\n   • السؤال: نضع might قبل الفاعل:\n     - If we plant thousands of trees, might we turn the desert into a green area?\n     (ملاحظة: من النادر جداً استخدام may في صيغة السؤال التخميني).\n\n2. الاستخدام والفرق بينهما (Use & Distinction):\n   • نستخدم may و might عندما نعتقد أن هناك فرصة أو احتمالاً لحدوث الأمر لكننا غير متأكدين تماماً.\n   • الفرق بينهما دقيق جداً:\n     - may تدل على درجة احتمال معتدلة (حوالي 50% تأكيد).\n     - might تدل على درجة احتمال أقل وأضعف وأقل تأكيداً (Less certain - حوالي 30% إلى 40%).\n   • كلاهما صالح للتعبير عن المستقبل أو الحاضر.",
+    "examples": [
+      {
+        "en": "If the world gets warmer, some farmland might become desert.",
+        "ar": "إذا أصبح العالم أكثر دفئاً، فربما تتحول بعض الأراضي الزراعية إلى صحراء (احتمال ضعيف might)."
+      },
+      {
+        "en": "There may be less rain in some hot countries over the next thirty years.",
+        "ar": "قد تكون هناك أمطار أقل في بعض البلدان الحارة خلال الأعوام الثلاثين القادمة (احتمال معتدل may)."
+      },
+      {
+        "en": "I may not be at school tomorrow because I have a doctor's appointment.",
+        "ar": "قد لا أكون في المدرسة غداً لأن لدي موعداً مع الطبيب (احتمال منفي)."
+      }
+    ],
+    "quiz": {
+      "question": "Look at those faint distant clouds. It ________ rain later, but nobody is certain.",
+      "options": [
+        "might",
+        "must",
+        "should to",
+        "has to"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم might للتعبير عن احتمالية ضعيفة وغير مؤكدة (nobody is certain) متبوعة بالمصدر rain."
+    },
+    "rule": "Subject + may / might + Infinitive (مصدر مجرد بدون to)",
+    "summary": "نستخدم (may و might) للتحدث عن احتمالية حدوث شيء في الحاضر أو المستقبل دون تأكيد جازم:\n\n1. صيغة التركيب (Form):\n   • الإثبات: الفاعل + may / might + مصدر مجرد بدون to:\n     - Subject + may/might + base verb.\n   • النفي: الفاعل + may not / might not + مصدر مجرد بدون to:\n     - We may not reduce global temperatures without serious action.\n   • السؤال: نضع might قبل الفاعل:\n     - If we plant thousands of trees, might we turn the desert into a green area?\n     (ملاحظة: من النادر جداً استخدام may في صيغة السؤال التخميني).\n\n2. الاستخدام والفرق بينهما (Use & Distinction):\n   • نستخدم may و might عندما نعتقد أن هناك فرصة أو احتمالاً لحدوث الأمر لكننا غير متأكدين تماماً.\n   • الفرق بينهما دقيق جداً:\n     - may تدل على درجة احتمال معتدلة (حوالي 50% تأكيد).\n     - might تدل على درجة احتمال أقل وأضعف وأقل تأكيداً (Less certain - حوالي 30% إلى 40%).\n   • كلاهما صالح للتعبير عن المستقبل أو الحاضر."
+  },
+  {
+    "id": "question-intonation",
+    "title": "نبرات الصوت عند طرح الأسئلة (Question Intonation: Falling & Rising Tone)",
+    "unit": 4,
+    "badge": "الوحدة 4 (مراجعة)",
+    "category": "Functions & Phonology",
+    "summary": "قاعدة انخفاض أو ارتفاع نبرة الصوت في نهاية الأسئلة باللغة الإنجليزية حسب نوع السؤال.",
+    "rule": "1) أسئلة Wh (What, Why, Who, When, How, Which): تنخفض نبرة الصوت في نهاية السؤال (Voice goes DOWN ➘ - Falling Intonation).\n2) أسئلة Yes/No والأفعال المساعدة (Are, Is, Do, Have, Can): ترتفع نبرة الصوت في نهاية السؤال (Voice goes UP ➚ - Rising Intonation).",
+    "examples": [
+      {
+        "en": "How are you? ➘",
+        "ar": "كيف حالك؟ (نبرة هابطة لأن السؤال يبدأ بأداة استفهام Wh)."
+      },
+      {
+        "en": "When do you have swimming lessons? ➘",
+        "ar": "متى تبدأ دروس السباحة لديك؟ (نبرة هابطة)."
+      },
+      {
+        "en": "Have you been to the doctor? ➚",
+        "ar": "هل ذهبت إلى الطبيب؟ (نبرة صاعدة لأن السؤال يبدأ بفعل مساعد Have)."
+      },
+      {
+        "en": "Are you good at swimming? ➚",
+        "ar": "هل تجيد السباحة؟ (نبرة صاعدة)."
+      }
+    ],
+    "quiz": {
+      "question": "What is the intonation pattern for the question: 'Can I help you?'",
+      "options": [
+        "Voice goes UP at the end (Rising Intonation)",
+        "Voice goes DOWN at the end (Falling Intonation)",
+        "Voice stays flat with no change",
+        "Voice goes down then up"
+      ],
+      "correct": 0,
+      "explanation": "'Can I help you?' is an auxiliary/modal Yes-No question, so the voice goes UP at the end (Rising Intonation)."
+    },
+    "formula": "1) أسئلة Wh (What, Why, Who, When, How, Which): تنخفض نبرة الصوت في نهاية السؤال (Voice goes DOWN ➘ - Falling Intonation).\n2) أسئلة Yes/No والأفعال المساعدة (Are, Is, Do, Have, Can): ترتفع نبرة الصوت في نهاية السؤال (Voice goes UP ➚ - Rising Intonation).",
+    "explanation": "قاعدة انخفاض أو ارتفاع نبرة الصوت في نهاية الأسئلة باللغة الإنجليزية حسب نوع السؤال.",
+    "level": "الوحدة 4 (مراجعة)",
+    "page": 43
+  },
+  {
+    "id": "topic-sentence-paragraph",
+    "title": "تنظيم الفقرة الإنشائية وجملة الموضوع (Topic Sentences & Spidergrams)",
+    "unit": 4,
+    "badge": "الوحدة 4 (مراجعة)",
+    "category": "Writing Skills",
+    "summary": "منهجية كتابة وتنظيم الفقرة الإنشائية باللغة الإنجليزية باستخدام جملة الموضوع ومخطط العصف الذهني.",
+    "rule": "تبدأ الفقرة الإنشائية دائماً بجملة الموضوع (Topic Sentence) التي تلخص الفكرة الرئيسية، ويتم التخطيط لها برسم مخطط عنكبوتي (Spidergram) لتفريغ الأفكار وترتيبها زمنياً قبل كتابة المسودة ومراجعة الإملاء وعلامات الترقيم.",
+    "examples": [
+      {
+        "en": "Topic Sentence: I did lots of exciting things at the weekend.",
+        "ar": "جملة الموضوع: قمت بالكثير من الأشياء الممتعة في عطلة نهاية الأسبوع."
+      },
+      {
+        "en": "Proofreading check: Check spelling, punctuation, wrong words and missing words.",
+        "ar": "مراجعة المسودة: فحص الإملاء وعلامات الترقيم والكلمات الخاطئة والناقصة."
+      }
+    ],
+    "quiz": {
+      "question": "What is the purpose of a 'Topic Sentence' at the beginning of a paragraph?",
+      "options": [
+        "It states what the whole paragraph is about",
+        "It lists the dictionary definitions of new words",
+        "It is always the longest sentence in the story",
+        "It ends the paragraph with a question mark"
+      ],
+      "correct": 0,
+      "explanation": "A topic sentence begins a paragraph and clearly tells the reader the main idea of that paragraph."
+    },
+    "formula": "تبدأ الفقرة الإنشائية دائماً بجملة الموضوع (Topic Sentence) التي تلخص الفكرة الرئيسية، ويتم التخطيط لها برسم مخطط عنكبوتي (Spidergram) لتفريغ الأفكار وترتيبها زمنياً قبل كتابة المسودة ومراجعة الإملاء وعلامات الترقيم.",
+    "explanation": "منهجية كتابة وتنظيم الفقرة الإنشائية باللغة الإنجليزية باستخدام جملة الموضوع ومخطط العصف الذهني.",
+    "level": "الوحدة 4 (مراجعة)",
+    "page": 43
+  },
+  {
+    "id": "future_going_to",
+    "unit": 6,
+    "category": "future",
+    "isTense": true,
+    "title": "المستقبل المخطط له والتنبؤ بدليل (Future with: be going to)",
+    "level": "الوحدة 6 - صفحة 65 و 118",
+    "page": 65,
+    "formula": "Subject + am / is / are + going to + Base Verb (المصدر المجرد)",
+    "explanation": "نستخدم صيغة (be going to) في حالتين أساسيتين:\n1. التعبير عن النوايا والخطط المستقبلية المؤكدة التي قررنا القيام بها مسبقاً:\n   • I am going to study medicine.\n   • She is going to be a doctor.\n2. التنبؤ بحدث مستقبلي بناءً على دليل مرئي أو ملموس في الوقت الحاضر:\n   • Look at those dark clouds! It is going to rain.\n   • You haven't done any revision. You are going to fail!\n\nفي النفي: نضع not بعد فعل be:\n   • I am not going to write books.\n   • She is not going to fail.\n\nفي السؤال: نقدم فعل be على الفاعل:\n   • Are you going to go to university?\n   • What is he going to be?",
+    "examples": [
+      {
+        "en": "Firas is going to go to university to study animals.",
+        "ar": "فراس سوف يذهب إلى الجامعة لدراسة الحيوانات (خطة مؤكدة)."
+      },
+      {
+        "en": "Look at those dark clouds! It is going to rain soon.",
+        "ar": "انظر إلى تلك الغيوم الداكنة! إنها ستمطر قريباً (تنبؤ استناداً إلى دليل مرئي)."
+      },
+      {
+        "en": "What are you going to be when you finish school?",
+        "ar": "ماذا سوف تصبح عندما تنهي المدرسة؟"
+      }
+    ],
+    "quiz": {
+      "question": "Look at the dark clouds! It ________ rain soon.",
+      "options": [
+        "is going to",
+        "was",
+        "has",
+        "goes to"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم is going to للتنبؤ بحدوث شيء في المستقبل لوجود دليل واضح في الحاضر (dark clouds)."
+    },
+    "rule": "Subject + am / is / are + going to + Base Verb (المصدر المجرد)",
+    "summary": "نستخدم صيغة (be going to) في حالتين أساسيتين:\n1. التعبير عن النوايا والخطط المستقبلية المؤكدة التي قررنا القيام بها مسبقاً:\n   • I am going to study medicine.\n   • She is going to be a doctor.\n2. التنبؤ بحدث مستقبلي بناءً على دليل مرئي أو ملموس في الوقت الحاضر:\n   • Look at those dark clouds! It is going to rain.\n   • You haven't done any revision. You are going to fail!\n\nفي النفي: نضع not بعد فعل be:\n   • I am not going to write books.\n   • She is not going to fail.\n\nفي السؤال: نقدم فعل be على الفاعل:\n   • Are you going to go to university?\n   • What is he going to be?"
+  },
+  {
+    "id": "future_going_to_when",
+    "unit": 6,
+    "category": "future",
+    "isTense": true,
+    "title": "المستقبل مع جملة الوصل الزمنية (Future with be going to + When)",
+    "level": "الوحدة 6 - صفحة 67 و 118",
+    "page": 67,
+    "formula": "When + Subject + Present Simple (مضارع بسيط) , Subject + be going to + Base Verb",
+    "explanation": "عند التحدث عن المستقبل باستخدام (be going to) وأداة الربط الزمنية (when) في نفس الجملة:\n• نستخدم دائماً زمن المضارع البسيط (Present Simple) في الشق الذي يلي when مباشرةً، حتى وإن كان المعنى دالاً على المستقبل بالكامل.\n• بينما يحتوي الشق الآخر على صيغة المستقبل (be going to + infinitive).\n\nأمثلة على الصيغة:\n• When I finish school, I am going to be a nurse.\n• What are you going to do when you leave university?\n• When she grows up, she is going to be a businesswoman.",
+    "examples": [
+      {
+        "en": "When I finish school, I'm going to study Science at university.",
+        "ar": "عندما أنهي المدرسة (مضارع بسيط)، سأدرس العلوم في الجامعة (مستقبل بـ going to)."
+      },
+      {
+        "en": "She is going to be a businesswoman when she grows up.",
+        "ar": "ستكون سيدة أعمال عندما تكبر (استخدام المضارع البسيط grows up بعد when)."
+      }
+    ],
+    "quiz": {
+      "question": "What are you going to do when you ________ school?",
+      "options": [
+        "finish",
+        "finished",
+        "are finishing",
+        "will finish"
+      ],
+      "correct": 0,
+      "explanation": "في الجمل التي تعبر عن المستقبل باستخدام when، نستخدم زمن المضارع البسيط (finish) بعد when دائماً."
+    },
+    "rule": "When + Subject + Present Simple (مضارع بسيط) , Subject + be going to + Base Verb",
+    "summary": "عند التحدث عن المستقبل باستخدام (be going to) وأداة الربط الزمنية (when) في نفس الجملة:\n• نستخدم دائماً زمن المضارع البسيط (Present Simple) في الشق الذي يلي when مباشرةً، حتى وإن كان المعنى دالاً على المستقبل بالكامل.\n• بينما يحتوي الشق الآخر على صيغة المستقبل (be going to + infinitive).\n\nأمثلة على الصيغة:\n• When I finish school, I am going to be a nurse.\n• What are you going to do when you leave university?\n• When she grows up, she is going to be a businesswoman."
+  },
+  {
+    "id": "good_at_ability",
+    "unit": 6,
+    "category": "functions",
+    "isTense": false,
+    "title": "التعبير عن المهارة والبراعة (Expressing Ability: good at / not good at)",
+    "level": "الوحدة 6 - صفحة 66 و 118",
+    "page": 66,
+    "formula": "Subject + am / is / are + (very / quite) good at / not good at + [Noun أو Verb-ing]",
+    "explanation": "نستخدم التركيب (be + good at / not good at) للتحدث عن الأشياء والمهام التي نجيدها أو لا نجيدها:\n1. متبوعة باسم مادة دراسية أو مجال (Noun):\n   • I'm good at Maths and Biology.\n   • She is not good at Geography.\n2. متبوعة بفعل مضاف إليه -ing (Gerund) للتعبير عن نشاط أو مهارة:\n   • He is very good at working with money.\n   • I'm good at running and swimming.\n   • He is not good at playing computer games.\n\nيمكن إضافة ظروف التقوية والتلطيف:\n• very good at (بارع جداً في)\n• quite good at (جيد إلى حد ما في)\n• not very good at (ليس جيداً كثيراً في)",
+    "examples": [
+      {
+        "en": "A businesswoman is very good at working with money.",
+        "ar": "سيدة الأعمال بارعة جداً في التعامل مع الأموال (فعل مضاف له ing)."
+      },
+      {
+        "en": "Sara is very good at Biology and Chemistry.",
+        "ar": "سارة ممتازة جداً في الأحياء والكيمياء (متبوعة باسم مادة علمية)."
+      },
+      {
+        "en": "Are the art students good at drawing and painting?",
+        "ar": "هل طلاب الفنون بارعون في الرسم والتلوين؟"
+      }
+    ],
+    "quiz": {
+      "question": "Adel is very good at ________ foreign languages.",
+      "options": [
+        "learning",
+        "learn",
+        "learned",
+        "to learn"
+      ],
+      "correct": 0,
+      "explanation": "حرف الجر at في التركيب good at يجب أن يتبعه اسم أو فعل ينتهي بـ -ing (learning)."
+    },
+    "rule": "Subject + am / is / are + (very / quite) good at / not good at + [Noun أو Verb-ing]",
+    "summary": "نستخدم التركيب (be + good at / not good at) للتحدث عن الأشياء والمهام التي نجيدها أو لا نجيدها:\n1. متبوعة باسم مادة دراسية أو مجال (Noun):\n   • I'm good at Maths and Biology.\n   • She is not good at Geography.\n2. متبوعة بفعل مضاف إليه -ing (Gerund) للتعبير عن نشاط أو مهارة:\n   • He is very good at working with money.\n   • I'm good at running and swimming.\n   • He is not good at playing computer games.\n\nيمكن إضافة ظروف التقوية والتلطيف:\n• very good at (بارع جداً في)\n• quite good at (جيد إلى حد ما في)\n• not very good at (ليس جيداً كثيراً في)"
+  },
+  {
+    "id": "relative_clauses_who",
+    "unit": 6,
+    "category": "relative_clauses",
+    "isTense": false,
+    "title": "ضمائر الوصل لتعريف المهن والأشخاص (Defining Jobs with: who)",
+    "level": "الوحدة 6 - صفحة 60 و 68",
+    "page": 60,
+    "formula": "A / An + Job Title + is someone who + verb in singular (s / es)",
+    "explanation": "نستخدم ضمير الوصل (who) لربط الجمل وإعطاء تعريف وتوصيف دقيق للمهن والأشخاص:\n• who تعود على العاقل (People / Person / Someone).\n• يليها فعل بصيغة المفرد (مع s الشخص الثالث) لأننا نعرف مهنة مفردة:\n  - A mechanic is someone who repairs cars.\n  - An architect is someone who designs buildings.\n  - A pilot is someone who flies planes.\n  - A firefighter is someone who puts out fires.",
+    "examples": [
+      {
+        "en": "An architect is someone who plans and designs buildings.",
+        "ar": "المهندس المعماري هو شخص يصمم ويخطط المباني."
+      },
+      {
+        "en": "A shop assistant is someone who helps customers in a shop.",
+        "ar": "مساعد البائع هو شخص يساعد الزبائن في المتجر."
+      }
+    ],
+    "quiz": {
+      "question": "A mechanic is someone ________ repairs people's cars.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم ضمير الوصل who للإشارة إلى العاقل وتوصيف المهن (A mechanic is someone who...)."
+    },
+    "rule": "A / An + Job Title + is someone who + verb in singular (s / es)",
+    "summary": "نستخدم ضمير الوصل (who) لربط الجمل وإعطاء تعريف وتوصيف دقيق للمهن والأشخاص:\n• who تعود على العاقل (People / Person / Someone).\n• يليها فعل بصيغة المفرد (مع s الشخص الثالث) لأننا نعرف مهنة مفردة:\n  - A mechanic is someone who repairs cars.\n  - An architect is someone who designs buildings.\n  - A pilot is someone who flies planes.\n  - A firefighter is someone who puts out fires."
+  },
+  {
+    "id": "obligation_have_to",
+    "unit": 6,
+    "category": "modals",
+    "isTense": false,
+    "title": "التعبير عن الالتزام والواجب المهني (Obligation with: have to / has to / had to)",
+    "level": "الوحدة 6 - صفحة 61 و 68",
+    "page": 61,
+    "formula": "Subject + have to / has to + infinitive (الحاضر) | had to + infinitive (الماضي)",
+    "explanation": "نستخدم (have to / has to / had to) للتعبير عن الضرورة والإلزام المفروض بقوانين العمل والمهنة أو الظروف الخارجية:\n• في الحاضر:\n  - المفرد (He / She / It) يأخذ has to + infinitive:\n    * A pilot has to wear a uniform.\n    * She has to work 12 hours sometimes.\n  - الجمع و I (I / We / They / You) تأخذ have to + infinitive:\n    * Firefighters have to be very brave.\n• في الماضي: نستخدم had to مع جميع الضمائر:\n  - Dr Salwa had to study for six years at university.\n  - Mazin had to check his equipment.",
+    "examples": [
+      {
+        "en": "Pilots have to wear an official uniform.",
+        "ar": "يجب على الطيارين ارتداء زي رسمي (إلزام بقواعد المهنة)."
+      },
+      {
+        "en": "Dr Salwa had to study for six years to become a doctor.",
+        "ar": "كان على د. سلوى أن تدرس لمدة ست سنوات لتصبح طبيبة (ضرورة في الماضي)."
+      }
+    ],
+    "quiz": {
+      "question": "Hanan ________ study for four years at college to earn her degree.",
+      "options": [
+        "had to",
+        "has",
+        "having",
+        "have to"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم had to للحديث عن الضرورة والالتزام الذي تم في الماضي (فترة دراستها بالكلية)."
+    },
+    "rule": "Subject + have to / has to + infinitive (الحاضر) | had to + infinitive (الماضي)",
+    "summary": "نستخدم (have to / has to / had to) للتعبير عن الضرورة والإلزام المفروض بقوانين العمل والمهنة أو الظروف الخارجية:\n• في الحاضر:\n  - المفرد (He / She / It) يأخذ has to + infinitive:\n    * A pilot has to wear a uniform.\n    * She has to work 12 hours sometimes.\n  - الجمع و I (I / We / They / You) تأخذ have to + infinitive:\n    * Firefighters have to be very brave.\n• في الماضي: نستخدم had to مع جميع الضمائر:\n  - Dr Salwa had to study for six years at university.\n  - Mazin had to check his equipment."
+  },
+  {
+    "id": "asking_timetables",
+    "unit": 6,
+    "category": "functions",
+    "isTense": false,
+    "title": "الاستفسار عن المواعيد والقطارات (Asking about Timetables & 24-Hour Time)",
+    "level": "الوحدة 6 - صفحة 64 و 68",
+    "page": 64,
+    "formula": "What time does the train leave / arrive? | Which train should I catch?",
+    "explanation": "عند قراءة جداول الرحلات والتنقل في محطات القطار والمطارات:\n1. عبارات الاستفسار والطلب المهذب:\n   • Excuse me, can you help me, please?\n   • What time is the next train to Paris?\n   • What time does the first train leave?\n   • Which train should I catch to arrive before 4 o'clock?\n2. نظام التوقيت الـ 24 ساعة (24-Hour System):\n   • 06:55 = Six fifty-five a.m. (five to seven)\n   • 14:00 = Two o'clock in the afternoon (2 p.m.)\n   • 22:00 = Ten o'clock at night (10 p.m.)",
+    "examples": [
+      {
+        "en": "What time is the first train to Paris? - It leaves at 06:55.",
+        "ar": "في أي وقت يغادر أول قطار إلى باريس؟ - يغادر في تمام الساعة 06:55."
+      },
+      {
+        "en": "Which train should I catch? - You should catch the 08:30 train.",
+        "ar": "أي قطار ينبغي أن أستقل؟ - ينبغي أن تستقل قطار الساعة 08:30."
+      }
+    ],
+    "quiz": {
+      "question": "Excuse me, what time ________ the first train leave for Paris?",
+      "options": [
+        "does",
+        "is",
+        "do",
+        "has"
+      ],
+      "correct": 0,
+      "explanation": "في السؤال في زمن المضارع البسيط عن المواعيد المجدولة مع الفاعل المفرد (the first train) نستخدم الفعل المساعد does."
+    },
+    "rule": "What time does the train leave / arrive? | Which train should I catch?",
+    "summary": "عند قراءة جداول الرحلات والتنقل في محطات القطار والمطارات:\n1. عبارات الاستفسار والطلب المهذب:\n   • Excuse me, can you help me, please?\n   • What time is the next train to Paris?\n   • What time does the first train leave?\n   • Which train should I catch to arrive before 4 o'clock?\n2. نظام التوقيت الـ 24 ساعة (24-Hour System):\n   • 06:55 = Six fifty-five a.m. (five to seven)\n   • 14:00 = Two o'clock in the afternoon (2 p.m.)\n   • 22:00 = Ten o'clock at night (10 p.m.)"
+  },
+  {
+    "id": "expressing_agreement_disagreement",
+    "unit": 7,
+    "category": "functions",
+    "isTense": false,
+    "title": "التعبير عن الاتفاق والاختلاف في الرأي (Agreeing & Disagreeing)",
+    "level": "الوحدة 7 - صفحة 74 و 79",
+    "page": 74,
+    "formula": "Agreeing: I agree. / You're right. | Disagreeing: I disagree. / I think you're wrong.",
+    "explanation": "في المحادثات والمناقشات الصفية وتبادل الآراء العلمية والبيئية، نستخدم تراكيب محددة للتعبير عن الاتفاق أو الاعتراض بأدب:\n\n1. صيغ الاتفاق والتأييد (Expressing Agreement):\n   • I agree. (أنا أتفق معك)\n   • You're right. (أنت محق / معك حق)\n   • I think you're right. (أعتقد أنك محق)\n   • مثال:\n     - A: \"I think the golden toads live in wetlands because toads need water.\"\n     - B: \"I agree. You're right.\"\n\n2. صيغ الاختلاف والاعتراض المهذب (Expressing Disagreement):\n   • I disagree. (أنا لا أتفق معك / أعترض)\n   • I think you're wrong. (أعتقد أنك مخطئ)\n   • ثم نذكر التبرير المنطقي أو الحقيقة العلمية:\n     - A: \"Polar bears live in warm tropical deserts.\"\n     - B: \"I disagree. I think you're wrong. They live on Arctic sea ice!\"",
+    "examples": [
+      {
+        "en": "A: 'We must stop factory waste flowing into the rivers.' -> B: 'I agree. You're right.'",
+        "ar": "أ: يجب أن نوقف نفايات المصانع المتدفقة في الأنهار. -> ب: أتفق معك، أنت على حق تماماً."
+      },
+      {
+        "en": "A: 'Throwing plastic bottles in the street is fine.' -> B: 'I disagree! It destroys the environment.'",
+        "ar": "أ: رمي القناني البلاستيكية في الشارع أمر لا بأس به. -> ب: أعترض بشدة! فهذا يدمر البيئة."
+      }
+    ],
+    "quiz": {
+      "question": "A: 'Blue whales are the largest animals on Earth.' — B: '________. You're right.'",
+      "options": [
+        "I agree",
+        "I disagree",
+        "I am agree",
+        "I not agree"
+      ],
+      "correct": 0,
+      "explanation": "الصيغة الإنجليزية الصحيحة للتعبير عن الاتفاق هي (I agree) كفعل مجرد بدون فعل الكينونة am."
+    },
+    "rule": "Agreeing: I agree. / You're right. | Disagreeing: I disagree. / I think you're wrong.",
+    "summary": "في المحادثات والمناقشات الصفية وتبادل الآراء العلمية والبيئية، نستخدم تراكيب محددة للتعبير عن الاتفاق أو الاعتراض بأدب:\n\n1. صيغ الاتفاق والتأييد (Expressing Agreement):\n   • I agree. (أنا أتفق معك)\n   • You're right. (أنت محق / معك حق)\n   • I think you're right. (أعتقد أنك محق)\n   • مثال:\n     - A: \"I think the golden toads live in wetlands because toads need water.\"\n     - B: \"I agree. You're right.\"\n\n2. صيغ الاختلاف والاعتراض المهذب (Expressing Disagreement):\n   • I disagree. (أنا لا أتفق معك / أعترض)\n   • I think you're wrong. (أعتقد أنك مخطئ)\n   • ثم نذكر التبرير المنطقي أو الحقيقة العلمية:\n     - A: \"Polar bears live in warm tropical deserts.\"\n     - B: \"I disagree. I think you're wrong. They live on Arctic sea ice!\""
+  },
+  {
+    "id": "environmental_imperatives",
+    "unit": 7,
+    "category": "imperatives",
+    "isTense": false,
+    "title": "صيغ التوجيه والأمر والنهي لحماية البيئة (Environmental Imperatives: Do & Don't)",
+    "level": "الوحدة 7 - صفحة 75 و 77 و 85",
+    "page": 77,
+    "formula": "الأمر الإيجابي: Base Verb (فعل مجرد) | النهي والمنع: Don't + Base Verb",
+    "explanation": "تُستخدم صيغ الأمر والنهي (Imperatives) لإعطاء تعليمات بيئية مباشرة، وتوجيهات مجتمعية، وقواعد سلوكية صريحة:\n\n1. صيغ الأمر الإيجابي (Positive Imperatives):\n   • تبدأ الجملة مباشرة بالفعل المصدري المجرد الخالي من أي إضافات:\n     - Turn off the water tap while brushing your teeth!\n     - Switch off the lights when you leave the room!\n     - Put your rubbish in the recycling bin!\n     - Use both sides of the paper!\n\n2. صيغ النهي والمنع (Negative Imperatives / Prohibitions):\n   • تبدأ الجملة دائماً بـ Don't متبوعة بالفعل المصدري المجرد:\n     - Don't drop litter in the street!\n     - Don't throw rubbish out of your car window!\n     - Don't leave plastic bags on the beach!\n     - Don't waste electricity!",
+    "examples": [
+      {
+        "en": "Don't leave the tap running; turn it off!",
+        "ar": "لا تترك صنبور الماء مفتوحاً؛ أغلقه فوراً! (نهي بـ Don't ثم أمر مجرد)."
+      },
+      {
+        "en": "Use the scissors carefully to cut the top of the bottle.",
+        "ar": "استخدم المقص بحذر لقطع قمة الزجاجة (أمر إرشادي في خطوات المشروع)."
+      }
+    ],
+    "quiz": {
+      "question": "________ drop plastic rubbish in the park; always use the bin!",
+      "options": [
+        "Don't",
+        "Not",
+        "Doesn't",
+        "No"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم Don't في بداية الجملة لصياغة النهي المباشر (Negative Imperative)."
+    },
+    "rule": "الأمر الإيجابي: Base Verb (فعل مجرد) | النهي والمنع: Don't + Base Verb",
+    "summary": "تُستخدم صيغ الأمر والنهي (Imperatives) لإعطاء تعليمات بيئية مباشرة، وتوجيهات مجتمعية، وقواعد سلوكية صريحة:\n\n1. صيغ الأمر الإيجابي (Positive Imperatives):\n   • تبدأ الجملة مباشرة بالفعل المصدري المجرد الخالي من أي إضافات:\n     - Turn off the water tap while brushing your teeth!\n     - Switch off the lights when you leave the room!\n     - Put your rubbish in the recycling bin!\n     - Use both sides of the paper!\n\n2. صيغ النهي والمنع (Negative Imperatives / Prohibitions):\n   • تبدأ الجملة دائماً بـ Don't متبوعة بالفعل المصدري المجرد:\n     - Don't drop litter in the street!\n     - Don't throw rubbish out of your car window!\n     - Don't leave plastic bags on the beach!\n     - Don't waste electricity!"
+  },
+  {
+    "id": "newspaper_headline_rules",
+    "unit": 7,
+    "category": "writing",
+    "isTense": false,
+    "title": "قواعد وخصائص العناوين الصحفية (Grammar Features of Newspaper Headlines)",
+    "level": "الوحدة 7 - صفحة 71 و 79",
+    "page": 71,
+    "formula": "حذف أدوات التعريف (a / an / the) + حذف أفعال الكينونة (is / are / was / were)",
+    "explanation": "تتميز لغة العناوين في الصحف والمواقع الإخبارية بالإيجاز الشديد لجذب انتباه القارئ وتوفير المساحة:\n\n1. الخصائص الأساسية للغة العناوين (Headline Grammar Rules):\n   • حذف أدوات النكرة والتعريف (Articles: a, an, the).\n   • حذف أفعال الكينونة المساعدة (Auxiliary verbs: is, are, was, were).\n   • استخدام صيغة التصريف الثالث (Past Participle) بمفردها للدلالة على المبني للمجهول في الماضي.\n   • استخدام صيغة المضارع البسيط (Present Simple) للدلالة على أحداث وقعت حديثاً في الماضي القريب.\n   • استخدام صيغة (Verb-ing) بمفردها للدلالة على حدث مستمر يقع في الوقت الحاضر.\n\n2. أمثلة المقارنة بين العنوان والجملة الكاملة:\n   • العنوان: \"World getting warmer, scientists say.\"\n     - الجملة الكاملة: \"The world is getting warmer, scientists say.\"\n   • العنوان: \"Sixteen elephants found dead.\"\n     - الجملة الكاملة: \"Sixteen elephants were found dead.\"\n   • العنوان: \"Waste from factory pollutes town's water supply.\"\n     - الجملة الكاملة: \"Waste from a factory has polluted the town's water supply.\"",
+    "examples": [
+      {
+        "en": "Headline: 'Rainforest destroyed' -> Full: 'The rainforest has been destroyed.'",
+        "ar": "عنوان صحفي: تم حذف أداة التعريف وفعل الكينونة لتكثيف الرسالة الإخبارية."
+      },
+      {
+        "en": "Headline: 'Doctor warns of air pollution' -> Full: 'A doctor warns people about air pollution.'",
+        "ar": "عنوان صحفي: استخدام المضارع البسيط warns للتعبير عن تصريح وتحذير حديث."
+      }
+    ],
+    "quiz": {
+      "question": "What is the full grammatical sentence for the headline: 'Litter drowns town!'?",
+      "options": [
+        "Litter is drowning the town!",
+        "Litter was drown a town.",
+        "A litter have drowned town.",
+        "Litter drown town."
+      ],
+      "correct": 0,
+      "explanation": "العنوان الصحفي 'Litter drowns town!' يُفهم بجملة كاملة مع أداة التعريف وفعل الكينونة المستمر: 'Litter is drowning the town!'."
+    },
+    "rule": "حذف أدوات التعريف (a / an / the) + حذف أفعال الكينونة (is / are / was / were)",
+    "summary": "تتميز لغة العناوين في الصحف والمواقع الإخبارية بالإيجاز الشديد لجذب انتباه القارئ وتوفير المساحة:\n\n1. الخصائص الأساسية للغة العناوين (Headline Grammar Rules):\n   • حذف أدوات النكرة والتعريف (Articles: a, an, the).\n   • حذف أفعال الكينونة المساعدة (Auxiliary verbs: is, are, was, were).\n   • استخدام صيغة التصريف الثالث (Past Participle) بمفردها للدلالة على المبني للمجهول في الماضي.\n   • استخدام صيغة المضارع البسيط (Present Simple) للدلالة على أحداث وقعت حديثاً في الماضي القريب.\n   • استخدام صيغة (Verb-ing) بمفردها للدلالة على حدث مستمر يقع في الوقت الحاضر.\n\n2. أمثلة المقارنة بين العنوان والجملة الكاملة:\n   • العنوان: \"World getting warmer, scientists say.\"\n     - الجملة الكاملة: \"The world is getting warmer, scientists say.\"\n   • العنوان: \"Sixteen elephants found dead.\"\n     - الجملة الكاملة: \"Sixteen elephants were found dead.\"\n   • العنوان: \"Waste from factory pollutes town's water supply.\"\n     - الجملة الكاملة: \"Waste from a factory has polluted the town's water supply.\""
+  },
+  {
+    "id": "making_offers_contributions",
+    "unit": 7,
+    "category": "functions",
+    "isTense": false,
+    "title": "تقديم العروض والمبادرات التطوعية (Making Offers with: I will / I'll)",
+    "level": "الوحدة 7 - صفحة 72 و 79 و 104",
+    "page": 72,
+    "formula": "I'll + Base Verb (مصدر مجرد)  |  Shall I + Base Verb ...?",
+    "explanation": "عند المشاركة في فعاليات العمل الخيري والتطوعي (مثل السوق الخيري Bring-and-buy sale أو حملات تنظيف الأنهار):\n\n1. صيغة القرار التلقائي والعرض المباشر (Spontaneous Decision / Offer):\n   • نستخدم الصيغة المختصرة (I'll + base verb) للتعبير عن الرغبة الفورية في التبرع أو المشاركة:\n     - I have some CDs; I'll bring those.\n     - I can help. I'll bring some plants.\n     - I'll bake some delicious cakes for the sale.\n     - I'll bring my old camera; it still works.\n\n2. صيغة السؤال المهذب لتقديم المساعدة (Polite Offers):\n   • نستخدم (Shall I + base verb ...?):\n     - Shall I take them to your house?\n     - Shall I help you carry those boxes?",
+    "examples": [
+      {
+        "en": "I've got lots of storybooks; I'll bring the ones I've read.",
+        "ar": "لدي الكثير من كتب القصص؛ سأجلب تلك التي قرأتها للتبرع بها في السوق الخيري."
+      },
+      {
+        "en": "Shall I bring some clothes to the playground at quarter to four?",
+        "ar": "هل أجلب بعض الملابس إلى ساحة المدرسة في الرابعة إلا ربعاً؟"
+      }
+    ],
+    "quiz": {
+      "question": "I want to help with the charity sale. I ________ some flowers from our garden.",
+      "options": [
+        "will bring",
+        "brought",
+        "am bringing to",
+        "bringed"
+      ],
+      "correct": 0,
+      "explanation": "نستخدم will bring (أو I'll bring) لتقديم عرض عفوي وتطوعي للمساعدة (Making an offer)."
+    },
+    "rule": "I'll + Base Verb (مصدر مجرد)  |  Shall I + Base Verb ...?",
+    "summary": "عند المشاركة في فعاليات العمل الخيري والتطوعي (مثل السوق الخيري Bring-and-buy sale أو حملات تنظيف الأنهار):\n\n1. صيغة القرار التلقائي والعرض المباشر (Spontaneous Decision / Offer):\n   • نستخدم الصيغة المختصرة (I'll + base verb) للتعبير عن الرغبة الفورية في التبرع أو المشاركة:\n     - I have some CDs; I'll bring those.\n     - I can help. I'll bring some plants.\n     - I'll bake some delicious cakes for the sale.\n     - I'll bring my old camera; it still works.\n\n2. صيغة السؤال المهذب لتقديم المساعدة (Polite Offers):\n   • نستخدم (Shall I + base verb ...?):\n     - Shall I take them to your house?\n     - Shall I help you carry those boxes?"
+  },
+  {
+    "id": "active-listening-verification",
+    "title": "استراتيجية تدوين الملاحظات والتحقق من التفاصيل (Active Listening & Note Verification)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Listening & Study Skills",
+    "summary": "قواعد الاستماع الفعال وتدوين الأرقام والعناوين والتواريخ والتحقق منها لتفادي الأخطاء الكارثية.",
+    "rule": "1) عند الاستماع لمعلومات دقيقة (أرقام هواتف، عناوين، مواعيد): استخدم اختصارات واضحة ولا تحاول كتابة جمل كاملة.\n2) أعد قراءة الأرقام والتفاصيل على المتحدث فوراً للتأكد (Verification) قبل إنهاء المكالمة أو اللقاء.\n3) احتفظ دائماً ببيانات بديلة للتواصل عند الطوارئ.",
+    "examples": [
+      {
+        "en": "Susan dialled 432147 because she wrote down the wrong number. She should have confirmed with Liz.",
+        "ar": "اتصلت سوزان بالرقم 432147 لأنها سجلت رقماً خاطئاً. كان ينبغي عليها تأكيد الرقم مع ليز."
+      },
+      {
+        "en": "Jalal had the wrong address (24 West Street instead of Road or Drive) and arrived at an empty house.",
+        "ar": "كان لدى جلال عنوان خاطئ (شارع ويست بدلاً من طريق ويست) فوصل إلى منزل مظلم وخالٍ."
+      },
+      {
+        "en": "Jane Smith wrote her job interview in her diary on the wrong day, so she missed the secretary post.",
+        "ar": "كتبت جين سميث موعد المقابلة في يوم خاطئ ففاتتها وظيفة السكرتيرة."
+      }
+    ],
+    "quiz": {
+      "question": "What is the most reliable way to prevent mistakes when taking down a telephone number?",
+      "options": [
+        "Repeat the number back to the speaker to confirm it",
+        "Trust your memory and write it down hours later",
+        "Hang up quickly so you do not waste telephone credit",
+        "Only write down the first three digits"
+      ],
+      "correct": 0,
+      "explanation": "Page 86 & 106: Always repeat back numbers and details to confirm accuracy before hanging up."
+    },
+    "formula": "1) عند الاستماع لمعلومات دقيقة (أرقام هواتف، عناوين، مواعيد): استخدم اختصارات واضحة ولا تحاول كتابة جمل كاملة.\n2) أعد قراءة الأرقام والتفاصيل على المتحدث فوراً للتأكد (Verification) قبل إنهاء المكالمة أو اللقاء.\n3) احتفظ دائماً ببيانات بديلة للتواصل عند الطوارئ.",
+    "explanation": "قواعد الاستماع الفعال وتدوين الأرقام والعناوين والتواريخ والتحقق منها لتفادي الأخطاء الكارثية.",
+    "level": "الوحدة 8 (مراجعة)",
+    "page": 86
+  },
+  {
+    "id": "expressive-reading-intonation",
+    "title": "القراءة الجهرية التعبيرية ونبرة المشاعر (Expressive Reading Aloud & Emotional Intonation)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Speaking & Phonology",
+    "summary": "مهارات القراءة بطلاقة عبر تجميع الكلمات في وحدات دلالية وإظهار المشاعر بنبرة الصوت.",
+    "rule": "1) لا تتوقف بعد كل كلمة منفردة، بل اقرأ الكلمات في مجموعات ذات معنى (Thought Groups).\n2) حرّك عينيك للأمام على الكلمات التالية أثناء نطقك للكلمات الحالية (Eye-Voice Span).\n3) غيّر نبرة صوتك لتعكس مشاعر المتحدث:\n   - نبرة الإحباط والاستياء: نبرة منخفضة متباطئة مع كلمات مثل awful, bad, slow.\n   - نبرة الحماس والبهجة: نبرة عالية مفعمة بالحيوية مع كلمات مثل fantastic, delicious, wonderful.",
+    "examples": [
+      {
+        "en": "Disappointment: 'The food was bad, and the waiters were very slow. Worst of all, they weren't polite.'",
+        "ar": "نبرة استياء: كان الطعام سيئاً والنوادل بطيئين ولم يكونوا مهذبين."
+      },
+      {
+        "en": "Enthusiasm: 'I went to a new restaurant last night, and it was fantastic! The food was delicious.'",
+        "ar": "نبرة بهجة وحماس: ذهبت إلى مطعم جديد وكانت تجربة رائعة! الطعام كان لذيذاً جداً."
+      }
+    ],
+    "quiz": {
+      "question": "When reading aloud in English, why shouldn't you pause after every word?",
+      "options": [
+        "Because words are spoken in connected groups, and pausing breaks meaning and fluency",
+        "Because English grammar forbids pausing under any circumstance",
+        "Because the listener will think you are reading too slowly",
+        "Because punctuation only exists in writing, not speaking"
+      ],
+      "correct": 0,
+      "explanation": "Page 87: We say words in connected groups; pausing after every word damages natural speech rhythm and comprehension."
+    },
+    "formula": "1) لا تتوقف بعد كل كلمة منفردة، بل اقرأ الكلمات في مجموعات ذات معنى (Thought Groups).\n2) حرّك عينيك للأمام على الكلمات التالية أثناء نطقك للكلمات الحالية (Eye-Voice Span).\n3) غيّر نبرة صوتك لتعكس مشاعر المتحدث:\n   - نبرة الإحباط والاستياء: نبرة منخفضة متباطئة مع كلمات مثل awful, bad, slow.\n   - نبرة الحماس والبهجة: نبرة عالية مفعمة بالحيوية مع كلمات مثل fantastic, delicious, wonderful.",
+    "explanation": "مهارات القراءة بطلاقة عبر تجميع الكلمات في وحدات دلالية وإظهار المشاعر بنبرة الصوت.",
+    "level": "الوحدة 8 (مراجعة)",
+    "page": 86
+  },
+  {
+    "id": "topic-sentences-reading",
+    "title": "جمل الموضوع واستنتاج المعاني من السياق (Topic Sentences & Contextual Vocabulary)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Reading & Vocabulary",
+    "summary": "استراتيجية تحديد جملة الموضوع الافتتاحية لكل فقرة واستنتاج معاني الكلمات التخصصية من السياق.",
+    "rule": "1) جملة الموضوع (Topic Sentence): هي أول جملة في الفقرة عادة، وتقدم الفكرة الرئيسية لها.\n2) قراءة جمل الموضوع فقط (Skimming) تمكّنك من معرفة هيكل النص ومضمونه في ثوانٍ.\n3) استنتاج المعاني: ابحث عن الدلائل في نفس الجملة أو الجمل المحيطة لتخمين معنى المفردات الصعبة.",
+    "examples": [
+      {
+        "en": "Topic sentence: 'Muhammad has always wanted to be a pilot.' (Introduces his boyhood ambition).",
+        "ar": "جملة موضوع: كان محمد يرغب دائماً في أن يصبح طياراً (تلخص الفقرة الأولى)."
+      },
+      {
+        "en": "Context deduction: 'aviation college' = college that trains people to fly aeroplanes and become pilots.",
+        "ar": "استنتاج من السياق: كلية الطيران تعني كلية متخصصة لتدريب وتخريج الطيارين."
+      },
+      {
+        "en": "English is the 'language of the air' because all international flight communications use English.",
+        "ar": "الإنجليزية هي لغة الطيران الدولية لأن كل اتصالات الطيارين وأبراج المراقبة تعتمدها حصراً."
+      }
+    ],
+    "quiz": {
+      "question": "What is the primary function of a 'Topic Sentence' in an English paragraph?",
+      "options": [
+        "It expresses the main idea of the paragraph, usually at the beginning",
+        "It provides the final concluding remark of the whole essay",
+        "It is always the shortest sentence with no adjectives",
+        "It contains the names of all characters in the text"
+      ],
+      "correct": 0,
+      "explanation": "Page 88: The topic sentence introduces the core subject of the paragraph to guide the reader."
+    },
+    "formula": "1) جملة الموضوع (Topic Sentence): هي أول جملة في الفقرة عادة، وتقدم الفكرة الرئيسية لها.\n2) قراءة جمل الموضوع فقط (Skimming) تمكّنك من معرفة هيكل النص ومضمونه في ثوانٍ.\n3) استنتاج المعاني: ابحث عن الدلائل في نفس الجملة أو الجمل المحيطة لتخمين معنى المفردات الصعبة.",
+    "explanation": "استراتيجية تحديد جملة الموضوع الافتتاحية لكل فقرة واستنتاج معاني الكلمات التخصصية من السياق.",
+    "level": "الوحدة 8 (مراجعة)",
+    "page": 86
+  },
+  {
+    "id": "master-punctuation-rules",
+    "title": "علامات الترقيم الشاملة وقواعد كتابة الجمل الإنجليزية (Comprehensive Punctuation & Sentence Mechanics)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Writing Mechanics",
+    "summary": "القواعد الكاملة لاستخدام الحروف الكبيرة، النقطة، الفواصل، علامات الاستفهام، الفاصلة العليا وعلامات الاقتباس.",
+    "rule": "1) الحروف الكبيرة (Capital Letters): بداية الجمل، أسماء العلم، اللغات والمواد الدراسية (Maths, English, Arabic)، الدول والمدن، والضمير I.\n2) النقطة (.): نهاية الجمل الخبرية التامة.\n3) علامة الاستفهام (?): نهاية الأسئلة المباشرة.\n4) الفاصلة العليا ('): للاختصارات (You've, don't, I'm) والتملك (boy's, boys').\n5) الفاصلة (,): لفصل عناصر القائمة، وبعد الجمل الظرفية التمهيدية، وقبل أدوات الربط (but, so)، وفصل الكلام المباشر.\n6) علامات الاقتباس (\"...\"): لإحاطة الكلمات المنقولة نصياً.",
+    "examples": [
+      {
+        "en": "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+        "ar": "جملة ترقيم نموذجية شاملة لكل علامات الترقيم من كتاب الطالب صفحة 89."
+      },
+      {
+        "en": "I live in Ranya, but my friend lives in Sulaymaniyah.",
+        "ar": "حرف كبير لأسماء المدن والضمير I، وفاصلة قبل أداة الربط but."
+      }
+    ],
+    "quiz": {
+      "question": "Which sentence has the 100% correct punctuation according to Page 89 of the textbook?",
+      "options": [
+        "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
+        "youve done well in maths english and arabic my mother said but what about history your mark is very bad.",
+        "\"Youve done well in maths, english and arabic\" my mother said \"but what about History. Your mark is very bad\"",
+        "You've done well in Maths English and Arabic my mother said, but what about History, your mark is very bad."
+      ],
+      "correct": 0,
+      "explanation": "Page 89 Writing Tip 8: Proper capitalization of subjects (Maths, English, Arabic, History), speech marks around direct dialogue, apostrophe in You've, and question mark after History."
+    },
+    "formula": "1) الحروف الكبيرة (Capital Letters): بداية الجمل، أسماء العلم، اللغات والمواد الدراسية (Maths, English, Arabic)، الدول والمدن، والضمير I.\n2) النقطة (.): نهاية الجمل الخبرية التامة.\n3) علامة الاستفهام (?): نهاية الأسئلة المباشرة.\n4) الفاصلة العليا ('): للاختصارات (You've, don't, I'm) والتملك (boy's, boys').\n5) الفاصلة (,): لفصل عناصر القائمة، وبعد الجمل الظرفية التمهيدية، وقبل أدوات الربط (but, so)، وفصل الكلام المباشر.\n6) علامات الاقتباس (\"...\"): لإحاطة الكلمات المنقولة نصياً.",
+    "explanation": "القواعد الكاملة لاستخدام الحروف الكبيرة، النقطة، الفواصل، علامات الاستفهام، الفاصلة العليا وعلامات الاقتباس.",
+    "level": "الوحدة 8 (مراجعة)",
+    "page": 86
+  },
+  {
+    "id": "proofreading-tenses-connectors",
+    "title": "تدقيق الأزمنة وأدوات الربط والصفات والظروف في المسودة (Proofreading: Tenses, Connectors, Adjectives & Adverbs)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة)",
+    "category": "Writing & Grammar",
+    "summary": "خطوات مراجعة المسودة وتدقيق تطابق أزمنة الأفعال مع الدلالات الزمنية واستخدام أدوات الربط والصفات والظروف.",
+    "rule": "1) تدقيق الأفعال: حدد هل تكتب عن الماضي أو الحاضر أو المستقبل؟ استخدم دلالات الوقت (yesterday, last Friday, now, tomorrow) لتصحيح صيغة الفعل.\n2) أدوات الربط (Joining words): استخدم and للإضافة، but للتباين، because للسبب، so للنتيجة، when و while للروابط الزمنية.\n3) إثراء النص بالصفات والظروف: أضف صفات جذابة وظروف حال لترسم صورة ممتعة في ذهن القارئ.",
+    "examples": [
+      {
+        "en": "Last Friday, we went to the mountains. When we were climbing, a little boy went to the edge and nearly fell.",
+        "ar": "تدقيق الأزمنة: went (ماضي بسيط مع Last Friday) و were climbing (ماضي مستمر أثناء الحدث)."
+      },
+      {
+        "en": "My father saved him heroically, and the boy said, 'I must be more careful.'",
+        "ar": "استخدام ظرف الحال heroically وأداة الربط and."
+      }
+    ],
+    "quiz": {
+      "question": "In the sentence: 'When we ______ (climb), a little boy ______ (go) to the edge of the cliff', what are the correct verb forms?",
+      "options": [
+        "were climbing / went",
+        "climbed / was going",
+        "are climbing / goes",
+        "climb / will go"
+      ],
+      "correct": 0,
+      "explanation": "Page 89 Writing Tip 9: When + past continuous ('were climbing') for the background ongoing action, and past simple ('went') for the interrupting event."
+    },
+    "formula": "1) تدقيق الأفعال: حدد هل تكتب عن الماضي أو الحاضر أو المستقبل؟ استخدم دلالات الوقت (yesterday, last Friday, now, tomorrow) لتصحيح صيغة الفعل.\n2) أدوات الربط (Joining words): استخدم and للإضافة، but للتباين، because للسبب، so للنتيجة، when و while للروابط الزمنية.\n3) إثراء النص بالصفات والظروف: أضف صفات جذابة وظروف حال لترسم صورة ممتعة في ذهن القارئ.",
+    "explanation": "خطوات مراجعة المسودة وتدقيق تطابق أزمنة الأفعال مع الدلالات الزمنية واستخدام أدوات الربط والصفات والظروف.",
+    "level": "الوحدة 8 (مراجعة)",
+    "page": 86
+  },
+  {
+    "id": "semester-2-master-grammar",
+    "title": "الخلاصة الكبرى لقواعد الفصل الدراسي الثاني (Semester 2 Master Grammar Consolidation)",
+    "unit": 8,
+    "badge": "الوحدة 8 (مراجعة شاملة)",
+    "category": "Grammar Master Bank",
+    "summary": "الموسوعة الختامية لقواعد الكورس الثاني: المبني للمجهول، المستقبل، ترتيب الظروف، والوصل.",
+    "rule": "1) المبني للمجهول (Passive Voice):\n   - مضارع بسيط: Object + is / are + p.p. (e.g. The articles are written in Cairo).\n   - ماضي بسيط: Object + was / were + p.p. (e.g. A house was ruined by fire).\n   - أفعال ناقصة: Object + can be + p.p. (e.g. Plastic bottles can be recycled).\n2) المستقبل (Future Forms):\n   - be going to + verb: للنوايا والخطط والتنبؤ بدليل.\n   - will + verb: للوعود والقرارات الفورية.\n   - Future + when + Present Simple: (e.g. What are you going to do when you leave school?).\n3) ترتيب الظروف (Order of Adverbs - M-P-T):\n   - Manner (حال) + Place (مكان) + Time (زمان).\n   - مثال: He played well (M) in the stadium (P) yesterday (T).\n4) ضمائر الوصل (Relative Pronouns):\n   - who: للعاقل (e.g. The pilot who flew the plane).\n   - which / that: لغير العاقل والحيوان (e.g. The aeroplane which landed safely).",
+    "examples": [
+      {
+        "en": "The letter was delivered yesterday (Past Passive).",
+        "ar": "تم تسليم الرسالة يوم أمس (مبني للمجهول في الماضي البسيط)."
+      },
+      {
+        "en": "Ali drove carefully (Manner) on the highway (Place) this morning (Time).",
+        "ar": "ترتيب الظروف الثلاثي: حال (carefully) ثم مكان (on the highway) ثم زمان (this morning)."
+      },
+      {
+        "en": "She is going to study medicine when she finishes high school.",
+        "ar": "مستقبل مخطط مع جملة الوصل الزمنية when + مضارع بسيط finishes."
+      }
+    ],
+    "quiz": {
+      "question": "Which of the following sentences correctly follows the Manner-Place-Time (M-P-T) adverb order rule?",
+      "options": [
+        "Mazin sang beautifully (M) in the concert (P) last night (T)",
+        "Mazin sang last night (T) in the concert (P) beautifully (M)",
+        "Mazin sang in the concert (P) beautifully (M) last night (T)",
+        "Mazin beautifully (M) last night (T) sang in the concert (P)"
+      ],
+      "correct": 0,
+      "explanation": "Page 73 & 88: The Golden Adverb Rule is M-P-T: Manner (beautifully) + Place (in the concert) + Time (last night)."
+    },
+    "formula": "1) المبني للمجهول (Passive Voice):\n   - مضارع بسيط: Object + is / are + p.p. (e.g. The articles are written in Cairo).\n   - ماضي بسيط: Object + was / were + p.p. (e.g. A house was ruined by fire).\n   - أفعال ناقصة: Object + can be + p.p. (e.g. Plastic bottles can be recycled).\n2) المستقبل (Future Forms):\n   - be going to + verb: للنوايا والخطط والتنبؤ بدليل.\n   - will + verb: للوعود والقرارات الفورية.\n   - Future + when + Present Simple: (e.g. What are you going to do when you leave school?).\n3) ترتيب الظروف (Order of Adverbs - M-P-T):\n   - Manner (حال) + Place (مكان) + Time (زمان).\n   - مثال: He played well (M) in the stadium (P) yesterday (T).\n4) ضمائر الوصل (Relative Pronouns):\n   - who: للعاقل (e.g. The pilot who flew the plane).\n   - which / that: لغير العاقل والحيوان (e.g. The aeroplane which landed safely).",
+    "explanation": "الموسوعة الختامية لقواعد الكورس الثاني: المبني للمجهول، المستقبل، ترتيب الظروف، والوصل.",
+    "level": "الوحدة 8 (مراجعة شاملة)",
+    "page": 86
+  }
+];
+
 window.TOPIC_CARDS = {
   "261": {
     "unit": 1,

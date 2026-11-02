@@ -28,6 +28,7 @@
   <script src="curriculum_data_chemistry.js"></script>
   <script src="curriculum_diagrams_biology.js"></script>
   <script src="curriculum_data_biology.js"></script>
+  <script src="curriculum_chapter_quizzes.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -2000,6 +2001,86 @@
       color: #991b1b;
     }
 
+    /* أنماط شريط التقدم وأزرار التنقل السريع والمؤقت للاختبارات التفاعلية المتقدمة */
+    .quiz-progress-track {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      border-radius: 9999px;
+      transition: width 0.3s ease;
+    }
+
+    .quiz-jump-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .quiz-jump-btn:hover {
+      border-color: #6366f1;
+      background: #eef2ff;
+      color: #4338ca;
+    }
+
+    .quiz-jump-btn.answered {
+      background: #e0e7ff;
+      border-color: #818cf8;
+      color: #3730a3;
+    }
+
+    .quiz-jump-btn.correct-eval {
+      background: #dcfce7;
+      border-color: #86efac;
+      color: #166534;
+    }
+
+    .quiz-jump-btn.wrong-eval {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #991b1b;
+    }
+
+    .quiz-timer-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .chapter-quiz-tree-item {
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chapter-quiz-tree-item:hover {
+      background: #ede9fe !important;
+      border-color: #8b5cf6 !important;
+    }
+
     /* نافذة المودال */
     .modal-overlay {
       position: fixed;
@@ -2845,7 +2926,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v5.0.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" class="version-badge">v5.1.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3564,30 +3645,118 @@
         </div>
       </div>
 
-      <!-- العرض الثاني: الاختبار التدريبي الذاتي الفوري -->
-      <div id="interactiveQuizViewContainer" class="hidden" style="max-width: 750px; margin: 0 auto;">
-        <div class="card" style="margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <h2 style="font-size: 1.15rem; font-weight: 800;">الاختبار التدريبي الفوري</h2>
-            <p style="font-size: 0.8rem; color: var(--slate-500);" id="examSubtitle">اختبار تدريبي على الدرس المختار</p>
+      <!-- العرض الثاني: الاختبار التدريبي الذاتي الفوري المتقدم -->
+      <div id="interactiveQuizViewContainer" class="hidden" style="max-width: 820px; margin: 0 auto;">
+        
+        <!-- بطاقة اختيار المادة والفصل وأدوات الاختبار الذكي -->
+        <div class="card" style="margin-bottom: 1.25rem; border-top: 4px solid var(--primary); box-shadow: var(--shadow);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--slate-100); padding-bottom: 0.75rem;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--primary-light); color: var(--primary); padding: 0.15rem 0.55rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 800; margin-bottom: 0.25rem;">
+                <span>🎯</span> بنك الاختبارات التفاعلية المنهجية (10+ أسئلة لكل فصل)
+              </div>
+              <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--slate-900); margin: 0;">الاختبار التفاعلي المنهجي الشامل</h2>
+              <p style="font-size: 0.8rem; color: var(--slate-500); margin: 0.15rem 0 0;" id="examSubtitle">
+                اختر المادة والفصل لمباشرة الاختبار الذكي مع التصحيح الفوري والمؤقت
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+              <span id="quizTimerDisplay" class="hidden quiz-timer-box">⏳ 15:00</span>
+              <button class="btn btn-secondary btn-sm" id="btnToggleQuizTimer" onclick="toggleQuizTimer()" style="font-size: 0.78rem; font-weight: 700;">
+                ⏱️ تشغيل المؤقت (15 دقيقة)
+              </button>
+              <button class="btn btn-secondary btn-sm" id="btnToggleInstantFeedback" onclick="toggleInstantFeedbackMode()" style="font-size: 0.78rem; font-weight: 700;">
+                ⚡ نمط التصحيح الفوري: <span id="instantFeedbackStatusText" style="color: #059669; font-weight: 800;">مفعّل</span>
+              </button>
+            </div>
           </div>
-          <button class="btn btn-secondary btn-sm" onclick="generateQuizForCurrentLesson()">
-            🔄 توليد أسئلة جديدة
-          </button>
+
+          <!-- أدوات اختيار المادة والفصل -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; align-items: flex-end; margin-bottom: 1rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">المادة الدراسية:</label>
+              <select id="quizSubjectSelect" class="form-control" onchange="onQuizSubjectChanged()" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
+                <option value="3">📘 اللغة الإنجليزية (English for Iraq)</option>
+                <option value="4">📙 اللغة العربية - الجزء الأول</option>
+                <option value="5">📙 اللغة العربية - الجزء الثاني</option>
+                <option value="6">🕌 التربية الإسلامية وأحكام التلاوة</option>
+                <option value="7">⚛️ مادة الفيزياء (6 فصول)</option>
+                <option value="8">📐 مادة الرياضيات (7 فصول)</option>
+                <option value="9">🌍 مادة الاجتماعيات (6 فصول)</option>
+                <option value="10">🧪 مادة الكيمياء (6 فصول)</option>
+                <option value="11">🧬 مادة علم الأحياء (7 فصول)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">الفصل / الوحدة الدراسية:</label>
+              <select id="quizChapterSelect" class="form-control" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
+                <!-- يتم التوليد ديناميكياً -->
+              </select>
+            </div>
+
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              <button class="btn btn-primary btn-sm" onclick="startSelectedChapterQuiz()" style="font-weight: 800; font-size: 0.82rem; padding: 0.5rem 0.9rem; flex: 1;">
+                🚀 بدء اختبار الفصل
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="startRandomSubjectQuiz()" style="font-weight: 800; font-size: 0.82rem; padding: 0.5rem 0.75rem;" title="توليد 10 أسئلة مختارة عشوائياً من كافة فصول المادة">
+                🎲 عشوائي
+              </button>
+            </div>
+          </div>
+
+          <!-- شريط تقدم الإجابات وشبكة القفز السريع للأسئلة -->
+          <div style="background: #f8fafc; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; font-weight: 700; color: var(--slate-600); margin-bottom: 0.35rem;">
+              <span id="quizProgressText">تمت إجابة 0 من 10 أسئلة</span>
+              <span id="quizAccuracyText" style="color: var(--primary);">نسبة الإنجاز: 0%</span>
+            </div>
+            <div class="quiz-progress-track">
+              <div id="quizProgressBar" class="quiz-progress-fill" style="width: 0%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem;">
+              <span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700;">التنقل المباشر بين الأسئلة:</span>
+              <div id="quizJumpGrid" style="display: flex; gap: 0.35rem; flex-wrap: wrap; align-items: center;">
+                <!-- يتم توليد أزرار 1 إلى 10 ديناميكياً -->
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="quizResultBanner" class="hidden card" style="text-align: center; margin-bottom: 1.25rem; background: var(--success-light); border-color: var(--success);">
-          <h3 style="font-size: 1.1rem; font-weight: 800; color: #065f46;" id="quizScoreTitle">نتيجة الاختبار</h3>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;" id="quizScoreText"></p>
+        <!-- بطاقة النتيجة والتقييم الشامل والشهادة المعتمدة -->
+        <div id="quizResultBanner" class="hidden card" style="text-align: center; margin-bottom: 1.5rem; border: 2.5px solid var(--primary); background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);">
+          <div id="quizMedalIcon" style="font-size: 3rem; margin-bottom: 0.35rem;">🏆</div>
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: #1e1b4b; margin: 0 0 0.25rem;" id="quizScoreTitle">شهادة إنجاز الاختبار التفاعلي</h3>
+          <div style="display: inline-block; background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 9999px; font-weight: 800; font-size: 0.95rem; margin: 0.4rem 0;" id="quizGradeBadge">
+            ممتاز (100%)
+          </div>
+          <p style="font-size: 1rem; font-weight: 700; color: var(--slate-800); margin: 0.4rem 0 0.75rem;" id="quizScoreText"></p>
+          <p style="font-size: 0.85rem; color: var(--slate-600); max-width: 600px; margin: 0 auto 1.25rem; line-height: 1.6;" id="quizPedagogicalFeedback"></p>
+          
+          <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" onclick="resetCurrentQuiz()" style="font-weight: 800; padding: 0.45rem 1.1rem;">
+              🔄 إعادة الاختبار
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btnFilterMistakes" onclick="filterIncorrectQuestionsOnly()" style="font-weight: 800; padding: 0.45rem 1rem; background: #fff1f2; color: #be123c; border-color: #fecdd3;">
+              🔍 مراجعة الأسئلة الخاطئة فقط
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="printInteractiveQuiz()" style="font-weight: 800; padding: 0.45rem 1rem;">
+              🖨️ طباعة تقرير النتيجة
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="switchTab('study')" style="font-weight: 800; padding: 0.45rem 1rem;">
+              📚 العودة لقاعة المذاكرة
+            </button>
+          </div>
         </div>
 
+        <!-- حاوية الأسئلة التفاعلية -->
         <div id="quizQuestionsContainer">
           <!-- الأسئلة -->
         </div>
 
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <button class="btn btn-primary" id="submitQuizBtn" onclick="submitQuiz()" style="min-width: 200px;">
-            تأكيد وتسليم الإجابات
+        <div style="margin-top: 1.5rem; text-align: center; padding-bottom: 2rem;">
+          <button class="btn btn-primary" id="submitQuizBtn" onclick="submitQuiz()" style="min-width: 250px; font-size: 1rem; font-weight: 800; padding: 0.75rem 2rem; border-radius: 12px; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);">
+            تأكيد وتسليم الإجابات والتقييم 🎯
           </button>
         </div>
       </div>
@@ -3651,7 +3820,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.0.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.0.1</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3676,7 +3845,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.0.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.1.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3734,7 +3903,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v5.0.0</span>
+        <span class="version-badge" id="footerVersionBadge">v5.1.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -4621,7 +4790,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.0.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.1.0</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4649,13 +4818,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.0.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.0.1؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.0.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge" class="version-badge">v5.1.0</span>
         </div>
       </div>
 
@@ -4703,9 +4872,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '5.0.0';
-    const CURRENT_VERSION_LABEL = 'v5.0.0';
-    const SYSTEM_VERSION = 'v5.0.0';
+    const CURRENT_VERSION = '5.1.0';
+    const CURRENT_VERSION_LABEL = 'v5.1.0';
+    const SYSTEM_VERSION = 'v5.1.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -7461,6 +7630,22 @@
           group.appendChild(item);
         });
 
+        // إضافة زر اختبار الفصل التفاعلي المباشر (10 أسئلة منهجية) - إعداد المهندس أسامة خليل هاشم
+        const chapterQuizItem = document.createElement('div');
+        chapterQuizItem.className = 'chapter-quiz-tree-item';
+        chapterQuizItem.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 0.4rem;">
+            <span>📝</span>
+            <span style="font-weight: 800;">اختبار ${chap.title}</span>
+          </div>
+          <span class="badge" style="background: #4f46e5; color: #ffffff; font-weight: 800; font-size: 0.65rem; padding: 0.15rem 0.45rem; border-radius: 9999px;">10 أسئلة 🚀</span>
+        `;
+        chapterQuizItem.onclick = (e) => {
+          e.stopPropagation();
+          startChapterQuiz(currId, chap.id);
+        };
+        group.appendChild(chapterQuizItem);
+
         treeContainer.appendChild(group);
       });
 
@@ -7889,6 +8074,25 @@
         `;
         chunksContainer.appendChild(box);
       });
+
+      // بطاقة التحدي واختبار الفصل التفاعلي المباشر بنهاية الدرس - إعداد المهندس أسامة خليل هاشم
+      if (activeChapter) {
+        const quizBanner = document.createElement('div');
+        quizBanner.style.cssText = 'margin-top: 2rem; background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 2px dashed #6366f1; border-radius: 12px; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; box-shadow: var(--shadow-sm);';
+        quizBanner.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <div style="width: 44px; height: 44px; border-radius: 10px; background: #4f46e5; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800; flex-shrink: 0;">📝</div>
+            <div>
+              <div style="font-weight: 800; font-size: 0.95rem; color: #1e1b4b;">اختبر معلوماتك في "${activeChapter.title}"</div>
+              <div style="font-size: 0.78rem; color: #4338ca; margin-top: 0.15rem;">اختبار تفاعلي وزاري شامل يضم 10 أسئلة مصممة وفق معايير الاختبارات الرسمية - إعداد المهندس أسامة خليل هاشم</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="background: #4f46e5; font-size: 0.85rem; padding: 0.6rem 1.25rem; font-weight: 800; border-radius: 8px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);" onclick="startChapterQuiz(${currId}, ${activeChapter.id})">
+            🚀 خوض اختبار الفصل الآن (10 أسئلة)
+          </button>
+        `;
+        chunksContainer.appendChild(quizBanner);
+      }
     }
 
     // ----------------------------------------------------
@@ -11141,6 +11345,7 @@
             <button class="btn ${currentActiveGrammarFilter == 5 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(5, this)">الوحدة 5</button>
             <button class="btn ${currentActiveGrammarFilter == 6 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(6, this)">الوحدة 6</button>
             <button class="btn ${currentActiveGrammarFilter == 7 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(7, this)">الوحدة 7</button>
+            <button class="btn ${currentActiveGrammarFilter == 8 ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit(8, this)">الوحدة 8</button>
           `;
         } else if (currentMode === 'ar') {
           filtersEl.innerHTML = `
@@ -11552,10 +11757,12 @@
           matchesUnit = r.unit === Number(currentActiveGrammarFilter);
         }
         const matchesSearch = !search || 
-          r.title.toLowerCase().includes(search) || 
-          r.explanation.toLowerCase().includes(search) || 
-          r.formula.toLowerCase().includes(search) ||
-          r.examples.some(ex => ex.en.toLowerCase().includes(search) || ex.ar.includes(search));
+          (r.title && r.title.toLowerCase().includes(search)) || 
+          (r.explanation && r.explanation.toLowerCase().includes(search)) || 
+          (r.summary && r.summary.toLowerCase().includes(search)) || 
+          (r.formula && r.formula.toLowerCase().includes(search)) || 
+          (r.rule && r.rule.toLowerCase().includes(search)) || 
+          (r.examples && r.examples.some(ex => (ex.en && ex.en.toLowerCase().includes(search)) || (ex.ar && ex.ar.includes(search))));
         return matchesUnit && matchesSearch;
       });
 
@@ -11629,12 +11836,10 @@
               ${rule.title}
             </h3>
 
-            <div class="formula-box">
-              ${rule.formula}
-            </div>
+            ${(rule.formula || rule.rule) ? `<div class="formula-box">${rule.formula || rule.rule}</div>` : ''}
 
             <p style="font-size: 0.83rem; color: var(--slate-600); margin-bottom: 0.75rem; line-height: 1.6; white-space: pre-line;">
-              ${rule.explanation}
+              ${rule.explanation || rule.summary || rule.rule || ''}
             </p>
 
             <div style="margin-bottom: 0.75rem;">
@@ -11704,2895 +11909,201 @@
       }
     }
 
-    // توليد اختبار فوري على الدرس
-    async function generateQuizForCurrentLesson() {
-      const currId = appData.currentCurriculumId || 3;
-      const lessonId = appData.currentLessonId;
+    // =========================================================================
+    // محرك وبنك الاختبارات التفاعلية المنهجية الشاملة لكافة المواد الـ 9 (10+ أسئلة لكل فصل)
+    // إعداد المهندس أسامة خليل هاشم
+    // =========================================================================
+    // currentQuizQuestions معرف في النطاق العام
+    // selectedQuizAnswers معرف في النطاق العام
+    let quizTimerInterval = null;
+    let quizTimerSecondsRemaining = 900; // 15 دقيقة
+    let quizTimerActive = false;
+    let instantFeedbackMode = true;
+    let currentQuizMeta = {
+      currId: 3,
+      chapterId: null,
+      title: '',
+      subjectName: ''
+    };
 
-      document.getElementById('examSubtitle').innerText = `اختبار تدريبي على الدرس المختار`;
-      selectedQuizAnswers = {};
-      document.getElementById('quizResultBanner').classList.add('hidden');
-      document.getElementById('submitQuizBtn').classList.remove('hidden');
+    // أسماء المواد المعتمدة بالنظام
+    const QUIZ_SUBJECT_NAMES = {
+      3: 'اللغة الإنجليزية (English for Iraq)',
+      4: 'اللغة العربية - الجزء الأول',
+      5: 'اللغة العربية - الجزء الثاني',
+      6: 'التربية الإسلامية وأحكام التلاوة',
+      7: 'مادة الفيزياء',
+      8: 'مادة الرياضيات',
+      9: 'مادة الاجتماعيات',
+      10: 'مادة الكيمياء',
+      11: 'مادة علم الأحياء'
+    };
 
-      // محاولة التوليد عبر الخادم إذا كان محلياً
-      if (IS_LOCAL_SERVER) {
-        try {
-          if (lessonId) {
-            const genRes = await fetch(`http://127.0.0.1:8000/api/exams/generate-lesson-quiz/${lessonId}?count=4`, { method: 'POST' });
-            if (genRes.ok) {
-              const qsRes = await fetch(`http://127.0.0.1:8000/api/exams/questions?curriculum_id=${currId}&lesson_id=${lessonId}`);
-              if (qsRes.ok) {
-                const serverQuestions = await qsRes.json();
-                if (serverQuestions.length > 0) {
-                  currentQuizQuestions = serverQuestions.map(q => ({
-                    id: q.id,
-                    question: q.question_text,
-                    options: q.options || [],
-                    correct: (q.options || []).indexOf(q.correct_answer),
-                    explanation: q.explanation || 'إجابة معتمدة من الدرس'
-                  }));
-                  renderQuizQuestions();
-                  switchTab('exams');
-                  return;
-                }
-              }
-            }
-          }
-        } catch (err) {
-          console.log('Generating local smart quiz');
+    // تعبئة قائمة فصول المادة المحددة في واجهة الاختبار
+    function populateQuizChaptersDropdown(currId, selectedChapId = null) {
+      const select = document.getElementById('quizChapterSelect');
+      if (!select) return;
+      select.innerHTML = '';
+
+      const chaptersMap = window.CHAPTER_QUIZZES ? window.CHAPTER_QUIZZES[currId] : null;
+      if (!chaptersMap) {
+        select.innerHTML = '<option value="">-- لا تتوفر فصول --</option>';
+        return;
+      }
+
+      const chapterIds = Object.keys(chaptersMap).map(Number).sort((a, b) => a - b);
+      chapterIds.forEach((chapId, idx) => {
+        const quizObj = chaptersMap[chapId];
+        const opt = document.createElement('option');
+        opt.value = chapId;
+        opt.textContent = `${quizObj.title} (${quizObj.questions.length} أسئلة)`;
+        if (selectedChapId && Number(selectedChapId) === chapId) {
+          opt.selected = true;
+        } else if (!selectedChapId && idx === 0) {
+          opt.selected = true;
         }
-      }
-      console.log('Using offline lesson quiz questions');
-
-
-      // خريطة الأسئلة التدريبية المتخصصة حسب الدرس المختار
-      const LESSON_QUIZZES = {
-        // الوحدة 8: المراجعة الشاملة 2 (Unit 8: Review 2)
-        3021: [
-          {
-            "id": 30211,
-            "question": "What mistake did Susan make when she tried to call Liz at six o'clock (Page 86)?",
-            "options": [
-              "She wrote down the wrong telephone number (432147)",
-              "She called at six in the morning instead of evening",
-              "She forgot how to dial a telephone",
-              "She spoke to Liz but forgot what to say"
-            ],
-            "correct": 0,
-            "explanation": "Page 86 & 106: Susan dialed 432147, but a woman answered saying no one named Liz lived there; Susan had written down the wrong number."
-          },
-          {
-            "id": 30212,
-            "question": "Why was Jalal stranded outside a dark house in England late at night (Page 86)?",
-            "options": [
-              "He wrote down the wrong street address (West Street instead of West Road or Drive)",
-              "His flight to England was delayed by four days",
-              "The taxi driver refused to let him out of the cab",
-              "His friend Dave had emigrated to another country"
-            ],
-            "correct": 0,
-            "explanation": "Page 86 & 106: Jalal gave the taxi driver 24 West Street, but the house was pitch dark; his friend Dave had given him a different street suffix or number."
-          },
-          {
-            "id": 30213,
-            "question": "What happened to Jane Smith when she arrived at 4:00 PM for her job interview (Page 86)?",
-            "options": [
-              "Her interview was scheduled for yesterday, so she missed it and wrote the wrong day",
-              "Miss Brown offered her the job instantly without asking any questions",
-              "The office was closed for summer vacation",
-              "She arrived two hours early and waited in the canteen"
-            ],
-            "correct": 0,
-            "explanation": "Page 86 & 106: The receptionist explained that the interview was yesterday; Jane had mistakenly written it down on the wrong day in her diary."
-          },
-          {
-            "id": 30214,
-            "question": "What is the best listening practice to avoid making note-taking errors like Susan and Jalal?",
-            "options": [
-              "Write notes with clear abbreviations and read them back to confirm with the speaker",
-              "Rely entirely on memory without writing anything down",
-              "Assume you know the information without checking",
-              "Hang up immediately after hearing the first digit"
-            ],
-            "correct": 0,
-            "explanation": "Page 86 Listening Strategy: Always note down specific numbers/addresses clearly and read them back to verify."
-          }
-        ],
-        3022: [
-          {
-            "id": 30221,
-            "question": "What is the golden rule for reading aloud fluently in English (Page 87)?",
-            "options": [
-              "Say words in connected thought groups and keep your eyes on the words ahead",
-              "Stop and take a breath after every single individual word",
-              "Read as quickly as possible without pausing for commas or full stops",
-              "Keep your eyes focused only on the current letter being pronounced"
-            ],
-            "correct": 0,
-            "explanation": "Page 87: When reading aloud, don't stop after each word. Say words in connected groups, keeping your eyes looking ahead."
-          },
-          {
-            "id": 30222,
-            "question": "What emotional tone of voice should you use when reading: 'The food was bad, and the waiters were very slow. Worst of all, they weren't even polite'?",
-            "options": [
-              "Disappointed, critical, and dissatisfied tone",
-              "Excited and jubilant tone with loud laughter",
-              "Whispering as if telling a secret",
-              "Singing with a joyful cheerful melody"
-            ],
-            "correct": 0,
-            "explanation": "Page 87: Speech bubble 1 expresses extreme disappointment with an awful restaurant, requiring an unhappy, complaining voice tone."
-          },
-          {
-            "id": 30223,
-            "question": "In the cumulative memory game 'Going on holiday', what must players do?",
-            "options": [
-              "Repeat all previous items in order before adding a new item with correct list intonation",
-              "Invent a completely new game rule each round",
-              "Translate every item into five different languages",
-              "Say only items that start with the letter Z"
-            ],
-            "correct": 0,
-            "explanation": "Page 87: Each player recites the accumulated list ('toothbrush, toothpaste, sunglasses...') before adding their own item."
-          },
-          {
-            "id": 30224,
-            "question": "Which opening phrase is polite and appropriate when making a telephone call to apply for an advertised job (Page 87)?",
-            "options": [
-              "Hello, I am calling about the advertisement for garden help",
-              "Hey you, give me that job right now",
-              "Why did you put an advertisement in the paper?",
-              "Guess who is calling you today!"
-            ],
-            "correct": 0,
-            "explanation": "Page 87 & 54: Polite telephone convention requires greeting, introducing oneself, and stating the specific reason for calling."
-          }
-        ],
-        3023: [
-          {
-            "id": 30231,
-            "question": "What is a 'Topic Sentence' and where is it usually located in an English paragraph (Page 88)?",
-            "options": [
-              "The sentence that gives the main idea, usually at the beginning of the paragraph",
-              "The last word of the paragraph written in capital letters",
-              "A footnote found at the bottom of the page",
-              "A sentence containing only numbers and dates"
-            ],
-            "correct": 0,
-            "explanation": "Page 88: Topic sentences summarize the core theme and typically appear as the first sentence of each paragraph."
-          },
-          {
-            "id": 30232,
-            "question": "Why did Muhammad study Maths and English especially hard at school (Page 88)?",
-            "options": [
-              "Because he needed both subjects to become a pilot, and English is the 'language of the air'",
-              "Because his parents forced him to become a school teacher",
-              "Because there were no other subjects taught in his school",
-              "Because he wanted to become a bank manager"
-            ],
-            "correct": 0,
-            "explanation": "Page 88: Muhammad knew English is the international language of aviation and Maths is essential for navigation and flight calculations."
-          },
-          {
-            "id": 30233,
-            "question": "Where did Muhammad travel to complete his professional pilot training (Page 88)?",
-            "options": [
-              "To an aviation college in Germany",
-              "To a language institute in Canada",
-              "To a sports club in Australia",
-              "To an art academy in Italy"
-            ],
-            "correct": 0,
-            "explanation": "Page 88: With top school marks, Muhammad was accepted into an aviation college in Germany."
-          },
-          {
-            "id": 30234,
-            "question": "What does a 'solo flight' mean in pilot training (Page 88)?",
-            "options": [
-              "Flying an aeroplane completely alone without an instructor on board",
-              "Flying a plane with 200 passengers across the Atlantic",
-              "Flying a toy remote-controlled helicopter",
-              "Sitting inside a parked aircraft without turning the engine on"
-            ],
-            "correct": 0,
-            "explanation": "Page 88: A solo flight is a crucial pilot milestone where the trainee takes off and flies the aircraft entirely by themselves."
-          }
-        ],
-        3024: [
-          {
-            "id": 30241,
-            "question": "According to Writing Tip 7, what is an effective daily method to master spelling (Page 89)?",
-            "options": [
-              "Study five words every night: spell them aloud, cover and write them, and test yourself",
-              "Read an entire 500-page dictionary in one sitting",
-              "Never write down any word unless looking directly at the book",
-              "Avoid using any words with more than four letters"
-            ],
-            "correct": 0,
-            "explanation": "Page 89 Writing Tip 7: Consistent study of five words a night with spelling aloud and testing is the most effective approach."
-          },
-          {
-            "id": 30242,
-            "question": "Which of the following sentences has 100% accurate punctuation according to Writing Tip 8 (Page 89)?",
-            "options": [
-              "\"You've done well in Maths, English and Arabic,\" my mother said, \"but what about History? Your mark is very bad.\"",
-              "Youve done well in maths english and arabic my mother said but what about history your mark is very bad.",
-              "\"You've done well in maths, english and arabic\" my mother said, \"but what about history. your mark is very bad\"",
-              "\"You've done well in Maths, English and Arabic\" my mother said but what about History? your mark is very bad."
-            ],
-            "correct": 0,
-            "explanation": "Page 89: Capitalization of school subjects (Maths, English, Arabic, History), speech marks for direct quotes, apostrophe in You've, and question mark after History."
-          },
-          {
-            "id": 30243,
-            "question": "In the story on Page 89, what are the correct verb forms for: 'When we ______ (climb), a little boy ______ (go) to the edge'?",
-            "options": [
-              "were climbing / went",
-              "climbed / was going",
-              "climb / goes",
-              "are climbing / will go"
-            ],
-            "correct": 0,
-            "explanation": "Page 89 Writing Tip 9: 'When we were climbing' (past continuous for the continuous activity) interrupted by 'went' (past simple)."
-          },
-          {
-            "id": 30244,
-            "question": "Why should writers use adjectives and adverbs in their descriptions (Writing Tip 11, Page 89)?",
-            "options": [
-              "To paint vivid mental pictures and make writing engaging and interesting",
-              "To make sentences longer so they fill up more pages",
-              "Because nouns and verbs are forbidden in English essays",
-              "To confuse the teacher when grading the composition"
-            ],
-            "correct": 0,
-            "explanation": "Page 89 Writing Tip 11: Adjectives and adverbs enrich descriptions and paint vivid imagery for the reader."
-          }
-        ],
-        3025: [
-          {
-            "id": 30251,
-            "question": "Which of the following is the correct Present Simple Passive transformation of: 'They print the newspaper in Baghdad'?",
-            "options": [
-              "The newspaper is printed in Baghdad",
-              "The newspaper was printed in Baghdad",
-              "The newspaper are printed in Baghdad",
-              "The newspaper will printed in Baghdad"
-            ],
-            "correct": 0,
-            "explanation": "Unit 5 & 8: Present Simple Passive uses Object + is + Past Participle ('The newspaper is printed')."
-          },
-          {
-            "id": 30252,
-            "question": "Which sentence demonstrates the correct Manner-Place-Time (M-P-T) order of adverbs?",
-            "options": [
-              "The boy ran quickly (M) in the park (P) yesterday (T)",
-              "The boy ran yesterday (T) in the park (P) quickly (M)",
-              "The boy ran in the park (P) quickly (M) yesterday (T)",
-              "The boy quickly (M) yesterday (T) ran in the park (P)"
-            ],
-            "correct": 0,
-            "explanation": "Unit 7 & 8: The universal English adverb order is Manner (quickly) + Place (in the park) + Time (yesterday)."
-          },
-          {
-            "id": 30253,
-            "question": "Complete the sentence with the correct relative pronoun: 'A pilot is a professional person ______ flies aeroplanes.'",
-            "options": [
-              "who",
-              "which",
-              "where",
-              "whose"
-            ],
-            "correct": 0,
-            "explanation": "Unit 6 & 8: 'Who' is used as a defining relative pronoun for people."
-          },
-          {
-            "id": 30254,
-            "question": "What is the correct future form for a planned intention: 'Muhammad ______ (train) to be a pilot next month'?",
-            "options": [
-              "is going to train",
-              "trained",
-              "has trained",
-              "was training"
-            ],
-            "correct": 0,
-            "explanation": "Unit 6 & 8: 'be going to + verb' expresses planned future intentions and decisions."
-          },
-          {
-            "id": 30255,
-            "question": "Which modal verb expresses strong moral/legal prohibition in environmental rules?",
-            "options": [
-              "mustn't",
-              "might",
-              "can",
-              "should"
-            ],
-            "correct": 0,
-            "explanation": "Unit 7 & 8: 'Mustn't' expresses strict obligation not to do something (e.g., 'You mustn't drop litter in the river')."
-          },
-          {
-            "id": 30256,
-            "question": "Transform into the Past Simple Passive: 'Fire ruined a house in Castle Street.'",
-            "options": [
-              "A house in Castle Street was ruined by fire",
-              "A house in Castle Street is ruined by fire",
-              "A house in Castle Street were ruined by fire",
-              "A house in Castle Street will be ruined by fire"
-            ],
-            "correct": 0,
-            "explanation": "Unit 5 & 8: Past Simple Passive uses singular was + past participle ruined: 'was ruined by fire'."
-          }
-        ],
-        // الوحدة 7: العالم من حولنا والبيئة (Unit 7: The World Around Us)
-        3001: [
-          {
-            "id": 30011,
-            "question": "What is the full grammatical sentence for the headline: 'Sixteen elephants found dead'?",
-            "options": [
-              "Sixteen elephants were found dead",
-              "Sixteen elephants find dead",
-              "Sixteen elephants has been dead",
-              "Sixteen elephants is found dead"
-            ],
-            "correct": 0,
-            "explanation": "Page 71 & 79: Headlines omit auxiliary verbs like 'were' to save space: 'Sixteen elephants were found dead.'"
-          },
-          {
-            "id": 30012,
-            "question": "Why are articles and auxiliary verbs omitted in newspaper headlines?",
-            "options": [
-              "To save space and attract reader attention quickly",
-              "Because journalists don't understand English grammar",
-              "To make the news intentionally confusing",
-              "Because grammar rules ban them in printed media"
-            ],
-            "correct": 0,
-            "explanation": "Page 71: Headline language uses condensation (ellipsis) to be concise and eye-catching."
-          },
-          {
-            "id": 30013,
-            "question": "Which environmental crisis was reported from Brazil on page 71?",
-            "options": [
-              "More and more of the rainforest being destroyed",
-              "Severe litter accumulation drowning cities",
-              "Industrial emissions causing lung danger in Tokyo",
-              "Factory waste contaminating river water"
-            ],
-            "correct": 0,
-            "explanation": "Page 71: The headline from Brazil states: 'More and more of the rainforest being destroyed.'"
-          }
-        ],
-        3002: [
-          {
-            "id": 30021,
-            "question": "How much money can pay for an African child to attend school for an entire year?",
-            "options": [
-              "100 dollars",
-              "10 dollars",
-              "500 dollars",
-              "1,000 dollars"
-            ],
-            "correct": 0,
-            "explanation": "Page 72: 'In some countries, just 100 dollars can pay for one child to go to school for a year.'"
-          },
-          {
-            "id": 30022,
-            "question": "What is a 'bring-and-buy sale'?",
-            "options": [
-              "An event where everyone brings items to sell and buys items to raise charity funds",
-              "A market where only commercial businesses can sell items",
-              "A supermarket where food is given out for free",
-              "A book store owned by the headmistress"
-            ],
-            "correct": 0,
-            "explanation": "Page 72: 'Everyone brings something to be sold. And everyone buys something to collect money.'"
-          },
-          {
-            "id": 30023,
-            "question": "Which modal expresses a strong, mandatory obligation rather than simple advice?",
-            "options": [
-              "must",
-              "should",
-              "may",
-              "might"
-            ],
-            "correct": 0,
-            "explanation": "Page 72: 'Must is stronger than should. It means have to or have got to (an absolute obligation).'"
-          }
-        ],
-        3003: [
-          {
-            "id": 30031,
-            "question": "Why is the beautiful snow leopard illegally hunted by poachers?",
-            "options": [
-              "For its valuable grey fur with black spots",
-              "For its long horns",
-              "For its rich blubber and oil",
-              "To protect mountain farmland"
-            ],
-            "correct": 0,
-            "explanation": "Page 73: 'The snow leopard is hunted for its fur. Its fur is grey with biggish black spots.'"
-          },
-          {
-            "id": 30032,
-            "question": "Why is the rare golden toad facing extinction?",
-            "options": [
-              "People are draining water from its wetland breeding habitats",
-              "Poachers hunt it for horn ornaments",
-              "Because Arctic sea ice is thawing",
-              "Because of heavy plastic pollution in oceans"
-            ],
-            "correct": 0,
-            "explanation": "Page 73: 'People are draining water from the places where they live. When the water goes completely, it will disappear.'"
-          },
-          {
-            "id": 30033,
-            "question": "Why are polar bears in even greater danger today than in the past?",
-            "options": [
-              "Because Arctic sea ice is melting as a result of climate change",
-              "Because they are hunted for whale oil",
-              "Because they cannot live in cold temperatures",
-              "Because wetlands are disappearing in Africa"
-            ],
-            "correct": 0,
-            "explanation": "Page 73: 'Polar bears are in more danger because the sea ice is melting as a result of climate change.'"
-          }
-        ],
-        3004: [
-          {
-            "id": 30041,
-            "question": "What is the natural habitat of the blue whale?",
-            "options": [
-              "Sea and oceans",
-              "High, cold mountains",
-              "Freshwater wetlands",
-              "Hot desert sand dunes"
-            ],
-            "correct": 0,
-            "explanation": "Page 74: Whales live in the sea and oceans; the blue whale is the largest animal alive today (29 metres)."
-          },
-          {
-            "id": 30042,
-            "question": "Which of the following phrases expresses polite agreement?",
-            "options": [
-              "I agree. You're right.",
-              "I disagree. I think you're wrong.",
-              "I am not sure at all.",
-              "I think you are mistaken."
-            ],
-            "correct": 0,
-            "explanation": "Page 74: Expressions of agreeing include 'I agree' and 'You're right'."
-          },
-          {
-            "id": 30043,
-            "question": "In what environment do toads and amphibians naturally live?",
-            "options": [
-              "Wetlands near water",
-              "Arctic frozen ice",
-              "Mountain rocky cliffs",
-              "Arid sandy deserts"
-            ],
-            "correct": 0,
-            "explanation": "Page 74: Toads live near water in wetland habitats."
-          }
-        ],
-        3005: [
-          {
-            "id": 30051,
-            "question": "What are Iraq's two great historic rivers mentioned on page 75?",
-            "options": [
-              "The Tigris and the Euphrates",
-              "The Nile and the Amazon",
-              "The Thames and the Seine",
-              "The Danube and the Rhine"
-            ],
-            "correct": 0,
-            "explanation": "Page 75: 'Iraq, with its two great rivers running the length of the country (Tigris and Euphrates)...'"
-          },
-          {
-            "id": 30052,
-            "question": "What does the word 'volunteer' mean in the context of cleaning rivers?",
-            "options": [
-              "A person who does a job or service willingly without pay",
-              "A government inspector who fines polluters",
-              "A factory manager dumping waste",
-              "A commercial boat driver"
-            ],
-            "correct": 0,
-            "explanation": "Page 75: Vocabulary definition: 'volunteer: a person who does a job without pay.'"
-          },
-          {
-            "id": 30053,
-            "question": "Complete the inspirational slogan from page 75: 'If we want to have clean rivers, we must have ________.'",
-            "options": [
-              "clean minds",
-              "more factories",
-              "more motor cars",
-              "more waste dumps"
-            ],
-            "correct": 0,
-            "explanation": "Page 75: 'Remember - you are the solution to river pollution. If we want to have clean rivers, we must have clean minds.'"
-          }
-        ],
-        3006: [
-          {
-            "id": 30061,
-            "question": "Why is the world getting warmer according to the environmental scientist on page 76?",
-            "options": [
-              "We burn fossil fuels like coal, gas and oil, and drive cars that produce heat-trapping gases",
-              "The sun is moving closer to Earth every decade",
-              "Because of extensive tree planting across continents",
-              "Because rivers are flowing into the sea"
-            ],
-            "correct": 0,
-            "explanation": "Page 76: Burning coal, gas, oil, wood and driving cars produce gases that trap heat in the atmosphere."
-          },
-          {
-            "id": 30062,
-            "question": "Between 'may' and 'might', which one indicates a LESS certain possibility?",
-            "options": [
-              "might",
-              "may",
-              "must",
-              "will"
-            ],
-            "correct": 0,
-            "explanation": "Page 76 & 119: 'Might is less certain than may. Both are used to talk about the present or future.'"
-          },
-          {
-            "id": 30063,
-            "question": "What is a major consequence if global sea levels rise due to melting ice caps?",
-            "options": [
-              "Some coastal and low-lying land will disappear underwater",
-              "Deserts will instantly turn into lush forests",
-              "Summers will become colder everywhere",
-              "Water pollution in rivers will immediately vanish"
-            ],
-            "correct": 0,
-            "explanation": "Page 76: 'The ice caps will melt, so the sea level will rise. This means some land will disappear.'"
-          }
-        ],
-        3007: [
-          {
-            "id": 30071,
-            "question": "Why did Tamara's father tell her that leaving food was wasteful?",
-            "options": [
-              "Because millions of people around the world are hungry",
-              "Because he wanted to feed the dog",
-              "Because the food was extremely spicy",
-              "Because the restaurant was closing"
-            ],
-            "correct": 0,
-            "explanation": "Page 77 & 105: 'That's so wasteful, Tamara. People around the world are hungry. Think of them next time.'"
-          },
-          {
-            "id": 30072,
-            "question": "What is the English proverb Kamal quotes when Nasser wastes electricity?",
-            "options": [
-              "'Waste not, want not!'",
-              "'Actions speak louder than words!'",
-              "'Time is money!'",
-              "'Better safe than sorry!'"
-            ],
-            "correct": 0,
-            "explanation": "Page 77 & 105: 'I think it's terrible to waste electricity like this... Waste not, want not! Remember?'"
-          },
-          {
-            "id": 30073,
-            "question": "Which imperative form correctly prohibits throwing rubbish in the street?",
-            "options": [
-              "Don't drop litter in the street!",
-              "Not to drop litter in the street!",
-              "No drop litter in the street!",
-              "Doesn't drop litter in the street!"
-            ],
-            "correct": 0,
-            "explanation": "Page 77: Direct negative command: 'Don't drop litter in the street!'"
-          }
-        ],
-        3008: [
-          {
-            "id": 30081,
-            "question": "What are the primary causes of the moving desert in Iraq?",
-            "options": [
-              "Low rainfall, tree cutting, sand storms, and burning oil wells",
-              "Heavy winter rains and river flooding in the north",
-              "The expansion of green belt forests in Karbala",
-              "The restoration of fresh water to southern marshes"
-            ],
-            "correct": 0,
-            "explanation": "Page 78: 'Sand storms, low rainfall, tree cutting and burning oil wells have all made many parts of Iraq a dry zone.'"
-          },
-          {
-            "id": 30082,
-            "question": "How much area is one traditional Iraqi agricultural 'donam'?",
-            "options": [
-              "2,500 square metres",
-              "1,000 square metres",
-              "500 square metres",
-              "10,000 square metres"
-            ],
-            "correct": 0,
-            "explanation": "Page 78: Footnote: 'A donam is a unit of land area equivalent to 2,500 m².'"
-          },
-          {
-            "id": 30083,
-            "question": "How are authorities working to stop the moving desert in west Al Anbar and west Karbala?",
-            "options": [
-              "By establishing 'green belt' projects (planting barrier trees)",
-              "By constructing glass bottle walls",
-              "By draining remaining lakes",
-              "By paving the desert with concrete"
-            ],
-            "correct": 0,
-            "explanation": "Page 78: 'One way to stop the moving desert in Iraq is to start green belt projects... in west Al Anbar and west Karbala.'"
-          }
-        ],
-        3009: [
-          {
-            "id": 30091,
-            "question": "Which of the following phrases expresses polite disagreement?",
-            "options": [
-              "I disagree. I think you're wrong.",
-              "I agree. You're right.",
-              "I think that's right.",
-              "I'll bring some clothes."
-            ],
-            "correct": 0,
-            "explanation": "Page 79: 'Disagreeing: I disagree. I think you're wrong.'"
-          },
-          {
-            "id": 30092,
-            "question": "Complete the spontaneous offer: 'I have some plants. I ________ bring them for the sale.'",
-            "options": [
-              "'ll",
-              "must",
-              "had to",
-              "was"
-            ],
-            "correct": 0,
-            "explanation": "Page 79: Making offers: 'I have some plants. I'll bring some plants.'"
-          },
-          {
-            "id": 30093,
-            "question": "Which sentence expresses future possibility rather than certainty?",
-            "options": [
-              "There may be less rain in some regions next summer.",
-              "There was less rain last year.",
-              "There is rain outside right now.",
-              "It must rain every single Tuesday."
-            ],
-            "correct": 0,
-            "explanation": "Page 79: 'Describing possible future events: There may be less rain.'"
-          }
-        ],
-        3010: [
-          {
-            "id": 30101,
-            "question": "How did Jad get the group past the huge queue at the Eiffel Tower?",
-            "options": [
-              "He told the man he was a famous photographer from Iraq and his friends were international journalists",
-              "He bought all remaining VIP tickets",
-              "He climbed the emergency stairs",
-              "He pretended to be a French government official"
-            ],
-            "correct": 0,
-            "explanation": "Page 80: 'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international magazine.'"
-          },
-          {
-            "id": 30102,
-            "question": "What did Jad's photograph from the top of the tower show when they reached the bottom?",
-            "options": [
-              "Only the back of Johnny's head",
-              "A panoramic view of Paris",
-              "The River Thames in London",
-              "A golden toad in the grass"
-            ],
-            "correct": 0,
-            "explanation": "Page 81: Jad laughed: 'These photographs may not get into our magazine... All I can see is the back of your head, Johnny!'"
-          },
-          {
-            "id": 30103,
-            "question": "What phrase did all the friends shout together when Johnny dropped his phone during the video call?",
-            "options": [
-              "'Use your hands!'",
-              "'Waste not, want not!'",
-              "'Keep fit!'",
-              "'Look out!'"
-            ],
-            "correct": 0,
-            "explanation": "Page 81: Marcus asked 'Why didn't you catch it, Johnny?' and they all shouted: 'Use your hands!'"
-          }
-        ],
-        3011: [
-          {
-            "id": 30111,
-            "question": "What four materials are needed to make the recycled bottle pencil case on page 85?",
-            "options": [
-              "Two plastic bottles, a zipper fastener, scissors, and glue",
-              "Glass jars, string, wax, and paint",
-              "Cardboard tubes, paper clips, ruler, and ink",
-              "Tin cans, hammer, nails, and wire"
-            ],
-            "correct": 0,
-            "explanation": "Page 85: 'You will need: two plastic bottles, a fastener, scissors, glue.'"
-          },
-          {
-            "id": 30112,
-            "question": "What is the amazing visitor house on page 83 made of?",
-            "options": [
-              "4,000 recycled glass bottles",
-              "100 plastic cups",
-              "Old cardboard tubes",
-              "Recycled newspapers"
-            ],
-            "correct": 0,
-            "explanation": "Page 83: 'This is a small house for people to visit. It is made from 4,000 glass bottles!'"
-          },
-          {
-            "id": 30113,
-            "question": "What is the first step in creating the plastic bottle pencil case?",
-            "options": [
-              "Use scissors to cut the top off each bottle so one is tall and one is short",
-              "Zip the two bottles together immediately",
-              "Fill the bottles with water and glue",
-              "Decorate the outside with paper clips"
-            ],
-            "correct": 0,
-            "explanation": "Page 85: 'Step 1: Use the scissors to cut the top off each bottle so that one stays long and the other is short.'"
-          }
-        ],
-        // الوحدة 6: المهن والوظائف (Unit 6: Jobs and Occupations)
-        2981: [
-          {
-                    "id": 29811,
-                    "question": "What does an architect do as their main job?",
-                    "options": [
-                              "Plans and designs buildings in an office",
-                              "Repairs car engines in a garage",
-                              "Puts out fires and saves people",
-                              "Flies planes to different countries"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 60 states: 'An architect plans and designs buildings. They work in an office.'"
-          },
-          {
-                    "id": 29812,
-                    "question": "Where does a mechanic usually work and what do they do?",
-                    "options": [
-                              "Works in a workshop or garage and repairs people's cars",
-                              "Works in a hospital and takes care of sick people",
-                              "Works on an airplane and serves meals",
-                              "Works in a classroom and teaches English"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 60 states: 'A mechanic works in a workshop or a garage and repairs people's cars.'"
-          },
-          {
-                    "id": 29813,
-                    "question": "What is a businesswoman described as being very good at?",
-                    "options": [
-                              "Working with money and running a business",
-                              "Designing large suspension bridges",
-                              "Planting crops on a farm",
-                              "Cooking food in a busy restaurant"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 60 states: 'A businesswoman works in an office and runs a business. She is very good at working with money.'"
-          },
-          {
-                    "id": 29814,
-                    "question": "Why is a firefighter's job described as very dangerous?",
-                    "options": [
-                              "They put out fires, save people, and wear special clothes",
-                              "They fly through stormy clouds in planes",
-                              "They count large sums of coins all day",
-                              "They travel to different countries on trains"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 60 states: 'A firefighter's job is very dangerous. They put out fires and save people. A firefighter has to wear special clothes.'"
-          }
-],
-        2982: [
-          {
-                    "id": 29821,
-                    "question": "How long did Dr Salwa have to study at university to become a doctor?",
-                    "options": [
-                              "For six years",
-                              "For four years",
-                              "For two years",
-                              "For eight years"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 61 states: 'After school, she went to university. She had to study for six years.'"
-          },
-          {
-                    "id": 29822,
-                    "question": "What is the textbook definition of the word 'hard-working'?",
-                    "options": [
-                              "The opposite of 'lazy'",
-                              "Somebody who works only at night",
-                              "Quick to get angry with others",
-                              "Unable to learn school subjects"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 61 vocabulary matching: 'hard-working: the opposite of lazy'."
-          },
-          {
-                    "id": 29823,
-                    "question": "What were Hanan's best subjects at school before she studied Business Administration?",
-                    "options": [
-                              "Maths and English",
-                              "Physics and Chemistry",
-                              "History and Geography",
-                              "Biology and Art"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 61 states: 'Her best subjects at school were Maths and English. After school, she went to college to study Business Administration.'"
-          },
-          {
-                    "id": 29824,
-                    "question": "Why does Dr Salwa like being a doctor in the hospital?",
-                    "options": [
-                              "Because in this job she can help people",
-                              "Because she enjoys travelling abroad",
-                              "Because she works only two hours a day",
-                              "Because she does not like studying"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 61 states: 'She likes being a doctor because in this job she can help people.'"
-          }
-],
-        2983: [
-          {
-                    "id": 29831,
-                    "question": "What emergency message came in at 10:00 when firefighter Mazin was on duty?",
-                    "options": [
-                              "'The supermarket is on fire! People are trapped inside!'",
-                              "'A cat is stuck in a tall pine tree!'",
-                              "'The fire station roof is leaking water!'",
-                              "'A bus has run out of petrol in town!'"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 62 states: '10:00 The supermarket is on fire! Come quickly! People are trapped inside.'"
-          },
-          {
-                    "id": 29832,
-                    "question": "What was Mazin doing at 10:05 before rushing out to emergencies?",
-                    "options": [
-                              "He checked his equipment",
-                              "He was eating breakfast",
-                              "He was sleeping in the dormitory",
-                              "He was driving back home"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 62 states: 'When I arrived at the fire station yesterday morning, I checked my equipment at 10:05.'"
-          },
-          {
-                    "id": 29833,
-                    "question": "What second incident occurred at 14:00 (2:00 p.m.)?",
-                    "options": [
-                              "An accident on the ring road where a car was upside down and on fire",
-                              "A small bonfire in a school playground",
-                              "A fire alarm test at the city airport",
-                              "A thunderstorm over the Alps"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 62 states: '14:00 Accident on the ring road! A car was upside down and on fire.'"
-          },
-          {
-                    "id": 29834,
-                    "question": "What was the final outcome of the supermarket rescue operation?",
-                    "options": [
-                              "The firefighters saved all the trapped people",
-                              "The building could not be entered at all",
-                              "The fire put itself out naturally",
-                              "Only the shopkeeper escaped"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 62 states: 'We went into the building... We saved all the people.'"
-          }
-],
-        2984: [
-          {
-                    "id": 29841,
-                    "question": "In Game A of 'What's my job?', how many questions can Student 2 ask?",
-                    "options": [
-                              "Up to five 'yes' or 'no' questions",
-                              "Ten open essay questions",
-                              "Only one single question",
-                              "As many questions as they want without limit"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 63 states: 'Ask your partner up to five 'yes' or 'no' questions to try to find out what the job is.'"
-          },
-          {
-                    "id": 29842,
-                    "question": "Which profession from the unit 6 vocabulary looks after sheep in pastures?",
-                    "options": [
-                              "A shepherd",
-                              "A park-keeper",
-                              "An architect",
-                              "A secretary"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 63 includes 'shepherd' (راعي أغنام) in the core professions vocabulary."
-          },
-          {
-                    "id": 29843,
-                    "question": "Which of these professions is typically required to wear a formal uniform at work?",
-                    "options": [
-                              "A pilot and a police officer",
-                              "An author and an artist",
-                              "A novelist and a poet",
-                              "A website designer"
-                    ],
-                    "correct": 0,
-                    "explanation": "Pages 60 and 63 highlight that pilots, police officers, and firefighters wear official uniforms and special clothes."
-          },
-          {
-                    "id": 29844,
-                    "question": "If you ask: 'Do you work in an office and plan buildings?', what is the correct answer?",
-                    "options": [
-                              "You're an architect",
-                              "You're a mechanic",
-                              "You're a firefighter",
-                              "You're a bus driver"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 60 and 63 state: 'An architect plans and designs buildings. They work in an office.'"
-          }
-],
-        2985: [
-          {
-                    "id": 29851,
-                    "question": "According to the Eurostar timetable, what time does the first train leave London St Pancras for Paris?",
-                    "options": [
-                              "At 06:55",
-                              "At 08:30",
-                              "At 11:30",
-                              "At 14:00"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 64 states: 'The first train leaves at 06:55.'"
-          },
-          {
-                    "id": 29852,
-                    "question": "If a football match in Paris starts at 3:00 p.m. (15:00), which train arriving at 11:30 is the safest to catch?",
-                    "options": [
-                              "The 06:55 train",
-                              "The 12:55 train",
-                              "The 18:30 train",
-                              "The 20:00 train"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 64 notes that the 06:55 train arrives in Paris at 11:30, well before the 3 p.m. kickoff."
-          },
-          {
-                    "id": 29853,
-                    "question": "How do you express 14:00 in standard 12-hour conversational English?",
-                    "options": [
-                              "Two o'clock in the afternoon (2:00 p.m.)",
-                              "Four o'clock in the morning",
-                              "Ten o'clock at night",
-                              "Midnight"
-                    ],
-                    "correct": 0,
-                    "explanation": "In the 24-hour clock, 14:00 minus 12 equals 2:00 p.m."
-          },
-          {
-                    "id": 29854,
-                    "question": "Which of the following is the most polite phrase to ask for train schedule information at a station?",
-                    "options": [
-                              "'Excuse me, can you help me, please? What time does the next train leave?'",
-                              "'Tell me the train time now!'",
-                              "'Give me a ticket fast!'",
-                              "'Where is the train going today?'"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 64 highlights polite travel communication: 'Excuse me, can you help me, please? What time is the first train to Paris?'"
-          }
-],
-        2986: [
-          {
-                    "id": 29861,
-                    "question": "What is Firas planning to be when he finishes school and goes to university?",
-                    "options": [
-                              "A zoologist",
-                              "A dentist",
-                              "A pilot",
-                              "An architect"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 65 states: 'If he passes, he is going to go to university to study animals. He wants to be a zoologist.'"
-          },
-          {
-                    "id": 29862,
-                    "question": "What kind deed does Halla do when she visits the hospital?",
-                    "options": [
-                              "She takes flowers to patients who have no visitors and talks with them",
-                              "She cleans the hospital operating rooms",
-                              "She drives patients home in an ambulance",
-                              "She cooks meals for doctors"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 65 states: 'Some patients have no visitors. Halla takes flowers to these patients and sits and talks with them.'"
-          },
-          {
-                    "id": 29863,
-                    "question": "What does the word 'patient' mean when used as an adjective (adj)?",
-                    "options": [
-                              "Able to wait for a long time calmly without getting angry",
-                              "A sick person in a hospital bed",
-                              "A machine that takes photographs",
-                              "A difficult examination test"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 65 dictionary entry: 'patient (adj.): able to wait for a long time and stay calm without getting angry.'"
-          },
-          {
-                    "id": 29864,
-                    "question": "Which verb means the opposite of 'to pass an exam'?",
-                    "options": [
-                              "To fail an exam",
-                              "To take an exam",
-                              "To study an exam",
-                              "To write an exam"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 65 Work with Words explains: 'pass an exam' (ينجح) vs 'fail an exam' (يرسب)."
-          }
-],
-        2987: [
-          {
-                    "id": 29871,
-                    "question": "What is Sara's future career goal, and why?",
-                    "options": [
-                              "She wants to be a vet because she loves animals and excels in Biology",
-                              "She wants to be a pilot because she loves flying",
-                              "She wants to be an architect because she likes drawing buildings",
-                              "She wants to be a secretary because she likes typing emails"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 66 notes that Sara is friendly, hard-working, good at Biology and Chemistry, and wants to study veterinary medicine to help animals."
-          },
-          {
-                    "id": 29872,
-                    "question": "What are Adel's strongest school subjects according to his career plan?",
-                    "options": [
-                              "French, English and IT",
-                              "Geography and History",
-                              "Art and Music",
-                              "Woodwork and Physical Education"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 66 highlights that Adel is calm, patient, and excels in French, English, and Information Technology (IT)."
-          },
-          {
-                    "id": 29873,
-                    "question": "Choose the correct preposition: 'Sara is very good ________ Biology.'",
-                    "options": [
-                              "at",
-                              "in",
-                              "on",
-                              "with"
-                    ],
-                    "correct": 0,
-                    "explanation": "We always use the preposition 'at' after good / not good: 'good at Biology'."
-          },
-          {
-                    "id": 29874,
-                    "question": "Which personality adjective means someone who is pleasant, kind, and easy to talk to?",
-                    "options": [
-                              "Friendly",
-                              "Lazy",
-                              "Impatient",
-                              "Noisy"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 66 highlights 'friendly' as a key personality trait for career success."
-          }
-],
-        2988: [
-          {
-                    "id": 29881,
-                    "question": "What does Khalid enjoy crafting in his Woodwork lessons and at home?",
-                    "options": [
-                              "Tables, shelves and cupboards",
-                              "Planes and jet engines",
-                              "Gold medals and trophies",
-                              "Cars and motorbikes"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 67 states: 'I make things at home as well - tables, shelves and cupboards.'"
-          },
-          {
-                    "id": 29882,
-                    "question": "What is Dania's future aspiration when she finishes her Science degree?",
-                    "options": [
-                              "To fly to the Moon in a spacecraft as an astronaut",
-                              "To open a restaurant in London",
-                              "To become a bus driver in the Alps",
-                              "To work as a shop assistant in town"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 67 states: 'When I finish studying, I'm going to fly to the Moon in a spacecraft.'"
-          },
-          {
-                    "id": 29883,
-                    "question": "Which verb form correctly completes the sentence: 'When I ________ school, I am going to study Science.'?",
-                    "options": [
-                              "finish",
-                              "finished",
-                              "will finish",
-                              "am finishing"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 67 grammar rule: We always use the Present Simple tense in the 'when' clause when talking about the future."
-          },
-          {
-                    "id": 29884,
-                    "question": "Why is Dania described as very fit and healthy?",
-                    "options": [
-                              "Because she does a lot of sport",
-                              "Because she sleeps 14 hours a day",
-                              "Because she eats lots of chocolates",
-                              "Because she never walks"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 67 states: 'I'm also very fit and healthy because I do a lot of sport.'"
-          }
-],
-        2989: [
-          {
-                    "id": 29891,
-                    "question": "Which of the following sentences shows a prediction based on clear present evidence?",
-                    "options": [
-                              "'Look at those black clouds! It is going to rain.'",
-                              "'I might travel tomorrow maybe.'",
-                              "'I visited Paris two years ago.'",
-                              "'He often plays football on Sundays.'"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 68 Round Up illustrates predictions with evidence: 'Look at the clouds, it's going to rain.'"
-          },
-          {
-                    "id": 29892,
-                    "question": "What reading skill is defined as finding specific information in texts very quickly?",
-                    "options": [
-                              "Scanning",
-                              "Writing",
-                              "Translating",
-                              "Memorizing"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 68 Round Up states: 'practised scanning - finding information in texts very quickly.'"
-          },
-          {
-                    "id": 29893,
-                    "question": "Choose the correct relative clause pronoun: 'An architect is someone ________ designs buildings.'",
-                    "options": [
-                              "who",
-                              "which",
-                              "where",
-                              "when"
-                    ],
-                    "correct": 0,
-                    "explanation": "We use 'who' for people and professions: 'someone who designs buildings'."
-          },
-          {
-                    "id": 29894,
-                    "question": "Complete the warning: 'You have done no revision. You ________ fail the exam!'",
-                    "options": [
-                              "are going to",
-                              "did",
-                              "were",
-                              "shall"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 68 states: 'You've done no work. You're going to fail the exam.'"
-          }
-],
-        2990: [
-          {
-                    "id": 29901,
-                    "question": "What are the boys travelling to do in the Alps?",
-                    "options": [
-                              "They are all going to go skiing",
-                              "They are going to swim in the sea",
-                              "They are going to buy cars in Paris",
-                              "They are looking for lost treasure"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 69 states: 'What are we doing here anyway, Tom?' - 'We're all going to go skiing,' Tom replied."
-          },
-          {
-                    "id": 29902,
-                    "question": "According to Tom's instructions, which ski route was intended for beginners?",
-                    "options": [
-                              "The blue route",
-                              "The black route",
-                              "The red route",
-                              "The yellow route"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 69 states: 'you're going to go down a blue route. That's the one for beginners.'"
-          },
-          {
-                    "id": 29903,
-                    "question": "What did Tom warn the boys about the black ski routes?",
-                    "options": [
-                              "'Nobody is going to go down a black route; they are the most difficult.'",
-                              "'Black routes are the easiest slopes for children.'",
-                              "'Black routes are painted green in summer.'",
-                              "'Black routes are closed for repairs.'"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 69 states: 'And nobody is going to go down a black route,' said Tom. 'They are the most difficult.'"
-          },
-          {
-                    "id": 29904,
-                    "question": "What was Jad doing in the minibus while they drove along the steep alpine mountains?",
-                    "options": [
-                              "Holding his camera and taking photographs of the mountains",
-                              "Sleeping in the back seat",
-                              "Singing loud pop songs",
-                              "Reading a train timetable"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 69 states: 'Jad was holding his camera and taking photographs of the mountains. 'I'm going to be a photographer,' he said.'"
-          }
-],
-        2991: [
-          {
-                    "id": 29911,
-                    "question": "Why didn't Jad get off the ski chairlift when Johnny told him to?",
-                    "options": [
-                              "Because he wanted to take just one more photograph",
-                              "Because he fell asleep",
-                              "Because his skis were stuck to the chair",
-                              "Because he wanted to ride back down"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 70 states: 'Yeah, OK,' he replied. 'I just need to take one more photograph.' I got off the lift and Jad was still sitting down.'"
-          },
-          {
-                    "id": 29912,
-                    "question": "What catastrophic mistake did Johnny make at the trail fork signpost?",
-                    "options": [
-                              "He misremembered Tom's advice and thought black routes were easy",
-                              "He broke both of his ski poles",
-                              "He lost his map in the river",
-                              "He took off his skis and walked"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 70 states: 'I think Tom said the black routes are easy,' I said to myself, and I started skiing... down the black route!'"
-          },
-          {
-                    "id": 29913,
-                    "question": "What unexpected event happened when Johnny crossed the FINISH line banner?",
-                    "options": [
-                              "He won the ski race and received a gold medal around his neck",
-                              "He was disqualified for arriving late",
-                              "He was told to restart from the beginning",
-                              "He lost his camera in the trees"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 70 states: 'You won the race, Johnny!... 'Congratulations!' said a man, and he put a gold medal around my neck.'"
-          },
-          {
-                    "id": 29914,
-                    "question": "What did Jad joke that Johnny was going to be when he grows older?",
-                    "options": [
-                              "A professional skier",
-                              "An airline pilot",
-                              "A fire station chief",
-                              "A bus driver in Paris"
-                    ],
-                    "correct": 0,
-                    "explanation": "Page 70 concludes with Jad's words: 'I think I know what you're going to be when you're older, Johnny... A professional skier!'"
-          }
-],
-        // الوحدة 5: تلقي وإرسال المعلومات (Unit 5: Getting & Sending Info)
-        2961: [
-          {
-            id: 29611,
-            question: "When did the messenger horse service 'Al-Barid' start in the Arab world?",
-            options: ["In 670", "In 1926", "In 1896", "In 1492"],
-            correct: 0,
-            explanation: "Page 47 states: 'This messenger service started in 670. It was called Al-Barid.'"
-          },
-          {
-            id: 29612,
-            question: "What route could a good messenger pigeon fly without stopping?",
-            options: [
-              "From Cairo to Damascus",
-              "From Baghdad to London",
-              "From Paris to Rome",
-              "From Basra to Alexandria"
-            ],
-            correct: 0,
-            explanation: "Page 47 states: 'People used to use pigeons to carry messages from Egypt to Syria. A good pigeon could fly from Cairo to Damascus without stopping.'"
-          },
-          {
-            id: 29613,
-            question: "Why did people build lighthouses near the sea?",
-            options: [
-              "To warn ships of danger",
-              "To catch fish at night",
-              "To store grain and food",
-              "To send emails to islands"
-            ],
-            correct: 0,
-            explanation: "Page 47 states: 'People used to build lighthouses near the sea. The lighthouses warned ships of danger.'"
-          },
-          {
-            id: 29614,
-            question: "How did people on mountain tops send messages in ancient times?",
-            options: [
-              "Using smoke signals from fires",
-              "Using mobile phone masts",
-              "Using underwater cables",
-              "Using television screens"
-            ],
-            correct: 0,
-            explanation: "Page 47 states: 'People used to light fires on the tops of mountains and send messages using smoke signals.'"
-          }
-        ],
-        2962: [
-          {
-            id: 29621,
-            question: "Where should you look if you want to find the capital of Madagascar?",
-            options: ["In an atlas", "In a recipe book", "In a poetry anthology", "In a sports magazine"],
-            correct: 0,
-            explanation: "Page 48 states: 'If you want to know what the capital of Madagascar is, you can look it up in an atlas.'"
-          },
-          {
-            id: 29622,
-            question: "What can you use in the library to find out comprehensive facts about history?",
-            options: ["An encyclopedia", "A comic strip", "A calculator", "A novel"],
-            correct: 0,
-            explanation: "Page 48 states: 'You can use an encyclopedia in the library if you want to find out about history.'"
-          },
-          {
-            id: 29623,
-            question: "What is the core message of 'Critical Reading'?",
-            options: [
-              "A lot of information does not always mean good information",
-              "All internet information is 100% accurate",
-              "You should never check references",
-              "Read only the shortest paragraphs"
-            ],
-            correct: 0,
-            explanation: "Page 48 emphasizes: 'Remember, a lot of information does not always mean good information! We need to think critically about what we are reading.'"
-          },
-          {
-            id: 29624,
-            question: "Which question is essential when evaluating a source critically?",
-            options: [
-              "Who wrote the information and why did they write it?",
-              "What font color was chosen?",
-              "How many pictures are on the cover?",
-              "Was it printed on glossy paper?"
-            ],
-            correct: 0,
-            explanation: "Critical reading questions on page 48: Who wrote the information? Why did they write it? Can we find the same information in different sources? Are there references?"
-          }
-        ],
-        2963: [
-          {
-            id: 29631,
-            question: "How are words arranged in an English dictionary?",
-            options: [
-              "In strict alphabetical order from A to Z",
-              "By word length from shortest to longest",
-              "By date of publication",
-              "Randomly"
-            ],
-            correct: 0,
-            explanation: "Reading tip 6 on page 49 states: 'All the words in a dictionary are in alphabetical order. To find a word quickly, you need to know the alphabet very well.'"
-          },
-          {
-            id: 29632,
-            question: "In a dictionary entry, what does the abbreviation '(adv.)' mean?",
-            options: ["adverb (ظرف أو حال)", "adjective (صفة)", "advertisement (إعلان)", "advanced (متقدم)"],
-            correct: 0,
-            explanation: "Page 49 lists grammatical abbreviations: (adv.) stands for adverb."
-          },
-          {
-            id: 29633,
-            question: "In the sentence: 'He sat on the grassy bank and put his feet in the water', what does 'bank' mean?",
-            options: [
-              "A piece of ground next to a river (noun)",
-              "A place where you keep money (noun)",
-              "To keep money in a bank (verb)",
-              "To turn a plane left or right (verb)"
-            ],
-            correct: 0,
-            explanation: "Page 49 dictionary exercise: 'grassy bank' next to water corresponds to definition 3: a piece of ground next to a river (noun)."
-          },
-          {
-            id: 29634,
-            question: "In the sentence: 'The plane banked to the left as it got near the airport', what part of speech is 'banked'?",
-            options: ["A verb meaning to turn left or right", "A noun meaning a money vault", "An adjective meaning grassy", "A preposition"],
-            correct: 0,
-            explanation: "Page 49 entry: 'bank (v.) 6. to turn a plane left or right.' Here banked is a past tense verb."
-          }
-        ],
-        2964: [
-          {
-            id: 29641,
-            question: "When and where is the news article written in the story 'From Cairo to Baghdad'?",
-            options: [
-              "On Monday morning in Cairo",
-              "On Friday night in Baghdad",
-              "On Sunday afternoon in London",
-              "On Tuesday dawn in Damascus"
-            ],
-            correct: 0,
-            explanation: "Page 50 states: '1. On Monday morning, an article is written in Cairo.'"
-          },
-          {
-            id: 29642,
-            question: "How long does it take to send the article by email from Cairo to Baghdad (1,300 km)?",
-            options: ["Less than a minute", "Two whole days", "Six hours", "One week"],
-            correct: 0,
-            explanation: "Page 50 states: 'Next, it is sent by email to a newspaper office in Baghdad. This takes less than a minute.'"
-          },
-          {
-            id: 29643,
-            question: "What happens when the article arrives at the Baghdad newspaper office?",
-            options: [
-              "It is read by an editor",
-              "It is thrown away immediately",
-              "It is sold directly to readers",
-              "It is put on television"
-            ],
-            correct: 0,
-            explanation: "Page 50 states: '3. When the article arrives, it is read by an editor.'"
-          },
-          {
-            id: 29644,
-            question: "What does the editor do if he likes the article?",
-            options: [
-              "It is edited and inserted into the newspaper",
-              "He deletes it from the computer",
-              "He calls the police",
-              "He sends it back to Cairo"
-            ],
-            correct: 0,
-            explanation: "Page 50 states: '4. If the editor likes the article, it is edited and inserted into the newspaper.'"
-          }
-        ],
-        2965: [
-          {
-            id: 29651,
-            question: "When are the newspapers printed at the printing press?",
-            options: ["At night", "On Monday afternoon", "At noon on Tuesday", "Next Sunday"],
-            correct: 0,
-            explanation: "Page 51 states: 'Then, it is sent to the printing press, and at night, the newspapers are printed.'"
-          },
-          {
-            id: 29652,
-            question: "Change this active sentence to present passive: 'A reporter writes an article in Cairo.'",
-            options: [
-              "An article is written in Cairo.",
-              "An article was written in Cairo.",
-              "An article is write in Cairo.",
-              "An article writing in Cairo."
-            ],
-            correct: 0,
-            explanation: "Present passive for singular 'an article': is + past participle (written) = An article is written in Cairo."
-          },
-          {
-            id: 29653,
-            question: "Early on Tuesday morning, what happens to the newspapers?",
-            options: [
-              "They are sent to the shops",
-              "They are burned in the press",
-              "They are hidden under desks",
-              "They are rewritten by reporters"
-            ],
-            correct: 0,
-            explanation: "Page 51 states: 'Early on Tuesday morning, the newspapers are sent to the shops.'"
-          },
-          {
-            id: 29654,
-            question: "Why do we use the passive voice instead of active in newspaper distribution?",
-            options: [
-              "When what happens to things is more important than who does the action",
-              "Because active sentences are forbidden in English",
-              "Because reporters do not know grammar",
-              "To make sentences longer"
-            ],
-            correct: 0,
-            explanation: "Page 51 states: 'When we say what happens to people and things, we use passive verb forms... Notice we don't need to add by a reporter.'"
-          }
-        ],
-        2966: [
-          {
-            id: 29661,
-            question: "Who was John Logie Baird and what was his nationality?",
-            options: [
-              "A Scottish inventor who showed first pictures on a TV screen in 1926",
-              "An Italian painter who made radios",
-              "An American pilot who flew planes",
-              "A French doctor who built hospitals"
-            ],
-            correct: 0,
-            explanation: "Page 52 states: 'In London in 1926, Baird, a Scottish inventor, was the first person to show pictures on a television screen.'"
-          },
-          {
-            id: 29662,
-            question: "In 1902, what historic feat did Guglielmo Marconi achieve?",
-            options: [
-              "He sent a radio message from America to England across the Atlantic Ocean",
-              "He landed a spaceship on the moon",
-              "He invented the electric lightbulb",
-              "He published the first internet website"
-            ],
-            correct: 0,
-            explanation: "Page 52 states: 'Finally, in 1902, he sent a radio message from America to England.'"
-          },
-          {
-            id: 29663,
-            question: "Convert to past passive: 'Marconi invented the radio.'",
-            options: [
-              "The radio was invented by Marconi.",
-              "The radio is invented by Marconi.",
-              "The radio were invented by Marconi.",
-              "The radio has invent by Marconi."
-            ],
-            correct: 0,
-            explanation: "Past passive for singular 'The radio': was + past participle (invented) + by Marconi."
-          },
-          {
-            id: 29664,
-            question: "What did inventors work on after Alexander Bell invented the telephone?",
-            options: [
-              "On radio waves instead of electric signals to carry sound",
-              "On smoke signals and pigeons",
-              "On paper letters and horse messengers",
-              "On plastic cups and strings"
-            ],
-            correct: 0,
-            explanation: "Page 52 states: 'After the invention of the telephone by Alexander Bell, inventors worked on radio waves instead of electric signals to carry sound.'"
-          }
-        ],
-        2967: [
-          {
-            id: 29671,
-            question: "How does a landline phone send and receive signals?",
-            options: [
-              "Through a physical underground wire called a landline",
-              "Through satellite radio masts exclusively",
-              "Through pigeons and flags",
-              "Through sound waves in the ocean"
-            ],
-            correct: 0,
-            explanation: "Page 53 states: 'A landline phone sends and receives signals through a wire. The wire is called the landline.'"
-          },
-          {
-            id: 29672,
-            question: "What is an advantage of a landline phone compared to a mobile phone?",
-            options: [
-              "Landlines are often more reliable",
-              "You can take landlines into your pocket anywhere",
-              "Landlines can take high quality photos",
-              "Landlines don't need any connection"
-            ],
-            correct: 0,
-            explanation: "Page 53 states: 'Landline phones are less useful than mobile phones, because they can only be used in one place. However, they are often more reliable.'"
-          },
-          {
-            id: 29673,
-            question: "How does a mobile phone transmit calls without wires?",
-            options: [
-              "It sends signals using radio waves to a special mast",
-              "It connects directly by long rope",
-              "It flashes colored lights",
-              "It uses smoke puffs"
-            ],
-            correct: 0,
-            explanation: "Page 53 states: 'A mobile phone does not need a landline because it sends signals to a special mast, using radio waves.'"
-          },
-          {
-            id: 29674,
-            question: "Complete with the correct passive form: 'Mobile phones cannot _______ without batteries.'",
-            options: ["be used", "use", "be using", "been used"],
-            correct: 0,
-            explanation: "Passive with modal cannot: cannot + be + past participle (used) = cannot be used."
-          }
-        ],
-        2968: [
-          {
-            id: 29681,
-            question: "What is Susan's first rule when making an important phone call?",
-            options: [
-              "Introduce yourself immediately and say who you are",
-              "Wait silently for 30 seconds",
-              "Ask the person to tell a funny story",
-              "Speak in whispered tones"
-            ],
-            correct: 0,
-            explanation: "Page 54 states: 'DO introduce yourself. Always say who you are. Don't wait for the other person to ask who you are. It is not polite.'"
-          },
-          {
-            id: 29682,
-            question: "Why should you speak slowly and clearly on the phone?",
-            options: [
-              "Because the other person cannot see you or your gestures",
-              "To use up all your phone credit",
-              "Because microphones don't record normal speech",
-              "To sound like a robot"
-            ],
-            correct: 0,
-            explanation: "Page 54 states: 'DO speak slowly and clearly. Remember that the other person can't see you. Don't speak too fast even if you are nervous.'"
-          },
-          {
-            id: 29683,
-            question: "If you did not hear or understand a name over the phone, what should you say politely?",
-            options: [
-              "I'm sorry. Could you repeat that, please? Can you spell that, please?",
-              "You are speaking badly!",
-              "Hang up now!",
-              "Speak Arabic only!"
-            ],
-            correct: 0,
-            explanation: "Page 54 lists standard polite clarification phrases: 'I'm sorry. Could you repeat that, please? Can you spell that, please?'"
-          },
-          {
-            id: 29684,
-            question: "What mistake did Anas make when ringing the medical centre?",
-            options: [
-              "He didn't introduce himself first and spoke too fast when explaining his stomach ache",
-              "He called the fire department instead",
-              "He forgot what a doctor was",
-              "He sang a song"
-            ],
-            correct: 0,
-            explanation: "In Lesson 8 audio on page 54, Anas failed to introduce himself properly and rushed into his complaint without preparation."
-          }
-        ],
-        2969: [
-          {
-            id: 29691,
-            question: "Which tense and passive form is: 'Radio was invented by Marconi'?",
-            options: [
-              "Past simple passive (was/were + p.p.)",
-              "Present simple passive (is/are + p.p.)",
-              "Present continuous active",
-              "Future with will"
-            ],
-            correct: 0,
-            explanation: "Page 55 Round up: 'Past passive: was/were + past participle of a main verb. Radio was invented by Marconi.'"
-          },
-          {
-            id: 29692,
-            question: "What does the conjunction 'and' do in a sentence according to the Round Up page?",
-            options: [
-              "It links words and links clauses",
-              "It turns nouns into adverbs",
-              "It creates passive questions",
-              "It ends the conversation"
-            ],
-            correct: 0,
-            explanation: "Page 55 states: 'and (conj.) is used (1) to link words and (2) to link clauses: My mother and father are at home.'"
-          },
-          {
-            id: 29693,
-            question: "Which sentence is in the present passive with 'can'?",
-            options: [
-              "Mobile phones can be used almost anywhere.",
-              "Baird showed pictures in London in 1926.",
-              "She wrote an article in Cairo.",
-              "They are playing football in the garden."
-            ],
-            correct: 0,
-            explanation: "Page 55 Round up: 'Present passive with can: can + be + past participle of a main verb: Mobile phones can be used almost anywhere.'"
-          },
-          {
-            id: 29694,
-            question: "When answering the phone to a business or client, which greeting is recommended?",
-            options: [
-              "Layla Ahmed here. I'm calling about tomorrow's flight.",
-              "Who gave you this number?",
-              "Talk quickly, I am busy!",
-              "Guess my identity!"
-            ],
-            correct: 0,
-            explanation: "Page 55 model greeting: 'Layla Ahmed here. I'm calling about tomorrow's flight to Bahrain.'"
-          }
-        ],
-        2970: [
-          {
-            id: 29701,
-            question: "Why are there no buses or cars in the city centre of Venice?",
-            options: [
-              "Because Venice is a water city built on canals",
-              "Because the roads were undergoing construction",
-              "Because cars were banned only on Mondays",
-              "Because tourists don't like vehicles"
-            ],
-            correct: 0,
-            explanation: "Page 56 states: 'Venice isn't a place for buses and cars... Venice is a water city. Let's ride on a gondola. It's the best way to see Venice.'"
-          },
-          {
-            id: 29702,
-            question: "What happened to Marcus' mobile phone during the gondola ride?",
-            options: [
-              "It sank into the canal water when the gondola bumped into another boat",
-              "It was stolen by a tourist",
-              "He left it at the hotel in Rome",
-              "He gave it to the gondolier"
-            ],
-            correct: 0,
-            explanation: "Page 57 states: 'Our boat bumped into another gondola, and Marcus fell... We all looked and saw his phone sinking into the water.'"
-          },
-          {
-            id: 29703,
-            question: "Why was it difficult for the boys to find a pizza table in Venice?",
-            options: [
-              "Because all restaurants were packed with tourists and only had tables for two people",
-              "Because Italian pizza was completely sold out",
-              "Because restaurants were closed for the winter",
-              "Because Jad did not have any money"
-            ],
-            correct: 0,
-            explanation: "Page 57 states: 'We walked for half an hour, but we only found restaurants with tables for two people. And they're all tourists, looking for pizza!'"
-          },
-          {
-            id: 29704,
-            question: "Where did Johnny, Paolo, and Aziz finally find Jad and Marcus after 20 minutes?",
-            options: [
-              "Inside a pizza restaurant with Jad eating pizza and Marcus holding a new phone",
-              "At the train station heading home",
-              "Swimming in the canal looking for the lost phone",
-              "At the top of a lighthouse"
-            ],
-            correct: 0,
-            explanation: "Page 57 states: 'Then, after 20 minutes, we saw them — in a pizza restaurant! \"I'm sorry,\" answered Jad with his mouth full of pizza... \"And I got a new phone,\" said Marcus.'"
-          }
-        ],
-        2971: [
-          {
-            id: 29711,
-            question: "What is a 'chat forum' on the internet?",
-            options: [
-              "An online platform where people post topics and discuss differing opinions",
-              "A software to calculate bank accounts",
-              "A physical room inside a library",
-              "An antivirus program"
-            ],
-            correct: 0,
-            explanation: "Page 58 presents Global Chat as an online forum where users write posts and reply to discuss questions like 'Can money buy happiness?'"
-          },
-          {
-            id: 29712,
-            question: "What was EnglishTom44's argument about money and happiness in the forum?",
-            options: [
-              "Friends, family, and health are the things that make people truly happy, not money alone",
-              "Money is the only thing in life that matters",
-              "Rich people are never lonely",
-              "Happiness can be bought at supermarkets"
-            ],
-            correct: 0,
-            explanation: "Page 58 states: 'EnglishTom44 writes: Friends, family, health — all of these things are more important than money. They are the things that make people truly happy.'"
-          },
-          {
-            id: 29713,
-            question: "What argument did Tayyeb101 make to show health and money are connected?",
-            options: [
-              "A rich person can afford healthy nutritious food, a gym, and good doctors",
-              "Money cures all diseases automatically",
-              "Gyms are free for everyone",
-              "Health doesn't matter if you have a phone"
-            ],
-            correct: 0,
-            explanation: "Page 58 states: 'Tayyeb101 writes: A rich person can afford healthy food, a gym and good doctors. I think rich people can have a lot of friends, too!'"
-          },
-          {
-            id: 29714,
-            question: "In a four-paragraph 'For-and-Against Essay', what should you write in the third paragraph?",
-            options: [
-              "The arguments against the topic",
-              "The opening introduction of the topic",
-              "The arguments for the topic",
-              "A list of dictionary definitions"
-            ],
-            correct: 0,
-            explanation: "Page 59 essay instructions: 'In the third paragraph, give the arguments against.'"
-          }
-        ],
-
-        // الوحدة 4: المراجعة الشاملة 1 (Unit 4: Review 1)
-        294: [
-          {
-            id: 2941,
-            question: "What is the key advice in 'Listening Tip 2' when you don't understand a single word?",
-            options: [
-              "Stop listening and look it up in a dictionary immediately",
-              "Keep listening and try to guess the meaning from context",
-              "Ask the speaker to stop and repeat from the beginning",
-              "Give up and close your student book"
-            ],
-            correct: 1,
-            explanation: "Listening Tip 2 teaches: If you don't understand a word, keep listening! You can often guess the meaning or understand without knowing every word."
-          },
-          {
-            id: 2942,
-            question: "In the student notes for restaurant orders, what did 'fm chick. - r. + sal.' mean?",
-            options: [
-              "Fresh meat chicken, rice and salt",
-              "Fried chicken, rice and salad",
-              "Frozen chicken, roast and sauce",
-              "Fish meal chicken, rolls and soup"
-            ],
-            correct: 1,
-            explanation: "In Mr Andrews' order, 'fm chick. - r. + sal.' decoded to fried chicken with rice and salad."
-          },
-          {
-            id: 2943,
-            question: "In the radio sports broadcast, what was the final score between Iraq and Bahrain?",
-            options: [
-              "Iraq 2, Bahrain 1",
-              "Iraq 3, Bahrain 3",
-              "Iraq 1, Bahrain 0",
-              "Iraq 0, Bahrain 2"
-            ],
-            correct: 1,
-            explanation: "The radio announcer reported: 'At the end of an exciting game at the new National Stadium, the score was Iraq 3, Bahrain 3.'"
-          },
-          {
-            id: 2944,
-            question: "What advice did the teacher give Wendy to cure her morning headaches?",
-            options: [
-              "Take heavy headache pills every morning",
-              "Drink fizzy lemonade right before going to bed",
-              "Walk to and from school to get regular exercise",
-              "Stop going to school completely"
-            ],
-            correct: 2,
-            explanation: "The teacher advised Wendy to walk the one kilometre to school instead of being driven, and to avoid lemonade and crisps late at night."
-          }
-        ],
-        295: [
-          {
-            id: 29501,
-            question: "What should you do before you start reading according to Reading Tip 2?",
-            options: [
-              "Translate every single sentence into your native language",
-              "Look at the title and ask yourself what you already know about the topic",
-              "Count the exact number of words on the page",
-              "Memorize the last paragraph first"
-            ],
-            correct: 1,
-            explanation: "Reading Tip 2 recommends looking at the title (e.g. 'Cleaner streets') and asking: 'What do I know about this topic?' to activate prior knowledge."
-          },
-          {
-            id: 29502,
-            question: "What is the difference between 'Skimming' and 'Scanning'?",
-            options: [
-              "Skimming is reading backwards; Scanning is reading aloud",
-              "Skimming is reading quickly for general meaning; Scanning is searching for specific facts or numbers",
-              "Skimming is for dictionaries; Scanning is for stories only",
-              "Both techniques mean writing a summary of the text"
-            ],
-            correct: 1,
-            explanation: "Skimming is fast reading to get the general idea and topic sentences; scanning is targeted hunting for specific words, numbers, or dates."
-          },
-          {
-            id: 29503,
-            question: "In your vocabulary notebook, which grammatical group do words like 'delicious', 'shy', and 'fantastic' belong to?",
-            options: [
-              "Nouns",
-              "Adjectives",
-              "Adverbs",
-              "Prepositions"
-            ],
-            correct: 1,
-            explanation: "Adjectives describe feelings, places, and people (e.g. shy, delicious, fantastic)."
-          },
-          {
-            id: 29504,
-            question: "What is the recommended daily vocabulary expansion goal mentioned in Reading Tip 5?",
-            options: [
-              "Try to learn five new words every day",
-              "Learn fifty words once a month",
-              "Only learn new words the night before exams",
-              "Never write new words in a notebook"
-            ],
-            correct: 0,
-            explanation: "The curriculum recommends: 'You will read more easily if you learn more words by yourself. Try to learn five new words a day.'"
-          }
-        ],
-        2951: [
-          {
-            id: 29511,
-            question: "When you ask questions beginning with question words (What, Why, Who, When, How), what does your voice do?",
-            options: [
-              "Your voice goes UP at the end (Rising Intonation)",
-              "Your voice goes DOWN at the end (Falling Intonation)",
-              "Your voice must always remain whispered",
-              "Your voice stays on a flat monotone"
-            ],
-            correct: 1,
-            explanation: "Speaking Tip 4 teaches: When asking questions beginning with question words, your voice goes down at the end (Falling Intonation)."
-          },
-          {
-            id: 29512,
-            question: "In which of the following questions does your voice go UP at the end (Rising Intonation)?",
-            options: [
-              "How are you?",
-              "When do you have swimming lessons?",
-              "Have you been to the doctor?",
-              "What is your name?"
-            ],
-            correct: 2,
-            explanation: "'Have you been to the doctor?' is an auxiliary Yes/No question, so your voice goes UP at the end ➚."
-          },
-          {
-            id: 29513,
-            question: "How should you read aloud according to Speaking Tip 3?",
-            options: [
-              "Stop after each word to take a breath",
-              "Read aloud in connected word groups (chunks) with eyes looking ahead",
-              "Read silently without moving your lips",
-              "Speak as quietly as possible"
-            ],
-            correct: 1,
-            explanation: "Words are said in rhythmic groups (chunks). While saying one word, keep your eyes on the words following it."
-          },
-          {
-            id: 29514,
-            question: "At the sports centre reception, when is the swimming class for beginners?",
-            options: [
-              "At ten o'clock on Saturday morning",
-              "At two o'clock on Sunday afternoon",
-              "At seven o'clock on Friday evening",
-              "At noon on Wednesday"
-            ],
-            correct: 0,
-            explanation: "The receptionist states: 'The beginners' class is at ten o'clock on Saturday morning.'"
-          }
-        ],
-        2952: [
-          {
-            id: 29521,
-            question: "When proofreading your first draft, what 4 things must you check?",
-            options: [
-              "Spelling, punctuation, wrong words, missing words",
-              "Title size, ink color, pen type, page border",
-              "Word count, font name, dictionary, paper thickness",
-              "Cover picture, price, barcode, author signature"
-            ],
-            correct: 0,
-            explanation: "Writing Tip 3 instructs: Check spelling, punctuation, wrong words, and missing words before writing the final neat copy."
-          },
-          {
-            id: 29522,
-            question: "What is a 'Topic Sentence' in paragraph organization?",
-            options: [
-              "The closing sentence thanking the reader",
-              "The opening sentence stating what the whole paragraph is about",
-              "A sentence written in red ink",
-              "A list of grammatical definitions"
-            ],
-            correct: 1,
-            explanation: "It is best to start each paragraph with a topic sentence — a sentence that states what the paragraph is about."
-          },
-          {
-            id: 29523,
-            question: "What does 'Paint a picture' mean in creative writing?",
-            options: [
-              "Dip your paintbrush in watercolor paint",
-              "Use vivid adjectives and adverbs so the reader can imagine and see the scene",
-              "Print a digital image from the internet",
-              "Avoid using any adjectives or feelings"
-            ],
-            correct: 1,
-            explanation: "Painting a picture with words means selecting descriptive adjectives and adverbs to make events vivid and clear to the reader."
-          },
-          {
-            id: 29524,
-            question: "How does a 'Spidergram' diagram help in planning a paragraph?",
-            options: [
-              "It catches errors automatically like spellcheck",
-              "It brainstorms ideas on radiating branches and helps number them in chronological order",
-              "It replaces the need to write a draft",
-              "It calculates the final exam mark"
-            ],
-            correct: 1,
-            explanation: "A spidergram allows writing the central theme in the middle, noting activities on branches, and numbering them in best order before writing."
-          }
-        ],
-        2953: [
-          {
-            id: 29531,
-            question: "Which sentence correctly demonstrates the possessive apostrophe for plural boys?",
-            options: [
-              "These are the boy's bags.",
-              "These are the boys' bags.",
-              "These are the boys's bags.",
-              "These are the boies bags."
-            ],
-            correct: 1,
-            explanation: "For regular plural nouns ending in -s, place the apostrophe after the s: the boys' bags (more than one boy)."
-          },
-          {
-            id: 29532,
-            question: "Choose the correct time expression: 'Mazin has been a firefighter _______ five years.'",
-            options: [
-              "since",
-              "for",
-              "during",
-              "at"
-            ],
-            correct: 1,
-            explanation: "We use 'for' with a period or duration of time (five years), while 'since' is for a specific starting point."
-          },
-          {
-            id: 29533,
-            question: "Which combination of sports verbs is correct?",
-            options: [
-              "play swimming, go tennis, do judo",
-              "play tennis, go swimming, do judo",
-              "do football, play running, go karate",
-              "go gymnastics, do sailing, play athletics"
-            ],
-            correct: 1,
-            explanation: "We say: play tennis (ball game), go swimming (-ing activity), and do judo (martial art)."
-          },
-          {
-            id: 29534,
-            question: "'Ali _______ be shy, but now he is very confident and has lots of friends.'",
-            options: [
-              "used to",
-              "use to",
-              "is used to",
-              "uses to"
-            ],
-            correct: 0,
-            explanation: "'Used to + infinitive' describes a past habit or state that has changed in the present."
-          },
-          {
-            id: 29535,
-            question: "Which advice uses 'should / shouldn't' correctly?",
-            options: [
-              "You should to take some exercise regularly.",
-              "You shouldn't drink too much fizzy cola before sleeping.",
-              "You shouldn't eating crisps all day.",
-              "You should going to the doctor."
-            ],
-            correct: 1,
-            explanation: "Modal verbs should/shouldn't are followed by bare infinitive: You shouldn't drink too much fizzy cola."
-          }
-        ],
-
-        // الوحدة 3: الرياضة والألعاب
-        283: [
-          {
-            id: 2831,
-            question: "Which verb do we use with ball games like football, basketball and tennis?",
-            options: ["play", "go", "do", "make"],
-            correct: 0,
-            explanation: "Page 28 teaches: We use 'play' with team sports and ball games: play football, play tennis."
-          },
-          {
-            id: 2832,
-            question: "Which of the following sports uses the verb 'go'?",
-            options: ["swimming", "judo", "basketball", "karate"],
-            correct: 0,
-            explanation: "Sports ending in -ing take the verb 'go': go swimming, go horse riding, go sailing."
-          },
-          {
-            id: 2833,
-            question: "Complete the sentence: 'Saad _______ judo to get strong and confident.'",
-            options: ["does", "plays", "goes", "runs"],
-            correct: 0,
-            explanation: "Martial arts like judo and karate use the verb 'do' (Saad does judo)."
-          },
-          {
-            id: 2834,
-            question: "How do you politely express your sporting interest?",
-            options: ["I'd like to play volleyball.", "I am playing volleyball yesterday.", "I will to play volleyball.", "I play volleyball must."],
-            correct: 0,
-            explanation: "We use 'I'd like to + base verb' to express polite sporting desires."
-          }
-        ],
-        284: [
-          {
-            id: 2841,
-            question: "What are the three skill levels mentioned on the sports centre timetable?",
-            options: ["Beginners, advanced, and team practice", "Fast, slow, and middle", "Children, adults, and seniors", "Morning, afternoon, and night"],
-            correct: 0,
-            explanation: "Page 29 lists: beginners, advanced, and team practice."
-          },
-          {
-            id: 2842,
-            question: "When is the volleyball beginners' class at the sports centre?",
-            options: ["On Monday, from 5 to 7 o'clock", "On Friday, at 9 o'clock", "On Sunday morning", "Every night at midnight"],
-            correct: 0,
-            explanation: "The timetable states: Volleyball Beginners: Mon. 5-7."
-          }
-        ],
-        286: [
-          {
-            id: 2861,
-            question: "In the basketball game result (Babil 60 - Kirkuk 54), which sentence is correct?",
-            options: ["Babil beat Kirkuk.", "Kirkuk beat Babil.", "Babil lost to Kirkuk.", "Kirkuk won the game."],
-            correct: 0,
-            explanation: "Page 31 states: Babil beat Kirkuk (because Babil scored 60 and Kirkuk scored 54)."
-          },
-          {
-            id: 2862,
-            question: "Complete the sentence: 'Kirkuk lost _______ Babil.'",
-            options: ["to", "from", "at", "against of"],
-            correct: 0,
-            explanation: "We say: team lost to another team."
-          }
-        ],
-        287: [
-          {
-            id: 2871,
-            question: "Who founded the modern Olympic Games in 1896?",
-            options: ["Pierre de Coubertin", "Michael Phelps", "Saad Salih", "Bob Beamon"],
-            correct: 0,
-            explanation: "Page 32 confirms: Frenchman Pierre de Coubertin started the modern Olympic Games in 1896."
-          },
-          {
-            id: 2872,
-            question: "What do the athletes who come second in an Olympic event win?",
-            options: ["A silver medal", "A gold medal", "A bronze medal", "A trophy only"],
-            correct: 0,
-            explanation: "First gets gold, second gets silver, and third gets bronze."
-          },
-          {
-            id: 2873,
-            question: "What is the famous Olympic creed?",
-            options: ["The most important thing is not to win, but to take part", "Winning is everything", "Run as fast as you can", "Never play in teams"],
-            correct: 0,
-            explanation: "Pierre de Coubertin said: 'The most important thing in the Olympic Games is not to win, but to take part.'"
-          }
-        ],
-        289: [
-          {
-            id: 2891,
-            question: "Complete the sentence from Saad's article: 'I _______ be very shy, but judo has given me confidence.'",
-            options: ["used to", "was used", "use to", "am used to"],
-            correct: 0,
-            explanation: "We use 'used to + base verb' to describe past states that have changed: I used to be very shy."
-          },
-          {
-            id: 2892,
-            question: "What follows 'used to' in English grammar?",
-            options: ["Base verb (infinitive without to)", "Verb with -ing", "Past tense verb", "Noun only"],
-            correct: 0,
-            explanation: "Used to is always followed by a base bare infinitive: used to have, used to be, used to play."
-          },
-          {
-            id: 2893,
-            question: "What is the opposite of 'shyness' in Lesson 7?",
-            options: ["confidence", "laziness", "schoolwork", "personality"],
-            correct: 0,
-            explanation: "Page 34 defines confidence as the opposite of shyness."
-          }
-        ],
-        292: [
-          {
-            id: 2921,
-            question: "Which stadium did Jad, Johnny and the boys visit in Munich?",
-            options: ["Allianz Arena", "Wembley", "Camp Nou", "San Siro"],
-            correct: 0,
-            explanation: "Page 37: They visited the Allianz Arena, Bayern Munich's famous football stadium."
-          },
-          {
-            id: 2922,
-            question: "Who did the boys play a practice match against?",
-            options: ["The Munich Under-12's girls team", "The Bayern Munich first team", "Real Madrid", "Their teachers"],
-            correct: 0,
-            explanation: "Page 37: The practice match was against some of the Munich Under-12's girls team."
-          },
-          {
-            id: 2923,
-            question: "What was the final result of the practice match?",
-            options: ["The girls won 9-0", "The boys won 3-1", "It was a 0-0 draw", "The boys won 9-0"],
-            correct: 0,
-            explanation: "Page 38: 'By the end of the match, they won 9-0. The girls were too good.'"
-          }
-        ],
-
-        // الوحدة 2
-        272: [
-          {
-            id: 2721,
-            question: "How long should you walk quickly every day to get fit according to Lesson 1?",
-            options: ["For about 20 minutes", "For 2 hours", "Only on weekends", "For 5 minutes"],
-            correct: 0,
-            explanation: "Page 17 advises: 'You should walk quickly for about 20 minutes every day.'"
-          },
-          {
-            id: 2722,
-            question: "Why can't unfit people enjoy life fully?",
-            options: ["They get tired very quickly and become out of breath", "They have too many games to play", "They eat too much fruit", "They run too fast"],
-            correct: 0,
-            explanation: "Page 17 states: 'Unfit people cannot enjoy life. They get tired very quickly, so they cannot play games.'"
-          },
-          {
-            id: 2723,
-            question: "Choose the correct advice for Sana who watches TV all the time:",
-            options: ["She should watch more TV", "She should take some exercise and go walking", "She shouldn't drink water", "She should stay in bed"],
-            correct: 1,
-            explanation: "Page 17 suggests taking exercise regularly instead of watching TV all day."
-          },
-          {
-            id: 2724,
-            question: "Complete the sentence: 'You are always tired. You _______ go to bed late.'",
-            options: ["should", "shouldn't", "must", "can"],
-            correct: 1,
-            explanation: "We use shouldn't to advise avoiding harmful habits like staying up late."
-          }
-        ],
-        273: [
-          {
-            id: 2731,
-            question: "According to Nurse Janette, how many pieces of fruit and vegetables should we eat daily?",
-            options: ["At least five pieces", "Only one piece", "Ten kilograms", "None"],
-            correct: 0,
-            explanation: "Page 18 notes: 'We should eat five pieces of fruit and vegetable every day, but we can eat more.'"
-          },
-          {
-            id: 2732,
-            question: "Meat and cheese are good for us, but we should not eat too much because they have a lot of:",
-            options: ["fat", "vitamins", "water", "sugar"],
-            correct: 0,
-            explanation: "Page 18 states: 'They have a lot of fat. We should be very careful about anything that has a lot of fat, salt or sugar.'"
-          },
-          {
-            id: 2733,
-            question: "Choose the correct quantifier: 'Eating too _______ sweets is bad for your teeth.'",
-            options: ["many", "much", "little", "few"],
-            correct: 0,
-            explanation: "Sweets is a countable plural noun, so we use 'too many'."
-          },
-          {
-            id: 2734,
-            question: "Choose the correct quantifier: 'A _______ salt on your food is all right, but not too much.'",
-            options: ["little", "few", "many", "lot"],
-            correct: 0,
-            explanation: "Salt is uncountable, so we use 'a little'."
-          }
-        ],
-        274: [
-          {
-            id: 2741,
-            question: "What does the culinary term 'grilled' mean on the menu?",
-            options: ["Cooked under strong heat or over a fire", "Cooked in hot oil or fat", "Cooked in an oven", "Boiled in water"],
-            correct: 0,
-            explanation: "Page 19 defines: 'grilled (adj.) cooked under strong heat.'"
-          },
-          {
-            id: 2742,
-            question: "What does the word 'beef' mean?",
-            options: ["The meat of a cow", "The meat of a sheep", "Fish from the sea", "Vegetables"],
-            correct: 0,
-            explanation: "Page 19 defines: 'beef (n.) the meat of a cow.'"
-          },
-          {
-            id: 2743,
-            question: "Which of the following items is classified under 'Desserts'?",
-            options: ["Apple cake and chocolate cake", "Lamb curry", "Fried fish", "Hot dogs"],
-            correct: 0,
-            explanation: "Apple cake, chocolate cake, ice cream, and fruit salad are listed under Desserts on page 19."
-          },
-          {
-            id: 2744,
-            question: "How do you politely order food in a restaurant?",
-            options: ["Could I have the grilled fish, please?", "Give me fish immediately!", "Bring food now!", "Hey, give me chicken!"],
-            correct: 0,
-            explanation: "Polite ordering uses: 'Could I have..., please?' or 'I would like...'"
-          }
-        ],
-        275: [
-          {
-            id: 2751,
-            question: "What should you do if you have a severe toothache?",
-            options: ["You should go to the dentist", "You should eat more sweets", "You should go running", "You should watch TV"],
-            correct: 0,
-            explanation: "Page 20 teaches: 'What's the matter? - I've got a toothache. - You should go to the dentist.'"
-          },
-          {
-            id: 2752,
-            question: "Which sentence has the exact same meaning as: 'I\'ve got a headache'?",
-            options: ["My head aches", "My stomach hurts", "My ear aches", "I feel toothache"],
-            correct: 0,
-            explanation: "Page 20 highlights: 'We can say I\'ve got a headache OR My head aches. They mean the same thing.'"
-          },
-          {
-            id: 2753,
-            question: "Jameel's right ear hurts. What did the doctor prescribe him?",
-            options: ["Ear drops to put in twice a day", "Eye glasses", "Cough syrup", "A bandage"],
-            correct: 0,
-            explanation: "Page 20: 'He gave me some drops. I have to put them in twice a day.'"
-          },
-          {
-            id: 2754,
-            question: "Noora has a bad headache. What advice and relief is offered to her?",
-            options: ["Take two pills (painkillers) with some water", "Drink cold cola", "Play football", "Sleep without water"],
-            correct: 0,
-            explanation: "Page 20: 'Here, take these two pills with some water.'"
-          }
-        ],
-        276: [
-          {
-            id: 2761,
-            question: "How old was Jalal's little brother Ibrahim in the story?",
-            options: ["Eight years old", "Two years old", "Twelve years old", "Fifteen years old"],
-            correct: 0,
-            explanation: "Page 21 states that Ibrahim was eight years old."
-          },
-          {
-            id: 2762,
-            question: "Why did Jalal ignore Ibrahim's complaints of stomach pain at first?",
-            options: ["Jalal was playing a computer game and thought Ibrahim was pretending", "Jalal was asleep", "Ibrahim was laughing", "Jalal wasn't at home"],
-            correct: 0,
-            explanation: "Page 21 shows Jalal was immersed in playing games and believed Ibrahim was just pretending."
-          },
-          {
-            id: 2763,
-            question: "What was the real emergency diagnosis Ibrahim had at the hospital?",
-            options: ["Severe appendicitis requiring immediate surgery", "A simple toothache", "A common cold", "An ear infection"],
-            correct: 0,
-            explanation: "The surgeon said: 'He has severe appendicitis. We must operate immediately.'"
-          },
-          {
-            id: 2764,
-            question: "What is the moral lesson Jalal learned from this incident?",
-            options: ["Never ignore someone when they say they are in pain", "Always play computer games alone", "Never visit the hospital", "Little brothers are always joking"],
-            correct: 0,
-            explanation: "Jalal concluded: 'I learned a lesson I will never forget: never ignore someone when they say they are in pain.'"
-          }
-        ],
-        277: [
-          {
-            id: 2771,
-            question: "Which words appear on almost all cards sent to friends who are ill?",
-            options: ["Get well soon", "Happy birthday", "Good luck on your exam", "Happy New Year"],
-            correct: 0,
-            explanation: "Page 22 notes that 'Get well soon' is the signature phrase on all sympathy cards."
-          },
-          {
-            id: 2772,
-            question: "Why do people often send humorous get well cards with jokes and cartoons?",
-            options: ["To cheer up the patient and make them smile and feel happier", "To confuse the doctor", "To test their reading speed", "To sell stamps"],
-            correct: 0,
-            explanation: "Humorous cards lift the patient's spirits and bring warmth during recovery."
-          },
-          {
-            id: 2773,
-            question: "Complete the standard sympathetic wish: 'Wishing you a speedy _______.'",
-            options: ["recovery", "walking", "game", "bus"],
-            correct: 0,
-            explanation: "'Wishing you a speedy recovery' is the established expression for getting better quickly."
-          },
-          {
-            id: 2774,
-            question: "When do people typically send 'Get well' cards?",
-            options: ["When someone is sick, injured, or having an operation in hospital", "On wedding anniversaries", "When buying a new car", "After winning a match"],
-            correct: 0,
-            explanation: "Get well cards express care when someone is suffering from illness or recovering from an accident."
-          }
-        ],
-        278: [
-          {
-            id: 2781,
-            question: "Where do you write your address and date in an informal English letter?",
-            options: ["In the top right-hand corner", "In the bottom left corner", "In the middle of the envelope", "Nowhere"],
-            correct: 0,
-            explanation: "Page 23 displays the address and date at the top right-hand corner of the page."
-          },
-          {
-            id: 2782,
-            question: "What happened to Sara's friend Marwa in the letter on page 23?",
-            options: ["She had an accident and was in hospital with a broken arm", "She went on vacation to Peru", "She won an art competition", "She bought a new bicycle"],
-            correct: 0,
-            explanation: "Marwa had an accident that resulted in a hospital stay."
-          },
-          {
-            id: 2783,
-            question: "How did Sara start her informal letter to Marwa?",
-            options: ["Dear Marwa,", "Dear Sir / Madam,", "To whom it may concern,", "Goodbye Marwa,"],
-            correct: 0,
-            explanation: "Informal letters to friends open warmly with 'Dear [Name],'."
-          },
-          {
-            id: 2784,
-            question: "What did Sara send Marwa to keep her entertained in hospital?",
-            options: ["The school magazine and some puzzle books", "A television set", "A soccer ball", "A laptop computer"],
-            correct: 0,
-            explanation: "Page 23: 'I am sending you our school magazine and some puzzle books so you won't get bored in bed.'"
-          }
-        ],
-        279: [
-          {
-            id: 2791,
-            question: "How many lines does an English limerick always have?",
-            options: ["Exactly five lines", "Fourteen lines", "Three lines", "Eight lines"],
-            correct: 0,
-            explanation: "Page 24 teaches that a limerick is always a 5-line humorous poem."
-          },
-          {
-            id: 2792,
-            question: "What is the strict rhyme scheme of a limerick?",
-            options: ["AABBA", "ABAB A", "AAAAA", "AABB C"],
-            correct: 0,
-            explanation: "Lines 1, 2, and 5 rhyme (A), and lines 3 and 4 rhyme together (B), producing AABBA."
-          },
-          {
-            id: 2793,
-            question: "In the famous limerick from Peru, what happened to the girl?",
-            options: ["She spilt all the paint and ended up needing shampoo", "She bought a pet with strings", "She was late for school", "She painted a white door"],
-            correct: 0,
-            explanation: "Page 24: 'She felt a bit faint / And spilt all the paint / So now she'll be needing shampoo!'"
-          },
-          {
-            id: 2794,
-            question: "Why was the boy from Kuwait always late for school?",
-            options: ["His clock always woke him at eight", "He missed the morning bus", "He had no watch", "His bicycle broke"],
-            correct: 0,
-            explanation: "Page 24: 'When his teacher asked Why?, he replied with a cry: My clock always wakes me at eight!'"
-          }
-        ],
-        280: [
-          {
-            id: 2801,
-            question: "Complete the sentence with the correct pattern: 'My mother wants _______ eat more vegetables.'",
-            options: ["me to", "me", "to me", "I to"],
-            correct: 0,
-            explanation: "Page 25 teaches the pattern: want + pronoun (object) + to + infinitive ('wants me to eat')."
-          },
-          {
-            id: 2802,
-            question: "Which sentence expresses frequency?",
-            options: ["I play chess twice a week.", "I feel excited.", "Stonehenge is very old.", "My arm hurts."],
-            correct: 0,
-            explanation: "'twice a week' expresses how often the action takes place."
-          },
-          {
-            id: 2803,
-            question: "Choose the correct quantifier: 'Too _______ sugar is bad for your teeth.'",
-            options: ["much", "many", "few", "short"],
-            correct: 0,
-            explanation: "Sugar is an uncountable noun, so we use 'too much'."
-          },
-          {
-            id: 2804,
-            question: "What advice should you give to an unfit person?",
-            options: ["You should get fit and take exercise regularly.", "You should watch TV all day.", "You shouldn't walk.", "You should eat lots of crisps."],
-            correct: 0,
-            explanation: "Page 25 summarizes: 'You should get fit and keep fit. You should take exercise regularly.'"
-          }
-        ],
-        281: [
-          {
-            id: 2811,
-            question: "Where did Tom drive the international competition winners for their camping trip?",
-            options: ["To Stonehenge in England", "To Cairo", "To Rome", "To New York"],
-            correct: 0,
-            explanation: "Pages 26-27 tell the story of the boys visiting and camping at Stonehenge."
-          },
-          {
-            id: 2812,
-            question: "What was the strange noise outside the boys' tent during the night?",
-            options: ["A fluffy sheep calmly eating their marshmallows", "An alien spaceship landing", "A giant waking up", "A wild wolf"],
-            correct: 0,
-            explanation: "Marcus opened the tent flap and laughed because a sheep was eating their marshmallows."
-          },
-          {
-            id: 2813,
-            question: "At what time did the sun start to rise over the stones at Stonehenge?",
-            options: ["At exactly 5:00 AM", "At 8:30 AM", "At noon", "At 11:00 PM"],
-            correct: 0,
-            explanation: "Page 27 notes: 'At exactly 5:00, the sun started to rise.'"
-          },
-          {
-            id: 2814,
-            question: "Why did Johnny take a funny photograph of Jad in the morning?",
-            options: ["Because Jad was fast asleep sitting against an ancient stone", "Because Jad was running after the sheep", "Because Jad was cooking breakfast", "Because Jad was dancing"],
-            correct: 0,
-            explanation: "Jad had fallen fast asleep against the stone, so Johnny took a funny revenge photo."
-          }
-        ],
-        282: [
-          {
-            id: 2821,
-            question: "What is the main objective of Project 2 (Healthy Living Poster)?",
-            options: ["To design an informative poster encouraging fitness, good nutrition, and active habits", "To advertise video games", "To sell soft drinks", "To write a mystery novel"],
-            correct: 0,
-            explanation: "Project 2 challenges students to create an impactful health campaign poster based on Unit 2 concepts."
-          },
-          {
-            id: 2822,
-            question: "Which slogan is best suited for the Healthy Living campaign poster?",
-            options: ["'Eat Well, Move Daily, and Keep Fit!'", "'Watch TV all day long!'", "'Eat lots of fat and sugar!'", "'Never drink water!'"],
-            correct: 0,
-            explanation: "The project emphasizes positive health slogans advocating exercise, water, and balanced nutrition."
-          },
-          {
-            id: 2823,
-            question: "Which of the following is recommended for daily fitness in the project?",
-            options: ["Walking briskly for about 20 minutes every day", "Sitting in a car all day", "Sleeping 15 hours", "Avoiding all friends"],
-            correct: 0,
-            explanation: "Brisk walking for 20 minutes every day is the primary daily fitness recommendation."
-          },
-          {
-            id: 2824,
-            question: "How should students advise their peers on nutrition using should and shouldn't?",
-            options: ["You should drink plenty of water and you shouldn't eat too much fat or sugar", "You should only drink cola", "You shouldn't eat fruit", "You should avoid sports"],
-            correct: 0,
-            explanation: "The core grammar focus is practicing should and shouldn't with healthy choices."
-          }
-        ],
-        // الوحدة 1 (الأسئلة الافتراضية)
-        261: [
-          {
-            id: 2611,
-            question: "What is the main topic of Unit 1 in the English textbook?",
-            options: ["A school magazine", "Healthy lifestyle", "Sports and games", "Jobs and occupations"],
-            correct: 0,
-            explanation: "Unit 1 is titled 'A school magazine' covering school articles, interviews, and stories."
-          },
-          {
-            id: 2612,
-            question: "Which of the following describes possessive 's for MORE THAN ONE boy?",
-            options: ["the boy's bags", "the boys' bags", "the boys bags", "the boy bags"],
-            correct: 1,
-            explanation: "Page 4 explains: Go and get the boys' bags (apostrophe after the s for more than one boy)."
-          },
-          {
-            id: 2613,
-            question: "What does 'Cartoons' section mean in page 4?",
-            options: ["funny stories with small pictures", "short poems", "interviews with famous people", "sports reports"],
-            correct: 0,
-            explanation: "Page 4 defines cartoons as: funny stories with small pictures."
-          },
-          {
-            id: 2614,
-            question: "What does 'Jokes' mean?",
-            options: ["short, funny stories", "articles about history", "messages to the editor", "photographs"],
-            correct: 0,
-            explanation: "Page 4 defines jokes as: short, funny stories."
-          }
-        ]
-      };
-
-      if (currId === 4) {
-        // اختبار لغة عربية - الجزء الأول
-        currentQuizQuestions = [
-          {
-            id: 4001,
-            question: "ما هي علامة رفع الأسماء الخمسة (أبو، أخو، حمو، فو، ذو) في اللغة العربية؟",
-            options: ["الواو (مثل: جاءَ أبُوكَ)", "الألف", "الياء", "الضمة الظاهرة"],
-            correct: 0,
-            explanation: "ترفع الأسماء الخمسة بالواو نيابة عن الضمة بشرط أن تكون مضافة إلى غير ياء المتكلم."
-          },
-          {
-            id: 4002,
-            question: "ما هو الميزان الصرفي للكلمة الثلاثية المجردة (كَتَبَ)؟",
-            options: ["فَعَلَ", "فَعَّلَ", "مَفْعُول", "افْتَعَلَ"],
-            correct: 0,
-            explanation: "الميزان الصرفي للأفعال والأسماء الثلاثية المجردة هو (فَعَلَ)، فتقابل الكاف الفاء، والتاء العين، والباء اللام."
-          },
-          {
-            id: 4003,
-            question: "ما الفرق بين الفعل اللازم والفعل المتعدي؟",
-            options: [
-              "اللازم يكتفي بفاعله ولا يحتاج لمفعول به، بينما المتعدي ينصب مفعولاً به",
-              "اللازم ينصب مفعولين، والمتعدي لا ينصب أي مفعول",
-              "كلاهما ينصب المفعول به دائماً",
-              "اللازم فعل ماضٍ فقط والمتعدي مضارع فقط"
-            ],
-            correct: 0,
-            explanation: "الفعل اللازم يكتفي برفع الفاعل لتكوين جملة تامة المعنى، أما المتعدي فيتعدى الفاعل إلى مفعول به واحد أو أكثر."
-          },
-          {
-            id: 4004,
-            question: "ما هو الخط غير القياسي المعتمد في رسم القرآن الكريم؟",
-            options: [
-              "الرسم العثماني القرآني الذي كتبت به آيات المصحف الشريف",
-              "خط الرقعة الحديث",
-              "الخط الكوفي التجريدي",
-              "الكتابة الإملائية المدرسية المعاصرة"
-            ],
-            correct: 0,
-            explanation: "الخط غير القياسي (العثماني) هو الرسم الذي دونت به كلمات القرآن الكريم وتوقيفي لا يقاس عليه في الإملاء المعتاد."
-          }
-        ];
-      } else if (currId === 5) {
-        // اختبار لغة عربية - الجزء الثاني
-        currentQuizQuestions = [
-          {
-            id: 5001,
-            question: "ما هو حكم المنادى إذا كان علماً مفرداً (يا محمدُ) أو نكرة مقصودة (يا رجلُ)؟",
-            options: ["يبنى على ما يرفع به في محل نصب", "يكون معرباً منصوباً دائماً", "يكون مجروراً بالكسرة", "يبنى على السكون دائماً"],
-            correct: 0,
-            explanation: "يبنى المنادى على ما يرفع به (كالضم أو الألف أو الواو) إذا كان علماً مفرداً أو نكرة مقصودة."
-          },
-          {
-            id: 5002,
-            question: "متى يبنى الفعل المضارع على السكون؟",
-            options: ["إذا اتصلت به نون النسوة (مثل: الطالباتُ يَكْتُبْنَ)", "إذا اتصلت به نون التوكيد الثقيلة", "إذا سبق بأداة جزم", "إذا كان صحيح الآخر ولم يتصل به شيء"],
-            correct: 0,
-            explanation: "يبنى الفعل المضارع على السكون في حالة واحدة: إذا اتصلت به نون النسوة."
-          },
-          {
-            id: 5003,
-            question: "أي من الجمل التالية تشتمل على استفهام تصديق يجاب عنه بـ (نعم) أو (لا)؟",
-            options: ["هل قرأتَ الدرسَ اليوم؟", "كم كتاباً في مكتبتك؟", "متى موعد الامتحان الوزاري؟", "أين يقع شارع الرشيد؟"],
-            correct: 0,
-            explanation: "الاستفهام بـ (هل) يكون دائماً استفهام تصديق يجاب عنه بـ نعم للإثبات وبـ لا للنفي."
-          },
-          {
-            id: 5004,
-            question: "ما هي علامة إعراب جمع المذكر السالم في حالتي النصب والجر؟",
-            options: ["الياء (كافأتُ المعلمينَ، سلّمتُ على المهندسينَ)", "الكسرة نيابة عن الفتحة", "الواو", "الفتحة المقدرة"],
-            correct: 0,
-            explanation: "يرفع جمع المذكر السالم بالواو، وينصب ويجر بالياء."
-          }
-        ];
-      } else if (currId === 6) {
-        // اختبار التربية الإسلامية
-        currentQuizQuestions = [
-          {
-            id: 6001,
-            question: "ما هو المد العارض للسكون وما مقداره جوازاً عند الوقف في التلاوة؟",
-            options: ["يمد بمقدار حركتين أو أربع أو ست حركات جوازاً", "يمد وجوباً بمقدار ست حركات فقط", "يمد بحركة واحدة فقط كالحركة الطبيعية", "لا يمد إطلاقاً عند الوقف"],
-            correct: 0,
-            explanation: "المد العارض للسكون يمد جوازاً بمقدار حركتين (قصر) أو 4 حركات (توسط) أو 6 حركات (طول) عند الوقف على الحرف الأخير بالسكون."
-          },
-          {
-            id: 6002,
-            question: "ما هي شروط المعجزة الإلهية المؤيدة للأنبياء؟",
-            options: [
-              "أن تكون خارقة للعادة، وتجري على يد نبي، وتكون مقرونة بالتحدي ويعجز المنكرون عن معارضتها",
-              "أن تكون عملاً سحرياً يستطيع السحرة تكراره",
-              "أن تحدث بأسباب طبيعية وعلمية مألوفة",
-              "أن تقع لأي إنسان صالح بلا نبوة"
-            ],
-            correct: 0,
-            explanation: "المعجزة أمر خارق للعادة يظهره الله على يد مدعي النبوة تأييداً له، مقرونة بالتحدي مع عدم المعارضة."
-          },
-          {
-            id: 6003,
-            question: "ما هي علامات المنافق كما وردت في الحديث النبوي الشريف؟",
-            options: [
-              "إذا حدّث كذب، وإذا وعد أخلف، وإذا اؤتمن خان",
-              "إذا سئل أجاب، وإذا صام أفطر، وإذا صلى خشع",
-              "إذا سافر تعب، وإذا قرأ استمع، وإذا نام استيقظ",
-              "إذا دخل سلّم، وإذا أنفق شكر، وإذا عاهد وفى"
-            ],
-            correct: 0,
-            explanation: "قال رسول الله (ص): آية المنافق ثلاث: إذا حدث كذب، وإذا وعد أخلف، وإذا اؤتمن خان."
-          },
-          {
-            id: 6004,
-            question: "ما هي أركان الصلاة المفروضة التي تبطل الصلاة بتركها عمداً أو سهواً؟",
-            options: [
-              "النية، وتكبيرة الإحرام، والقيام، والركوع، والسجود",
-              "قراءة الأدعية المستحبة وقنوت الوتر",
-              "الأذان والإقامة وصلاة النافلة",
-              "التسبيح ثلاث مرات في الركوع"
-            ],
-            correct: 0,
-            explanation: "أركان الصلاة هي الأجزاء الأساسية التي تبطل الصلاة بترك أحدها سواء كان الترك متعمداً أو نسياناً."
-          }
-        ];
-      } else if (currId === 7) {
-        // اختبار مادة الفيزياء
-        currentQuizQuestions = [
-          {
-            id: 7001,
-            question: "ما هي الصيغة الرياضية لقانون نيوتن الثاني في الحركة؟",
-            options: [
-              "F = m · a (القوة = الكتلة × التعجيل)",
-              "W = F · x",
-              "P = W / t",
-              "KE = ½ m v²"
-            ],
-            correct: 0,
-            explanation: "قانون نيوتن الثاني ينص على أن القوة المحصلة تساوي حاصل ضرب كتلة الجسم في تعجيله الخطي (F = m · a) وتقاس بالنيوتن (N)."
-          },
-          {
-            id: 7002,
-            question: "ما هو الشغل المنجز فيزيائياً عندما تؤثر قوة مقدارها 50 N في صندوق وتزيحه مسافة 4 m باتجاهها؟",
-            options: ["200 J (جول)", "12.5 J", "54 J", "صفر J"],
-            correct: 0,
-            explanation: "الشغل = القوة × الإزاحة = 50 N × 4 m = 200 J."
-          },
-          {
-            id: 7003,
-            question: "عتلة من النوع الثاني تكون فيها المقاومة واقعة بين المرتكز والقوة، ما الفائدة الميكانيكية التي نحصل عليها دائماً؟",
-            options: [
-              "ربح قوة دائماً لأن ذراع القوة أكبر من ذراع المقاومة (MA > 1)",
-              "ربح سرعة دائماً (MA < 1)",
-              "لا نحصل على أي ربح ميكانيكي",
-              "تغيير اتجاه القوة فقط"
-            ],
-            correct: 0,
-            explanation: "في عتلة النوع الثاني (مثل عربة الحديقة وكسارة الجوز) تقع المقاومة في الوسط، فيكون ذراع القوة دائماً أطول من ذراع المقاومة مما يعطي ربح قوة دائماً."
-          },
-          {
-            id: 7004,
-            question: "ما نوع العدسة المستخدمة لتصحيح عيب قصر النظر عند الإنسان؟",
-            options: [
-              "عدسة مقعرة مفرقة للضوء",
-              "عدسة محدبة مجمعة للضوء",
-              "مرآة مستوية",
-              "منشور زجاجي ثلاثي"
-            ],
-            correct: 0,
-            explanation: "يستخدم المصاب بقصر النظر نظارة ذات عدسات مقعرة مفرقة، لتعمل على تفريق الأشعة الضوئية قليلاً فتسقط الصورة بدقة على الشبكية."
-          },
-          {
-            id: 7005,
-            question: "إذا كانت سرعة الصوت في ماء البحر 1500 m/s، وأرسلت سفينة موجة سونار نحو القاع وعاد الصدى بعد 4 ثوانٍ، فما عمق البحر؟",
-            options: ["3000 متر", "6000 متر", "1500 متر", "750 متر"],
-            correct: 0,
-            explanation: "المسافة (العمق) = (السرعة × الزمن) / 2 = (1500 × 4) / 2 = 6000 / 2 = 3000 متر."
-          }
-        ];
-      } else if (currId === 11) {
-        // اختبار تفاعلي لعلم الأحياء
-        currentQuizQuestions = [
-          {
-            id: 11001,
-            question: "من هو العالم الذي يعد أبا علم التصنيف ووضع نظام التسمية الثنائية باللغة اللاتينية؟",
-            options: ["كارلوس لينيوس", "روبرت وايتكر", "جون راي", "أرسطو"],
-            correct: 0,
-            explanation: "العالم السويدي كارلوس لينيوس (1707-1778) هو واضع نظام التسمية الثنائية وقواعد التصنيف العالمية."
-          },
-          {
-            id: 11002,
-            question: "ما وسيلة الحركة الأساسية في كائن الأميبا (Amoeba)؟",
-            options: ["الأقدام الكاذبة (Pseudopodia)", "الأهداب", "السياط", "الانزلاق الجداري"],
-            correct: 0,
-            explanation: "تتحرك الأميبا وتلتقط دقائق الغذاء بالبلعمة عبر الأقدام الكاذبة المؤقتة."
-          },
-          {
-            id: 11003,
-            question: "ما نوع العلاقة الحيوية المشتركة في كائنات الأشنات (Lichens) بين الفطر والطحلب؟",
-            options: ["تكافل وتبادل منفعة (Mutualism)", "تطفل إجباري", "معيشة رمية", "افتراس"],
-            correct: 0,
-            explanation: "الأشنات تمثل تكافلاً وتبادل منفعة؛ فالطحلب يصنع الغذاء بالبناء الضوئي، والفطر يمتص الماء والأملاح ويوفر الحماية."
-          },
-          {
-            id: 11004,
-            question: "كم تبلغ نسبة الطاقة الحيوية التقريبية المفقودة كحرارة عند انتقال الغذاء من مستوى لآخر في هرم الطاقة؟",
-            options: ["90% تفقد وتنتقل 10% فقط", "50% تفقد", "10% تفقد وتنتقل 90%", "صفر% (لا تفقد أي طاقة)"],
-            correct: 0,
-            explanation: "تستهلك الكائنات 90% من الطاقة في التنفس والحركة والحرارة، وتنتقل 10% فقط للمستوى الغذائي التالي."
-          }
-        ];
-      } else if (currId === 10) {
-        // اختبار تفاعلي للكيمياء
-        currentQuizQuestions = [
-          {
-            id: 10001,
-            question: "ما نوع الرابطة الكيميائية التي تنشأ نتيجة انتقال كامل لإلكترونات التكافؤ بين فلز ولا فلز؟",
-            options: ["رابطة أيونية (مثل NaCl)", "رابطة تساهمية نقية", "رابطة هيدروجينية", "قوى فان در فال"],
-            correct: 0,
-            explanation: "تنشأ الرابطة الأيونية عند انتقال إلكترون أو أكثر من ذرة فلز إلى ذرة لافلز فتتكون أيونات متجاذبة."
-          },
-          {
-            id: 10002,
-            question: "ما هو عدد تأكسد الأكسجين في معظم مركباته الكيميائية (مثل الماء H₂O)؟",
-            options: ["-2", "+1", "+2", "-1"],
-            correct: 0,
-            explanation: "عدد تأكسد الأكسجين الشائع هو -2 في معظم المركبات الكيميائية."
-          },
-          {
-            id: 10003,
-            question: "محلول مائي قيمة الرقم الهيدروجيني له تساوي (pH = 3)، هذا المحلول يعد:",
-            options: ["حامضياً قوياً ويلون زهرة الشمس بالأحمر", "قاعدياً قوياً", "متعادلاً", "ماءً نقياً"],
-            correct: 0,
-            explanation: "القيم الأقل من 7 تدل على محاليل حامضية، وكلما صغرت القيمة زادت الحامضية وتحول لون ورقة زهرة الشمس للأحمر."
-          },
-          {
-            id: 10004,
-            question: "تفاعل حامض الهيدروكلوريك مع هيدروكسيد الصوديوم لإنتاج كلوريد الصوديوم والماء يسمى تفاعل:",
-            options: ["تعادل (Neutralization)", "تفكك", "احتراق", "أكسدة واختزال فقط"],
-            correct: 0,
-            explanation: "تفاعل التعادل هو تفاعل حامض مع قاعدة لإنتاج ملح وماء (HCl + NaOH -> NaCl + H2O)."
-          }
-        ];
-      } else if (currId === 9) {
-        // اختبار تفاعلي للاجتماعيات
-        currentQuizQuestions = [
-          {
-            id: 9001,
-            question: "ما هي أعلى قمة جبلية في العالم العربي وأين تقع؟",
-            options: ["قمة طوبقال (4165 م) في جبال الأطلس بالمغرب", "قمة هلكرد في العراق", "جبل الشيخ في الشام", "جبل النبي شعيب في اليمن"],
-            correct: 0,
-            explanation: "قمة طوبقال في سلسلة جبال الأطلس الكبير بالمغرب هي الأعلى بارتفاع 4165 متراً."
-          },
-          {
-            id: 9002,
-            question: "ما هو أطول أنهار العالم والعالم العربي؟",
-            options: ["نهر النيل (6670 كم)", "نهر الفرات (2940 كم)", "نهر دجلة (1900 كم)", "نهر بردى"],
-            correct: 0,
-            explanation: "نهر النيل هو أطول أنهار العالم بطول 6670 كم ينبع من بحيرة فيكتوريا ويصب في البحر المتوسط."
-          },
-          {
-            id: 9003,
-            question: "ما اسم أول دستور مدني وحقوقي مكتوب في تاريخ البشرية أرساه النبي ﷺ في يثرب؟",
-            options: ["وثيقة المدينة المنورة", "صلح الحديبية", "حلف الفضول", "بيعة العقبة"],
-            correct: 0,
-            explanation: "وثيقة المدينة المنورة هي أول دستور مدني حقوقي حدد الحقوق والواجبات والمواطنة لجميع سكان المدينة."
-          },
-          {
-            id: 9004,
-            question: "ما هو الحلف الذي شهد النبي ﷺ توقيعه في دار عبد الله بن جدعان لنصرة المظلوم بمكة؟",
-            options: ["حلف الفضول", "حلف الأحلاف", "حلف المطيبين", "حلف قريش"],
-            correct: 0,
-            explanation: "حلف الفضول تعاهدت فيه قريش على ألا يجدوا بمكة مظلوماً إلا نصروه وأعادوا إليه حقه."
-          }
-        ];
-      } else if (currId === 8) {
-        // اختبار تفاعلي للرياضيات
-        currentQuizQuestions = [
-          {
-            id: 8001,
-            question: "في مثلث قائم الزاوية طولا ضلعيه القائمين 3 cm و 4 cm، ما طول الوتر حسب مبرهنة فيثاغورس؟",
-            options: ["5 cm", "7 cm", "12 cm", "25 cm"],
-            correct: 0,
-            explanation: "حسب مبرهنة فيثاغورس: c = √(3² + 4²) = √(9 + 16) = √25 = 5 cm."
-          },
-          {
-            id: 8002,
-            question: "ما هو ميل المستقيم الأفقي الموازي لمحور السينات؟",
-            options: ["صفر (m = 0)", "غير معرف", "موجب دائماً", "سالب دائماً"],
-            correct: 0,
-            explanation: "المستقيم الأفقي الموازي لمحور السينات تكون فيه قيم y ثابتة فيكون التغير الصادي صفراً وميله صفراً."
-          },
-          {
-            id: 8003,
-            question: "ما هو تحليل المقدار الجبري (x² - 16) بالفرق بين مربعين؟",
-            options: ["(x - 4)(x + 4)", "(x - 4)²", "(x + 4)²", "(x - 8)(x + 8)"],
-            correct: 0,
-            explanation: "الفرق بين مربعين: a² - b² = (a - b)(a + b)، إذن x² - 16 = (x - 4)(x + 4)."
-          },
-          {
-            id: 8004,
-            question: "ما هي مجموعة حل معادلة القيمة المطلقة |x| = 7 في مجموعة الأعداد الحقيقية R؟",
-            options: ["{7, -7}", "{7} فقط", "{-7} فقط", "∅ (مجموعة خالية)"],
-            correct: 0,
-            explanation: "معادلة القيمة المطلقة |x| = a حيث a > 0 لها حلان: إما x = a أو x = -a."
-          }
-        ];
-      } else if (lessonId && LESSON_QUIZZES[lessonId]) {
-        currentQuizQuestions = LESSON_QUIZZES[lessonId];
-      } else if (lessonId && ((lessonId >= 2961 && lessonId <= 2971) || (lessonId >= 296 && lessonId <= 300))) {
-        currentQuizQuestions = LESSON_QUIZZES[2961];
-      } else if (lessonId && lessonId >= 272 && lessonId <= 282) {
-        currentQuizQuestions = LESSON_QUIZZES[272];
-      } else if (lessonId && (lessonId === 294 || lessonId === 295 || (lessonId >= 2950 && lessonId <= 2955))) {
-        currentQuizQuestions = LESSON_QUIZZES[294];
-      } else if (lessonId && lessonId >= 283 && lessonId <= 293) {
-        currentQuizQuestions = LESSON_QUIZZES[283];
-      } else {
-        currentQuizQuestions = LESSON_QUIZZES[261];
-      }
-
-
-      renderQuizQuestions();
-      switchTab('exams');
-      switchExamSubtab('interactive');
+        select.appendChild(opt);
+      });
     }
 
+    // عند تغيير المادة من القائمة المنسدلة في شاشة الاختبار
+    function onQuizSubjectChanged() {
+      const subSelect = document.getElementById('quizSubjectSelect');
+      if (!subSelect) return;
+      const currId = Number(subSelect.value) || 3;
+      appData.currentCurriculumId = currId;
+      saveData();
+      populateQuizChaptersDropdown(currId);
+      const chapSelect = document.getElementById('quizChapterSelect');
+      if (chapSelect && chapSelect.value) {
+        loadChapterQuiz(currId, Number(chapSelect.value));
+      }
+    }
+
+    // بدء اختبار الفصل المحدد في القوائم المنسدلة
+    function startSelectedChapterQuiz() {
+      const subSelect = document.getElementById('quizSubjectSelect');
+      const chapSelect = document.getElementById('quizChapterSelect');
+      const currId = Number(subSelect ? subSelect.value : (appData.currentCurriculumId || 3));
+      const chapId = Number(chapSelect ? chapSelect.value : null);
+      if (chapId) {
+        startChapterQuiz(currId, chapId);
+      } else {
+        startRandomSubjectQuiz(currId);
+      }
+    }
+
+    // بدء اختبار الفصل والانتقال لشاشة الاختبارات
+    function startChapterQuiz(currId, chapterId) {
+      const cId = Number(currId) || 3;
+      const chId = Number(chapterId);
+
+      // ضبط القوائم المنسدلة
+      const subSelect = document.getElementById('quizSubjectSelect');
+      if (subSelect) subSelect.value = cId;
+      populateQuizChaptersDropdown(cId, chId);
+
+      // تحميل بيانات الاختبار
+      loadChapterQuiz(cId, chId);
+
+      // الانتقال للتبويب
+      switchTab('exams');
+      switchExamSubtab('interactive');
+
+      // التمرير لأعلى واجهة الاختبار بسلاسة
+      const quizView = document.getElementById('interactiveQuizViewContainer');
+      if (quizView) quizView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // توليد اختبار عشوائي من فصول المادة المختارة
+    function startRandomSubjectQuiz(specificCurrId = null) {
+      const currId = Number(specificCurrId || (document.getElementById('quizSubjectSelect')?.value) || (appData.currentCurriculumId || 3));
+      
+      const subSelect = document.getElementById('quizSubjectSelect');
+      if (subSelect) subSelect.value = currId;
+      populateQuizChaptersDropdown(currId);
+
+      const qs = (typeof getRandomQuestionsForCurriculum === 'function') 
+        ? getRandomQuestionsForCurriculum(currId, 10) 
+        : [];
+
+      if (!qs || qs.length === 0) {
+        alert('لا تتوفر أسئلة عشوائية لهذه المادة حالياً.');
+        return;
+      }
+
+      const subjName = QUIZ_SUBJECT_NAMES[currId] || 'المادة المحددة';
+      setupQuizData(qs, `اختبار عشوائي شامل - ${subjName}`, subjName, currId, null);
+
+      switchTab('exams');
+      switchExamSubtab('interactive');
+
+      const quizView = document.getElementById('interactiveQuizViewContainer');
+      if (quizView) quizView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // تحميل اختبار الفصل من بنك الاختبارات
+    function loadChapterQuiz(currId, chapterId) {
+      const cId = Number(currId);
+      const chId = Number(chapterId);
+
+      const quizData = (typeof getChapterQuiz === 'function') ? getChapterQuiz(cId, chId) : null;
+      if (!quizData) {
+        console.warn('Quiz not found for curr:', cId, 'chap:', chId);
+        return;
+      }
+
+      const subjName = QUIZ_SUBJECT_NAMES[cId] || 'المادة الدراسية';
+      setupQuizData(quizData.questions, quizData.title, subjName, cId, chId);
+    }
+
+    // تهيئة بيانات الاختبار وتحديث الواجهة
+    function setupQuizData(questions, title, subjectName, currId = 3, chapterId = null) {
+      currentQuizQuestions = questions || [];
+      selectedQuizAnswers = {};
+      currentQuizMeta = {
+        currId: Number(currId),
+        chapterId: chapterId ? Number(chapterId) : null,
+        title: title || 'اختبار تفاعلي منهجي',
+        subjectName: subjectName || QUIZ_SUBJECT_NAMES[currId] || ''
+      };
+
+      // تحديث العناوين
+      const subtitle = document.getElementById('examSubtitle');
+      if (subtitle) {
+        subtitle.innerHTML = `<strong>${currentQuizMeta.subjectName}:</strong> ${currentQuizMeta.title} (${currentQuizQuestions.length} أسئلة منهجية معتمدة)`;
+      }
+
+      // إخفاء بطاقة النتيجة وإظهار زر الإرسال
+      const banner = document.getElementById('quizResultBanner');
+      if (banner) banner.classList.add('hidden');
+      const submitBtn = document.getElementById('submitQuizBtn');
+      if (submitBtn) {
+        submitBtn.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>✅</span> تسليم الإجابات وإنهاء الاختبار';
+      }
+
+      // إعادة ضبط المؤقت
+      resetQuizTimer();
+
+      // رسم الأسئلة وشريط التقدم وشبكة القفز
+      renderQuizQuestions();
+      updateQuizProgressUI();
+    }
+
+    // رسم أسئلة الاختبار في الحاوية التفاعلية
     function renderQuizQuestions() {
       const container = document.getElementById('quizQuestionsContainer');
+      if (!container) return;
       container.innerHTML = '';
 
-      const currId = Number(appData.currentCurriculumId || 3);
+      if (!currentQuizQuestions || currentQuizQuestions.length === 0) {
+        container.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--slate-500); font-weight: 700;">لا توجد أسئلة متوفرة لهذا الفصل حالياً.</div>';
+        return;
+      }
+
+      const currId = currentQuizMeta.currId || Number(appData.currentCurriculumId || 3);
 
       currentQuizQuestions.forEach((q, idx) => {
         const isArabicText = (currId !== 3) || /[\u0600-\u06FF]/.test(q.question);
@@ -14602,68 +12113,423 @@
         const qDiv = document.createElement('div');
         qDiv.className = 'quiz-question';
         qDiv.id = `quiz-q-${q.id}`;
+        qDiv.style.position = 'relative';
+
         qDiv.innerHTML = `
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">سؤال ${idx + 1}</div>
-          <div style="font-size: 0.95rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.75rem; direction: ${textDir}; text-align: ${textAlign}; line-height: 1.6;">${q.question}</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.35rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.75rem; font-weight: 800; background: var(--primary-light); color: var(--primary); padding: 0.15rem 0.55rem; border-radius: 9999px;">
+                سؤال ${idx + 1} من ${currentQuizQuestions.length}
+              </span>
+              <span id="q-status-badge-${q.id}" style="font-size: 0.72rem; font-weight: 700; color: var(--slate-400);">لم يُجب بعد</span>
+            </div>
+            <button type="button" class="mini-listen-btn" onclick="speakQuizQuestion(${q.id})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;" title="استمع للسؤال بصوت طبيعي">
+              🔊 استمع للسؤال
+            </button>
+          </div>
+
+          <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign}; line-height: 1.65;">
+            ${q.question}
+          </div>
+
           <div class="options-group">
             ${q.options.map((opt, optIdx) => `
               <button type="button" class="quiz-option" id="opt-${q.id}-${optIdx}" onclick="selectQuizAnswer(${q.id}, ${optIdx})" style="direction: ${textDir}; text-align: ${textAlign}; font-size: 0.88rem; font-weight: 600;">
+                <span style="display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; background: rgba(0,0,0,0.06); font-size: 0.72rem; font-weight: 800; margin-left: 0.5rem; margin-right: 0.5rem;">
+                  ${String.fromCharCode(65 + optIdx)}
+                </span>
                 ${opt}
               </button>
             `).join('')}
           </div>
-          <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; font-size: 0.82rem; color: var(--slate-700); direction: ${textDir}; text-align: ${textAlign}; line-height: 1.6;">
-            <strong style="color: var(--primary);">التفسير والشرح: </strong><span>${q.explanation}</span>
+
+          <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.85rem; padding: 0.75rem 1rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; font-size: 0.82rem; color: var(--slate-700); direction: ${textDir}; text-align: ${textAlign}; line-height: 1.65; box-shadow: var(--shadow-sm);">
+            <strong style="color: var(--primary);">💡 التفسير والشرح النموذجي: </strong><span>${q.explanation || 'إجابة منهجية معتمدة وفق كتاب وزارة التربية العراقية.'}</span>
           </div>
         `;
         container.appendChild(qDiv);
       });
+
+      renderQuestionJumpGrid();
     }
 
+    // توليد شبكة أزرار القفز السريع بين الأسئلة (1 .. 10)
+    function renderQuestionJumpGrid() {
+      const grid = document.getElementById('quizQuestionJumpGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      currentQuizQuestions.forEach((q, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = `jump-btn-${q.id}`;
+        btn.className = 'quiz-jump-btn';
+        btn.textContent = (idx + 1);
+        btn.title = `الذهاب للسؤال ${idx + 1}`;
+        btn.onclick = () => jumpToQuizQuestion(q.id);
+        grid.appendChild(btn);
+      });
+    }
+
+    // القفز المباشر لسؤال محدد مع وميض التركيز
+    function jumpToQuizQuestion(qId) {
+      const el = document.getElementById(`quiz-q-${qId}`);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.transition = 'all 0.3s ease';
+      el.style.boxShadow = '0 0 0 3px #6366f1, 0 10px 25px rgba(99, 102, 241, 0.2)';
+      setTimeout(() => {
+        el.style.boxShadow = '';
+      }, 1200);
+    }
+
+    // اختيار إجابة السؤال والتصحيح الفوري
     function selectQuizAnswer(qId, optIdx) {
       selectedQuizAnswers[qId] = optIdx;
       const q = currentQuizQuestions.find(item => item.id === qId);
       if (!q) return;
 
+      const correctTarget = (q.correct !== undefined) ? q.correct : q.answer;
+      const isCorrect = (optIdx === correctTarget);
+
+      // تحديث حالة الأزرار
       q.options.forEach((_, idx) => {
         const btn = document.getElementById(`opt-${qId}-${idx}`);
         if (btn) {
-          btn.classList.remove('selected');
-          if (idx === optIdx) btn.classList.add('selected');
+          btn.classList.remove('selected', 'correct', 'wrong');
+          if (idx === optIdx) {
+            btn.classList.add('selected');
+          }
+          // إذا كان نمط التصحيح الفوري مفعلاً
+          if (instantFeedbackMode) {
+            if (idx === correctTarget) {
+              btn.classList.add('correct');
+            } else if (idx === optIdx && !isCorrect) {
+              btn.classList.add('wrong');
+            }
+          }
         }
       });
+
+      // إظهار التفسير في نمط التصحيح الفوري
+      const exp = document.getElementById(`explanation-${qId}`);
+      if (exp && instantFeedbackMode) {
+        exp.classList.remove('hidden');
+        if (isCorrect) {
+          exp.style.background = 'var(--success-light)';
+          exp.style.borderColor = '#86efac';
+        } else {
+          exp.style.background = '#fef2f2';
+          exp.style.borderColor = '#fca5a5';
+        }
+      }
+
+      // تحديث شارة حالة السؤال
+      const statusBadge = document.getElementById(`q-status-badge-${qId}`);
+      if (statusBadge) {
+        if (instantFeedbackMode) {
+          statusBadge.innerHTML = isCorrect ? '<span style="color: #059669; font-weight: 800;">✓ إجابة صحيحة</span>' : '<span style="color: #dc2626; font-weight: 800;">✗ إجابة خاطئة</span>';
+        } else {
+          statusBadge.innerHTML = '<span style="color: var(--primary); font-weight: 800;">تمت الإجابة</span>';
+        }
+      }
+
+      // تحديث زر القفز السريع
+      const jumpBtn = document.getElementById(`jump-btn-${qId}`);
+      if (jumpBtn) {
+        jumpBtn.classList.add('answered');
+        if (instantFeedbackMode) {
+          if (isCorrect) {
+            jumpBtn.classList.add('correct');
+            jumpBtn.classList.remove('wrong');
+          } else {
+            jumpBtn.classList.add('wrong');
+            jumpBtn.classList.remove('correct');
+          }
+        }
+      }
+
+      updateQuizProgressUI();
     }
 
+    // تحديث مؤشرات شريط التقدم ونسبة الإنجاز
+    function updateQuizProgressUI() {
+      const total = currentQuizQuestions.length;
+      if (total === 0) return;
+      const answeredCount = Object.keys(selectedQuizAnswers).length;
+      const pct = Math.round((answeredCount / total) * 100);
+
+      const progText = document.getElementById('quizProgressText');
+      if (progText) progText.textContent = `تمت إجابة ${answeredCount} من ${total} أسئلة`;
+
+      const accText = document.getElementById('quizAccuracyText');
+      if (accText) accText.textContent = `نسبة الإنجاز: ${pct}%`;
+
+      const bar = document.getElementById('quizProgressBar');
+      if (bar) bar.style.width = `${pct}%`;
+    }
+
+    // تسليم الاختبار وحساب الدرجة وإظهار شهادة الإنجاز
     function submitQuiz() {
+      stopQuizTimer();
+
       let score = 0;
+      let wrongQuestions = [];
+      const total = currentQuizQuestions.length;
+
       currentQuizQuestions.forEach(q => {
         const userAns = selectedQuizAnswers[q.id];
         const correctTarget = (q.correct !== undefined) ? q.correct : q.answer;
-        const isCorrect = userAns === correctTarget;
-        if (isCorrect) score++;
+        const isCorrect = (userAns === correctTarget);
 
+        if (isCorrect) {
+          score++;
+        } else {
+          wrongQuestions.push(q);
+        }
+
+        // إبراز الإجابات النموذجية لجميع الأسئلة
         q.options.forEach((_, idx) => {
           const btn = document.getElementById(`opt-${q.id}-${idx}`);
           if (btn) {
-            btn.onclick = null;
-            if (idx === correctTarget) btn.classList.add('correct');
-            else if (idx === userAns && !isCorrect) btn.classList.add('wrong');
+            btn.classList.remove('correct', 'wrong');
+            if (idx === correctTarget) {
+              btn.classList.add('correct');
+            } else if (idx === userAns && !isCorrect) {
+              btn.classList.add('wrong');
+            }
           }
         });
 
+        // إظهار التفسير لجميع الأسئلة
         const exp = document.getElementById(`explanation-${q.id}`);
-        if (exp) exp.classList.remove('hidden');
+        if (exp) {
+          exp.classList.remove('hidden');
+          if (isCorrect) {
+            exp.style.background = 'var(--success-light)';
+            exp.style.borderColor = '#86efac';
+          } else {
+            exp.style.background = '#fef2f2';
+            exp.style.borderColor = '#fca5a5';
+          }
+        }
+
+        // تحديث زر القفز بلون النتيجة
+        const jumpBtn = document.getElementById(`jump-btn-${q.id}`);
+        if (jumpBtn) {
+          jumpBtn.classList.remove('correct', 'wrong');
+          jumpBtn.classList.add(isCorrect ? 'correct' : 'wrong');
+        }
+
+        const statusBadge = document.getElementById(`q-status-badge-${q.id}`);
+        if (statusBadge) {
+          statusBadge.innerHTML = isCorrect ? '<span style="color: #059669; font-weight: 800;">✓ إجابة صحيحة</span>' : '<span style="color: #dc2626; font-weight: 800;">✗ إجابة خاطئة</span>';
+        }
       });
 
-      const total = currentQuizQuestions.length;
       const pct = Math.round((score / total) * 100);
 
+      // إظهار شهادة التميز ولوحة النتيجة
       const banner = document.getElementById('quizResultBanner');
-      banner.classList.remove('hidden');
-      document.getElementById('quizScoreTitle').innerText = pct >= 60 ? '🎉 أحسنت! تم اجتياز الاختبار بنجاح' : 'تحتاج لمراجعة الدرس مجدداً';
-      document.getElementById('quizScoreText').innerText = `درجتك: ${score} من ${total} (${pct}%)`;
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
 
-      document.getElementById('submitQuizBtn').classList.add('hidden');
+      const scoreCircle = document.getElementById('quizScoreCircle');
+      if (scoreCircle) {
+        scoreCircle.textContent = `${pct}%`;
+        scoreCircle.style.background = pct >= 80 ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)' : (pct >= 50 ? 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' : 'linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)');
+      }
+
+      const scoreTitle = document.getElementById('quizScoreTitle');
+      if (scoreTitle) {
+        if (pct >= 90) scoreTitle.textContent = '🏆 ممتاز جداً! أداء استثنائي متكامل';
+        else if (pct >= 75) scoreTitle.textContent = '🎉 أحسنت! إتقان متقدم لمفاهيم الفصل';
+        else if (pct >= 50) scoreTitle.textContent = '👍 جيد! تم اجتياز الاختبار بنجاح';
+        else scoreTitle.textContent = '📚 تحتاج لمراجعة مفاهيم هذا الفصل مجدداً';
+      }
+
+      const scoreSubtitle = document.getElementById('quizScoreSubtitle');
+      if (scoreSubtitle) {
+        scoreSubtitle.textContent = `النتيجة الرسمية لاختبار ${currentQuizMeta.subjectName} - ${currentQuizMeta.title}`;
+      }
+
+      const scoreText = document.getElementById('quizScoreText');
+      if (scoreText) {
+        scoreText.textContent = `درجتك: ${score} من ${total} (${pct}%)`;
+      }
+
+      const scoreDesc = document.getElementById('quizScoreDesc');
+      if (scoreDesc) {
+        scoreDesc.innerHTML = `أجبت بشكل صحيح على <strong>${score}</strong> أسئلة، وأخطأت في <strong>${wrongQuestions.length}</strong> أسئلة من أصل ${total} سؤالاً. تم إعداد هذا الاختبار وفق المعايير الوزارية الرسمية - إعداد المهندس أسامة خليل هاشم.`;
+      }
+
+      // إخفاء زر التسليم
+      const submitBtn = document.getElementById('submitQuizBtn');
+      if (submitBtn) submitBtn.classList.add('hidden');
+    }
+
+    // إعادة خوض نفس الاختبار وتصفير الاختيارات
+    function resetCurrentQuiz() {
+      selectedQuizAnswers = {};
+      const banner = document.getElementById('quizResultBanner');
+      if (banner) banner.classList.add('hidden');
+      const submitBtn = document.getElementById('submitQuizBtn');
+      if (submitBtn) submitBtn.classList.remove('hidden');
+
+      renderQuizQuestions();
+      updateQuizProgressUI();
+      resetQuizTimer();
+
+      const quizView = document.getElementById('interactiveQuizViewContainer');
+      if (quizView) quizView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // استعراض وتصفية الأسئلة التي أخطأ بها الطالب فقط للتركيز عليها
+    function filterIncorrectQuestionsOnly() {
+      currentQuizQuestions.forEach(q => {
+        const userAns = selectedQuizAnswers[q.id];
+        const correctTarget = (q.correct !== undefined) ? q.correct : q.answer;
+        const isCorrect = (userAns === correctTarget);
+        const qEl = document.getElementById(`quiz-q-${q.id}`);
+        if (qEl) {
+          if (isCorrect) {
+            qEl.style.display = 'none';
+          } else {
+            qEl.style.display = 'block';
+          }
+        }
+      });
+      alert('تمت تصفية الأسئلة لعرض الأسئلة التي تحتاج إلى مراجعة وتصحيح فقط.');
+      const container = document.getElementById('quizQuestionsContainer');
+      if (container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // طباعة نتائج الاختبار والشهادة
+    function printInteractiveQuiz() {
+      window.print();
+    }
+
+    // قراءة السؤال صوتياً عبر محرك TTS
+    function speakQuizQuestion(qId) {
+      const q = currentQuizQuestions.find(item => item.id === qId);
+      if (!q) return;
+      const isEnglish = (currentQuizMeta.currId === 3) && !(/[\u0600-\u06FF]/.test(q.question));
+      const lang = isEnglish ? 'en' : 'ar';
+      const textToSpeak = `${q.question}. ${q.options.map((opt, i) => `Option ${String.fromCharCode(65 + i)}: ${opt}`).join('. ')}`;
+      if (typeof speakSnippet === 'function') {
+        speakSnippet(textToSpeak, lang);
+      } else if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(textToSpeak);
+        u.lang = isEnglish ? 'en-US' : 'ar-SA';
+        window.speechSynthesis.speak(u);
+      }
+    }
+
+    // تفعيل / إيقاف المؤقت التنازلي الذكي (15 دقيقة)
+    function toggleQuizTimer() {
+      quizTimerActive = !quizTimerActive;
+      const display = document.getElementById('quizTimerDisplay');
+      const btn = document.getElementById('btnToggleQuizTimer');
+      if (quizTimerActive) {
+        if (display) display.classList.remove('hidden');
+        if (btn) btn.innerHTML = '⏸️ إيقاف المؤقت';
+        startQuizTimer();
+      } else {
+        if (btn) btn.innerHTML = '⏱️ تشغيل المؤقت (15 دقيقة)';
+        stopQuizTimer();
+      }
+    }
+
+    function startQuizTimer() {
+      stopQuizTimer();
+      const display = document.getElementById('quizTimerDisplay');
+      quizTimerInterval = setInterval(() => {
+        if (quizTimerSecondsRemaining > 0) {
+          quizTimerSecondsRemaining--;
+          const mins = Math.floor(quizTimerSecondsRemaining / 60);
+          const secs = quizTimerSecondsRemaining % 60;
+          if (display) {
+            display.textContent = `⏳ ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            if (quizTimerSecondsRemaining <= 60) {
+              display.style.background = '#fef2f2';
+              display.style.color = '#dc2626';
+              display.style.borderColor = '#fca5a5';
+            }
+          }
+        } else {
+          stopQuizTimer();
+          alert('⏰ انتهى وقت الاختبار المحدد (15 دقيقة)! سيتم تسليم إجاباتك الآن تلقائياً.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function stopQuizTimer() {
+      if (quizTimerInterval) {
+        clearInterval(quizTimerInterval);
+        quizTimerInterval = null;
+      }
+    }
+
+    function resetQuizTimer() {
+      stopQuizTimer();
+      quizTimerSecondsRemaining = 900;
+      const display = document.getElementById('quizTimerDisplay');
+      if (display) {
+        display.textContent = '⏳ 15:00';
+        display.style.background = '';
+        display.style.color = '';
+        display.style.borderColor = '';
+      }
+      if (quizTimerActive) {
+        startQuizTimer();
+      }
+    }
+
+    // تفعيل / إلغاء نمط التصحيح الفوري
+    function toggleInstantFeedbackMode() {
+      instantFeedbackMode = !instantFeedbackMode;
+      const txt = document.getElementById('instantFeedbackStatusText');
+      if (txt) {
+        txt.textContent = instantFeedbackMode ? 'مفعّل' : 'معطّل';
+        txt.style.color = instantFeedbackMode ? '#059669' : '#dc2626';
+      }
+    }
+
+    // توليد اختبار فوري على الدرس المختار (يربط بالوحدة/الفصل)
+    async function generateQuizForCurrentLesson() {
+      const currId = Number(appData.currentCurriculumId || 3);
+      const lessonId = appData.currentLessonId;
+
+      let targetChapterId = null;
+
+      // البحث عن الفصل التابع له الدرس المختار في هيكلية المنهج
+      if (lessonId && typeof getCurriculumChapters === 'function') {
+        const chapters = getCurriculumChapters(currId) || [];
+        for (const ch of chapters) {
+          if ((ch.lessons || []).some(l => l.id === lessonId)) {
+            targetChapterId = ch.id;
+            break;
+          }
+        }
+      }
+
+      // إذا لم يتم تحديد الفصل من الدرس، اختر الفصل الأول المتوفر
+      if (!targetChapterId && window.CHAPTER_QUIZZES && window.CHAPTER_QUIZZES[currId]) {
+        const chapIds = Object.keys(window.CHAPTER_QUIZZES[currId]).map(Number);
+        if (chapIds.length > 0) {
+          targetChapterId = chapIds[0];
+        }
+      }
+
+      if (targetChapterId) {
+        startChapterQuiz(currId, targetChapterId);
+      } else {
+        startRandomSubjectQuiz(currId);
+      }
     }
 
     // =========================================================================

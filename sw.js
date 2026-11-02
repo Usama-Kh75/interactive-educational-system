@@ -1,7 +1,8 @@
-const CACHE_NAME = 'interactive-edu-pwa-v5.0.0';
+const CACHE_NAME = 'interactive-edu-pwa-v5.1.0';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './curriculum_chapter_quizzes.js',
   './curriculum_data.js',
   './curriculum_data_arabic.js',
   './curriculum_data_islamic.js',
