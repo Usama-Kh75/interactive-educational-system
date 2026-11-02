@@ -20,13 +20,21 @@ const ASSETS_TO_CACHE = [
   './icons/icon.svg'
 ];
 
-// تثبيت Service Worker وتخزين الموارد الأساسية فوراً
+// تثبيت Service Worker وتخزين الموارد الأساسية فوراً مع فرض جلب أحدث نسخة بدون كاش
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching core PWA assets v4.9.0');
-      return cache.addAll(ASSETS_TO_CACHE);
+      console.log('[Service Worker] Caching core PWA assets with reload:', CACHE_NAME);
+      return Promise.all(
+        ASSETS_TO_CACHE.map((url) => {
+          const req = new Request(url, { cache: 'reload' });
+          return fetch(req).then((res) => {
+            if (res.ok) return cache.put(url, res);
+            throw new Error(`Failed to fetch ${url} (status: ${res.status})`);
+          });
+        })
+      );
     })
   );
 });
@@ -90,10 +98,10 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // لصفحات HTML والتنقل: Network-First لضمان وصول التحديثات فوراً وعدم بقاء النسخ القديمة
+  // لصفحات HTML والتنقل: Network-First مع no-cache لضمان وصول التحديثات فوراً وعدم بقاء النسخ القديمة
   if (event.request.mode === 'navigate' || event.request.destination === 'document' || url.pathname.endsWith('.html') || url.pathname === '/' || url.pathname.endsWith('/')) {
     event.respondWith(
-      fetch(event.request).then((networkResponse) => {
+      fetch(event.request, { cache: 'no-cache' }).then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
