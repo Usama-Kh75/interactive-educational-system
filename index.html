@@ -23,6 +23,7 @@
   <script src="curriculum_data_physics.js"></script>
   <script src="curriculum_diagrams_physics.js"></script>
   <script src="curriculum_data_math.js"></script>
+  <script src="curriculum_data_social.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -3509,6 +3510,9 @@
       <!-- شريط اختيار المادة الامتحانية -->
       <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
         <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر المادة الامتحانية:</span>
+        <button id="btnExamSubjectSoc" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('soc')" style="font-weight: 800; font-size: 0.78rem;">
+          🌍 مادة الاجتماعيات (نموذجان وزاري وفصلي)
+        </button>
         <button id="btnExamSubjectMath" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('math')" style="font-weight: 800; font-size: 0.78rem;">
           📐 مادة الرياضيات (نموذجان وزاري وفصلي)
         </button>
@@ -3812,6 +3816,8 @@
             <option value="5">📙 اللغة العربية - الجزء الثاني (136 صفحة)</option>
             <option value="6">🕌 التربية الإسلامية (120 صفحة)</option>
             <option value="7">⚛️ الفيزياء (88 صفحة)</option>
+            <option value="8">📐 الرياضيات (252 صفحة)</option>
+            <option value="9">🌍 الاجتماعيات (140 صفحة)</option>
           </select>
           <div id="modalEnglishBookTypeWrapper" style="display: inline-flex; align-items: center; gap: 0.35rem; margin-right: 0.4rem;">
             <button type="button" class="btn btn-sm" id="modalBtnStudentBook" onclick="switchEnglishBookType('student')" style="font-size: 0.76rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
@@ -3955,6 +3961,56 @@
 
       <!-- Exercises and Questions Content -->
       <div id="mathModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الاجتماعيات -->
+  <div class="modal-overlay hidden" id="socialChapterReviewsModal" onclick="if(event.target === this) closeSocialReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #fef3c7; color: #92400e; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            🌍
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #78350f; margin: 0;">مركز الحلول النموذجية لمراجعات فصول الاجتماعيات</h3>
+            <span style="font-size: 0.76rem; color: #92400e; font-weight: 800;">منهج الاجتماعيات للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllSocialModalSolutions()" id="btnToggleAllModalSocSols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #fffbeb; color: #92400e; border: 1px solid #fde68a; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeSocialReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 6 Social Chapters -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="socialReviewChaptersNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Chapter Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #fffbeb; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #fef3c7;" id="socialReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="socialModalChapterBadge" style="background: #b45309; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الفصل 1</span>
+          <strong id="socialModalChapterTitle" style="font-size: 0.95rem; color: #78350f;">مراجعة الفصل الأول</strong>
+          <span id="socialModalChapterPages" style="font-size: 0.76rem; color: #92400e; font-weight: 700;">الصفحات 37 - 38</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalSocReviewInStudy" onclick="openCurrentModalSocReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #b45309, #92400e); border: none; box-shadow: 0 2px 6px rgba(180,83,9,0.25);">
+            🚀 فتح المراجعة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalSocBookPage" onclick="openCurrentModalSocBookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #92400e; border: 1px solid #fde68a;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="socialModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
         <!-- Injected dynamically -->
       </div>
     </div>
@@ -5542,6 +5598,7 @@
       if (id === 6) return window.ISLAMIC_CURRICULUM || [];
       if (id === 7) return window.PHYSICS_CURRICULUM || [];
       if (id === 8) return window.MATH_CURRICULUM || [];
+      if (id === 9) return window.SOCIAL_CURRICULUM || [];
       return window.CURRICULUM_DATA || [];
     }
 
@@ -5616,6 +5673,18 @@
         image_folder: 'math',
         description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الرياضيات (الجزء الأول والثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات والمقادير الجبرية، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات مع بنك القوانين والنظريات ونماذج الامتحانات والحلول النموذجية الشاملة.',
         chapters: mathChapters
+      };
+
+      const socialChapters = window.SOCIAL_CURRICULUM || [];
+      const socialCurr = {
+        id: 9,
+        name: 'الاجتماعيات - الثاني متوسط',
+        subject: 'الاجتماعيات',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'social',
+        description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي وتضاريسه ومناخه وموارده وسكانه ونشاطه الاقتصادي، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) مع القراءة الصوتية وعارض الصفحات والحلول النموذجية الشاملة.',
+        chapters: socialChapters
       };
 
       // 1. تنقية المناهج واستبعاد أي وثائق مواصفات داخلية للنظام
@@ -5739,8 +5808,26 @@
         appData.curriculums.push(mathCurr);
       }
 
+      // 8. تحديث وتثبيت منهج الاجتماعيات
+      const existingSocialIndex = appData.curriculums.findIndex(c => 
+        c.id === 9 || 
+        (c.name && c.name.includes('الاجتماعيات')) || 
+        (c.subject && c.subject.includes('اجتماعيات'))
+      );
+
+      if (existingSocialIndex >= 0) {
+        appData.curriculums[existingSocialIndex] = {
+          ...appData.curriculums[existingSocialIndex],
+          ...socialCurr,
+          id: 9,
+          chapters: (socialChapters && socialChapters.length > 0) ? socialChapters : (appData.curriculums[existingSocialIndex].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(socialCurr);
+      }
+
       // ضمان اختيار منهج صالح
-      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8].includes(appData.currentCurriculumId)) {
+      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9].includes(appData.currentCurriculumId)) {
         appData.currentCurriculumId = 3;
       }
       saveData();
@@ -5869,6 +5956,7 @@
       const isIsActive = appData.currentCurriculumId === 6;
       const isPhyActive = appData.currentCurriculumId === 7;
       const isMathActive = appData.currentCurriculumId === 8;
+      const isSocialActive = appData.currentCurriculumId === 9;
 
       container.innerHTML = `
         <!-- زر 1: مادة اللغة الإنجليزية -->
@@ -5942,6 +6030,18 @@
             <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">7 فصول • 43 درساً • 252 ص</div>
           </div>
         </button>
+
+        <!-- زر 7: مادة الاجتماعيات -->
+        <button class="curr-nav-btn soc-btn ${isSocialActive ? 'active-curr' : ''}" onclick="selectCurriculumInDashboard(9)" title="تحديد منهج الاجتماعيات">
+          <div class="curr-btn-icon-box" style="font-size: 1.6rem; width: 44px; height: 44px; border-radius: 10px; background: #fffbeb; color: #b45309; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🌍</div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.3rem;">
+              <strong style="font-size: 0.92rem; color: var(--slate-900);">الاجتماعيات</strong>
+              ${isSocialActive ? '<span style="background: #b45309; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #fffbeb; color: #b45309; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">معتمد</span>'}
+            </div>
+            <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">6 فصول • 39 درساً • 140 ص</div>
+          </div>
+        </button>
       `;
     }
 
@@ -5959,6 +6059,8 @@
           currentCurriculumViewTab = 7;
         } else if (appData.currentCurriculumId === 8) {
           currentCurriculumViewTab = 8;
+        } else if (appData.currentCurriculumId === 9) {
+          currentCurriculumViewTab = 9;
         } else {
           currentCurriculumViewTab = 3;
         }
@@ -5989,6 +6091,11 @@
           <span>📐</span>
           <span>الرياضيات</span>
           <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 8 ? 'background: #f3e8ff; color: #7e22ce;' : 'background: #e2e8f0; color: #475569;'}">7 فصول</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 9 ? 'active social' : ''}" onclick="setCurriculumViewTab(9)">
+          <span>🌍</span>
+          <span>الاجتماعيات</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 9 ? 'background: #fef3c7; color: #92400e;' : 'background: #e2e8f0; color: #475569;'}">6 فصول</span>
         </button>
         <button class="curricula-tab-btn ${currentCurriculumViewTab === 'all' ? 'active all' : ''}" onclick="setCurriculumViewTab('all')">
           <span>🌐</span>
@@ -6080,6 +6187,7 @@
       const showIslamic = currentCurriculumViewTab === 6 || currentCurriculumViewTab === 'all';
       const showPhysics = currentCurriculumViewTab === 7 || currentCurriculumViewTab === 'all';
       const showMath = currentCurriculumViewTab === 8 || currentCurriculumViewTab === 'all';
+      const showSocial = currentCurriculumViewTab === 9 || currentCurriculumViewTab === 'all';
 
       // 1. بطاقة منهج اللغة الإنجليزية
       if (showEng) {
@@ -6506,6 +6614,91 @@
       }
       }
 
+      // 6. بطاقة منهج الاجتماعيات
+      if (showSocial) {
+      const socCardCurr = currs.find(c => c.id === 9);
+      if (socCardCurr) {
+        const div = document.createElement('div');
+        div.className = 'card curr-card';
+        div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1.5px solid #fde68a; box-shadow: 0 10px 25px -5px rgba(180, 83, 9, 0.15); grid-column: 1 / -1; margin-bottom: 1.75rem; background: #ffffff;';
+        div.innerHTML = `
+          <div style="display: flex; gap: 1.5rem; padding: 1.75rem; align-items: stretch; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); flex-wrap: wrap;">
+            <div style="width: 135px; height: 195px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 16px rgba(180,83,9,0.3); background: #78350f; cursor: default; position: relative;">
+              <img src="./book_images/social/page_1.jpeg" alt="غلاف كتاب الاجتماعيات" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(120,53,15,0.95), transparent); padding: 0.5rem; text-align: center;">
+                <span style="color: white; font-size: 0.72rem; font-weight: 800;">140 صفحة أصلية</span>
+              </div>
+            </div>
+
+            <div style="flex: 1 1 420px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.6rem;">
+                  <span class="badge" style="background: #b45309; color: #ffffff; font-size: 0.8rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                  <span class="badge" style="background: #ffffff; color: #92400e; border: 1px solid #fde68a; font-size: 0.76rem; font-weight: 800;">🌍 6 فصول كاملة (140 صفحة)</span>
+                  <span class="badge" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-size: 0.76rem; font-weight: 800;">💡 أطلس الخرائط وبنك المصطلحات</span>
+                </div>
+                <h2 style="font-size: 1.6rem; font-weight: 900; color: #78350f; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem;">
+                  <span>🌍</span>
+                  <span>الاجتماعيات - الصف الثاني المتوسط</span>
+                </h2>
+                <p style="font-size: 0.92rem; color: #92400e; line-height: 1.7; margin: 0 0 1rem; font-weight: 600;">
+                  المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي الطبيعية والاقتصادية، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) • 6 فصول شاملة، 39 درساً تفاعلياً، أطلس الخرائط التفاعلي، بنك المصطلحات والمفاهيم، والحلول النموذجية الشاملة.
+                </p>
+              </div>
+
+              <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; background: rgba(255,255,255,0.7); padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid #fde68a;">
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
+                  <span>📚 6 فصول</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #fde68a;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
+                  <span>📖 39 درساً تفاعلياً</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #fde68a;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
+                  <span>🎯 27 كتلة حلول نموذجية</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #fde68a;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
+                  <span>🖼️ 140 صفحة أصلية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 1.25rem 1.75rem; background: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 75px; height: 105px; border-radius: 8px; overflow: hidden; flex-shrink: 0; box-shadow: -3px 4px 10px rgba(180,83,9,0.2); background: #78350f; cursor: default; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <span style="font-size: 2.2rem;">🌍</span>
+                <span style="font-size: 0.65rem; font-weight: 800; margin-top: 0.2rem;">الاجتماعيات</span>
+              </div>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: #78350f; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الباب الأول والباب الثاني)</div>
+                <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">بابان رئيسيان • 6 فصول • 39 درساً تفاعلياً • أطلس الخرائط وبنك المصطلحات</div>
+                <div style="font-size: 0.76rem; color: #b45309; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="openSubjectTab(${socCardCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #b45309, #92400e); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(180, 83, 9, 0.3);">
+                📖 دخول قاعة المذاكرة والدروس ⮞
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${socCardCurr.id}); switchTab('grammar'); setGrammarSubjectMode('social');" style="background: #fffbeb; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                💡 بنك المصطلحات والمفاهيم
+              </button>
+              <button class="btn btn-secondary" onclick="openSocialReviewsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${socCardCurr.id}); switchTab('exams'); setExamSubjectMode('soc');" style="background: #ffffff; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                📝 الامتحانات الوزارية والشهرية
+              </button>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      }
+      }
+
       // المقررات القادمة ضمن خطة التوسع الأكاديمي
       if (currentCurriculumViewTab === 'all') {
       const upcoming = [
@@ -6612,6 +6805,16 @@
         select.appendChild(opt);
       }
 
+      // 6. مادة الاجتماعيات
+      const social = currs.find(c => c.id === 9);
+      if (social) {
+        const opt = document.createElement('option');
+        opt.value = 9;
+        opt.innerText = '🌍 الاجتماعيات (140 صفحة - 6 فصول معتمدة - 39 درساً تفاعلياً)';
+        if (appData.currentCurriculumId === 9) opt.selected = true;
+        select.appendChild(opt);
+      }
+
       // 6. أي مناهج أخرى
       currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7 && c.id !== 8).forEach(c => {
         const opt = document.createElement('option');
@@ -6627,7 +6830,8 @@
       appData.currentCurriculumId = idNum;
       appData.currentLessonId = null;
       saveData();
-      if (idNum === 8) currentCurriculumViewTab = 8;
+      if (idNum === 9) currentCurriculumViewTab = 9;
+      else if (idNum === 8) currentCurriculumViewTab = 8;
       else if (idNum === 7) currentCurriculumViewTab = 7;
       else if (idNum === 6) currentCurriculumViewTab = 6;
       else if (idNum === 4 || idNum === 5) currentCurriculumViewTab = 'arabic';
@@ -7179,6 +7383,7 @@
       const isIslamic = currId === 6;
       const isPhysics = currId === 7;
       const isMath = currId === 8;
+      const isSocial = currId === 9;
 
       let folder = '';
       let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
@@ -7206,6 +7411,10 @@
         folder = 'math/';
         bookName = 'كتاب الرياضيات (الصف الثاني المتوسط)';
         maxPages = 252;
+      } else if (isSocial) {
+        folder = 'social/';
+        bookName = 'كتاب الاجتماعيات (الصف الثاني المتوسط)';
+        maxPages = 140;
       }
 
       // محول نمط الكتاب للمنهج الإنجليزي (كتاب الطالب مقابل كراس النشاط)
@@ -7662,19 +7871,22 @@
       const isP2 = curr.id === 5 || curr.image_folder === 'arabic_p2';
       const isIslamic = curr.id === 6 || curr.image_folder === 'islamic';
       const isPhysics = curr.id === 7 || curr.image_folder === 'physics';
+      const isSocial = curr.id === 9 || curr.image_folder === 'social';
       let imgFolder = '';
       let bookLabel = 'كتاب الطالب المعتمد';
       if (isP1) { imgFolder = 'arabic_p1/'; bookLabel = 'كتاب العربية (الجزء الأول)'; }
       else if (isP2) { imgFolder = 'arabic_p2/'; bookLabel = 'كتاب العربية (الجزء الثاني)'; }
       else if (isIslamic) { imgFolder = 'islamic/'; bookLabel = 'كتاب التربية الإسلامية'; }
       else if (isPhysics) { imgFolder = 'physics/'; bookLabel = 'كتاب الفيزياء'; }
+      else if (isSocial) { imgFolder = 'social/'; bookLabel = 'كتاب الاجتماعيات'; }
 
       const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
       const pages = [...new Set(rawPages)];
       const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : 
                        (window.ARABIC_TOPIC_CARDS && window.ARABIC_TOPIC_CARDS[lesson.id] ? window.ARABIC_TOPIC_CARDS[lesson.id] : 
                        (window.ISLAMIC_TOPIC_CARDS && window.ISLAMIC_TOPIC_CARDS[lesson.id] ? window.ISLAMIC_TOPIC_CARDS[lesson.id] : 
-                       (window.PHYSICS_TOPIC_CARDS && window.PHYSICS_TOPIC_CARDS[lesson.id] ? window.PHYSICS_TOPIC_CARDS[lesson.id] : null)));
+                       (window.PHYSICS_TOPIC_CARDS && window.PHYSICS_TOPIC_CARDS[lesson.id] ? window.PHYSICS_TOPIC_CARDS[lesson.id] : 
+                       (window.SOCIAL_TOPIC_CARDS && window.SOCIAL_TOPIC_CARDS[lesson.id] ? window.SOCIAL_TOPIC_CARDS[lesson.id] : null))));
 
       // افتراضياً نتركه مخفياً ليكون نص الدرس ومقاطعه أمام عين الطالب فوراً
       container.style.display = 'none';
@@ -7983,57 +8195,20 @@
       if (!chatMessages || !lesson) return;
 
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
-      const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
       const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
+      const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
       let greeting = '';
-      if (isMath) {
-        container.innerHTML = `
-          <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1.5px solid #d8b4fe; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(126, 34, 206, 0.15);">
-            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
-              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(126,34,206,0.25); background: #581c87; cursor: default; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-                <span style="font-size: 3rem;">📐</span>
-                <span style="font-size: 0.75rem; font-weight: 800; margin-top: 0.5rem; text-align: center; padding: 0 0.25rem;">كتاب الرياضيات</span>
-              </div>
-              <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
-                <div>
-                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                    <span style="background: #7e22ce; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
-                    <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول كاملة (252 صفحة)</span>
-                    <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 22 قانوناً ونظرية ومفهوماً</span>
-                  </div>
-                  <h3 style="font-size: 1.4rem; font-weight: 900; color: #581c87; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <span>📐</span>
-                    <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
-                  </h3>
-                  <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
-                    المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 43 درساً تفاعلياً، بنك النظريات والقوانين الرياضية، ونماذج الامتحانات المحلولة).
-                  </p>
-                </div>
-                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                  <button class="btn btn-primary" onclick="openSubjectTab(8)" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);">
-                    📖 دخول قاعة المذاكرة والدروس ⮞
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
-                    💡 بنك القوانين والنظريات
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="openMathReviewsModal()" style="background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; font-weight: 800; padding: 0.55rem 1rem;">
-                    🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('exams'); setExamSubjectMode('math');" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
-                    📝 الامتحانات الوزارية والشهرية
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-        return;
-      }
-
-      if (isPhysics) {
+      if (isSocial) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الاجتماعيات (الصف الثاني المتوسط)</strong> 🌍.<br>` +
+                   `اسألني عن أي ظاهرة جغرافية، أو إقليم مناخي، أو ثروة اقتصادية، أو واقعة وتاريخ وشخصية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق أرقام الصفحات بدقة.`;
+      } else if (isMath) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الرياضيات (الصف الثاني المتوسط)</strong> 📐.<br>` +
+                   `اسألني عن أي قانون رياضي، أو خطوة حل مسألة، أو نظرية هندسية، أو تبسيط جملة عددية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الخطوات الرياضية.`;
+      } else if (isPhysics) {
         greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الفيزياء (الصف الثاني المتوسط)</strong> ⚛️.<br>` +
                    `اسألني عن أي قانون رياضي، أو مسألة حسابية، أو مفهوم علمي، أو تفسير ظاهرة فيزيائية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والمعادلات الدقيقة.`;
       } else if (isIslamic) {
@@ -8061,13 +8236,103 @@
       container.innerHTML = '';
 
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
+      const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
       let suggestions = [];
 
-      if (isPhysics) {
+      if (isSocial) {
+        const lt = (lesson.title || '').toLowerCase();
+        if (lt.includes('موقع') || lt.includes('تضاريس') || lt.includes('جبال') || lt.includes('هضاب') || lt.includes('سهول')) {
+          suggestions = [
+            'ما هو الموقع الفلكي والجغرافي للعالم العربي وأهميته؟',
+            'ما هي السلاسل الجبلية الأربع في العالم العربي؟',
+            'ما هي الهضاب والسهول الفيضية والساحلية بالعالم العربي؟',
+            'ما هي مميزات قمة طوبقال وقمة هلكرد؟'
+          ];
+        } else if (lt.includes('مناخ') || lt.includes('أقاليم') || lt.includes('نبات')) {
+          suggestions = [
+            'ما هي الأقاليم المناخية الخمسة في العالم العربي؟',
+            'ما الفرق بين مناخ البحر المتوسط والإقليم الصحراوي؟',
+            'ما هي أنواع النبات الطبيعي وحشائش السافانا والسهوب؟',
+            'ما هي العوامل المؤثرة في مناخ العالم العربي؟'
+          ];
+        } else if (lt.includes('مياه') || lt.includes('أنهار') || lt.includes('دجلة') || lt.includes('فرات') || lt.includes('نيل')) {
+          suggestions = [
+            'ما هو منبع ومصب وروافد نهري دجلة والفرات؟',
+            'ما هي روافد نهر النيل وأطواله وسدوده الكبرى؟',
+            'ما هي المياه الجوفية والينابيع وأهميتها الاقتصادية؟',
+            'ما هي البحيرات والسدود المائية في العراق والعالم العربي؟'
+          ];
+        } else if (lt.includes('سكان') || lt.includes('هجرات') || lt.includes('توزيع')) {
+          suggestions = [
+            'ما هي الأقاليم السكانية الأربعة في العالم العربي ونسبها؟',
+            'ما هي الهجرات التاريخية لسكان شبه الجزيرة العربية؟',
+            'ما العوامل الطبيعية والبشرية المؤثرة في توزيع السكان؟'
+          ];
+        } else if (lt.includes('زراعة') || lt.includes('ثروة') || lt.includes('حيوانية') || lt.includes('سمكية')) {
+          suggestions = [
+            'ما هي أقاليم الزراعة الكبرى في العالم العربي؟',
+            'ما هي أهم المحاصيل الزراعية الغذائية والصناعية؟',
+            'ما هي أهمية الثروة الحيوانية والسمكية في العالم العربي؟'
+          ];
+        } else if (lt.includes('نفط') || lt.includes('غاز') || lt.includes('تعدين') || lt.includes('صناعة') || lt.includes('تجارة')) {
+          suggestions = [
+            'ما هي مميزات وخصائص النفط العربي وأهميته العالمية؟',
+            'ما هي خامات التعدين الأخرى كالفوسفات والكبريت والحديد؟',
+            'ما هي خصائص التجارة الخارجية والميزان التجاري العربي؟'
+          ];
+        } else if (lt.includes('شبه الجزيرة') || lt.includes('قبيلة') || lt.includes('مرأة') || lt.includes('أصنام') || lt.includes('حنيفية')) {
+          suggestions = [
+            'ما هو موقع ومناخ شبه الجزيرة العربية قبل الإسلام؟',
+            'ما هو التنظيم القبلي ومكانة المرأة والأسرة عند العرب؟',
+            'ما هي ديانة الحنيفية والفرق بينها وبين عبادة الأصنام؟',
+            'ما هي أهم أسواق العرب وأشهر فنون العمارة؟'
+          ];
+        } else if (lt.includes('مكة') || lt.includes('قصي') || lt.includes('ندوة') || lt.includes('زمزم') || lt.includes('شتاء') || lt.includes('صيف')) {
+          suggestions = [
+            'كيف نشأت مكة وما قصة بئر زمزم وبناء الكعبة المشرفة؟',
+            'ما دور قصي بن كلاب في توحيد قريش وتأسيس دار الندوة؟',
+            'ما هي وظائف مكة الخمس: الرفادة والسقاية والحجابة واللواء والندوة؟',
+            'ما هي رحلتا الشتاء والصيف وأهميتهما الاقتصادية؟'
+          ];
+        } else if (lt.includes('نبي') || lt.includes('رسول') || lt.includes('مولد') || lt.includes('بعثة') || lt.includes('فضول') || lt.includes('هجرة')) {
+          suggestions = [
+            'ما هو نسب النبي ﷺ ونشأته وأخلاقه الشريفة؟',
+            'ما هو حلف الفضول ولماذا أثنى عليه النبي ﷺ؟',
+            'كيف بدأت الدعوة سراً ثم جهراً في مكة المكرمة؟',
+            'ما أسباب هجرة المسلمين الأولى والثانية إلى الحبشة؟',
+            'ما هي بيعتا العقبة الأولى والثانية ونتائجهما؟'
+          ];
+        } else if (lt.includes('مدينة') || lt.includes('غزوة') || lt.includes('بدر') || lt.includes('أحد') || lt.includes('خندق') || lt.includes('حديبية') || lt.includes('وداع')) {
+          suggestions = [
+            'ما هي بنود ومبادئ وثيقة المدينة المنورة؟',
+            'قارن بين أسباب ونتائج غزوتي بدر الكبرى وأحد',
+            'ما دور سلمان الفارسي وخطة حفر الخندق في غزوة الأحزاب؟',
+            'ما هي شروط صلح الحديبية ولماذا عُدّ فتحاً مبيناً؟',
+            'ما هي المبادئ والحقوق الإنسانية في خطبة حجة الوداع؟'
+          ];
+        } else {
+          suggestions = [
+            'ما هو الموقع الجغرافي للعالم العربي وأهميته الاستراتيجية؟',
+            'ما هي خصائص ومميزات النفط والغاز في العالم العربي؟',
+            'ما هي وظائف مكة المكرمة الخمس قبل الإسلام؟',
+            'ما هي المبادئ الدستورية لوثيقة المدينة المنورة؟',
+            'ما هي حقوق الإنسان التي أعلنتها خطبة حجة الوداع؟'
+          ];
+        }
+      } else if (isMath) {
+        suggestions = [
+          'ما هي خطوات ترتيب العمليات الحسابية على الأعداد النسبية؟',
+          'اشرح كيفية التعامل مع الأسس السالبة والصورة العلمية',
+          'ما هو نص وتطبيقات نظرية فيثاغورس؟',
+          'كيف نحلل المقدار الجبري باستخراج العامل المشترك الأكبر G.C.F؟',
+          'كيف نجد ميل المستقيم ونحل معادلات ومتباينات الدرجة الأولى؟'
+        ];
+      } else if (isPhysics) {
         const lid = lesson.id;
         const lt = (lesson.title || '').toLowerCase();
 
@@ -9489,7 +9754,8 @@
     let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar', 'is'
 
     function setGrammarSubjectMode(mode) {
-      if (mode === 'math') appData.currentCurriculumId = 8;
+      if (mode === 'social' || mode === 'soc') appData.currentCurriculumId = 9;
+      else if (mode === 'math') appData.currentCurriculumId = 8;
       else if (mode === 'phy') appData.currentCurriculumId = 7;
       else if (mode === 'is') appData.currentCurriculumId = 6;
       else if (mode === 'ar') {
@@ -9517,7 +9783,8 @@
       // تحديد نمط المادة حصراً للمنهج النشط حالياً لمنع أي تداخل بين المواد
       const currId = Number(appData.currentCurriculumId || 3);
       let currentMode = 'en';
-      if (currId === 8) currentMode = 'math';
+      if (currId === 9) currentMode = 'social';
+      else if (currId === 8) currentMode = 'math';
       else if (currId === 7) currentMode = 'phy';
       else if (currId === 6) currentMode = 'is';
       else if (currId === 4 || currId === 5) currentMode = 'ar';
@@ -9558,6 +9825,10 @@
         if (titleEl) titleEl.innerText = '📐 المرجع الشامل لقوانين ونظريات الرياضيات (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي لقوانين الأعداد والعمليات، الجبر والتحليل، حل المعادلات والمتباينات، نظريات الهندسة والمثلثات والمجسمات، الهندسة الإحداثية، والإحصاء والاحتمالات.';
         if (searchInput) searchInput.placeholder = 'ابحث في قوانين ونظريات ومفاهيم الرياضيات (مثلاً: فيثاغورس، الميل، العامل المشترك، المتباينة، متوازي الأضلاع، الوسيط)...';
+      } else if (currentMode === 'social') {
+        if (titleEl) titleEl.innerText = '🌍 المرجع الشامل لمفاهيم ومصطلحات الاجتماعيات (الصف الثاني المتوسط)';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للمفاهيم الجغرافية، الأقاليم والمناخ، الثروات والاقتصاد، أحوال العرب والجاهلية، وتاريخ وسيرة النبي ﷺ بمكة والمدينة المنورة.';
+        if (searchInput) searchInput.placeholder = 'ابحث في المفاهيم والمصطلحات والوقائع (مثلاً: طوبقال، الهلال الخصيب، حلف الفضول، دار الندوة، وثيقة المدينة)...';
       }
 
       // تحديث وتوليد فلاتر الوحدات والأقسام المخصصة لكل منهج ديناميكياً
@@ -9620,7 +9891,77 @@
             <button class="btn ${currentActiveGrammarFilter === 'coord' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('coord', this)">📈 الهندسة الإحداثية والميل (فصل 6)</button>
             <button class="btn ${currentActiveGrammarFilter === 'stats' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('stats', this)">📊 الإحصاء والاحتمالات (فصل 7)</button>
           `;
+        } else if (currentMode === 'social') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع المفاهيم والمصطلحات (13)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'geo' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('geo', this)">🗺️ جغرافية وطبيعة (فصل 1)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'econ' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('econ', this)">📈 سكان واقتصاد (فصل 2)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'history' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('history', this)">🏺 شبه الجزيرة ومكة (فصل 3 و 4)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'seerah' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('seerah', this)">🕊️ السيرة النبوية والغزوات (فصل 5 و 6)</button>
+          `;
         }
+      }
+
+      if (currentMode === 'social') {
+        const socialTerms = window.SOCIAL_TERMS_BANK || [];
+        const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+        const filteredSocial = socialTerms.filter(r => {
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') {
+            matchesFilter = true;
+          } else if (currentActiveGrammarFilter === 'geo') {
+            matchesFilter = r.category && (r.category.includes('جغرافيا') || r.category.includes('تضاريس') || r.category.includes('مناخ') || r.category.includes('مياه') || r.category.includes('طبيعة'));
+          } else if (currentActiveGrammarFilter === 'econ') {
+            matchesFilter = r.category && (r.category.includes('سكان') || r.category.includes('أقاليم') || r.category.includes('اقتصاد') || r.category.includes('تجارة'));
+          } else if (currentActiveGrammarFilter === 'history') {
+            matchesFilter = r.category && (r.category.includes('ما قبل الإسلام') || r.category.includes('مكة') || r.category.includes('عقائد') || r.category.includes('سياسة'));
+          } else if (currentActiveGrammarFilter === 'seerah') {
+            matchesFilter = r.category && (r.category.includes('الدولة') || r.category.includes('السيرة') || r.category.includes('معاهدات') || r.category.includes('غزوات'));
+          }
+          const matchesSearch = !search || 
+            (r.title && r.title.toLowerCase().includes(search)) || 
+            (r.category && r.category.toLowerCase().includes(search)) || 
+            (r.summary && r.summary.toLowerCase().includes(search)) || 
+            (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
+        });
+
+        if (filteredSocial.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
+          empty.innerText = 'لا توجد مفاهيم أو مصطلحات مطابقة للفلتر أو البحث المحدد.';
+          container.appendChild(empty);
+          return;
+        }
+
+        filteredSocial.forEach(term => {
+          const card = document.createElement('div');
+          card.className = 'grammar-card';
+          card.style.cssText = 'background: white; border: 1px solid var(--slate-200); border-right: 4px solid #b45309; border-radius: 12px; padding: 1.15rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;';
+          card.innerHTML = `
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
+                <span class="badge" style="background: #fffbeb; color: #b45309; font-size: 0.72rem; font-weight: 800;">${term.category}</span>
+                <span style="font-size: 0.7rem; color: var(--slate-400); font-weight: 700;">الاجتماعيات</span>
+              </div>
+              <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #78350f;">${term.title}</h4>
+              <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #92400e; line-height: 1.6; margin-bottom: 0.65rem;">
+                <strong>💡 التعريف والمفهوم:</strong> ${term.summary}
+              </div>
+              <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
+                ${term.details}
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.6rem; margin-top: 0.4rem;">
+              <span style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700;">الصف الثاني المتوسط • مقرر وزاري</span>
+              <button class="btn btn-sm btn-secondary" onclick="selectCurriculumForStudy(9); switchTab('study');" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: #b45309; border-color: #fde68a; font-weight: 700;">
+                📖 استعراض في الدروس
+              </button>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        return;
       }
 
       if (currentMode === 'math') {
@@ -13539,6 +13880,7 @@
       if (!mode || mode === 'auto') {
         mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
       }
+      if (mode === 'soc' || mode === 'social') return window.SOCIAL_PAST_EXAMS || {};
       if (mode === 'math') return window.MATH_PAST_EXAMS || {};
       if (mode === 'phy') return window.PHYSICS_PAST_EXAMS || {};
       if (mode === 'is') return window.ISLAMIC_PAST_EXAMS || {};
@@ -13548,6 +13890,7 @@
 
     // مطابقة معرّف المنهج مع نمط المادة الامتحانية
     function resolveCurriculumToExamSubject(currId) {
+      if (currId === 9) return 'soc';
       if (currId === 8) return 'math';
       if (currId === 7) return 'phy';
       if (currId === 6) return 'is';
@@ -13562,8 +13905,8 @@
       }
       currentExamSubjectMode = mode;
 
-      // تحديث مظهر أزرار المواد الأربعة
-      const subjectModes = ['math', 'phy', 'is', 'ar', 'en'];
+      // تحديث مظهر أزرار المواد
+      const subjectModes = ['soc', 'math', 'phy', 'is', 'ar', 'en'];
       subjectModes.forEach(m => {
         const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
         const btn = document.getElementById(btnId);
@@ -13598,7 +13941,9 @@
 
       // اختيار النموذج الافتراضي للمادة
       let defaultExamId = examKeys[0];
-      if (mode === 'math') {
+      if (mode === 'soc') {
+        defaultExamId = exams['exam_final_soc'] ? 'exam_final_soc' : (exams['exam_midterm_soc'] ? 'exam_midterm_soc' : examKeys[0]);
+      } else if (mode === 'math') {
         defaultExamId = exams['math_final'] ? 'math_final' : (exams['math_midyear'] ? 'math_midyear' : examKeys[0]);
       } else if (mode === 'phy') {
         defaultExamId = exams['phy_midyear'] ? 'phy_midyear' : (exams['phy_final'] ? 'phy_final' : examKeys[0]);
@@ -14076,6 +14421,22 @@
         `;
       }
 
+      // 5.2 مادة الاجتماعيات
+      const socPillCurr = currs.find(c => c.id === 9);
+      if (socPillCurr) {
+        const isSocActive = appData.currentCurriculumId === 9;
+        html += `
+          <div class="curr-selector-pill ${isSocActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(9)">
+            <span style="font-size: 1.5rem;">🌍</span>
+            <div>
+              <div class="curr-pill-title">الاجتماعيات (الثاني متوسط)</div>
+              <div class="curr-pill-sub">وزارة التربية العراقية • 6 فصول شاملة</div>
+            </div>
+            <span class="curr-pill-badge" style="${isSocActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #fef3c7; color: #92400e;'}">مكتمل 100%</span>
+          </div>
+        `;
+      }
+
       // 5. أي مناهج إضافية أخرى مستقبلاً
       currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7).forEach(c => {
         const isActive = c.id === appData.currentCurriculumId;
@@ -14109,11 +14470,103 @@
         return;
       }
 
+      const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
+      const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isArP1 = curr.id === 4 || (curr.name && curr.name.includes('الجزء الأول'));
       const isArP2 = curr.id === 5 || (curr.name && curr.name.includes('الجزء الثاني'));
       const isArabic = isArP1 || isArP2;
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+
+      if (isSocial) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1.5px solid #fde68a; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(180, 83, 9, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(180,83,9,0.25); background: #78350f; cursor: default; position: relative;">
+                <img src="./book_images/social/page_1.jpeg" alt="غلاف كتاب الاجتماعيات" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
+              </div>
+              <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #b45309; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                    <span style="background: #ffffff; color: #92400e; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 140 صفحة أصلية</span>
+                    <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 13 مفهوماً ومصطلحاً أساسياً</span>
+                  </div>
+                  <h3 style="font-size: 1.4rem; font-weight: 900; color: #78350f; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>🌍</span>
+                    <span>كتاب الاجتماعيات - الصف الثاني المتوسط</span>
+                  </h3>
+                  <p style="font-size: 0.85rem; color: #92400e; line-height: 1.6; margin: 0 0 0.75rem;">
+                    المنهج الرسمي المعتمد لوزارة التربية العراقية: جغرافية العالم العربي الطبيعية والبشرية والاقتصادية، وأحوال شبه الجزيرة العربية قبل الإسلام، وتاريخ مكة المكرمة، والسيرة النبوية الشريفة بمكة والمدينة المنورة (6 فصول شاملة، 39 درساً تفاعلياً، وبنك المصطلحات والامتحانات الوزارية الشاملة).
+                  </p>
+                </div>
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(9)" style="font-weight: 800; background: linear-gradient(135deg, #b45309, #92400e); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(9); switchTab('grammar'); setGrammarSubjectMode('social');" style="background: #fffbeb; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
+                    💡 بنك المفاهيم والمصطلحات
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openSocialReviewsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
+                    🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(9, 1)" style="background: #ffffff; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
+                    📖 تصفح الكتاب الأصلي (140 صفحة)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(9); switchTab('exams'); setExamSubjectMode('soc');" style="background: #ffffff; color: #b45309; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
+                    📝 الامتحانات الوزارية والشهرية
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      if (isMath) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1.5px solid #d8b4fe; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(126, 34, 206, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(126,34,206,0.25); background: #581c87; cursor: default; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <span style="font-size: 3rem;">📐</span>
+                <span style="font-size: 0.75rem; font-weight: 800; margin-top: 0.5rem; text-align: center; padding: 0 0.25rem;">كتاب الرياضيات</span>
+              </div>
+              <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #7e22ce; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                    <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول كاملة (252 صفحة)</span>
+                    <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 22 قانوناً ونظرية ومفهوماً</span>
+                  </div>
+                  <h3 style="font-size: 1.4rem; font-weight: 900; color: #581c87; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>📐</span>
+                    <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
+                  </h3>
+                  <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
+                    المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 43 درساً تفاعلياً، بنك النظريات والقوانين الرياضية، ونماذج الامتحانات المحلولة).
+                  </p>
+                </div>
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(8)" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);">
+                    📖 دخول قاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                    💡 بنك القوانين والنظريات
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openMathReviewsModal()" style="background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; font-weight: 800; padding: 0.55rem 1rem;">
+                    🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('exams'); setExamSubjectMode('math');" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                    📝 الامتحانات الوزارية والشهرية
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
+      }
 
       if (isPhysics) {
         container.innerHTML = `
@@ -14799,6 +15252,174 @@
     // إعداد المهندس أسامة خليل هاشم
     // ==========================================
     let currentMathModalReviewLessonId = 8015;
+
+    
+    // ----------------------------------------------------
+    // إدارة نافذة مراجعات فصول الاجتماعيات الشاملة
+    // ----------------------------------------------------
+    let currentSocialModalReviewLessonId = 9019;
+
+    function openSocialReviewsModal(reviewLessonId = 9019) {
+      currentSocialModalReviewLessonId = Number(reviewLessonId) || 9019;
+      renderSocialReviewsModal();
+      const modal = document.getElementById('socialChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeSocialReviewsModal() {
+      const modal = document.getElementById('socialChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchSocialModalReviewChapter(reviewLessonId) {
+      currentSocialModalReviewLessonId = Number(reviewLessonId);
+      renderSocialReviewsModal();
+    }
+
+    function renderSocialReviewsModal() {
+      const navContainer = document.getElementById('socialReviewChaptersNav');
+      const contentContainer = document.getElementById('socialModalReviewsContent');
+      const badgeEl = document.getElementById('socialModalChapterBadge');
+      const titleEl = document.getElementById('socialModalChapterTitle');
+      const pagesEl = document.getElementById('socialModalChapterPages');
+
+      const metaList = window.SOCIAL_CHAPTER_REVIEWS || [];
+      const activeMeta = metaList.find(m => m.primaryLessonId === currentSocialModalReviewLessonId) || metaList[0];
+
+      if (badgeEl) badgeEl.innerText = `الوحدة / ${activeMeta.unitId}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + (activeMeta.subtitle || '');
+      if (pagesEl) pagesEl.innerText = `الصفحات (${activeMeta.pages})`;
+
+      // Render Chapters Nav
+      if (navContainer) {
+        navContainer.innerHTML = metaList.map(meta => {
+          const isActive = meta.primaryLessonId === currentSocialModalReviewLessonId;
+          return `
+            <button class="btn btn-sm" onclick="switchSocialModalReviewChapter(${meta.primaryLessonId})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #b45309; color: white; border: none; box-shadow: 0 2px 6px rgba(180,83,9,0.3);' : 'background: #fffbeb; color: #92400e; border: 1px solid #fde68a;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find the lesson in window.SOCIAL_CURRICULUM
+      const curr = window.SOCIAL_CURRICULUM || [];
+      let targetLesson = null;
+      for (const u of curr) {
+        for (const l of u.lessons || []) {
+          if (l.id === currentSocialModalReviewLessonId) {
+            targetLesson = l;
+            break;
+          }
+        }
+        if (targetLesson) break;
+      }
+
+      if (!contentContainer) return;
+
+      if (!targetLesson || !targetLesson.chunks || targetLesson.chunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعة الفصل...</div>';
+        return;
+      }
+
+      let html = '';
+
+      targetLesson.chunks.forEach((ch, chunkIdx) => {
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #fde68a; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-bottom: 1.5px solid #fde68a; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📌</span>
+                <strong style="color: #78350f; font-size: 0.92rem;">${ch.heading || ('مراجعة الفصل - صفحة ' + pageNum)}</strong>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(targetLesson.title)}\`, 'student', 9)" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #92400e; border: 1px solid #fde68a; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_soc_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #b45309; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_soc_${chunkIdx}">
+        `;
+
+        exercises.forEach((ex, exIdx) => {
+          const exId = `modal_soc_${chunkIdx}_${ex.id || exIdx}`;
+          let qListHtml = '';
+          if (ex.questions && ex.questions.length > 0) {
+            qListHtml = ex.questions.map((qObj, qIdx) => `
+              <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #fef3c7;">
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6; white-space: pre-wrap;">
+                  ${qObj.q}
+                </div>
+                <div id="sol_${exId}_${qIdx}" class="exercise-solution-box" style="margin-top: 0.55rem; padding: 0.75rem; background: #fffdf5; border-right: 4px solid #b45309; border-radius: 6px; font-size: 0.85rem; color: #78350f; line-height: 1.7; white-space: pre-wrap; direction: rtl; text-align: right; border-top: 1px solid #fef3c7; border-bottom: 1px solid #fef3c7; border-left: 1px solid #fef3c7;">
+                  <strong style="color: #b45309; display: block; margin-bottom: 0.35rem;">💡 الحل النموذجي المعتمد:</strong>
+                  ${qObj.a}
+                </div>
+              </div>
+            `).join('');
+          }
+
+          html += `
+            <div class="exercise-card" style="border: 1px solid #fde68a; border-radius: 8px; margin-bottom: 0.75rem; padding: 0.75rem; background: #fafaf9;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
+                <div>
+                  <span class="badge" style="background: #fef3c7; color: #92400e; font-size: 0.72rem; font-weight: 800;">${ex.num || ('س ' + (exIdx + 1))}</span>
+                  <strong style="font-size: 0.88rem; color: var(--slate-800); margin-inline-start: 0.35rem;">${ex.title || ''}</strong>
+                </div>
+                <button class="btn btn-sm" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${(ex.questions || []).length})" style="font-size: 0.7rem; padding: 0.2rem 0.55rem; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-weight: 800; border-radius: 5px;">
+                  <span>🙈</span> إخفاء الحل
+                </button>
+              </div>
+              ${qListHtml}
+            </div>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    let allSocialModalSolutionsVisible = true;
+    function toggleAllSocialModalSolutions() {
+      allSocialModalSolutionsVisible = !allSocialModalSolutionsVisible;
+      const boxes = document.querySelectorAll('#socialModalReviewsContent .exercise-solution-box');
+      boxes.forEach(box => {
+        if (allSocialModalSolutionsVisible) box.classList.remove('hidden');
+        else box.classList.add('hidden');
+      });
+      const btn = document.getElementById('btnToggleAllModalSocSols');
+      if (btn) {
+        btn.innerHTML = allSocialModalSolutionsVisible ? '<span>🙈</span> إخفاء كافة الحلول' : '<span>👁️</span> إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalSocReviewInStudy() {
+      const lessonId = currentSocialModalReviewLessonId;
+      closeSocialReviewsModal();
+      selectCurriculumForStudy(9);
+      setTimeout(() => {
+        loadLessonContent(lessonId);
+        scrollToStudyContent();
+      }, 150);
+    }
+
+    function openCurrentModalSocBookPage() {
+      const metaList = window.SOCIAL_CHAPTER_REVIEWS || [];
+      const activeMeta = metaList.find(m => m.primaryLessonId === currentSocialModalReviewLessonId) || metaList[0];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student', 9);
+    }
 
     function openMathReviewsModal(reviewLessonId = 8015) {
       currentMathModalReviewLessonId = Number(reviewLessonId) || 8015;
