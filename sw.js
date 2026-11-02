@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v4.7.0';
+const CACHE_NAME = 'interactive-edu-pwa-v4.7.1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -21,7 +21,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching core PWA assets v4.7.0');
+      console.log('[Service Worker] Caching core PWA assets v4.7.1');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
