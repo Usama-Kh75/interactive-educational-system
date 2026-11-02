@@ -24,6 +24,8 @@
   <script src="curriculum_diagrams_physics.js"></script>
   <script src="curriculum_data_math.js"></script>
   <script src="curriculum_data_social.js"></script>
+  <script src="curriculum_diagrams_chemistry.js"></script>
+  <script src="curriculum_data_chemistry.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -3510,6 +3512,9 @@
       <!-- شريط اختيار المادة الامتحانية -->
       <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
         <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر المادة الامتحانية:</span>
+        <button id="btnExamSubjectChem" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('chem')" style="font-weight: 800; font-size: 0.78rem;">
+          🧪 مادة الكيمياء (نموذجان وزاري وفصلي)
+        </button>
         <button id="btnExamSubjectSoc" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('soc')" style="font-weight: 800; font-size: 0.78rem;">
           🌍 مادة الاجتماعيات (نموذجان وزاري وفصلي)
         </button>
@@ -3961,6 +3966,118 @@
 
       <!-- Exercises and Questions Content -->
       <div id="mathModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الكيميائي الدقيق -->
+  <div class="modal-overlay hidden" id="chemistryDiagramModal" onclick="if(event.target === this) closeChemistryDiagramModal()">
+    <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🧪</span>
+          <div>
+            <h3 id="chemistryDiagramModalTitle" style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0;">الرسم التوضيحي الكيميائي المعتمد</h3>
+            <span id="chemistryDiagramModalSubtitle" style="font-size: 0.75rem; color: #059669; font-weight: 700;">منهج الكيمياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <button class="btn btn-secondary btn-sm" onclick="zoomChemistryDiagram(0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➕ تكبير</button>
+          <button class="btn btn-secondary btn-sm" onclick="zoomChemistryDiagram(-0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➖ تصغير</button>
+          <button class="btn btn-secondary btn-sm" onclick="resetChemistryDiagramZoom()" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">🔄 100%</button>
+          <button onclick="closeChemistryDiagramModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center; margin-right: 0.3rem;">✕</button>
+        </div>
+      </div>
+
+      <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; padding: 0.25rem;">
+        <div id="chemistryDiagramSvgWrapper" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; overflow: auto; text-align: center; padding: 1rem 0.5rem; width: 100%; box-sizing: border-box;">
+          <!-- SVG injected here -->
+        </div>
+        <div id="chemistryDiagramInfoWrapper">
+          <!-- Details injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: معرض بنك الرسوم واللوحات التوضيحية للكيمياء الشاملة -->
+  <div class="modal-overlay hidden" id="allChemistryDiagramsModal" onclick="if(event.target === this) closeAllChemistryDiagramsGallery()">
+    <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🎨</span>
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0;">معرض بنك الرسوم واللوحات التوضيحية للكيمياء (16 لوحة)</h3>
+            <span style="font-size: 0.75rem; color: #059669; font-weight: 700;">رسوم متجهية دقيقة تغطي كافة فصول المنهج • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <button onclick="closeAllChemistryDiagramsGallery()" title="إغلاق المعرض" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="chemDiagramsFilterTabs">
+        <button class="btn btn-primary btn-sm" onclick="filterAllChemistryDiagrams('all', this)">كل الرسوم (16)</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('البناء الذري والترابط', this)">البناء الذري والترابط</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('المركبات وقوى الجذب', this)">المركبات وقوى الترابط</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('الصيغ والمعادلات والتفاعلات', this)">الصيغ والتفاعلات</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('المحاليل والذوبان', this)">المحاليل والذوبان</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('الحوامض والقواعد', this)">الحوامض والقواعد</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllChemistryDiagrams('الدلائل والأملاح والـ pH', this)">الدلائل والأملاح والـ pH</button>
+      </div>
+
+      <!-- Diagrams Grid -->
+      <div id="allChemistryDiagramsGrid" style="flex: 1; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 0.25rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الكيمياء -->
+  <div class="modal-overlay hidden" id="chemistryChapterReviewsModal" onclick="if(event.target === this) closeChemistryReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            🧪
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #064e3b; margin: 0;">مركز الحلول النموذجية لمراجعات فصول الكيمياء</h3>
+            <span style="font-size: 0.76rem; color: #059669; font-weight: 800;">منهج الكيمياء للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllChemistryModalSolutions()" id="btnToggleAllModalChemSols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeChemistryReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 6 Chemistry Chapters -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="chemistryReviewChaptersNav">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Chapter Header & Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #ecfdf5; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #a7f3d0;" id="chemistryReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span id="chemistryModalChapterBadge" style="background: #059669; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الفصل 1</span>
+          <strong id="chemistryModalChapterTitle" style="font-size: 0.95rem; color: #064e3b;">مراجعة الفصل الأول</strong>
+          <span id="chemistryModalChapterPages" style="font-size: 0.76rem; color: #059669; font-weight: 700;">الصفحات 21 - 22</span>
+        </div>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="btnOpenCurrentModalChemReviewInStudy" onclick="openCurrentModalChemReviewInStudy()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 800; background: linear-gradient(135deg, #059669, #047857); border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.25);">
+            🚀 فتح المراجعة في قاعة المذاكرة
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnOpenCurrentModalChemBookPage" onclick="openCurrentModalChemBookPage()" style="font-size: 0.75rem; padding: 0.3rem 0.75rem; font-weight: 700; background: #ffffff; color: #065f46; border: 1px solid #a7f3d0;">
+            📖 فتح صفحة الكتاب الأصلية
+          </button>
+        </div>
+      </div>
+
+      <!-- Exercises and Questions Content -->
+      <div id="chemistryModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
         <!-- Injected dynamically -->
       </div>
     </div>
@@ -5615,6 +5732,7 @@
       if (id === 7) return window.PHYSICS_CURRICULUM || [];
       if (id === 8) return window.MATH_CURRICULUM || [];
       if (id === 9) return window.SOCIAL_CURRICULUM || [];
+      if (id === 10) return window.CHEMISTRY_CURRICULUM || [];
       return window.CURRICULUM_DATA || [];
     }
 
@@ -5689,6 +5807,18 @@
         image_folder: 'math',
         description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الرياضيات (الجزء الأول والثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات والمقادير الجبرية، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات مع بنك القوانين والنظريات ونماذج الامتحانات والحلول النموذجية الشاملة.',
         chapters: mathChapters
+      };
+
+      const chemistryChapters = window.CHEMISTRY_CURRICULUM || [];
+      const chemistryCurr = {
+        id: 10,
+        name: 'الكيمياء - الثاني متوسط',
+        subject: 'الكيمياء',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'chemistry',
+        description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الكيمياء: العناصر والترابط الكيميائي، المركبات الأيونية والتساهمية وقوى الترابط، الصيغ والتفاعلات الكيميائية وموازنة المعادلات، المحاليل والذوبان وطرائق الفصل، الحوامض والقواعد، والدلائل ومقياس الرقم الهيدروجيني والأملاح مع الرسوم التوضيحية المتجهية وعارض الصفحات الأصلية والحلول النموذجية الشاملة.',
+        chapters: chemistryChapters
       };
 
       const socialChapters = window.SOCIAL_CURRICULUM || [];
@@ -5842,8 +5972,26 @@
         appData.curriculums.push(socialCurr);
       }
 
+      // 9. تحديث وتثبيت منهج الكيمياء
+      const existingChemIndex = appData.curriculums.findIndex(c => 
+        c.id === 10 || 
+        (c.name && c.name.includes('الكيمياء')) || 
+        (c.subject && c.subject.includes('كيمياء'))
+      );
+
+      if (existingChemIndex >= 0) {
+        appData.curriculums[existingChemIndex] = {
+          ...appData.curriculums[existingChemIndex],
+          ...chemistryCurr,
+          id: 10,
+          chapters: (chemistryChapters && chemistryChapters.length > 0) ? chemistryChapters : (appData.curriculums[existingChemIndex].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(chemistryCurr);
+      }
+
       // ضمان اختيار منهج صالح
-      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9].includes(appData.currentCurriculumId)) {
+      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9, 10].includes(appData.currentCurriculumId)) {
         appData.currentCurriculumId = 3;
       }
       saveData();
@@ -5973,6 +6121,7 @@
       const isPhyActive = appData.currentCurriculumId === 7;
       const isMathActive = appData.currentCurriculumId === 8;
       const isSocialActive = appData.currentCurriculumId === 9;
+      const isChemActive = appData.currentCurriculumId === 10;
 
       container.innerHTML = `
         <!-- زر 1: مادة اللغة الإنجليزية -->
@@ -6058,6 +6207,18 @@
             <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">6 فصول • 39 درساً • 140 ص</div>
           </div>
         </button>
+
+        <!-- زر 8: مادة الكيمياء -->
+        <button class="curr-nav-btn chem-btn ${isChemActive ? 'active-curr' : ''}" onclick="selectCurriculumInDashboard(10)" title="تحديد منهج الكيمياء">
+          <div class="curr-btn-icon-box" style="font-size: 1.6rem; width: 44px; height: 44px; border-radius: 10px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🧪</div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.3rem;">
+              <strong style="font-size: 0.92rem; color: var(--slate-900);">الكيمياء</strong>
+              ${isChemActive ? '<span style="background: #059669; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #ecfdf5; color: #059669; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">معتمد</span>'}
+            </div>
+            <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">3 وحدات • 6 فصول • 96 ص</div>
+          </div>
+        </button>
       `;
     }
 
@@ -6077,6 +6238,8 @@
           currentCurriculumViewTab = 8;
         } else if (appData.currentCurriculumId === 9) {
           currentCurriculumViewTab = 9;
+        } else if (appData.currentCurriculumId === 10) {
+          currentCurriculumViewTab = 10;
         } else {
           currentCurriculumViewTab = 3;
         }
@@ -6113,6 +6276,11 @@
           <span>الاجتماعيات</span>
           <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 9 ? 'background: #fef3c7; color: #92400e;' : 'background: #e2e8f0; color: #475569;'}">6 فصول</span>
         </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 10 ? 'active chemistry' : ''}" onclick="setCurriculumViewTab(10)">
+          <span>🧪</span>
+          <span>الكيمياء</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 10 ? 'background: #d1fae5; color: #065f46;' : 'background: #e2e8f0; color: #475569;'}">6 فصول</span>
+        </button>
         <button class="curricula-tab-btn ${currentCurriculumViewTab === 'all' ? 'active all' : ''}" onclick="setCurriculumViewTab('all')">
           <span>🌐</span>
           <span>عرض كافة المناهج</span>
@@ -6138,7 +6306,9 @@
       currs.forEach(c => {
         const n = (c.name || '').toLowerCase();
         const s = (c.subject || '').toLowerCase();
-        if (n.includes('عربية') || s.includes('عرب') || c.id === 4 || c.id === 5) {
+        if (n.includes('كيمياء') || s.includes('كيمياء') || c.id === 10) {
+          officialSubjects.add('chemistry');
+        } else if (n.includes('عربية') || s.includes('عرب') || c.id === 4 || c.id === 5) {
           officialSubjects.add('arabic');
         } else if (n.includes('فيزياء') || s.includes('فيزياء') || c.id === 7) {
           officialSubjects.add('physics');
@@ -6170,7 +6340,8 @@
       const isGrammarCount = (window.ISLAMIC_RULES || []).length || 15;
       const phyRulesCount = (window.PHYSICS_RULES || []).length || 18;
       const mathRulesCount = (window.MATH_RULES || []).length || 22;
-      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount + mathRulesCount;
+      const chemRulesCount = (window.CHEMISTRY_RULES || []).length || 24;
+      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount + mathRulesCount + chemRulesCount;
 
       document.getElementById('statChapters').innerText = totalChapters || 42;
       document.getElementById('statLessons').innerText = totalLessons || 214;
@@ -6204,6 +6375,7 @@
       const showPhysics = currentCurriculumViewTab === 7 || currentCurriculumViewTab === 'all';
       const showMath = currentCurriculumViewTab === 8 || currentCurriculumViewTab === 'all';
       const showSocial = currentCurriculumViewTab === 9 || currentCurriculumViewTab === 'all';
+      const showChemistry = currentCurriculumViewTab === 10 || currentCurriculumViewTab === 'all';
 
       // 1. بطاقة منهج اللغة الإنجليزية
       if (showEng) {
@@ -6715,6 +6887,98 @@
       }
       }
 
+      // 7. بطاقة منهج الكيمياء
+      if (showChemistry) {
+      const chemCardCurr = currs.find(c => c.id === 10);
+      if (chemCardCurr) {
+        const div = document.createElement('div');
+        div.className = 'card curr-card';
+        div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1.5px solid #a7f3d0; box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.15); grid-column: 1 / -1; margin-bottom: 1.75rem; background: #ffffff;';
+        div.innerHTML = `
+          <div style="display: flex; gap: 1.5rem; padding: 1.75rem; align-items: stretch; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); flex-wrap: wrap;">
+            <div style="width: 135px; height: 195px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 16px rgba(5,150,105,0.3); background: #064e3b; cursor: default; position: relative;">
+              <img src="./book_images/chemistry/page_1.jpeg" alt="غلاف كتاب الكيمياء" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(6,78,59,0.95), transparent); padding: 0.5rem; text-align: center;">
+                <span style="color: white; font-size: 0.72rem; font-weight: 800;">96 صفحة أصلية</span>
+              </div>
+            </div>
+
+            <div style="flex: 1 1 420px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.6rem;">
+                  <span class="badge" style="background: #059669; color: #ffffff; font-size: 0.8rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                  <span class="badge" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-size: 0.76rem; font-weight: 800;">🧪 3 وحدات • 6 فصول (96 صفحة)</span>
+                  <span class="badge" style="background: #ffffff; color: #047857; border: 1px solid #6ee7b7; font-size: 0.76rem; font-weight: 800;">⚗️ 16 رسماً علمياً متجهياً</span>
+                </div>
+                <h2 style="font-size: 1.6rem; font-weight: 900; color: #064e3b; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem;">
+                  <span>🧪</span>
+                  <span>الكيمياء - الصف الثاني المتوسط</span>
+                </h2>
+                <p style="font-size: 0.92rem; color: #065f46; line-height: 1.7; margin: 0 0 1rem; font-weight: 600;">
+                  المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الكيمياء (الوحدة 1: العناصر والترابط الكيميائي، الوحدة 2: التفاعلات الكيميائية والمحاليل، الوحدة 3: الحوامض والقواعد والأملاح) • 6 فصول شاملة، 15 درساً تفاعلياً، 16 لوحة توضيحية علمية متجهة، بنك المفاهيم والقواعد الكيميائية، والحلول النموذجية الشاملة لكافة فصول الكتاب.
+                </p>
+              </div>
+
+              <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; background: rgba(255,255,255,0.7); padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid #a7f3d0;">
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+                  <span>📚 3 وحدات و 6 فصول</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+                  <span>📖 15 درساً تفاعلياً</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+                  <span>🎨 16 رسماً متجهياً</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+                  <span>💡 24 قاعدة ومفهوماً</span>
+                </div>
+                <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+                  <span>🖼️ 96 صفحة أصلية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 1.25rem 1.75rem; background: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 75px; height: 105px; border-radius: 8px; overflow: hidden; flex-shrink: 0; box-shadow: -3px 4px 10px rgba(5,150,105,0.2); background: #064e3b; cursor: default; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <span style="font-size: 2.2rem;">🧪</span>
+                <span style="font-size: 0.65rem; font-weight: 800; margin-top: 0.2rem;">الكيمياء</span>
+              </div>
+              <div>
+                <div style="font-weight: 900; font-size: 1.05rem; color: #064e3b; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الوحدات 1، 2، 3)</div>
+                <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">3 وحدات كبرى • 6 فصول • 15 درساً تفاعلياً • 16 رسماً علمياً متجهياً</div>
+                <div style="font-size: 0.76rem; color: #059669; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="openSubjectTab(${chemCardCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #059669, #047857); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);">
+                📖 دخول قاعة المذاكرة والدروس ⮞
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${chemCardCurr.id}); switchTab('grammar'); setGrammarSubjectMode('chem');" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                💡 بنك المفاهيم والقواعد (24)
+              </button>
+              <button class="btn btn-secondary" onclick="openChemistryReviewsModal()" style="background: #d1fae5; color: #064e3b; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+              </button>
+              <button class="btn btn-secondary" onclick="openAllChemistryDiagramsGallery()" style="background: #ffffff; color: #059669; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                🎨 الرسوم التوضيحية (16 لوحة)
+              </button>
+              <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${chemCardCurr.id}); switchTab('exams'); setExamSubjectMode('chem');" style="background: #ffffff; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                📝 الامتحانات الوزارية والشهرية
+              </button>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      }
+      }
+
       // المقررات القادمة ضمن خطة التوسع الأكاديمي
       if (currentCurriculumViewTab === 'all') {
       const upcoming = [
@@ -6828,6 +7092,16 @@
         opt.value = 9;
         opt.innerText = '🌍 الاجتماعيات (140 صفحة - 6 فصول معتمدة - 39 درساً تفاعلياً)';
         if (appData.currentCurriculumId === 9) opt.selected = true;
+        select.appendChild(opt);
+      }
+
+      // 7. مادة الكيمياء
+      const chemistry = currs.find(c => c.id === 10);
+      if (chemistry) {
+        const opt = document.createElement('option');
+        opt.value = 10;
+        opt.innerText = '🧪 الكيمياء (96 صفحة - 6 فصول معتمدة - 15 درساً تفاعلياً)';
+        if (appData.currentCurriculumId === 10) opt.selected = true;
         select.appendChild(opt);
       }
 
@@ -7400,6 +7674,7 @@
       const isPhysics = currId === 7;
       const isMath = currId === 8;
       const isSocial = currId === 9;
+      const isChemistry = currId === 10;
 
       let folder = '';
       let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
@@ -7427,10 +7702,62 @@
         folder = 'math/';
         bookName = 'كتاب الرياضيات (الصف الثاني المتوسط)';
         maxPages = 252;
+      } else if (isChemistry) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 1.5px solid #a7f3d0; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(5, 150, 105, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: 0 4px 12px rgba(5,150,105,0.25); background: #064e3b; position: relative;">
+                <img src="./book_images/chemistry/page_1.jpeg" alt="غلاف كتاب الكيمياء" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(6,78,59,0.95), transparent); padding: 0.35rem; text-align: center;">
+                  <span style="color: white; font-size: 0.65rem; font-weight: 800;">96 صفحة أصلية</span>
+                </div>
+              </div>
+
+              <div style="flex: 1 1 360px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #059669; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج النشط حالياً</span>
+                    <span style="background: #fff; color: #065f46; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">وزارة التربية العراقية</span>
+                    <span style="background: #fff; color: #047857; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #6ee7b7;">3 وحدات • 6 فصول • 15 درساً تفاعلياً</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; color: #064e3b; margin: 0 0 0.35rem;">
+                    🧪 الكيمياء - الصف الثاني المتوسط
+                  </h3>
+                  <p style="font-size: 0.84rem; color: #065f46; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
+                    المنهج الوزاري الرسمي المعتمد شاملاً العناصر والترابط، المركبات وقوى الجذب، الصيغ والمعادلات والتفاعلات، المحاليل والذوبان، الحوامض والقواعد، والأملاح والدلائل ومقياس pH مع 16 لوحة توضيحية علمية متجهة وعارض 96 صفحة أصلية وبنك المفاهيم والامتحانات والحلول النموذجية الشاملة.
+                  </p>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="background: linear-gradient(135deg, #059669, #047857); border: none; font-weight: 800; padding: 0.45rem 1rem;">
+                    📖 الانتقال لقاعة المذاكرة
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('chem');" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800;">
+                    💡 بنك المفاهيم والقواعد (24)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openChemistryReviewsModal()" style="background: #d1fae5; color: #064e3b; border: 1px solid #a7f3d0; font-weight: 800;">
+                    🎯 مراجعات الفصول والحلول (6)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openAllChemistryDiagramsGallery()" style="background: #ffffff; color: #059669; border: 1px solid #a7f3d0; font-weight: 800;">
+                    🎨 الرسوم التوضيحية (16)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="switchTab('exams'); setExamSubjectMode('chem');" style="background: #ffffff; color: #047857; border: 1px solid #a7f3d0; font-weight: 800;">
+                    📝 الامتحانات والأسئلة
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
       } else if (isSocial) {
         folder = 'social/';
         bookName = 'كتاب الاجتماعيات (الصف الثاني المتوسط)';
         maxPages = 140;
+      } else if (isChemistry) {
+        folder = 'chemistry/';
+        bookName = 'كتاب الكيمياء (الصف الثاني المتوسط)';
+        maxPages = 96;
       }
 
       // محول نمط الكتاب للمنهج الإنجليزي (كتاب الطالب مقابل كراس النشاط)
@@ -7888,6 +8215,7 @@
       const isIslamic = curr.id === 6 || curr.image_folder === 'islamic';
       const isPhysics = curr.id === 7 || curr.image_folder === 'physics';
       const isSocial = curr.id === 9 || curr.image_folder === 'social';
+      const isChemistry = curr.id === 10 || curr.image_folder === 'chemistry';
       let imgFolder = '';
       let bookLabel = 'كتاب الطالب المعتمد';
       if (isP1) { imgFolder = 'arabic_p1/'; bookLabel = 'كتاب العربية (الجزء الأول)'; }
@@ -7895,6 +8223,7 @@
       else if (isIslamic) { imgFolder = 'islamic/'; bookLabel = 'كتاب التربية الإسلامية'; }
       else if (isPhysics) { imgFolder = 'physics/'; bookLabel = 'كتاب الفيزياء'; }
       else if (isSocial) { imgFolder = 'social/'; bookLabel = 'كتاب الاجتماعيات'; }
+      else if (isChemistry) { imgFolder = 'chemistry/'; bookLabel = 'كتاب الكيمياء'; }
 
       const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
       const pages = [...new Set(rawPages)];
@@ -7926,6 +8255,11 @@
             ${(isPhysics && window.getPhysicsDiagram && window.getPhysicsDiagram(lesson.id)) ? `
               <button class="btn btn-sm" onclick="toggleMediaSection('physicsDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #0284c7; color: #ffffff; font-weight: 700;">
                 🔬 الرسم التوضيحي
+              </button>
+            ` : ''}
+            ${(isChemistry && window.getChemistryDiagram && window.getChemistryDiagram(lesson.id)) ? `
+              <button class="btn btn-sm" onclick="toggleMediaSection('chemistryDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #059669; color: #ffffff; font-weight: 700;">
+                🧪 الرسم التوضيحي
               </button>
             ` : ''}
           </div>
@@ -8025,6 +8359,60 @@
               ${(physDiagram.keyPoints || []).map(pt => `
                 <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
                   <span style="color: #0284c7; font-weight: 800;">•</span> ${pt}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // 1.6. الرسوم التوضيحية واللوحات الكيميائية المعتمدة (Chemistry Visual Diagrams)
+      const chemDiagram = (isChemistry && window.getChemistryDiagram) ? window.getChemistryDiagram(lesson.id) : null;
+      if (chemDiagram) {
+        html += `
+          <div id="chemistryDiagramSec" style="background: white; border: 2px solid #059669; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(5,150,105,0.08); grid-column: 1 / -1; margin-bottom: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 1.4rem;">🧪</span>
+                <div>
+                  <h4 style="margin: 0; font-size: 0.98rem; font-weight: 800; color: #0f172a;">${chemDiagram.title}</h4>
+                  <span style="font-size: 0.72rem; color: #059669; font-weight: 700;">لوحة توضيحية علمية معتمدة • ${chemDiagram.category}</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.7rem; font-weight: 800;">
+                  رسم كيميائي متجهي دقيق
+                </span>
+                <button class="btn btn-secondary btn-sm" onclick="openChemistryDiagramModal('${chemDiagram.id}')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #ecfdf5; border: 1px solid #a7f3d0; color: #059669; font-weight: 700;">
+                  🔍 تكبير وفحص الرسم
+                </button>
+              </div>
+            </div>
+
+            <!-- SVG Container -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; cursor: pointer; padding: 0.4rem;" onclick="openChemistryDiagramModal('${chemDiagram.id}')" title="انقر لتكبير وفحص الرسم التوضيحي">
+              <div style="width: 100%; max-width: 680px;">
+                ${chemDiagram.svg}
+              </div>
+            </div>
+
+            <!-- Summary & Formula -->
+            <div style="background: #f0fdf4; border-right: 4px solid #10b981; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: #065f46; margin-bottom: 0.5rem; line-height: 1.5;">
+              <strong>💡 الشرح العلمي: </strong>${chemDiagram.summary}
+            </div>
+
+            ${chemDiagram.formula ? `
+              <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 0.85rem;">⚗️</span>
+                <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">الصيغة / المعادلة الكيميائية: ${chemDiagram.formula}</span>
+              </div>
+            ` : ''}
+
+            <!-- Takeaway Points -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
+              ${(chemDiagram.keyPoints || []).map(pt => `
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
+                  <span style="color: #059669; font-weight: 800;">•</span> ${pt}
                 </div>
               `).join('')}
             </div>
@@ -8211,6 +8599,7 @@
       if (!chatMessages || !lesson) return;
 
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isChemistry = curr.id === 10 || (curr.subject && curr.subject.includes('كيمياء'));
       const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
       const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
@@ -8218,7 +8607,10 @@
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
       let greeting = '';
-      if (isSocial) {
+      if (isChemistry) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الكيمياء (الصف الثاني المتوسط)</strong> 🧪.<br>` +
+                   `اسألني عن أي مفهوم كيميائي، أو إلكترونات التكافؤ، أو الروابط الأيونية والتساهمية، أو موازنة المعادلات، أو الحوامض والقواعد والأملاح في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والرسوم العلمية.`;
+      } else if (isSocial) {
         greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الاجتماعيات (الصف الثاني المتوسط)</strong> 🌍.<br>` +
                    `اسألني عن أي ظاهرة جغرافية، أو إقليم مناخي، أو ثروة اقتصادية، أو واقعة وتاريخ وشخصية في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق أرقام الصفحات بدقة.`;
       } else if (isMath) {
@@ -8252,6 +8644,7 @@
       container.innerHTML = '';
 
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isChemistry = curr.id === 10 || (curr.subject && curr.subject.includes('كيمياء'));
       const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
       const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
@@ -8260,7 +8653,40 @@
 
       let suggestions = [];
 
-      if (isSocial) {
+      if (isChemistry) {
+        const lt = (lesson.title || '').toLowerCase();
+        if (lt.includes('ذري') || lt.includes('تكافؤ') || lt.includes('بناء')) {
+          suggestions = [
+            'ما هو عدد التأكسد وإلكترونات التكافؤ؟',
+            'كيف يتم رسم التوزيع الإلكتروني للذرة والأيون؟',
+            'ما هو الفرق بين الفقدان والاكتساب في الغلاف الخارجي؟'
+          ];
+        } else if (lt.includes('رابط') || lt.includes('ترابط') || lt.includes('أيون') || lt.includes('تساهم')) {
+          suggestions = [
+            'ما هو الفرق بين الرابطة الأيونية والرابطة التساهمية؟',
+            'كيف تتكون الرابطة الأيونية في مركب كلوريد الصوديوم NaCl؟',
+            'ما هي خواص المركبات الأيونية والتساهمية؟'
+          ];
+        } else if (lt.includes('معادل') || lt.includes('صيغ') || lt.includes('تفاعل')) {
+          suggestions = [
+            'كيف تتم موازنة المعادلة الكيميائية بالتفصيل؟',
+            'ما هي أنواع التفاعلات الكيميائية الخمسة؟',
+            'ما هو الفرق بين التفاعل الباعث للحرارة والماص للحرارة؟'
+          ];
+        } else if (lt.includes('حامض') || lt.includes('قاعد') || lt.includes('ملح') || lt.includes('ph') || lt.includes('دليل')) {
+          suggestions = [
+            'ما هو تعريف أرهينيوس للحامض والقاعدة؟',
+            'ما هو مقياس الرقم الهيدروجيني pH وعلاقته بالحموضة والقاعدية؟',
+            'كيف يحدث تفاعل التعادل لإنتاج الملح والماء؟'
+          ];
+        } else {
+          suggestions = [
+            'اشرح لي المفاهيم الأساسية في هذا الدرس',
+            'ما هي أهم التعاريف والتعاليل الواردة في هذا الدرس؟',
+            'ما هي الأسئلة الامتحانية المتوقعة لهذا الدرس؟'
+          ];
+        }
+      } else if (isSocial) {
         const lt = (lesson.title || '').toLowerCase();
         if (lt.includes('موقع') || lt.includes('تضاريس') || lt.includes('جبال') || lt.includes('هضاب') || lt.includes('سهول')) {
           suggestions = [
@@ -9799,7 +10225,8 @@
       // تحديد نمط المادة حصراً للمنهج النشط حالياً لمنع أي تداخل بين المواد
       const currId = Number(appData.currentCurriculumId || 3);
       let currentMode = 'en';
-      if (currId === 9) currentMode = 'social';
+      if (currId === 10) currentMode = 'chem';
+      else if (currId === 9) currentMode = 'social';
       else if (currId === 8) currentMode = 'math';
       else if (currId === 7) currentMode = 'phy';
       else if (currId === 6) currentMode = 'is';
@@ -9841,10 +10268,93 @@
         if (titleEl) titleEl.innerText = '📐 المرجع الشامل لقوانين ونظريات الرياضيات (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي لقوانين الأعداد والعمليات، الجبر والتحليل، حل المعادلات والمتباينات، نظريات الهندسة والمثلثات والمجسمات، الهندسة الإحداثية، والإحصاء والاحتمالات.';
         if (searchInput) searchInput.placeholder = 'ابحث في قوانين ونظريات ومفاهيم الرياضيات (مثلاً: فيثاغورس، الميل، العامل المشترك، المتباينة، متوازي الأضلاع، الوسيط)...';
-      } else if (currentMode === 'social') {
+      } else       if (currentMode === 'chem') {
+        const chemRules = window.CHEMISTRY_RULES || [];
+        const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+        const filteredChem = chemRules.filter(r => {
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') matchesFilter = true;
+          else if (currentActiveGrammarFilter === 'bonding') matchesFilter = r.category && (r.category.includes('البناء الذري') || r.category.includes('الترابط') || r.category.includes('التكافؤ'));
+          else if (currentActiveGrammarFilter === 'compounds') matchesFilter = r.category && (r.category.includes('المركبات') || r.category.includes('الترابط الكيميائي') || r.category.includes('فان در فال'));
+          else if (currentActiveGrammarFilter === 'reactions') matchesFilter = r.category && (r.category.includes('الصيغ') || r.category.includes('المعادلات') || r.category.includes('التفاعلات'));
+          else if (currentActiveGrammarFilter === 'solutions') matchesFilter = r.category && (r.category.includes('المحاليل') || r.category.includes('المخاليط') || r.category.includes('الذوبان'));
+          else if (currentActiveGrammarFilter === 'acids') matchesFilter = r.category && (r.category.includes('الحوامض') || r.category.includes('القواعد'));
+          else if (currentActiveGrammarFilter === 'salts') matchesFilter = r.category && (r.category.includes('الدلائل') || r.category.includes('الأملاح') || r.category.includes('الهيدروجيني'));
+
+          const matchesSearch = !search || 
+            (r.title && r.title.toLowerCase().includes(search)) || 
+            (r.category && r.category.toLowerCase().includes(search)) || 
+            (r.summary && r.summary.toLowerCase().includes(search)) || 
+            (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
+        });
+
+        if (filteredChem.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
+          empty.innerText = 'لا توجد مفاهيم أو قواعد كيميائية مطابقة للفلتر أو البحث المحدد.';
+          container.appendChild(empty);
+          return;
+        }
+
+        filteredChem.forEach(rule => {
+          const card = document.createElement('div');
+          card.className = 'grammar-card';
+          card.style.cssText = 'background: white; border: 1px solid var(--slate-200); border-right: 4px solid #059669; border-radius: 12px; padding: 1.15rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;';
+          card.innerHTML = `
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem;">
+                <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.72rem; font-weight: 800;">${rule.category}</span>
+                <span class="badge" style="background: #f8fafc; color: #64748b; font-size: 0.7rem; border: 1px solid #e2e8f0;">صفحة ${rule.page || ''}</span>
+              </div>
+              <h3 style="margin: 0 0 0.4rem 0; font-size: 1.05rem; font-weight: 800; color: #064e3b; display: flex; align-items: center; gap: 0.4rem;">
+                <span>🧪</span> ${rule.title}
+              </h3>
+              <p style="margin: 0 0 0.6rem 0; font-size: 0.84rem; color: #047857; font-weight: 600; line-height: 1.5;">${rule.summary}</p>
+              <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
+                ${rule.details}
+              </div>
+              ${(() => {
+                let diag = null;
+                if (window.CHEMISTRY_DIAGRAMS) {
+                  const t = rule.title || '';
+                  if (t.includes('الذري') || t.includes('التكافؤ') || t.includes('التأكسد')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_atomic_structure' || d.id === 'diag_chem_valence_electrons');
+                  else if (t.includes('الأيونية')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_ionic_bond');
+                  else if (t.includes('التساهمية')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_covalent_bond');
+                  else if (t.includes('الهيدروجينية') || t.includes('فان در فال')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_hydrogen_bond');
+                  else if (t.includes('الصيغ الكيميائية')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_chemical_formulas');
+                  else if (t.includes('المعادلة الكيميائية') || t.includes('موازنة')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_equation_balancing');
+                  else if (t.includes('أنواع التفاعلات')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_reaction_types');
+                  else if (t.includes('الحرارة') || t.includes('طاقة التفاعل')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_energy_reactions');
+                  else if (t.includes('المخاليط') || t.includes('فصل')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_separation_methods');
+                  else if (t.includes('المحاليل') || t.includes('الذوبان')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_solutions_solubility');
+                  else if (t.includes('الحوامض')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_acids_arrhenius');
+                  else if (t.includes('القواعد')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_bases_properties');
+                  else if (t.includes('الدلائل') || t.includes('الهيدروجيني') || t.includes('pH')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_ph_scale');
+                  else if (t.includes('التعادل') || t.includes('الأملاح')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_neutralization_salts');
+                  else if (t.includes('المختبرية') || t.includes('الجدول')) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === 'diag_chem_lab_tools');
+                }
+                return diag ? `
+                  <button class="btn btn-sm" onclick="openChemistryDiagramModal('${diag.id}')" style="background: #059669; color: white; border: none; font-size: 0.74rem; padding: 0.35rem 0.75rem; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.6rem; cursor: pointer; box-shadow: 0 1px 3px rgba(5,150,105,0.3);">
+                    <span>🧪</span> عرض الرسم التوضيحي (${diag.title.substring(0, 32)}...)
+                  </button>
+                ` : '';
+              })()}
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        return;
+      }
+
+if (currentMode === 'social') {
         if (titleEl) titleEl.innerText = '🌍 المرجع الشامل لمفاهيم ومصطلحات الاجتماعيات (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للمفاهيم الجغرافية، الأقاليم والمناخ، الثروات والاقتصاد، أحوال العرب والجاهلية، وتاريخ وسيرة النبي ﷺ بمكة والمدينة المنورة.';
         if (searchInput) searchInput.placeholder = 'ابحث في المفاهيم والمصطلحات والوقائع (مثلاً: طوبقال، الهلال الخصيب، حلف الفضول، دار الندوة، وثيقة المدينة)...';
+      } else if (currentMode === 'chem') {
+        if (titleEl) titleEl.innerText = '🧪 المرجع الشامل لقواعد ومفاهيم الكيمياء (الصف الثاني المتوسط)';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للبناء الذري، إلكترونات التكافؤ، الروابط الكيميائية، المعادلات وتفاعلاتها، المحاليل، والحوامض والقواعد والأملاح.';
+        if (searchInput) searchInput.placeholder = 'ابحث في مفاهيم وقواعد الكيمياء (مثلاً: إلكترونات التكافؤ، الرابطة التساهمية، موازنة المعادلة، الهيدروجيني، أرهينيوس)...';
       }
 
       // تحديث وتوليد فلاتر الوحدات والأقسام المخصصة لكل منهج ديناميكياً
@@ -9914,6 +10424,17 @@
             <button class="btn ${currentActiveGrammarFilter === 'econ' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('econ', this)">📈 سكان واقتصاد (فصل 2)</button>
             <button class="btn ${currentActiveGrammarFilter === 'history' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('history', this)">🏺 شبه الجزيرة ومكة (فصل 3 و 4)</button>
             <button class="btn ${currentActiveGrammarFilter === 'seerah' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('seerah', this)">🕊️ السيرة النبوية والغزوات (فصل 5 و 6)</button>
+          `;
+        } else if (currentMode === 'chem') {
+          filtersEl.innerHTML = `
+            <button class="btn ${currentActiveGrammarFilter === 'all' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('all', this)">جميع المفاهيم والقواعد (24)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'bonding' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('bonding', this)">⚛️ البناء الذري والترابط (فصل 1)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'compounds' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('compounds', this)">🧪 المركبات وقوى الجذب (فصل 2)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'reactions' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('reactions', this)">🔥 الصيغ والمعادلات والتفاعلات (فصل 3)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'solutions' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('solutions', this)">💧 المحاليل والذوبان (فصل 4)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'acids' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('acids', this)">🍋 الحوامض والقواعد (فصل 5)</button>
+            <button class="btn ${currentActiveGrammarFilter === 'salts' ? 'btn-primary' : 'btn-secondary'} btn-sm" onclick="filterGrammarByUnit('salts', this)">⚗️ الدلائل والأملاح والـ pH (فصل 6)</button>
+            <button class="btn btn-sm" onclick="openAllChemistryDiagramsGallery()" style="background: #059669; color: #ffffff; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.3); margin-right: 0.5rem;">🎨 استعراض بنك الرسوم التوضيحية (16 لوحة)</button>
           `;
         }
       }
@@ -13896,6 +14417,7 @@
       if (!mode || mode === 'auto') {
         mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
       }
+      if (mode === 'chem' || mode === 'chemistry') return window.CHEMISTRY_PAST_EXAMS || {};
       if (mode === 'soc' || mode === 'social') return window.SOCIAL_PAST_EXAMS || {};
       if (mode === 'math') return window.MATH_PAST_EXAMS || {};
       if (mode === 'phy') return window.PHYSICS_PAST_EXAMS || {};
@@ -13906,6 +14428,7 @@
 
     // مطابقة معرّف المنهج مع نمط المادة الامتحانية
     function resolveCurriculumToExamSubject(currId) {
+      if (currId === 10) return 'chem';
       if (currId === 9) return 'soc';
       if (currId === 8) return 'math';
       if (currId === 7) return 'phy';
@@ -13922,7 +14445,7 @@
       currentExamSubjectMode = mode;
 
       // تحديث مظهر أزرار المواد
-      const subjectModes = ['soc', 'math', 'phy', 'is', 'ar', 'en'];
+      const subjectModes = ['chem', 'soc', 'math', 'phy', 'is', 'ar', 'en'];
       subjectModes.forEach(m => {
         const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
         const btn = document.getElementById(btnId);
@@ -13957,7 +14480,9 @@
 
       // اختيار النموذج الافتراضي للمادة
       let defaultExamId = examKeys[0];
-      if (mode === 'soc') {
+      if (mode === 'chem') {
+        defaultExamId = exams['exam_final_chem'] ? 'exam_final_chem' : (exams['exam_midterm_chem'] ? 'exam_midterm_chem' : examKeys[0]);
+      } else if (mode === 'soc') {
         defaultExamId = exams['exam_final_soc'] ? 'exam_final_soc' : (exams['exam_midterm_soc'] ? 'exam_midterm_soc' : examKeys[0]);
       } else if (mode === 'math') {
         defaultExamId = exams['math_final'] ? 'math_final' : (exams['math_midyear'] ? 'math_midyear' : examKeys[0]);
@@ -14449,6 +14974,22 @@
               <div class="curr-pill-sub">وزارة التربية العراقية • 6 فصول شاملة</div>
             </div>
             <span class="curr-pill-badge" style="${isSocActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #fef3c7; color: #92400e;'}">مكتمل 100%</span>
+          </div>
+        `;
+      }
+
+      // 5.3 مادة الكيمياء
+      const chemPillCurr = currs.find(c => c.id === 10);
+      if (chemPillCurr) {
+        const isChemActive = appData.currentCurriculumId === 10;
+        html += `
+          <div class="curr-selector-pill ${isChemActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(10)">
+            <span style="font-size: 1.5rem;">🧪</span>
+            <div>
+              <div class="curr-pill-title">الكيمياء (الثاني متوسط)</div>
+              <div class="curr-pill-sub">وزارة التربية العراقية • 6 فصول شاملة</div>
+            </div>
+            <span class="curr-pill-badge" style="${isChemActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #ecfdf5; color: #065f46;'}">مكتمل 100%</span>
           </div>
         `;
       }
@@ -15271,7 +15812,308 @@
 
     
     // ----------------------------------------------------
-    // إدارة نافذة مراجعات فصول الاجتماعيات الشاملة
+// ----------------------------------------------------
+    // إدارة نافذة الرسوم التوضيحية للكيمياء الشاملة
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    let currentChemistryDiagramZoom = 1;
+
+    function openChemistryDiagramModal(diagId) {
+      if (!window.CHEMISTRY_DIAGRAMS) return;
+      const diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === diagId);
+      if (!diag) return;
+
+      const modal = document.getElementById('chemistryDiagramModal');
+      const titleEl = document.getElementById('chemistryDiagramModalTitle');
+      const subEl = document.getElementById('chemistryDiagramModalSubtitle');
+      const svgWrap = document.getElementById('chemistryDiagramSvgWrapper');
+      const infoWrap = document.getElementById('chemistryDiagramInfoWrapper');
+
+      if (!modal) return;
+
+      if (titleEl) titleEl.innerText = diag.title;
+      if (subEl) subEl.innerText = `${diag.category} • منهج الكيمياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم`;
+
+      currentChemistryDiagramZoom = 1;
+      if (svgWrap) {
+        svgWrap.innerHTML = `
+          <div id="chemistryDiagramZoomTarget" style="display: inline-block; width: 100%; max-width: 760px; transition: transform 0.2s ease; transform-origin: top center; margin: 0 auto;">
+            ${diag.svg}
+          </div>
+        `;
+      }
+
+      if (infoWrap) {
+        infoWrap.innerHTML = `
+          <div style="background: #f0fdf4; border-right: 4px solid #10b981; padding: 0.6rem 0.85rem; border-radius: 6px; font-size: 0.84rem; color: #065f46; margin-bottom: 0.5rem; line-height: 1.6;">
+            <strong>💡 الشرح العلمي والتفسير الكيميائي:</strong> ${diag.summary}
+          </div>
+          ${diag.formula ? `
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.5rem 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.1rem;">⚗️</span>
+              <strong style="font-size: 0.85rem; color: #1d4ed8;">الصيغة / المعادلة الكيميائية:</strong>
+              <span style="font-size: 0.85rem; font-weight: 800; color: #1e40af;">${diag.formula}</span>
+            </div>
+          ` : ''}
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
+            ${(diag.keyPoints || []).map(pt => `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.45rem 0.75rem; font-size: 0.78rem; color: #334155; line-height: 1.5;">
+                <span style="color: #059669; font-weight: 800;">✔️</span> ${pt}
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeChemistryDiagramModal() {
+      const modal = document.getElementById('chemistryDiagramModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function zoomChemistryDiagram(delta) {
+      currentChemistryDiagramZoom = Math.max(0.6, Math.min(2.5, currentChemistryDiagramZoom + delta));
+      const target = document.getElementById('chemistryDiagramZoomTarget');
+      if (target) target.style.transform = `scale(${currentChemistryDiagramZoom})`;
+    }
+
+    function resetChemistryDiagramZoom() {
+      currentChemistryDiagramZoom = 1;
+      const target = document.getElementById('chemistryDiagramZoomTarget');
+      if (target) target.style.transform = 'scale(1)';
+    }
+
+    let currentAllChemDiagramsFilter = 'all';
+
+    function openAllChemistryDiagramsGallery(filterCat) {
+      currentAllChemDiagramsFilter = filterCat || 'all';
+      renderAllChemistryDiagramsGrid();
+      const modal = document.getElementById('allChemistryDiagramsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeAllChemistryDiagramsGallery() {
+      const modal = document.getElementById('allChemistryDiagramsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function filterAllChemistryDiagrams(cat, btn) {
+      currentAllChemDiagramsFilter = cat;
+      const tabs = document.querySelectorAll('#chemDiagramsFilterTabs button');
+      tabs.forEach(t => {
+        t.className = 'btn btn-secondary btn-sm';
+      });
+      if (btn) btn.className = 'btn btn-primary btn-sm';
+      renderAllChemistryDiagramsGrid();
+    }
+
+    function renderAllChemistryDiagramsGrid() {
+      const grid = document.getElementById('allChemistryDiagramsGrid');
+      if (!grid || !window.CHEMISTRY_DIAGRAMS) return;
+
+      const list = window.CHEMISTRY_DIAGRAMS.filter(d => {
+        if (currentAllChemDiagramsFilter === 'all') return true;
+        return d.category && d.category.includes(currentAllChemDiagramsFilter);
+      });
+
+      if (list.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد رسوم في هذا القسم.</div>';
+        return;
+      }
+
+      grid.innerHTML = list.map(diag => `
+        <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+              <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.7rem; font-weight: 800;">${diag.category}</span>
+              <button class="btn btn-secondary btn-sm" onclick="openChemistryDiagramModal('${diag.id}')" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; color: #059669;">
+                🔍 تكبير
+              </button>
+            </div>
+            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-weight: 800; color: #0f172a; line-height: 1.35;">${diag.title}</h4>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem; cursor: pointer;" onclick="openChemistryDiagramModal('${diag.id}')" title="انقر لتكبير الرسم">
+              ${diag.svg}
+            </div>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.77rem; color: #475569; line-height: 1.5;">${diag.summary}</p>
+          </div>
+          <button class="btn btn-sm" onclick="openChemistryDiagramModal('${diag.id}')" style="background: #059669; color: white; width: 100%; font-size: 0.75rem; padding: 0.3rem 0.5rem; font-weight: 700; border: none; border-radius: 6px;">
+            🧪 فحص اللوحة والشرح الكامل
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // ----------------------------------------------------
+    // إدارة نافذة مراجعات فصول الكيمياء الشاملة
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    let currentChemistryModalReviewLessonId = 10013;
+
+    function openChemistryReviewsModal(reviewLessonId = 10013) {
+      currentChemistryModalReviewLessonId = Number(reviewLessonId) || 10013;
+      renderChemistryReviewsModal();
+      const modal = document.getElementById('chemistryChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeChemistryReviewsModal() {
+      const modal = document.getElementById('chemistryChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchChemistryModalReviewChapter(reviewLessonId) {
+      currentChemistryModalReviewLessonId = Number(reviewLessonId);
+      renderChemistryReviewsModal();
+    }
+
+    function renderChemistryReviewsModal() {
+      const navContainer = document.getElementById('chemistryReviewChaptersNav');
+      const contentContainer = document.getElementById('chemistryModalReviewsContent');
+      const badgeEl = document.getElementById('chemistryModalChapterBadge');
+      const titleEl = document.getElementById('chemistryModalChapterTitle');
+      const pagesEl = document.getElementById('chemistryModalChapterPages');
+
+      const metaList = window.CHEMISTRY_CHAPTER_REVIEWS || [];
+      const activeMeta = metaList.find(m => m.primaryLessonId === currentChemistryModalReviewLessonId) || metaList[0];
+
+      if (badgeEl) badgeEl.innerText = `الفصل ${activeMeta.chapterId}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + ' • ' + (activeMeta.subtitle || '');
+      if (pagesEl) pagesEl.innerText = `الصفحات (${activeMeta.pages})`;
+
+      // Render Chapters Nav
+      if (navContainer) {
+        navContainer.innerHTML = metaList.map(meta => {
+          const isActive = meta.primaryLessonId === currentChemistryModalReviewLessonId;
+          return `
+            <button class="btn btn-sm" onclick="switchChemistryModalReviewChapter(${meta.primaryLessonId})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #059669; color: white; border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.3);' : 'background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Find the lesson in window.CHEMISTRY_CURRICULUM
+      const curr = window.CHEMISTRY_CURRICULUM || [];
+      let targetLesson = null;
+      for (const u of curr) {
+        for (const l of u.lessons || []) {
+          if (l.id === currentChemistryModalReviewLessonId) {
+            targetLesson = l;
+            break;
+          }
+        }
+        if (targetLesson) break;
+      }
+
+      if (!contentContainer) return;
+
+      if (!targetLesson || !targetLesson.chunks || targetLesson.chunks.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">جاري تحميل محتوى مراجعة الفصل...</div>';
+        return;
+      }
+
+      let html = '';
+
+      targetLesson.chunks.forEach((ch, chunkIdx) => {
+        const pageNum = ch.page || activeMeta.startPage;
+        const exercises = ch.exercises || [];
+
+        html += `
+          <div style="background: #ffffff; border: 1.5px solid #a7f3d0; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-bottom: 1.5px solid #a7f3d0; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">📌</span>
+                <strong style="color: #064e3b; font-size: 0.92rem;">${ch.heading || ('مراجعة الفصل - صفحة ' + pageNum)}</strong>
+              </div>
+              <div style="display: flex; gap: 0.4rem; align-items: center;">
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(targetLesson.title)}\`, 'student', 10)" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+                <button class="btn btn-sm" onclick="toggleAllActivitySolutions('modal_chem_${chunkIdx}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #059669; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  👁️ إظهار/إخفاء حلول هذا المقطع
+                </button>
+              </div>
+            </div>
+
+            <div style="padding: 0.85rem;" class="activity-exercises-list" id="activityExercisesList_modal_chem_${chunkIdx}">
+        `;
+
+        exercises.forEach((ex, exIdx) => {
+          const exId = `modal_chem_${chunkIdx}_${ex.id || exIdx}`;
+          let qListHtml = '';
+          if (ex.questions && ex.questions.length > 0) {
+            qListHtml = ex.questions.map((qObj, qIdx) => `
+              <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #ecfdf5;">
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6; white-space: pre-wrap;">
+                  ${qObj.q}
+                </div>
+                <div id="sol_${exId}_${qIdx}" class="exercise-solution-box" style="margin-top: 0.55rem; padding: 0.75rem; background: #f0fdf4; border-right: 4px solid #059669; border-radius: 6px; font-size: 0.85rem; color: #064e3b; line-height: 1.7; white-space: pre-wrap; direction: rtl; text-align: right; border-top: 1px solid #a7f3d0; border-bottom: 1px solid #a7f3d0; border-left: 1px solid #a7f3d0;">
+                  <strong style="color: #059669; display: block; margin-bottom: 0.35rem;">💡 الحل النموذجي المعتمد:</strong>
+                  ${qObj.a}
+                </div>
+              </div>
+            `).join('');
+          }
+
+          html += `
+            <div class="exercise-card" style="border: 1px solid #a7f3d0; border-radius: 8px; margin-bottom: 0.75rem; padding: 0.75rem; background: #fafaf9;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
+                <div>
+                  <span class="badge" style="background: #ecfdf5; color: #065f46; font-size: 0.72rem; font-weight: 800;">${ex.num || ('س ' + (exIdx + 1))}</span>
+                  <strong style="font-size: 0.88rem; color: var(--slate-800); margin-inline-start: 0.35rem;">${ex.title || ''}</strong>
+                </div>
+                <button class="btn btn-sm" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${(ex.questions || []).length})" style="font-size: 0.7rem; padding: 0.2rem 0.55rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800; border-radius: 5px;">
+                  <span>🙈</span> إخفاء الحل
+                </button>
+              </div>
+              ${qListHtml}
+            </div>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      contentContainer.innerHTML = html;
+    }
+
+    let allChemistryModalSolutionsVisible = true;
+    function toggleAllChemistryModalSolutions() {
+      allChemistryModalSolutionsVisible = !allChemistryModalSolutionsVisible;
+      const boxes = document.querySelectorAll('#chemistryModalReviewsContent .exercise-solution-box');
+      boxes.forEach(box => {
+        if (allChemistryModalSolutionsVisible) box.classList.remove('hidden');
+        else box.classList.add('hidden');
+      });
+      const btn = document.getElementById('btnToggleAllModalChemSols');
+      if (btn) {
+        btn.innerHTML = allChemistryModalSolutionsVisible ? '<span>🙈</span> إخفاء كافة الحلول' : '<span>👁️</span> إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalChemReviewInStudy() {
+      const lessonId = currentChemistryModalReviewLessonId;
+      closeChemistryReviewsModal();
+      selectCurriculumForStudy(10);
+      setTimeout(() => {
+        loadLessonContent(lessonId);
+        scrollToStudyContent();
+      }, 150);
+    }
+
+    function openCurrentModalChemBookPage() {
+      const metaList = window.CHEMISTRY_CHAPTER_REVIEWS || [];
+      const activeMeta = metaList.find(m => m.primaryLessonId === currentChemistryModalReviewLessonId) || metaList[0];
+      openBookPageModal(activeMeta.startPage, activeMeta.title, 'student', 10);
+    }
+
+        // إدارة نافذة مراجعات فصول الاجتماعيات الشاملة
     // ----------------------------------------------------
     let currentSocialModalReviewLessonId = 9019;
 
