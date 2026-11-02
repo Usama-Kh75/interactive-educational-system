@@ -26,6 +26,8 @@
   <script src="curriculum_data_social.js"></script>
   <script src="curriculum_diagrams_chemistry.js"></script>
   <script src="curriculum_data_chemistry.js"></script>
+  <script src="curriculum_diagrams_biology.js"></script>
+  <script src="curriculum_data_biology.js"></script>
   <style>
     /* CSS نقي ومدمج بالكامل بدون أي روابط خارجية */
     :root {
@@ -3823,6 +3825,8 @@
             <option value="7">⚛️ الفيزياء (88 صفحة)</option>
             <option value="8">📐 الرياضيات (252 صفحة)</option>
             <option value="9">🌍 الاجتماعيات (140 صفحة)</option>
+            <option value="10">🧪 الكيمياء (96 صفحة)</option>
+            <option value="11">🧬 علم الأحياء (92 صفحة)</option>
           </select>
           <div id="modalEnglishBookTypeWrapper" style="display: inline-flex; align-items: center; gap: 0.35rem; margin-right: 0.4rem;">
             <button type="button" class="btn btn-sm" id="modalBtnStudentBook" onclick="switchEnglishBookType('student')" style="font-size: 0.76rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
@@ -3967,6 +3971,108 @@
       <!-- Exercises and Questions Content -->
       <div id="mathModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
         <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+    <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الحيوي الدقيق -->
+  <div class="modal-overlay hidden" id="biologyDiagramModal" onclick="if(event.target === this) closeBiologyDiagramModal()">
+    <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🧬</span>
+          <div>
+            <h3 id="biologyDiagramModalTitle" style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0;">الرسم التوضيحي الحيوي المعتمد</h3>
+            <span id="biologyDiagramModalSubtitle" style="font-size: 0.75rem; color: #15803d; font-weight: 700;">منهج علم الأحياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <button class="btn btn-secondary btn-sm" onclick="zoomBiologyDiagram(0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➕ تكبير</button>
+          <button class="btn btn-secondary btn-sm" onclick="zoomBiologyDiagram(-0.15)" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">➖ تصغير</button>
+          <button class="btn btn-secondary btn-sm" onclick="resetBiologyDiagramZoom()" style="font-size: 0.76rem; padding: 0.25rem 0.55rem;">🔄 إعادة تعيين</button>
+          <button onclick="closeBiologyDiagramModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center; margin-inline-start: 0.5rem;">✕</button>
+        </div>
+      </div>
+
+      <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div id="biologyDiagramSvgWrapper" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; overflow: auto; text-align: center; padding: 1rem 0.5rem; width: 100%; box-sizing: border-box;">
+        </div>
+        <div id="biologyDiagramInfoWrapper">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: أطلس ومعرض كافة الرسوم التوضيحية الحيوية (15 لوحة) -->
+  <div class="modal-overlay hidden" id="allBiologyDiagramsModal" onclick="if(event.target === this) closeAllBiologyDiagramsModal()">
+    <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🔬</span>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--slate-900); margin: 0;">أطلس الرسوم واللوحات التوضيحية البيولوجية الشامل</h3>
+            <span style="font-size: 0.75rem; color: #15803d; font-weight: 700;">15 لوحة توضيحية علمية متجهة تغطي كافة فصول الأحياء • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <button onclick="closeAllBiologyDiagramsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="bioDiagramsFilterTabs">
+        <button class="btn btn-primary btn-sm" onclick="filterAllBiologyDiagrams('all', this)">كل الرسوم (15)</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('علم التصنيف', this)">علم التصنيف والممالك</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('مملكة الطليعيات', this)">الطليعيات والفطريات</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('مملكة النباتات', this)">مملكة النباتات</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('مملكة الحيوانات', this)">مملكة الحيوانات</button>
+        <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('البيئة', this)">البيئة ودورات العناصر</button>
+      </div>
+
+      <div id="allBiologyDiagramsGrid" style="flex: 1; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; padding: 0.25rem;">
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة مودال: مركز الحلول النموذجية لمراجعات فصول علم الأحياء (7 فصول) -->
+  <div class="modal-overlay hidden" id="biologyChapterReviewsModal" onclick="if(event.target === this) closeBiologyReviewsModal()">
+    <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: #f0fdf4; color: #15803d; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            🧬
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 900; color: #14532d; margin: 0;">مركز الحلول النموذجية لمراجعات فصول علم الأحياء</h3>
+            <span style="font-size: 0.76rem; color: #15803d; font-weight: 800;">منهج علم الأحياء للصف الثاني المتوسط (7 فصول معتمدة كاملة) • إعداد المهندس أسامة خليل هاشم</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.45rem;">
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllBiologyModalSolutions()" id="btnToggleAllModalBioSols" style="font-size: 0.76rem; padding: 0.25rem 0.65rem; background: #f0fdf4; color: #166534; border: 1px solid #86efac; font-weight: 800; border-radius: 6px;">
+            👁️ إظهار كافة الحلول
+          </button>
+          <button onclick="closeBiologyReviewsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs for the 7 Biology Chapters -->
+      <div style="display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="biologyReviewChaptersNav">
+      </div>
+
+      <!-- Chapter Header Details Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; background: #f0fdf4; padding: 0.55rem 0.85rem; border-radius: 10px; border: 1px solid #86efac;" id="biologyReviewHeaderBar">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span id="biologyModalChapterBadge" style="background: #15803d; color: #fff; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">الفصل 1</span>
+          <strong id="biologyModalChapterTitle" style="font-size: 0.95rem; color: #14532d;">مراجعة الفصل الأول</strong>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span id="biologyModalChapterPages" style="font-size: 0.76rem; color: #15803d; font-weight: 700;">الصفحات 13 - 15</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCurrentModalBioBookPage()" style="font-size: 0.74rem; padding: 0.2rem 0.55rem; background: #ffffff; color: #14532d; border: 1px solid #86efac; font-weight: 700;">
+            📖 عرض صفحات الكتاب
+          </button>
+        </div>
+      </div>
+
+      <!-- Solutions Content Area -->
+      <div id="biologyModalReviewsContent" style="flex: 1; overflow-y: auto; padding: 0.35rem 0.25rem;">
       </div>
     </div>
   </div>
@@ -5733,6 +5839,7 @@
       if (id === 8) return window.MATH_CURRICULUM || [];
       if (id === 9) return window.SOCIAL_CURRICULUM || [];
       if (id === 10) return window.CHEMISTRY_CURRICULUM || [];
+      if (id === 11) return window.BIOLOGY_CURRICULUM || [];
       return window.CURRICULUM_DATA || [];
     }
 
@@ -5807,6 +5914,18 @@
         image_folder: 'math',
         description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الرياضيات (الجزء الأول والثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات والمقادير الجبرية، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات مع بنك القوانين والنظريات ونماذج الامتحانات والحلول النموذجية الشاملة.',
         chapters: mathChapters
+      };
+
+      const biologyChapters = window.BIOLOGY_CURRICULUM || [];
+      const biologyCurr = {
+        id: 11,
+        name: 'علم الأحياء - الثاني متوسط',
+        subject: 'علم الأحياء',
+        grade: 'الثاني متوسط',
+        status: 'approved',
+        image_folder: 'biology',
+        description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب علم الأحياء: علم التصنيف وممالك الكائنات الحية الخمس، الكائنات الحية البسيطة (الطليعيات والفطريات والأشنات)، مملكة النباتات (الحزازيات والسرخسيات والبذرية)، مملكة الحيوانات (اللافقريات والفقريات)، والبيئة ومكوناتها وتوازنها ودورات العناصر في الطبيعة مع الرسوم التوضيحية المتجهية وعارض الصفحات الأصلية والحلول النموذجية الشاملة.',
+        chapters: biologyChapters
       };
 
       const chemistryChapters = window.CHEMISTRY_CURRICULUM || [];
@@ -5990,8 +6109,26 @@
         appData.curriculums.push(chemistryCurr);
       }
 
+      // 10. تحديث وتثبيت منهج علم الأحياء
+      const existingBioIndex = appData.curriculums.findIndex(c => 
+        c.id === 11 || 
+        (c.name && c.name.includes('الأحياء')) || 
+        (c.subject && c.subject.includes('أحياء'))
+      );
+
+      if (existingBioIndex >= 0) {
+        appData.curriculums[existingBioIndex] = {
+          ...appData.curriculums[existingBioIndex],
+          ...biologyCurr,
+          id: 11,
+          chapters: (biologyChapters && biologyChapters.length > 0) ? biologyChapters : (appData.curriculums[existingBioIndex].chapters || [])
+        };
+      } else {
+        appData.curriculums.push(biologyCurr);
+      }
+
       // ضمان اختيار منهج صالح
-      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9, 10].includes(appData.currentCurriculumId)) {
+      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9, 10, 11].includes(appData.currentCurriculumId)) {
         appData.currentCurriculumId = 3;
       }
       saveData();
@@ -6122,6 +6259,7 @@
       const isMathActive = appData.currentCurriculumId === 8;
       const isSocialActive = appData.currentCurriculumId === 9;
       const isChemActive = appData.currentCurriculumId === 10;
+      const isBioActive = appData.currentCurriculumId === 11;
 
       container.innerHTML = `
         <!-- زر 1: مادة اللغة الإنجليزية -->
@@ -6219,6 +6357,18 @@
             <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">3 وحدات • 6 فصول • 96 ص</div>
           </div>
         </button>
+
+        <!-- زر 9: مادة علم الأحياء -->
+        <button class="curr-nav-btn bio-btn ${isBioActive ? 'active-curr' : ''}" onclick="selectCurriculumInDashboard(11)" title="تحديد منهج علم الأحياء">
+          <div class="curr-btn-icon-box" style="font-size: 1.6rem; width: 44px; height: 44px; border-radius: 10px; background: #f0fdf4; color: #16a34a; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🧬</div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.3rem;">
+              <strong style="font-size: 0.92rem; color: var(--slate-900);">علم الأحياء</strong>
+              ${isBioActive ? '<span style="background: #16a34a; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #f0fdf4; color: #16a34a; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">معتمد</span>'}
+            </div>
+            <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">3 وحدات • 7 فصول • 92 ص</div>
+          </div>
+        </button>
       `;
     }
 
@@ -6240,6 +6390,8 @@
           currentCurriculumViewTab = 9;
         } else if (appData.currentCurriculumId === 10) {
           currentCurriculumViewTab = 10;
+        } else if (appData.currentCurriculumId === 11) {
+          currentCurriculumViewTab = 11;
         } else {
           currentCurriculumViewTab = 3;
         }
@@ -6280,6 +6432,11 @@
           <span>🧪</span>
           <span>الكيمياء</span>
           <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 10 ? 'background: #d1fae5; color: #065f46;' : 'background: #e2e8f0; color: #475569;'}">6 فصول</span>
+        </button>
+        <button class="curricula-tab-btn ${currentCurriculumViewTab === 11 ? 'active bio' : ''}" onclick="setCurriculumViewTab(11)">
+          <span>🧬</span>
+          <span>علم الأحياء</span>
+          <span class="curr-pill-badge" style="font-size:0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; ${currentCurriculumViewTab === 11 ? 'background: #dcfce7; color: #15803d;' : 'background: #e2e8f0; color: #475569;'}">7 فصول</span>
         </button>
         <button class="curricula-tab-btn ${currentCurriculumViewTab === 'all' ? 'active all' : ''}" onclick="setCurriculumViewTab('all')">
           <span>🌐</span>
@@ -6376,6 +6533,7 @@
       const showMath = currentCurriculumViewTab === 8 || currentCurriculumViewTab === 'all';
       const showSocial = currentCurriculumViewTab === 9 || currentCurriculumViewTab === 'all';
       const showChemistry = currentCurriculumViewTab === 10 || currentCurriculumViewTab === 'all';
+      const showBiology = currentCurriculumViewTab === 11 || currentCurriculumViewTab === 'all';
 
       // 1. بطاقة منهج اللغة الإنجليزية
       if (showEng) {
@@ -6979,6 +7137,51 @@
       }
       }
 
+      // 8. بطاقة منهج علم الأحياء
+      if (showBiology) {
+        const bioCurr = currs.find(c => c.id === 11);
+        if (bioCurr) {
+          const div = document.createElement('div');
+          div.className = 'card curr-card';
+          div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--slate-200); box-shadow: var(--shadow); transition: transform 0.25s ease, box-shadow 0.25s ease; grid-column: 1 / -1; margin-bottom: 1.5rem;';
+          div.innerHTML = `
+            <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); flex-wrap: wrap;">
+              <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 10px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06); background: #14532d; cursor: default;">
+                <img src="./book_images/biology/page_1.jpeg" alt="${bioCurr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
+              </div>
+              <div style="flex: 1 1 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span class="curr-badge" style="background: #dcfce7; color: #15803d; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">علم الأحياء - الثاني متوسط</span>
+                    <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • 7 فصول كاملة</span>
+                    <span style="background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">🔬 15 لوحة توضيحية حيوية</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; font-weight: 900; color: #14532d; margin-bottom: 0.4rem;">علم الأحياء - الصف الثاني المتوسط</h3>
+                  <p style="color: var(--slate-600); font-size: 0.86rem; line-height: 1.6; margin-bottom: 0.75rem;">
+                    المنهج الدراسي الرسمي الكامل الصادر عن وزارة التربية العراقية (3 وحدات كبرى، 7 فصول، 92 صفحة أصلية): علم التصنيف وممالك الكائنات الحية الخمس، الكائنات الحية البسيطة (الطليعيات والفطريات والأشنات)، مملكة النباتات (الحزازيات والسرخسيات والبذرية)، مملكة الحيوانات (اللافقريات والفقريات)، والبيئة ومكوناتها ودورات العناصر في الطبيعة ومشكلات التوازن البيئي مع الرسوم التوضيحية المتجهية التفاعلية وبنك المفاهيم والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                  </p>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                  <button class="btn btn-primary" onclick="selectCurriculum(11)" style="font-weight: 800; padding: 0.65rem 1.25rem; font-size: 0.88rem; background: #15803d; border-color: #14532d;">
+                    🚀 فتح ودراسة علم الأحياء
+                  </button>
+                  <button class="btn btn-secondary" onclick="openAllBiologyDiagramsGallery()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    🔬 أطلس الرسوم الحيوية (15)
+                  </button>
+                  <button class="btn btn-secondary" onclick="openBiologyReviewsModal()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+                    🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
+                  </button>
+                  <button class="btn btn-secondary" onclick="openBookPageModal(1, 'غلاف كتاب علم الأحياء', 'student', 11)" style="font-weight: 800; padding: 0.65rem 1rem; font-size: 0.85rem;">
+                    📖 تصفح الكتاب الأصلي (92 ص)
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+          container.appendChild(div);
+        }
+      }
+
       // المقررات القادمة ضمن خطة التوسع الأكاديمي
       if (currentCurriculumViewTab === 'all') {
       const upcoming = [
@@ -7346,6 +7549,30 @@
             ⚛️ <strong>كتاب الفيزياء:</strong> صفحة ${studentPageText}
           </div>
         `;
+      } else if (currId === 8) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe;">
+            📐 <strong>كتاب الرياضيات:</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else if (currId === 9) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #fffbeb; color: #92400e; border-color: #fde68a;">
+            🌍 <strong>كتاب الاجتماعيات:</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else if (currId === 10) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">
+            🧪 <strong>كتاب الكيمياء:</strong> صفحة ${studentPageText}
+          </div>
+        `;
+      } else if (currId === 11) {
+        bookCoordHtml = `
+          <div class="coord-badge student-book" id="breadcrumbStudentBookPage" style="background: #f0fdf4; color: #166534; border-color: #86efac;">
+            🧬 <strong>كتاب علم الأحياء المعتمد:</strong> صفحة ${studentPageText}
+          </div>
+        `;
       } else {
         bookCoordHtml = `
           <div class="coord-badge student-book" id="breadcrumbStudentBookPage">
@@ -7573,6 +7800,46 @@
           innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${/[a-zA-Z]{2,}/.test(text) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(text) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>`;
         }
 
+                let chunkDiagramHtml = '';
+        if (ch.diagram_id) {
+          let diag = null;
+          if (window.BIOLOGY_DIAGRAMS) diag = window.BIOLOGY_DIAGRAMS.find(d => d.id === ch.diagram_id);
+          if (!diag && window.CHEMISTRY_DIAGRAMS) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === ch.diagram_id);
+          if (diag) {
+            const isBioDiag = (diag.id && diag.id.startsWith('diag_bio_')) || (appData.currentCurriculumId === 11);
+            const borderCol = isBioDiag ? '#16a34a' : '#059669';
+            const bgLight = isBioDiag ? '#f0fdf4' : '#ecfdf5';
+            const textDark = isBioDiag ? '#166534' : '#065f46';
+            const icon = isBioDiag ? '🧬' : '🧪';
+            const openModalFn = isBioDiag ? `openBiologyDiagramModal('${diag.id}')` : `openChemistryDiagramModal('${diag.id}')`;
+
+            chunkDiagramHtml = `
+              <div style="margin: 0.85rem 0; background: #ffffff; border: 2px solid ${borderCol}; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
+                  <div style="display: flex; align-items: center; gap: 0.45rem;">
+                    <span style="font-size: 1.3rem;">${icon}</span>
+                    <div>
+                      <strong style="color: #0f172a; font-size: 0.95rem;">${diag.title}</strong>
+                      <div style="font-size: 0.72rem; color: ${textDark}; font-weight: 700;">لوحة توضيحية علمية معتمدة • ${diag.category}</div>
+                    </div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" onclick="${openModalFn}" style="font-size: 0.74rem; padding: 0.25rem 0.65rem; background: ${bgLight}; border: 1px solid ${borderCol}; color: ${textDark}; font-weight: 800;">
+                    🔍 تكبير وفحص اللوحة التوضيحية
+                  </button>
+                </div>
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.5rem; display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="${openModalFn}" title="انقر لتكبير وفحص اللوحة التوضيحية">
+                  <div style="width: 100%; max-width: 650px;">
+                    ${diag.svg}
+                  </div>
+                </div>
+                <div style="margin-top: 0.5rem; background: ${bgLight}; border-right: 4px solid ${borderCol}; padding: 0.45rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: ${textDark}; line-height: 1.5;">
+                  <strong>💡 الشرح العلمي المرافق للرسم: </strong>${diag.summary}
+                </div>
+              </div>
+            `;
+          }
+        }
+
         const pageLabel = isActivity ? `كراس النشاط ص (${ch.activity_book_page || page})` : `كتاب الطالب ص (${page})`;
         const pageImgBtn = isActivity
           ? `<button class="mini-listen-btn" style="background: #0d9488; color: #ffffff; font-weight: 700;" onclick="openBookPageModal(${ch.activity_book_page || page}, \`${escapeForAttribute(activeLesson.title)}\`, 'activity')">📝 صورة صفحة النشاط (${ch.activity_book_page || page})</button>`
@@ -7591,6 +7858,7 @@
             ` : ''}
           </div>
           ${innerContentHtml}
+          ${chunkDiagramHtml}
         `;
         chunksContainer.appendChild(box);
       });
@@ -7675,6 +7943,7 @@
       const isMath = currId === 8;
       const isSocial = currId === 9;
       const isChemistry = currId === 10;
+      const isBiology = currId === 11;
 
       let folder = '';
       let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
@@ -7702,54 +7971,6 @@
         folder = 'math/';
         bookName = 'كتاب الرياضيات (الصف الثاني المتوسط)';
         maxPages = 252;
-      } else if (isChemistry) {
-        container.innerHTML = `
-          <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 1.5px solid #a7f3d0; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(5, 150, 105, 0.15);">
-            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
-              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: 0 4px 12px rgba(5,150,105,0.25); background: #064e3b; position: relative;">
-                <img src="./book_images/chemistry/page_1.jpeg" alt="غلاف كتاب الكيمياء" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(6,78,59,0.95), transparent); padding: 0.35rem; text-align: center;">
-                  <span style="color: white; font-size: 0.65rem; font-weight: 800;">96 صفحة أصلية</span>
-                </div>
-              </div>
-
-              <div style="flex: 1 1 360px; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
-                    <span style="background: #059669; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج النشط حالياً</span>
-                    <span style="background: #fff; color: #065f46; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">وزارة التربية العراقية</span>
-                    <span style="background: #fff; color: #047857; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #6ee7b7;">3 وحدات • 6 فصول • 15 درساً تفاعلياً</span>
-                  </div>
-                  <h3 style="font-size: 1.35rem; font-weight: 900; color: #064e3b; margin: 0 0 0.35rem;">
-                    🧪 الكيمياء - الصف الثاني المتوسط
-                  </h3>
-                  <p style="font-size: 0.84rem; color: #065f46; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
-                    المنهج الوزاري الرسمي المعتمد شاملاً العناصر والترابط، المركبات وقوى الجذب، الصيغ والمعادلات والتفاعلات، المحاليل والذوبان، الحوامض والقواعد، والأملاح والدلائل ومقياس pH مع 16 لوحة توضيحية علمية متجهة وعارض 96 صفحة أصلية وبنك المفاهيم والامتحانات والحلول النموذجية الشاملة.
-                  </p>
-                </div>
-
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                  <button class="btn btn-primary btn-sm" onclick="switchTab('study')" style="background: linear-gradient(135deg, #059669, #047857); border: none; font-weight: 800; padding: 0.45rem 1rem;">
-                    📖 الانتقال لقاعة المذاكرة
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('chem');" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800;">
-                    💡 بنك المفاهيم والقواعد (24)
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="openChemistryReviewsModal()" style="background: #d1fae5; color: #064e3b; border: 1px solid #a7f3d0; font-weight: 800;">
-                    🎯 مراجعات الفصول والحلول (6)
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="openAllChemistryDiagramsGallery()" style="background: #ffffff; color: #059669; border: 1px solid #a7f3d0; font-weight: 800;">
-                    🎨 الرسوم التوضيحية (16)
-                  </button>
-                  <button class="btn btn-secondary btn-sm" onclick="switchTab('exams'); setExamSubjectMode('chem');" style="background: #ffffff; color: #047857; border: 1px solid #a7f3d0; font-weight: 800;">
-                    📝 الامتحانات والأسئلة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-        return;
       } else if (isSocial) {
         folder = 'social/';
         bookName = 'كتاب الاجتماعيات (الصف الثاني المتوسط)';
@@ -7758,6 +7979,10 @@
         folder = 'chemistry/';
         bookName = 'كتاب الكيمياء (الصف الثاني المتوسط)';
         maxPages = 96;
+      } else if (isBiology) {
+        folder = 'biology/';
+        bookName = 'كتاب علم الأحياء (الصف الثاني المتوسط)';
+        maxPages = 92;
       }
 
       // محول نمط الكتاب للمنهج الإنجليزي (كتاب الطالب مقابل كراس النشاط)
@@ -8216,6 +8441,7 @@
       const isPhysics = curr.id === 7 || curr.image_folder === 'physics';
       const isSocial = curr.id === 9 || curr.image_folder === 'social';
       const isChemistry = curr.id === 10 || curr.image_folder === 'chemistry';
+      const isBiology = curr.id === 11 || curr.image_folder === 'biology';
       let imgFolder = '';
       let bookLabel = 'كتاب الطالب المعتمد';
       if (isP1) { imgFolder = 'arabic_p1/'; bookLabel = 'كتاب العربية (الجزء الأول)'; }
@@ -8224,6 +8450,7 @@
       else if (isPhysics) { imgFolder = 'physics/'; bookLabel = 'كتاب الفيزياء'; }
       else if (isSocial) { imgFolder = 'social/'; bookLabel = 'كتاب الاجتماعيات'; }
       else if (isChemistry) { imgFolder = 'chemistry/'; bookLabel = 'كتاب الكيمياء'; }
+      else if (isBiology) { imgFolder = 'biology/'; bookLabel = 'كتاب علم الأحياء المعتمد (الصور والرسوم الأصلية)'; }
 
       const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
       const pages = [...new Set(rawPages)];
@@ -8233,8 +8460,8 @@
                        (window.PHYSICS_TOPIC_CARDS && window.PHYSICS_TOPIC_CARDS[lesson.id] ? window.PHYSICS_TOPIC_CARDS[lesson.id] : 
                        (window.SOCIAL_TOPIC_CARDS && window.SOCIAL_TOPIC_CARDS[lesson.id] ? window.SOCIAL_TOPIC_CARDS[lesson.id] : null))));
 
-      // افتراضياً نتركه مخفياً ليكون نص الدرس ومقاطعه أمام عين الطالب فوراً
-      container.style.display = 'none';
+      // بالنسبة لمنهج علم الأحياء يُعرض المعرض التوضيحي افتراضياً لأهمية الرسوم البصرية
+      container.style.display = isBiology ? 'block' : 'none';
 
       let html = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -8260,6 +8487,11 @@
             ${(isChemistry && window.getChemistryDiagram && window.getChemistryDiagram(lesson.id)) ? `
               <button class="btn btn-sm" onclick="toggleMediaSection('chemistryDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #059669; color: #ffffff; font-weight: 700;">
                 🧪 الرسم التوضيحي
+              </button>
+            ` : ''}
+            ${(isBiology && window.getBiologyDiagram && window.getBiologyDiagram(lesson.id)) ? `
+              <button class="btn btn-sm" onclick="toggleMediaSection('biologyDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #16a34a; color: #ffffff; font-weight: 700;">
+                🧬 الرسوم التوضيحية
               </button>
             ` : ''}
           </div>
@@ -8364,6 +8596,61 @@
             </div>
           </div>
         `;
+      }
+
+      // 1.7. الرسوم التوضيحية واللوحات البيولوجية المعتمدة (Biology Visual Diagrams)
+      const bioDiagramsList = (isBiology && window.getBiologyDiagramsForLesson) ? window.getBiologyDiagramsForLesson(lesson.id) : 
+                             ((isBiology && window.getBiologyDiagram && window.getBiologyDiagram(lesson.id)) ? [window.getBiologyDiagram(lesson.id)] : []);
+      if (bioDiagramsList.length > 0) {
+        bioDiagramsList.forEach(bioDiagram => {
+          html += `
+            <div id="biologyDiagramSec" style="background: white; border: 2px solid #16a34a; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(22,163,74,0.1); margin-bottom: 1rem; grid-column: 1 / -1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; border-bottom: 1px solid #dcfce7; padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 1.4rem;">🧬</span>
+                  <div>
+                    <h4 style="margin: 0; font-size: 0.98rem; font-weight: 800; color: #0f172a;">${bioDiagram.title}</h4>
+                    <span style="font-size: 0.72rem; color: #15803d; font-weight: 700;">لوحة توضيحية علمية معتمدة • ${bioDiagram.category}</span>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.4rem; align-items: center;">
+                  <span style="font-size: 0.68rem; background: #dcfce7; color: #166534; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">رسم متجهي دقيق</span>
+                  <button class="btn btn-secondary btn-sm" onclick="openBiologyDiagramModal('${bioDiagram.id}')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #f0fdf4; border: 1px solid #86efac; color: #166534; font-weight: 700;">
+                    🔍 تكبير وفحص الرسم
+                  </button>
+                </div>
+              </div>
+
+              <!-- SVG Container -->
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; cursor: pointer; padding: 0.4rem;" onclick="openBiologyDiagramModal('${bioDiagram.id}')" title="انقر لتكبير وفحص الرسم التوضيحي">
+                <div style="width: 100%; max-width: 680px;">
+                  ${bioDiagram.svg}
+                </div>
+              </div>
+
+              <!-- Summary & Formula -->
+              <div style="background: #f0fdf4; border-right: 4px solid #16a34a; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.8rem; color: #14532d; margin-top: 0.5rem; margin-bottom: 0.5rem; line-height: 1.5;">
+                <strong>💡 الشرح العلمي: </strong>${bioDiagram.summary}
+              </div>
+
+              ${bioDiagram.formula ? `
+                <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 1rem;">🔬</span>
+                  <span style="font-size: 0.82rem; font-weight: 800; color: #0e7490;">المعادلة / القاعدة الحيوية: ${bioDiagram.formula}</span>
+                </div>
+              ` : ''}
+
+              <!-- Takeaway Points -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
+                ${(bioDiagram.keyPoints || []).map(pt => `
+                  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem; color: #334155; line-height: 1.4;">
+                    <span style="color: #16a34a; font-weight: 800;">✔️</span> ${pt}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        });
       }
 
       // 1.6. الرسوم التوضيحية واللوحات الكيميائية المعتمدة (Chemistry Visual Diagrams)
@@ -8606,8 +8893,13 @@
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
+      const isBiology = curr.id === 11 || (curr.subject && curr.subject.includes('أحياء'));
+
       let greeting = '';
-      if (isChemistry) {
+      if (isBiology) {
+        greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>علم الأحياء (الصف الثاني المتوسط)</strong> 🧬.<br>` +
+                   `اسألني عن ممالك الكائنات الحية الخمس، أو الكائنات البسيطة (الأميبا والبراميسيوم واليوغلينا والفطريات)، أو الحزازيات والسرخسيات والنباتات، أو اللافقريات والفقريات، أو سلاسل الغذاء وتوازن البيئة ودورات العناصر في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق أرقام الصفحات والرسوم العلمية التوضيحية المعتمدة.`;
+      } else if (isChemistry) {
         greeting = `أهلاً بك! أنا معلمك الذكي الموثق لمنهج <strong>الكيمياء (الصف الثاني المتوسط)</strong> 🧪.<br>` +
                    `اسألني عن أي مفهوم كيميائي، أو إلكترونات التكافؤ، أو الروابط الأيونية والتساهمية، أو موازنة المعادلات، أو الحوامض والقواعد والأملاح في درس «${lesson.title}» وسأشرحها لك فوراً مع توثيق الصفحة والرسوم العلمية.`;
       } else if (isSocial) {
@@ -10196,7 +10488,8 @@
     let activeGrammarSubjectMode = 'auto'; // 'auto', 'en', 'ar', 'is'
 
     function setGrammarSubjectMode(mode) {
-      if (mode === 'social' || mode === 'soc') appData.currentCurriculumId = 9;
+      if (mode === 'bio') appData.currentCurriculumId = 11;
+      else if (mode === 'social' || mode === 'soc') appData.currentCurriculumId = 9;
       else if (mode === 'math') appData.currentCurriculumId = 8;
       else if (mode === 'phy') appData.currentCurriculumId = 7;
       else if (mode === 'is') appData.currentCurriculumId = 6;
@@ -10225,7 +10518,8 @@
       // تحديد نمط المادة حصراً للمنهج النشط حالياً لمنع أي تداخل بين المواد
       const currId = Number(appData.currentCurriculumId || 3);
       let currentMode = 'en';
-      if (currId === 10) currentMode = 'chem';
+      if (currId === 11) currentMode = 'bio';
+      else if (currId === 10) currentMode = 'chem';
       else if (currId === 9) currentMode = 'social';
       else if (currId === 8) currentMode = 'math';
       else if (currId === 7) currentMode = 'phy';
@@ -10268,6 +10562,77 @@
         if (titleEl) titleEl.innerText = '📐 المرجع الشامل لقوانين ونظريات الرياضيات (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي لقوانين الأعداد والعمليات، الجبر والتحليل، حل المعادلات والمتباينات، نظريات الهندسة والمثلثات والمجسمات، الهندسة الإحداثية، والإحصاء والاحتمالات.';
         if (searchInput) searchInput.placeholder = 'ابحث في قوانين ونظريات ومفاهيم الرياضيات (مثلاً: فيثاغورس، الميل، العامل المشترك، المتباينة، متوازي الأضلاع، الوسيط)...';
+      } else if (currentMode === 'bio') {
+        if (titleEl) titleEl.innerText = '🧬 بنك المفاهيم والقواعد البيولوجية الشامل';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع العلمي المعتمد لمفاهيم علم التصنيف، خصائص الطليعيات والفطريات، النباتات والحيوانات، ودورات النظام البيئي والتوازن.';
+        if (searchInput) searchInput.placeholder = 'ابحث في المفاهيم البيولوجية (مثلاً: لينيوس، النوع، الأميبا، البراميسيوم، تعاقب الأجيال، الطيور، النيتروجين)...';
+
+        const bioRules = window.BIOLOGY_RULES || [];
+        const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
+        const filteredBio = bioRules.filter(r => {
+          let matchesFilter = true;
+          if (currentActiveGrammarFilter === 'all') matchesFilter = true;
+          else if (currentActiveGrammarFilter === 'taxonomy') matchesFilter = r.category && (r.category.includes('التصنيف') || r.category.includes('الصحة'));
+          else if (currentActiveGrammarFilter === 'protista_fungi') matchesFilter = r.category && (r.category.includes('الطليعيات') || r.category.includes('الفطريات'));
+          else if (currentActiveGrammarFilter === 'plants') matchesFilter = r.category && r.category.includes('النبات');
+          else if (currentActiveGrammarFilter === 'animals') matchesFilter = r.category && r.category.includes('الحيوان');
+          else if (currentActiveGrammarFilter === 'ecology') matchesFilter = r.category && (r.category.includes('البيئة ومواردها') || r.category.includes('التوازن البيئي'));
+
+          const matchesSearch = !search || 
+            (r.title && r.title.toLowerCase().includes(search)) || 
+            (r.category && r.category.toLowerCase().includes(search)) || 
+            (r.summary && r.summary.toLowerCase().includes(search)) || 
+            (r.details && r.details.toLowerCase().includes(search));
+          return matchesFilter && matchesSearch;
+        });
+
+        // Unit filters
+        const filtersContainer = document.getElementById('grammarUnitFilters');
+        if (filtersContainer) {
+          filtersContainer.innerHTML = `
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'all' ? 'active' : ''}" onclick="filterGrammarByUnit('all')">كل المفاهيم (${bioRules.length})</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'taxonomy' ? 'active' : ''}" onclick="filterGrammarByUnit('taxonomy')">علم التصنيف</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'protista_fungi' ? 'active' : ''}" onclick="filterGrammarByUnit('protista_fungi')">الطليعيات والفطريات</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'plants' ? 'active' : ''}" onclick="filterGrammarByUnit('plants')">مملكة النبات</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'animals' ? 'active' : ''}" onclick="filterGrammarByUnit('animals')">مملكة الحيوان</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'ecology' ? 'active' : ''}" onclick="filterGrammarByUnit('ecology')">البيئة والتوازن</button>
+          `;
+        }
+
+        if (filteredBio.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;';
+          empty.innerText = 'لا توجد مفاهيم أو قواعد بيولوجية مطابقة للفلتر أو البحث المحدد.';
+          container.appendChild(empty);
+          return;
+        }
+
+        filteredBio.forEach(rule => {
+          const card = document.createElement('div');
+          card.className = 'grammar-card';
+          card.style.cssText = 'background: white; border: 1px solid var(--slate-200); border-right: 4px solid #16a34a; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;';
+          card.innerHTML = `
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.35rem;">
+                <span style="background: #f0fdf4; color: #166534; font-size: 0.74rem; font-weight: 800; padding: 0.2rem 0.55rem; border-radius: 6px; border: 1px solid #86efac;">${rule.category}</span>
+                <span style="font-size: 0.7rem; color: var(--slate-400); font-weight: 700;">قاعدة علمية معتمدة</span>
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 900; color: #14532d; margin-bottom: 0.5rem;">${rule.title}</h3>
+              <p style="font-size: 0.84rem; color: var(--slate-700); line-height: 1.6; margin-bottom: 0.75rem; background: #f8fafc; padding: 0.6rem 0.85rem; border-radius: 8px;">
+                ${rule.summary}
+              </p>
+              <div style="font-size: 0.8rem; color: var(--slate-600); line-height: 1.6; white-space: pre-line; background: #ffffff; border: 1px dashed #cbd5e1; padding: 0.75rem; border-radius: 8px;">
+                ${rule.details}
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.6rem; font-size: 0.72rem; color: #15803d; font-weight: 700;">
+              <span>🌱 علم الأحياء - الثاني متوسط</span>
+              <span>إعداد المهندس أسامة خليل هاشم</span>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        return;
       } else       if (currentMode === 'chem') {
         const chemRules = window.CHEMISTRY_RULES || [];
         const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
@@ -15034,6 +15399,112 @@ if (currentMode === 'social') {
       const isArabic = isArP1 || isArP2;
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
+      const isChemistry = curr.id === 10 || (curr.subject && curr.subject.includes('كيمياء'));
+      const isBiology = curr.id === 11 || (curr.subject && curr.subject.includes('أحياء'));
+
+      if (isBiology) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1.5px solid #86efac; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(22, 163, 74, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: 0 4px 12px rgba(22,163,74,0.25); background: #14532d; position: relative;">
+                <img src="./book_images/biology/page_1.jpeg" alt="غلاف كتاب علم الأحياء" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(20,83,45,0.95), transparent); padding: 0.35rem; text-align: center;">
+                  <span style="color: white; font-size: 0.65rem; font-weight: 800;">92 صفحة أصلية</span>
+                </div>
+              </div>
+
+              <div style="flex: 1 1 360px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #16a34a; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج الوزاري المعتمد • مكتمل 100%</span>
+                    <span style="background: #fff; color: #166534; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #86efac;">وزارة التربية العراقية</span>
+                    <span style="background: #fff; color: #15803d; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #4ade80;">3 وحدات • 7 فصول • 14 درساً تفاعلياً</span>
+                    <span style="background: #dcfce7; color: #14532d; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #86efac;">🎨 17 لوحة توضيحية تفاعلية</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; color: #14532d; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>🧬</span>
+                    <span>علم الأحياء - الصف الثاني المتوسط</span>
+                  </h3>
+                  <p style="font-size: 0.84rem; color: #166534; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
+                    المنهج الوزاري الرسمي المعتمد شاملاً علم التصنيف وممالك الكائنات الحية الخمس، الكائنات البسيطة (الطليعيات والفطريات)، المملكة النباتية (الحزازيات والسرخسيات والبذرية)، المملكة الحيوانية (اللافقريات والفقريات)، والنظام البيئي وتوازنه ودورات العناصر مع 17 لوحة توضيحية علمية متجهة وعارض 92 صفحة أصلية وبنك المفاهيم البيولوجية والامتحانات والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                  </p>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="openSubjectTab(11)" style="background: linear-gradient(135deg, #16a34a, #15803d); border: none; font-weight: 800; padding: 0.45rem 1rem;">
+                    📖 الانتقال لقاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(11, 4, 'student')" style="background: #ffffff; color: #14532d; border: 1px solid #86efac; font-weight: 800;">
+                    📖 تصفح كتاب الأحياء (92 صفحة)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openAllBiologyDiagramsGallery()" style="background: #dcfce7; color: #14532d; border: 1px solid #86efac; font-weight: 800;">
+                    🎨 معرض الرسوم التوضيحية (17 لوحة)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openBiologyReviewsModal()" style="background: #ffffff; color: #166534; border: 1px solid #86efac; font-weight: 800;">
+                    🎯 مراجعات الفصول والحلول النموذجية (7)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('bio');" style="background: #ffffff; color: #15803d; border: 1px solid #86efac; font-weight: 800;">
+                    💡 بنك المفاهيم والقواعد (28)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      if (isChemistry) {
+        container.innerHTML = `
+          <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 1.5px solid #a7f3d0; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(5, 150, 105, 0.15);">
+            <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
+              <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: 0 4px 12px rgba(5,150,105,0.25); background: #064e3b; position: relative;">
+                <img src="./book_images/chemistry/page_1.jpeg" alt="غلاف كتاب الكيمياء" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(6,78,59,0.95), transparent); padding: 0.35rem; text-align: center;">
+                  <span style="color: white; font-size: 0.65rem; font-weight: 800;">96 صفحة أصلية</span>
+                </div>
+              </div>
+
+              <div style="flex: 1 1 360px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
+                    <span style="background: #059669; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج الوزاري المعتمد • مكتمل 100%</span>
+                    <span style="background: #fff; color: #065f46; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">وزارة التربية العراقية</span>
+                    <span style="background: #fff; color: #047857; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #6ee7b7;">3 وحدات • 6 فصول • 15 درساً تفاعلياً</span>
+                    <span style="background: #d1fae5; color: #064e3b; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">🎨 16 لوحة توضيحية تفاعلية</span>
+                  </div>
+                  <h3 style="font-size: 1.35rem; font-weight: 900; color: #064e3b; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>🧪</span>
+                    <span>الكيمياء - الصف الثاني المتوسط</span>
+                  </h3>
+                  <p style="font-size: 0.84rem; color: #065f46; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
+                    المنهج الوزاري الرسمي المعتمد شاملاً العناصر والترابط، المركبات وقوى الجذب، الصيغ والمعادلات والتفاعلات، المحاليل والذوبان، الحوامض والقواعد، والأملاح والدلائل ومقياس pH مع 16 لوحة توضيحية علمية متجهة وعارض 96 صفحة أصلية وبنك المفاهيم والامتحانات والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                  </p>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="openSubjectTab(10)" style="background: linear-gradient(135deg, #059669, #047857); border: none; font-weight: 800; padding: 0.45rem 1rem;">
+                    📖 الانتقال لقاعة المذاكرة والدروس ⮞
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(10, 4, 'student')" style="background: #ffffff; color: #064e3b; border: 1px solid #a7f3d0; font-weight: 800;">
+                    📖 تصفح كتاب الكيمياء (96 صفحة)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openAllChemistryDiagramsGallery()" style="background: #d1fae5; color: #064e3b; border: 1px solid #a7f3d0; font-weight: 800;">
+                    🎨 معرض الرسوم التوضيحية (16 لوحة)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="openChemistryReviewsModal()" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800;">
+                    🎯 مراجعات الفصول والحلول (6)
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('chem');" style="background: #ffffff; color: #047857; border: 1px solid #a7f3d0; font-weight: 800;">
+                    💡 بنك المفاهيم والقواعد (24)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        return;
+      }
 
       if (isSocial) {
         container.innerHTML = `
@@ -15405,6 +15876,8 @@ if (currentMode === 'social') {
       else if (sLower.includes('islam') || sLower.includes('إسلام')) icon = '🕌';
       else if (sLower.includes('physic') || sLower.includes('فيزياء')) icon = '⚛️';
       else if (sLower.includes('social') || sLower.includes('اجتماع')) icon = '🌍';
+      else if (sLower.includes('chem') || sLower.includes('كيمياء')) icon = '🧪';
+      else if (sLower.includes('bio') || sLower.includes('أحياء') || sLower.includes('احياء')) icon = '🧬';
 
       const titleText = `${curr.name} (${curr.grade || 'مرحلة دراسية'})`;
 
