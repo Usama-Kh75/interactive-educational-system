@@ -1696,3 +1696,21 @@ window.SOCIAL_CHAPTER_REVIEWS = [
     "primaryLessonId": 9067
   }
 ];
+
+
+// ضمان توحيد مصفوفة questions لتتوافق مع معيار المنظومة الشامل للامتحانات
+if (window.SOCIAL_PAST_EXAMS) {
+  Object.keys(window.SOCIAL_PAST_EXAMS).forEach(examId => {
+    const ex = window.SOCIAL_PAST_EXAMS[examId];
+    if (ex && ex.sections && !ex.questions) {
+      ex.questions = ex.sections.map((sec, sIdx) => ({
+        id: `${examId}_q${sIdx + 1}`,
+        number: `س${sIdx + 1}`,
+        title: sec.sectionTitle || `السؤال ${sIdx + 1}`,
+        marks: '20 درجة',
+        content: (sec.questions || []).map(item => `<p><strong>${item.q}</strong></p>`).join(''),
+        solution: (sec.questions || []).map(item => `<div>${item.a.replace(/\n/g, '<br>')}</div>`).join('')
+      }));
+    }
+  });
+}

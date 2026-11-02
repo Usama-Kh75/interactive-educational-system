@@ -2845,7 +2845,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v4.9.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" onclick="showWhatsNewModal()" title="انقر لمعاينة ما الجديد في هذا الإصدار">v5.0.0 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3514,6 +3514,9 @@
       <!-- شريط اختيار المادة الامتحانية -->
       <div style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
         <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.5rem;">اختر المادة الامتحانية:</span>
+        <button id="btnExamSubjectBio" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('bio')" style="font-weight: 800; font-size: 0.78rem;">
+          🧬 مادة علم الأحياء (نموذجان وزاري وفصلي)
+        </button>
         <button id="btnExamSubjectChem" class="btn btn-sm btn-secondary" onclick="setExamSubjectMode('chem')" style="font-weight: 800; font-size: 0.78rem;">
           🧪 مادة الكيمياء (نموذجان وزاري وفصلي)
         </button>
@@ -3648,7 +3651,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v4.9.0</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.0.0</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3673,7 +3676,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v4.9.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.0.0</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3731,7 +3734,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v4.9.0</span>
+        <span class="version-badge" id="footerVersionBadge">v5.0.0</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3857,7 +3860,7 @@
       </div>
 
       <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; background: var(--slate-100); border-radius: 8px; padding: 1rem; position: relative;" id="bookPageImgWrapper">
-        <img id="bookPageModalImg" src=" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
+        <img id="bookPageModalImg" src="" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
       </div>
     </div>
   </div>
@@ -4618,7 +4621,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v4.9.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.0.0</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4646,13 +4649,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v4.9.0؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.0.0؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v4.9.0</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.0.0</span>
         </div>
       </div>
 
@@ -4700,9 +4703,9 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '4.9.0';
-    const CURRENT_VERSION_LABEL = 'v4.9.0';
-    const SYSTEM_VERSION = 'v4.9.0';
+    const CURRENT_VERSION = '5.0.0';
+    const CURRENT_VERSION_LABEL = 'v5.0.0';
+    const SYSTEM_VERSION = 'v5.0.0';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -6232,6 +6235,12 @@
             currentCurriculumViewTab = 7;
           } else if (appData.currentCurriculumId === 8) {
             currentCurriculumViewTab = 8;
+          } else if (appData.currentCurriculumId === 9) {
+            currentCurriculumViewTab = 9;
+          } else if (appData.currentCurriculumId === 10) {
+            currentCurriculumViewTab = 10;
+          } else if (appData.currentCurriculumId === 11) {
+            currentCurriculumViewTab = 11;
           } else {
             currentCurriculumViewTab = 3;
           }
@@ -6458,28 +6467,32 @@
         !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
         !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
       );
-      // حساب عدد المواد والمناهج المعتمدة (الإنجليزية، العربية بجزأيها، الإسلامية، الفيزياء)
+      // حساب عدد المواد والمناهج المعتمدة (الإنجليزية، العربية بجزأيها، الإسلامية، الفيزياء، الرياضيات، الاجتماعيات، الكيمياء، علم الأحياء)
       const officialSubjects = new Set();
       currs.forEach(c => {
         const n = (c.name || '').toLowerCase();
         const s = (c.subject || '').toLowerCase();
-        if (n.includes('كيمياء') || s.includes('كيمياء') || c.id === 10) {
+        if (n.includes('أحياء') || s.includes('أحياء') || c.id === 11) {
+          officialSubjects.add('biology');
+        } else if (n.includes('كيمياء') || s.includes('كيمياء') || c.id === 10) {
           officialSubjects.add('chemistry');
-        } else if (n.includes('عربية') || s.includes('عرب') || c.id === 4 || c.id === 5) {
-          officialSubjects.add('arabic');
-        } else if (n.includes('فيزياء') || s.includes('فيزياء') || c.id === 7) {
-          officialSubjects.add('physics');
+        } else if (n.includes('اجتماع') || s.includes('اجتماع') || c.id === 9) {
+          officialSubjects.add('social');
         } else if (n.includes('رياضيات') || s.includes('رياض') || c.id === 8) {
           officialSubjects.add('math');
+        } else if (n.includes('فيزياء') || s.includes('فيزياء') || c.id === 7) {
+          officialSubjects.add('physics');
         } else if (n.includes('إسلامية') || s.includes('إسلام') || c.id === 6) {
           officialSubjects.add('islamic');
+        } else if (n.includes('عربية') || s.includes('عرب') || c.id === 4 || c.id === 5) {
+          officialSubjects.add('arabic');
         } else if (n.includes('انجليزية') || s.includes('eng') || c.id === 3) {
           officialSubjects.add('english');
         } else {
           officialSubjects.add(c.id);
         }
       });
-      document.getElementById('statCurriculums').innerText = officialSubjects.size || 4;
+      document.getElementById('statCurriculums').innerText = officialSubjects.size || 8;
       
       let totalChapters = 0;
       let totalLessons = 0;
@@ -6497,8 +6510,10 @@
       const isGrammarCount = (window.ISLAMIC_RULES || []).length || 15;
       const phyRulesCount = (window.PHYSICS_RULES || []).length || 18;
       const mathRulesCount = (window.MATH_RULES || []).length || 22;
+      const socRulesCount = (window.SOCIAL_TERMS_BANK || []).length || 13;
       const chemRulesCount = (window.CHEMISTRY_RULES || []).length || 24;
-      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount + mathRulesCount + chemRulesCount;
+      const bioRulesCount = (window.BIOLOGY_RULES || []).length || 28;
+      const totalGrammarCount = engGrammarCount + arGrammarCount + isGrammarCount + phyRulesCount + mathRulesCount + socRulesCount + chemRulesCount + bioRulesCount;
 
       document.getElementById('statChapters').innerText = totalChapters || 42;
       document.getElementById('statLessons').innerText = totalLessons || 214;
@@ -6506,7 +6521,7 @@
       const statGrammarEl = document.getElementById('statGrammar');
       if (statGrammarEl) {
         statGrammarEl.innerText = totalGrammarCount + ' قاعدة ومفهوماً';
-        statGrammarEl.title = `إجمالي القواعد والمفاهيم الموثقة في المنظومة: ${engGrammarCount} قاعدة إنجليزية + ${arGrammarCount} قاعدة عربية + ${isGrammarCount} حكماً إسلامياً + ${phyRulesCount} قانوناً ومفهوماً فيزيائياً`;
+        statGrammarEl.title = `إجمالي القواعد والمفاهيم الموثقة في المنظومة: ${engGrammarCount} إنجليزية + ${arGrammarCount} عربية + ${isGrammarCount} إسلامية + ${phyRulesCount} فيزياء + ${mathRulesCount} رياضيات + ${socRulesCount} اجتماعيات + ${chemRulesCount} كيمياء + ${bioRulesCount} علم أحياء`;
       }
 
       renderDashboardCurriculaQuickBar();
@@ -7154,7 +7169,7 @@
                   <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                     <span class="curr-badge" style="background: #dcfce7; color: #15803d; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">علم الأحياء - الثاني متوسط</span>
                     <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • 7 فصول كاملة</span>
-                    <span style="background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">🔬 15 لوحة توضيحية حيوية</span>
+                    <span style="background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">🔬 17 لوحة توضيحية حيوية</span>
                   </div>
                   <h3 style="font-size: 1.25rem; font-weight: 900; color: #14532d; margin-bottom: 0.4rem;">علم الأحياء - الصف الثاني المتوسط</h3>
                   <p style="color: var(--slate-600); font-size: 0.86rem; line-height: 1.6; margin-bottom: 0.75rem;">
@@ -7166,7 +7181,7 @@
                     🚀 فتح ودراسة علم الأحياء
                   </button>
                   <button class="btn btn-secondary" onclick="openAllBiologyDiagramsGallery()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-                    🔬 أطلس الرسوم الحيوية (15)
+                    🔬 أطلس الرسوم الحيوية (17 لوحة)
                   </button>
                   <button class="btn btn-secondary" onclick="openBiologyReviewsModal()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
                     🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
@@ -7308,8 +7323,18 @@
         select.appendChild(opt);
       }
 
-      // 6. أي مناهج أخرى
-      currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7 && c.id !== 8).forEach(c => {
+      // 8. مادة علم الأحياء
+      const biology = currs.find(c => c.id === 11);
+      if (biology) {
+        const opt = document.createElement('option');
+        opt.value = 11;
+        opt.innerText = '🧬 علم الأحياء (92 صفحة - 7 فصول معتمدة - 14 درساً تفاعلياً)';
+        if (appData.currentCurriculumId === 11) opt.selected = true;
+        select.appendChild(opt);
+      }
+
+      // 9. أي مناهج أخرى
+      currs.filter(c => ![3, 4, 5, 6, 7, 8, 9, 10, 11].includes(c.id)).forEach(c => {
         const opt = document.createElement('option');
         opt.value = c.id;
         opt.innerText = c.name;
@@ -7323,7 +7348,9 @@
       appData.currentCurriculumId = idNum;
       appData.currentLessonId = null;
       saveData();
-      if (idNum === 9) currentCurriculumViewTab = 9;
+      if (idNum === 11) currentCurriculumViewTab = 11;
+      else if (idNum === 10) currentCurriculumViewTab = 10;
+      else if (idNum === 9) currentCurriculumViewTab = 9;
       else if (idNum === 8) currentCurriculumViewTab = 8;
       else if (idNum === 7) currentCurriculumViewTab = 7;
       else if (idNum === 6) currentCurriculumViewTab = 6;
@@ -7873,6 +7900,20 @@
     let currentModalEnglishBookType = 'student'; // 'student' or 'activity'
     let currentModalBookPage = 1;
 
+    // دالة مساعدة لتحديد إجمالي صفحات الكتاب المعتمد بدقة
+    function getCurriculumMaxPages(currId, bookType = 'student') {
+      const id = Number(currId);
+      if (id === 3) return (bookType === 'activity' ? 127 : 119);
+      if (id === 4 || id === 5) return 136;
+      if (id === 6) return 120;
+      if (id === 7) return 88;
+      if (id === 8) return 252;
+      if (id === 9) return 140;
+      if (id === 10) return 96;
+      if (id === 11) return 92;
+      return 100;
+    }
+
     // فتح المكتبة الرقمية العامة وتصفح صفحات الكتب المدرسية المعتمدة
     function openDigitalLibraryReader(currId = 3, pageNum = 4, bookType = 'student') {
       currentModalBookCurrId = Number(currId) || 3;
@@ -7899,9 +7940,7 @@
 
     function navModalBookPage(delta) {
       if (audioPlayer.isPlaying) audioPlayer.stop();
-      const isEn = (currentModalBookCurrId === 3);
-      const isAct = isEn && (currentModalEnglishBookType === 'activity');
-      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : (currentModalBookCurrId === 8 ? 252 : 136)));
+      const maxPages = getCurriculumMaxPages(currentModalBookCurrId, currentModalEnglishBookType);
       let nextP = currentModalBookPage + delta;
       if (nextP < 1) nextP = 1;
       if (nextP > maxPages) nextP = maxPages;
@@ -7911,9 +7950,7 @@
 
     function goToModalBookPage(p) {
       if (audioPlayer.isPlaying) audioPlayer.stop();
-      const isEn = (currentModalBookCurrId === 3);
-      const isAct = isEn && (currentModalEnglishBookType === 'activity');
-      const maxPages = isEn ? (isAct ? 127 : 119) : (currentModalBookCurrId === 6 ? 120 : (currentModalBookCurrId === 7 ? 88 : (currentModalBookCurrId === 8 ? 252 : 136)));
+      const maxPages = getCurriculumMaxPages(currentModalBookCurrId, currentModalEnglishBookType);
       let targetP = Number(p);
       if (isNaN(targetP) || targetP < 1) targetP = 1;
       if (targetP > maxPages) targetP = maxPages;
@@ -9868,15 +9905,366 @@
       };
     }
 
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة الرياضيات (الصف الثاني المتوسط)
+    // -------------------------------------------------------------
+    function generateMathLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const mathRules = window.MATH_RULES || [];
+
+      if (qClean.includes('فيثاغورس') || qClean.includes('مثلث قائم') || qClean.includes('وتر') || qClean.includes('عكس فيثاغورس')) {
+        return {
+          content: '📌 **مبرهنة فيثاغورس وتطبيقاتها (كتاب الرياضيات - الجزء 1 ص 46):**\n\n' +
+                   '• **نص المبرهنة:** في أي مثلث قائم الزاوية، مساحة المربع المنشأ على الوتر تساوي مجموع مساحتي المربعين المنشأين على الضلعين القائمين الآخرين.\n' +
+                   '• **الصيغة الرياضية:** <span dir="ltr" class="phy-formula">c² = a² + b²</span> (حيث c هو الوتر).\n' +
+                   '• **طول الوتر:** <span dir="ltr" class="phy-formula">c = √(a² + b²)</span>.\n' +
+                   '• **عكس مبرهنة فيثاغورس:** إذا كان مربع أطول أضلاع مثلث يساوي مجموع مربعي الضلعين الآخرين، فإن المثلث قائم الزاوية حتماً المقابلة لذلك الضلع.',
+          sources: [{ page: 46, heading: 'تطبيقات نظرية فيثاغورس' }]
+        };
+      }
+
+      if (qClean.includes('مسافه بين نقطت') || qClean.includes('قانون المسافه') || qClean.includes('مستوي احداثي')) {
+        return {
+          content: '📌 **قانون المسافة بين نقطتين في المستوي الإحداثي (ص 52):**\n\n' +
+                   '• تعطى المسافة d بين النقطتين <span dir="ltr" class="phy-formula">A(x₁, y₁)</span> و <span dir="ltr" class="phy-formula">B(x₂, y₂)</span> بالقانون:\n' +
+                   '<div dir="ltr" class="phy-math-block">d = √[ (x₂ - x₁)² + (y₂ - y₁)² ]</div>\n' +
+                   '• **خطوات الحل:** 1. نحدد إحداثيات النقطتين، 2. نطرح السينات ونربع، 3. نطرح الصادات ونربع، 4. نجمع الناتجين ونأخذ الجذر التربيعي الموجب.',
+          sources: [{ page: 52, heading: 'المستوي الإحداثي وقانون المسافة' }]
+        };
+      }
+
+      if (qClean.includes('ميل') || qClean.includes('ميل المستقيم') || qClean.includes('تغير صادي') || qClean.includes('تغير سيني')) {
+        return {
+          content: '📌 **ميل المستقيم وحالاته الأربع (الجزء 2 ص 12-16):**\n\n' +
+                   '• **قانون الميل:** <span dir="ltr" class="phy-formula">m = (y₂ - y₁) / (x₂ - x₁)</span> (حيث x₂ ≠ x₁).\n' +
+                   '• **الحالات الأربع للميل:**\n' +
+                   '1. **الميل موجب (m > 0):** المستقيم يتجه للأعلى نحو اليمين (كلما زادت x زادت y).\n' +
+                   '2. **الميل سالب (m < 0):** المستقيم يتجه للأسفل نحو اليمين (كلما زادت x تناقصت y).\n' +
+                   '3. **الميل صفر (m = 0):** مستقيم أفقي موازٍ لمحور السينات، وقيم y ثابتة.\n' +
+                   '4. **الميل غير محدد (غير معرف):** مستقيم عمودي (رأسي) موازٍ لمحور الصادات، والمقام x₂ - x₁ = 0.',
+          sources: [{ page: 12, heading: 'ميل المستقيم' }]
+        };
+      }
+
+      if (qClean.includes('عامل مشترك') || qClean.includes('gcf') || qClean.includes('تحليل مقدار') || qClean.includes('فرق بين مربعين')) {
+        return {
+          content: '📌 **طرائق تحليل المقادير الجبرية (الجزء 1 ص 78-86):**\n\n' +
+                   '1. **التحليل باستخراج العامل المشترك الأكبر (G.C.F):** استخراج حاصل ضرب العوامل المشتركة بأصغر أس للرموز مع العامل المشترك العددي.\n' +
+                   '2. **خاصية التجميع والمعكوس:** تجميع الحدود ذات العوامل المشتركة مثنى مثنى، وإذا تعاكست الإشارات نستخرج (-1) كعامل مشترك.\n' +
+                   '3. **التحليل بالفرق بين مربعين:**\n' +
+                   '<div dir="ltr" class="phy-math-block">a² - b² = (a - b)(a + b)</div>\n' +
+                   '• مثال: <span dir="ltr" class="phy-formula">x² - 25 = (x - 5)(x + 5)</span>.',
+          sources: [{ page: 78, heading: 'تحليل المقادير الجبرية' }]
+        };
+      }
+
+      if (qClean.includes('مطلق') || qClean.includes('معادله القيمه المطلقه') || qClean.includes('متباينه') || qClean.includes('حل متباينه')) {
+        return {
+          content: '📌 **معادلات القيمة المطلقة والمتباينات (الجزء 1 ص 100-112):**\n\n' +
+                   '• **معادلة المطلق |x| = a (حيث a ≥ 0):** تكافئ حالتين: إما <span dir="ltr" class="phy-formula">x = a</span> أو <span dir="ltr" class="phy-formula">x = -a</span>.\n' +
+                   '• إذا كان a < 0 فإن مجموعة الحل خالية <span dir="ltr" class="phy-formula">S = ∅</span> لأن المطلق موجب دوماً.\n' +
+                   '• **قاعدة ذهبية في المتباينات:** عند ضرب أو قسمة طرفي المتباينة على عدد سالب، يجب **عكس اتجاه رمز التباين** (الأكبر يصبح أصغر والعكس).',
+          sources: [{ page: 104, heading: 'معادلات القيمة المطلقة والمتباينات' }]
+        };
+      }
+
+      // مطابقة عامة مع بنك قوانين الرياضيات
+      const matched = mathRules.find(r => {
+        const titleClean = normalizeArabicSearchText(r.title);
+        const catClean = normalizeArabicSearchText(r.category || '');
+        return qClean.split(' ').some(w => w.length > 2 && (titleClean.includes(w) || catClean.includes(w)));
+      });
+
+      if (matched) {
+        return {
+          content: '📌 **' + matched.title + ' (رياضيات الثاني متوسط):**\n\n' +
+                   '• **الملخص:** ' + matched.summary + '\n\n' +
+                   '• **التفاصيل والقوانين:**\n' + matched.details,
+          sources: [{ page: matched.page || 6, heading: matched.category || 'قوانين الرياضيات' }]
+        };
+      }
+
+      return {
+        content: 'أهلاً بك! أنا **معلم الرياضيات الذكي للصف الثاني المتوسط** 📐.\n\n' +
+                 'تم فحص استفسارك في كتاب الرياضيات المعتمد بجزأيه الأول والثاني.\n' +
+                 'يمكنك سؤالي عن: مبرهنة فيثاغورس، المسافة بين نقطتين، ميل المستقيم، تحليل المقادير الجبرية (العامل المشترك والفرق بين مربعين)، معادلات القيمة المطلقة، المتباينات، وحساب حجوم ومساحات الهرم والمخروط والإحصاء.\n\n' +
+                 '💡 **اكتب مسألتك أو استفسارك وسأزودك بالقانون وخطوات الحل والصفحة المعتمدة فوراً.**',
+        sources: [{ page: 6, heading: 'كتاب الرياضيات' }]
+      };
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة الاجتماعيات (الصف الثاني المتوسط)
+    // -------------------------------------------------------------
+    function generateSocialLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const terms = window.SOCIAL_TERMS_BANK || [];
+
+      if (qClean.includes('طوبقال') || qClean.includes('جبال الاطلس') || qClean.includes('اعلي قمه')) {
+        return {
+          content: '📌 **قمة طوبقال وجبال الأطلس (كتاب الاجتماعيات ص 10-12):**\n\n' +
+                   '• **طوبقال:** هي أعلى قمة جبلية في العالم العربي، يبلغ ارتفاعها **4165 متراً** فوق مستوى سطح البحر.\n' +
+                   '• تقع ضمن سلسلة جبال الأطلس الكبير في المملكة المغربية.\n' +
+                   '• تكسوها الثلوج طوال فصل الشتاء وتعد من أهم المعالم التضاريسية والجغرافية في المغرب العربي.',
+          sources: [{ page: 11, heading: 'سلاسل جبال العالم العربي' }]
+        };
+      }
+
+      if (qClean.includes('دجله') || qClean.includes('فرات') || qClean.includes('نيل') || qClean.includes('انهار طويله')) {
+        return {
+          content: '📌 **شبكة الأنهار الطويلة في العالم العربي (ص 24-28):**\n\n' +
+                   '1. **نهر النيل:** أطول أنهار العالم والعالم العربي بطول **6670 كم**، ينبع من بحيرة فيكتوريا وهضبة الحبشة ويصب في البحر المتوسط.\n' +
+                   '2. **نهر الفرات:** ينبع من جبال طوروس في تركيا بطول **2940 كم** ويدخل سوريا عند جرابلس والعراق عند القائم ويلتقي بدجلة عند كرمة علي مكوناً شط العرب.\n' +
+                   '3. **نهر دجلة:** ينبع من بحيرة كولجك ومرتفعات تركيا بطول **1900 كم**، ويدخل العراق عند فيشخابور وتصب فيه خمسة روافد رئيسية (الخابور، الزاب الكبير، الزاب الصغير، العظيم، وديالى).',
+          sources: [{ page: 25, heading: 'الأنهار الطويلة في العالم العربي' }]
+        };
+      }
+
+      if (qClean.includes('حلف الفضول') || qClean.includes('دار الندوه') || qClean.includes('قصي بن كلاب')) {
+        return {
+          content: '📌 **أوضاع مكة قبل الإسلام: حلف الفضول ودار الندوة (ص 86-90):**\n\n' +
+                   '• **دار الندوة:** أول مجلس شورى وبناء برلماني أسسه **قصي بن كلاب** بجوار الكعبة المعظمة لإدارة شؤون مكة والتشاور في شؤون الحرب والسلم وتسيير القوافل.\n' +
+                   '• **حلف الفضول:** أشرف وأعظم حلف تعاهدت عليه قبائل قريش في دار عبد الله بن جدعان، لنصرة أي مظلوم بمكة غريباً كان أو قريباً، وحضره النبي ﷺ قبل البعثة وأثنى عليه قائلاً: «لقد شهدتُ في دار عبد الله بن جدعان حلفاً ما أحب أن لي به حُمر النَّعَم».',
+          sources: [{ page: 88, heading: 'أوضاع مكة المكرمة وحلف الفضول' }]
+        };
+      }
+
+      if (qClean.includes('وثيقه المدينه') || qClean.includes('دستور المدينه') || qClean.includes('المؤاخاه')) {
+        return {
+          content: '📌 **وثيقة المدينة المنورة والمؤاخاة (ص 118-122):**\n\n' +
+                   '• **وثيقة المدينة:** أول دستور مدني وحقوقي مكتوب في تاريخ البشرية أرساه النبي ﷺ بعد وصوله للمدينة المنورة.\n' +
+                   '• **أهم بنودها ومبادئها:**\n' +
+                   '1. حرية العقيدة وممارسة الشعائر الدينية لكافة سكان المدينة بمن فيهم اليهود.\n' +
+                   '2. المساواة في الحقوق والواجبات والتكافل الاجتماعي المشترك.\n' +
+                   '3. الدفاع المشترك عن يثرب (المدينة) ضد أي عدوان خارجي، واعتبار سكانها أمة واحدة.\n' +
+                   '• **المؤاخاة:** آخى النبي ﷺ بين المهاجرين والأنصار لإذابة الفوارق القبلية وإرساء الأخوة الإيمانية.',
+          sources: [{ page: 120, heading: 'بناء الدولة ووثيقة المدينة' }]
+        };
+      }
+
+      // مطابقة عامة مع مصطلحات الاجتماعيات
+      const matched = terms.find(t => {
+        const titleClean = normalizeArabicSearchText(t.title);
+        const catClean = normalizeArabicSearchText(t.category || '');
+        return qClean.split(' ').some(w => w.length > 2 && (titleClean.includes(w) || catClean.includes(w)));
+      });
+
+      if (matched) {
+        return {
+          content: '📌 **' + matched.title + ' (كتاب الاجتماعيات):**\n\n' +
+                   '• **المفهوم:** ' + matched.summary + '\n\n' +
+                   '• **التفاصيل:**\n' + matched.details,
+          sources: [{ page: matched.page || 20, heading: matched.category || 'الاجتماعيات' }]
+        };
+      }
+
+      return {
+        content: 'أهلاً بك! أنا **معلم الاجتماعيات الذكي للصف الثاني المتوسط** 🌍.\n\n' +
+                 'تم فحص استفسارك في كتاب الاجتماعيات المعتمد (جغرافية وتاريخ العالم العربي).\n' +
+                 'يمكنك سؤالي عن: جغرافية العالم العربي وتضاريسه، سلاسل الجبال (الأطلس، شمال العراق، بلاد الشام)، شبكة الأنهار (دجلة والفرات والنيل)، الأقاليم المناخية، النفط والثروات المعدنية، أحوال مكة وحلف الفضول، والسيرة النبوية والغزوات ووثيقة المدينة المنورة.\n\n' +
+                 '💡 **اكتب استفسارك وسأزودك بالإجابة الموثقة مع رقم الصفحة فوراً.**',
+        sources: [{ page: 4, heading: 'كتاب الاجتماعيات' }]
+      };
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة الكيمياء (الصف الثاني المتوسط)
+    // -------------------------------------------------------------
+    function generateChemistryLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const chemRules = window.CHEMISTRY_RULES || [];
+
+      if (qClean.includes('رابطه ايوني') || qClean.includes('رابطه تساهمي') || qClean.includes('ترابط كيميائي')) {
+        return {
+          content: '📌 **الروابط الكيميائية: الأيونية والتساهمية (كتاب الكيمياء ص 12-16):**\n\n' +
+                   '1. **الرابطة الأيونية (Ionic Bond):** قوة جذب إلكتروستاتيكية تنشأ بين أيون فلزي موجب فقد إلكترونات وأيون لافلزي سالب اكتسبها (مثل: <span dir="ltr" class="phy-formula">Na⁺ + Cl⁻ ➔ NaCl</span>).\n' +
+                   '2. **الرابطة التساهمية (Covalent Bond):** قوة ربط تنشأ بين ذرتين لافلزيتين بمشاركة زوج أو أكثر من الإلكترونات للوصول لحالة الاستقرار الثماني (مثل جزيء الماء H₂O وغاز الميثان CH₄).\n' +
+                   '• المركبات الأيونية درجات انصهارها مرتفعة وتوصل الكهرباء بمحاليلها، بينما التساهمية درجات انصهارها منخفضة ولا توصل محاليلها التيار الكهربائي.',
+          sources: [{ page: 14, heading: 'الروابط الكيميائية' }]
+        };
+      }
+
+      if (qClean.includes('الكترونات التكافؤ') || qClean.includes('تكافؤ') || qClean.includes('اعداد التاكسد') || qClean.includes('عدد تاكسد')) {
+        return {
+          content: '📌 **إلكترونات التكافؤ وأعداد التأكسد (ص 8-10):**\n\n' +
+                   '• **إلكترونات التكافؤ:** هي إلكترونات الغلاف الخارجي الأبعد عن النواة وتحدد قابلية الذرة للدخول في التفاعلات الكيميائية.\n' +
+                   '• **أعداد التأكسد:** شحنة كهربائية موجبة أو سالبة تدل على عدد الإلكترونات التي فقدتها الذرة أو اكتسبتها أو شاركت بها.\n' +
+                   '• **قاعدة عامة:** مجموع أعداد التأكسد لجميع ذرات أي مركب كيميائي متعادل يساوي **صفراً**، بينما للأيون يساوي شحنة الأيون.',
+          sources: [{ page: 9, heading: 'البناء الذري وإلكترونات التكافؤ' }]
+        };
+      }
+
+      if (qClean.includes('موازنه') || qClean.includes('معادله كيميائي') || qClean.includes('تفاعل كيميائي') || qClean.includes('انواع التفاعلات')) {
+        return {
+          content: '📌 **المعادلات الكيميائية وأنواع التفاعلات وموازنتها (ص 38-44):**\n\n' +
+                   '• **قانون حفظ الكتلة:** مجموع كتل المواد المتفاعلة يساوي مجموع كتل المواد الناتجة، ولذلك نزن المعادلة بجعل عدد ذرات كل عنصر متساوياً بالطرفين.\n' +
+                   '• **أنواع التفاعلات الرئيسية الأربعة:**\n' +
+                   '1. **تفاعل الاتحاد:** مادتان تتحدان لتكوين مادة واحدة (<span dir="ltr" class="phy-formula">A + B ➔ AB</span>).\n' +
+                   '2. **تفاعل التفكك (الانحلال):** مركب يتفكك لمركبين أو عنصرين أبسط (<span dir="ltr" class="phy-formula">AB ➔ A + B</span>).\n' +
+                   '3. **تفاعل الاستبدال الأحادي:** عنصر يحل محل عنصر آخر في مركب (<span dir="ltr" class="phy-formula">A + BC ➔ AC + B</span>).\n' +
+                   '4. **تفاعل الاستبدال الثنائي:** تبادل أيونات بين مركبين لتكوين مركبين جديدين.',
+          sources: [{ page: 40, heading: 'التفاعلات الكيميائية وموازنتها' }]
+        };
+      }
+
+      if (qClean.includes('حامض') || qClean.includes('قاعده') || qClean.includes('ارهينيوس') || qClean.includes('ph') || qClean.includes('رقم هيدروجيني') || qClean.includes('زهره الشمس')) {
+        return {
+          content: '📌 **الحوامض والقواعد ومقياس الرقم الهيدروجيني pH (ص 66-86):**\n\n' +
+                   '• **الحامض (أرهينيوس):** يحرر أيونات <span dir="ltr" class="phy-formula">H⁺</span> بالماء، طعمه حامض لاذع، ويحول ورقة زهرة الشمس إلى **الأحمر**.\n' +
+                   '• **القاعدة (أرهينيوس):** تحرر أيونات <span dir="ltr" class="phy-formula">OH⁻</span> بالماء، ملمسها صابوني زلق، وتحول ورقة زهرة الشمس إلى **الأزرق**.\n' +
+                   '• **مقياس الرقم الهيدروجيني (pH):**\n' +
+                   '• <span dir="ltr" class="phy-formula">pH < 7</span>: محلول حامضي (كلما قل زادت الحامضية).\n' +
+                   '• <span dir="ltr" class="phy-formula">pH = 7</span>: محلول متعادل كالمياه النقية.\n' +
+                   '• <span dir="ltr" class="phy-formula">pH > 7</span>: محلول قاعدي (كلما زاد زادت القاعدية).\n' +
+                   '• **تفاعل التعادل:** حامض + قاعدة ➔ ملح + ماء.',
+          sources: [{ page: 70, heading: 'الحوامض والقواعد والأملاح' }]
+        };
+      }
+
+      // مطابقة عامة مع قواعد الكيمياء
+      const matched = chemRules.find(r => {
+        const titleClean = normalizeArabicSearchText(r.title);
+        const catClean = normalizeArabicSearchText(r.category || '');
+        return qClean.split(' ').some(w => w.length > 2 && (titleClean.includes(w) || catClean.includes(w)));
+      });
+
+      if (matched) {
+        return {
+          content: '📌 **' + matched.title + ' (كتاب الكيمياء ص ' + (matched.page || 10) + '):**\n\n' +
+                   '• **الملخص:** ' + matched.summary + '\n\n' +
+                   '• **التفاصيل والشرح العلمي:**\n' + matched.details,
+          sources: [{ page: matched.page || 10, heading: matched.category || 'الكيمياء' }]
+        };
+      }
+
+      return {
+        content: 'أهلاً بك! أنا **معلم الكيمياء الذكي للصف الثاني المتوسط** 🧪.\n\n' +
+                 'تم فحص استفسارك في كتاب الكيمياء المعتمد بكافة فصوله الستة.\n' +
+                 'يمكنك سؤالي عن: البناء الذري وإلكترونات التكافؤ، أعداد التأكسد، الروابط الأيونية والتساهمية، قوى فان در فال والروابط الهيدروجينية، كتابة الصيغ الكيميائية وموازنة المعادلات، طرائق فصل المخاليط، الحوامض والقواعد، مقياس الرقم الهيدروجيني pH، وتفاعلات التعادل وتكون الأملاح.\n\n' +
+                 '💡 **اكتب سؤالك وسأجيبك فوراً مع الصيغ الكيميائية والصفحة المعتمدة.**',
+        sources: [{ page: 5, heading: 'كتاب الكيمياء' }]
+      };
+    }
+
+    // -------------------------------------------------------------
+    // محرك المعلم الذكي الموثق لمادة علم الأحياء (الصف الثاني المتوسط)
+    // -------------------------------------------------------------
+    function generateBiologyLocalAnswer(query, lessonId, curr) {
+      const qClean = normalizeArabicSearchText(query);
+      const bioRules = window.BIOLOGY_RULES || [];
+
+      if (qClean.includes('تصنيف') || qClean.includes('مراتب تصنيف') || qClean.includes('وايتكر') || qClean.includes('لينيوس') || qClean.includes('نوع') || qClean.includes('تسميه ثنائي')) {
+        return {
+          content: '📌 **علم التصنيف والممالك الخمس والتسمية الثنائية (كتاب الأحياء ص 4-22):**\n\n' +
+                   '• **مفهوم النوع (جون راي ولينيوس):** الوحدة الأساسية في التصنيف، ويضم أفراداً متشابهين قادرين على التزاوج الخصب.\n' +
+                   '• **نظام التسمية الثنائية (لينيوس):** اسم لاتيني من كلمتين: اسم الجنس (Capital) واسم النوع (small).\n' +
+                   '• **المراتب السبع الهرمية:** مملكة ➔ شعبة ➔ صنف ➔ رتبة ➔ عائلة ➔ جنس ➔ نوع.\n' +
+                   '• **ممالك وايتكر الخمس (1969):** 1. البدائيات (البكتيريا)، 2. الطليعيات (الأميبا والبراميسيوم واليوغلينا)، 3. الفطريات (عفن الخبز والمشروم)، 4. النباتات، 5. الحيوانات.',
+          sources: [{ page: 12, heading: 'علم التصنيف والممالك الخمس' }]
+        };
+      }
+
+      if (qClean.includes('اميبا') || qClean.includes('براميسيوم') || qClean.includes('يوغلينا') || qClean.includes('طليعيات') || qClean.includes('فطريات') || qClean.includes('اشنات')) {
+        return {
+          content: '📌 **الكائنات الحية البسيطة: الطليعيات والفطريات (ص 28-36):**\n\n' +
+                   '• **الأميبا:** كائن وحيد الخلية يتحرك ويقتنص الغذاء بالأقدام الكاذبة بالبلعمة.\n' +
+                   '• **البراميسيوم:** كائن مغزلي يتحرك بالأهداب، يدخل الغذاء عبر الميزاب الفموي، وله نواتان (كبيرة وصغيرة).\n' +
+                   '• **اليوغلينا:** كائن سوطي يحوي بلاستيدات خضراء يصنع غذاءه بالضوء وبقعة عينية حساسة للضوء.\n' +
+                   '• **الأشنات (Lichens):** معيشة تكافلية مشتركة بين فطر وطحلب لتبادل المنفعة والحماية.',
+          sources: [{ page: 28, heading: 'مملكة الطليعيات والفطريات' }]
+        };
+      }
+
+      if (qClean.includes('نبات') || qClean.includes('حزازيات') || qClean.includes('سرخسيات') || qClean.includes('تعاقب الاجيال') || qClean.includes('فلقه') || qClean.includes('فلقتين')) {
+        return {
+          content: '📌 **مملكة النباتات وتصنيفها (ص 42-50):**\n\n' +
+                   '• **الحزازيات (كالفيوناريا):** نباتات لا وعائية صغيرة تعيش بالأماكن الرطبة الظليلة ولها أشباه جذور وسيقان.\n' +
+                   '• **السرخسيات (كالبوليبوديوم):** نباتات وعائية تمتلك خشب ولحاء حقيقيين وتتكاثر بالأبواغ.\n' +
+                   '• **تعاقب الأجيال:** تعاقب جيل جنسي مشيجي (1n) وجيل لاجنسي بوغي (2n) في دورة حياة النبات.\n' +
+                   '• **ذوات الفلقة الواحدة:** فلقة واحدة، تعرق متوازي، جذور ليفية (كالقمح والذرة).\n' +
+                   '• **ذوات الفلقتين:** فلقتان، تعرق شبكي، جذور وتدية (كالباقلاء والفاصولياء).',
+          sources: [{ page: 44, heading: 'مملكة النباتات' }]
+        };
+      }
+
+      if (qClean.includes('حيوان') || qClean.includes('لافقريات') || qClean.includes('فقريات') || qClean.includes('اسماك') || qClean.includes('برمائيات') || qClean.includes('زواحف') || qClean.includes('طيور') || qClean.includes('ثدييات')) {
+        return {
+          content: '📌 **مملكة الحيوانات: اللافقريات والفقريات (ص 56-66):**\n\n' +
+                   '• **اللافقريات (8 شعب):** مساميات (إسفنج)، لاسعات (هيدرا)، ديدان مسطحة (بلاناريا)، ديدان خيطية (إسكارس)، ديدان حلقية (دودة الأرض)، رخويات (حلزون)، مفصليات الأرجل (حشرات وعناكب)، وشوكيات الجلد (نجم البحر).\n' +
+                   '• **الفقريات (الحبليات - 5 أصناف):**\n' +
+                   '1. الأسماك: خياشيم وزعانف وتعيش بالماء.\n' +
+                   '2. البرمائيات: تتنفس بالخياشيم صغاراً وبالرئات والجلد كباراً (كالضفدع).\n' +
+                   '3. الزواحف: جلد حرشفي جاف يمنع فقدان الماء (كالسحلية والتمساح).\n' +
+                   '4. الطيور: ريش وأجنحة وعظام مجوفة وأكياس هوائية للطيران.\n' +
+                   '5. الثدييات: يغطيها الشعر وترضع صغارها الحليب وثابتة درجة الحرارة.',
+          sources: [{ page: 58, heading: 'مملكة الحيوانات' }]
+        };
+      }
+
+      if (qClean.includes('بيئه') || qClean.includes('نظام بيئي') || qClean.includes('سلسله غذائي') || qClean.includes('هرم طاقه') || qClean.includes('نيتروجين') || qClean.includes('كربون') || qClean.includes('احتباس حراري') || qClean.includes('امطار حامضي')) {
+        return {
+          content: '📌 **البيئة والتوازن البيئي ودورات العناصر (ص 72-90):**\n\n' +
+                   '• **النظام البيئي:** مجتمع حيوي (منتجات، مستهلكات، محللات) يتفاعل مع عوامل غير حية (ماء، هواء، تربة، ضوء).\n' +
+                   '• **هرم الطاقة والسلسلة الغذائية:** مسار انتقال الطاقة من المنتجات للمستهلكات مع فقدان 90% من الطاقة كحرارة وتنفس عند كل مستوى غذائي.\n' +
+                   '• **دورات العناصر:**\n' +
+                   '• دورة النيتروجين: تثبيت بكتيري ➔ امتصاص نباتي ➔ تحلل ➔ نزع النيتروجين.\n' +
+                   '• دورة الكربون والأكسجين: تكامل وتوازن بين البناء الضوئي (ينتج الأكسجين) والتنفس الخلوي (ينتج CO₂).\n' +
+                   '• **المشكلات البيئية:** الاحتباس الحراري، الأمطار الحامضية، والقواعد الثلاث لاستدامة الموارد (ترشيد، إعادة استخدام، تدوير 3Rs).',
+          sources: [{ page: 74, heading: 'البيئة ومواردها والتوازن' }]
+        };
+      }
+
+      // مطابقة عامة مع مفاهيم وقواعد علم الأحياء
+      const matched = bioRules.find(r => {
+        const titleClean = normalizeArabicSearchText(r.title);
+        const catClean = normalizeArabicSearchText(r.category || '');
+        return qClean.split(' ').some(w => w.length > 2 && (titleClean.includes(w) || catClean.includes(w)));
+      });
+
+      if (matched) {
+        return {
+          content: '📌 **' + matched.title + ' (علم الأحياء - الثاني متوسط):**\n\n' +
+                   '• **الملخص:** ' + matched.summary + '\n\n' +
+                   '• **التفاصيل العلمية:**\n' + matched.details,
+          sources: [{ page: 15, heading: matched.category || 'علم الأحياء' }]
+        };
+      }
+
+      return {
+        content: 'أهلاً بك! أنا **معلم علم الأحياء الذكي للصف الثاني المتوسط** 🧬.\n\n' +
+                 'تم فحص استفسارك في كتاب علم الأحياء المعتمد بكافة وحداته وفصوله السبعة.\n' +
+                 'يمكنك سؤالي عن: علم التصنيف والممالك الخمس، الطليعيات (الأميبا، البراميسيوم، اليوغلينا)، الفطريات والأشنات، مملكة النباتات (الحزازيات، السرخسيات، البذرية)، مملكة الحيوانات (اللافقريات والفقريات)، السلاسل والشبكات الغذائية، هرم الطاقة، دورات العناصر في الطبيعة (الكربون والنيتروجين والماء)، والمشكلات البيئية واستدامة الموارد.\n\n' +
+                 '💡 **اكتب استفسارك وسأزودك بالإجابة الموثقة والصفحة فوراً.**',
+        sources: [{ page: 4, heading: 'كتاب علم الأحياء' }]
+      };
+    }
+
     // محرك الإجابة المحلي الذكي الموثق الشامل
     function generateLocalAnswer(query, lessonId) {
       const q = query.toLowerCase().trim();
       const curr = (appData.curriculums || []).find(c => c.id === appData.currentCurriculumId) || {};
+      const isBiology = curr.id === 11 || (curr.subject && curr.subject.includes('أحياء'));
+      const isChemistry = curr.id === 10 || (curr.subject && curr.subject.includes('كيمياء'));
+      const isSocial = curr.id === 9 || (curr.subject && curr.subject.includes('اجتماع'));
+      const isMath = curr.id === 8 || (curr.subject && curr.subject.includes('رياضيات'));
       const isPhysics = curr.id === 7 || (curr.subject && curr.subject.includes('فيزياء'));
       const isIslamic = curr.id === 6 || (curr.subject && curr.subject.includes('إسلام'));
       const isArabic = curr.id === 4 || curr.id === 5 || (curr.subject && curr.subject.includes('عرب'));
 
       // توجيه السؤال مباشرة إلى محرك المادة المعتمد حصراً منعاً لأي تداخل بين المناهج
+      if (isBiology) {
+        return generateBiologyLocalAnswer(query, lessonId, curr);
+      }
+      if (isChemistry) {
+        return generateChemistryLocalAnswer(query, lessonId, curr);
+      }
+      if (isSocial) {
+        return generateSocialLocalAnswer(query, lessonId, curr);
+      }
+      if (isMath) {
+        return generateMathLocalAnswer(query, lessonId, curr);
+      }
       if (isPhysics) {
         return generatePhysicsLocalAnswer(query, lessonId, curr);
       }
@@ -10489,6 +10877,7 @@
 
     function setGrammarSubjectMode(mode) {
       if (mode === 'bio') appData.currentCurriculumId = 11;
+      else if (mode === 'chem' || mode === 'chemistry') appData.currentCurriculumId = 10;
       else if (mode === 'social' || mode === 'soc') appData.currentCurriculumId = 9;
       else if (mode === 'math') appData.currentCurriculumId = 8;
       else if (mode === 'phy') appData.currentCurriculumId = 7;
@@ -10596,6 +10985,7 @@
             <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'plants' ? 'active' : ''}" onclick="filterGrammarByUnit('plants')">مملكة النبات</button>
             <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'animals' ? 'active' : ''}" onclick="filterGrammarByUnit('animals')">مملكة الحيوان</button>
             <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'ecology' ? 'active' : ''}" onclick="filterGrammarByUnit('ecology')">البيئة والتوازن</button>
+            <button class="btn btn-sm" onclick="openAllBiologyDiagramsGallery()" style="background: #16a34a; color: #ffffff; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(22,163,74,0.3); margin-right: 0.5rem; border-radius: 6px; padding: 0.25rem 0.65rem;">🔬 أطلس الرسوم (17)</button>
           `;
         }
 
@@ -10633,7 +11023,11 @@
           container.appendChild(card);
         });
         return;
-      } else       if (currentMode === 'chem') {
+      } else if (currentMode === 'chem') {
+        if (titleEl) titleEl.innerText = '🧪 المرجع الشامل لقواعد ومفاهيم الكيمياء (الصف الثاني المتوسط)';
+        if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للبناء الذري، إلكترونات التكافؤ، الروابط الكيميائية، المعادلات وتفاعلاتها، المحاليل، والحوامض والقواعد والأملاح.';
+        if (searchInput) searchInput.placeholder = 'ابحث في مفاهيم وقواعد الكيمياء (مثلاً: إلكترونات التكافؤ، الرابطة التساهمية، موازنة المعادلة، الهيدروجيني، أرهينيوس)...';
+
         const chemRules = window.CHEMISTRY_RULES || [];
         const search = (document.getElementById('grammarSearchInput').value || '').toLowerCase().trim();
         const filteredChem = chemRules.filter(r => {
@@ -10653,6 +11047,21 @@
             (r.details && r.details.toLowerCase().includes(search));
           return matchesFilter && matchesSearch;
         });
+
+        // Unit filters for Chemistry
+        const filtersContainer = document.getElementById('grammarUnitFilters');
+        if (filtersContainer) {
+          filtersContainer.innerHTML = `
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'all' ? 'active' : ''}" onclick="filterGrammarByUnit('all')">جميع المفاهيم والقواعد (${chemRules.length})</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'bonding' ? 'active' : ''}" onclick="filterGrammarByUnit('bonding')">⚛️ البناء الذري والترابط</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'compounds' ? 'active' : ''}" onclick="filterGrammarByUnit('compounds')">🧪 المركبات وقوى الجذب</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'reactions' ? 'active' : ''}" onclick="filterGrammarByUnit('reactions')">🔥 المعادلات والتفاعلات</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'solutions' ? 'active' : ''}" onclick="filterGrammarByUnit('solutions')">💧 المحاليل والذوبان</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'acids' ? 'active' : ''}" onclick="filterGrammarByUnit('acids')">🍋 الحوامض والقواعد</button>
+            <button class="grammar-filter-pill ${currentActiveGrammarFilter === 'salts' ? 'active' : ''}" onclick="filterGrammarByUnit('salts')">⚗️ الأملاح والـ pH</button>
+            <button class="btn btn-sm" onclick="openAllChemistryDiagramsGallery()" style="background: #059669; color: #ffffff; font-weight: 800; border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.3); margin-right: 0.5rem; border-radius: 6px; padding: 0.25rem 0.65rem;">🎨 بنك الرسوم (16)</button>
+          `;
+        }
 
         if (filteredChem.length === 0) {
           const empty = document.createElement('div');
@@ -10712,14 +11121,10 @@
         return;
       }
 
-if (currentMode === 'social') {
+      if (currentMode === 'social') {
         if (titleEl) titleEl.innerText = '🌍 المرجع الشامل لمفاهيم ومصطلحات الاجتماعيات (الصف الثاني المتوسط)';
         if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للمفاهيم الجغرافية، الأقاليم والمناخ، الثروات والاقتصاد، أحوال العرب والجاهلية، وتاريخ وسيرة النبي ﷺ بمكة والمدينة المنورة.';
         if (searchInput) searchInput.placeholder = 'ابحث في المفاهيم والمصطلحات والوقائع (مثلاً: طوبقال، الهلال الخصيب، حلف الفضول، دار الندوة، وثيقة المدينة)...';
-      } else if (currentMode === 'chem') {
-        if (titleEl) titleEl.innerText = '🧪 المرجع الشامل لقواعد ومفاهيم الكيمياء (الصف الثاني المتوسط)';
-        if (subTitleEl) subTitleEl.innerText = 'المرجع الأساسي للبناء الذري، إلكترونات التكافؤ، الروابط الكيميائية، المعادلات وتفاعلاتها، المحاليل، والحوامض والقواعد والأملاح.';
-        if (searchInput) searchInput.placeholder = 'ابحث في مفاهيم وقواعد الكيمياء (مثلاً: إلكترونات التكافؤ، الرابطة التساهمية، موازنة المعادلة، الهيدروجيني، أرهينيوس)...';
       }
 
       // تحديث وتوليد فلاتر الوحدات والأقسام المخصصة لكل منهج ديناميكياً
@@ -14035,6 +14440,134 @@ if (currentMode === 'social') {
             explanation: "المسافة (العمق) = (السرعة × الزمن) / 2 = (1500 × 4) / 2 = 6000 / 2 = 3000 متر."
           }
         ];
+      } else if (currId === 11) {
+        // اختبار تفاعلي لعلم الأحياء
+        currentQuizQuestions = [
+          {
+            id: 11001,
+            question: "من هو العالم الذي يعد أبا علم التصنيف ووضع نظام التسمية الثنائية باللغة اللاتينية؟",
+            options: ["كارلوس لينيوس", "روبرت وايتكر", "جون راي", "أرسطو"],
+            correct: 0,
+            explanation: "العالم السويدي كارلوس لينيوس (1707-1778) هو واضع نظام التسمية الثنائية وقواعد التصنيف العالمية."
+          },
+          {
+            id: 11002,
+            question: "ما وسيلة الحركة الأساسية في كائن الأميبا (Amoeba)؟",
+            options: ["الأقدام الكاذبة (Pseudopodia)", "الأهداب", "السياط", "الانزلاق الجداري"],
+            correct: 0,
+            explanation: "تتحرك الأميبا وتلتقط دقائق الغذاء بالبلعمة عبر الأقدام الكاذبة المؤقتة."
+          },
+          {
+            id: 11003,
+            question: "ما نوع العلاقة الحيوية المشتركة في كائنات الأشنات (Lichens) بين الفطر والطحلب؟",
+            options: ["تكافل وتبادل منفعة (Mutualism)", "تطفل إجباري", "معيشة رمية", "افتراس"],
+            correct: 0,
+            explanation: "الأشنات تمثل تكافلاً وتبادل منفعة؛ فالطحلب يصنع الغذاء بالبناء الضوئي، والفطر يمتص الماء والأملاح ويوفر الحماية."
+          },
+          {
+            id: 11004,
+            question: "كم تبلغ نسبة الطاقة الحيوية التقريبية المفقودة كحرارة عند انتقال الغذاء من مستوى لآخر في هرم الطاقة؟",
+            options: ["90% تفقد وتنتقل 10% فقط", "50% تفقد", "10% تفقد وتنتقل 90%", "صفر% (لا تفقد أي طاقة)"],
+            correct: 0,
+            explanation: "تستهلك الكائنات 90% من الطاقة في التنفس والحركة والحرارة، وتنتقل 10% فقط للمستوى الغذائي التالي."
+          }
+        ];
+      } else if (currId === 10) {
+        // اختبار تفاعلي للكيمياء
+        currentQuizQuestions = [
+          {
+            id: 10001,
+            question: "ما نوع الرابطة الكيميائية التي تنشأ نتيجة انتقال كامل لإلكترونات التكافؤ بين فلز ولا فلز؟",
+            options: ["رابطة أيونية (مثل NaCl)", "رابطة تساهمية نقية", "رابطة هيدروجينية", "قوى فان در فال"],
+            correct: 0,
+            explanation: "تنشأ الرابطة الأيونية عند انتقال إلكترون أو أكثر من ذرة فلز إلى ذرة لافلز فتتكون أيونات متجاذبة."
+          },
+          {
+            id: 10002,
+            question: "ما هو عدد تأكسد الأكسجين في معظم مركباته الكيميائية (مثل الماء H₂O)؟",
+            options: ["-2", "+1", "+2", "-1"],
+            correct: 0,
+            explanation: "عدد تأكسد الأكسجين الشائع هو -2 في معظم المركبات الكيميائية."
+          },
+          {
+            id: 10003,
+            question: "محلول مائي قيمة الرقم الهيدروجيني له تساوي (pH = 3)، هذا المحلول يعد:",
+            options: ["حامضياً قوياً ويلون زهرة الشمس بالأحمر", "قاعدياً قوياً", "متعادلاً", "ماءً نقياً"],
+            correct: 0,
+            explanation: "القيم الأقل من 7 تدل على محاليل حامضية، وكلما صغرت القيمة زادت الحامضية وتحول لون ورقة زهرة الشمس للأحمر."
+          },
+          {
+            id: 10004,
+            question: "تفاعل حامض الهيدروكلوريك مع هيدروكسيد الصوديوم لإنتاج كلوريد الصوديوم والماء يسمى تفاعل:",
+            options: ["تعادل (Neutralization)", "تفكك", "احتراق", "أكسدة واختزال فقط"],
+            correct: 0,
+            explanation: "تفاعل التعادل هو تفاعل حامض مع قاعدة لإنتاج ملح وماء (HCl + NaOH -> NaCl + H2O)."
+          }
+        ];
+      } else if (currId === 9) {
+        // اختبار تفاعلي للاجتماعيات
+        currentQuizQuestions = [
+          {
+            id: 9001,
+            question: "ما هي أعلى قمة جبلية في العالم العربي وأين تقع؟",
+            options: ["قمة طوبقال (4165 م) في جبال الأطلس بالمغرب", "قمة هلكرد في العراق", "جبل الشيخ في الشام", "جبل النبي شعيب في اليمن"],
+            correct: 0,
+            explanation: "قمة طوبقال في سلسلة جبال الأطلس الكبير بالمغرب هي الأعلى بارتفاع 4165 متراً."
+          },
+          {
+            id: 9002,
+            question: "ما هو أطول أنهار العالم والعالم العربي؟",
+            options: ["نهر النيل (6670 كم)", "نهر الفرات (2940 كم)", "نهر دجلة (1900 كم)", "نهر بردى"],
+            correct: 0,
+            explanation: "نهر النيل هو أطول أنهار العالم بطول 6670 كم ينبع من بحيرة فيكتوريا ويصب في البحر المتوسط."
+          },
+          {
+            id: 9003,
+            question: "ما اسم أول دستور مدني وحقوقي مكتوب في تاريخ البشرية أرساه النبي ﷺ في يثرب؟",
+            options: ["وثيقة المدينة المنورة", "صلح الحديبية", "حلف الفضول", "بيعة العقبة"],
+            correct: 0,
+            explanation: "وثيقة المدينة المنورة هي أول دستور مدني حقوقي حدد الحقوق والواجبات والمواطنة لجميع سكان المدينة."
+          },
+          {
+            id: 9004,
+            question: "ما هو الحلف الذي شهد النبي ﷺ توقيعه في دار عبد الله بن جدعان لنصرة المظلوم بمكة؟",
+            options: ["حلف الفضول", "حلف الأحلاف", "حلف المطيبين", "حلف قريش"],
+            correct: 0,
+            explanation: "حلف الفضول تعاهدت فيه قريش على ألا يجدوا بمكة مظلوماً إلا نصروه وأعادوا إليه حقه."
+          }
+        ];
+      } else if (currId === 8) {
+        // اختبار تفاعلي للرياضيات
+        currentQuizQuestions = [
+          {
+            id: 8001,
+            question: "في مثلث قائم الزاوية طولا ضلعيه القائمين 3 cm و 4 cm، ما طول الوتر حسب مبرهنة فيثاغورس؟",
+            options: ["5 cm", "7 cm", "12 cm", "25 cm"],
+            correct: 0,
+            explanation: "حسب مبرهنة فيثاغورس: c = √(3² + 4²) = √(9 + 16) = √25 = 5 cm."
+          },
+          {
+            id: 8002,
+            question: "ما هو ميل المستقيم الأفقي الموازي لمحور السينات؟",
+            options: ["صفر (m = 0)", "غير معرف", "موجب دائماً", "سالب دائماً"],
+            correct: 0,
+            explanation: "المستقيم الأفقي الموازي لمحور السينات تكون فيه قيم y ثابتة فيكون التغير الصادي صفراً وميله صفراً."
+          },
+          {
+            id: 8003,
+            question: "ما هو تحليل المقدار الجبري (x² - 16) بالفرق بين مربعين؟",
+            options: ["(x - 4)(x + 4)", "(x - 4)²", "(x + 4)²", "(x - 8)(x + 8)"],
+            correct: 0,
+            explanation: "الفرق بين مربعين: a² - b² = (a - b)(a + b)، إذن x² - 16 = (x - 4)(x + 4)."
+          },
+          {
+            id: 8004,
+            question: "ما هي مجموعة حل معادلة القيمة المطلقة |x| = 7 في مجموعة الأعداد الحقيقية R؟",
+            options: ["{7, -7}", "{7} فقط", "{-7} فقط", "∅ (مجموعة خالية)"],
+            correct: 0,
+            explanation: "معادلة القيمة المطلقة |x| = a حيث a > 0 لها حلان: إما x = a أو x = -a."
+          }
+        ];
       } else if (lessonId && LESSON_QUIZZES[lessonId]) {
         currentQuizQuestions = LESSON_QUIZZES[lessonId];
       } else if (lessonId && ((lessonId >= 2961 && lessonId <= 2971) || (lessonId >= 296 && lessonId <= 300))) {
@@ -14059,22 +14592,28 @@ if (currentMode === 'social') {
       const container = document.getElementById('quizQuestionsContainer');
       container.innerHTML = '';
 
+      const currId = Number(appData.currentCurriculumId || 3);
+
       currentQuizQuestions.forEach((q, idx) => {
+        const isArabicText = (currId !== 3) || /[\u0600-\u06FF]/.test(q.question);
+        const textDir = isArabicText ? 'rtl' : 'ltr';
+        const textAlign = isArabicText ? 'right' : 'left';
+
         const qDiv = document.createElement('div');
         qDiv.className = 'quiz-question';
         qDiv.id = `quiz-q-${q.id}`;
         qDiv.innerHTML = `
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.35rem;">سؤال ${idx + 1}</div>
-          <div style="font-size: 0.95rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.75rem; direction: ltr; text-align: left;">${q.question}</div>
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">سؤال ${idx + 1}</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.75rem; direction: ${textDir}; text-align: ${textAlign}; line-height: 1.6;">${q.question}</div>
           <div class="options-group">
             ${q.options.map((opt, optIdx) => `
-              <button type="button" class="quiz-option" id="opt-${q.id}-${optIdx}" onclick="selectQuizAnswer(${q.id}, ${optIdx})" style="direction: ltr; text-align: left;">
+              <button type="button" class="quiz-option" id="opt-${q.id}-${optIdx}" onclick="selectQuizAnswer(${q.id}, ${optIdx})" style="direction: ${textDir}; text-align: ${textAlign}; font-size: 0.88rem; font-weight: 600;">
                 ${opt}
               </button>
             `).join('')}
           </div>
-          <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.75rem; padding: 0.6rem; background: var(--slate-50); border-radius: 6px; font-size: 0.8rem; color: var(--slate-700);">
-            <strong>التفسير: </strong><span>${q.explanation}</span>
+          <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.75rem; padding: 0.65rem 0.85rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; font-size: 0.82rem; color: var(--slate-700); direction: ${textDir}; text-align: ${textAlign}; line-height: 1.6;">
+            <strong style="color: var(--primary);">التفسير والشرح: </strong><span>${q.explanation}</span>
           </div>
         `;
         container.appendChild(qDiv);
@@ -14099,14 +14638,15 @@ if (currentMode === 'social') {
       let score = 0;
       currentQuizQuestions.forEach(q => {
         const userAns = selectedQuizAnswers[q.id];
-        const isCorrect = userAns === q.correct;
+        const correctTarget = (q.correct !== undefined) ? q.correct : q.answer;
+        const isCorrect = userAns === correctTarget;
         if (isCorrect) score++;
 
         q.options.forEach((_, idx) => {
           const btn = document.getElementById(`opt-${q.id}-${idx}`);
           if (btn) {
             btn.onclick = null;
-            if (idx === q.correct) btn.classList.add('correct');
+            if (idx === correctTarget) btn.classList.add('correct');
             else if (idx === userAns && !isCorrect) btn.classList.add('wrong');
           }
         });
@@ -14782,6 +15322,7 @@ if (currentMode === 'social') {
       if (!mode || mode === 'auto') {
         mode = resolveCurriculumToExamSubject(appData.currentCurriculumId);
       }
+      if (mode === 'bio' || mode === 'biology') return window.BIOLOGY_PAST_EXAMS || {};
       if (mode === 'chem' || mode === 'chemistry') return window.CHEMISTRY_PAST_EXAMS || {};
       if (mode === 'soc' || mode === 'social') return window.SOCIAL_PAST_EXAMS || {};
       if (mode === 'math') return window.MATH_PAST_EXAMS || {};
@@ -14793,6 +15334,7 @@ if (currentMode === 'social') {
 
     // مطابقة معرّف المنهج مع نمط المادة الامتحانية
     function resolveCurriculumToExamSubject(currId) {
+      if (currId === 11) return 'bio';
       if (currId === 10) return 'chem';
       if (currId === 9) return 'soc';
       if (currId === 8) return 'math';
@@ -14810,7 +15352,7 @@ if (currentMode === 'social') {
       currentExamSubjectMode = mode;
 
       // تحديث مظهر أزرار المواد
-      const subjectModes = ['chem', 'soc', 'math', 'phy', 'is', 'ar', 'en'];
+      const subjectModes = ['bio', 'chem', 'soc', 'math', 'phy', 'is', 'ar', 'en'];
       subjectModes.forEach(m => {
         const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
         const btn = document.getElementById(btnId);
@@ -14845,8 +15387,10 @@ if (currentMode === 'social') {
 
       // اختيار النموذج الافتراضي للمادة
       let defaultExamId = examKeys[0];
-      if (mode === 'chem') {
-        defaultExamId = exams['exam_final_chem'] ? 'exam_final_chem' : (exams['exam_midterm_chem'] ? 'exam_midterm_chem' : examKeys[0]);
+      if (mode === 'bio') {
+        defaultExamId = exams['bio_final'] ? 'bio_final' : (exams['bio_midterm'] ? 'bio_midterm' : examKeys[0]);
+      } else if (mode === 'chem') {
+        defaultExamId = exams['chem_final'] ? 'chem_final' : (exams['chem_midterm'] ? 'chem_midterm' : examKeys[0]);
       } else if (mode === 'soc') {
         defaultExamId = exams['exam_final_soc'] ? 'exam_final_soc' : (exams['exam_midterm_soc'] ? 'exam_midterm_soc' : examKeys[0]);
       } else if (mode === 'math') {
@@ -14876,7 +15420,7 @@ if (currentMode === 'social') {
 
       // فحص إذا كان النموذج المطلوب ينتمي لمادة أخرى
       let matchedMode = null;
-      ['phy', 'is', 'ar', 'en'].forEach(m => {
+      ['bio', 'chem', 'soc', 'math', 'phy', 'is', 'ar', 'en'].forEach(m => {
         const subExams = getSubjectExams(m);
         if (subExams[examId]) matchedMode = m;
       });
@@ -14994,7 +15538,7 @@ if (currentMode === 'social') {
 
         <!-- قائمة الأسئلة الرسمية -->
         <div class="exam-questions-container">
-          ${exam.questions.map((q, idx) => `
+          ${(exam.questions || []).map((q, idx) => `
             <div class="exam-q-card" id="card_${q.id}">
               <div class="exam-q-header">
                 <div class="exam-q-title">
@@ -15359,8 +15903,24 @@ if (currentMode === 'social') {
         `;
       }
 
-      // 5. أي مناهج إضافية أخرى مستقبلاً
-      currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6 && c.id !== 7).forEach(c => {
+      // 5.4 مادة علم الأحياء
+      const bioPillCurr = currs.find(c => c.id === 11);
+      if (bioPillCurr) {
+        const isBioActive = appData.currentCurriculumId === 11;
+        html += `
+          <div class="curr-selector-pill ${isBioActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(11)">
+            <span style="font-size: 1.5rem;">🧬</span>
+            <div>
+              <div class="curr-pill-title">علم الأحياء (الثاني متوسط)</div>
+              <div class="curr-pill-sub">وزارة التربية العراقية • 7 فصول كاملة</div>
+            </div>
+            <span class="curr-pill-badge" style="${isBioActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #dcfce7; color: #15803d;'}">مكتمل 100%</span>
+          </div>
+        `;
+      }
+
+      // 5.5 أي مناهج إضافية أخرى مستقبلاً
+      currs.filter(c => ![3, 4, 5, 6, 7, 8, 9, 10, 11].includes(c.id)).forEach(c => {
         const isActive = c.id === appData.currentCurriculumId;
         html += `
           <div class="curr-selector-pill ${isActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(${c.id})">
