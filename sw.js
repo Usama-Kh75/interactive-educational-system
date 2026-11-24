@@ -1,4 +1,5 @@
-const CACHE_NAME = 'interactive-edu-pwa-v5.1.0';
+const CACHE_NAME = 'interactive-edu-pwa-v5.1.1';
+const IMAGES_CACHE_NAME = 'interactive-edu-pwa-images-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -68,8 +69,8 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          // المخازن مشتركة بين كل تطبيقات usama-kh75.github.io: يُحذف القديم من مخازن هذا التطبيق وحده
-          if (cache.startsWith('interactive-edu-pwa-') && cache !== CACHE_NAME) {
+          // المخازن مشتركة بين كل تطبيقات usama-kh75.github.io: يُحذف القديم من مخازن هذا التطبيق وحده مع الحفاظ على مخزن الصور الثابت
+          if (cache.startsWith('interactive-edu-pwa-') && cache !== CACHE_NAME && cache !== IMAGES_CACHE_NAME) {
             console.log('[Service Worker] Removing old cache:', cache);
             return caches.delete(cache);
           }
@@ -86,7 +87,7 @@ self.addEventListener('fetch', (event) => {
   // ملف version.json يُجلب دائماً من الشبكة بدون تخزين مؤقت لضمان كشف التحديثات فوراً
   if (url.pathname.endsWith('/version.json') || url.pathname.endsWith('version.json')) {
     event.respondWith(
-      fetch(event.request, { cache: 'no-store' }).catch(() => caches.match(event.request))
+      fetch(event.request, { cache: 'no-store' }).catch(() => caches.match(event.request, { cacheName: CACHE_NAME }))
     );
     return;
   }
@@ -94,7 +95,7 @@ self.addEventListener('fetch', (event) => {
   // إذا كان طلب API للخادم المحلي
   if (url.pathname.startsWith('/api/')) {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match(event.request))
+      fetch(event.request).catch(() => caches.match(event.request, { cacheName: CACHE_NAME }))
     );
     return;
   }
@@ -111,15 +112,37 @@ self.addEventListener('fetch', (event) => {
         }
         return networkResponse;
       }).catch(() => {
-        return caches.match(event.request).then((cached) => cached || caches.match('./index.html'));
+        return caches.match(event.request, { cacheName: CACHE_NAME }).then((cached) => cached || caches.match('./index.html', { cacheName: CACHE_NAME }));
       })
     );
     return;
   }
 
-  // لباقي الموارد الثابتة (الصور والخطوط): Cache-First مع تحديث بالخلفية
+  // لصور صفحات الكتب المدرسية الثابتة: Cache-First نقي في مخزن صور مستقل لا يُحذف مع ترقية الإصدار ولا يستهلك البيانات بالخلفية
+  if (url.pathname.includes('/book_images/')) {
+    event.respondWith(
+      caches.match(event.request, { cacheName: IMAGES_CACHE_NAME }).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return fetch(event.request).then((networkResponse) => {
+          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+            return networkResponse;
+          }
+          const responseToCache = networkResponse.clone();
+          caches.open(IMAGES_CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
+
+  // لباقي الموارد الثابتة (بيانات المناهج والأيقونات): Cache-First ضمن مخزن هذا التطبيق فقط مع تحديث بالخلفية
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
+    caches.match(event.request, { cacheName: CACHE_NAME }).then((cachedResponse) => {
       if (cachedResponse) {
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
@@ -142,7 +165,7 @@ self.addEventListener('fetch', (event) => {
       });
     }).catch(() => {
       if (event.request.mode === 'navigate') {
-        return caches.match('./index.html');
+        return caches.match('./index.html', { cacheName: CACHE_NAME });
       }
     })
   );

@@ -2903,6 +2903,32 @@
         width: 100%;
         padding: 0;
       }
+      body.printing-interactive-quiz #printableExamArea,
+      body.printing-interactive-quiz #printableExamArea * {
+        visibility: hidden !important;
+        display: none !important;
+      }
+      body.printing-interactive-quiz #interactiveQuizViewContainer,
+      body.printing-interactive-quiz #interactiveQuizViewContainer * {
+        visibility: visible !important;
+      }
+      body.printing-interactive-quiz #interactiveQuizViewContainer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100% !important;
+        padding: 0;
+      }
+      body.printing-interactive-quiz #quizJumpGrid,
+      body.printing-interactive-quiz #btnToggleQuizTimer,
+      body.printing-interactive-quiz #btnToggleInstantFeedback,
+      body.printing-interactive-quiz #submitQuizBtn,
+      body.printing-interactive-quiz #quizResultBanner button,
+      body.printing-interactive-quiz .mini-listen-btn,
+      body.printing-interactive-quiz #interactiveQuizViewContainer select {
+        display: none !important;
+      }
       .exam-model-answer-box, .exam-toggle-sol-btn, .exam-listen-btn, .past-exams-subnav, header, footer, .floating-audio-player {
         display: none !important;
       }
@@ -2926,7 +2952,7 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" class="version-badge">v5.1.0 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge">v5.1.1 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -3061,14 +3087,14 @@
           </button>
 
           <!-- بوابة 2: بنك القواعد والأحكام -->
-          <button class="function-nav-btn" onclick="switchTab('grammar')" title="بنك القواعد النحوية والصرفية واللغوية وأحكام التلاوة">
+          <button class="function-nav-btn" onclick="switchTab('grammar')" title="بنك القواعد النحوية والصرفية واللغوية وأحكام التلاوة والمفاهيم العلمية">
             <div class="func-icon-box" style="background: #fef3c7; color: #d97706;">💡</div>
             <div class="func-info">
               <div class="func-title">
                 <span>بنك القواعد والأحكام</span>
                 <span class="func-arrow">⮞</span>
               </div>
-              <div class="func-desc">76 قاعدة ومفهوماً مدعماً بالشرح</div>
+              <div class="func-desc">181 قاعدة ومفهوماً مدعماً بالشرح</div>
             </div>
           </button>
 
@@ -3092,7 +3118,7 @@
                 <span>المكتبة وتصفح الكتب</span>
                 <span class="func-arrow">⮞</span>
               </div>
-              <div class="func-desc">تصفح 511 صفحة من الكتب الأصلية</div>
+              <div class="func-desc">تصفح 1,054 صفحة من الكتب الأصلية</div>
             </div>
           </button>
 
@@ -3124,7 +3150,7 @@
           </button>
         </div>
 
-        <!-- شريط أزرار المناهج الأربعة -->
+        <!-- شريط أزرار المناهج الدراسية المعتمدة -->
         <div class="curr-nav-buttons-bar" id="dashboardCurriculaQuickBar">
           <!-- تتولد ديناميكياً بواسطة renderDashboardCurriculaQuickBar() -->
         </div>
@@ -3184,12 +3210,12 @@
                 <span>📚</span> ركيزة المطالعة والأصول المعتمدة
               </div>
               <h4 class="feature-block-title">المكتبة الرقمية وتصفح الكتب المدرسية الأصلية</h4>
-              <div class="feature-block-sub">511 صفحة أصلية بدقة عالية مع الصوت البشري الفصيح</div>
+              <div class="feature-block-sub">1,054 صفحة أصلية مصورة بدقة عالية مع الصوت البشري الفصيح</div>
               <p class="feature-block-desc">
                 استعراض صفحات الكتاب المعتمد بجودة عالية كما طبعتها وزارة التربية، مع محرك قراءة صوتي بشري فائق الدقة يظلل الكلمات لحظة بلحظة لترسيخ النطق والمفردات والمطالعة المفتوحة.
               </p>
               <div class="feature-pills-row">
-                <span class="feature-pill-item">📘 511 صفحة أصلية معتمدة</span>
+                <span class="feature-pill-item">📘 1,054 صفحة أصلية معتمدة</span>
                 <span class="feature-pill-item">🎧 تتبع الكلمات الصوتي المباشر</span>
                 <span class="feature-pill-item">🔍 تقليب وتكبير وتصفح الصفحات</span>
               </div>
@@ -3238,28 +3264,28 @@
           <div class="card stat-item">
             <div>
               <div class="lbl">المناهج المعتمدة</div>
-              <div class="val" id="statCurriculums">4</div>
+              <div class="val" id="statCurriculums">8</div>
             </div>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
           <div class="card stat-item">
             <div>
               <div class="lbl">الوحدات والفصول</div>
-              <div class="val" id="statChapters">30</div>
+              <div class="val" id="statChapters">68</div>
             </div>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
           </div>
           <div class="card stat-item">
             <div>
               <div class="lbl">الدروس التفاعلية</div>
-              <div class="val" id="statLessons">164</div>
+              <div class="val" id="statLessons">325</div>
             </div>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
-          <div class="card stat-item" title="إجمالي القواعد والمفاهيم الموثقة في المنظومة: 43 قاعدة لغوية لمنهج اللغة الإنجليزية + 18 قاعدة نحوية وصرفية وإملائية لمنهج اللغة العربية">
+          <div class="card stat-item" title="إجمالي القواعد والمفاهيم الموثقة في المنظومة عبر كافة المواد الثماني">
             <div>
               <div class="lbl">المفاهيم والقواعد الموثقة</div>
-              <div class="val" style="color: var(--success);" id="statGrammar">76 قاعدة ومفهوماً</div>
+              <div class="val" style="color: var(--success);" id="statGrammar">181 قاعدة ومفهوماً</div>
             </div>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
@@ -3779,16 +3805,14 @@
 
         <h2 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem;">إعدادات النظام والتشغيل المحلي</h2>
         
-        <div class="form-group">
-          <label>مفتاح Google Gemini API (اختياري للإجابات المعمقة عبر السحاب)</label>
-          <input type="password" id="geminiApiKeyInput" class="form-control" placeholder="AIzaSy...">
-          <small style="font-size: 0.75rem; color: var(--slate-500); display: block; margin-top: 0.25rem;">
-            يُحفظ المفتاح محلياً في متصفحك فقط ولا يُرسل لأي جهة خارجية. (النظام مزود بمحرك محلي يجيب دائماً حتى بدون مفتاح).
-          </small>
-        </div>
-
-        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
-          <button class="btn btn-primary btn-sm" onclick="saveApiKey()">حفظ المفتاح</button>
+        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 0.9rem 1.1rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="font-size: 1.35rem; line-height: 1.2;">⚡</span>
+          <div>
+            <div style="font-size: 0.9rem; font-weight: 800; color: #166534; margin-bottom: 0.25rem;">تشغيل محلي كامل (Offline 100%) بلا مفاتيح خارجية</div>
+            <div style="font-size: 0.8rem; color: #15803d; line-height: 1.6;">
+              يعمل المعلم الذكي ومحرك القراءة الصوتية وبنك الاختبارات التفاعلية محلياً بالكامل اعتماداً على نصوص الكتب الوزارية وقواعدها دون الحاجة لأي اتصال خارجي أو مفاتيح API.
+            </div>
+          </div>
         </div>
 
         <hr style="border: none; border-top: 1px solid var(--slate-200); margin: 1.5rem 0;">
@@ -3820,7 +3844,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.0.1</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.1.1</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3845,7 +3869,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.1.0</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.1.1</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3854,6 +3878,9 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v5.1.1 (نوفمبر 2026):</strong> إصلاحات حرجة واستقرار شامل: خلط خيارات الاختبارات التفاعلية الـ 640، تفعيل نوافذ الرسوم ومراجعات علم الأحياء الـ 11، إصلاح شبكة القفز والشهادة والطباعة والصوت العربي في الاختبارات، إصلاح تحديث PWA وعزل مخازن عامل الخدمة ومفاتيح localStorage وتنسيق المعلم الذكي - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v5.1.0 (نوفمبر 2026):</strong> تدشين المنظومة الشاملة للاختبارات التفاعلية المنهجية لجميع مواد الصف الثاني المتوسط الـ 9 (64 فصلاً، 640 سؤالاً مع التفسيرات والمؤقت والتصحيح الفوري) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v5.0.0 (نوفمبر 2026):</strong> المراجعة الشاملة وتكامل بنوك الامتحانات الوزارية للكيمياء والأحياء ومحركات المعلم الذكي لجميع المواد - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v4.3.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة اللغة العربية (الجزء الأول) للصف الثاني المتوسط كاملاً (9 وحدات شاملة: 67 تمريناً و 147 سؤالاً مع الإعراب والتطبيق والشواهد والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
                       <div>• <strong style="color: var(--primary);">v4.2.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة الفيزياء للصف الثاني المتوسط كاملاً (6 فصول شاملة: 32 تمريناً و 149 سؤالاً نموذجياً مع القوانين والمسائل الحسابية خطوة بخطوة وتفسير الأشكال والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v4.1.0 (نوفمبر 2026):</strong> استكمال إدراج تمارين وحلول كراس النشاط للوحدة الثامنة في منهج اللغة الإنجليزية كاملاً مع الحلول النموذجية التفاعلية وإتمام كراس النشاط بالكامل (127 صفحة) - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3903,7 +3930,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v5.1.0</span>
+        <span class="version-badge" id="footerVersionBadge">v5.1.1</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -4030,6 +4057,14 @@
 
       <div style="flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; background: var(--slate-100); border-radius: 8px; padding: 1rem; position: relative;" id="bookPageImgWrapper">
         <img id="bookPageModalImg" src="" alt="صفحة الكتاب" style="max-width: 100%; border-radius: 6px; box-shadow: var(--shadow); transition: transform 0.2s ease; transform-origin: top center;">
+        <div id="bookPageMissingNotice" class="hidden" style="max-width: 560px; margin: 2rem auto; background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 14px; padding: 1.75rem; text-align: center; box-shadow: var(--shadow);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.65rem;">📘</div>
+          <h4 id="bookPageMissingTitle" style="font-size: 1.1rem; font-weight: 800; color: var(--slate-900); margin: 0 0 0.5rem;">صفحات الكتاب المصوّرة غير مرفقة في هذا الإصدار</h4>
+          <p id="bookPageMissingDesc" style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.7; margin: 0 0 1.25rem;">
+            محتوى الدروس النصية والقوانين والحلول النموذجية متوفر بالكامل في قاعة المذاكرة ومركز المراجعات، بينما صور صفحات هذا الكتاب قيد الإضافة لاحقاً.
+          </p>
+          <div id="bookPageMissingActions" style="display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -4175,7 +4210,7 @@
     </div>
   </div>
 
-  <!-- نافذة مودال: أطلس ومعرض كافة الرسوم التوضيحية الحيوية (15 لوحة) -->
+  <!-- نافذة مودال: أطلس ومعرض كافة الرسوم التوضيحية الحيوية (17 لوحة) -->
   <div class="modal-overlay hidden" id="allBiologyDiagramsModal" onclick="if(event.target === this) closeAllBiologyDiagramsModal()">
     <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -4183,7 +4218,7 @@
           <span style="font-size: 1.5rem;">🔬</span>
           <div>
             <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--slate-900); margin: 0;">أطلس الرسوم واللوحات التوضيحية البيولوجية الشامل</h3>
-            <span style="font-size: 0.75rem; color: #15803d; font-weight: 700;">15 لوحة توضيحية علمية متجهة تغطي كافة فصول الأحياء • إعداد المهندس أسامة خليل هاشم</span>
+            <span style="font-size: 0.75rem; color: #15803d; font-weight: 700;">17 لوحة توضيحية علمية متجهة تغطي كافة فصول الأحياء • إعداد المهندس أسامة خليل هاشم</span>
           </div>
         </div>
         <button onclick="closeAllBiologyDiagramsModal()" title="إغلاق النافذة" style="border: none; background: #f1f5f9; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">✕</button>
@@ -4191,7 +4226,7 @@
 
       <!-- Categories Filter Tabs -->
       <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-100); flex-wrap: wrap;" id="bioDiagramsFilterTabs">
-        <button class="btn btn-primary btn-sm" onclick="filterAllBiologyDiagrams('all', this)">كل الرسوم (15)</button>
+        <button class="btn btn-primary btn-sm" onclick="filterAllBiologyDiagrams('all', this)">كل الرسوم (17)</button>
         <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('علم التصنيف', this)">علم التصنيف والممالك</button>
         <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('مملكة الطليعيات', this)">الطليعيات والفطريات</button>
         <button class="btn btn-secondary btn-sm" onclick="filterAllBiologyDiagrams('مملكة النباتات', this)">مملكة النباتات</button>
@@ -4818,13 +4853,13 @@
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.0.1؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.1.1؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
-          <span id="whatsNewModalDate">أكتوبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge" class="version-badge">v5.1.0</span>
+          <span id="whatsNewModalDate">نوفمبر 2026</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.1.1</span>
         </div>
       </div>
 
@@ -4833,7 +4868,7 @@
         <div class="whatsnew-card" style="background: #eef2ff; border-color: #c7d2fe;">
           <div style="font-weight: 800; color: var(--primary); font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>🚀</span>
-            <span id="whatsNewReleaseSummaryTitle">بوابة المواد والمناهج الدراسية المتعددة وبنك نماذج الامتحانات السابقة وحلولها</span>
+            <span id="whatsNewReleaseSummaryTitle">تحديث الصيانة الشامل: إصلاح الاختبارات التفاعلية، نوافذ علم الأحياء، عزل PWA، وتنسيق المعلم الذكي</span>
           </div>
           <div id="whatsNewFeatureList">
             <!-- تتولد ديناميكياً من version.json أو القائمة الافتراضية -->
@@ -4872,12 +4907,31 @@
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
     const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '5.1.0';
-    const CURRENT_VERSION_LABEL = 'v5.1.0';
-    const SYSTEM_VERSION = 'v5.1.0';
+    const CURRENT_VERSION = '5.1.1';
+    const CURRENT_VERSION_LABEL = 'v5.1.1';
+    const SYSTEM_VERSION = 'v5.1.1';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
+    const LS_PREFIX = 'interactive_edu_';
+
+    function lsGet(name, legacyKey = null) {
+      const v = localStorage.getItem(LS_PREFIX + name);
+      if (v !== null) return v;
+      if (legacyKey) {
+        const oldVal = localStorage.getItem(legacyKey);
+        if (oldVal !== null) {
+          localStorage.setItem(LS_PREFIX + name, oldVal);
+          localStorage.removeItem(legacyKey);
+          return oldVal;
+        }
+      }
+      return null;
+    }
+
+    function lsSet(name, val) {
+      localStorage.setItem(LS_PREFIX + name, String(val));
+    }
 
     let pendingUpdateData = null;
     let pendingServiceWorker = null;
@@ -4885,7 +4939,6 @@
     // حالة النظام
     let appData = {
       curriculums: [],
-      apiKey: '',
       currentCurriculumId: 3,
       currentLessonId: null
     };
@@ -4909,10 +4962,10 @@
       synth: window.speechSynthesis,
       isPlaying: false,
       isPaused: false,
-      speed: parseFloat(localStorage.getItem('preferred_speech_speed')) || 0.82, // سرعة هادئة متأنية
-      pitch: parseFloat(localStorage.getItem('preferred_speech_pitch')) || 1.0,  // نبرة طبيعية معتدلة
-      selectedVoiceName: localStorage.getItem('preferred_voice_name') || 'auto',
-      multiSpeaker: localStorage.getItem('preferred_multispeaker') !== 'false', // مفعل افتراضياً
+      speed: parseFloat(lsGet('speech_speed', 'preferred_speech_speed')) || 0.82, // سرعة هادئة متأنية
+      pitch: parseFloat(lsGet('speech_pitch', 'preferred_speech_pitch')) || 1.0,  // نبرة طبيعية معتدلة
+      selectedVoiceName: lsGet('voice_name', 'preferred_voice_name') || 'auto',
+      multiSpeaker: lsGet('multispeaker', 'preferred_multispeaker') !== 'false', // مفعل افتراضياً
       voicesList: [],
       chunks: [],
       currentChunkIdx: 0,
@@ -4920,8 +4973,8 @@
       activeWordIndex: -1,
       karaokeTimer: null,
       hasReceivedRealWordBoundary: false,
-      karaokeSyncFactor: parseFloat(localStorage.getItem('preferred_karaoke_sync')) || 1.0,
-      customSyncOffset: localStorage.getItem('preferred_karaoke_offset') || 'auto',
+      karaokeSyncFactor: parseFloat(lsGet('karaoke_sync', 'preferred_karaoke_sync')) || 1.0,
+      customSyncOffset: lsGet('karaoke_offset', 'preferred_karaoke_offset') || 'auto',
 
       getSyncOffset() {
         if (this.customSyncOffset !== 'auto' && !isNaN(parseFloat(this.customSyncOffset))) {
@@ -4935,7 +4988,7 @@
 
       setSyncOffset(val) {
         this.customSyncOffset = val;
-        localStorage.setItem('preferred_karaoke_offset', val);
+        lsSet('karaoke_offset', val);
         const sel = document.getElementById('studioKaraokeOffsetSelect');
         if (sel) sel.value = val;
       },
@@ -5713,7 +5766,7 @@
 
       setSelectedVoice(voiceName) {
         this.selectedVoiceName = voiceName;
-        localStorage.setItem('preferred_voice_name', voiceName);
+        lsSet('voice_name', voiceName);
         const sel = document.getElementById('audioVoiceSelect');
         if (sel) sel.value = voiceName;
         const studioSel = document.getElementById('studioVoiceSelect');
@@ -5727,7 +5780,7 @@
 
       setSpeed(val) {
         this.speed = parseFloat(val);
-        localStorage.setItem('preferred_speech_speed', val);
+        lsSet('speech_speed', val);
         const sel = document.getElementById('audioSpeedSelect');
         if (sel) sel.value = val;
         const floatSel = document.getElementById('floatingSpeedSelect');
@@ -5740,7 +5793,7 @@
 
       setPitch(val) {
         this.pitch = parseFloat(val);
-        localStorage.setItem('preferred_speech_pitch', val);
+        lsSet('speech_pitch', val);
         const slider = document.getElementById('studioPitchSlider');
         if (slider) slider.value = val;
         const valText = document.getElementById('studioPitchVal');
@@ -5749,12 +5802,12 @@
 
       setMultiSpeaker(val) {
         this.multiSpeaker = !!val;
-        localStorage.setItem('preferred_multispeaker', this.multiSpeaker.toString());
+        lsSet('multispeaker', this.multiSpeaker.toString());
       },
 
       setKaraokeSync(val) {
         this.karaokeSyncFactor = parseFloat(val) || 0.92;
-        localStorage.setItem('preferred_karaoke_sync', this.karaokeSyncFactor.toString());
+        lsSet('karaoke_sync', this.karaokeSyncFactor.toString());
         const sel = document.getElementById('studioKaraokeSyncSelect');
         if (sel) sel.value = this.karaokeSyncFactor.toString();
       },
@@ -5857,7 +5910,7 @@
       audioPlayer.stop();
       let text = '';
       if (sampleType === 'word') {
-        text = 'Welcome to the English for Iraq educational system. Learning English with Engineer Osama is inspiring and easy.';
+        text = 'Welcome to the English for Iraq educational system. Learning English with Eng. Usama Khaleel Hashim is inspiring and easy.';
       } else if (sampleType === 'question') {
         text = "What's the matter, Ansam? Do you have a headache? You should go to the doctor this afternoon.";
       } else if (sampleType === 'dialogue') {
@@ -5951,14 +6004,6 @@
       // تحميل المنهج المعتمد الشامل من ملف curriculum_data.js
       ensureDefaultEnglishCurriculum();
 
-      // استعادة مفتاح API إن وجد
-      const savedKey = localStorage.getItem('gemini_api_key') || appData.apiKey || '';
-      if (savedKey) {
-        const input = document.getElementById('geminiApiKeyInput');
-        if (input) input.value = savedKey;
-        appData.apiKey = savedKey;
-      }
-
       renderDashboard();
       renderDashboardCurriculaQuickBar();
       renderCurriculaTabsNav();
@@ -5971,6 +6016,17 @@
       initAiChatPanelState();
       syncSystemVersionBadges();
       checkBackendConnection();
+
+      // دعم اختصارات manifest.json مثل #study و #grammar
+      const validHashTabs = new Set(['dashboard', 'curriculums', 'study', 'grammar', 'exams', 'settings']);
+      const applyHashRoute = () => {
+        const hashTab = window.location.hash.replace('#', '').trim();
+        if (validHashTabs.has(hashTab)) {
+          switchTab(hashTab);
+        }
+      };
+      applyHashRoute();
+      window.addEventListener('hashchange', applyHashRoute);
 
       // فحص عرض نافذة ما الجديد عند أول تشغيل بعد التحديث
       checkWhatsNewOnStartup();
@@ -7346,7 +7402,7 @@
                   </p>
                 </div>
                 <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
-                  <button class="btn btn-primary" onclick="selectCurriculum(11)" style="font-weight: 800; padding: 0.65rem 1.25rem; font-size: 0.88rem; background: #15803d; border-color: #14532d;">
+                  <button class="btn btn-primary" onclick="openSubjectTab(11)" style="font-weight: 800; padding: 0.65rem 1.25rem; font-size: 0.88rem; background: #15803d; border-color: #14532d;">
                     🚀 فتح ودراسة علم الأحياء
                   </button>
                   <button class="btn btn-secondary" onclick="openAllBiologyDiagramsGallery()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
@@ -8258,7 +8314,44 @@
           : `صفحة (${pageNum} من ${maxPages}) • المنهج المعتمد لوزارة التربية - إعداد المهندس أسامة خليل هاشم`;
       }
 
-      img.src = `book_images/${folder}page_${pageNum}.jpeg`;
+      const missingNotice = document.getElementById('bookPageMissingNotice');
+      const missingTitle = document.getElementById('bookPageMissingTitle');
+      const missingDesc = document.getElementById('bookPageMissingDesc');
+      const missingActions = document.getElementById('bookPageMissingActions');
+
+      if (isMath) {
+        img.style.display = 'none';
+        img.onerror = null;
+        img.removeAttribute('src');
+        if (missingNotice) {
+          if (missingTitle) missingTitle.innerText = 'صور صفحات كتاب الرياضيات غير مدمجة في هذا الإصدار';
+          if (missingDesc) missingDesc.innerText = `الصفحة المطلوبة (ص ${pageNum}) غير مرفقة كصورة بعد، لكن كامل دروس الرياضيات الـ 43 والقوانين والحلول النموذجية والاختبارات متوفرة تفاعلياً داخل المنظومة.`;
+          if (missingActions) {
+            missingActions.innerHTML = `
+              <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(8); scrollToStudyContent();">📚 فتح دروس الرياضيات</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="closeBookPageModal(); openMathReviewsModal();" style="background: #faf5ff; color: #7e22ce; border-color: #d8b4fe;">🎯 حلول مراجعات الرياضيات</button>
+            `;
+          }
+          missingNotice.classList.remove('hidden');
+        }
+      } else {
+        if (missingNotice) missingNotice.classList.add('hidden');
+        img.style.display = 'block';
+        img.onerror = function() {
+          img.style.display = 'none';
+          if (missingNotice) {
+            if (missingTitle) missingTitle.innerText = `تعذر عرض صفحة الكتاب (ص ${pageNum})`;
+            if (missingDesc) missingDesc.innerText = 'تأكد من الاتصال بالإنترنت عند فتح الصفحة لأول مرة ليتم تخزينها محلياً، أو انتقل لقاعة المذاكرة لقراءة النص الكامل.';
+            if (missingActions) {
+              missingActions.innerHTML = `
+                <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(${currId}); scrollToStudyContent();">📚 الانتقال لقاعة المذاكرة</button>
+              `;
+            }
+            missingNotice.classList.remove('hidden');
+          }
+        };
+        img.src = `book_images/${folder}page_${pageNum}.jpeg`;
+      }
       resetBookPageZoom();
 
       if (currSelect) currSelect.value = currId;
@@ -8343,14 +8436,14 @@
     function toggleAllActivitySolutions(chunkIdx) {
       const container = document.getElementById(`activityExercisesList_${chunkIdx}`);
       if (!container) return;
-      const solBoxes = container.querySelectorAll('.exam-model-answer-box');
+      const solBoxes = container.querySelectorAll('.exam-model-answer-box, .activity-solution-block, .exercise-solution-box');
       let anyHidden = false;
       solBoxes.forEach(b => { if (b.classList.contains('hidden')) anyHidden = true; });
       solBoxes.forEach(b => {
         if (anyHidden) b.classList.remove('hidden');
         else b.classList.add('hidden');
       });
-      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn');
+      const toggleBtns = container.querySelectorAll('.exam-toggle-sol-btn, .math-toggle-sol-btn, [id^="btn_sol_"]');
       toggleBtns.forEach(btn => {
         btn.innerHTML = anyHidden 
           ? '<span>🙈</span> إخفاء الحل' 
@@ -8649,7 +8742,7 @@
           btn.innerHTML = '<span>💬</span> إخفاء المعلم الذكي';
           btn.classList.add('active');
         }
-        localStorage.setItem('show_ai_chat_panel', 'true');
+        lsSet('show_ai_chat_panel', 'true');
       } else {
         studyLayout.classList.add('hide-ai-panel');
         panel.style.display = 'none';
@@ -8657,12 +8750,12 @@
           btn.innerHTML = '<span>💬</span> المعلم الذكي';
           btn.classList.remove('active');
         }
-        localStorage.setItem('show_ai_chat_panel', 'false');
+        lsSet('show_ai_chat_panel', 'false');
       }
     }
 
     function initAiChatPanelState() {
-      const saved = localStorage.getItem('show_ai_chat_panel');
+      const saved = lsGet('show_ai_chat_panel', 'show_ai_chat_panel');
       if (saved === 'false') {
         toggleAiChatPanel(false);
       } else {
@@ -9594,8 +9687,27 @@
       }, 350);
     }
 
+    function formatSafeBotMarkdown(raw) {
+      if (!raw) return '';
+      const preserved = [];
+      const tokenPrefix = '__SAFE_HTML_TAG_';
+      const withTokens = String(raw).replace(/<\/?(?:span(?:\s+(?:dir|class)=['"][a-zA-Z0-9 _-]+['"])*|div(?:\s+(?:dir|class)=['"][a-zA-Z0-9 _-]+['"])*|sub|sup|strong|br)\s*\/?>/gi, (tag) => {
+        const idx = preserved.length;
+        preserved.push(tag);
+        return `${tokenPrefix}${idx}__`;
+      });
+      const escaped = withTokens
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      const restored = escaped.replace(new RegExp(`${tokenPrefix}(\\d+)__`, 'g'), (_, idx) => preserved[Number(idx)] || '');
+      return restored
+        .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+    }
+
     function renderBotResponse(botDiv, content, sources = [], speakText = '') {
-      botDiv.innerHTML = content.replace(/\n/g, '<br>');
+      botDiv.innerHTML = formatSafeBotMarkdown(content);
       
       const audioToSpeak = speakText || content.replace(/<[^>]*>/g, '');
       
@@ -10480,91 +10592,6 @@
       }
 
       // فيما يلي: المحرك الخاص بمنهج اللغة الإنجليزية حصراً
-
-
-      // فحص أسئلة علامات الإعراب
-      if (q.includes('علامات الإعراب') || q.includes('علامة الإعراب') || q.includes('أصلية وفرعية') || q.includes('حركات فرعية')) {
-        return {
-          content: `📌 **علامات الإعراب الأصلية والفرعية (الجزء الأول - ص 9 إلى 16):**\n` +
-                   `1. **العلامات الأصلية:**\n` +
-                   `• **الضمة:** للرفع في المفرد وجمع التكسير وجمع المؤنث السالم والمضارع.\n` +
-                   `• **الفتحة:** للنصب في المفرد وجمع التكسير والمضارع المسبوق بناصب.\n` +
-                   `• **الكسرة:** للجر في المفرد وجمع التكسير وجمع المؤنث السالم.\n` +
-                   `• **السكون:** للجزم في الفعل المضارع صحيح الآخر.\n\n` +
-                   `2. **العلامات الفرعية:**\n` +
-                   `• **الواو:** لرفع الأسماء الخمسة وجمع المذكر السالم وملحقاته.\n` +
-                   `• **الألف:** لرفع المثنى ونصب الأسماء الخمسة.\n` +
-                   `• **الياء:** لنصب وجر المثنى وجمع المذكر السالم وجر الأسماء الخمسة.\n` +
-                   `• **الكسرة بدل الفتحة:** لنصب جمع المؤنث السالم.\n` +
-                   `• **الفتحة بدل الكسرة:** لجر الممنوع من الصرف.\n` +
-                   `• **ثبوت وحذف النون:** لرفع ونصب وجزم الأفعال الخمسة.`,
-          sources: [{ page: 9, heading: 'علامات الإعراب الأصلية والفرعية' }],
-          speakText: "علامات الإعراب نوعان: أصلية وهي الضمة للرفع والفتحة للنصب والكسرة للجر والسكون للجزم. وفرعية تنوب عنها مثل الواو والألف والياء وحذف النون وحذف حرف العلة."
-        };
-      }
-
-      // فحص أسئلة الأسماء الخمسة
-      if (q.includes('الأسماء الخمسة') || q.includes('ابو') || q.includes('أخو') || q.includes('حمو') || q.includes('ذو') || q.includes('فو')) {
-        return {
-          content: `📌 **قاعدة الأسماء الخمسة (الجزء الأول - ص 26 إلى 30):**\n` +
-                   `• **الأسماء الخمسة هي:** (أبُو، أخُو، حَمُو، فُو، ذُو بمعنى صاحب).\n\n` +
-                   `• **إعرابها بالحروف:**\n` +
-                   `1. **ترفع بالواو:** (جاءَ أبُوكَ، ذُو العلمِ مكرَمٌ).\n` +
-                   `2. **تنصب بالألف:** (رأيتُ أخَاكَ، احترمتُ ذَا الفضلِ).\n` +
-                   `3. **تجر بالياء:** (سلّمتُ على أبِيكَ، استمعتُ إلى ذِي الحكمةِ).\n\n` +
-                   `• **شروط إعرابها بالحروف:**\n` +
-                   `1. أن تكون مفردة (فإن جمعت أعربت بالحركات: آباؤكم).\n` +
-                   `2. أن تكون مضافة لاسم ظاهر أو ضمير كاف الخطاب أو هاء الغيبة.\n` +
-                   `3. ألا تضاف إلى ياء المتكلم؛ فإن أضيفت لياء المتكلم أعربت بحركات مقدرة (أَخِي، أَبِي).`,
-          sources: [{ page: 26, heading: 'الأسماء الخمسة' }],
-          speakText: "الأسماء الخمسة هي أبو وأخو وحمو وفو وذو، ترفع بالواو وتنصب بالألف وتجر بالياء بشرط أن تكون مفردة ومضافة لغير ياء المتكلم."
-        };
-      }
-
-      // فحص أسئلة الميزان الصرفي
-      if (q.includes('ميزان صرفي') || q.includes('الميزان الصرفي') || q.includes('فعل') || q.includes('وزن الكلمات')) {
-        return {
-          content: `📌 **قواعد الميزان الصرفي (الجزء الأول ص 38، والجزء الثاني ص 125):**\n` +
-                   `1. **الأساس:** جعل علماء العربية لفظ (فَـ ـعَـ ـلَ) ميزاناً يزنون به الكلمات العربية الثلاثية المجردة.\n` +
-                   `• الحرف الأول يقابل الفاء (فاء الكلمة).\n` +
-                   `• الحرف الثاني يقابل العين (عين الكلمة).\n` +
-                   `• الحرف الثالث يقابل اللام (لام الكلمة).\n\n` +
-                   `2. **الكلمات المزيدة:** ننزل حروف الزيادة في الميزان كما هي: (كَاتِب -> فَاعِل، اسْتَخْرَجَ -> اسْتَفْعَلَ).\n` +
-                   `3. **الرباعي والخماسي المجرد:** نزيد لاماً في الرباعي (دَحْرَجَ -> فَعْلَلَ)، ولامين في الخماسي (سَفَرْجَل -> فَعَلَّل).\n` +
-                   `4. **حذف حرف أصلي:** يُحذف ما يقابله في الميزان (قِ -> عِ، صُنْ -> فُلْ، يَصِلُ -> يَعِلُ).`,
-          sources: [{ page: 38, heading: 'الميزان الصرفي' }, { page: 125, heading: 'الميزان الصرفي 2' }],
-          speakText: "الميزان الصرفي أساسه وزن فَعَلَ، تقابل حروف الكلمة الثلاثية المجردة به، وتنزل الزيادة كما هي، وما يحذف من الأصول يحذف مقابله من الميزان."
-        };
-      }
-
-      // فحص أسئلة أسلوب النداء
-      if (q.includes('نداء') || q.includes('المنادى') || q.includes('حروف النداء') || q.includes('يا محمد')) {
-        return {
-          content: `📌 **أسلوب النداء وأحكام المنادى (الجزء الثاني - ص 8 إلى 12):**\n` +
-                   `1. **حروف النداء:** (يا) لجميع المنادى، و(الهمزة وأي) للقريب، و(أيا وهيا) للبعيد.\n` +
-                   `2. **المنادى المبني في محل نصب:**\n` +
-                   `• **العلم المفرد:** يا محمّدُ، يا عليُّ (يبنى على الضم في محل نصب).\n` +
-                   `• **النكرة المقصودة:** يا رجلُ، يا طالبُ (يقصد شخصاً معيناً أمامه).\n\n` +
-                   `3. **المنادى المعرب المنصوب:**\n` +
-                   `• **النكرة غير المقصودة:** يا غافلاً تنبّهْ، يا سائقاً تمهّلْ.\n` +
-                   `• **المنادى المضاف:** يا طالبَ العلمِ، يا أهلَ الخيرِ.\n` +
-                   `• **الشبيه بالمضاف:** يا حسناً وجهُهُ، يا طالعاً جبلاً.`,
-          sources: [{ page: 8, heading: 'أسلوب النداء' }],
-          speakText: "أسلوب النداء طلب الإقبال بأحد أحرف النداء. المنادى يبنى على ما يرفع به إذا كان علماً مفرداً أو نكرة مقصودة، وينصب إذا كان نكرة غير مقصودة أو مضافاً أو شبيهاً بالمضاف."
-        };
-      }
-
-      // فحص أسئلة الاستفهام
-      if (q.includes('استفهام') || q.includes('التصديق') || q.includes('التصور') || q.includes('أدوات الاستفهام')) {
-        return {
-          content: `📌 **أسلوب الاستفهام (الجزء الثاني - ص 23 إلى 29):**\n` +
-                   `طلب معرفة شيء مجهول لدى المتكلم بأحد أدوات الاستفهام، وينقسم إلى نوعين:\n` +
-                   `1. **استفهام التصديق:** يُطلب به إثبات النسبة أو نفيها، ويُجاب عنه بأحرف الجواب (نعم، لا، بلى، كلا). أدواته: (هل) و(الهمزة بدون أم المعادلة).\n` +
-                   `2. **استفهام التصور:** يُطلب به تعيين مفرد من أمرين، ويُجاب عنه بالتعيين. أدواته: (الهمزة مع أم المعادلة) وجميع أسماء الاستفهام (من، ما، أين، متى، كيف، كم، أي).`,
-          sources: [{ page: 23, heading: 'الاستفهام' }],
-          speakText: "الاستفهام نوعان: تصديق ويجاب عنه بنعم أو لا بأداتي هل والهمزة، وتصور ويجاب عنه بالتعيين بأسماء الاستفهام أو الهمزة المقترنة بأم المعادلة."
-        };
-      }
 
       // فحص أسئلة s التملك
       if (q.includes('تملك') || q.includes('possessive') || q.includes('boy\'s') || q.includes('boys\'')) {
@@ -12057,9 +12084,29 @@
       setupQuizData(quizData.questions, quizData.title, subjName, cId, chId);
     }
 
+    // خلط ترتيب خيارات كل سؤال مع تحديث فهرس الإجابة الصحيحة دون المساس بالبيانات الأصلية
+    function prepareShuffledQuizQuestions(rawQuestions) {
+      return (rawQuestions || []).map((q) => {
+        const origOpts = Array.isArray(q.options) ? q.options : [];
+        const origCorrect = (q.correct !== undefined) ? Number(q.correct) : Number(q.answer ?? 0);
+        const tagged = origOpts.map((text, idx) => ({ text, isCorrect: idx === origCorrect }));
+        for (let i = tagged.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [tagged[i], tagged[j]] = [tagged[j], tagged[i]];
+        }
+        const newCorrect = Math.max(0, tagged.findIndex((item) => item.isCorrect));
+        return {
+          ...q,
+          options: tagged.map((item) => item.text),
+          correct: newCorrect,
+          answer: newCorrect
+        };
+      });
+    }
+
     // تهيئة بيانات الاختبار وتحديث الواجهة
     function setupQuizData(questions, title, subjectName, currId = 3, chapterId = null) {
-      currentQuizQuestions = questions || [];
+      currentQuizQuestions = prepareShuffledQuizQuestions(questions);
       selectedQuizAnswers = {};
       currentQuizMeta = {
         currId: Number(currId),
@@ -12077,6 +12124,8 @@
       // إخفاء بطاقة النتيجة وإظهار زر الإرسال
       const banner = document.getElementById('quizResultBanner');
       if (banner) banner.classList.add('hidden');
+      const filterMistakesBtn = document.getElementById('btnFilterMistakes');
+      if (filterMistakesBtn) filterMistakesBtn.style.display = '';
       const submitBtn = document.getElementById('submitQuizBtn');
       if (submitBtn) {
         submitBtn.classList.remove('hidden');
@@ -12109,6 +12158,7 @@
         const isArabicText = (currId !== 3) || /[\u0600-\u06FF]/.test(q.question);
         const textDir = isArabicText ? 'rtl' : 'ltr';
         const textAlign = isArabicText ? 'right' : 'left';
+        const optionLetters = isArabicText ? ['أ', 'ب', 'ج', 'د', 'هـ', 'و'] : ['A', 'B', 'C', 'D', 'E', 'F'];
 
         const qDiv = document.createElement('div');
         qDiv.className = 'quiz-question';
@@ -12136,7 +12186,7 @@
             ${q.options.map((opt, optIdx) => `
               <button type="button" class="quiz-option" id="opt-${q.id}-${optIdx}" onclick="selectQuizAnswer(${q.id}, ${optIdx})" style="direction: ${textDir}; text-align: ${textAlign}; font-size: 0.88rem; font-weight: 600;">
                 <span style="display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; background: rgba(0,0,0,0.06); font-size: 0.72rem; font-weight: 800; margin-left: 0.5rem; margin-right: 0.5rem;">
-                  ${String.fromCharCode(65 + optIdx)}
+                  ${optionLetters[optIdx] || String.fromCharCode(65 + optIdx)}
                 </span>
                 ${opt}
               </button>
@@ -12155,7 +12205,7 @@
 
     // توليد شبكة أزرار القفز السريع بين الأسئلة (1 .. 10)
     function renderQuestionJumpGrid() {
-      const grid = document.getElementById('quizQuestionJumpGrid');
+      const grid = document.getElementById('quizJumpGrid');
       if (!grid) return;
       grid.innerHTML = '';
 
@@ -12327,7 +12377,7 @@
         }
       });
 
-      const pct = Math.round((score / total) * 100);
+      const pct = total > 0 ? Math.round((score / total) * 100) : 0;
 
       // إظهار شهادة التميز ولوحة النتيجة
       const banner = document.getElementById('quizResultBanner');
@@ -12336,33 +12386,49 @@
         banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
-      const scoreCircle = document.getElementById('quizScoreCircle');
-      if (scoreCircle) {
-        scoreCircle.textContent = `${pct}%`;
-        scoreCircle.style.background = pct >= 80 ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)' : (pct >= 50 ? 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' : 'linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)');
+      const medalIcon = document.getElementById('quizMedalIcon');
+      if (medalIcon) {
+        medalIcon.textContent = pct >= 90 ? '🏆' : (pct >= 75 ? '🥇' : (pct >= 50 ? '🎖️' : '📚'));
+      }
+
+      const gradeBadge = document.getElementById('quizGradeBadge');
+      if (gradeBadge) {
+        if (pct >= 90) {
+          gradeBadge.textContent = `ممتاز (${pct}%)`;
+          gradeBadge.style.background = '#059669';
+        } else if (pct >= 75) {
+          gradeBadge.textContent = `جيد جداً (${pct}%)`;
+          gradeBadge.style.background = '#4f46e5';
+        } else if (pct >= 50) {
+          gradeBadge.textContent = `جيد (${pct}%)`;
+          gradeBadge.style.background = '#d97706';
+        } else {
+          gradeBadge.textContent = `يحتاج مراجعة (${pct}%)`;
+          gradeBadge.style.background = '#dc2626';
+        }
       }
 
       const scoreTitle = document.getElementById('quizScoreTitle');
       if (scoreTitle) {
-        if (pct >= 90) scoreTitle.textContent = '🏆 ممتاز جداً! أداء استثنائي متكامل';
-        else if (pct >= 75) scoreTitle.textContent = '🎉 أحسنت! إتقان متقدم لمفاهيم الفصل';
-        else if (pct >= 50) scoreTitle.textContent = '👍 جيد! تم اجتياز الاختبار بنجاح';
-        else scoreTitle.textContent = '📚 تحتاج لمراجعة مفاهيم هذا الفصل مجدداً';
-      }
-
-      const scoreSubtitle = document.getElementById('quizScoreSubtitle');
-      if (scoreSubtitle) {
-        scoreSubtitle.textContent = `النتيجة الرسمية لاختبار ${currentQuizMeta.subjectName} - ${currentQuizMeta.title}`;
+        if (pct >= 90) scoreTitle.textContent = 'ممتاز جداً! أداء استثنائي متكامل';
+        else if (pct >= 75) scoreTitle.textContent = 'أحسنت! إتقان متقدم لمفاهيم الفصل';
+        else if (pct >= 50) scoreTitle.textContent = 'جيد! تم اجتياز الاختبار بنجاح';
+        else scoreTitle.textContent = 'تحتاج لمراجعة مفاهيم هذا الفصل مجدداً';
       }
 
       const scoreText = document.getElementById('quizScoreText');
       if (scoreText) {
-        scoreText.textContent = `درجتك: ${score} من ${total} (${pct}%)`;
+        scoreText.textContent = `النتيجة الرسمية لاختبار ${currentQuizMeta.subjectName} — ${currentQuizMeta.title}: درجتك ${score} من ${total} (${pct}%)`;
       }
 
-      const scoreDesc = document.getElementById('quizScoreDesc');
-      if (scoreDesc) {
-        scoreDesc.innerHTML = `أجبت بشكل صحيح على <strong>${score}</strong> أسئلة، وأخطأت في <strong>${wrongQuestions.length}</strong> أسئلة من أصل ${total} سؤالاً. تم إعداد هذا الاختبار وفق المعايير الوزارية الرسمية - إعداد المهندس أسامة خليل هاشم.`;
+      const pedagogicalFeedback = document.getElementById('quizPedagogicalFeedback');
+      if (pedagogicalFeedback) {
+        pedagogicalFeedback.innerHTML = `أجبت بشكل صحيح على <strong>${score}</strong> أسئلة، وأخطأت في <strong>${wrongQuestions.length}</strong> أسئلة من أصل ${total} سؤالاً. تم إعداد هذا الاختبار وفق المعايير الوزارية الرسمية — إعداد المهندس أسامة خليل هاشم.`;
+      }
+
+      const filterMistakesBtn = document.getElementById('btnFilterMistakes');
+      if (filterMistakesBtn) {
+        filterMistakesBtn.style.display = wrongQuestions.length > 0 ? '' : 'none';
       }
 
       // إخفاء زر التسليم
@@ -12373,8 +12439,11 @@
     // إعادة خوض نفس الاختبار وتصفير الاختيارات
     function resetCurrentQuiz() {
       selectedQuizAnswers = {};
+      currentQuizQuestions = prepareShuffledQuizQuestions(currentQuizQuestions);
       const banner = document.getElementById('quizResultBanner');
       if (banner) banner.classList.add('hidden');
+      const filterMistakesBtn = document.getElementById('btnFilterMistakes');
+      if (filterMistakesBtn) filterMistakesBtn.style.display = '';
       const submitBtn = document.getElementById('submitQuizBtn');
       if (submitBtn) submitBtn.classList.remove('hidden');
 
@@ -12408,7 +12477,11 @@
 
     // طباعة نتائج الاختبار والشهادة
     function printInteractiveQuiz() {
+      document.body.classList.add('printing-interactive-quiz');
+      const cleanup = () => document.body.classList.remove('printing-interactive-quiz');
+      window.addEventListener('afterprint', cleanup, { once: true });
       window.print();
+      setTimeout(cleanup, 1000);
     }
 
     // قراءة السؤال صوتياً عبر محرك TTS
@@ -12417,7 +12490,11 @@
       if (!q) return;
       const isEnglish = (currentQuizMeta.currId === 3) && !(/[\u0600-\u06FF]/.test(q.question));
       const lang = isEnglish ? 'en' : 'ar';
-      const textToSpeak = `${q.question}. ${q.options.map((opt, i) => `Option ${String.fromCharCode(65 + i)}: ${opt}`).join('. ')}`;
+      const arLetters = ['أ', 'ب', 'ج', 'د', 'هـ', 'و'];
+      const optionsSpeech = isEnglish
+        ? q.options.map((opt, i) => `Option ${String.fromCharCode(65 + i)}: ${opt}`).join('. ')
+        : q.options.map((opt, i) => `الخيار ${arLetters[i] || (i + 1)}: ${opt}`).join('. ');
+      const textToSpeak = `${q.question}. ${optionsSpeech}`;
       if (typeof speakSnippet === 'function') {
         speakSnippet(textToSpeak, lang);
       } else if ('speechSynthesis' in window) {
@@ -14486,14 +14563,6 @@
       switchTab('study');
     }
 
-    function saveApiKey() {
-      const key = document.getElementById('geminiApiKeyInput').value.trim();
-      localStorage.setItem('gemini_api_key', key);
-      appData.apiKey = key;
-      saveData();
-      alert('تم حفظ مفتاح API محلياً بنجاح!');
-    }
-
     function exportDataBackup() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
       const downloadAnchor = document.createElement('a');
@@ -14603,9 +14672,9 @@
         // حذف مخازن هذا التطبيق القديمة من نافذة المتصفح مباشرة لضمان عدم قراءة أي ملفات سابقة
         if (window.caches) {
           const keys = await caches.keys();
-          const targetCacheName = 'interactive-edu-pwa-v' + (latestSystemUpdateData ? latestSystemUpdateData.version : CURRENT_VERSION);
+          const targetCacheName = 'interactive-edu-pwa-v' + (pendingUpdateData && pendingUpdateData.version ? pendingUpdateData.version : CURRENT_VERSION);
           for (const key of keys) {
-            if (key.startsWith('interactive-edu-pwa-') && key !== targetCacheName) {
+            if (key.startsWith('interactive-edu-pwa-') && key !== targetCacheName && key !== 'interactive-edu-pwa-images-v1') {
               console.log('[PWA Update] Deleting old cache from window:', key);
               await caches.delete(key);
             }
@@ -14709,7 +14778,268 @@
 
     
     // ----------------------------------------------------
-// ----------------------------------------------------
+    // إدارة نافذة الرسوم التوضيحية ومراجعات فصول علم الأحياء الشاملة
+    // إعداد المهندس أسامة خليل هاشم
+    // ----------------------------------------------------
+    let currentBiologyDiagramZoom = 1;
+
+    function openBiologyDiagramModal(diagId) {
+      if (!window.BIOLOGY_DIAGRAMS) return;
+      const diag = window.BIOLOGY_DIAGRAMS.find(d => d.id === diagId);
+      if (!diag) return;
+
+      const modal = document.getElementById('biologyDiagramModal');
+      const titleEl = document.getElementById('biologyDiagramModalTitle');
+      const subEl = document.getElementById('biologyDiagramModalSubtitle');
+      const svgWrap = document.getElementById('biologyDiagramSvgWrapper');
+      const infoWrap = document.getElementById('biologyDiagramInfoWrapper');
+
+      if (!modal) return;
+
+      if (titleEl) titleEl.innerText = diag.title;
+      if (subEl) subEl.innerText = `${diag.category} • منهج علم الأحياء للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم`;
+
+      currentBiologyDiagramZoom = 1;
+      if (svgWrap) {
+        svgWrap.innerHTML = `
+          <div id="biologyDiagramZoomTarget" style="display: inline-block; width: 100%; max-width: 760px; transition: transform 0.2s ease; transform-origin: top center; margin: 0 auto;">
+            ${diag.svg}
+          </div>
+        `;
+      }
+
+      if (infoWrap) {
+        infoWrap.innerHTML = `
+          <div style="background: #f0fdf4; border-right: 4px solid #16a34a; padding: 0.6rem 0.85rem; border-radius: 6px; font-size: 0.84rem; color: #14532d; margin-bottom: 0.5rem; line-height: 1.6;">
+            <strong>💡 الشرح العلمي والتفسير البيولوجي:</strong> ${diag.summary}
+          </div>
+          ${diag.formula ? `
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.5rem 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.1rem;">🧬</span>
+              <strong style="font-size: 0.85rem; color: #1d4ed8;">القاعدة / المعادلة الحيوية:</strong>
+              <span style="font-size: 0.85rem; font-weight: 800; color: #1e40af;">${diag.formula}</span>
+            </div>
+          ` : ''}
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
+            ${(diag.keyPoints || []).map(pt => `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.45rem 0.75rem; font-size: 0.78rem; color: #334155; line-height: 1.5;">
+                <span style="color: #16a34a; font-weight: 800;">✔️</span> ${pt}
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeBiologyDiagramModal() {
+      const modal = document.getElementById('biologyDiagramModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function zoomBiologyDiagram(delta) {
+      currentBiologyDiagramZoom = Math.max(0.6, Math.min(2.5, currentBiologyDiagramZoom + delta));
+      const target = document.getElementById('biologyDiagramZoomTarget');
+      if (target) target.style.transform = `scale(${currentBiologyDiagramZoom})`;
+    }
+
+    function resetBiologyDiagramZoom() {
+      currentBiologyDiagramZoom = 1;
+      const target = document.getElementById('biologyDiagramZoomTarget');
+      if (target) target.style.transform = 'scale(1)';
+    }
+
+    let currentAllBioDiagramsFilter = 'all';
+
+    function openAllBiologyDiagramsGallery(filterCat) {
+      currentAllBioDiagramsFilter = filterCat || 'all';
+      renderAllBiologyDiagramsGrid();
+      const modal = document.getElementById('allBiologyDiagramsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeAllBiologyDiagramsModal() {
+      const modal = document.getElementById('allBiologyDiagramsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function filterAllBiologyDiagrams(cat, btn) {
+      currentAllBioDiagramsFilter = cat;
+      const tabs = document.querySelectorAll('#bioDiagramsFilterTabs button');
+      tabs.forEach(t => {
+        t.className = 'btn btn-secondary btn-sm';
+      });
+      if (btn) btn.className = 'btn btn-primary btn-sm';
+      renderAllBiologyDiagramsGrid();
+    }
+
+    function renderAllBiologyDiagramsGrid() {
+      const grid = document.getElementById('allBiologyDiagramsGrid');
+      if (!grid || !window.BIOLOGY_DIAGRAMS) return;
+
+      const list = window.BIOLOGY_DIAGRAMS.filter(d => {
+        if (currentAllBioDiagramsFilter === 'all') return true;
+        if (!d.category) return false;
+        if (currentAllBioDiagramsFilter === 'مملكة الطليعيات') {
+          return d.category.includes('الطليعيات') || d.category.includes('الفطريات');
+        }
+        return d.category.includes(currentAllBioDiagramsFilter);
+      });
+
+      if (list.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد رسوم في هذا القسم.</div>';
+        return;
+      }
+
+      grid.innerHTML = list.map(diag => `
+        <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+              <span class="badge" style="background: #dcfce7; color: #166534; font-size: 0.7rem; font-weight: 800;">${diag.category}</span>
+              <button class="btn btn-secondary btn-sm" onclick="openBiologyDiagramModal('${diag.id}')" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; color: #15803d;">
+                🔍 تكبير
+              </button>
+            </div>
+            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-weight: 800; color: #0f172a; line-height: 1.35;">${diag.title}</h4>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem; cursor: pointer;" onclick="openBiologyDiagramModal('${diag.id}')" title="انقر لتكبير الرسم">
+              ${diag.svg}
+            </div>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.77rem; color: #475569; line-height: 1.5;">${diag.summary}</p>
+          </div>
+          <button class="btn btn-sm" onclick="openBiologyDiagramModal('${diag.id}')" style="background: #16a34a; color: white; width: 100%; font-size: 0.75rem; padding: 0.3rem 0.5rem; font-weight: 700; border: none; border-radius: 6px;">
+            🔬 فحص اللوحة والشرح الكامل
+          </button>
+        </div>
+      `).join('');
+    }
+
+    let currentBiologyModalReviewChapterId = 1;
+    let allBiologyModalSolutionsVisible = true;
+
+    function openBiologyReviewsModal(targetId = 1) {
+      const metaList = window.BIOLOGY_CHAPTER_REVIEWS || [];
+      const numId = Number(targetId);
+      const found = metaList.find(m => m.chapterId === numId || m.primaryLessonId === numId) || metaList[0];
+      currentBiologyModalReviewChapterId = found ? found.chapterId : 1;
+      allBiologyModalSolutionsVisible = true;
+      renderBiologyReviewsModal();
+      const modal = document.getElementById('biologyChapterReviewsModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeBiologyReviewsModal() {
+      const modal = document.getElementById('biologyChapterReviewsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function switchBiologyModalReviewChapter(chapterId) {
+      currentBiologyModalReviewChapterId = Number(chapterId);
+      renderBiologyReviewsModal();
+    }
+
+    function renderBiologyReviewsModal() {
+      const navContainer = document.getElementById('biologyReviewChaptersNav');
+      const contentContainer = document.getElementById('biologyModalReviewsContent');
+      const badgeEl = document.getElementById('biologyModalChapterBadge');
+      const titleEl = document.getElementById('biologyModalChapterTitle');
+      const pagesEl = document.getElementById('biologyModalChapterPages');
+      const toggleAllBtn = document.getElementById('btnToggleAllModalBioSols');
+
+      const metaList = window.BIOLOGY_CHAPTER_REVIEWS || [];
+      if (metaList.length === 0) return;
+
+      const activeMeta = metaList.find(m => m.chapterId === currentBiologyModalReviewChapterId) || metaList[0];
+
+      if (badgeEl) badgeEl.innerText = `الفصل ${activeMeta.chapterNum || activeMeta.chapterId}`;
+      if (titleEl) titleEl.innerText = activeMeta.title + (activeMeta.subtitle ? ' • ' + activeMeta.subtitle : '');
+      if (pagesEl) pagesEl.innerText = activeMeta.pageRange || `الصفحات (${activeMeta.pages})`;
+
+      if (navContainer) {
+        navContainer.innerHTML = metaList.map(meta => {
+          const isActive = meta.chapterId === activeMeta.chapterId;
+          return `
+            <button class="btn btn-sm" onclick="switchBiologyModalReviewChapter(${meta.chapterId})" style="font-size: 0.78rem; padding: 0.35rem 0.85rem; font-weight: 800; border-radius: 8px; ${isActive ? 'background: #16a34a; color: white; border: none; box-shadow: 0 2px 6px rgba(22,163,74,0.3);' : 'background: #f0fdf4; color: #166534; border: 1px solid #86efac;'}">
+              <span>${meta.title}</span>
+              <span style="font-size: 0.68rem; margin-inline-start: 0.3rem; opacity: 0.85;">(ص ${meta.pages})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      if (toggleAllBtn) {
+        toggleAllBtn.innerHTML = allBiologyModalSolutionsVisible ? '<span>🙈</span> إخفاء كافة الحلول' : '<span>👁️</span> إظهار كافة الحلول';
+      }
+
+      if (!contentContainer) return;
+
+      const sections = activeMeta.solutions || [];
+      if (sections.length === 0) {
+        contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا تتوفر حلول مسجلة لهذا الفصل حالياً.</div>';
+        return;
+      }
+
+      contentContainer.innerHTML = sections.map((sec, secIdx) => {
+        const answers = Array.isArray(sec.answers) ? sec.answers : [];
+        return `
+          <div style="background: #ffffff; border: 1.5px solid #86efac; border-radius: 12px; margin-bottom: 1.1rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-bottom: 1.5px solid #86efac; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span style="font-size: 1rem;">🧬</span>
+                <strong style="color: #14532d; font-size: 0.92rem;">${sec.title}</strong>
+              </div>
+              <button class="btn btn-sm" id="btnToggleBioSec_${secIdx}" onclick="toggleBiologyReviewSection(${secIdx})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: #166534; border: 1px solid #86efac; font-weight: 800; border-radius: 5px;">
+                ${allBiologyModalSolutionsVisible ? '<span>🙈</span> إخفاء الحلول' : '<span>👁️</span> إظهار الحلول'}
+              </button>
+            </div>
+            <div id="bioReviewSecBox_${secIdx}" class="bio-solution-box${allBiologyModalSolutionsVisible ? '' : ' hidden'}" style="padding: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              ${answers.map(ans => `
+                <div style="background: #f0fdf4; border-right: 4px solid #16a34a; border-radius: 6px; padding: 0.6rem 0.85rem; font-size: 0.86rem; color: #14532d; line-height: 1.7; direction: rtl; text-align: right; border-top: 1px solid #dcfce7; border-bottom: 1px solid #dcfce7; border-left: 1px solid #dcfce7;">
+                  ${ans}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleBiologyReviewSection(secIdx) {
+      const box = document.getElementById(`bioReviewSecBox_${secIdx}`);
+      const btn = document.getElementById(`btnToggleBioSec_${secIdx}`);
+      if (!box) return;
+      const willShow = box.classList.contains('hidden');
+      box.classList.toggle('hidden');
+      if (btn) {
+        btn.innerHTML = willShow ? '<span>🙈</span> إخفاء الحلول' : '<span>👁️</span> إظهار الحلول';
+      }
+    }
+
+    function toggleAllBiologyModalSolutions() {
+      allBiologyModalSolutionsVisible = !allBiologyModalSolutionsVisible;
+      const boxes = document.querySelectorAll('#biologyModalReviewsContent .bio-solution-box');
+      boxes.forEach((box, idx) => {
+        if (allBiologyModalSolutionsVisible) box.classList.remove('hidden');
+        else box.classList.add('hidden');
+        const secBtn = document.getElementById(`btnToggleBioSec_${idx}`);
+        if (secBtn) {
+          secBtn.innerHTML = allBiologyModalSolutionsVisible ? '<span>🙈</span> إخفاء الحلول' : '<span>👁️</span> إظهار الحلول';
+        }
+      });
+      const btn = document.getElementById('btnToggleAllModalBioSols');
+      if (btn) {
+        btn.innerHTML = allBiologyModalSolutionsVisible ? '<span>🙈</span> إخفاء كافة الحلول' : '<span>👁️</span> إظهار كافة الحلول';
+      }
+    }
+
+    function openCurrentModalBioBookPage() {
+      const metaList = window.BIOLOGY_CHAPTER_REVIEWS || [];
+      const activeMeta = metaList.find(m => m.chapterId === currentBiologyModalReviewChapterId) || metaList[0];
+      closeBiologyReviewsModal();
+      openBookPageModal((activeMeta && activeMeta.startPage) || 13, (activeMeta && activeMeta.title) || 'كتاب علم الأحياء', 'student', 11);
+    }
+
+    // ----------------------------------------------------
     // إدارة نافذة الرسوم التوضيحية للكيمياء الشاملة
     // إعداد المهندس أسامة خليل هاشم
     // ----------------------------------------------------
@@ -15275,8 +15605,8 @@
                     </span>
                     <strong style="color: #581c87; font-size: 0.85rem; margin-inline-start: 0.35rem;">${ex.title || ''}</strong>
                   </div>
-                  <button class="btn btn-secondary btn-sm" onclick="toggleActivitySolution('${exId}')" id="btnToggleSol_${exId}" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #ffffff; border-color: #d8b4fe; color: #7e22ce; font-weight: 700;">
-                    💡 الحل النموذجي
+                  <button class="btn btn-secondary btn-sm math-toggle-sol-btn" onclick="toggleActivityCardSolutions('${exId}', ${(ex.questions || []).length})" id="btn_sol_${exId}" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #ffffff; border-color: #d8b4fe; color: #7e22ce; font-weight: 700;">
+                    <span>👁️</span> إظهار الحل
                   </button>
                 </div>
 
@@ -15320,6 +15650,9 @@
       allSols.forEach(s => {
         if (anyHidden) s.classList.remove('hidden');
         else s.classList.add('hidden');
+      });
+      container.querySelectorAll('.math-toggle-sol-btn').forEach(b => {
+        b.innerHTML = anyHidden ? '<span>🙈</span> إخفاء الحل' : '<span>👁️</span> إظهار الحل';
       });
       if (btn) btn.innerText = anyHidden ? '🙈 إخفاء كافة الحلول' : '👁️ إظهار كافة الحلول';
     }
@@ -16183,15 +16516,14 @@
         dataToDisplay = {
           version: CURRENT_VERSION,
           versionLabel: CURRENT_VERSION_LABEL,
-          date: '2026-10-27',
+          date: '2026-11-24',
           author: SYSTEM_AUTHOR,
-          title: 'نظام الكشف والاستقبال التلقائي للتحديثات الفورية (Live PWA Update System)',
+          title: 'تحديث الصيانة الشامل وإصلاح الاختبارات التفاعلية وعزل PWA (v5.1.1)',
           whatsNew: [
-            'الاستقبال التلقائي للتحديثات الفورية: يتحقق النظام بذكاء وبشكل دوري عند الاتصال بالإنترنت والعودة للتطبيق لإشعارك بأي تحديث جديد فور نشره على الموقع.',
-            'شريط إشعار التحديث العائم: ظهور إشعار تفاعلي أنيق أسفل الشاشة فور توفر إصدار أحدث، مع زر «تحديث الآن» لتطبيق التحديث بلحظة واحدة وزر «ما الجديد؟» لمعاينة المزايا قبل التحديث.',
-            'نافذة «ما الجديد في هذا التحديث» (What\'s New Modal): عرض مرئي فاخر ومنظم لأبرز الميزات والإضافات مع كل ترقية، تفتح تلقائياً للمستخدم بعد التحديث أو يدوياً عبر النقر على شارة رقم الإصدار.',
-            'فحص يدوي للتحديثات: إضافة زر فحص التحديثات في شاشة الإعدادات للتأكد من حالة أحدث نسخة مع تقرير فوري للحالة.',
-            'الحفاظ الكامل على البيانات والمصداقية: تحديث آمن لعامل الخدمة (Service Worker) دون أي مساس ببيانات المستخدم أو المناهج المسجلة محلياً.'
+            'تطوير محرك الاختبارات التفاعلية: خلط ترتيب الخيارات عشوائياً في كل محاولة مع الحفاظ على دقة التصحيح، إظهار أزرار القفز السريع، وتحديث شهادة النتيجة والطباعة والنطق العربي.',
+            'تفعيل كافة نوافذ أطلس الرسوم التوضيحية (17 لوحة) ومركز الحلول النموذجية لمراجعات الفصول الـ 7 في مادة علم الأحياء.',
+            'إصلاح أزرار إظهار وإخفاء الحلول في مراجعات الرياضيات ومعالجة عرض صفحات كتاب الرياضيات في المكتبة الرقمية بلطف.',
+            'إصلاح تطبيق تحديثات PWA وتشديد عزل مخازن عامل الخدمة ومفاتيح localStorage ومخزن صور الكتب المستقل، وتنسيق ردود المعلم الذكي.'
           ],
           history: [
             {
@@ -16280,7 +16612,7 @@
               <span style="font-size: 0.72rem; color: var(--slate-500);">${hist.date}</span>
             </div>
             <ul style="margin: 0; padding-inline-start: 1.2rem; color: var(--slate-600); line-height: 1.5;">
-              ${(hist.notes || []).map(n => `<li>${n}</li>`).join('')}
+              ${(hist.notes || hist.whatsNew || []).map(n => `<li>${n}</li>`).join('')}
             </ul>
           </div>
         `).join('');
@@ -16431,6 +16763,30 @@
         const allPhysModal = document.getElementById('allPhysicsDiagramsModal');
         if (allPhysModal && !allPhysModal.classList.contains('hidden')) {
           closeAllPhysicsDiagramsGallery();
+        }
+        const bioModal = document.getElementById('biologyDiagramModal');
+        if (bioModal && !bioModal.classList.contains('hidden')) {
+          closeBiologyDiagramModal();
+        }
+        const allBioModal = document.getElementById('allBiologyDiagramsModal');
+        if (allBioModal && !allBioModal.classList.contains('hidden')) {
+          closeAllBiologyDiagramsModal();
+        }
+        const bioRevModal = document.getElementById('biologyChapterReviewsModal');
+        if (bioRevModal && !bioRevModal.classList.contains('hidden')) {
+          closeBiologyReviewsModal();
+        }
+        const chemModal = document.getElementById('chemistryDiagramModal');
+        if (chemModal && !chemModal.classList.contains('hidden')) {
+          closeChemistryDiagramModal();
+        }
+        const allChemModal = document.getElementById('allChemistryDiagramsModal');
+        if (allChemModal && !allChemModal.classList.contains('hidden')) {
+          closeAllChemistryDiagramsGallery();
+        }
+        const chemRevModal = document.getElementById('chemistryChapterReviewsModal');
+        if (chemRevModal && !chemRevModal.classList.contains('hidden')) {
+          closeChemistryReviewsModal();
         }
       }
     });
