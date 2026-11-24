@@ -2952,35 +2952,35 @@
           </svg>
         </div>
         <div>
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge">v5.1.1 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge">v5.1.2 ✨</span></h1>
           <p style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
 
       <!-- أزرار التنقل الرئيسية بين وظائف المنظومة (تصميم واجهة 2) -->
-      <nav class="nav-tabs" id="mainHeaderNavTabs">
-        <button class="tab-btn active" onclick="switchTab('dashboard')" data-tab="dashboard">
+      <nav class="nav-tabs" id="mainHeaderNavTabs" role="tablist" aria-label="التنقل الرئيسي للنظام">
+        <button class="tab-btn active" onclick="switchTab('dashboard')" data-tab="dashboard" role="tab" aria-selected="true">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           الرئيسية
         </button>
-        <button class="tab-btn" onclick="switchTab('curriculums')" data-tab="curriculums">
+        <button class="tab-btn" onclick="switchTab('curriculums')" data-tab="curriculums" role="tab" aria-selected="false">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           المناهج والمواد
         </button>
 
-        <button class="tab-btn" onclick="switchTab('grammar')" data-tab="grammar">
+        <button class="tab-btn" onclick="switchTab('grammar')" data-tab="grammar" role="tab" aria-selected="false">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           بنك القواعد
         </button>
-        <button class="tab-btn" onclick="switchTab('exams')" data-tab="exams">
+        <button class="tab-btn" onclick="switchTab('exams')" data-tab="exams" role="tab" aria-selected="false">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           الامتحانات
         </button>
-        <button class="tab-btn" onclick="openDigitalLibraryReader(appData.currentCurriculumId || 3, 1)" title="تصفح صفحات الكتب المدرسية الأصلية">
+        <button class="tab-btn" onclick="openDigitalLibraryReader(appData.currentCurriculumId || 3, 1)" title="تصفح صفحات الكتب المدرسية الأصلية" aria-label="فتح المكتبة الرقمية">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           المكتبة الرقمية
         </button>
-        <button class="tab-btn" onclick="switchTab('settings')" data-tab="settings">
+        <button class="tab-btn" onclick="switchTab('settings')" data-tab="settings" role="tab" aria-selected="false">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           الإعدادات
         </button>
@@ -3512,7 +3512,7 @@
             </select>
           </div>
 
-          <div class="panel-body chat-messages" id="chatMessages">
+          <div class="panel-body chat-messages" id="chatMessages" aria-live="polite">
             <div class="message assistant" id="initialAiGreetingMessage">
               أهلاً بك! أنا معلمك الذكي الموثق للمنهج 🎓. اسألني عن أي نقطة، أو مسألة، أو قانون، أو قاعدة في هذا الدرس وسأشرحها لك فوراً بالدليل ورقم الصفحة.
             </div>
@@ -3524,7 +3524,7 @@
           </div>
 
           <div class="chat-footer">
-            <input type="text" id="chatInput" class="chat-input" placeholder="اسأل المعلم عن أي مسألة أو قاعدة..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+            <input type="text" id="chatInput" class="chat-input" aria-label="اكتب سؤالك للمعلم الذكي" placeholder="اسأل المعلم عن أي مسألة أو قاعدة..." onkeydown="if(event.key==='Enter') sendChatMessage()">
             <button class="btn btn-primary btn-sm" onclick="sendChatMessage()">
               إرسال
             </button>
@@ -3559,11 +3559,24 @@
           <p style="font-size: 0.85rem; color: var(--slate-500);" id="grammarSectionSubtitle">شرح وافٍ لكافة القواعد المقررة بالمنهج مع الصيغ النحوية، الأمثلة، وتدريبات الفهم الفورية.</p>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <input type="text" id="grammarSearchInput" class="form-control" placeholder="ابحث في القواعد..." style="width: 320px;" oninput="filterGrammarRules()">
+          <input type="text" id="grammarSearchInput" class="form-control" aria-label="ابحث في القواعد والمفاهيم" placeholder="ابحث في القواعد..." style="width: 320px;" oninput="filterGrammarRules()">
         </div>
       </div>
 
 
+
+      <!-- شريط اختيار المادة في بنك القواعد والمفاهيم -->
+      <div id="grammarBankSelectorBar" role="group" aria-label="اختيار المادة في بنك القواعد والمفاهيم" style="background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
+        <span style="font-weight: 800; font-size: 0.85rem; color: var(--slate-700); margin-left: 0.35rem;">اختر المادة:</span>
+        <button id="btnGrammarSubject_en" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('en')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">📘 الإنجليزية (43)</button>
+        <button id="btnGrammarSubject_ar" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('ar')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">📙 العربية (18)</button>
+        <button id="btnGrammarSubject_is" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('is')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">🕌 الإسلامية (15)</button>
+        <button id="btnGrammarSubject_phy" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('phy')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">⚛️ الفيزياء (18)</button>
+        <button id="btnGrammarSubject_math" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('math')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">📐 الرياضيات (22)</button>
+        <button id="btnGrammarSubject_social" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('social')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">🌍 الاجتماعيات (13)</button>
+        <button id="btnGrammarSubject_chem" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('chem')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">🧪 الكيمياء (24)</button>
+        <button id="btnGrammarSubject_bio" class="btn btn-sm btn-secondary" onclick="setGrammarSubjectMode('bio')" aria-pressed="false" style="font-weight: 800; font-size: 0.78rem;">🧬 علم الأحياء (28)</button>
+      </div>
 
       <!-- فلاتر الوحدات والأقسام الديناميكية المخصصة لكل منهج -->
       <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1rem;" id="grammarUnitFilters">
@@ -3700,8 +3713,8 @@
           <!-- أدوات اختيار المادة والفصل -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; align-items: flex-end; margin-bottom: 1rem;">
             <div class="form-group" style="margin-bottom: 0;">
-              <label style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">المادة الدراسية:</label>
-              <select id="quizSubjectSelect" class="form-control" onchange="onQuizSubjectChanged()" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
+              <label for="quizSubjectSelect" style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">المادة الدراسية:</label>
+              <select id="quizSubjectSelect" class="form-control" aria-label="اختيار المادة الدراسية للاختبار" onchange="onQuizSubjectChanged()" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
                 <option value="3">📘 اللغة الإنجليزية (English for Iraq)</option>
                 <option value="4">📙 اللغة العربية - الجزء الأول</option>
                 <option value="5">📙 اللغة العربية - الجزء الثاني</option>
@@ -3715,8 +3728,8 @@
             </div>
 
             <div class="form-group" style="margin-bottom: 0;">
-              <label style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">الفصل / الوحدة الدراسية:</label>
-              <select id="quizChapterSelect" class="form-control" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
+              <label for="quizChapterSelect" style="font-size: 0.78rem; font-weight: 800; color: var(--slate-700); margin-bottom: 0.3rem;">الفصل / الوحدة الدراسية:</label>
+              <select id="quizChapterSelect" class="form-control" aria-label="اختيار الفصل أو الوحدة الدراسية" style="font-weight: 700; font-size: 0.85rem; padding: 0.45rem 0.65rem;">
                 <!-- يتم التوليد ديناميكياً -->
               </select>
             </div>
@@ -3750,7 +3763,7 @@
         </div>
 
         <!-- بطاقة النتيجة والتقييم الشامل والشهادة المعتمدة -->
-        <div id="quizResultBanner" class="hidden card" style="text-align: center; margin-bottom: 1.5rem; border: 2.5px solid var(--primary); background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);">
+        <div id="quizResultBanner" class="hidden card" aria-live="polite" style="text-align: center; margin-bottom: 1.5rem; border: 2.5px solid var(--primary); background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);">
           <div id="quizMedalIcon" style="font-size: 3rem; margin-bottom: 0.35rem;">🏆</div>
           <h3 style="font-size: 1.3rem; font-weight: 800; color: #1e1b4b; margin: 0 0 0.25rem;" id="quizScoreTitle">شهادة إنجاز الاختبار التفاعلي</h3>
           <div style="display: inline-block; background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 9999px; font-weight: 800; font-size: 0.95rem; margin: 0.4rem 0;" id="quizGradeBadge">
@@ -3844,7 +3857,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.1.1</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.1.2</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -3860,7 +3873,7 @@
               <span>💡</span>
               استعراض ما الجديد في النظام
             </button>
-            <span id="updateCheckStatus" style="font-size: 0.8rem; font-weight: 700; margin-inline-start: 0.5rem;"></span>
+            <span id="updateCheckStatus" aria-live="polite" style="font-size: 0.8rem; font-weight: 700; margin-inline-start: 0.5rem;"></span>
           </div>
         </div>
 
@@ -3869,7 +3882,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.1.1</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.1.2</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -3878,9 +3891,16 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v5.1.2 (نوفمبر 2026):</strong> تحسينات الاستقرار والأمان والأداء: تقليص حجم التخزين المحلي (localStorage) لأقل من 1 ك.ب مع الترحيل التلقائي وتصدير Blob، إصلاح تكرار بطاقات المواد وتفعيل شريط مواد بنك القواعد ومزامنة شريط الامتحانات، إضافة التعقيم escapeHtml وسمات الوصولية aria-* وإغلاق Escape لجميع النوافذ، وتقليص version.json - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.1.1 (نوفمبر 2026):</strong> إصلاحات حرجة واستقرار شامل: خلط خيارات الاختبارات التفاعلية الـ 640، تفعيل نوافذ الرسوم ومراجعات علم الأحياء الـ 11، إصلاح شبكة القفز والشهادة والطباعة والصوت العربي في الاختبارات، إصلاح تحديث PWA وعزل مخازن عامل الخدمة ومفاتيح localStorage وتنسيق المعلم الذكي - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.1.0 (نوفمبر 2026):</strong> تدشين المنظومة الشاملة للاختبارات التفاعلية المنهجية لجميع مواد الصف الثاني المتوسط الـ 9 (64 فصلاً، 640 سؤالاً مع التفسيرات والمؤقت والتصحيح الفوري) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.0.0 (نوفمبر 2026):</strong> المراجعة الشاملة وتكامل بنوك الامتحانات الوزارية للكيمياء والأحياء ومحركات المعلم الذكي لجميع المواد - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.9.0 (نوفمبر 2026):</strong> تدشين وإدراج منهج علم الأحياء للصف الثاني المتوسط كاملاً (3 وحدات، 7 فصول، 14 درساً، 17 لوحة SVG، 92 صفحة أصلية، والحلول النموذجية الشاملة) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.8.0 (نوفمبر 2026):</strong> تدشين وإدراج منهج الكيمياء للصف الثاني المتوسط كاملاً (3 وحدات، 6 فصول، 15 درساً، 16 لوحة SVG، 96 صفحة أصلية، وبنك المفاهيم والحلول النموذجية) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.7.0 (نوفمبر 2026):</strong> تدشين وإدراج منهج الاجتماعيات للصف الثاني المتوسط كاملاً (6 فصول، 39 درساً، 140 صفحة أصلية، والحلول النموذجية وبنك المفاهيم) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.6.0 (نوفمبر 2026):</strong> تدشين وإدراج منهج الرياضيات للصف الثاني المتوسط كاملاً (7 فصول معتمدة تغطي الجزأين الأول والثاني، 43 درساً، 22 قانوناً ونظرية، والحلول النموذجية) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.5.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية الشاملة لمناقشات ومراجعات التربية الإسلامية (6 وحدات، 37 مبحثاً و 192 سؤالاً) - إعداد المهندس أسامة خليل هاشم.</div>
+            <div>• <strong style="color: var(--primary);">v4.4.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات وتمرينات اللغة العربية (الجزء الثاني) كاملاً (9 وحدات، 69 تمريناً و 135 سؤالاً وإعراباً) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v4.3.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة اللغة العربية (الجزء الأول) للصف الثاني المتوسط كاملاً (9 وحدات شاملة: 67 تمريناً و 147 سؤالاً مع الإعراب والتطبيق والشواهد والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
                       <div>• <strong style="color: var(--primary);">v4.2.0 (نوفمبر 2026):</strong> إدراج وتكامل الحلول النموذجية لمراجعات الفصول في مادة الفيزياء للصف الثاني المتوسط كاملاً (6 فصول شاملة: 32 تمريناً و 149 سؤالاً نموذجياً مع القوانين والمسائل الحسابية خطوة بخطوة وتفسير الأشكال والتفكير الناقد) - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v4.1.0 (نوفمبر 2026):</strong> استكمال إدراج تمارين وحلول كراس النشاط للوحدة الثامنة في منهج اللغة الإنجليزية كاملاً مع الحلول النموذجية التفاعلية وإتمام كراس النشاط بالكامل (127 صفحة) - إعداد المهندس أسامة خليل هاشم.</div>
@@ -3930,7 +3950,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v5.1.1</span>
+        <span class="version-badge" id="footerVersionBadge">v5.1.2</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -3942,7 +3962,7 @@
   </footer>
 
   <!-- نافذة مودال: إضافة منهج جديد -->
-  <div class="modal-overlay hidden" id="addCurriculumModal">
+  <div class="modal-overlay hidden" id="addCurriculumModal" role="dialog" aria-modal="true" aria-label="إضافة منهج دراسي جديد" onclick="if(event.target === this) closeAddModal()">
     <div class="modal-box">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem;">
         <h3 style="font-size: 1.1rem; font-weight: 800;">إضافة منهج دراسي جديد</h3>
@@ -3984,7 +4004,7 @@
   </div>
 
   <!-- نافذة مودال: تكبير وتصفح صفحات الكتاب المدرسي (المكتبة الرقمية والمطالعة المفتوحة) -->
-  <div class="modal-overlay hidden" id="bookPageModal" onclick="if(event.target === this) closeBookPageModal()">
+  <div class="modal-overlay hidden" id="bookPageModal" role="dialog" aria-modal="true" aria-label="المكتبة الرقمية والمطالعة المفتوحة" onclick="if(event.target === this) closeBookPageModal()">
     <div class="modal-box" style="max-width: 950px; width: 95vw; max-height: 92vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4069,7 +4089,7 @@
     </div>
   </div>
   <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الفيزيائي الدقيق -->
-  <div class="modal-overlay hidden" id="physicsDiagramModal" onclick="if(event.target === this) closePhysicsDiagramModal()">
+  <div class="modal-overlay hidden" id="physicsDiagramModal" role="dialog" aria-modal="true" aria-label="عرض الرسم التوضيحي الفيزيائي" onclick="if(event.target === this) closePhysicsDiagramModal()">
     <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4099,7 +4119,7 @@
   </div>
 
   <!-- نافذة مودال: معرض بنك الرسوم التوضيحية واللوحات الفيزيائية الشاملة -->
-  <div class="modal-overlay hidden" id="allPhysicsDiagramsModal" onclick="if(event.target === this) closeAllPhysicsDiagramsGallery()">
+  <div class="modal-overlay hidden" id="allPhysicsDiagramsModal" role="dialog" aria-modal="true" aria-label="معرض الرسوم التوضيحية للفيزياء" onclick="if(event.target === this) closeAllPhysicsDiagramsGallery()">
     <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4133,7 +4153,7 @@
 
 
   <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الرياضيات -->
-  <div class="modal-overlay hidden" id="mathChapterReviewsModal" onclick="if(event.target === this) closeMathReviewsModal()">
+  <div class="modal-overlay hidden" id="mathChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول الرياضيات" onclick="if(event.target === this) closeMathReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4183,7 +4203,7 @@
   </div>
 
     <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الحيوي الدقيق -->
-  <div class="modal-overlay hidden" id="biologyDiagramModal" onclick="if(event.target === this) closeBiologyDiagramModal()">
+  <div class="modal-overlay hidden" id="biologyDiagramModal" role="dialog" aria-modal="true" aria-label="عرض الرسم التوضيحي لعلم الأحياء" onclick="if(event.target === this) closeBiologyDiagramModal()">
     <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4211,7 +4231,7 @@
   </div>
 
   <!-- نافذة مودال: أطلس ومعرض كافة الرسوم التوضيحية الحيوية (17 لوحة) -->
-  <div class="modal-overlay hidden" id="allBiologyDiagramsModal" onclick="if(event.target === this) closeAllBiologyDiagramsModal()">
+  <div class="modal-overlay hidden" id="allBiologyDiagramsModal" role="dialog" aria-modal="true" aria-label="معرض الرسوم التوضيحية لعلم الأحياء" onclick="if(event.target === this) closeAllBiologyDiagramsModal()">
     <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4240,7 +4260,7 @@
   </div>
 
   <!-- نافذة مودال: مركز الحلول النموذجية لمراجعات فصول علم الأحياء (7 فصول) -->
-  <div class="modal-overlay hidden" id="biologyChapterReviewsModal" onclick="if(event.target === this) closeBiologyReviewsModal()">
+  <div class="modal-overlay hidden" id="biologyChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول علم الأحياء" onclick="if(event.target === this) closeBiologyReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4285,7 +4305,7 @@
   </div>
 
   <!-- نافذة مودال: تكبير وفحص الرسم التوضيحي الكيميائي الدقيق -->
-  <div class="modal-overlay hidden" id="chemistryDiagramModal" onclick="if(event.target === this) closeChemistryDiagramModal()">
+  <div class="modal-overlay hidden" id="chemistryDiagramModal" role="dialog" aria-modal="true" aria-label="عرض الرسم التوضيحي للكيمياء" onclick="if(event.target === this) closeChemistryDiagramModal()">
     <div class="modal-box" style="max-width: 980px; width: 95vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4315,7 +4335,7 @@
   </div>
 
   <!-- نافذة مودال: معرض بنك الرسوم واللوحات التوضيحية للكيمياء الشاملة -->
-  <div class="modal-overlay hidden" id="allChemistryDiagramsModal" onclick="if(event.target === this) closeAllChemistryDiagramsGallery()">
+  <div class="modal-overlay hidden" id="allChemistryDiagramsModal" role="dialog" aria-modal="true" aria-label="معرض الرسوم التوضيحية للكيمياء" onclick="if(event.target === this) closeAllChemistryDiagramsGallery()">
     <div class="modal-box" style="max-width: 1100px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -4347,7 +4367,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الكيمياء -->
-  <div class="modal-overlay hidden" id="chemistryChapterReviewsModal" onclick="if(event.target === this) closeChemistryReviewsModal()">
+  <div class="modal-overlay hidden" id="chemistryChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول الكيمياء" onclick="if(event.target === this) closeChemistryReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4397,7 +4417,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الاجتماعيات -->
-  <div class="modal-overlay hidden" id="socialChapterReviewsModal" onclick="if(event.target === this) closeSocialReviewsModal()">
+  <div class="modal-overlay hidden" id="socialChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول الاجتماعيات" onclick="if(event.target === this) closeSocialReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4447,7 +4467,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات الفصول والحلول النموذجية الشاملة لمادة الفيزياء -->
-  <div class="modal-overlay hidden" id="physicsChapterReviewsModal" onclick="if(event.target === this) closePhysicsReviewsModal()">
+  <div class="modal-overlay hidden" id="physicsChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول الفيزياء" onclick="if(event.target === this) closePhysicsReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4497,7 +4517,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة لمادة اللغة العربية (الجزء الأول) -->
-  <div class="modal-overlay hidden" id="arabicP1ChapterReviewsModal" onclick="if(event.target === this) closeArabicP1ReviewsModal()">
+  <div class="modal-overlay hidden" id="arabicP1ChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات اللغة العربية الجزء الأول" onclick="if(event.target === this) closeArabicP1ReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4547,7 +4567,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات وتمارين الوحدات والحلول النموذجية الشاملة لمادة اللغة العربية (الجزء الثاني) -->
-  <div class="modal-overlay hidden" id="arabicP2ChapterReviewsModal" onclick="if(event.target === this) closeArabicP2ReviewsModal()">
+  <div class="modal-overlay hidden" id="arabicP2ChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات اللغة العربية الجزء الثاني" onclick="if(event.target === this) closeArabicP2ReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4597,7 +4617,7 @@
   </div>
 
   <!-- نافذة مودال: مركز مراجعات ومناقشات الفصول والحلول النموذجية الشاملة لمادة التربية الإسلامية -->
-  <div class="modal-overlay hidden" id="islamicChapterReviewsModal" onclick="if(event.target === this) closeIslamicReviewsModal()">
+  <div class="modal-overlay hidden" id="islamicChapterReviewsModal" role="dialog" aria-modal="true" aria-label="مركز مراجعات وحلول التربية الإسلامية" onclick="if(event.target === this) closeIslamicReviewsModal()">
     <div class="modal-box" style="max-width: 1120px; width: 96vw; max-height: 94vh; display: flex; flex-direction: column; padding: 1.25rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1.5px solid var(--slate-200); padding-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
         <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -4647,7 +4667,7 @@
   </div>
 
   <!-- نافذة مودال: استوديو ضبط ومعاينة الصوت البشري المتقدم -->
-  <div class="modal-overlay hidden" id="voiceStudioModal">
+  <div class="modal-overlay hidden" id="voiceStudioModal" role="dialog" aria-modal="true" aria-label="استوديو ضبط ومعاينة الصوت البشري" onclick="if(event.target === this) closeVoiceStudioModal()">
     <div class="modal-box" style="max-width: 650px; width: 95vw; max-height: 90vh; overflow-y: auto; padding: 1.5rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--slate-200); padding-bottom: 0.75rem;">
         <div style="display: flex; align-items: center; gap: 0.6rem;">
@@ -4825,7 +4845,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.1.0</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.1.2</span>
       </div>
       <button class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -4846,20 +4866,20 @@
   </div>
 
   <!-- نافذة ما الجديد في هذا التحديث What's New Modal -->
-  <div class="modal-overlay hidden" id="whatsNewModal" onclick="if(event.target === this) closeWhatsNewModal()">
+  <div class="modal-overlay hidden" id="whatsNewModal" role="dialog" aria-modal="true" aria-label="ما الجديد في هذا التحديث" onclick="if(event.target === this) closeWhatsNewModal()">
     <div class="modal-box whatsnew-box">
       <!-- رأس النافذة -->
       <div class="whatsnew-header">
         <button onclick="closeWhatsNewModal()" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.1.1؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.1.2؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">نوفمبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.1.1</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.1.2</span>
         </div>
       </div>
 
@@ -4868,7 +4888,7 @@
         <div class="whatsnew-card" style="background: #eef2ff; border-color: #c7d2fe;">
           <div style="font-weight: 800; color: var(--primary); font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>🚀</span>
-            <span id="whatsNewReleaseSummaryTitle">تحديث الصيانة الشامل: إصلاح الاختبارات التفاعلية، نوافذ علم الأحياء، عزل PWA، وتنسيق المعلم الذكي</span>
+            <span id="whatsNewReleaseSummaryTitle">تحسينات الاستقرار والأمان والأداء: تقليص localStorage، إصلاح التكرار وبنك القواعد، التعقيم والوصولية، وتقليص version.json</span>
           </div>
           <div id="whatsNewFeatureList">
             <!-- تتولد ديناميكياً من version.json أو القائمة الافتراضية -->
@@ -4906,14 +4926,26 @@
 
   <!-- محرك الجافاسكريبت المتكامل والشامل -->
   <script>
-    const STORAGE_KEY = 'interactive_educational_system_v2';
-    const CURRENT_VERSION = '5.1.1';
-    const CURRENT_VERSION_LABEL = 'v5.1.1';
-    const SYSTEM_VERSION = 'v5.1.1';
+    const LEGACY_STORAGE_KEY = 'interactive_educational_system_v2';
+    const STORAGE_KEY = 'interactive_edu_state_v1';
+    const BUILTIN_CURRICULUM_IDS = new Set([3, 4, 5, 6, 7, 8, 9, 10, 11]);
+    const CURRENT_VERSION = '5.1.2';
+    const CURRENT_VERSION_LABEL = 'v5.1.2';
+    const SYSTEM_VERSION = 'v5.1.2';
     const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
     const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
     const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
     const LS_PREFIX = 'interactive_edu_';
+
+    function escapeHtml(value) {
+      if (value === null || value === undefined) return '';
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
 
     function lsGet(name, legacyKey = null) {
       const v = localStorage.getItem(LS_PREFIX + name);
@@ -5990,12 +6022,36 @@
     function initApp() {
       audioPlayer.init();
       try {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed.curriculums && parsed.curriculums.length > 0) {
-            appData = parsed;
+        const isCustomUserCurr = (c) => c &&
+          !BUILTIN_CURRICULUM_IDS.has(Number(c.id)) &&
+          Number(c.id) !== 1 &&
+          !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام')));
+
+        const savedCompact = localStorage.getItem(STORAGE_KEY);
+        const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+
+        if (savedCompact) {
+          const parsed = JSON.parse(savedCompact);
+          if (parsed && typeof parsed === 'object') {
+            appData.currentCurriculumId = Number(parsed.currentCurriculumId) || 3;
+            appData.currentLessonId = parsed.currentLessonId || null;
+            appData.curriculums = Array.isArray(parsed.customCurriculums)
+              ? parsed.customCurriculums.filter(isCustomUserCurr)
+              : [];
           }
+        } else if (legacyRaw) {
+          const legacyParsed = JSON.parse(legacyRaw);
+          if (legacyParsed && typeof legacyParsed === 'object') {
+            appData.currentCurriculumId = Number(legacyParsed.currentCurriculumId) || 3;
+            appData.currentLessonId = legacyParsed.currentLessonId || null;
+            appData.curriculums = Array.isArray(legacyParsed.curriculums)
+              ? legacyParsed.curriculums.filter(isCustomUserCurr)
+              : [];
+          }
+        }
+
+        if (legacyRaw !== null) {
+          localStorage.removeItem(LEGACY_STORAGE_KEY);
         }
       } catch (e) {
         console.warn('LocalStorage read error', e);
@@ -6355,8 +6411,8 @@
         appData.curriculums.push(biologyCurr);
       }
 
-      // ضمان اختيار منهج صالح
-      if (!appData.currentCurriculumId || ![3, 4, 5, 6, 7, 8, 9, 10, 11].includes(appData.currentCurriculumId)) {
+      // ضمان اختيار منهج صالح (يشمل المناهج المعتمدة والمناهج المخصصة)
+      if (!appData.currentCurriculumId || !(appData.curriculums || []).some(c => Number(c.id) === Number(appData.currentCurriculumId))) {
         appData.currentCurriculumId = 3;
       }
       saveData();
@@ -6364,7 +6420,15 @@
 
     function saveData() {
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+        const customCurriculums = (appData.curriculums || []).filter(c =>
+          c && !BUILTIN_CURRICULUM_IDS.has(Number(c.id)) && Number(c.id) !== 1
+        );
+        const compactState = {
+          currentCurriculumId: appData.currentCurriculumId || 3,
+          currentLessonId: appData.currentLessonId || null,
+          customCurriculums
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(compactState));
       } catch (e) {
         console.error('Save error', e);
       }
@@ -6433,8 +6497,12 @@
         btn.classList.remove('active');
         const oc = btn.getAttribute('onclick') || '';
         const dt = btn.getAttribute('data-tab') || '';
-        if (dt === targetActiveTab || (targetActiveTab !== 'curriculums' && oc.includes("'" + targetActiveTab + "'"))) {
+        const isMatched = (dt === targetActiveTab || (targetActiveTab !== 'curriculums' && oc.includes("'" + targetActiveTab + "'")));
+        if (isMatched) {
           btn.classList.add('active');
+        }
+        if (btn.getAttribute('role') === 'tab') {
+          btn.setAttribute('aria-selected', isMatched ? 'true' : 'false');
         }
       });
 
@@ -6472,7 +6540,6 @@
         }
         renderCurriculaTabsNav();
         renderCurriculumsList();
-        renderCurriculumsSelectorBar();
         renderActiveSubjectShowcase();
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -6750,7 +6817,6 @@
       }
 
       renderDashboardCurriculaQuickBar();
-      renderCurriculumsSelectorBar();
       renderActiveSubjectShowcase();
     }
 
@@ -6975,20 +7041,19 @@
 
       }
 
-      // 3. أي مناهج أخرى مضافة مستقبلاً
+      // 3. أي مناهج أخرى مخصصة مضافة من المستخدم (دون تكرار المناهج الوزارية الـ 9 المعتمدة)
       if (currentCurriculumViewTab === 'all') {
-        currs.filter(c => c.id !== 3 && c.id !== 4 && c.id !== 5 && c.id !== 6).forEach(curr => {
+        currs.filter(c => !BUILTIN_CURRICULUM_IDS.has(Number(c.id))).forEach(curr => {
         const div = document.createElement('div');
         div.className = 'card curr-card';
         div.style.cssText = 'padding: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--slate-200); box-shadow: var(--shadow); grid-column: 1 / -1; margin-bottom: 1.5rem;';
         div.innerHTML = `
           <div style="display: flex; gap: 1.5rem; padding: 1.5rem; align-items: stretch; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); flex-wrap: wrap;">
-            <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; background: #334155;">
-            </div>
+            <div style="width: 125px; height: 180px; border-radius: 10px; overflow: hidden; flex-shrink: 0; background: #334155; display: flex; align-items: center; justify-content: center; color: #e2e8f0; font-size: 2.5rem;">📘</div>
             <div style="flex: 1 1 380px;">
-              <h3>${curr.name}</h3>
-              <p>${curr.description || ''}</p>
-              <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})">📖 دخول قاعة المذاكرة والدروس ⮞</button>
+              <h3>${escapeHtml(curr.name)}</h3>
+              <p>${escapeHtml(curr.description || '')}</p>
+              <button class="btn btn-primary" onclick="openSubjectTab(${Number(curr.id)})">📖 دخول قاعة المذاكرة والدروس ⮞</button>
             </div>
           </div>
         `;
@@ -7855,14 +7920,14 @@
         breadcrumbEl.innerHTML = `
           <div class="breadcrumb-top-row">
             <div class="breadcrumb-unit-badge" id="breadcrumbUnitBadge">
-              <span>📚</span> ${unitTitle}
+              <span>📚</span> ${escapeHtml(unitTitle)}
             </div>
             <div style="font-size: 0.72rem; color: var(--slate-500); font-weight: 700;">
               المنهج الوزاري المعتمد
             </div>
           </div>
           <h2 class="breadcrumb-lesson-title" id="breadcrumbLessonTitle">
-            ${lessonTitle}
+            ${escapeHtml(lessonTitle)}
           </h2>
           <div class="breadcrumb-coords-row">
             ${bookCoordHtml}
@@ -11147,11 +11212,16 @@
       else if (currId === 4 || currId === 5) currentMode = 'ar';
       else currentMode = 'en';
 
-      // إخفاء شريط اختيار البنوك القديم نهائياً لضمان خصوصية كل مادة بقواعدها حصراً
-      const bankSelectorBar = document.getElementById('grammarBankSelectorBar');
-      if (bankSelectorBar) {
-        bankSelectorBar.style.display = 'none';
-      }
+      // تحديث حالة أزرار اختيار المادة في شريط بنك القواعد والمفاهيم
+      const grammarModes = ['en', 'ar', 'is', 'phy', 'math', 'social', 'chem', 'bio'];
+      grammarModes.forEach(m => {
+        const btn = document.getElementById('btnGrammarSubject_' + m);
+        if (btn) {
+          const isActive = (m === currentMode);
+          btn.className = isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        }
+      });
 
       // تحديث العناوين ونصوص البحث بحسب المنهج المختار
       const titleEl = document.getElementById('grammarSectionTitle');
@@ -13300,13 +13370,25 @@
         const btnId = 'btnExamSubject' + m.charAt(0).toUpperCase() + m.slice(1);
         const btn = document.getElementById(btnId);
         if (btn) {
-          if (m === mode) {
-            btn.className = 'btn btn-sm btn-primary';
-          } else {
-            btn.className = 'btn btn-sm btn-secondary';
-          }
+          const isActive = (m === mode);
+          btn.className = isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         }
       });
+
+      // مزامنة اختيار المادة مع الاختبار التفاعلي المنهجي عند النقر المباشر أثناء فتح تبويب الاختبار الفوري
+      const examModeToCurrId = { en: 3, ar: 4, is: 6, phy: 7, math: 8, soc: 9, chem: 10, bio: 11 };
+      const quizContainer = document.getElementById('interactiveQuizViewContainer');
+      if (userExplicit && quizContainer && !quizContainer.classList.contains('hidden')) {
+        const mappedCurrId = examModeToCurrId[mode];
+        const subSelect = document.getElementById('quizSubjectSelect');
+        if (mappedCurrId && subSelect && Number(subSelect.value) !== mappedCurrId) {
+          subSelect.value = mappedCurrId;
+          if (typeof onQuizSubjectChanged === 'function') {
+            onQuizSubjectChanged();
+          }
+        }
+      }
 
       // توليد أزرار النماذج المتاحة لهذه المادة ديناميكياً
       const exams = getSubjectExams(mode);
@@ -13633,6 +13715,7 @@
     }
 
     function printExamPaper() {
+      document.body.classList.remove('printing-interactive-quiz');
       const exams = getSubjectExams(currentExamSubjectMode);
       const exam = exams[currentSelectedPastExamId];
       if (exam) {
@@ -13687,13 +13770,6 @@
     // إعداد المهندس أسامة خليل هاشم
     // ==========================================
 
-    function scrollToSubjectsSection() {
-      const el = document.getElementById('subjectsSection');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
     function selectCurriculumInDashboard(currId) {
       const idNum = Number(currId);
       appData.currentCurriculumId = idNum;
@@ -13702,182 +13778,11 @@
       if (searchInput) searchInput.value = '';
       saveData();
       renderDashboardCurriculaQuickBar();
-      renderCurriculumsSelectorBar();
       renderActiveSubjectShowcase();
       const activeCurrObj = (appData.curriculums || []).find(c => c.id === idNum) || { id: idNum };
       updateGlobalSubjectContextBars(activeCurrObj);
       renderGrammarRules();
       if (typeof renderExamsCenter === 'function') renderExamsCenter();
-    }
-
-    function renderCurriculumsSelectorBar() {
-      const container = document.getElementById('curriculumsSelectorBar');
-      if (!container) return;
-
-      const currs = (appData.curriculums || []).filter(c => 
-        c && c.id !== 1 && 
-        !(c.name && (c.name.includes('دليل وثيقة') || c.name.includes('وثيقة النظام'))) && 
-        !(c.subject && (c.subject.includes('هندسة النظم') || c.subject.includes('وثيقة')))
-      );
-      let html = '';
-
-      // 1. مفتاح منهج اللغة الإنجليزية
-      const engCurr = currs.find(c => c.id === 3);
-      if (engCurr) {
-        const isEngActive = appData.currentCurriculumId === 3;
-        html += `
-          <div class="curr-selector-pill ${isEngActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(3)">
-            <span style="font-size: 1.5rem;">📘</span>
-            <div>
-              <div class="curr-pill-title">${engCurr.name}</div>
-              <div class="curr-pill-sub">${engCurr.grade || 'الثاني متوسط'} • English for Iraq</div>
-            </div>
-            <span class="curr-pill-badge">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 2. مفتاح موحد لمنهج اللغة العربية يتفرع منه الجزء الأول والجزء الثاني
-      const isArabicActive = appData.currentCurriculumId === 4 || appData.currentCurriculumId === 5;
-      const activeArabicPart = appData.currentCurriculumId === 5 ? 5 : 4;
-      html += `
-        <div class="curr-selector-pill ${isArabicActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(${activeArabicPart})" style="display: flex; flex-direction: column; align-items: stretch; gap: 0.5rem; min-width: 290px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
-            <div style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="font-size: 1.5rem;">📚</span>
-              <div>
-                <div class="curr-pill-title" style="font-weight: 900;">اللغة العربية (الصف الثاني المتوسط)</div>
-                <div class="curr-pill-sub">وزارة التربية العراقية • جزأين متكاملين</div>
-              </div>
-            </div>
-            <span class="curr-pill-badge" style="${isArabicActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #ecfdf5; color: #065f46;'}">كتابان معتمدان</span>
-          </div>
-          <!-- الفرعان المتفرعان من المفتاح الرئيسي -->
-          <div style="display: flex; gap: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed ${isArabicActive ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.1)'};">
-            <button class="branch-pill-btn ${appData.currentCurriculumId === 4 ? 'active-branch' : ''}" onclick="event.stopPropagation(); selectCurriculumInDashboard(4);" title="تحديد ودراسة كتاب الجزء الأول">
-              <span>📙</span>
-              <span>الجزء الأول (136 صفحة)</span>
-            </button>
-            <button class="branch-pill-btn ${appData.currentCurriculumId === 5 ? 'active-branch' : ''}" onclick="event.stopPropagation(); selectCurriculumInDashboard(5);" title="تحديد ودراسة كتاب الجزء الثاني">
-              <span>📗</span>
-              <span>الجزء الثاني (136 صفحة)</span>
-            </button>
-          </div>
-        </div>
-      `;
-
-      // 3. مفتاح منهج التربية الإسلامية
-      const islamicCurrPill = currs.find(c => c.id === 6);
-      if (islamicCurrPill) {
-        const isIsActive = appData.currentCurriculumId === 6;
-        html += `
-          <div class="curr-selector-pill ${isIsActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(6)">
-            <span style="font-size: 1.5rem;">🕌</span>
-            <div>
-              <div class="curr-pill-title">التربية الإسلامية (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 120 صفحة معتمدة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isIsActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #f0fdf4; color: #166534;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 4. مفتاح منهج الفيزياء
-      const physicsCurrPill = currs.find(c => c.id === 7);
-      if (physicsCurrPill) {
-        const isPhyActive = appData.currentCurriculumId === 7;
-        html += `
-          <div class="curr-selector-pill ${isPhyActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(7)">
-            <span style="font-size: 1.5rem;">⚛️</span>
-            <div>
-              <div class="curr-pill-title">الفيزياء (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 88 صفحة معتمدة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isPhyActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #f0f9ff; color: #0369a1;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 5. مفتاح منهج الرياضيات
-      const mathCurrPill = currs.find(c => c.id === 8);
-      if (mathCurrPill) {
-        const isMathActive = appData.currentCurriculumId === 8;
-        html += `
-          <div class="curr-selector-pill ${isMathActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(8)">
-            <span style="font-size: 1.5rem;">📐</span>
-            <div>
-              <div class="curr-pill-title">الرياضيات (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 7 فصول شاملة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isMathActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #faf5ff; color: #7e22ce;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 5.2 مادة الاجتماعيات
-      const socPillCurr = currs.find(c => c.id === 9);
-      if (socPillCurr) {
-        const isSocActive = appData.currentCurriculumId === 9;
-        html += `
-          <div class="curr-selector-pill ${isSocActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(9)">
-            <span style="font-size: 1.5rem;">🌍</span>
-            <div>
-              <div class="curr-pill-title">الاجتماعيات (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 6 فصول شاملة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isSocActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #fef3c7; color: #92400e;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 5.3 مادة الكيمياء
-      const chemPillCurr = currs.find(c => c.id === 10);
-      if (chemPillCurr) {
-        const isChemActive = appData.currentCurriculumId === 10;
-        html += `
-          <div class="curr-selector-pill ${isChemActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(10)">
-            <span style="font-size: 1.5rem;">🧪</span>
-            <div>
-              <div class="curr-pill-title">الكيمياء (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 6 فصول شاملة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isChemActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #ecfdf5; color: #065f46;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 5.4 مادة علم الأحياء
-      const bioPillCurr = currs.find(c => c.id === 11);
-      if (bioPillCurr) {
-        const isBioActive = appData.currentCurriculumId === 11;
-        html += `
-          <div class="curr-selector-pill ${isBioActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(11)">
-            <span style="font-size: 1.5rem;">🧬</span>
-            <div>
-              <div class="curr-pill-title">علم الأحياء (الثاني متوسط)</div>
-              <div class="curr-pill-sub">وزارة التربية العراقية • 7 فصول كاملة</div>
-            </div>
-            <span class="curr-pill-badge" style="${isBioActive ? 'background: rgba(255,255,255,0.25); color: #fff;' : 'background: #dcfce7; color: #15803d;'}">مكتمل 100%</span>
-          </div>
-        `;
-      }
-
-      // 5.5 أي مناهج إضافية أخرى مستقبلاً
-      currs.filter(c => ![3, 4, 5, 6, 7, 8, 9, 10, 11].includes(c.id)).forEach(c => {
-        const isActive = c.id === appData.currentCurriculumId;
-        html += `
-          <div class="curr-selector-pill ${isActive ? 'active' : ''}" onclick="selectCurriculumInDashboard(${c.id})">
-            <span style="font-size: 1.5rem;">📘</span>
-            <div>
-              <div class="curr-pill-title">${c.name}</div>
-              <div class="curr-pill-sub">${c.grade || 'مرحلة دراسية'}</div>
-            </div>
-            <span class="curr-pill-badge">منهج مسجل</span>
-          </div>
-        `;
-      });
-
-      container.innerHTML = html;
     }
 
     function renderActiveSubjectShowcase() {
@@ -14302,7 +14207,7 @@
         container.innerHTML = `
           <div style="display: flex; gap: 1.5rem; align-items: stretch; flex-wrap: wrap; margin-bottom: 1.5rem;">
             <div style="width: 145px; height: 205px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -8px 12px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.08); background: #1e1b4b; cursor: default; position: relative;">
-              <img src="./book_images/page_1.jpeg" alt="${curr.name}" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
+              <img src="./book_images/page_1.jpeg" alt="${escapeHtml(curr.name)}" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
               <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(30, 27, 75, 0.9); color: white; font-size: 0.65rem; font-weight: 800; text-align: center; padding: 0.25rem 0.2rem; pointer-events: none;">📘 English for Iraq</div>
             </div>
 
@@ -14313,12 +14218,12 @@
                     <span>🌟</span> المنهج الوزاري المعتمد • مكتمل 100%
                   </span>
                   <span style="font-size: 0.78rem; font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.2rem 0.65rem; border-radius: 9999px;">
-                    الصف: ${curr.grade || 'الثاني متوسط'} • English for Iraq
+                    الصف: ${escapeHtml(curr.grade || 'الثاني متوسط')} • English for Iraq
                   </span>
                 </div>
                 <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--slate-900); display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.4rem;">
                   <span style="font-size: 1.8rem;">📘</span>
-                  <span>${curr.name}</span>
+                  <span>${escapeHtml(curr.name)}</span>
                 </h3>
                 <p style="font-size: 0.88rem; color: var(--slate-600); line-height: 1.65; max-width: 850px; margin: 0 0 1rem;">
                   منهاج تفاعلي متكامل لكتاب الطالب والنشاط بالصوت البشري الفصيح، تتبع الكلمات اللحظي، بنك القواعد النحوية الشامل (43 قاعدة ومفهوماً)، ونماذج الامتحانات الوزارية والشهرية السابقة وحلولها النموذجية.
@@ -14504,7 +14409,7 @@
                     id: l.id,
                     title: l.title,
                     chunks: [
-                      { id: 1, page: 1, heading: l.title, text: `محتوى درس ${l.title} المعتمد من ملف ${fileName}` }
+                      { id: 1, page: 1, heading: l.title, text: `محتوى درس ${escapeHtml(l.title)} المعتمد من ملف ${escapeHtml(fileName)}` }
                     ]
                   }))
                 }));
@@ -14525,7 +14430,7 @@
                   id: newId + 1,
                   title: `مدخل إلى ${name}`,
                   chunks: [
-                    { id: 1, page: 1, heading: 'المقدمة والأهداف', text: `تم استخراج هذا الدرس محلياً من ملف: ${fileName}. يغطي المبادئ التأسيسية للمادة المقررة.` }
+                    { id: 1, page: 1, heading: 'المقدمة والأهداف', text: `تم استخراج هذا الدرس محلياً من ملف: ${escapeHtml(fileName)}. يغطي المبادئ التأسيسية للمادة المقررة.` }
                   ]
                 }
               ]
@@ -14564,13 +14469,16 @@
     }
 
     function exportDataBackup() {
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+      const jsonText = JSON.stringify(appData, null, 2);
+      const blob = new Blob([jsonText], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
       const downloadAnchor = document.createElement('a');
-      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("href", url);
       downloadAnchor.setAttribute("download", `educational_system_backup_${new Date().toISOString().slice(0,10)}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
 
     function importDataBackup(e) {
@@ -14631,7 +14539,7 @@
 
       const body = document.getElementById('updateNotificationBody');
       if (body && updateData && updateData.title) {
-        body.innerHTML = `<strong>${updateData.title}</strong><br>انقر على «تحديث الآن» لتطبيق الإصدار وتثبيته فوراً.`;
+        body.innerHTML = `<strong>${escapeHtml(updateData.title)}</strong><br>انقر على «تحديث الآن» لتطبيق الإصدار وتثبيته فوراً.`;
       }
 
       // إظهار زر التحديث في مودال ما الجديد إذا كان مفتوحاً
@@ -14737,12 +14645,12 @@
             showUpdateBanner(verData);
           }
           if (isManual && statusEl) {
-            statusEl.innerHTML = `🎉 يتوفر تحديث جديد: <strong>${verData.versionLabel || verData.version}</strong>! تم إظهار إشعار التحديث.`;
+            statusEl.innerHTML = `🎉 يتوفر تحديث جديد: <strong>${escapeHtml(verData.versionLabel || verData.version)}</strong>! تم إظهار إشعار التحديث.`;
             statusEl.style.color = 'var(--warning)';
           }
         } else {
           if (isManual && statusEl) {
-            statusEl.innerHTML = `✅ نظامك محدث بالكامل إلى آخر إصدار رسمي (${CURRENT_VERSION_LABEL}) - ${verData.author || SYSTEM_AUTHOR}.`;
+            statusEl.innerHTML = `✅ نظامك محدث بالكامل إلى آخر إصدار رسمي (${escapeHtml(CURRENT_VERSION_LABEL)}) - ${escapeHtml(verData.author || SYSTEM_AUTHOR)}.`;
             statusEl.style.color = 'var(--success)';
           }
         }
@@ -16518,53 +16426,40 @@
           versionLabel: CURRENT_VERSION_LABEL,
           date: '2026-11-24',
           author: SYSTEM_AUTHOR,
-          title: 'تحديث الصيانة الشامل وإصلاح الاختبارات التفاعلية وعزل PWA (v5.1.1)',
+          title: 'تحسينات الاستقرار والأمان والأداء وإصلاح التصفح وحفظ الحالة (v5.1.2)',
           whatsNew: [
-            'تطوير محرك الاختبارات التفاعلية: خلط ترتيب الخيارات عشوائياً في كل محاولة مع الحفاظ على دقة التصحيح، إظهار أزرار القفز السريع، وتحديث شهادة النتيجة والطباعة والنطق العربي.',
-            'تفعيل كافة نوافذ أطلس الرسوم التوضيحية (17 لوحة) ومركز الحلول النموذجية لمراجعات الفصول الـ 7 في مادة علم الأحياء.',
-            'إصلاح أزرار إظهار وإخفاء الحلول في مراجعات الرياضيات ومعالجة عرض صفحات كتاب الرياضيات في المكتبة الرقمية بلطف.',
-            'إصلاح تطبيق تحديثات PWA وتشديد عزل مخازن عامل الخدمة ومفاتيح localStorage ومخزن صور الكتب المستقل، وتنسيق ردود المعلم الذكي.'
+            'تقليص بيانات التخزين المحلي (localStorage) من ~3.8 ميجابايت إلى أقل من 1 كيلوبايت مع الترحيل التلقائي وتصدير النسخة الاحتياطية عبر Blob.',
+            'إصلاح تكرار بطاقات المواد الخمس في عرض «كافة المناهج»، وتفعيل شريط التبديل المباشر في «بنك القواعد»، ومزامنة شريط مركز الامتحانات، وحماية طباعة ورقة الامتحان.',
+            'إضافة دالة التعقيم (escapeHtml) وسمات الوصولية (aria-*) وتعميم الإغلاق بزر Escape والنقر الخارجي على جميع النوافذ الـ 18.',
+            'تقليص حجم version.json بنسبة تفوق 95% وتحديث سجل الإصدارات ودليل المشروع README.md.'
           ],
           history: [
             {
-              version: 'v2.3.9',
-              date: '2026-10-27',
-              title: 'بنك قواعد الأزمنة الشامل والتتبع الصوتي الدقيق',
+              version: '5.1.1',
+              versionLabel: 'v5.1.1',
+              date: '2026-11-24',
+              title: 'تحديث الصيانة الشامل وإصلاح الاختبارات التفاعلية وعزل PWA',
               notes: [
-                'تدشين بنك قواعد الأزمنة الشامل التفاعلي (Tenses Master Bank) الذي يضم شروحات وصيغ وتمارين فورية لجميع أزمنة اللغة الإنجليزية المقررة.',
-                'فلتر مخصص ⏱️ ونطق صوتي مباشر للأمثلة في جميع الأزمنة المقررة.'
+                'خلط ترتيب خيارات الاختبارات التفاعلية الـ 640 عشوائياً، وتفعيل شبكة القفز السريع وشهادة النتيجة والطباعة والنطق العربي (أ، ب، ج، د).',
+                'تفعيل جميع نوافذ أطلس الرسوم التوضيحية (17 لوحة SVG) ومراجعات علم الأحياء الـ 7، وإصلاح أزرار حلول الرياضيات وعزل مخازن عامل الخدمة.'
               ]
             },
             {
-              version: 'v2.3.8',
-              date: '2026-10-26',
-              title: 'معايرة دقة تتبع الكلمات المقروءة مع الصوت',
+              version: '5.1.0',
+              versionLabel: 'v5.1.0',
+              date: '2026-11-03',
+              title: 'تدشين المنظومة الشاملة للاختبارات التفاعلية المنهجية (640 سؤالاً)',
               notes: [
-                'حل مشكلة تقدم مؤشر الكلمات المقروءة عبر معادلة بافر تدفق الصوت السحابي بدقة 2.2 ثانية وتعديل أوزان وقفات الجمل والحروف المنفردة ليتطابق التظليل الذهبي مع خروج الصوت بنسبة 100%.'
+                'بناء بنك الاختبارات المنهجية لكافة المواد التسع (64 فصلاً ووحدة / 640 سؤالاً مع الشروحات والتفسيرات المعتمدة).'
               ]
             },
             {
-              version: 'v2.3.7',
-              date: '2026-10-25',
-              title: 'محرك التتبع اللحظي للكلمات v2 وتوسيع مساحة القراءة',
+              version: '5.0.0',
+              versionLabel: 'v5.0.0',
+              date: '2026-11-03',
+              title: 'المراجعة الشاملة وتكامل بنوك الامتحانات والمعلم الذكي للمناهج الـ 9',
               notes: [
-                'تطوير محرك التتبع اللحظي للكلمات المقروءة بنظام الجدولة الصوتية المتزامنة، وإضافة زر إغلاق وطي فوري لقسم المعلم لتوسيع مساحة القراءة للشاشة الكاملة.'
-              ]
-            },
-            {
-              version: 'v2.3.0',
-              date: '2026-10-24',
-              title: 'إنجاز الوحدة الثانية بالكامل (Healthy Lifestyle)',
-              notes: [
-                'إنجاز متطلبات الوحدة الثانية بالكامل (الصفحات 17 إلى 27) وتزويد دروسها الـ 11 بالمعرض البصري وبطاقات المفاهيم و7 قواعد نحوية تفصيلية مع اختبارات فورية.'
-              ]
-            },
-            {
-              version: 'v2.2.0',
-              date: '2026-10-23',
-              title: 'خطة العمل المقسمة إلى وحدات ودعم صفحات الكتاب الأصلية',
-              notes: [
-                'تقسيم خطة العمل إلى وحدات دراسية وتطويرية مستقلة، ودعم الدروس بالصور التوضيحية لصفحات الكتاب المعتمدة (120 صفحة مدمجة) مع نافذة التكبير وبطاقات المفاهيم.'
+                'إضافة بنوك الامتحانات الوزارية للكيمياء وعلم الأحياء (100 درجة) وتطوير محركات المعلم الذكي للرياضيات والاجتماعيات والكيمياء والأحياء.'
               ]
             }
           ]
@@ -16597,7 +16492,7 @@
         listEl.innerHTML = dataToDisplay.whatsNew.map(item => `
           <div class="whatsnew-feature-item">
             <span class="whatsnew-feature-icon">✓</span>
-            <div>${item}</div>
+            <div>${escapeHtml(item)}</div>
           </div>
         `).join('');
       }
@@ -16605,17 +16500,21 @@
       // تعبئة سجل التحديثات السابقة
       const historyEl = document.getElementById('whatsNewHistoryContent');
       if (historyEl && Array.isArray(dataToDisplay.history)) {
-        historyEl.innerHTML = dataToDisplay.history.map(hist => `
+        historyEl.innerHTML = dataToDisplay.history.map(hist => {
+          const rawVer = String(hist.version || '');
+          const vLbl = hist.versionLabel || (rawVer.startsWith('v') ? rawVer : 'v' + rawVer);
+          return `
           <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.75rem; font-size: 0.8rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-              <strong style="color: var(--primary);">${hist.version} - ${hist.title}</strong>
-              <span style="font-size: 0.72rem; color: var(--slate-500);">${hist.date}</span>
+              <strong style="color: var(--primary);">${escapeHtml(vLbl)} - ${escapeHtml(hist.title)}</strong>
+              <span style="font-size: 0.72rem; color: var(--slate-500);">${escapeHtml(hist.date)}</span>
             </div>
             <ul style="margin: 0; padding-inline-start: 1.2rem; color: var(--slate-600); line-height: 1.5;">
-              ${(hist.notes || hist.whatsNew || []).map(n => `<li>${n}</li>`).join('')}
+              ${(hist.notes || hist.whatsNew || []).map(n => `<li>${escapeHtml(n)}</li>`).join('')}
             </ul>
           </div>
-        `).join('');
+        `;
+        }).join('');
       }
 
       // إظهار زر التحديث إذا جاء الاستدعاء من بانر التحديث أو كان هناك تحديث معلق
@@ -16745,50 +16644,35 @@
       alert('تم تثبيت التطبيق بنجاح على جهازك!');
     });
 
-    // معالج زر Escape لإغلاق المودال وإيقاف الصوت تلقائياً
+    // معالج زر Escape لإغلاق جميع النوافذ المنبثقة وإيقاف الصوت تلقائياً
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        const bookModal = document.getElementById('bookPageModal');
-        if (bookModal && !bookModal.classList.contains('hidden')) {
-          closeBookPageModal();
+      if (e.key !== 'Escape') return;
+      const modalCloseMap = [
+        ['bookPageModal', () => closeBookPageModal()],
+        ['whatsNewModal', () => closeWhatsNewModal()],
+        ['addCurriculumModal', () => closeAddModal()],
+        ['voiceStudioModal', () => closeVoiceStudioModal()],
+        ['physicsDiagramModal', () => closePhysicsDiagramModal()],
+        ['allPhysicsDiagramsModal', () => closeAllPhysicsDiagramsGallery()],
+        ['biologyDiagramModal', () => closeBiologyDiagramModal()],
+        ['allBiologyDiagramsModal', () => closeAllBiologyDiagramsModal()],
+        ['chemistryDiagramModal', () => closeChemistryDiagramModal()],
+        ['allChemistryDiagramsModal', () => closeAllChemistryDiagramsGallery()],
+        ['mathChapterReviewsModal', () => closeMathReviewsModal()],
+        ['socialChapterReviewsModal', () => closeSocialReviewsModal()],
+        ['physicsChapterReviewsModal', () => closePhysicsReviewsModal()],
+        ['chemistryChapterReviewsModal', () => closeChemistryReviewsModal()],
+        ['biologyChapterReviewsModal', () => closeBiologyReviewsModal()],
+        ['arabicP1ChapterReviewsModal', () => closeArabicP1ReviewsModal()],
+        ['arabicP2ChapterReviewsModal', () => closeArabicP2ReviewsModal()],
+        ['islamicChapterReviewsModal', () => closeIslamicReviewsModal()]
+      ];
+      modalCloseMap.forEach(([id, closeFn]) => {
+        const el = document.getElementById(id);
+        if (el && !el.classList.contains('hidden')) {
+          closeFn();
         }
-        const whatsNewModal = document.getElementById('whatsNewModal');
-        if (whatsNewModal && !whatsNewModal.classList.contains('hidden')) {
-          closeWhatsNewModal();
-        }
-        const physModal = document.getElementById('physicsDiagramModal');
-        if (physModal && !physModal.classList.contains('hidden')) {
-          closePhysicsDiagramModal();
-        }
-        const allPhysModal = document.getElementById('allPhysicsDiagramsModal');
-        if (allPhysModal && !allPhysModal.classList.contains('hidden')) {
-          closeAllPhysicsDiagramsGallery();
-        }
-        const bioModal = document.getElementById('biologyDiagramModal');
-        if (bioModal && !bioModal.classList.contains('hidden')) {
-          closeBiologyDiagramModal();
-        }
-        const allBioModal = document.getElementById('allBiologyDiagramsModal');
-        if (allBioModal && !allBioModal.classList.contains('hidden')) {
-          closeAllBiologyDiagramsModal();
-        }
-        const bioRevModal = document.getElementById('biologyChapterReviewsModal');
-        if (bioRevModal && !bioRevModal.classList.contains('hidden')) {
-          closeBiologyReviewsModal();
-        }
-        const chemModal = document.getElementById('chemistryDiagramModal');
-        if (chemModal && !chemModal.classList.contains('hidden')) {
-          closeChemistryDiagramModal();
-        }
-        const allChemModal = document.getElementById('allChemistryDiagramsModal');
-        if (allChemModal && !allChemModal.classList.contains('hidden')) {
-          closeAllChemistryDiagramsGallery();
-        }
-        const chemRevModal = document.getElementById('chemistryChapterReviewsModal');
-        if (chemRevModal && !chemRevModal.classList.contains('hidden')) {
-          closeChemistryReviewsModal();
-        }
-      }
+      });
     });
   </script>
 </body>
