@@ -22,6 +22,10 @@
 !index.html
 !manifest.json
 !sw.js
+!css/
+!css/*.css
+!js/
+!js/*.js
 
 # 4. ملفات بيانات المناهج الدراسية وبنوك الاختبارات والرسوم التوضيحية المعتمدة
 !curriculum_chapter_quizzes.js

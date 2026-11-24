@@ -1,8 +1,22 @@
-const CACHE_NAME = 'interactive-edu-pwa-v5.1.2';
+const CACHE_NAME = 'interactive-edu-pwa-v5.3.0';
 const IMAGES_CACHE_NAME = 'interactive-edu-pwa-images-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './css/styles.css',
+  './js/config.js',
+  './js/loader.js',
+  './js/audio.js',
+  './js/dashboard.js',
+  './js/study.js',
+  './js/tutor.js',
+  './js/grammar.js',
+  './js/quizzes.js',
+  './js/exams.js',
+  './js/modals.js',
+  './js/a11y.js',
+  './js/search.js',
+  './js/app.js',
   './curriculum_chapter_quizzes.js',
   './curriculum_data.js',
   './curriculum_data_arabic.js',
@@ -50,13 +64,35 @@ self.addEventListener('message', (event) => {
     event.waitUntil((async () => {
       let ok = false;
       try {
-        const res = await fetch('./index.html', { cache: 'reload' });
-        if (res.ok) {
-          const c = await caches.open(CACHE_NAME);
-          await c.put('./index.html', res.clone());
-          await c.put('./', res);
-          ok = true;
-        }
+        const shellAssets = [
+          './index.html',
+          './css/styles.css',
+          './js/config.js',
+          './js/loader.js',
+          './js/audio.js',
+          './js/dashboard.js',
+          './js/study.js',
+          './js/tutor.js',
+          './js/grammar.js',
+          './js/quizzes.js',
+          './js/exams.js',
+          './js/modals.js',
+          './js/a11y.js',
+          './js/search.js',
+          './js/app.js'
+        ];
+        const c = await caches.open(CACHE_NAME);
+        await Promise.all(shellAssets.map(async (assetUrl) => {
+          const res = await fetch(assetUrl, { cache: 'reload' });
+          if (!res.ok) throw new Error('Shell refresh failed: ' + assetUrl);
+          if (assetUrl === './index.html') {
+            await c.put('./index.html', res.clone());
+            await c.put('./', res);
+          } else {
+            await c.put(assetUrl, res);
+          }
+        }));
+        ok = true;
       } catch { }
       event.ports[0].postMessage(ok);
     })());
