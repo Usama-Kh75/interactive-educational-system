@@ -330,8 +330,37 @@ function resolveReviewItem(cfg, metaList, targetId) {
   return def || metaList[0];
 }
 
+function getThemedReviewPalette(cfg) {
+  const base = cfg.theme;
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  if (!isDark) {
+    return {
+      ...base,
+      cardBg: '#ffffff',
+      chipBg: '#f8fafc',
+      btnWhiteBg: '#ffffff',
+      rowBorder: '#f1f5f9'
+    };
+  }
+  return {
+    ...base,
+    darkText: '#f8fafc',
+    accentText: '#cbd5e1',
+    lightBg: '#162033',
+    softBg: '#1e293b',
+    border: base.primary,
+    cardBorder: '#334155',
+    solBg: '#102826',
+    solText: '#a7f3d0',
+    cardBg: '#162033',
+    chipBg: '#0f172a',
+    btnWhiteBg: '#1e293b',
+    rowBorder: '#293548'
+  };
+}
+
 function applyReviewModalTheme(cfg) {
-  const t = cfg.theme;
+  const t = getThemedReviewPalette(cfg);
   const modal = document.getElementById('chapterReviewsModal');
   if (modal) modal.setAttribute('aria-label', cfg.title);
 
@@ -351,7 +380,7 @@ function applyReviewModalTheme(cfg) {
   const subEl = document.getElementById('unifiedReviewModalSubtitle');
   if (subEl) {
     subEl.innerText = cfg.subtitle;
-    subEl.style.color = t.primary;
+    subEl.style.color = document.documentElement.dataset.theme === 'dark' ? '#93c5fd' : t.primary;
   }
 
   const toggleAllBtn = document.getElementById('btnToggleAllUnifiedReviewSols');
@@ -384,6 +413,7 @@ function applyReviewModalTheme(cfg) {
 
   const bookBtn = document.getElementById('btnOpenUnifiedReviewBookPage');
   if (bookBtn) {
+    bookBtn.style.background = t.btnWhiteBg;
     bookBtn.style.color = t.accentText;
     bookBtn.style.border = `1px solid ${t.border}`;
   }
@@ -452,7 +482,7 @@ function formatReviewText(cfg, txt) {
 }
 
 function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
-  const t = cfg.theme;
+  const t = getThemedReviewPalette(cfg);
   const isVisible = activeReviewSolutionsVisible;
   const hiddenClass = isVisible ? '' : ' hidden';
   const toggleBtnText = isVisible ? '<span>🙈</span> إخفاء الحل' : '<span>👁️</span> إظهار الحل';
@@ -466,7 +496,7 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
     const listPrefix = `unified_${cfg.key}_${chunkIdx}`;
 
     html += `
-      <div style="background: #ffffff; border: 1.5px solid ${t.cardBorder}; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+      <div style="background: ${t.cardBg}; border: 1.5px solid ${t.cardBorder}; border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
         <div style="background: linear-gradient(135deg, ${t.lightBg} 0%, ${t.softBg} 100%); border-bottom: 1.5px solid ${t.cardBorder}; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <div style="display: flex; align-items: center; gap: 0.45rem;">
             <span style="font-size: 1rem;">${cfg.mode === 'unit-exercises' ? cfg.icon : '📌'}</span>
@@ -477,7 +507,7 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
           </div>
           <div style="display: flex; gap: 0.4rem; align-items: center;">
             ${cfg.showChunkBookBtn ? `
-              <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 700; border-radius: 5px;">
+              <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 700; border-radius: 5px;">
                 📖 صورة صفحة (${pageNum})
               </button>
             ` : ''}
@@ -495,7 +525,7 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
         let wordsBoxHtml = '';
         if (ex.words_box && ex.words_box.length > 0) {
           wordsBoxHtml = `
-            <div style="background: #f8fafc; border: 1px dashed ${t.border}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+            <div style="background: ${t.chipBg}; border: 1px dashed ${t.border}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
               <strong style="color: ${t.accentText};">📦 الكلمات / الخيارات المتاحة:</strong>
               ${ex.words_box.map(w => `<span style="background: ${t.lightBg}; border: 1px solid ${t.border}; padding: 0.18rem 0.5rem; border-radius: 5px; font-weight: 700; color: ${t.darkText};">${w}</span>`).join('')}
             </div>
@@ -505,15 +535,15 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
         let qListHtml = '';
         if (ex.questions && ex.questions.length > 0) {
           qListHtml = ex.questions.map((qObj, qIdx) => `
-            <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
+            <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid ${t.rowBorder};">
               <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6; white-space: pre-wrap;">${formatReviewText(cfg, qObj.q)}</div>
               ${(qObj.options && qObj.options.length > 0) ? `
                 <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
-                  ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${formatReviewText(cfg, opt)}</span>`).join('')}
+                  ${qObj.options.map(opt => `<span style="background: ${t.chipBg}; border: 1px solid ${t.cardBorder}; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${formatReviewText(cfg, opt)}</span>`).join('')}
                 </div>
               ` : ''}
               <div class="unified-review-solution-box exam-model-answer-box${hiddenClass}" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.65rem 0.85rem; font-size: 0.85rem; border-right: 4px solid ${t.primary}; background: ${t.solBg}; border-radius: 6px; border-top: 1px solid ${t.softBg}; border-bottom: 1px solid ${t.softBg}; border-left: 1px solid ${t.softBg};">
-                <div style="font-weight: 800; color: ${t.primary}; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
+                <div style="font-weight: 800; color: ${document.documentElement.dataset.theme === 'dark' ? '#6ee7b7' : t.primary}; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
                   <span>💡</span> الحل النموذجي المعتمد:
                 </div>
                 <div style="direction: rtl; text-align: right; font-weight: 600; color: ${t.solText}; white-space: pre-wrap; line-height: 1.7;">${formatReviewText(cfg, qObj.a)}</div>
@@ -523,7 +553,7 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
         }
 
         html += `
-          <div class="activity-exercise-card" style="background: #ffffff; border: 1px solid ${t.cardBorder}; border-radius: 10px; padding: 0.85rem; margin-bottom: 0.75rem;">
+          <div class="activity-exercise-card" style="background: ${t.cardBg}; border: 1px solid ${t.cardBorder}; border-radius: 10px; padding: 0.85rem; margin-bottom: 0.75rem;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
               <div>
                 <span class="badge" style="background: ${t.softBg}; color: ${t.accentText}; font-weight: 800; font-size: 0.75rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || ('التمرين ' + (exIdx + 1))}</span>
@@ -556,7 +586,8 @@ function renderChapterReviewsModal() {
   const cfg = REVIEW_MODAL_CONFIGS[activeReviewSubjectKey];
   if (!cfg) return;
 
-  const t = cfg.theme;
+  const t = getThemedReviewPalette(cfg);
+  applyReviewModalTheme(cfg);
   const navContainer = document.getElementById('unifiedReviewChaptersNav');
   const contentContainer = document.getElementById('unifiedReviewModalContent');
   const badgeEl = document.getElementById('unifiedReviewItemBadge');
@@ -623,13 +654,13 @@ function renderChapterReviewsModal() {
     contentContainer.innerHTML = sections.map((sec, secIdx) => {
       const answers = Array.isArray(sec.answers) ? sec.answers : [];
       return `
-        <div style="background: #ffffff; border: 1.5px solid ${t.cardBorder}; border-radius: 12px; margin-bottom: 1.1rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
+        <div style="background: ${t.cardBg}; border: 1.5px solid ${t.cardBorder}; border-radius: 12px; margin-bottom: 1.1rem; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.03);">
           <div style="background: linear-gradient(135deg, ${t.lightBg} 0%, ${t.softBg} 100%); border-bottom: 1.5px solid ${t.cardBorder}; padding: 0.6rem 0.95rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <div style="display: flex; align-items: center; gap: 0.45rem;">
               <span style="font-size: 1rem;">${cfg.icon}</span>
               <strong style="color: ${t.darkText}; font-size: 0.92rem;">${sec.title}</strong>
             </div>
-            <button class="btn btn-sm unified-sec-toggle-btn" id="btnToggleUnifiedSec_${secIdx}" onclick="toggleUnifiedReviewSection(${secIdx})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #ffffff; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 800; border-radius: 5px;">
+            <button class="btn btn-sm unified-sec-toggle-btn" id="btnToggleUnifiedSec_${secIdx}" onclick="toggleUnifiedReviewSection(${secIdx})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 800; border-radius: 5px;">
               ${secBtnLabel}
             </button>
           </div>
@@ -762,6 +793,62 @@ function openUnifiedReviewBookPage() {
     openBookPageModal(startPage, title, 'student', cfg.currId);
   }
 }
+
+function getActiveChapterReviewContext() {
+  const cfg = REVIEW_MODAL_CONFIGS[activeReviewSubjectKey];
+  if (!cfg) return null;
+  const metaList = cfg.getMetaList();
+  const activeMeta = resolveReviewItem(cfg, metaList, activeReviewItemKey);
+  if (!activeMeta) return null;
+
+  if (cfg.mode === 'solutions-sections') {
+    return {
+      cfg,
+      activeMeta,
+      sections: activeMeta.solutions || [],
+      chunkItems: []
+    };
+  }
+
+  const curr = cfg.getCurriculum();
+  const chunkItems = [];
+  if (cfg.mode === 'lesson-exercises') {
+    for (const u of curr) {
+      for (const l of u.lessons || []) {
+        if (l.id === activeMeta.itemKey || l.id === activeMeta.primaryLessonId) {
+          (l.chunks || []).forEach(chunk => chunkItems.push({ chunk, lesson: l }));
+          break;
+        }
+      }
+      if (chunkItems.length > 0) break;
+    }
+  } else {
+    const targetUnit = curr.find(u => u.id === activeMeta.itemKey) || curr[0];
+    if (targetUnit) {
+      (targetUnit.lessons || []).forEach(lesson => {
+        (lesson.chunks || []).forEach(chunk => {
+          if (chunk.exercises && chunk.exercises.length > 0) {
+            chunkItems.push({ chunk, lesson });
+          }
+        });
+      });
+    }
+  }
+
+  return {
+    cfg,
+    activeMeta,
+    sections: [],
+    chunkItems
+  };
+}
+
+window.addEventListener('ies:themechange', () => {
+  const modal = document.getElementById('chapterReviewsModal');
+  if (modal && !modal.classList.contains('hidden')) {
+    renderChapterReviewsModal();
+  }
+});
 
 // =========================================================================
 // أغلفة التوافق الكامل مع استدعاءات المراجعات الثماني السابقة

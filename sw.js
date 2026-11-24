@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v5.3.0';
+const CACHE_NAME = 'interactive-edu-pwa-v5.4.0';
 const IMAGES_CACHE_NAME = 'interactive-edu-pwa-images-v1';
 const ASSETS_TO_CACHE = [
   './',
@@ -6,6 +6,7 @@ const ASSETS_TO_CACHE = [
   './css/styles.css',
   './js/config.js',
   './js/loader.js',
+  './js/theme.js',
   './js/audio.js',
   './js/dashboard.js',
   './js/study.js',
@@ -16,6 +17,7 @@ const ASSETS_TO_CACHE = [
   './js/modals.js',
   './js/a11y.js',
   './js/search.js',
+  './js/reports.js',
   './js/app.js',
   './curriculum_chapter_quizzes.js',
   './curriculum_data.js',
@@ -69,6 +71,7 @@ self.addEventListener('message', (event) => {
           './css/styles.css',
           './js/config.js',
           './js/loader.js',
+          './js/theme.js',
           './js/audio.js',
           './js/dashboard.js',
           './js/study.js',
@@ -79,6 +82,7 @@ self.addEventListener('message', (event) => {
           './js/modals.js',
           './js/a11y.js',
           './js/search.js',
+          './js/reports.js',
           './js/app.js'
         ];
         const c = await caches.open(CACHE_NAME);

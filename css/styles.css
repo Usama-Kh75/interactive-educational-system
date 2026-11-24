@@ -2866,48 +2866,222 @@ img, .atmosphere-img, .atmosphere-visual, .feature-showcase-visual, .feature-sho
   background: #e0e7ff;
 }
 
+/* =========================================================================
+   الدفعة الخامسة (v5.4.0): جودة الطباعة الفائقة (Publication-Grade Print)
+   ========================================================================= */
+.printable-report-area {
+  display: none;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 14mm 12mm 16mm 12mm;
+}
+
 @media print {
-  body * {
-    visibility: hidden;
+  html,
+  html[data-theme="dark"],
+  html[data-contrast="high"] {
+    color-scheme: light !important;
+    --primary: #4338ca !important;
+    --primary-light: #eef2ff !important;
+    --slate-50: #f8fafc !important;
+    --slate-100: #f1f5f9 !important;
+    --slate-200: #e2e8f0 !important;
+    --slate-300: #cbd5e1 !important;
+    --slate-400: #64748b !important;
+    --slate-500: #475569 !important;
+    --slate-600: #334155 !important;
+    --slate-700: #1e293b !important;
+    --slate-800: #0f172a !important;
+    --slate-900: #020617 !important;
+    font-size: 13.5px !important;
   }
-  #printableExamArea, #printableExamArea * {
-    visibility: visible;
+
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    min-height: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  #printableExamArea {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 0;
-  }
-  body.printing-interactive-quiz #printableExamArea,
-  body.printing-interactive-quiz #printableExamArea * {
-    visibility: hidden !important;
+
+  .no-print,
+  header,
+  footer,
+  .floating-audio-player,
+  .floating-audio-bar,
+  .pwa-update-banner,
+  .lazy-toast,
+  #mobileBottomNav,
+  #studyMobileToolbar,
+  #mobileDrawerBackdrop,
+  .skip-to-content,
+  .modal-overlay,
+  .past-exams-subnav,
+  .exam-toggle-sol-btn,
+  .exam-listen-btn,
+  .mini-listen-btn {
     display: none !important;
   }
-  body.printing-interactive-quiz #interactiveQuizViewContainer,
-  body.printing-interactive-quiz #interactiveQuizViewContainer * {
-    visibility: visible !important;
-  }
-  body.printing-interactive-quiz #interactiveQuizViewContainer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+
+  main {
     max-width: 100% !important;
-    padding: 0;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+
+  .card,
+  .panel,
+  .exam-paper-container,
+  .exam-q-card,
+  .quiz-question,
+  .chunk-box {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .exam-q-card,
+  .quiz-question,
+  .report-lesson-chunk,
+  .report-gap-card,
+  .report-kpi-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* وضع طباعة التقارير والدروس والمراجعات (#printableReportArea) */
+  body[data-print-mode="report"] main {
+    display: none !important;
+  }
+
+  body[data-print-mode="report"] #printableReportArea {
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* وضع طباعة ورقة الامتحان (بيضاء أو محلولة) */
+  body[data-print-mode="exam-blank"] main > section:not(#tab-exams),
+  body[data-print-mode="exam-solved"] main > section:not(#tab-exams) {
+    display: none !important;
+  }
+
+  body[data-print-mode="exam-blank"] #tab-exams > *:not(#pastExamsViewContainer),
+  body[data-print-mode="exam-solved"] #tab-exams > *:not(#pastExamsViewContainer) {
+    display: none !important;
+  }
+
+  body[data-print-mode="exam-blank"] #pastExamsViewContainer > *:not(#printableExamArea),
+  body[data-print-mode="exam-solved"] #pastExamsViewContainer > *:not(#printableExamArea) {
+    display: none !important;
+  }
+
+  body[data-print-mode="exam-blank"] #printableExamArea,
+  body[data-print-mode="exam-solved"] #printableExamArea {
+    display: block !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body[data-print-mode="exam-blank"] .exam-model-answer-box,
+  body:not([data-print-mode]) .exam-model-answer-box {
+    display: none !important;
+  }
+
+  body[data-print-mode="exam-solved"] .exam-model-answer-box {
+    display: block !important;
+    background: #f0fdf4 !important;
+    border: 1px solid #86efac !important;
+    color: #14532d !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* وضع طباعة تقرير ونتيجة الاختبار التفاعلي */
+  body[data-print-mode="quiz-result"] main > section:not(#tab-exams),
+  body.printing-interactive-quiz main > section:not(#tab-exams) {
+    display: none !important;
+  }
+
+  body[data-print-mode="quiz-result"] #tab-exams > *:not(#interactiveQuizViewContainer),
+  body.printing-interactive-quiz #tab-exams > *:not(#interactiveQuizViewContainer) {
+    display: none !important;
+  }
+
+  body[data-print-mode="quiz-result"] #interactiveQuizViewContainer,
+  body.printing-interactive-quiz #interactiveQuizViewContainer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body[data-print-mode="quiz-result"] #quizJumpGrid,
+  body[data-print-mode="quiz-result"] #btnToggleQuizTimer,
+  body[data-print-mode="quiz-result"] #btnToggleInstantFeedback,
+  body[data-print-mode="quiz-result"] #submitQuizBtn,
+  body[data-print-mode="quiz-result"] #quizResultBanner button,
+  body[data-print-mode="quiz-result"] #interactiveQuizViewContainer select,
+  body[data-print-mode="quiz-result"] #interactiveQuizViewContainer .card button,
   body.printing-interactive-quiz #quizJumpGrid,
   body.printing-interactive-quiz #btnToggleQuizTimer,
   body.printing-interactive-quiz #btnToggleInstantFeedback,
   body.printing-interactive-quiz #submitQuizBtn,
   body.printing-interactive-quiz #quizResultBanner button,
-  body.printing-interactive-quiz .mini-listen-btn,
   body.printing-interactive-quiz #interactiveQuizViewContainer select {
     display: none !important;
   }
-  .exam-model-answer-box, .exam-toggle-sol-btn, .exam-listen-btn, .past-exams-subnav, header, footer, .floating-audio-player, .floating-audio-bar, #mobileBottomNav, #studyMobileToolbar, #globalSearchModal, #mobileDrawerBackdrop, .skip-to-content {
+
+  /* طباعة متصفح مباشرة من قاعة المذاكرة */
+  body:not([data-print-mode]) .study-chapters-panel,
+  body:not([data-print-mode]) .ai-chat-panel,
+  body:not([data-print-mode]) .audio-player-bar {
     display: none !important;
+  }
+
+  body:not([data-print-mode]) .study-layout {
+    display: block !important;
+    height: auto !important;
+  }
+
+  body:not([data-print-mode]) #lessonChunksContainerWrapper {
+    overflow: visible !important;
+    height: auto !important;
   }
 }
 
@@ -3046,8 +3220,8 @@ html[data-font-scale="xlarge"] {
   font-size: 19px;
 }
 
-/* وضع التباين العالي (High Contrast) */
-html[data-contrast="high"] {
+/* وضع التباين العالي (High Contrast) متوافق مع النهاري والليلي */
+html[data-contrast="high"]:not([data-theme="dark"]) {
   --slate-400: #475569;
   --slate-500: #334155;
   --slate-600: #0f172a;
@@ -3055,9 +3229,27 @@ html[data-contrast="high"] {
   --primary-hover: #1e1b4b;
 }
 
-html[data-contrast="high"] body {
+html[data-contrast="high"]:not([data-theme="dark"]) body {
   background-color: #ffffff;
   color: #020617;
+}
+
+@media screen {
+html[data-theme="dark"][data-contrast="high"] {
+  --slate-400: #cbd5e1;
+  --slate-500: #e2e8f0;
+  --slate-600: #f1f5f9;
+  --slate-700: #f8fafc;
+  --slate-800: #ffffff;
+  --slate-900: #ffffff;
+  --primary: #a5b4fc;
+  --primary-hover: #c7d2fe;
+}
+
+html[data-theme="dark"][data-contrast="high"] body {
+  background-color: #020617;
+  color: #ffffff;
+}
 }
 
 html[data-contrast="high"] .card,
@@ -3079,6 +3271,28 @@ html[data-contrast="high"] .search-result-item {
 html[data-contrast="high"] .btn-primary,
 html[data-contrast="high"] .tab-btn.active {
   box-shadow: 0 0 0 2px #1e1b4b;
+}
+
+@media screen {
+html[data-theme="dark"][data-contrast="high"] .card,
+html[data-theme="dark"][data-contrast="high"] .panel,
+html[data-theme="dark"][data-contrast="high"] .grammar-card,
+html[data-theme="dark"][data-contrast="high"] .quiz-question,
+html[data-theme="dark"][data-contrast="high"] .quiz-option,
+html[data-theme="dark"][data-contrast="high"] .chunk-box,
+html[data-theme="dark"][data-contrast="high"] .form-control,
+html[data-theme="dark"][data-contrast="high"] .chat-input,
+html[data-theme="dark"][data-contrast="high"] .modal-box,
+html[data-theme="dark"][data-contrast="high"] .btn-secondary,
+html[data-theme="dark"][data-contrast="high"] .subject-context-bar,
+html[data-theme="dark"][data-contrast="high"] .search-result-item {
+  border-color: #93c5fd !important;
+}
+
+html[data-theme="dark"][data-contrast="high"] .btn-primary,
+html[data-theme="dark"][data-contrast="high"] .tab-btn.active {
+  box-shadow: 0 0 0 2px #facc15;
+}
 }
 
 /* احترام تفضيل تقليل الحركة */
@@ -4031,4 +4245,872 @@ svg {
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
+}
+
+
+/* =========================================================================
+   الدفعة الخامسة (v5.4.0): الوضع الليلي المحسّن، مركز التقارير، وتنسيقات التصدير
+   ========================================================================= */
+
+.header-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 800;
+  min-height: 34px;
+}
+
+@media (max-width: 768px) {
+  .header-theme-btn {
+    display: none !important;
+  }
+}
+
+#reportsCenterModal {
+  z-index: 125;
+}
+
+.reports-modal-box {
+  max-width: 1080px;
+  width: 96vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.reports-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--slate-200);
+  flex-wrap: wrap;
+}
+
+.reports-modal-tabs {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.7rem 1.25rem;
+  background: var(--slate-50);
+  border-bottom: 1px solid var(--slate-200);
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.reports-modal-subcontrols {
+  padding: 0.65rem 1.25rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.reports-modal-subcontrols:empty {
+  display: none;
+}
+
+.reports-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.25rem;
+  background: var(--slate-100);
+}
+
+.reports-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  background: #ffffff;
+  border-top: 1px solid var(--slate-200);
+  flex-wrap: wrap;
+}
+
+.report-profile-inline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.report-sheet {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.report-doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.report-doc-kicker {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+.report-doc-header h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.22rem;
+  font-weight: 900;
+  color: var(--slate-900);
+}
+
+.report-doc-meta {
+  font-size: 0.8rem;
+  color: var(--slate-600);
+  font-weight: 600;
+}
+
+.report-doc-brand {
+  text-align: left;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--slate-900);
+}
+
+.report-doc-brand small {
+  display: block;
+  color: var(--primary);
+  margin-top: 0.15rem;
+}
+
+.report-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 1.15rem;
+}
+
+.report-kpi-card {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.report-kpi-val {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.report-kpi-lbl {
+  font-size: 0.74rem;
+  color: var(--slate-600);
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+
+.report-sec-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin: 1.15rem 0 0.6rem;
+  border-right: 4px solid var(--primary);
+  padding-right: 0.55rem;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid var(--slate-200);
+  padding: 0.5rem 0.6rem;
+  text-align: right;
+  vertical-align: top;
+}
+
+.report-table th {
+  background: var(--primary-light);
+  color: var(--slate-900);
+  font-weight: 800;
+}
+
+.report-table tr:nth-child(even) td {
+  background: var(--slate-50);
+}
+
+.report-table-compact {
+  font-size: 0.76rem;
+}
+
+.report-pill {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.report-pill.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.report-pill.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.report-pill.bad {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.report-gaps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.report-gap-card {
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  background: var(--slate-50);
+}
+
+.report-gap-title {
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.report-gap-card ul {
+  margin: 0;
+  padding-inline-start: 1.15rem;
+  font-size: 0.78rem;
+  color: var(--slate-700);
+  line-height: 1.55;
+}
+
+.report-lesson-chunk {
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  padding: 0.85rem;
+  margin-bottom: 0.8rem;
+  background: var(--slate-50);
+}
+
+.report-lesson-chunk-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--slate-200);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--slate-900);
+}
+
+.report-lesson-chunk-body {
+  white-space: pre-wrap;
+  font-size: 0.88rem;
+  color: var(--slate-800);
+  line-height: 1.75;
+}
+
+.report-ex-box {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+  padding: 0.65rem;
+  margin-top: 0.55rem;
+}
+
+.report-ex-title {
+  font-weight: 800;
+  color: var(--slate-900);
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+}
+
+.report-q-row {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--slate-100);
+}
+
+.report-q-row:last-child {
+  border-bottom: none;
+}
+
+.report-q-text {
+  font-weight: 700;
+  white-space: pre-wrap;
+  color: var(--slate-900);
+}
+
+.report-q-ans {
+  margin-top: 0.35rem;
+  background: #f0fdf4;
+  border-right: 3px solid #16a34a;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  color: #14532d;
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+}
+
+.report-words-box {
+  background: var(--slate-50);
+  border: 1px dashed var(--slate-300);
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  color: var(--slate-700);
+}
+
+.report-empty-note {
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--slate-50);
+  border: 1px dashed var(--slate-300);
+  border-radius: 10px;
+  color: var(--slate-600);
+  font-weight: 700;
+}
+
+.report-doc-footer {
+  margin-top: 1.15rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--slate-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  color: var(--slate-500);
+}
+
+@media (max-width: 768px) {
+  .report-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reports-modal-box {
+    max-height: 94dvh;
+    width: 100%;
+  }
+  .reports-modal-header,
+  .reports-modal-tabs,
+  .reports-modal-subcontrols,
+  .reports-modal-body,
+  .reports-modal-footer {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+
+/* =========================================================================
+   الوضع الليلي المحسّن (Enhanced Dark Mode — محصور بشاشة العرض لحماية جودة الطباعة)
+   ========================================================================= */
+@media screen {
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --primary-light: rgba(99, 102, 241, 0.18);
+  --primary-glow: rgba(129, 140, 248, 0.35);
+  --secondary: #38bdf8;
+  --accent: #a78bfa;
+  --success: #34d399;
+  --success-light: rgba(16, 185, 129, 0.16);
+  --warning: #fbbf24;
+  --warning-light: rgba(245, 158, 11, 0.16);
+  --danger: #f87171;
+  --danger-light: rgba(239, 68, 68, 0.16);
+  --slate-50: #0f172a;
+  --slate-100: #162033;
+  --slate-200: #293548;
+  --slate-300: #3b4b63;
+  --slate-400: #94a3b8;
+  --slate-500: #a8b6c8;
+  --slate-600: #cbd5e1;
+  --slate-700: #e2e8f0;
+  --slate-800: #f1f5f9;
+  --slate-900: #f8fafc;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 36px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.65);
+}
+
+html[data-theme="dark"] body {
+  background-color: #0b1120;
+  background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 50%);
+  color: var(--slate-800);
+}
+
+html[data-theme="dark"] header {
+  background: #111827;
+  border-bottom-color: #293548;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] footer {
+  background: #111827 !important;
+  border-top-color: #293548 !important;
+  color: var(--slate-500) !important;
+}
+
+html[data-theme="dark"] .nav-tabs,
+html[data-theme="dark"] .past-exams-subnav {
+  background: #1e293b;
+}
+
+html[data-theme="dark"] .tab-btn {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .tab-btn.active,
+html[data-theme="dark"] .past-exams-subnav-btn.active {
+  background: #0f172a;
+  color: #a5b4fc;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .modal-box,
+html[data-theme="dark"] .grammar-card,
+html[data-theme="dark"] .exam-paper-container,
+html[data-theme="dark"] .exam-q-card,
+html[data-theme="dark"] .exam-passage-box,
+html[data-theme="dark"] .quiz-question,
+html[data-theme="dark"] .chunk-box,
+html[data-theme="dark"] .function-nav-btn,
+html[data-theme="dark"] .curr-nav-btn,
+html[data-theme="dark"] .curricula-tab-btn,
+html[data-theme="dark"] .subject-context-bar,
+html[data-theme="dark"] .subject-showcase-card,
+html[data-theme="dark"] .enterprise-feature-block,
+html[data-theme="dark"] .a11y-settings-card,
+html[data-theme="dark"] .report-sheet,
+html[data-theme="dark"] .report-ex-box,
+html[data-theme="dark"] .reports-modal-subcontrols,
+html[data-theme="dark"] .reports-modal-footer,
+html[data-theme="dark"] .global-search-controls,
+html[data-theme="dark"] .search-result-item,
+html[data-theme="dark"] .lesson-breadcrumb-banner {
+  background-color: #162033;
+  border-color: #2d3b52;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .panel-header,
+html[data-theme="dark"] .global-search-header,
+html[data-theme="dark"] .global-search-footer,
+html[data-theme="dark"] .global-search-status-bar,
+html[data-theme="dark"] .reports-modal-header,
+html[data-theme="dark"] .reports-modal-tabs,
+html[data-theme="dark"] .reports-modal-body {
+  background: #111827 !important;
+  border-color: #293548 !important;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .btn-primary {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .btn-primary:hover {
+  background: #4338ca;
+}
+
+html[data-theme="dark"] .btn-secondary {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .btn-secondary:hover {
+  background: #293548;
+  border-color: #4f607b;
+}
+
+html[data-theme="dark"] .status-badge {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-input,
+html[data-theme="dark"] .chat-input,
+html[data-theme="dark"] .global-search-input,
+html[data-theme="dark"] .global-search-subject-select,
+html[data-theme="dark"] select,
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="search"],
+html[data-theme="dark"] textarea {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #3b4b63 !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .tree-group-header {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .tree-item {
+  color: #cbd5e1;
+  border-bottom-color: #243044;
+}
+
+html[data-theme="dark"] .tree-item:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .tree-item.active {
+  background: rgba(99, 102, 241, 0.22);
+  color: #c7d2fe;
+}
+
+html[data-theme="dark"] button.chapter-quiz-tree-item {
+  background: rgba(99, 102, 241, 0.16);
+  border-top-color: #3b4b63;
+  color: #c7d2fe;
+}
+
+html[data-theme="dark"] .quiz-option {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .quiz-option:hover {
+  background: #273549;
+  border-color: #818cf8;
+}
+
+html[data-theme="dark"] .quiz-option.selected {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #818cf8;
+}
+
+html[data-theme="dark"] .quiz-option.correct {
+  background: rgba(16, 185, 129, 0.24) !important;
+  border-color: #34d399 !important;
+  color: #d1fae5 !important;
+}
+
+html[data-theme="dark"] .quiz-option.wrong {
+  background: rgba(239, 68, 68, 0.24) !important;
+  border-color: #f87171 !important;
+  color: #fee2e2 !important;
+}
+
+html[data-theme="dark"] .exam-official-header {
+  background: #111827;
+  border-color: #3b4b63;
+}
+
+html[data-theme="dark"] .exam-model-answer-box {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-color: #059669 !important;
+  color: #a7f3d0 !important;
+}
+
+html[data-theme="dark"] .exam-toggle-sol-btn {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .exam-listen-btn,
+html[data-theme="dark"] .mini-listen-btn {
+  background: rgba(99, 102, 241, 0.22);
+  border-color: rgba(129, 140, 248, 0.4);
+  color: #c7d2fe;
+}
+
+html[data-theme="dark"] .message.assistant {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .suggested-chip,
+html[data-theme="dark"] .search-suggestion-chip,
+html[data-theme="dark"] .search-type-pill {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .search-result-item:hover,
+html[data-theme="dark"] .search-result-item.is-selected {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #818cf8;
+}
+
+html[data-theme="dark"] .search-tip-box {
+  background: rgba(2, 132, 199, 0.16);
+  border-color: #0369a1;
+  color: #bae6fd;
+}
+
+html[data-theme="dark"] .search-tip-box code,
+html[data-theme="dark"] .global-search-footer kbd,
+html[data-theme="dark"] .kbd-hint {
+  background: #0f172a;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] mark.search-hit {
+  background: #ca8a04;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .phy-math-block {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #e0e7ff;
+}
+
+html[data-theme="dark"] .phy-formula {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .formula-box {
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(129, 140, 248, 0.35);
+  color: #e0e7ff;
+}
+
+html[data-theme="dark"] .grammar-example-item {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .mobile-bottom-nav,
+html[data-theme="dark"] .study-mobile-toolbar {
+  background: rgba(15, 23, 42, 0.96);
+  border-color: #293548;
+}
+
+html[data-theme="dark"] .mobile-bottom-btn {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .mobile-bottom-btn.active {
+  background: rgba(99, 102, 241, 0.24);
+  color: #a5b4fc;
+}
+
+html[data-theme="dark"] .modal-close-circle,
+html[data-theme="dark"] .mobile-drawer-close-btn {
+  background: #1e293b;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .lazy-loading-card {
+  background: #162033;
+  border-color: #3b4b63;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .report-pill.ok {
+  background: rgba(16, 185, 129, 0.22);
+  color: #6ee7b7;
+}
+
+html[data-theme="dark"] .report-pill.warn {
+  background: rgba(245, 158, 11, 0.22);
+  color: #fcd34d;
+}
+
+html[data-theme="dark"] .report-pill.bad {
+  background: rgba(239, 68, 68, 0.22);
+  color: #fca5a5;
+}
+
+html[data-theme="dark"] .report-q-ans {
+  background: rgba(16, 185, 129, 0.14);
+  border-right-color: #10b981;
+  color: #a7f3d0;
+}
+
+html[data-theme="dark"] .report-table th {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* تغطية ذكية للأنماط المضمنة الفاتحة والخلفيات المنسّقة في HTML و JS */
+html[data-theme="dark"] [style*="background: white"],
+html[data-theme="dark"] [style*="background: #fff"],
+html[data-theme="dark"] [style*="background-color: #fff"],
+html[data-theme="dark"] [style*="background: #f8fafc"],
+html[data-theme="dark"] [style*="background: #f1f5f9"] {
+  background-color: #162033 !important;
+  color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] [style*="background: #eef2ff"],
+html[data-theme="dark"] [style*="background: #f5f3ff"],
+html[data-theme="dark"] [style*="background: #e0e7ff"],
+html[data-theme="dark"] [style*="background: #eff6ff"] {
+  background-color: #1a2442 !important;
+  color: #dbeafe !important;
+}
+
+html[data-theme="dark"] [style*="background: #f0fdf4"],
+html[data-theme="dark"] [style*="background: #ecfdf5"],
+html[data-theme="dark"] [style*="background: #dcfce7"],
+html[data-theme="dark"] [style*="background: #f0fdfa"],
+html[data-theme="dark"] [style*="background: #e6fffa"],
+html[data-theme="dark"] [style*="background: #ccfbf1"] {
+  background-color: #102a27 !important;
+  color: #a7f3d0 !important;
+}
+
+html[data-theme="dark"] [style*="background: #f0f9ff"],
+html[data-theme="dark"] [style*="background: #e0f2fe"],
+html[data-theme="dark"] [style*="background: #ecfeff"] {
+  background-color: #10263b !important;
+  color: #bae6fd !important;
+}
+
+html[data-theme="dark"] [style*="background: #faf5ff"],
+html[data-theme="dark"] [style*="background: #f3e8ff"],
+html[data-theme="dark"] [style*="background: #fdf4ff"] {
+  background-color: #24193b !important;
+  color: #e9d5ff !important;
+}
+
+html[data-theme="dark"] [style*="background: #fffbeb"],
+html[data-theme="dark"] [style*="background: #fefce8"],
+html[data-theme="dark"] [style*="background: #fef3c7"],
+html[data-theme="dark"] [style*="background: #fffdf5"] {
+  background-color: #2b2112 !important;
+  color: #fde68a !important;
+}
+
+html[data-theme="dark"] [style*="background: #fef2f2"],
+html[data-theme="dark"] [style*="background: #fff1f2"] {
+  background-color: #2f151b !important;
+  color: #fecdd3 !important;
+}
+
+html[data-theme="dark"] [style*="linear-gradient(180deg, #ffffff"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #f8fafc"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #ffffff"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #f0fdf4"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #f0fdfa"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #f0f9ff"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #faf5ff"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #fffbeb"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #ecfdf5"],
+html[data-theme="dark"] [style*="linear-gradient(135deg, #eff6ff"] {
+  background-image: none !important;
+  background-color: #182338 !important;
+}
+
+html[data-theme="dark"] [style*="color: #0f172a"],
+html[data-theme="dark"] [style*="color: #1e293b"],
+html[data-theme="dark"] [style*="color: #334155"],
+html[data-theme="dark"] [style*="color: #475569"],
+html[data-theme="dark"] [style*="color: #1e1b4b"] {
+  color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] [style*="color: #064e3b"],
+html[data-theme="dark"] [style*="color: #065f46"],
+html[data-theme="dark"] [style*="color: #166534"],
+html[data-theme="dark"] [style*="color: #14532d"],
+html[data-theme="dark"] [style*="color: #15803d"],
+html[data-theme="dark"] [style*="color: #115e59"],
+html[data-theme="dark"] [style*="color: #134e4a"] {
+  color: #6ee7b7 !important;
+}
+
+html[data-theme="dark"] [style*="color: #075985"],
+html[data-theme="dark"] [style*="color: #0c4a6e"],
+html[data-theme="dark"] [style*="color: #0369a1"],
+html[data-theme="dark"] [style*="color: #0e7490"],
+html[data-theme="dark"] [style*="color: #1e40af"],
+html[data-theme="dark"] [style*="color: #1d4ed8"],
+html[data-theme="dark"] [style*="color: #3730a3"],
+html[data-theme="dark"] [style*="color: #4338ca"] {
+  color: #93c5fd !important;
+}
+
+html[data-theme="dark"] [style*="color: #581c87"],
+html[data-theme="dark"] [style*="color: #6b21a8"],
+html[data-theme="dark"] [style*="color: #701a75"],
+html[data-theme="dark"] [style*="color: #7e22ce"] {
+  color: #d8b4fe !important;
+}
+
+html[data-theme="dark"] [style*="color: #78350f"],
+html[data-theme="dark"] [style*="color: #92400e"],
+html[data-theme="dark"] [style*="color: #854d0e"],
+html[data-theme="dark"] [style*="color: #b45309"] {
+  color: #fcd34d !important;
+}
+
+html[data-theme="dark"] [style*="color: #be123c"],
+html[data-theme="dark"] [style*="color: #991b1b"] {
+  color: #fda4af !important;
+}
+
+/* الحفاظ على وضوح الرسوم المتجهية العلمية (SVG) في الوضع الليلي */
+html[data-theme="dark"] #diagramViewerSvgWrapper,
+html[data-theme="dark"] #lessonMediaVisualContainer [onclick*="DiagramModal"],
+html[data-theme="dark"] #diagramsGalleryGrid [onclick*="openDiagramViewerModal"] {
+  background-color: #e2e8f0 !important;
+  border-color: #64748b !important;
+}
+
+/* تخفيف سطوع صفحات الكتب المصورة ليلاً لراحة العين بدون قلب الألوان */
+html[data-theme="dark"][data-dark-dim-media="true"] #bookPageModalImg,
+html[data-theme="dark"][data-dark-dim-media="true"] #lessonMediaVisualContainer img {
+  filter: brightness(0.86) contrast(1.06);
+  transition: filter 0.2s ease;
+}
 }

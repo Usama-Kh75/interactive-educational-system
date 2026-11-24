@@ -1015,14 +1015,28 @@ function toggleAllExamSolutions() {
   }
 }
 
-function printExamPaper() {
+function getActivePastExamContext() {
+  const exams = getSubjectExams(currentExamSubjectMode);
+  const exam = exams[currentSelectedPastExamId] || Object.values(exams)[0] || null;
+  return {
+    mode: currentExamSubjectMode,
+    examId: exam ? exam.id : currentSelectedPastExamId,
+    exam
+  };
+}
+
+function printExamPaper(withSolutions = false) {
+  if (window.ReportManager && typeof window.ReportManager.printExamPaper === 'function') {
+    window.ReportManager.printExamPaper(withSolutions);
+    return;
+  }
   document.body.classList.remove('printing-interactive-quiz');
   const exams = getSubjectExams(currentExamSubjectMode);
   const exam = exams[currentSelectedPastExamId];
   if (exam) {
     exam.questions.forEach(q => {
       const box = document.getElementById(`solBox_${q.id}`);
-      if (box) box.classList.add('hidden');
+      if (box) box.classList.toggle('hidden', !withSolutions);
     });
   }
   window.print();

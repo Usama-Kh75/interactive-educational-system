@@ -327,6 +327,10 @@ async function renderCurrentLessonContent(currId, chapters) {
   const unitTitle = activeChapter ? activeChapter.title : 'الوحدة الدراسية';
   const lessonTitle = activeLesson.title;
 
+  if (window.ReportManager && typeof window.ReportManager.recordLessonVisit === 'function') {
+    window.ReportManager.recordLessonVisit(currId, activeLesson.id);
+  }
+
   if (headerSpan) headerSpan.innerText = `${lessonTitle}`;
 
   // فحص القواعد المرتبطة بهذا الدرس

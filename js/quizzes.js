@@ -473,6 +473,19 @@ function submitQuiz() {
 
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
 
+  if (window.ReportManager && typeof window.ReportManager.recordQuizResult === 'function') {
+    window.ReportManager.recordQuizResult({
+      currId: currentQuizMeta.currId,
+      chapterId: currentQuizMeta.chapterId,
+      subjectName: currentQuizMeta.subjectName,
+      title: currentQuizMeta.title,
+      score,
+      total,
+      pct,
+      wrongCount: wrongQuestions.length
+    });
+  }
+
   // إظهار شهادة التميز ولوحة النتيجة
   const banner = document.getElementById('quizResultBanner');
   if (banner) {
@@ -571,6 +584,10 @@ function filterIncorrectQuestionsOnly() {
 
 // طباعة نتائج الاختبار والشهادة
 function printInteractiveQuiz() {
+  if (window.ReportManager && typeof window.ReportManager.printInteractiveQuiz === 'function') {
+    window.ReportManager.printInteractiveQuiz();
+    return;
+  }
   document.body.classList.add('printing-interactive-quiz');
   const cleanup = () => document.body.classList.remove('printing-interactive-quiz');
   window.addEventListener('afterprint', cleanup, { once: true });

@@ -301,7 +301,9 @@ function initApp() {
   renderActiveSubjectShowcase();
   populateStudyCurriculumSelect();
   initAiChatPanelState();
+  if (window.ThemeManager && typeof window.ThemeManager.init === 'function') window.ThemeManager.init();
   if (window.A11yManager && typeof window.A11yManager.init === 'function') window.A11yManager.init();
+  if (window.ReportManager && typeof window.ReportManager.init === 'function') window.ReportManager.init();
   if (window.GlobalSearch && typeof window.GlobalSearch.init === 'function') window.GlobalSearch.init();
   syncSystemVersionBadges();
   checkBackendConnection();
@@ -478,7 +480,21 @@ async function saveNewCurriculum() {
 }
 
 function exportDataBackup() {
-  const jsonText = JSON.stringify(appData, null, 2);
+  const backupPayload = {
+    ...appData,
+    backupVersion: typeof CURRENT_VERSION_LABEL !== 'undefined' ? CURRENT_VERSION_LABEL : 'v5.4.0',
+    exportedAt: new Date().toISOString(),
+    preferences: {
+      themeMode: (window.ThemeManager && window.ThemeManager.getMode()) || 'light',
+      darkDimMedia: window.ThemeManager ? window.ThemeManager.getDarkDimMedia() : true,
+      fontScale: lsGet('a11y_font_scale') || 'normal',
+      highContrast: lsGet('a11y_high_contrast') === 'true',
+      reducedMotion: lsGet('a11y_reduced_motion') || 'auto'
+    },
+    studentProfile: window.ReportManager ? window.ReportManager.getStudentProfile() : null,
+    progress: window.ReportManager ? window.ReportManager.getProgressData() : null
+  };
+  const jsonText = JSON.stringify(backupPayload, null, 2);
   const blob = new Blob([jsonText], { type: 'application/json;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const downloadAnchor = document.createElement('a');
@@ -499,8 +515,26 @@ function importDataBackup(e) {
     try {
       const imported = JSON.parse(event.target.result);
       if (imported.curriculums) {
-        appData = imported;
+        appData = {
+          curriculums: imported.curriculums,
+          currentCurriculumId: imported.currentCurriculumId || 3,
+          currentLessonId: imported.currentLessonId || null
+        };
         saveData();
+        if (imported.preferences && typeof imported.preferences === 'object') {
+          const p = imported.preferences;
+          if (p.themeMode) lsSet('theme_mode', p.themeMode);
+          if (typeof p.darkDimMedia === 'boolean') lsSet('dark_dim_media', p.darkDimMedia ? 'true' : 'false');
+          if (p.fontScale) lsSet('a11y_font_scale', p.fontScale);
+          if (typeof p.highContrast === 'boolean') lsSet('a11y_high_contrast', p.highContrast ? 'true' : 'false');
+          if (p.reducedMotion) lsSet('a11y_reduced_motion', p.reducedMotion);
+        }
+        if (imported.studentProfile && window.ReportManager) {
+          window.ReportManager.saveStudentProfile(imported.studentProfile);
+        }
+        if (imported.progress && typeof imported.progress === 'object') {
+          lsSet('progress_v1', JSON.stringify(imported.progress));
+        }
         initApp();
         alert('تم استعادة النسخة الاحتياطية بنجاح!');
       } else {
@@ -685,26 +719,31 @@ async function showWhatsNewModal(fromUpdateBanner = false) {
       versionLabel: CURRENT_VERSION_LABEL,
       date: '2026-11-24',
       author: SYSTEM_AUTHOR,
-      title: 'تطوير معمارية النظام والأداء (الدفعة الرابعة: تجربة الجوال والبحث الشامل وإمكانية الوصول - v5.3.0)',
+      title: 'تطوير معمارية النظام والأداء (الدفعة الخامسة: الوضع الليلي المحسّن وجودة الطباعة وتصدير التقارير - v5.4.0)',
       whatsNew: [
-        'تجربة جوال متكاملة (Responsive Mobile UX): شريط تنقل سفلي ثابت، وترويسة مدمجة، وأدراج جانبية منزلقة لقائمة الفصول والمحادثة في قاعة المذاكرة مع تقليب الصفحات بالسحب والأسهم.',
-        'محرك بحث شامل موحّد (Global Search) يبحث لحظياً في كافة الكتب الـ 9 والتمارين والقواعد والرسوم واختبارات الفصول مع التطبيع العربي وإبراز النتائج والقفز المباشر.',
-        'توافق شامل مع معايير الوصول (WCAG 2.1 AA): رابط تخطي للمحتوى، حصر التركيز التلقائي للنوافذ، دعم قارئات الشاشة، والتحكم بحجم الخط والتباين العالي وتقليل الحركة.'
+        'الوضع الليلي المحسّن (js/theme.js): تبديل فوري بين النهاري والليلي والتلقائي حسب الجهاز (Alt+Shift+D) بدون وميض عند التحميل، مع تخفيف سطوع صفحات الكتب ليلاً وتوافق كامل مع التباين العالي والرسوم العلمية.',
+        'جودة الطباعة الفائقة (A4 RTL): طباعة احترافية نظيفة للأوراق الامتحانية (بيضاء أو محلولة)، ونتائج الاختبارات، وملخصات الدروس، ومراجعات الفصول مع إجبار الألوان الفاتحة أثناء الطباعة.',
+        'مركز التقارير والتصدير وتدقيق المناهج (js/reports.js): تتبع التقدم محلياً مع تصدير تقارير التقدم، ومقارنة المناهج التسعة بالمادة المعروضة، وملخص الدرس، والاختبار بصيغ PDF/HTML/CSV/JSON أوفلاين.'
       ],
       history: [
+        {
+          version: '5.3.0',
+          versionLabel: 'v5.3.0',
+          date: '2026-11-24',
+          title: 'تجربة الجوال المتكاملة والبحث الشامل وإمكانية الوصول WCAG 2.1 AA',
+          notes: [
+            'شريط تنقل سفلي وأدراج منزلقة للجوال، محرك البحث الشامل Ctrl+K (js/search.js)، ووحدة إمكانية الوصول (js/a11y.js).'
+          ]
+        },
         {
           version: '5.2.0',
           versionLabel: 'v5.2.0',
           date: '2026-11-24',
-          title: 'تطوير معمارية النظام والأداء: تقسيم index.html وتوحيد النوافذ والتحميل الكسول للمواد',
-          whatsNew: [
-            'تقسيم ملف index.html إلى بنية معيارية نظيفة (css/styles.css و 11 وحدة JavaScript في js/).',
-            'تفعيل التحميل الكسول للمناهج والرسوم وبنوك الاختبارات عبر CurriculumLoader.',
-            'توحيد نوافذ مراجعات الفصول الثماني وعارض ومعارض الرسوم التوضيحية.'
+          title: 'تقسيم index.html وتوحيد النوافذ والتحميل الكسول للمواد',
+          notes: [
+            'فصل التنسيقات إلى css/styles.css والمنطق إلى 11 وحدة js/ مع التحميل الكسول CurriculumLoader وتوحيد نوافذ المراجعات والرسوم.'
           ]
-        }
-      ],
-      history: [
+        },
         {
           version: '5.1.2',
           versionLabel: 'v5.1.2',
@@ -933,6 +972,7 @@ window.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;
   const modalCloseMap = [
     ['globalSearchModal', () => typeof closeGlobalSearchModal === 'function' && closeGlobalSearchModal()],
+    ['reportsCenterModal', () => typeof closeReportsCenterModal === 'function' && closeReportsCenterModal()],
     ['bookPageModal', () => closeBookPageModal()],
     ['diagramViewerModal', () => closeDiagramViewerModal()],
     ['diagramsGalleryModal', () => closeDiagramsGalleryModal()],
