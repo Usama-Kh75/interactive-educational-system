@@ -513,6 +513,8 @@ async function renderCurrentLessonContent(currId, chapters) {
     if (hasExercises) {
       let bannerHtml = '';
       const isArP1 = (appData.currentCurriculumId === 4);
+      const isMathCurr = (appData.currentCurriculumId === 8);
+      const useMathFmt = (appData.currentCurriculumId === 7 || isMathCurr);
       if (isActivity) {
         bannerHtml = `
           <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: #e6fffa; border: 1px solid #b2f5ea; padding: 0.45rem 0.75rem; border-radius: 8px;">
@@ -537,6 +539,22 @@ async function renderCurrentLessonContent(currId, chapters) {
             </div>
             <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #059669; border: 1px solid #a7f3d0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
               👁️ إظهار / إخفاء كافة حلول التمرينات
+            </button>
+          </div>
+        `;
+      } else if (isMathCurr) {
+        bannerHtml = `
+          <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1.5px solid #d8b4fe; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(126,34,206,0.08);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.88rem; font-weight: 800; color: #581c87; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <span>📐</span> ${isReviewChunk ? 'مراجعة واختبار الفصل والحلول النموذجية المعتمدة (الرياضيات)' : 'تمارين الدرس والحلول النموذجية المعتمدة (تأكد من فهمك • تدرب • مسائل حياتية • فكّر)'}
+              </span>
+              <span class="badge" style="background: #7e22ce; color: white; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                ✨ حل نموذجي وزاري معتمد
+              </span>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #7e22ce; border: 1px solid #d8b4fe; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              👁️ إظهار / إخفاء كافة الحلول
             </button>
           </div>
         `;
@@ -575,11 +593,11 @@ async function renderCurrentLessonContent(currId, chapters) {
         const exId = ex.id || `ex_${idx}_${exIdx}`;
         let wordsBoxHtml = '';
         if (ex.words_box && ex.words_box.length > 0) {
-          const wbBorder = isEnCurr ? '#cbd5e1' : (isArP1 ? '#a7f3d0' : '#7dd3fc');
-          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isArP1 ? '#065f46' : '#0369a1');
-          const wbTagBg = isEnCurr ? '#f1f5f9' : (isArP1 ? '#ecfdf5' : '#f0f9ff');
-          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : '#bae6fd');
-          const wbTagColor = isEnCurr ? '#0f172a' : (isArP1 ? '#064e3b' : '#0c4a6e');
+          const wbBorder = isEnCurr ? '#cbd5e1' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#7dd3fc'));
+          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0369a1'));
+          const wbTagBg = isEnCurr ? '#f1f5f9' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#faf5ff' : '#f0f9ff'));
+          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#bae6fd'));
+          const wbTagColor = isEnCurr ? '#0f172a' : (isArP1 ? '#064e3b' : (isMathCurr ? '#581c87' : '#0c4a6e'));
 
           wordsBoxHtml = `
             <div style="background: #ffffff; border: 1px dashed ${wbBorder}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
@@ -599,19 +617,19 @@ async function renderCurrentLessonContent(currId, chapters) {
             const aDir = ansIsEnglish ? 'ltr' : 'rtl';
             const aAlign = ansIsEnglish ? 'left' : 'right';
 
-            const solBorderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : '#0284c7');
-            const solBgColor = isEnCurr ? '#f0fdfa' : (isArP1 ? '#f0fdf4' : '#f0f9ff');
-            const solHeaderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : '#0284c7');
-            const solBodyColor = isEnCurr ? '#065f46' : (isArP1 ? '#064e3b' : '#0c4a6e');
+            const solBorderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'));
+            const solBgColor = isEnCurr ? '#f0fdfa' : (isArP1 ? '#f0fdf4' : (isMathCurr ? '#fdf4ff' : '#f0f9ff'));
+            const solHeaderColor = isEnCurr ? '#0d9488' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'));
+            const solBodyColor = isEnCurr ? '#065f46' : (isArP1 ? '#064e3b' : (isMathCurr ? '#701a75' : '#0c4a6e'));
 
             return `
               <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
-                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: ${qDir}; text-align: ${qAlign}; line-height: 1.6;">
-                  ${qObj.q}
+                <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: ${qDir}; text-align: ${qAlign}; line-height: 1.6; white-space: pre-wrap;">
+                  ${useMathFmt ? formatPhysicsMath(qObj.q) : qObj.q}
                 </div>
                 ${(qObj.options && qObj.options.length > 0) ? `
                   <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: ${qDir};">
-                    ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${opt}</span>`).join('')}
+                    ${qObj.options.map(opt => `<span style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${useMathFmt ? formatPhysicsMath(opt) : opt}</span>`).join('')}
                   </div>
                 ` : ''}
                 ${qObj.q_ar ? `<div style="font-size: 0.76rem; color: var(--slate-500); margin-top: 0.15rem;">${qObj.q_ar}</div>` : ''}
@@ -619,16 +637,16 @@ async function renderCurrentLessonContent(currId, chapters) {
                   <div style="font-weight: 800; color: ${solHeaderColor}; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
                     <span>✅</span> الحل النموذجي المعتمد والشرح:
                   </div>
-                  <div style="direction: ${aDir}; text-align: ${aAlign}; font-weight: 600; color: ${solBodyColor}; white-space: pre-wrap; line-height: 1.7;">${qObj.a}</div>
+                  <div style="direction: ${aDir}; text-align: ${aAlign}; font-weight: 600; color: ${solBodyColor}; white-space: pre-wrap; line-height: 1.7;">${useMathFmt ? formatPhysicsMath(qObj.a) : qObj.a}</div>
                 </div>
               </div>
             `;
           }).join('');
         }
 
-        const cardBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : '#bae6fd');
-        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isArP1 ? '#ecfdf5' : '#e0f2fe');
-        const cardBadgeColor = isEnCurr ? '#0f766e' : (isArP1 ? '#065f46' : '#0284c7');
+        const cardBorder = isEnCurr ? '#e2e8f0' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#e9d5ff' : '#bae6fd'));
+        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#f3e8ff' : '#e0f2fe'));
+        const cardBadgeColor = isEnCurr ? '#0f766e' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0284c7'));
 
         innerContentHtml += `
           <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid ${cardBorder}; border-radius: 12px; padding: 0.95rem; margin-bottom: 0.85rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
@@ -636,10 +654,10 @@ async function renderCurrentLessonContent(currId, chapters) {
               <div>
                 <span class="badge" style="background: ${cardBadgeBg}; color: ${cardBadgeColor}; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
                 <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
-                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isArP1 ? '#059669' : 'var(--slate-500)'}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
+                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isArP1 ? '#059669' : (isMathCurr ? '#6b21a8' : 'var(--slate-500)')}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
               </div>
               <div style="display: flex; gap: 0.35rem; align-items: center;">
-                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : ''}>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isMathCurr ? 'style="background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;"' : '')}>
                   <span>👁️</span> إظهار الحل
                 </button>
                 ${isEnCurr ? `
@@ -659,7 +677,7 @@ async function renderCurrentLessonContent(currId, chapters) {
 
       innerContentHtml += `</div>`;
     } else {
-      innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${/[a-zA-Z]{2,}/.test(text) ? 'ltr' : 'rtl'}; text-align: ${/[a-zA-Z]{2,}/.test(text) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>`;
+      innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'ltr' : 'rtl'}; text-align: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>`;
     }
 
             let chunkDiagramHtml = '';

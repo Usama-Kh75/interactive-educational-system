@@ -52,10 +52,10 @@ const REVIEW_MODAL_CONFIGS = {
     key: 'math',
     currId: 8,
     icon: '📐',
-    title: 'مركز الحلول النموذجية لمراجعات فصول الرياضيات',
-    subtitle: 'منهج الرياضيات للصف الثاني المتوسط (7 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم',
-    mode: 'lesson-exercises',
-    defaultItemId: 8015,
+    title: 'مركز الحلول النموذجية لتمارين ومراجعات فصول الرياضيات',
+    subtitle: 'منهج الرياضيات للصف الثاني المتوسط (7 فصول • تمارين الكتاب الوزاري ومراجعات واختبارات الفصول) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 801,
     defaultSolutionsVisible: false,
     bookOpenMode: 'library',
     showChunkBookBtn: false,
@@ -74,7 +74,11 @@ const REVIEW_MODAL_CONFIGS = {
       gradient: 'linear-gradient(135deg, #7e22ce, #6b21a8)',
       shadowRgba: 'rgba(126,34,206,0.28)'
     },
-    getMetaList: () => (window.MATH_REVIEW_CHAPTERS_META || []).map(m => ({ ...m, itemKey: m.id, primaryLessonId: m.id })),
+    getMetaList: () => (window.MATH_REVIEW_CHAPTERS_META || []).map(m => ({
+      ...m,
+      itemKey: m.unitId || m.id,
+      primaryLessonId: m.primaryLessonId || m.id
+    })),
     getCurriculum: () => window.MATH_CURRICULUM || []
   },
   biology: {

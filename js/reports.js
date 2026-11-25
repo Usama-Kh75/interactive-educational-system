@@ -392,11 +392,18 @@ window.ReportManager = (() => {
       // رصد الفجوات المحددة لكل منهج بدقة
       const gaps = [];
       if (spec.id === 8) {
-        gaps.push(`عدد الدروس الفعلي (${lessonsCount}) أقل من المُعلن في الواجهة (${spec.declaredLessons}).`);
-        gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً (${Math.round((lessonsWithoutExercises / (lessonsCount || 1)) * 100)}%) بدون تمارين أو حلول تفاعلية (تقتصر التمارين على 46 سؤالاً مجمّعاً في نهاية الفصول فقط).`);
-        gaps.push(`غياب فقرات «تأكد من فهمك» و«تدرب وحل التمرينات» و«مسائل حياتية» و«فكّر» و«الاختبار القبلي».`);
-        gaps.push(`صور كتاب الرياضيات = 0 من ${spec.declaredPages} صفحة معلنة.`);
-        gaps.push(`حجم النصوص الإجمالي ${Math.round(totalChars / 1024)} ك.ب فقط لكتابين كاملين، ولا توجد رسوم SVG هندسية.`);
+        if (lessonsCount !== spec.declaredLessons) {
+          gaps.push(`عدد الدروس الفعلي (${lessonsCount}) يختلف عن المُعلن في الواجهة (${spec.declaredLessons}).`);
+        }
+        if (lessonsWithoutExercises > 0) {
+          gaps.push(`الجزء الأول (الفصول 1 إلى 4: 28 درساً) مكتمل التمارين والحلول النموذجية 100%، وتبقى ${lessonsWithoutExercises} درساً في الجزء الثاني (الفصول 5 إلى 7) بدون بطاقات تمارين داخلية.`);
+        }
+        if (actualDiskImages < spec.declaredPages) {
+          gaps.push(`صور كتاب الرياضيات = ${actualDiskImages} من ${spec.declaredPages} صفحة معلنة.`);
+        }
+        if (diagramsCount === 0) {
+          gaps.push(`لا توجد رسوم SVG هندسية مضافة للرياضيات بعد (الحجم النصي للبيانات: ${Math.round(totalChars / 1024)} ك.ب).`);
+        }
       } else if (spec.id === 11) {
         gaps.push('0 بطاقات تمارين تفاعلية داخل مقاطع الدروس (توجد 93 إجابة في نافذة مراجعة الفصول فقط).');
         gaps.push('حلول مراجعات الدروس اليومية غائبة عن الفصول 2 إلى 7 (متوفرة نصياً في الفصل الأول فقط).');
@@ -424,9 +431,20 @@ window.ReportManager = (() => {
 
       let status = 'مكتمل وعالي';
       let statusTone = 'success';
-      if (spec.id === 8 || spec.id === 11) {
-        status = spec.id === 8 ? 'ناقص ويحتاج استكمالاً' : 'جيد مع فجوات تمارين';
-        statusTone = spec.id === 8 ? 'danger' : 'warning';
+      if (spec.id === 8) {
+        if (lessonsWithExercises >= 28 && lessonsWithoutExercises > 0) {
+          status = 'جيد (الجزء الأول مكتمل)';
+          statusTone = 'warning';
+        } else if (lessonsWithoutExercises === 0) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'ناقص ويحتاج استكمالاً';
+          statusTone = 'danger';
+        }
+      } else if (spec.id === 11) {
+        status = 'جيد مع فجوات تمارين';
+        statusTone = 'warning';
       } else if (spec.id === 9 || spec.id === 5 || spec.id === 10) {
         status = 'جيد مع فجوات جزئية';
         statusTone = 'warning';
