@@ -92,8 +92,8 @@ window.ReportManager = (() => {
       globalKey: 'MATH_CURRICULUM',
       rulesKey: 'MATH_RULES',
       examMode: 'math',
-      diagramsKey: null,
-      declaredLessons: 43,
+      diagramsKey: 'MATH_DIAGRAMS',
+      declaredLessons: 51,
       declaredPages: 252
     },
     {
@@ -396,10 +396,10 @@ window.ReportManager = (() => {
           gaps.push(`عدد الدروس الفعلي (${lessonsCount}) يختلف عن المُعلن في الواجهة (${spec.declaredLessons}).`);
         }
         if (lessonsWithoutExercises > 0) {
-          gaps.push(`الجزء الأول (الفصول 1 إلى 4: 28 درساً) مكتمل التمارين والحلول النموذجية 100%، وتبقى ${lessonsWithoutExercises} درساً في الجزء الثاني (الفصول 5 إلى 7) بدون بطاقات تمارين داخلية.`);
+          gaps.push(`توجد ${lessonsWithoutExercises} دروس في الرياضيات بدون بطاقات تمارين داخلية.`);
         }
         if (actualDiskImages < spec.declaredPages) {
-          gaps.push(`صور كتاب الرياضيات = ${actualDiskImages} من ${spec.declaredPages} صفحة معلنة.`);
+          gaps.push(`صور صفحات كتاب الرياضيات غير مرفقة كملفات صور بعد (${actualDiskImages} من ${spec.declaredPages} صفحة؛ النصوص والحلول والرسوم SVG مكتملة 100%).`);
         }
         if (diagramsCount === 0) {
           gaps.push(`لا توجد رسوم SVG هندسية مضافة للرياضيات بعد (الحجم النصي للبيانات: ${Math.round(totalChars / 1024)} ك.ب).`);

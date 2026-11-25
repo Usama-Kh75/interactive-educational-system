@@ -87,7 +87,7 @@ function renderDashboardCurriculaQuickBar() {
           <strong style="font-size: 0.92rem; color: var(--slate-900);">الرياضيات</strong>
           ${isMathActive ? '<span style="background: #7e22ce; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #faf5ff; color: #7e22ce; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">معتمد</span>'}
         </div>
-        <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">7 فصول • 43 درساً • 252 ص</div>
+        <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">7 فصول • 51 درساً • 17 رسماً SVG</div>
       </div>
     </button>
 
@@ -671,6 +671,7 @@ function renderCurriculumsList() {
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
               <span class="curr-badge" style="background: #7e22ce; color: #ffffff; font-weight: 900; font-size: 0.78rem; padding: 0.25rem 0.75rem; border-radius: 6px;">مقرر وزاري معتمد</span>
               <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الكامل (الجزء الأول والثاني • 7 فصول) • مكتمل 100%</span>
+              <span style="background: #ffffff; color: #581c87; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">📐 17 لوحة هندسية وبيانية SVG</span>
               <span style="background: #ffffff; color: var(--slate-700); border: 1px solid var(--slate-200); padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: الثاني متوسط</span>
             </div>
             <h3 style="font-size: 1.5rem; font-weight: 900; margin: 0 0 0.4rem; color: #581c87; display: flex; align-items: center; gap: 0.6rem;">
@@ -678,13 +679,13 @@ function renderCurriculumsList() {
               <span>مادة الرياضيات - الصف الثاني المتوسط</span>
             </h3>
             <p style="font-size: 0.88rem; color: #6b21a8; line-height: 1.65; margin: 0; max-width: 900px;">
-              المنهج الرسمي المعتمد لوزارة التربية العراقية بكامل فصوله ومسائله ونظرياته: الأعداد النسبية، الأعداد الحقيقية وخواص العمليات، الحدوديات والتحليل الجبري، المعادلات والمتباينات في R، الهندسة والقياس وتطابق المثلثات، الهندسة الإحداثية والميل، والإحصاء والاحتمالات (43 درساً تفاعلياً، 252 صفحة معتمدة، 22 قانوناً ونظرية ومفهوماً مدعماً بالحلول النموذجية الشاملة).
+              المنهج الرسمي المعتمد لوزارة التربية العراقية بكامل فصوله ومسائله ونظرياته: الأعداد النسبية، الأعداد الحقيقية وخواص العمليات، الحدوديات والتحليل الجبري، المعادلات والمتباينات في R، الهندسة والقياس وتطابق المثلثات، الهندسة الإحداثية والميل، والإحصاء والاحتمالات (51 درساً تفاعلياً، 635 سؤالاً محلولاً، 17 لوحة هندسية وبيانية SVG، و22 قانوناً ونظرية ومفهوماً).
             </p>
           </div>
 
           <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
             <span style="background: #ffffff; color: #7e22ce; border: 1.5px solid #d8b4fe; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
-              📖 7 فصول شاملة
+              📖 7 فصول • 51 درساً
             </span>
             <span style="background: #ffffff; color: #b45309; border: 1.5px solid #fde68a; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
               💡 22 قانوناً ونظرية
@@ -701,7 +702,7 @@ function renderCurriculumsList() {
           </div>
           <div>
             <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الجزأين 1 و 2)</div>
-            <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">4 وحدات كبرى • 7 فصول • 43 درساً تفاعلياً • بنك النظريات والقوانين</div>
+            <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">4 وحدات كبرى • 7 فصول • 51 درساً تفاعلياً • 17 لوحة SVG • بنك النظريات</div>
             <div style="font-size: 0.76rem; color: #7e22ce; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
           </div>
         </div>
@@ -709,6 +710,9 @@ function renderCurriculumsList() {
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
           <button class="btn btn-primary" onclick="openSubjectTab(${mathCardCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(126, 34, 206, 0.3);">
             📖 دخول قاعة المذاكرة والدروس ⮞
+          </button>
+          <button class="btn btn-secondary" onclick="openAllMathDiagramsGallery()" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+            🎨 الرسوم الهندسية SVG (17 لوحة)
           </button>
           <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${mathCardCurr.id}); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
             💡 بنك القوانين والنظريات
@@ -1188,7 +1192,8 @@ function renderActiveSubjectShowcase() {
             <div>
               <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                 <span style="background: #7e22ce; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
-                <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول كاملة (252 صفحة)</span>
+                <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول • 51 درساً (635 سؤالاً)</span>
+                <span style="background: #ffffff; color: #581c87; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📐 17 لوحة هندسية SVG</span>
                 <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 22 قانوناً ونظرية ومفهوماً</span>
               </div>
               <h3 style="font-size: 1.4rem; font-weight: 900; color: #581c87; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -1196,12 +1201,15 @@ function renderActiveSubjectShowcase() {
                 <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
-                المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 43 درساً تفاعلياً، بنك النظريات والقوانين الرياضية، ونماذج الامتحانات المحلولة).
+                المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 51 درساً تفاعلياً، 17 لوحة هندسية وبيانية SVG، وبنك النظريات والامتحانات المحلولة).
               </p>
             </div>
             <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="openSubjectTab(8)" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);">
                 📖 دخول قاعة المذاكرة والدروس ⮞
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="openAllMathDiagramsGallery()" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                🎨 معرض الرسوم الهندسية (17 لوحة)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="selectCurriculumForStudy(8); switchTab('grammar'); setGrammarSubjectMode('math');" style="background: #faf5ff; color: #6b21a8; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
                 💡 بنك القوانين والنظريات

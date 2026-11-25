@@ -72,7 +72,7 @@ function populateStudyCurriculumSelect() {
   if (math) {
     const opt = document.createElement('option');
     opt.value = 8;
-    opt.innerText = '📐 الرياضيات (7 فصول معتمدة - 43 درساً تفاعلياً)';
+    opt.innerText = '📐 الرياضيات (7 فصول معتمدة - 51 درساً تفاعلياً)';
     if (appData.currentCurriculumId === 8) opt.selected = true;
     select.appendChild(opt);
   }
@@ -476,6 +476,11 @@ async function renderCurrentLessonContent(currId, chapters) {
             🔬 الرسم التوضيحي للدرس
           </button>
         ` : ''}
+        ${(appData.currentCurriculumId === 8 && window.getMathDiagramsForLesson && window.getMathDiagramsForLesson(activeLesson.id).length > 0) ? `
+          <button class="btn btn-sm" id="toggleMathDiagramBtn" onclick="toggleMediaSection('lessonMediaVisualContainer', 'mathDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #7e22ce; color: #ffffff; border: none; font-weight: 700; box-shadow: 0 1px 3px rgba(126,34,206,0.3);">
+            📐 الرسم الهندسي للدرس
+          </button>
+        ` : ''}
         ${(chunks || []).some(ch => ch.exercises && ch.exercises.length > 0) ? `
           <button class="btn btn-sm" id="toggleAllChunkReviewSolsBtn" onclick="toggleAllReviewSolutionsInPage()" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #0284c7; color: #ffffff; border: none; font-weight: 800; box-shadow: 0 1px 3px rgba(2,132,199,0.3); border-radius: 6px;">
             🎯 إظهار كافة الحلول النموذجية
@@ -685,13 +690,17 @@ async function renderCurrentLessonContent(currId, chapters) {
       let diag = null;
       if (window.BIOLOGY_DIAGRAMS) diag = window.BIOLOGY_DIAGRAMS.find(d => d.id === ch.diagram_id);
       if (!diag && window.CHEMISTRY_DIAGRAMS) diag = window.CHEMISTRY_DIAGRAMS.find(d => d.id === ch.diagram_id);
+      if (!diag && window.MATH_DIAGRAMS) diag = window.MATH_DIAGRAMS.find(d => d.id === ch.diagram_id);
       if (diag) {
         const isBioDiag = (diag.id && diag.id.startsWith('diag_bio_')) || (appData.currentCurriculumId === 11);
-        const borderCol = isBioDiag ? '#16a34a' : '#059669';
-        const bgLight = isBioDiag ? '#f0fdf4' : '#ecfdf5';
-        const textDark = isBioDiag ? '#166534' : '#065f46';
-        const icon = isBioDiag ? '🧬' : '🧪';
-        const openModalFn = isBioDiag ? `openBiologyDiagramModal('${diag.id}')` : `openChemistryDiagramModal('${diag.id}')`;
+        const isMathDiag = (diag.id && diag.id.startsWith('diag_math_')) || (appData.currentCurriculumId === 8);
+        const borderCol = isMathDiag ? '#7e22ce' : (isBioDiag ? '#16a34a' : '#059669');
+        const bgLight = isMathDiag ? '#faf5ff' : (isBioDiag ? '#f0fdf4' : '#ecfdf5');
+        const textDark = isMathDiag ? '#581c87' : (isBioDiag ? '#166534' : '#065f46');
+        const icon = isMathDiag ? '📐' : (isBioDiag ? '🧬' : '🧪');
+        const diagTypeLabel = isMathDiag ? 'لوحة هندسية وبيانية معتمدة' : 'لوحة توضيحية علمية معتمدة';
+        const diagExplainLabel = isMathDiag ? '💡 الشرح الهندسي المرافق للرسم: ' : '💡 الشرح العلمي المرافق للرسم: ';
+        const openModalFn = isMathDiag ? `openMathDiagramModal('${diag.id}')` : (isBioDiag ? `openBiologyDiagramModal('${diag.id}')` : `openChemistryDiagramModal('${diag.id}')`);
 
         chunkDiagramHtml = `
           <div style="margin: 0.85rem 0; background: #ffffff; border: 2px solid ${borderCol}; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
@@ -700,7 +709,7 @@ async function renderCurrentLessonContent(currId, chapters) {
                 <span style="font-size: 1.3rem;">${icon}</span>
                 <div>
                   <strong style="color: #0f172a; font-size: 0.95rem;">${diag.title}</strong>
-                  <div style="font-size: 0.72rem; color: ${textDark}; font-weight: 700;">لوحة توضيحية علمية معتمدة • ${diag.category}</div>
+                  <div style="font-size: 0.72rem; color: ${textDark}; font-weight: 700;">${diagTypeLabel} • ${diag.category}</div>
                 </div>
               </div>
               <button type="button" class="btn btn-secondary btn-sm" onclick="${openModalFn}" style="font-size: 0.74rem; padding: 0.25rem 0.65rem; background: ${bgLight}; border: 1px solid ${borderCol}; color: ${textDark}; font-weight: 800;">
@@ -713,7 +722,7 @@ async function renderCurrentLessonContent(currId, chapters) {
               </div>
             </div>
             <div style="margin-top: 0.5rem; background: ${bgLight}; border-right: 4px solid ${borderCol}; padding: 0.45rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: ${textDark}; line-height: 1.5;">
-              <strong>💡 الشرح العلمي المرافق للرسم: </strong>${diag.summary}
+              <strong>${diagExplainLabel}</strong>${diag.summary}
             </div>
           </div>
         `;
@@ -983,7 +992,7 @@ function renderDigitalLibraryPage(lessonTitle = '') {
     img.removeAttribute('src');
     if (missingNotice) {
       if (missingTitle) missingTitle.innerText = 'صور صفحات كتاب الرياضيات غير مدمجة في هذا الإصدار';
-      if (missingDesc) missingDesc.innerText = `الصفحة المطلوبة (ص ${pageNum}) غير مرفقة كصورة بعد، لكن كامل دروس الرياضيات الـ 43 والقوانين والحلول النموذجية والاختبارات متوفرة تفاعلياً داخل المنظومة.`;
+      if (missingDesc) missingDesc.innerText = `الصفحة المطلوبة (ص ${pageNum}) غير مرفقة كصورة بعد، لكن كامل دروس الرياضيات الـ 51 والرسوم الهندسية الـ 17 والقوانين والحلول النموذجية والاختبارات متوفرة تفاعلياً داخل المنظومة.`;
       if (missingActions) {
         missingActions.innerHTML = `
           <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(8); scrollToStudyContent();">📚 فتح دروس الرياضيات</button>
@@ -1332,6 +1341,7 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   const isP2 = curr.id === 5 || curr.image_folder === 'arabic_p2';
   const isIslamic = curr.id === 6 || curr.image_folder === 'islamic';
   const isPhysics = curr.id === 7 || curr.image_folder === 'physics';
+  const isMath = curr.id === 8 || curr.image_folder === 'math';
   const isSocial = curr.id === 9 || curr.image_folder === 'social';
   const isChemistry = curr.id === 10 || curr.image_folder === 'chemistry';
   const isBiology = curr.id === 11 || curr.image_folder === 'biology';
@@ -1341,12 +1351,14 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   else if (isP2) { imgFolder = 'arabic_p2/'; bookLabel = 'كتاب العربية (الجزء الثاني)'; }
   else if (isIslamic) { imgFolder = 'islamic/'; bookLabel = 'كتاب التربية الإسلامية'; }
   else if (isPhysics) { imgFolder = 'physics/'; bookLabel = 'كتاب الفيزياء'; }
+  else if (isMath) { imgFolder = 'math/'; bookLabel = 'كتاب الرياضيات المعتمد'; }
   else if (isSocial) { imgFolder = 'social/'; bookLabel = 'كتاب الاجتماعيات'; }
   else if (isChemistry) { imgFolder = 'chemistry/'; bookLabel = 'كتاب الكيمياء'; }
   else if (isBiology) { imgFolder = 'biology/'; bookLabel = 'كتاب علم الأحياء المعتمد (الصور والرسوم الأصلية)'; }
 
   const rawPages = (chunks || []).map(ch => ch.page_number || ch.page || 1);
   const pages = [...new Set(rawPages)];
+  const mathDiagramsList = (isMath && window.getMathDiagramsForLesson) ? window.getMathDiagramsForLesson(lesson.id) : [];
   const cardData = (window.TOPIC_CARDS && window.TOPIC_CARDS[lesson.id]) ? window.TOPIC_CARDS[lesson.id] : 
                    (window.ARABIC_TOPIC_CARDS && window.ARABIC_TOPIC_CARDS[lesson.id] ? window.ARABIC_TOPIC_CARDS[lesson.id] : 
                    (window.ISLAMIC_TOPIC_CARDS && window.ISLAMIC_TOPIC_CARDS[lesson.id] ? window.ISLAMIC_TOPIC_CARDS[lesson.id] : 
@@ -1364,9 +1376,11 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
       </div>
       <div style="display: flex; gap: 0.35rem; align-items: center;">
         <span style="font-size: 0.72rem; color: var(--slate-500); margin-left: 0.25rem;">إعداد م. أسامة خليل هاشم</span>
+        ${!isMath ? `
         <button class="btn btn-secondary btn-sm" onclick="toggleMediaSection('bookPagesSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem;">
           📖 صور الكتاب (${pages.join(', ')})
         </button>
+        ` : ''}
         ${cardData ? `
           <button class="btn btn-primary btn-sm" onclick="toggleMediaSection('topicCardSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: ${cardData.themeColor || 'var(--primary)'};">
             ✨ بطاقة المفهوم المصورة
@@ -1375,6 +1389,11 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
         ${(isPhysics && window.getPhysicsDiagram && window.getPhysicsDiagram(lesson.id)) ? `
           <button class="btn btn-sm" onclick="toggleMediaSection('physicsDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #0284c7; color: #ffffff; font-weight: 700;">
             🔬 الرسم التوضيحي
+          </button>
+        ` : ''}
+        ${(isMath && mathDiagramsList.length > 0) ? `
+          <button class="btn btn-sm" onclick="toggleMediaSection('mathDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #7e22ce; color: #ffffff; font-weight: 700;">
+            📐 الرسوم الهندسية
           </button>
         ` : ''}
         ${(isChemistry && window.getChemistryDiagram && window.getChemistryDiagram(lesson.id)) ? `
@@ -1394,6 +1413,7 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   `;
 
   // 1. بطاقات صفحات الكتاب الأصلية
+  if (!isMath) {
   pages.forEach((p, idx) => {
     html += `
       <div ${idx === 0 ? 'id="bookPagesSec"' : ''} class="book-pages-media-card" style="background: white; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.6rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
@@ -1413,6 +1433,7 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
       </div>
     `;
   });
+  }
 
   // 1.2. بطاقات صفحات كراس النشاط (Activity Book Pages)
   if (curr.id === 3 && lesson.activity_book_pages && lesson.activity_book_pages.length > 0) {
@@ -1589,15 +1610,65 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
         ` : ''}
 
         <!-- Takeaway Points -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
-          ${(chemDiagram.keyPoints || []).map(pt => `
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
-              <span style="color: #059669; font-weight: 800;">•</span> ${pt}
-            </div>
-          `).join('')}
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
+            ${(chemDiagram.keyPoints || []).map(pt => `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
+                <span style="color: #059669; font-weight: 800;">•</span> ${pt}
+              </div>
+            `).join('')}
+          </div>
         </div>
-      </div>
-    `;
+      `;
+  }
+
+  // 1.8. الرسوم الهندسية والبيانية للرياضيات (Math Geometric & Coordinate SVG Diagrams)
+  if (mathDiagramsList.length > 0) {
+    mathDiagramsList.forEach((mathDiagram, mIdx) => {
+      html += `
+        <div ${mIdx === 0 ? 'id="mathDiagramSec"' : ''} class="math-diagram-media-card" style="background: white; border: 2px solid #7e22ce; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(126,34,206,0.1); margin-bottom: 1rem; grid-column: 1 / -1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; border-bottom: 1px solid #e9d5ff; padding-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.4rem;">📐</span>
+              <div>
+                <h4 style="margin: 0; font-size: 0.98rem; font-weight: 800; color: #0f172a;">${mathDiagram.title}</h4>
+                <span style="font-size: 0.72rem; color: #6b21a8; font-weight: 700;">لوحة هندسية وبيانية معتمدة • ${mathDiagram.category}</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              <span style="font-size: 0.68rem; background: #f3e8ff; color: #581c87; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">رسم متجهي دقيق</span>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="openMathDiagramModal('${mathDiagram.id}')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #faf5ff; border: 1px solid #d8b4fe; color: #7e22ce; font-weight: 700;">
+                🔍 تكبير وفحص الرسم
+              </button>
+            </div>
+          </div>
+
+          <div role="button" tabindex="0" aria-label="تكبير وفحص ${escapeForAttribute(mathDiagram.title)}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openMathDiagramModal('${mathDiagram.id}');}" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; cursor: pointer; padding: 0.4rem;" onclick="openMathDiagramModal('${mathDiagram.id}')" title="انقر لتكبير وفحص الرسم التوضيحي">
+            <div style="width: 100%; max-width: 680px;">
+              ${mathDiagram.svg}
+            </div>
+          </div>
+
+          <div style="background: #faf5ff; border-right: 4px solid #7e22ce; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.8rem; color: #581c87; margin-top: 0.5rem; margin-bottom: 0.5rem; line-height: 1.5;">
+            <strong>💡 الشرح الهندسي: </strong>${mathDiagram.summary}
+          </div>
+
+          ${mathDiagram.formula ? `
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.85rem;">📐</span>
+              <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${mathDiagram.formula}</span>
+            </div>
+          ` : ''}
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
+            ${(mathDiagram.keyPoints || []).map(pt => `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem; color: #334155; line-height: 1.4;">
+                <span style="color: #7e22ce; font-weight: 800;">✔️</span> ${pt}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    });
   }
 
   // 2. البطاقة البصرية المصممة للموضوع

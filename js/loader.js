@@ -30,6 +30,7 @@ window.CurriculumLoader = (() => {
 
   const DIAGRAM_SPECS = {
     physics: { currId: 7, script: 'curriculum_diagrams_physics.js', globalKey: 'PHYSICS_DIAGRAMS', label: 'رسوم الفيزياء التوضيحية' },
+    math: { currId: 8, script: 'curriculum_diagrams_math.js', globalKey: 'MATH_DIAGRAMS', label: 'الرسوم الهندسية والبيانية للرياضيات' },
     chemistry: { currId: 10, script: 'curriculum_diagrams_chemistry.js', globalKey: 'CHEMISTRY_DIAGRAMS', label: 'رسوم الكيمياء التوضيحية' },
     biology: { currId: 11, script: 'curriculum_diagrams_biology.js', globalKey: 'BIOLOGY_DIAGRAMS', label: 'رسوم علم الأحياء التوضيحية' }
   };

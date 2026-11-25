@@ -916,6 +916,30 @@ function openCurrentModalIslamicBookPage() { openUnifiedReviewBookPage(); }
 // المحرك الموحد لمعارض الرسوم التوضيحية وعارض اللوحات (الفيزياء، الكيمياء، الأحياء)
 // =========================================================================
 const DIAGRAM_MODAL_CONFIGS = {
+  math: {
+    key: 'math',
+    galleryIcon: '📐',
+    viewerIcon: '📐',
+    galleryTitle: 'معرض الرسوم الهندسية والبيانية للرياضيات (17 لوحة)',
+    gallerySubtitle: 'رسوم متجهية هندسية وإحداثية وإحصائية تغطي فصول المنهج • إعداد المهندس أسامة خليل هاشم',
+    viewerDefaultTitle: 'الرسم الهندسي والبياني المعتمد',
+    viewerSubPrefix: 'منهج الرياضيات للصف الثاني المتوسط • إعداد المهندس أسامة خليل هاشم',
+    summaryLabel: '💡 الشرح الهندسي والمفهوم الرياضي:',
+    formulaIcon: '📐',
+    formulaLabel: 'القانون والمعادلة المعتمدة:',
+    accentColor: '#7e22ce',
+    badgeBg: '#f3e8ff',
+    badgeText: '#6b21a8',
+    categories: [
+      ['all', 'كل الرسوم (17)'],
+      ['الهندسة والقياس', 'الهندسة والقياس'],
+      ['المجسمات والأشكال المركبة', 'المجسمات والأشكال المركبة'],
+      ['الهندسة الإحداثية', 'الهندسة الإحداثية'],
+      ['التحويلات الهندسية', 'التحويلات الهندسية'],
+      ['الإحصاء والاحتمالات', 'الإحصاء والاحتمالات']
+    ],
+    getList: () => window.MATH_DIAGRAMS || []
+  },
   physics: {
     key: 'physics',
     galleryIcon: '🎨',
@@ -1209,3 +1233,8 @@ function openBiologyDiagramModal(diagId) { return openDiagramViewerModal('biolog
 function closeBiologyDiagramModal() { closeDiagramViewerModal(); }
 function openAllBiologyDiagramsGallery(filterCat) { return openDiagramsGalleryModal('biology', filterCat); }
 function closeAllBiologyDiagramsModal() { closeDiagramsGalleryModal(); }
+
+function openMathDiagramModal(diagId) { return openDiagramViewerModal('math', diagId); }
+function closeMathDiagramModal() { closeDiagramViewerModal(); }
+function openAllMathDiagramsGallery(filterCat) { return openDiagramsGalleryModal('math', filterCat); }
+function closeAllMathDiagramsGallery() { closeDiagramsGalleryModal(); }

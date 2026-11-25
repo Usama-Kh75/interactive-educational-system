@@ -294,6 +294,7 @@ window.GlobalSearch = (() => {
     indexRulesList('rules_11', window.BIOLOGY_RULES, 11, 'bio');
 
     indexDiagramsList('diag_7', window.PHYSICS_DIAGRAMS, 7, 'physics');
+    indexDiagramsList('diag_8', window.MATH_DIAGRAMS, 8, 'math');
     indexDiagramsList('diag_10', window.CHEMISTRY_DIAGRAMS, 10, 'chemistry');
     indexDiagramsList('diag_11', window.BIOLOGY_DIAGRAMS, 11, 'biology');
 
