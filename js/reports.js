@@ -129,7 +129,7 @@ window.ReportManager = (() => {
       rulesKey: 'BIOLOGY_RULES',
       examMode: 'bio',
       diagramsKey: 'BIOLOGY_DIAGRAMS',
-      declaredLessons: 14,
+      declaredLessons: 21,
       declaredPages: 92
     }
   ];
@@ -365,7 +365,7 @@ window.ReportManager = (() => {
             modalReviewAnswersCount += (sec.answers || []).length;
           });
         });
-      } else if (spec.id === 11 && Array.isArray(window.BIOLOGY_CHAPTER_REVIEWS)) {
+      } else if (spec.id === 11 && exerciseCardsCount === 0 && Array.isArray(window.BIOLOGY_CHAPTER_REVIEWS)) {
         window.BIOLOGY_CHAPTER_REVIEWS.forEach((r) => {
           (r.solutions || []).forEach((sec) => {
             modalReviewAnswersCount += (sec.answers || []).length;
@@ -405,9 +405,15 @@ window.ReportManager = (() => {
           gaps.push(`لا توجد رسوم SVG هندسية مضافة للرياضيات بعد (الحجم النصي للبيانات: ${Math.round(totalChars / 1024)} ك.ب).`);
         }
       } else if (spec.id === 11) {
-        gaps.push('0 بطاقات تمارين تفاعلية داخل مقاطع الدروس (توجد 93 إجابة في نافذة مراجعة الفصول فقط).');
-        gaps.push('حلول مراجعات الدروس اليومية غائبة عن الفصول 2 إلى 7 (متوفرة نصياً في الفصل الأول فقط).');
-        gaps.push(`37 من ${actualDiskImages} صفحة كتاب مصورة غير مرتبطة بمقاطع الدروس.`);
+        if (lessonsWithoutExercises > 0) {
+          gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً في علم الأحياء بدون بطاقات تمارين تفاعلية داخلية.`);
+        }
+        if (referencedPages.size < (actualDiskImages - 3)) {
+          gaps.push(`${(actualDiskImages - 3) - referencedPages.size} صفحة محتوى من أصل ${actualDiskImages - 3} صفحة غير مرتبطة بمقاطع الدروس.`);
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–92) مربوطة بمقاطعها مع 17 لوحة SVG.`);
+        }
       } else if (spec.id === 9) {
         gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً بدون بطاقات تمارين تفاعلية (54 سؤالاً فقط لمراجعات الفصول الستة).`);
         gaps.push(`49 من ${actualDiskImages} صفحة كتاب مصورة غير مرتبطة مباشرة بمقاطع الدروس.`);
@@ -443,8 +449,13 @@ window.ReportManager = (() => {
           statusTone = 'danger';
         }
       } else if (spec.id === 11) {
-        status = 'جيد مع فجوات تمارين';
-        statusTone = 'warning';
+        if (lessonsWithoutExercises === 0 && referencedPages.size >= (actualDiskImages - 3)) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'جيد مع فجوات تمارين';
+          statusTone = 'warning';
+        }
       } else if (spec.id === 9 || spec.id === 5 || spec.id === 10) {
         status = 'جيد مع فجوات جزئية';
         statusTone = 'warning';

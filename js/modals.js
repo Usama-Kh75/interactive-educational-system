@@ -85,13 +85,13 @@ const REVIEW_MODAL_CONFIGS = {
     key: 'biology',
     currId: 11,
     icon: '🧬',
-    title: 'مركز الحلول النموذجية لمراجعات فصول علم الأحياء',
-    subtitle: 'منهج علم الأحياء للصف الثاني المتوسط (7 فصول معتمدة كاملة) • إعداد المهندس أسامة خليل هاشم',
-    mode: 'solutions-sections',
-    defaultItemId: 1,
-    defaultSolutionsVisible: true,
-    bookOpenMode: 'page-close',
-    showChunkBookBtn: false,
+    title: 'مركز الحلول النموذجية لمراجعات دروس وفصول علم الأحياء',
+    subtitle: 'منهج علم الأحياء للصف الثاني المتوسط (7 فصول • 21 درساً • مراجعات الدروس والفصول والحلول النموذجية) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 1101,
+    defaultSolutionsVisible: false,
+    bookOpenMode: 'page',
+    showChunkBookBtn: true,
     usePhysicsMath: false,
     itemTypeLabel: 'الفصل',
     theme: {
@@ -109,8 +109,9 @@ const REVIEW_MODAL_CONFIGS = {
     },
     getMetaList: () => (window.BIOLOGY_CHAPTER_REVIEWS || []).map(m => ({
       ...m,
-      itemKey: m.chapterId || m.chapterNum,
-      chapterNum: m.chapterNum || m.chapterId
+      itemKey: m.unitId || (1100 + Number(m.chapterNum || m.chapterId || 1)),
+      chapterNum: m.chapterNum || m.chapterId,
+      primaryLessonId: m.primaryLessonId || (11003 + 10 * Number(m.chapterNum || m.chapterId || 1))
     })),
     getCurriculum: () => window.BIOLOGY_CURRICULUM || []
   },

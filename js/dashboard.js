@@ -923,12 +923,12 @@ function renderCurriculumsList() {
             <div>
               <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                 <span class="curr-badge" style="background: #dcfce7; color: #15803d; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 6px;">علم الأحياء - الثاني متوسط</span>
-                <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • 7 فصول كاملة</span>
+                <span style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الوزاري المعتمد • 7 فصول • 21 درساً تفاعلياً</span>
                 <span style="background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">🔬 17 لوحة توضيحية حيوية</span>
               </div>
               <h3 style="font-size: 1.25rem; font-weight: 900; color: #14532d; margin-bottom: 0.4rem;">علم الأحياء - الصف الثاني المتوسط</h3>
               <p style="color: var(--slate-600); font-size: 0.86rem; line-height: 1.6; margin-bottom: 0.75rem;">
-                المنهج الدراسي الرسمي الكامل الصادر عن وزارة التربية العراقية (3 وحدات كبرى، 7 فصول، 92 صفحة أصلية): علم التصنيف وممالك الكائنات الحية الخمس، الكائنات الحية البسيطة (الطليعيات والفطريات والأشنات)، مملكة النباتات (الحزازيات والسرخسيات والبذرية)، مملكة الحيوانات (اللافقريات والفقريات)، والبيئة ومكوناتها ودورات العناصر في الطبيعة ومشكلات التوازن البيئي مع الرسوم التوضيحية المتجهية التفاعلية وبنك المفاهيم والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                المنهج الدراسي الرسمي الكامل الصادر عن وزارة التربية العراقية (3 وحدات كبرى، 7 فصول، 21 درساً تفاعلياً، 92 صفحة أصلية مربوطة بالكامل): علم التصنيف وممالك الكائنات الحية الخمس، الكائنات الحية البسيطة (الطليعيات والفطريات والأشنات)، مملكة النباتات (الحزازيات والسرخسيات والبذرية)، مملكة الحيوانات (اللافقريات والفقريات)، والبيئة ومكوناتها ودورات العناصر في الطبيعة ومشكلات التوازن البيئي مع الرسوم التوضيحية المتجهية التفاعلية وبنك المفاهيم والتمارين التفاعلية والحلول النموذجية الشاملة لكافة مراجعات الدروس والفصول.
               </p>
             </div>
             <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
@@ -939,7 +939,7 @@ function renderCurriculumsList() {
                 🔬 أطلس الرسوم الحيوية (17 لوحة)
               </button>
               <button class="btn btn-secondary" onclick="openBiologyReviewsModal()" style="background: #dcfce7; color: #14532d; border-color: #86efac; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-                🎯 مراجعات الفصول والحلول النموذجية (7 فصول)
+                🎯 مراجعات الدروس والفصول (260 سؤالاً)
               </button>
               <button class="btn btn-secondary" onclick="openBookPageModal(1, 'غلاف كتاب علم الأحياء', 'student', 11)" style="font-weight: 800; padding: 0.65rem 1rem; font-size: 0.85rem;">
                 📖 تصفح الكتاب الأصلي (92 ص)
@@ -1046,7 +1046,7 @@ function renderActiveSubjectShowcase() {
               <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                 <span style="background: #16a34a; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج الوزاري المعتمد • مكتمل 100%</span>
                 <span style="background: #fff; color: #166534; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #86efac;">وزارة التربية العراقية</span>
-                <span style="background: #fff; color: #15803d; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #4ade80;">3 وحدات • 7 فصول • 14 درساً تفاعلياً</span>
+                <span style="background: #fff; color: #15803d; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #4ade80;">3 وحدات • 7 فصول • 21 درساً تفاعلياً</span>
                 <span style="background: #dcfce7; color: #14532d; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #86efac;">🎨 17 لوحة توضيحية تفاعلية</span>
               </div>
               <h3 style="font-size: 1.35rem; font-weight: 900; color: #14532d; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -1054,7 +1054,7 @@ function renderActiveSubjectShowcase() {
                 <span>علم الأحياء - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.84rem; color: #166534; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
-                المنهج الوزاري الرسمي المعتمد شاملاً علم التصنيف وممالك الكائنات الحية الخمس، الكائنات البسيطة (الطليعيات والفطريات)، المملكة النباتية (الحزازيات والسرخسيات والبذرية)، المملكة الحيوانية (اللافقريات والفقريات)، والنظام البيئي وتوازنه ودورات العناصر مع 17 لوحة توضيحية علمية متجهة وعارض 92 صفحة أصلية وبنك المفاهيم البيولوجية والامتحانات والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                المنهج الوزاري الرسمي المعتمد شاملاً علم التصنيف وممالك الكائنات الحية الخمس، الكائنات البسيطة (الطليعيات والفطريات)، المملكة النباتية (الحزازيات والسرخسيات والبذرية)، المملكة الحيوانية (اللافقريات والفقريات)، والنظام البيئي وتوازنه ودورات العناصر مع 17 لوحة توضيحية علمية متجهة وعارض 92 صفحة أصلية وبنك المفاهيم البيولوجية والتمارين التفاعلية والامتحانات والحلول النموذجية الشاملة لكافة مراجعات الدروس والفصول.
               </p>
             </div>
 
@@ -1069,7 +1069,7 @@ function renderActiveSubjectShowcase() {
                 🎨 معرض الرسوم التوضيحية (17 لوحة)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="openBiologyReviewsModal()" style="background: #ffffff; color: #166534; border: 1px solid #86efac; font-weight: 800;">
-                🎯 مراجعات الفصول والحلول النموذجية (7)
+                🎯 مراجعات الدروس والفصول (260 سؤالاً)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('bio');" style="background: #ffffff; color: #15803d; border: 1px solid #86efac; font-weight: 800;">
                 💡 بنك المفاهيم والقواعد (28)
