@@ -758,7 +758,7 @@ function renderCurriculumsList() {
               <span>الاجتماعيات - الصف الثاني المتوسط</span>
             </h2>
             <p style="font-size: 0.92rem; color: #92400e; line-height: 1.7; margin: 0 0 1rem; font-weight: 600;">
-              المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي الطبيعية والاقتصادية، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) • 6 فصول شاملة، 39 درساً تفاعلياً، أطلس الخرائط التفاعلي، بنك المصطلحات والمفاهيم، والحلول النموذجية الشاملة.
+              المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي الطبيعية والاقتصادية، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) • 6 فصول شاملة، 39 درساً تفاعلياً، 71 بطاقة تمارين و 164 سؤالاً محلولاً، وربط كافة صفحات المحتوى (4–139) وبنك المصطلحات والمفاهيم.
             </p>
           </div>
 
@@ -772,7 +772,7 @@ function renderCurriculumsList() {
             </div>
             <div style="width: 1px; height: 16px; background: #fde68a;"></div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
-              <span>🎯 27 كتلة حلول نموذجية</span>
+              <span>🎯 71 بطاقة (164 سؤالاً)</span>
             </div>
             <div style="width: 1px; height: 16px; background: #fde68a;"></div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #92400e; font-weight: 800;">
@@ -803,7 +803,7 @@ function renderCurriculumsList() {
             💡 بنك المصطلحات والمفاهيم
           </button>
           <button class="btn btn-secondary" onclick="openSocialReviewsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-            🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+            🎯 مراجعات الدروس والفصول (164 سؤالاً)
           </button>
           <button class="btn btn-secondary" onclick="selectCurriculumForStudy(${socCardCurr.id}); switchTab('exams'); setExamSubjectMode('soc');" style="background: #ffffff; color: var(--slate-700); border-color: var(--slate-300); font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
             📝 الامتحانات الوزارية والشهرية
@@ -1153,7 +1153,7 @@ function renderActiveSubjectShowcase() {
                 <span>كتاب الاجتماعيات - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.85rem; color: #92400e; line-height: 1.6; margin: 0 0 0.75rem;">
-                المنهج الرسمي المعتمد لوزارة التربية العراقية: جغرافية العالم العربي الطبيعية والبشرية والاقتصادية، وأحوال شبه الجزيرة العربية قبل الإسلام، وتاريخ مكة المكرمة، والسيرة النبوية الشريفة بمكة والمدينة المنورة (6 فصول شاملة، 39 درساً تفاعلياً، وبنك المصطلحات والامتحانات الوزارية الشاملة).
+                المنهج الرسمي المعتمد لوزارة التربية العراقية: جغرافية العالم العربي الطبيعية والبشرية والاقتصادية، وأحوال شبه الجزيرة العربية قبل الإسلام، وتاريخ مكة المكرمة، والسيرة النبوية الشريفة بمكة والمدينة المنورة (6 فصول شاملة، 39 درساً تفاعلياً، 71 بطاقة تمارين و 164 سؤالاً محلولاً، ربط كافة صفحات المحتوى 4–139، وبنك المصطلحات والامتحانات الوزارية).
               </p>
             </div>
             <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
@@ -1164,7 +1164,7 @@ function renderActiveSubjectShowcase() {
                 💡 بنك المفاهيم والمصطلحات
               </button>
               <button class="btn btn-secondary btn-sm" onclick="openSocialReviewsModal()" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
-                🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+                🎯 مراجعات الدروس والفصول (164 سؤالاً)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(9, 1)" style="background: #ffffff; color: #92400e; border-color: #fde68a; font-weight: 800; padding: 0.55rem 1rem;">
                 📖 تصفح الكتاب الأصلي (140 صفحة)

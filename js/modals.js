@@ -159,11 +159,11 @@ const REVIEW_MODAL_CONFIGS = {
     key: 'social',
     currId: 9,
     icon: '🌍',
-    title: 'مركز الحلول النموذجية لمراجعات فصول الاجتماعيات',
-    subtitle: 'منهج الاجتماعيات للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم',
-    mode: 'lesson-exercises',
-    defaultItemId: 9019,
-    defaultSolutionsVisible: true,
+    title: 'مركز الحلول النموذجية لمراجعات دروس وفصول الاجتماعيات',
+    subtitle: 'منهج الاجتماعيات للصف الثاني المتوسط (6 فصول • 39 درساً • 71 بطاقة و 164 سؤالاً محلولاً) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 901,
+    defaultSolutionsVisible: false,
     bookOpenMode: 'page',
     showChunkBookBtn: true,
     usePhysicsMath: false,
@@ -183,8 +183,9 @@ const REVIEW_MODAL_CONFIGS = {
     },
     getMetaList: () => (window.SOCIAL_CHAPTER_REVIEWS || []).map((m, idx) => ({
       ...m,
-      itemKey: m.primaryLessonId,
-      badgeText: `الوحدة / ${m.unitId || (901 + idx)}`
+      itemKey: m.unitId || (901 + idx),
+      chapterNum: idx + 1,
+      badgeText: `الفصل ${idx + 1} • ${m.unitId || (901 + idx)}`
     })),
     getCurriculum: () => window.SOCIAL_CURRICULUM || []
   },
@@ -878,7 +879,7 @@ function toggleAllChemistryModalSolutions() { toggleAllUnifiedReviewSolutions();
 function openCurrentModalChemReviewInStudy() { openUnifiedReviewInStudy(); }
 function openCurrentModalChemBookPage() { openUnifiedReviewBookPage(); }
 
-function openSocialReviewsModal(reviewLessonId = 9019) { return openChapterReviewsModal('social', reviewLessonId); }
+function openSocialReviewsModal(reviewLessonId = 901) { return openChapterReviewsModal('social', reviewLessonId); }
 function closeSocialReviewsModal() { closeChapterReviewsModal(); }
 function switchSocialModalReviewChapter(id) { switchChapterReviewsItem(id); }
 function toggleAllSocialModalSolutions() { toggleAllUnifiedReviewSolutions(); }

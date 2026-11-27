@@ -524,6 +524,7 @@ async function renderCurrentLessonContent(currId, chapters) {
       let bannerHtml = '';
       const isArP1 = (appData.currentCurriculumId === 4);
       const isMathCurr = (appData.currentCurriculumId === 8);
+      const isSocCurr = (appData.currentCurriculumId === 9);
       const isBioCurr = (appData.currentCurriculumId === 11);
       const useMathFmt = (appData.currentCurriculumId === 7 || isMathCurr);
       if (isActivity) {
@@ -565,6 +566,22 @@ async function renderCurrentLessonContent(currId, chapters) {
               </span>
             </div>
             <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #7e22ce; border: 1px solid #d8b4fe; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              👁️ إظهار / إخفاء كافة الحلول
+            </button>
+          </div>
+        `;
+      } else if (isSocCurr) {
+        bannerHtml = `
+          <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1.5px solid #fde68a; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(180,83,9,0.08);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.88rem; font-weight: 800; color: #78350f; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <span>🌍</span> ${isReviewChunk ? 'مراجعة الفصل والحلول النموذجية المعتمدة (الاجتماعيات)' : 'مراجعة الدرس والأنشطة الصفية والحلول النموذجية المعتمدة (الاجتماعيات)'}
+              </span>
+              <span class="badge" style="background: #b45309; color: white; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                ✨ حل نموذجي وزاري معتمد
+              </span>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #92400e; border: 1px solid #fde68a; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
               👁️ إظهار / إخفاء كافة الحلول
             </button>
           </div>
@@ -620,11 +637,11 @@ async function renderCurrentLessonContent(currId, chapters) {
         const exId = ex.id || `ex_${idx}_${exIdx}`;
         let wordsBoxHtml = '';
         if (ex.words_box && ex.words_box.length > 0) {
-          const wbBorder = isEnCurr ? '#cbd5e1' : ((isArP1 || isBioCurr) ? '#86efac' : (isMathCurr ? '#d8b4fe' : '#7dd3fc'));
-          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isBioCurr ? '#14532d' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0369a1')));
-          const wbTagBg = isEnCurr ? '#f1f5f9' : (isBioCurr ? '#f0fdf4' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#faf5ff' : '#f0f9ff')));
-          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#bae6fd')));
-          const wbTagColor = isEnCurr ? '#0f172a' : (isBioCurr ? '#14532d' : (isArP1 ? '#064e3b' : (isMathCurr ? '#581c87' : '#0c4a6e')));
+          const wbBorder = isEnCurr ? '#cbd5e1' : ((isArP1 || isBioCurr) ? '#86efac' : (isSocCurr ? '#fde68a' : (isMathCurr ? '#d8b4fe' : '#7dd3fc')));
+          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0369a1'))));
+          const wbTagBg = isEnCurr ? '#f1f5f9' : (isBioCurr ? '#f0fdf4' : (isSocCurr ? '#fffbeb' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#faf5ff' : '#f0f9ff'))));
+          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#bae6fd'))));
+          const wbTagColor = isEnCurr ? '#0f172a' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#581c87' : '#0c4a6e'))));
 
           wordsBoxHtml = `
             <div style="background: #ffffff; border: 1px dashed ${wbBorder}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
@@ -644,10 +661,10 @@ async function renderCurrentLessonContent(currId, chapters) {
             const aDir = ansIsEnglish ? 'ltr' : 'rtl';
             const aAlign = ansIsEnglish ? 'left' : 'right';
 
-            const solBorderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#16a34a' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7')));
-            const solBgColor = isEnCurr ? '#f0fdfa' : (isBioCurr ? '#f0fdf4' : (isArP1 ? '#f0fdf4' : (isMathCurr ? '#fdf4ff' : '#f0f9ff')));
-            const solHeaderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#15803d' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7')));
-            const solBodyColor = isEnCurr ? '#065f46' : (isBioCurr ? '#14532d' : (isArP1 ? '#064e3b' : (isMathCurr ? '#701a75' : '#0c4a6e')));
+            const solBorderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#16a34a' : (isSocCurr ? '#b45309' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'))));
+            const solBgColor = isEnCurr ? '#f0fdfa' : (isBioCurr ? '#f0fdf4' : (isSocCurr ? '#fffdf5' : (isArP1 ? '#f0fdf4' : (isMathCurr ? '#fdf4ff' : '#f0f9ff'))));
+            const solHeaderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'))));
+            const solBodyColor = isEnCurr ? '#065f46' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#701a75' : '#0c4a6e'))));
 
             return `
               <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
@@ -671,9 +688,9 @@ async function renderCurrentLessonContent(currId, chapters) {
           }).join('');
         }
 
-        const cardBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#e9d5ff' : '#bae6fd')));
-        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isBioCurr ? '#dcfce7' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#f3e8ff' : '#e0f2fe')));
-        const cardBadgeColor = isEnCurr ? '#0f766e' : (isBioCurr ? '#15803d' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0284c7')));
+        const cardBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#e9d5ff' : '#bae6fd'))));
+        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isBioCurr ? '#dcfce7' : (isSocCurr ? '#fef3c7' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#f3e8ff' : '#e0f2fe'))));
+        const cardBadgeColor = isEnCurr ? '#0f766e' : (isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0284c7'))));
 
         innerContentHtml += `
           <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid ${cardBorder}; border-radius: 12px; padding: 0.95rem; margin-bottom: 0.85rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
@@ -681,10 +698,10 @@ async function renderCurrentLessonContent(currId, chapters) {
               <div>
                 <span class="badge" style="background: ${cardBadgeBg}; color: ${cardBadgeColor}; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
                 <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
-                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isBioCurr ? '#15803d' : (isArP1 ? '#059669' : (isMathCurr ? '#6b21a8' : 'var(--slate-500)'))}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
+                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#6b21a8' : 'var(--slate-500)')))}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
               </div>
               <div style="display: flex; gap: 0.35rem; align-items: center;">
-                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isBioCurr ? 'style="background: #f0fdf4; color: #15803d; border: 1px solid #86efac;"' : (isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isMathCurr ? 'style="background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;"' : ''))}>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isBioCurr ? 'style="background: #f0fdf4; color: #15803d; border: 1px solid #86efac;"' : (isSocCurr ? 'style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;"' : (isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isMathCurr ? 'style="background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;"' : '')))}>
                   <span>👁️</span> إظهار الحل
                 </button>
                 ${isEnCurr ? `

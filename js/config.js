@@ -6,9 +6,9 @@
 const LEGACY_STORAGE_KEY = 'interactive_educational_system_v2';
 const STORAGE_KEY = 'interactive_edu_state_v1';
 const BUILTIN_CURRICULUM_IDS = new Set([3, 4, 5, 6, 7, 8, 9, 10, 11]);
-const CURRENT_VERSION = '5.7.0';
-const CURRENT_VERSION_LABEL = 'v5.7.0';
-const SYSTEM_VERSION = 'v5.7.0';
+const CURRENT_VERSION = '5.8.0';
+const CURRENT_VERSION_LABEL = 'v5.8.0';
+const SYSTEM_VERSION = 'v5.8.0';
 const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
 const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
 const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -117,7 +117,7 @@ const BUILTIN_CURRICULA_META = [
     grade: 'الثاني متوسط',
     status: 'approved',
     image_folder: 'social',
-    description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي وتضاريسه ومناخه وموارده وسكانه ونشاطه الاقتصادي، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) مع القراءة الصوتية وعارض الصفحات والحلول النموذجية الشاملة.',
+    description: 'المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الاجتماعيات (الباب الأول: جغرافية العالم العربي وتضاريسه ومناخه وموارده وسكانه ونشاطه الاقتصادي، والباب الثاني: تاريخ العالم العربي وشبه الجزيرة ومكة المكرمة والسيرة النبوية الشريفة في مكة والمدينة) مع ربط كافة صفحات المحتوى (4–139) و 71 بطاقة تمارين و 164 سؤالاً محلولاً والقراءة الصوتية.',
     scripts: ['curriculum_data_social.js'],
     globalKey: 'SOCIAL_CURRICULUM',
     metaChaptersCount: 6,

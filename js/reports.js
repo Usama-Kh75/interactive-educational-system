@@ -415,8 +415,15 @@ window.ReportManager = (() => {
           gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–92) مربوطة بمقاطعها مع 17 لوحة SVG.`);
         }
       } else if (spec.id === 9) {
-        gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً بدون بطاقات تمارين تفاعلية (54 سؤالاً فقط لمراجعات الفصول الستة).`);
-        gaps.push(`49 من ${actualDiskImages} صفحة كتاب مصورة غير مرتبطة مباشرة بمقاطع الدروس.`);
+        if (lessonsWithoutExercises > 0) {
+          gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً بدون بطاقات تمارين تفاعلية.`);
+        }
+        if (referencedPages.size < (actualDiskImages - 4)) {
+          gaps.push(`${(actualDiskImages - 4) - referencedPages.size} صفحة محتوى من أصل ${actualDiskImages - 4} صفحة غير مرتبطة مباشرة بمقاطع الدروس.`);
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وأنشطة صفية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–139) مربوطة بمقاطعها.`);
+        }
       } else if (spec.id === 7) {
         gaps.push('حلول مراجعات الفصول شاملة (149 سؤالاً)، لكن مراجعات الدروس الـ 14 (اختبر معلوماتي) مدمجة كنص عادي غير تفاعلي.');
       } else if (spec.id === 10) {
@@ -456,7 +463,15 @@ window.ReportManager = (() => {
           status = 'جيد مع فجوات تمارين';
           statusTone = 'warning';
         }
-      } else if (spec.id === 9 || spec.id === 5 || spec.id === 10) {
+      } else if (spec.id === 9) {
+        if (lessonsWithoutExercises === 0 && referencedPages.size >= (actualDiskImages - 4)) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'جيد مع فجوات جزئية';
+          statusTone = 'warning';
+        }
+      } else if (spec.id === 5 || spec.id === 10) {
         status = 'جيد مع فجوات جزئية';
         statusTone = 'warning';
       }
