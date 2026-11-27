@@ -72,7 +72,7 @@ function populateStudyCurriculumSelect() {
   if (math) {
     const opt = document.createElement('option');
     opt.value = 8;
-    opt.innerText = '📐 الرياضيات (7 فصول معتمدة - 51 درساً تفاعلياً)';
+    opt.innerText = '📐 الرياضيات (196 صفحة - 7 فصول معتمدة - 51 درساً تفاعلياً)';
     if (appData.currentCurriculumId === 8) opt.selected = true;
     select.appendChild(opt);
   }
@@ -895,7 +895,7 @@ function getCurriculumMaxPages(currId, bookType = 'student') {
   if (id === 4 || id === 5) return 136;
   if (id === 6) return 120;
   if (id === 7) return 88;
-  if (id === 8) return 252;
+  if (id === 8) return 196;
   if (id === 9) return 140;
   if (id === 10) return 96;
   if (id === 11) return 92;
@@ -996,8 +996,8 @@ function renderDigitalLibraryPage(lessonTitle = '') {
     maxPages = 88;
   } else if (isMath) {
     folder = 'math/';
-    bookName = 'كتاب الرياضيات (الصف الثاني المتوسط)';
-    maxPages = 252;
+    bookName = 'كتاب الرياضيات الموحد (الصف الثاني المتوسط)';
+    maxPages = 196;
   } else if (isSocial) {
     folder = 'social/';
     bookName = 'كتاب الاجتماعيات (الصف الثاني المتوسط)';
@@ -1049,39 +1049,22 @@ function renderDigitalLibraryPage(lessonTitle = '') {
   const missingDesc = document.getElementById('bookPageMissingDesc');
   const missingActions = document.getElementById('bookPageMissingActions');
 
-  if (isMath) {
+  if (missingNotice) missingNotice.classList.add('hidden');
+  img.style.display = 'block';
+  img.onerror = function() {
     img.style.display = 'none';
-    img.onerror = null;
-    img.removeAttribute('src');
     if (missingNotice) {
-      if (missingTitle) missingTitle.innerText = 'صور صفحات كتاب الرياضيات غير مدمجة في هذا الإصدار';
-      if (missingDesc) missingDesc.innerText = `الصفحة المطلوبة (ص ${pageNum}) غير مرفقة كصورة بعد، لكن كامل دروس الرياضيات الـ 51 والرسوم الهندسية الـ 17 والقوانين والحلول النموذجية والاختبارات متوفرة تفاعلياً داخل المنظومة.`;
+      if (missingTitle) missingTitle.innerText = `تعذر عرض صفحة الكتاب (ص ${pageNum})`;
+      if (missingDesc) missingDesc.innerText = 'تأكد من الاتصال بالإنترنت عند فتح الصفحة لأول مرة ليتم تخزينها محلياً، أو انتقل لقاعة المذاكرة لقراءة النص الكامل.';
       if (missingActions) {
         missingActions.innerHTML = `
-          <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(8); scrollToStudyContent();">📚 فتح دروس الرياضيات</button>
-          <button type="button" class="btn btn-secondary btn-sm" onclick="closeBookPageModal(); openMathReviewsModal();" style="background: #faf5ff; color: #7e22ce; border-color: #d8b4fe;">🎯 حلول مراجعات الرياضيات</button>
+          <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(${currId}); scrollToStudyContent();">📚 الانتقال لقاعة المذاكرة</button>
         `;
       }
       missingNotice.classList.remove('hidden');
     }
-  } else {
-    if (missingNotice) missingNotice.classList.add('hidden');
-    img.style.display = 'block';
-    img.onerror = function() {
-      img.style.display = 'none';
-      if (missingNotice) {
-        if (missingTitle) missingTitle.innerText = `تعذر عرض صفحة الكتاب (ص ${pageNum})`;
-        if (missingDesc) missingDesc.innerText = 'تأكد من الاتصال بالإنترنت عند فتح الصفحة لأول مرة ليتم تخزينها محلياً، أو انتقل لقاعة المذاكرة لقراءة النص الكامل.';
-        if (missingActions) {
-          missingActions.innerHTML = `
-            <button type="button" class="btn btn-primary btn-sm" onclick="closeBookPageModal(); selectCurriculumForStudy(${currId}); scrollToStudyContent();">📚 الانتقال لقاعة المذاكرة</button>
-          `;
-        }
-        missingNotice.classList.remove('hidden');
-      }
-    };
-    img.src = `book_images/${folder}page_${pageNum}.jpeg`;
-  }
+  };
+  img.src = `book_images/${folder}page_${pageNum}.jpeg`;
   resetBookPageZoom();
 
   if (currSelect) currSelect.value = currId;
@@ -1439,11 +1422,9 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
       </div>
       <div style="display: flex; gap: 0.35rem; align-items: center;">
         <span style="font-size: 0.72rem; color: var(--slate-500); margin-left: 0.25rem;">إعداد م. أسامة خليل هاشم</span>
-        ${!isMath ? `
         <button class="btn btn-secondary btn-sm" onclick="toggleMediaSection('bookPagesSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem;">
           📖 صور الكتاب (${pages.join(', ')})
         </button>
-        ` : ''}
         ${cardData ? `
           <button class="btn btn-primary btn-sm" onclick="toggleMediaSection('topicCardSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: ${cardData.themeColor || 'var(--primary)'};">
             ✨ بطاقة المفهوم المصورة
@@ -1476,7 +1457,6 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   `;
 
   // 1. بطاقات صفحات الكتاب الأصلية
-  if (!isMath) {
   pages.forEach((p, idx) => {
     html += `
       <div ${idx === 0 ? 'id="bookPagesSec"' : ''} class="book-pages-media-card" style="background: white; border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.6rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
@@ -1496,7 +1476,6 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
       </div>
     `;
   });
-  }
 
   // 1.2. بطاقات صفحات كراس النشاط (Activity Book Pages)
   if (curr.id === 3 && lesson.activity_book_pages && lesson.activity_book_pages.length > 0) {

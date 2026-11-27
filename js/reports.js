@@ -16,7 +16,7 @@ window.ReportManager = (() => {
     5: 136,
     6: 120,
     7: 88,
-    8: 0,   // صور كتاب الرياضيات غير مرفقة بعد
+    8: 196, // كتاب الرياضيات الموحد (196 صفحة)
     9: 140,
     10: 96,
     11: 92
@@ -94,7 +94,7 @@ window.ReportManager = (() => {
       examMode: 'math',
       diagramsKey: 'MATH_DIAGRAMS',
       declaredLessons: 51,
-      declaredPages: 252
+      declaredPages: 196
     },
     {
       id: 9,
@@ -399,10 +399,16 @@ window.ReportManager = (() => {
           gaps.push(`توجد ${lessonsWithoutExercises} دروس في الرياضيات بدون بطاقات تمارين داخلية.`);
         }
         if (actualDiskImages < spec.declaredPages) {
-          gaps.push(`صور صفحات كتاب الرياضيات غير مرفقة كملفات صور بعد (${actualDiskImages} من ${spec.declaredPages} صفحة؛ النصوص والحلول والرسوم SVG مكتملة 100%).`);
+          gaps.push(`صور صفحات كتاب الرياضيات ناقصة على القرص (${actualDiskImages} من ${spec.declaredPages} صفحة).`);
+        }
+        if (referencedPages.size < (actualDiskImages - 5)) {
+          gaps.push(`${(actualDiskImages - 5) - referencedPages.size} صفحة محتوى من أصل ${actualDiskImages - 5} صفحة غير مرتبطة بمقاطع الدروس.`);
         }
         if (diagramsCount === 0) {
           gaps.push(`لا توجد رسوم SVG هندسية مضافة للرياضيات بعد (الحجم النصي للبيانات: ${Math.round(totalChars / 1024)} ك.ب).`);
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً عبر ${exerciseCardsCount} بطاقة)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–194) من الكتاب الموحد مربوطة بمقاطعها مع ${diagramsCount} لوحة SVG.`);
         }
       } else if (spec.id === 11) {
         if (lessonsWithoutExercises > 0) {
@@ -491,12 +497,12 @@ window.ReportManager = (() => {
       let status = 'مكتمل وعالي';
       let statusTone = 'success';
       if (spec.id === 8) {
-        if (lessonsWithExercises >= 28 && lessonsWithoutExercises > 0) {
-          status = 'جيد (الفصول 1 إلى 4 مكتملة)';
-          statusTone = 'warning';
-        } else if (lessonsWithoutExercises === 0) {
+        if (lessonsWithoutExercises === 0 && actualDiskImages >= spec.declaredPages && referencedPages.size >= (actualDiskImages - 5) && diagramsCount > 0) {
           status = 'مكتمل وعالي';
           statusTone = 'success';
+        } else if (lessonsWithExercises >= 28) {
+          status = 'جيد مع فجوات جزئية';
+          statusTone = 'warning';
         } else {
           status = 'ناقص ويحتاج استكمالاً';
           statusTone = 'danger';

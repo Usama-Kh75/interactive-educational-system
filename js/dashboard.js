@@ -688,7 +688,7 @@ function renderCurriculumsList() {
 
           <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
             <span style="background: #ffffff; color: #7e22ce; border: 1.5px solid #d8b4fe; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
-              📖 7 فصول • 51 درساً
+              📖 196 صفحة أصلية • 7 فصول • 51 درساً
             </span>
             <span style="background: #ffffff; color: #b45309; border: 1.5px solid #fde68a; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 9999px;">
               💡 22 قانوناً ونظرية
@@ -699,12 +699,11 @@ function renderCurriculumsList() {
 
       <div style="padding: 1.25rem 1.75rem; background: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div style="display: flex; gap: 1rem; align-items: center;">
-          <div style="width: 75px; height: 105px; border-radius: 8px; overflow: hidden; flex-shrink: 0; box-shadow: -3px 4px 10px rgba(126,34,206,0.2); background: #581c87; cursor: default; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-            <span style="font-size: 2.2rem;">📐</span>
-            <span style="font-size: 0.65rem; font-weight: 800; margin-top: 0.2rem;">الرياضيات</span>
+          <div style="width: 75px; height: 105px; border-radius: 8px; overflow: hidden; flex-shrink: 0; box-shadow: -3px 4px 10px rgba(126,34,206,0.2); background: #581c87; cursor: default;">
+            <img src="./book_images/math/page_1.jpeg" alt="غلاف كتاب الرياضيات" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
           </div>
           <div>
-            <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (كتاب موحد من 7 فصول)</div>
+            <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (كتاب موحد • 196 صفحة • 7 فصول)</div>
             <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">4 وحدات كبرى • 7 فصول • 51 درساً تفاعلياً • 17 لوحة SVG • بنك النظريات</div>
             <div style="font-size: 0.76rem; color: #7e22ce; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
           </div>
@@ -713,6 +712,9 @@ function renderCurriculumsList() {
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
           <button class="btn btn-primary" onclick="openSubjectTab(${mathCardCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(126, 34, 206, 0.3);">
             📖 دخول قاعة المذاكرة والدروس ⮞
+          </button>
+          <button class="btn btn-secondary" onclick="openDigitalLibraryReader(${mathCardCurr.id}, 1, 'student')" style="background: #ffffff; color: #581c87; border-color: #d8b4fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+            📖 تصفح الكتاب (196 صفحة)
           </button>
           <button class="btn btn-secondary" onclick="openAllMathDiagramsGallery()" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
             🎨 الرسوم الهندسية SVG (17 لوحة)
@@ -1187,14 +1189,14 @@ function renderActiveSubjectShowcase() {
     container.innerHTML = `
       <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1.5px solid #d8b4fe; border-radius: 18px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px -4px rgba(126, 34, 206, 0.15);">
         <div style="display: flex; gap: 1.25rem; align-items: stretch; flex-wrap: wrap;">
-          <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(126,34,206,0.25); background: #581c87; cursor: default; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-            <span style="font-size: 3rem;">📐</span>
-            <span style="font-size: 0.75rem; font-weight: 800; margin-top: 0.5rem; text-align: center; padding: 0 0.25rem;">كتاب الرياضيات</span>
+          <div style="width: 110px; height: 160px; border-radius: 10px; overflow: hidden; flex-shrink: 0; box-shadow: -4px 6px 14px rgba(126,34,206,0.25); background: #581c87; cursor: default; position: relative;">
+            <img src="./book_images/math/page_1.jpeg" alt="غلاف كتاب الرياضيات" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;" onerror="this.style.display='none';">
           </div>
           <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 250px;">
             <div>
               <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                 <span style="background: #7e22ce; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px;">مقرر وزاري معتمد • مكتمل 100%</span>
+                <span style="background: #ffffff; color: #581c87; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 196 صفحة أصلية</span>
                 <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📖 7 فصول • 51 درساً (635 سؤالاً)</span>
                 <span style="background: #ffffff; color: #581c87; border: 1px solid #d8b4fe; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">📐 17 لوحة هندسية SVG</span>
                 <span style="background: #ffffff; color: #b45309; border: 1px solid #fde68a; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px;">💡 22 قانوناً ونظرية ومفهوماً</span>
@@ -1204,12 +1206,15 @@ function renderActiveSubjectShowcase() {
                 <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
-                المنهج الرسمي المعتمد لوزارة التربية العراقية (كتاب موحد من 7 فصول): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 51 درساً تفاعلياً، 17 لوحة هندسية وبيانية SVG، وبنك النظريات والامتحانات المحلولة).
+                المنهج الرسمي المعتمد لوزارة التربية العراقية (كتاب موحد من 7 فصول • 196 صفحة أصلية): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 51 درساً تفاعلياً، 17 لوحة هندسية وبيانية SVG، وبنك النظريات والامتحانات المحلولة).
               </p>
             </div>
             <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="openSubjectTab(8)" style="font-weight: 800; background: linear-gradient(135deg, #7e22ce, #6b21a8); border: none; padding: 0.55rem 1.15rem; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);">
                 📖 دخول قاعة المذاكرة والدروس ⮞
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(8, 1, 'student')" style="background: #ffffff; color: #581c87; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
+                📖 تصفح الكتاب الأصلي (196 صفحة)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="openAllMathDiagramsGallery()" style="background: #ffffff; color: #7e22ce; border-color: #d8b4fe; font-weight: 800; padding: 0.55rem 1rem;">
                 🎨 معرض الرسوم الهندسية (17 لوحة)
