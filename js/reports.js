@@ -117,7 +117,7 @@ window.ReportManager = (() => {
       rulesKey: 'CHEMISTRY_RULES',
       examMode: 'chem',
       diagramsKey: 'CHEMISTRY_DIAGRAMS',
-      declaredLessons: 15,
+      declaredLessons: 21,
       declaredPages: 96
     },
     {
@@ -359,7 +359,7 @@ window.ReportManager = (() => {
 
       // الحلول المنفصلة في نافذة المراجعات الموحدة (الكيمياء والأحياء)
       let modalReviewAnswersCount = 0;
-      if (spec.id === 10 && Array.isArray(window.CHEMISTRY_CHAPTER_REVIEWS)) {
+      if (spec.id === 10 && exerciseCardsCount === 0 && Array.isArray(window.CHEMISTRY_CHAPTER_REVIEWS)) {
         window.CHEMISTRY_CHAPTER_REVIEWS.forEach((r) => {
           (r.solutions || []).forEach((sec) => {
             modalReviewAnswersCount += (sec.answers || []).length;
@@ -427,7 +427,15 @@ window.ReportManager = (() => {
       } else if (spec.id === 7) {
         gaps.push('حلول مراجعات الفصول شاملة (149 سؤالاً)، لكن مراجعات الدروس الـ 14 (اختبر معلوماتي) مدمجة كنص عادي غير تفاعلي.');
       } else if (spec.id === 10) {
-        gaps.push(`20 من ${actualDiskImages} صفحة كتاب مصورة غير مربوطة بمقاطع الدروس، ولا توجد دروس مستقلة لمراجعات الفصول في الشجرة.`);
+        if (lessonsWithoutExercises > 0) {
+          gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً في الكيمياء بدون بطاقات تمارين تفاعلية داخلية.`);
+        }
+        if (referencedPages.size < (actualDiskImages - 4)) {
+          gaps.push(`${(actualDiskImages - 4) - referencedPages.size} صفحة محتوى من أصل ${actualDiskImages - 4} صفحة غير مرتبطة بمقاطع الدروس.`);
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 5–96) مربوطة بمقاطعها مع 16 لوحة SVG.`);
+        }
       } else if (spec.id === 4) {
         gaps.push('تفاوت عدد الأسئلة بين الوحدات الأولى (38 سؤالاً) والأخيرة (9 أسئلة).');
       } else if (spec.id === 5) {
@@ -471,7 +479,15 @@ window.ReportManager = (() => {
           status = 'جيد مع فجوات جزئية';
           statusTone = 'warning';
         }
-      } else if (spec.id === 5 || spec.id === 10) {
+      } else if (spec.id === 10) {
+        if (lessonsWithoutExercises === 0 && referencedPages.size >= (actualDiskImages - 4)) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'جيد مع فجوات جزئية';
+          statusTone = 'warning';
+        }
+      } else if (spec.id === 5) {
         status = 'جيد مع فجوات جزئية';
         statusTone = 'warning';
       }

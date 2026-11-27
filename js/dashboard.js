@@ -843,7 +843,7 @@ function renderCurriculumsList() {
               <span>الكيمياء - الصف الثاني المتوسط</span>
             </h2>
             <p style="font-size: 0.92rem; color: #065f46; line-height: 1.7; margin: 0 0 1rem; font-weight: 600;">
-              المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الكيمياء (الوحدة 1: العناصر والترابط الكيميائي، الوحدة 2: التفاعلات الكيميائية والمحاليل، الوحدة 3: الحوامض والقواعد والأملاح) • 6 فصول شاملة، 15 درساً تفاعلياً، 16 لوحة توضيحية علمية متجهة، بنك المفاهيم والقواعد الكيميائية، والحلول النموذجية الشاملة لكافة فصول الكتاب.
+              المنهج الرسمي المعتمد لوزارة التربية العراقية لكتاب الكيمياء (الوحدة 1: العناصر والترابط الكيميائي، الوحدة 2: التفاعلات الكيميائية والمحاليل، الوحدة 3: الحوامض والقواعد والأملاح) • 6 فصول شاملة، 21 درساً تفاعلياً، 48 بطاقة تمارين و 203 سؤالاً محلولاً، ربط كافة صفحات المحتوى (5–96)، 16 لوحة توضيحية علمية متجهة، وبنك المفاهيم والقواعد الكيميائية.
             </p>
           </div>
 
@@ -853,15 +853,15 @@ function renderCurriculumsList() {
             </div>
             <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
-              <span>📖 15 درساً تفاعلياً</span>
+              <span>📖 21 درساً تفاعلياً</span>
+            </div>
+            <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
+            <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
+              <span>🎯 48 بطاقة (203 سؤالاً)</span>
             </div>
             <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
               <span>🎨 16 رسماً متجهياً</span>
-            </div>
-            <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
-            <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
-              <span>💡 24 قاعدة ومفهوماً</span>
             </div>
             <div style="width: 1px; height: 16px; background: #a7f3d0;"></div>
             <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #065f46; font-weight: 800;">
@@ -879,7 +879,7 @@ function renderCurriculumsList() {
           </div>
           <div>
             <div style="font-weight: 900; font-size: 1.05rem; color: #064e3b; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الوحدات 1، 2، 3)</div>
-            <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">3 وحدات كبرى • 6 فصول • 15 درساً تفاعلياً • 16 رسماً علمياً متجهياً</div>
+            <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">3 وحدات كبرى • 6 فصول • 21 درساً تفاعلياً • 48 بطاقة (203 سؤالاً) • 16 رسماً متجهياً</div>
             <div style="font-size: 0.76rem; color: #059669; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
           </div>
         </div>
@@ -892,7 +892,7 @@ function renderCurriculumsList() {
             💡 بنك المفاهيم والقواعد (24)
           </button>
           <button class="btn btn-secondary" onclick="openChemistryReviewsModal()" style="background: #d1fae5; color: #064e3b; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
-            🎯 مراجعات الفصول والحلول النموذجية (6 فصول)
+            🎯 مراجعات الدروس والفصول (203 سؤالاً)
           </button>
           <button class="btn btn-secondary" onclick="openAllChemistryDiagramsGallery()" style="background: #ffffff; color: #059669; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
             🎨 الرسوم التوضيحية (16 لوحة)
@@ -1098,7 +1098,7 @@ function renderActiveSubjectShowcase() {
               <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
                 <span style="background: #059669; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px;">المنهج الوزاري المعتمد • مكتمل 100%</span>
                 <span style="background: #fff; color: #065f46; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">وزارة التربية العراقية</span>
-                <span style="background: #fff; color: #047857; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #6ee7b7;">3 وحدات • 6 فصول • 15 درساً تفاعلياً</span>
+                <span style="background: #fff; color: #047857; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #6ee7b7;">3 وحدات • 6 فصول • 21 درساً تفاعلياً</span>
                 <span style="background: #d1fae5; color: #064e3b; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid #a7f3d0;">🎨 16 لوحة توضيحية تفاعلية</span>
               </div>
               <h3 style="font-size: 1.35rem; font-weight: 900; color: #064e3b; margin: 0 0 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -1106,7 +1106,7 @@ function renderActiveSubjectShowcase() {
                 <span>الكيمياء - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.84rem; color: #065f46; margin: 0 0 0.75rem; line-height: 1.6; font-weight: 600;">
-                المنهج الوزاري الرسمي المعتمد شاملاً العناصر والترابط، المركبات وقوى الجذب، الصيغ والمعادلات والتفاعلات، المحاليل والذوبان، الحوامض والقواعد، والأملاح والدلائل ومقياس pH مع 16 لوحة توضيحية علمية متجهة وعارض 96 صفحة أصلية وبنك المفاهيم والامتحانات والحلول النموذجية الشاملة لكافة مراجعات الفصول.
+                المنهج الوزاري الرسمي المعتمد شاملاً العناصر والترابط، المركبات وقوى الجذب، الصيغ والمعادلات والتفاعلات، المحاليل والذوبان، الحوامض والقواعد، والأملاح والدلائل ومقياس pH مع 48 بطاقة تمارين و 203 سؤالاً محلولاً وربط كافة صفحات المحتوى (5–96) و 16 لوحة توضيحية علمية متجهة.
               </p>
             </div>
 
@@ -1121,7 +1121,7 @@ function renderActiveSubjectShowcase() {
                 🎨 معرض الرسوم التوضيحية (16 لوحة)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="openChemistryReviewsModal()" style="background: #ffffff; color: #065f46; border: 1px solid #a7f3d0; font-weight: 800;">
-                🎯 مراجعات الفصول والحلول (6)
+                🎯 مراجعات الدروس والفصول (203 سؤالاً)
               </button>
               <button class="btn btn-secondary btn-sm" onclick="switchTab('grammar'); setGrammarSubjectMode('chem');" style="background: #ffffff; color: #047857; border: 1px solid #a7f3d0; font-weight: 800;">
                 💡 بنك المفاهيم والقواعد (24)

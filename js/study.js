@@ -92,7 +92,7 @@ function populateStudyCurriculumSelect() {
   if (chemistry) {
     const opt = document.createElement('option');
     opt.value = 10;
-    opt.innerText = '🧪 الكيمياء (96 صفحة - 6 فصول معتمدة - 15 درساً تفاعلياً)';
+    opt.innerText = '🧪 الكيمياء (96 صفحة - 6 فصول معتمدة - 21 درساً تفاعلياً)';
     if (appData.currentCurriculumId === 10) opt.selected = true;
     select.appendChild(opt);
   }
@@ -481,6 +481,11 @@ async function renderCurrentLessonContent(currId, chapters) {
             📐 الرسم الهندسي للدرس
           </button>
         ` : ''}
+        ${(appData.currentCurriculumId === 10 && window.getChemistryDiagramsForLesson && window.getChemistryDiagramsForLesson(activeLesson.id).length > 0) ? `
+          <button class="btn btn-sm" id="toggleChemistryDiagramBtn" onclick="toggleMediaSection('lessonMediaVisualContainer', 'chemistryDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #059669; color: #ffffff; border: none; font-weight: 700; box-shadow: 0 1px 3px rgba(5,150,105,0.3);">
+            🧪 الرسم التوضيحي للدرس
+          </button>
+        ` : ''}
         ${(appData.currentCurriculumId === 11 && window.getBiologyDiagramsForLesson && window.getBiologyDiagramsForLesson(activeLesson.id).length > 0) ? `
           <button class="btn btn-sm" id="toggleBiologyDiagramBtn" onclick="toggleMediaSection('lessonMediaVisualContainer', 'biologyDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.65rem; background: #16a34a; color: #ffffff; border: none; font-weight: 700; box-shadow: 0 1px 3px rgba(22,163,74,0.3);">
             🧬 الرسم التوضيحي للدرس
@@ -525,6 +530,7 @@ async function renderCurrentLessonContent(currId, chapters) {
       const isArP1 = (appData.currentCurriculumId === 4);
       const isMathCurr = (appData.currentCurriculumId === 8);
       const isSocCurr = (appData.currentCurriculumId === 9);
+      const isChemCurr = (appData.currentCurriculumId === 10);
       const isBioCurr = (appData.currentCurriculumId === 11);
       const useMathFmt = (appData.currentCurriculumId === 7 || isMathCurr);
       if (isActivity) {
@@ -586,6 +592,22 @@ async function renderCurrentLessonContent(currId, chapters) {
             </button>
           </div>
         `;
+      } else if (isChemCurr) {
+        bannerHtml = `
+          <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 1.5px solid #a7f3d0; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(5,150,105,0.08);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.88rem; font-weight: 800; color: #064e3b; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <span>🧪</span> ${isReviewChunk ? 'مراجعة الفصل والحلول النموذجية المعتمدة (الكيمياء)' : 'مراجعة الدرس والأنشطة والتفكير الناقد والحلول النموذجية (الكيمياء)'}
+              </span>
+              <span class="badge" style="background: #059669; color: white; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 4px;">
+                ✨ حل نموذجي وزاري معتمد
+              </span>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="toggleAllActivitySolutions('${idx}')" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 800; background: white; color: #065f46; border: 1px solid #a7f3d0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              👁️ إظهار / إخفاء كافة الحلول
+            </button>
+          </div>
+        `;
       } else if (isBioCurr) {
         bannerHtml = `
           <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1.5px solid #86efac; padding: 0.55rem 0.9rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(22,163,74,0.08);">
@@ -637,11 +659,11 @@ async function renderCurrentLessonContent(currId, chapters) {
         const exId = ex.id || `ex_${idx}_${exIdx}`;
         let wordsBoxHtml = '';
         if (ex.words_box && ex.words_box.length > 0) {
-          const wbBorder = isEnCurr ? '#cbd5e1' : ((isArP1 || isBioCurr) ? '#86efac' : (isSocCurr ? '#fde68a' : (isMathCurr ? '#d8b4fe' : '#7dd3fc')));
-          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0369a1'))));
-          const wbTagBg = isEnCurr ? '#f1f5f9' : (isBioCurr ? '#f0fdf4' : (isSocCurr ? '#fffbeb' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#faf5ff' : '#f0f9ff'))));
-          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#bae6fd'))));
-          const wbTagColor = isEnCurr ? '#0f172a' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#581c87' : '#0c4a6e'))));
+          const wbBorder = isEnCurr ? '#cbd5e1' : ((isArP1 || isBioCurr) ? '#86efac' : (isChemCurr ? '#a7f3d0' : (isSocCurr ? '#fde68a' : (isMathCurr ? '#d8b4fe' : '#7dd3fc'))));
+          const wbTitleColor = isEnCurr ? 'var(--slate-700)' : (isBioCurr ? '#14532d' : (isChemCurr ? '#064e3b' : (isSocCurr ? '#78350f' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0369a1')))));
+          const wbTagBg = isEnCurr ? '#f1f5f9' : (isBioCurr ? '#f0fdf4' : (isChemCurr ? '#ecfdf5' : (isSocCurr ? '#fffbeb' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#faf5ff' : '#f0f9ff')))));
+          const wbTagBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isChemCurr ? '#a7f3d0' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#d8b4fe' : '#bae6fd')))));
+          const wbTagColor = isEnCurr ? '#0f172a' : (isBioCurr ? '#14532d' : (isChemCurr ? '#064e3b' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#581c87' : '#0c4a6e')))));
 
           wordsBoxHtml = `
             <div style="background: #ffffff; border: 1px dashed ${wbBorder}; border-radius: 8px; padding: 0.45rem 0.75rem; margin: 0.45rem 0; font-size: 0.84rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
@@ -661,10 +683,10 @@ async function renderCurrentLessonContent(currId, chapters) {
             const aDir = ansIsEnglish ? 'ltr' : 'rtl';
             const aAlign = ansIsEnglish ? 'left' : 'right';
 
-            const solBorderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#16a34a' : (isSocCurr ? '#b45309' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'))));
-            const solBgColor = isEnCurr ? '#f0fdfa' : (isBioCurr ? '#f0fdf4' : (isSocCurr ? '#fffdf5' : (isArP1 ? '#f0fdf4' : (isMathCurr ? '#fdf4ff' : '#f0f9ff'))));
-            const solHeaderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7'))));
-            const solBodyColor = isEnCurr ? '#065f46' : (isBioCurr ? '#14532d' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#701a75' : '#0c4a6e'))));
+            const solBorderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#16a34a' : (isChemCurr ? '#059669' : (isSocCurr ? '#b45309' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7')))));
+            const solBgColor = isEnCurr ? '#f0fdfa' : (isBioCurr ? '#f0fdf4' : (isChemCurr ? '#ecfdf5' : (isSocCurr ? '#fffdf5' : (isArP1 ? '#f0fdf4' : (isMathCurr ? '#fdf4ff' : '#f0f9ff')))));
+            const solHeaderColor = isEnCurr ? '#0d9488' : (isBioCurr ? '#15803d' : (isChemCurr ? '#065f46' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#7e22ce' : '#0284c7')))));
+            const solBodyColor = isEnCurr ? '#065f46' : (isBioCurr ? '#14532d' : (isChemCurr ? '#064e3b' : (isSocCurr ? '#78350f' : (isArP1 ? '#064e3b' : (isMathCurr ? '#701a75' : '#0c4a6e')))));
 
             return `
               <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f1f5f9;">
@@ -688,9 +710,9 @@ async function renderCurrentLessonContent(currId, chapters) {
           }).join('');
         }
 
-        const cardBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#e9d5ff' : '#bae6fd'))));
-        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isBioCurr ? '#dcfce7' : (isSocCurr ? '#fef3c7' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#f3e8ff' : '#e0f2fe'))));
-        const cardBadgeColor = isEnCurr ? '#0f766e' : (isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0284c7'))));
+        const cardBorder = isEnCurr ? '#e2e8f0' : (isBioCurr ? '#86efac' : (isChemCurr ? '#a7f3d0' : (isSocCurr ? '#fde68a' : (isArP1 ? '#a7f3d0' : (isMathCurr ? '#e9d5ff' : '#bae6fd')))));
+        const cardBadgeBg = isEnCurr ? '#ccfbf1' : (isBioCurr ? '#dcfce7' : (isChemCurr ? '#d1fae5' : (isSocCurr ? '#fef3c7' : (isArP1 ? '#ecfdf5' : (isMathCurr ? '#f3e8ff' : '#e0f2fe')))));
+        const cardBadgeColor = isEnCurr ? '#0f766e' : (isBioCurr ? '#15803d' : (isChemCurr ? '#064e3b' : (isSocCurr ? '#92400e' : (isArP1 ? '#065f46' : (isMathCurr ? '#6b21a8' : '#0284c7')))));
 
         innerContentHtml += `
           <div class="activity-exercise-card" style="background: #ffffff; border: 1.5px solid ${cardBorder}; border-radius: 12px; padding: 0.95rem; margin-bottom: 0.85rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
@@ -698,10 +720,10 @@ async function renderCurrentLessonContent(currId, chapters) {
               <div>
                 <span class="badge" style="background: ${cardBadgeBg}; color: ${cardBadgeColor}; font-weight: 800; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px;">${ex.num || `التمرين ${exIdx+1}`}</span>
                 <h4 style="display: inline; font-size: 0.94rem; font-weight: 800; margin-right: 0.4rem; color: var(--slate-900);">${ex.title}</h4>
-                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isBioCurr ? '#15803d' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#6b21a8' : 'var(--slate-500)')))}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
+                ${ex.title_ar ? `<div style="font-size: 0.78rem; color: ${isBioCurr ? '#15803d' : (isChemCurr ? '#065f46' : (isSocCurr ? '#92400e' : (isArP1 ? '#059669' : (isMathCurr ? '#6b21a8' : 'var(--slate-500)'))))}; margin-top: 0.15rem; font-weight: 600;">${ex.title_ar}</div>` : ''}
               </div>
               <div style="display: flex; gap: 0.35rem; align-items: center;">
-                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isBioCurr ? 'style="background: #f0fdf4; color: #15803d; border: 1px solid #86efac;"' : (isSocCurr ? 'style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;"' : (isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isMathCurr ? 'style="background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;"' : '')))}>
+                <button class="exam-toggle-sol-btn" id="btn_sol_${exId}" onclick="toggleActivityCardSolutions('${exId}', ${ex.questions ? ex.questions.length : 0})" ${isBioCurr ? 'style="background: #f0fdf4; color: #15803d; border: 1px solid #86efac;"' : (isChemCurr ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isSocCurr ? 'style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;"' : (isArP1 ? 'style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;"' : (isMathCurr ? 'style="background: #faf5ff; color: #6b21a8; border: 1px solid #d8b4fe;"' : ''))))}>
                   <span>👁️</span> إظهار الحل
                 </button>
                 ${isEnCurr ? `
@@ -1435,9 +1457,9 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
             📐 الرسوم الهندسية
           </button>
         ` : ''}
-        ${(isChemistry && window.getChemistryDiagram && window.getChemistryDiagram(lesson.id)) ? `
+        ${(isChemistry && window.getChemistryDiagramsForLesson && window.getChemistryDiagramsForLesson(lesson.id).length > 0) ? `
           <button class="btn btn-sm" onclick="toggleMediaSection('chemistryDiagramSec')" style="font-size: 0.72rem; padding: 0.2rem 0.55rem; background: #059669; color: #ffffff; font-weight: 700;">
-            🧪 الرسم التوضيحي
+            🧪 الرسوم التوضيحية
           </button>
         ` : ''}
         ${(isBiology && window.getBiologyDiagram && window.getBiologyDiagram(lesson.id)) ? `
@@ -1607,10 +1629,12 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   }
 
   // 1.6. الرسوم التوضيحية واللوحات الكيميائية المعتمدة (Chemistry Visual Diagrams)
-  const chemDiagram = (isChemistry && window.getChemistryDiagram) ? window.getChemistryDiagram(lesson.id) : null;
-  if (chemDiagram) {
-    html += `
-      <div id="chemistryDiagramSec" style="background: white; border: 2px solid #059669; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(5,150,105,0.08); grid-column: 1 / -1; margin-bottom: 0.5rem;">
+  const chemDiagramsList = (isChemistry && window.getChemistryDiagramsForLesson) ? window.getChemistryDiagramsForLesson(lesson.id) :
+                           ((isChemistry && window.getChemistryDiagram && window.getChemistryDiagram(lesson.id)) ? [window.getChemistryDiagram(lesson.id)] : []);
+  if (chemDiagramsList.length > 0) {
+    chemDiagramsList.forEach((chemDiagram, chemIdx) => {
+      html += `
+      <div ${chemIdx === 0 ? 'id="chemistryDiagramSec"' : ''} class="chemistry-diagram-media-card" style="background: white; border: 2px solid #059669; border-radius: 12px; padding: 0.85rem; box-shadow: 0 4px 12px rgba(5,150,105,0.08); grid-column: 1 / -1; margin-bottom: 0.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 0.45rem; flex-wrap: wrap; gap: 0.4rem;">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
             <span style="font-size: 1.4rem;">🧪</span>
@@ -1658,6 +1682,7 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
           </div>
         </div>
       `;
+    });
   }
 
   // 1.8. الرسوم الهندسية والبيانية للرياضيات (Math Geometric & Coordinate SVG Diagrams)

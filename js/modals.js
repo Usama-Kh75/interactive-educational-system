@@ -45,7 +45,7 @@ const ISLAMIC_REVIEW_UNITS_META = [
   { id: 605, unitNum: 5, title: 'الوحدة 5: سورة الصف، أصحاب البستان، في منع الضرر، السجود لله، أسماء بنت أبي بكر وجليبيب، وصلة الرحم', subtitle: 'التجارة الرابحة، قصة البستان، مثل السفينة، فقه السجود، ذات النطاقين وجليبيب، وبر الأرحام', pages: '100 - 118', startPage: 100, primaryLessonId: 6051 }
 ];
 
-const CHEMISTRY_CHAPTER_LESSON_MAP = { 1: 10012, 2: 10022, 3: 10033, 4: 10042, 5: 10052, 6: 10063 };
+const CHEMISTRY_CHAPTER_LESSON_MAP = { 1: 10013, 2: 10023, 3: 10034, 4: 10043, 5: 10053, 6: 10065 };
 
 const REVIEW_MODAL_CONFIGS = {
   math: {
@@ -119,13 +119,13 @@ const REVIEW_MODAL_CONFIGS = {
     key: 'chemistry',
     currId: 10,
     icon: '🧪',
-    title: 'مركز الحلول النموذجية لمراجعات فصول الكيمياء',
-    subtitle: 'منهج الكيمياء للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم',
-    mode: 'solutions-sections',
-    defaultItemId: 1,
-    defaultSolutionsVisible: true,
+    title: 'مركز الحلول النموذجية لمراجعات دروس وفصول الكيمياء',
+    subtitle: 'منهج الكيمياء للصف الثاني المتوسط (6 فصول • 21 درساً • 48 بطاقة و 203 سؤالاً محلولاً) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 1001,
+    defaultSolutionsVisible: false,
     bookOpenMode: 'page',
-    showChunkBookBtn: false,
+    showChunkBookBtn: true,
     usePhysicsMath: false,
     itemTypeLabel: 'الفصل',
     theme: {
@@ -144,13 +144,14 @@ const REVIEW_MODAL_CONFIGS = {
     getMetaList: () => (window.CHEMISTRY_CHAPTER_REVIEWS || []).map(m => {
       const cleanPages = String(m.pages || m.pageRange || '').replace(/^الصفحات?\s*/, '').trim() || '21 - 22';
       const firstPage = parseInt((cleanPages.match(/\d+/) || ['21'])[0], 10);
+      const num = Number(m.chapterNum || m.chapterId || 1);
       return {
         ...m,
-        itemKey: m.chapterNum,
-        chapterId: m.chapterNum,
+        itemKey: m.unitId || (1000 + num),
+        chapterId: 1000 + num,
         pages: cleanPages,
         startPage: m.startPage || firstPage,
-        primaryLessonId: m.primaryLessonId || CHEMISTRY_CHAPTER_LESSON_MAP[m.chapterNum] || 10012
+        primaryLessonId: m.primaryLessonId || CHEMISTRY_CHAPTER_LESSON_MAP[num] || 10013
       };
     }),
     getCurriculum: () => window.CHEMISTRY_CURRICULUM || []
@@ -872,7 +873,7 @@ function switchBiologyModalReviewChapter(id) { switchChapterReviewsItem(id); }
 function toggleAllBiologyModalSolutions() { toggleAllUnifiedReviewSolutions(); }
 function openCurrentModalBioBookPage() { openUnifiedReviewBookPage(); }
 
-function openChemistryReviewsModal(reviewLessonId = 1) { return openChapterReviewsModal('chemistry', reviewLessonId); }
+function openChemistryReviewsModal(reviewLessonId = 1001) { return openChapterReviewsModal('chemistry', reviewLessonId); }
 function closeChemistryReviewsModal() { closeChapterReviewsModal(); }
 function switchChemistryModalReviewChapter(id) { switchChapterReviewsItem(id); }
 function toggleAllChemistryModalSolutions() { toggleAllUnifiedReviewSolutions(); }

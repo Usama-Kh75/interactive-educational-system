@@ -259,6 +259,11 @@ window.CHEMISTRY_DIAGRAMS = [
   }
 ];
 
+window.getChemistryDiagramsForLesson = function(lessonId) {
+  if (!window.CHEMISTRY_DIAGRAMS) return [];
+  return window.CHEMISTRY_DIAGRAMS.filter(function(d) { return d.lessonId === lessonId; });
+};
+
 window.getChemistryDiagram = function(lessonId) {
   if (!window.CHEMISTRY_DIAGRAMS) return null;
   return window.CHEMISTRY_DIAGRAMS.find(function(d) { return d.lessonId === lessonId; }) || null;

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'interactive-edu-pwa-v5.8.0';
+const CACHE_NAME = 'interactive-edu-pwa-v5.9.0';
 const IMAGES_CACHE_NAME = 'interactive-edu-pwa-images-v1';
 const ASSETS_TO_CACHE = [
   './',
