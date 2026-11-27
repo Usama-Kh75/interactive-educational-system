@@ -11,32 +11,15 @@ const audioPlayer = {
   pitch: parseFloat(lsGet('speech_pitch', 'preferred_speech_pitch')) || 1.0,  // نبرة طبيعية معتدلة
   selectedVoiceName: lsGet('voice_name', 'preferred_voice_name') || 'auto',
   multiSpeaker: lsGet('multispeaker', 'preferred_multispeaker') !== 'false', // مفعل افتراضياً
+  sentenceSync: lsGet('sentence_sync', 'preferred_sentence_sync') !== 'false', // التتبع المتزامن جملةً بجملة
   voicesList: [],
   chunks: [],
   currentChunkIdx: 0,
-  currentWordMap: [],
-  activeWordIndex: -1,
-  karaokeTimer: null,
-  hasReceivedRealWordBoundary: false,
-  karaokeSyncFactor: parseFloat(lsGet('karaoke_sync', 'preferred_karaoke_sync')) || 1.0,
-  customSyncOffset: lsGet('karaoke_offset', 'preferred_karaoke_offset') || 'auto',
-
-  getSyncOffset() {
-    if (this.customSyncOffset !== 'auto' && !isNaN(parseFloat(this.customSyncOffset))) {
-      return parseFloat(this.customSyncOffset);
-    }
-    // تلقائي: الأصوات السحابية الطبيعية في إيدج وكروم تحتاج تأخير مقداره 2.2 ثانية لمعادلة بافر الصوت
-    const voice = this.getBestVoice('en');
-    const isOnline = voice && (voice.name.includes('Online') || voice.name.includes('Natural') || voice.localService === false);
-    return isOnline ? 2200 : 250;
-  },
-
-  setSyncOffset(val) {
-    this.customSyncOffset = val;
-    lsSet('karaoke_offset', val);
-    const sel = document.getElementById('studioKaraokeOffsetSelect');
-    if (sel) sel.value = val;
-  },
+  isLessonReading: false,
+  playbackSessionId: 0,
+  activeSentenceCount: 0,
+  activeSentenceIndex: -1,
+  nextSentenceTimer: null,
 
   init() {
     if (!this.synth) return;
@@ -46,10 +29,8 @@ const audioPlayer = {
     }
     const sel = document.getElementById('audioSpeedSelect');
     if (sel) sel.value = this.speed.toString();
-    const syncSel = document.getElementById('studioKaraokeSyncSelect');
-    if (syncSel) syncSel.value = this.karaokeSyncFactor.toString();
-    const offsetSel = document.getElementById('studioKaraokeOffsetSelect');
-    if (offsetSel) offsetSel.value = this.customSyncOffset.toString();
+    const floatSel = document.getElementById('floatingSpeedSelect');
+    if (floatSel) floatSel.value = this.speed.toString();
   },
 
   loadVoices() {
@@ -252,220 +233,215 @@ const audioPlayer = {
   },
 
   // ----------------------------------------------------
-  // ميزات التتبع اللحظي للكلمات المقروءة (Word-by-Word Live Tracker v2)
-  // تزامن دقيق فائق الذكاء يطابق سرعة الصوت البشري تماماً
+  // محرك القراءة المتتبعة المتزامن جملةً بجملة (Sentence-by-Sentence Sync)
+  // تزامن فعلي 100% يعتمد على أحداث النطق الحقيقية (onstart / onend) دون أي تخمين زمني
   // إعداد المهندس أسامة خليل هاشم
   // ----------------------------------------------------
-  buildKaraokeTokens(text, prefix = 'kw') {
-    const regex = /([a-zA-Z]+(?:'[a-zA-Z]+)?|[\u0600-\u06FF]+|[0-9]+|\s+|[^\s\w\u0600-\u06FF]+)/g;
-    let match;
-    const tokens = [];
-    while ((match = regex.exec(text)) !== null) {
-      const raw = match[0];
-      const isWord = /[a-zA-Z0-9\u0600-\u06FF]/.test(raw);
-      tokens.push({
-        raw,
-        isWord,
-        start: match.index,
-        end: match.index + raw.length
-      });
-    }
+  escapeHtmlSafe(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  },
 
-    let wordIdx = 0;
-    let html = '';
-    const wordMap = [];
+  splitIntoSentences(rawText) {
+    if (!rawText) return [];
+    const cleaned = String(rawText)
+      .replace(/\r\n/g, '\n')
+      .replace(/[•📌📄🔹💡🔍📖]/g, '')
+      .trim();
+    if (!cleaned) return [];
 
-    for (let i = 0; i < tokens.length; i++) {
-      const t = tokens[i];
-      if (t.isWord) {
-        const spanId = `${prefix}-${wordIdx}`;
-        let nextPunct = '';
-        if (i + 1 < tokens.length && !tokens[i + 1].isWord) {
-          const pMatch = tokens[i + 1].raw.match(/[.,!?;:—\-]/);
-          if (pMatch) nextPunct = pMatch[0];
+    // حماية الاختصارات والأرقام العشرية من التقطيع الخاطئ عند النقطة
+    const protectDots = (line) => line
+      .replace(/\b(Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs|No|Vol|Fig|p|pp)\./gi, '$1§DOT§')
+      .replace(/\b(?:[a-zA-Z]\.){2,}(?!\s+[A-Z][a-z])/g, (m) => m.replace(/\./g, '§DOT§'))
+      .replace(/\b([a-zA-Z]\.)+(?=[a-zA-Z]\.\s+[A-Z][a-z])/g, (m) => m.replace(/\./g, '§DOT§'))
+      .replace(/(\d)\.(\d)/g, '$1§DOT§$2');
+
+    const restoreDots = (s) => s.replace(/§DOT§/g, '.');
+
+    const sentences = [];
+    const lines = cleaned.split(/\n+/);
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (!line) continue;
+
+      const protectedLine = protectDots(line);
+      // تقسيم عند نهاية الجملة (. ! ? …) متبوعة بمسافة
+      const parts = protectedLine
+        .split(/(?<=[.!?…]["')\]]*)\s+/)
+        .map(p => restoreDots(p).trim())
+        .filter(Boolean);
+
+      for (const part of parts) {
+        // تقسيم الجمل الطويلة جداً عند الفاصلة المنقوطة لتفادي تجمّد المتصفح في المقاطع الطويلة
+        if (part.length > 210 && part.includes(';')) {
+          const subParts = part.split(/(?<=;)\s+/).map(s => s.trim()).filter(Boolean);
+          sentences.push(...subParts);
+        } else {
+          sentences.push(part);
         }
-
-        const durationMs = this.estimateWordDuration(t.raw, nextPunct, this.speed);
-        const wordObj = {
-          id: spanId,
-          idx: wordIdx,
-          start: t.start,
-          end: t.end,
-          text: t.raw,
-          nextPunct,
-          durationMs
-        };
-        wordMap.push(wordObj);
-
-        const escaped = t.raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        html += `<span class="karaoke-word" id="${spanId}" data-start="${t.start}" data-end="${t.end}">${escaped}</span>`;
-        wordIdx++;
-      } else {
-        const escaped = t.raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        html += escaped;
       }
     }
-    return { html, wordMap };
+
+    return sentences;
   },
 
-  estimateWordDuration(wordText, punct, speechRate) {
-    const len = wordText ? wordText.length : 3;
-    // حساب مدة الكلمة الطبيعية وفق مقاطع الحروف
-    let baseMs = 150 + (Math.min(len, 12) * 38);
-    // الحروف الفردية المقروءة كاختصارات مثل A. M. I. S. G.
-    if (len === 1) {
-      baseMs = 380;
+  buildSpeechItems(text, allowDialogue = true) {
+    if (allowDialogue && this.multiSpeaker) {
+      const turns = this.parseDialogueTurns(text);
+      if (turns && turns.length > 1) {
+        const items = [];
+        turns.forEach((turn, turnIdx) => {
+          const turnSentences = this.splitIntoSentences(turn.text);
+          const list = turnSentences.length > 0 ? turnSentences : [turn.text.trim()];
+          list.forEach((s, sIdx) => {
+            const spoken = this.cleanTextForSpeech(s);
+            if (!spoken) return;
+            items.push({
+              displayText: s,
+              spokenText: spoken,
+              speaker: turn.speaker,
+              speakerName: turn.speakerName || '',
+              turnIdx,
+              isTurnStart: sIdx === 0
+            });
+          });
+        });
+        if (items.length > 0) return { items, isDialogue: true };
+      }
     }
-    if (punct) {
-      if (/[.!?]/.test(punct)) baseMs += 550; // وقفة نهاية الجملة الطبيعية
-      else if (/[,;:—\-]/.test(punct)) baseMs += 320; // وقفة الفواصل والنقطتين
+
+    const sentences = this.splitIntoSentences(text);
+    const items = [];
+    sentences.forEach((s) => {
+      const spoken = this.cleanTextForSpeech(s);
+      if (!spoken) return;
+      items.push({
+        displayText: s,
+        spokenText: spoken,
+        speaker: 0,
+        speakerName: '',
+        turnIdx: 0,
+        isTurnStart: false
+      });
+    });
+
+    if (items.length === 0) {
+      const fallback = this.cleanTextForSpeech(text);
+      if (fallback) {
+        items.push({
+          displayText: text.replace(/[•📌📄🔹💡🔍📖]/g, '').trim(),
+          spokenText: fallback,
+          speaker: 0,
+          speakerName: '',
+          turnIdx: 0,
+          isTurnStart: false
+        });
+      }
     }
-    const rate = Math.max(0.6, Math.min(2.0, speechRate || 0.85));
-    const sync = this.karaokeSyncFactor || 1.0;
-    return Math.round((baseMs / rate) * sync);
+    return { items, isDialogue: false };
   },
 
-  setupKaraoke(text) {
-    this.clearKaraoke();
-    const clean = text ? text.replace(/[•📌📄🔹💡🔍📖]/g, '').trim() : '';
-    if (!clean) return;
+  setupSentenceTracker(items, isDialogue = false) {
+    this.clearSentenceTracker();
+    this.activeSentenceCount = items ? items.length : 0;
+    this.activeSentenceIndex = -1;
 
-    // ضبط اتجاه النص (LTR للإنجليزية من اليسار إلى اليمين لمنع انقلاب الكلمات والترقيم)
-    const isEnglish = /[a-zA-Z]/.test(clean);
-    const dir = isEnglish ? 'ltr' : 'rtl';
-    const align = isEnglish ? 'left' : 'right';
-
-    // 1. تجهيز نص شاشة التتبع المباشر (Live Teleprompter)
-    const tpRes = this.buildKaraokeTokens(clean, 'tp-w');
-    this.currentWordMap = tpRes.wordMap;
-    this.activeWordIndex = -1;
-    this.hasReceivedRealWordBoundary = false;
-
+    const liveBox = document.getElementById('liveTeleprompterBox');
     const liveText = document.getElementById('teleprompterCurrentText');
-    if (liveText) {
-      liveText.style.direction = dir;
-      liveText.style.textAlign = align;
-      liveText.innerHTML = tpRes.html;
+    if (!liveText) return;
+
+    if (!this.sentenceSync || !items || items.length === 0) {
+      liveText.innerHTML = '';
+      if (liveBox) liveBox.style.display = 'none';
+      return;
     }
 
-    // 2. تجهيز المقطع النشط بالدرس إذا كان معروضاً
-    const activeChunk = document.querySelector('.chunk-box.active-reading .chunk-content-text');
-    if (activeChunk) {
-      activeChunk.style.direction = dir;
-      activeChunk.style.textAlign = align;
-      const chunkRes = this.buildKaraokeTokens(clean, 'chunk-w');
-      activeChunk.innerHTML = chunkRes.html;
-    }
-  },
+    const combinedSample = items.map(it => it.displayText).join(' ');
+    const isEnglish = /[a-zA-Z]/.test(combinedSample);
+    liveText.style.direction = isEnglish ? 'ltr' : 'rtl';
+    liveText.style.textAlign = isEnglish ? 'left' : 'right';
 
-  startKaraokeLive() {
-    if (this.karaokeTimer) {
-      clearTimeout(this.karaokeTimer);
-      this.karaokeTimer = null;
-    }
-    if (!this.currentWordMap || this.currentWordMap.length === 0) return;
-
-    const initialDelay = this.getSyncOffset();
-
-    // بدء تظليل أول كلمة بعد انقضاء بافر استجابة الصوت لمعادلة خروج الصوت من السماعات تماماً
-    this.karaokeTimer = setTimeout(() => {
-      if (!this.isPlaying || this.isPaused) return;
-      this.setActiveWordIndex(0);
-      this.scheduleNextWord(0);
-    }, initialDelay);
-  },
-
-  handleWordBoundary(charIndex) {
-    if (!this.currentWordMap || this.currentWordMap.length === 0) return;
-    const offset = this.getSyncOffset();
-    setTimeout(() => {
-      if (!this.isPlaying || this.isPaused) return;
-      this.highlightWordByCharIndex(charIndex);
-    }, offset);
-  },
-
-  scheduleNextWord(fromIndex) {
-    if (this.karaokeTimer) {
-      clearTimeout(this.karaokeTimer);
-      this.karaokeTimer = null;
-    }
-    if (!this.isPlaying || this.isPaused || !this.currentWordMap || this.currentWordMap.length === 0) return;
-
-    const currentIdx = (fromIndex !== undefined) ? fromIndex : this.activeWordIndex;
-    const nextIdx = currentIdx + 1;
-    if (nextIdx >= this.currentWordMap.length) return;
-
-    const currentWord = this.currentWordMap[currentIdx >= 0 ? currentIdx : 0];
-    const delay = currentWord ? currentWord.durationMs : 300;
-
-    this.karaokeTimer = setTimeout(() => {
-      if (!this.isPlaying || this.isPaused) return;
-      this.setActiveWordIndex(nextIdx);
-      this.scheduleNextWord(nextIdx);
-    }, delay);
-  },
-
-  highlightWordByCharIndex(charIndex) {
-    if (!this.currentWordMap || this.currentWordMap.length === 0) return;
-
-    let matchIdx = this.currentWordMap.findIndex(w => charIndex >= w.start && charIndex < w.end);
-    if (matchIdx === -1) {
-      matchIdx = this.currentWordMap.findIndex(w => w.start >= charIndex);
-    }
-    if (matchIdx === -1) {
-      matchIdx = this.currentWordMap.length - 1;
+    let html = '';
+    if (isDialogue) {
+      let openTurn = false;
+      items.forEach((item, idx) => {
+        if (item.isTurnStart) {
+          if (openTurn) html += '</div>';
+          const badge = item.speakerName
+            ? `<span class="teleprompter-speaker-inline speaker-${item.speaker}">${this.escapeHtmlSafe(item.speakerName)}:</span> `
+            : '';
+          html += `<div class="teleprompter-turn-row">${badge}`;
+          openTurn = true;
+        }
+        html += `<span class="teleprompter-sentence" id="tp-s-${idx}">${this.escapeHtmlSafe(item.displayText)}</span> `;
+      });
+      if (openTurn) html += '</div>';
+    } else {
+      html = items
+        .map((item, idx) => `<span class="teleprompter-sentence" id="tp-s-${idx}">${this.escapeHtmlSafe(item.displayText)}</span>`)
+        .join(' ');
     }
 
-    if (matchIdx !== -1 && matchIdx !== this.activeWordIndex) {
-      this.setActiveWordIndex(matchIdx);
-      // إعادة مزامنة الجدولة من الكلمة الحقيقية المؤكدة
-      this.scheduleNextWord(matchIdx);
+    liveText.innerHTML = html;
+    if (liveBox && isEnglishCurriculum()) {
+      liveBox.style.display = 'block';
     }
   },
 
-  setActiveWordIndex(index) {
-    if (!this.currentWordMap || index < 0 || index >= this.currentWordMap.length) return;
+  setActiveSentenceIndex(index, totalCount, displayText = '') {
+    if (!this.sentenceSync) return;
 
-    // إزالة التظليل من الكلمة السابقة
-    if (this.activeWordIndex !== -1 && this.activeWordIndex !== index) {
-      const prevTp = document.getElementById(`tp-w-${this.activeWordIndex}`);
-      if (prevTp) prevTp.classList.remove('karaoke-word-active');
-      const prevChunk = document.getElementById(`chunk-w-${this.activeWordIndex}`);
-      if (prevChunk) prevChunk.classList.remove('karaoke-word-active');
+    if (this.activeSentenceIndex !== -1 && this.activeSentenceIndex !== index) {
+      const prevEl = document.getElementById(`tp-s-${this.activeSentenceIndex}`);
+      if (prevEl) {
+        prevEl.classList.remove('teleprompter-sentence-active');
+        if (this.activeSentenceIndex < index) {
+          prevEl.classList.add('teleprompter-sentence-done');
+        }
+      }
     }
 
-    this.activeWordIndex = index;
-    const currentWord = this.currentWordMap[index];
-    if (!currentWord) return;
-
-    // تظليل الكلمة الحالية باللون الذهبي البراق
-    const newTp = document.getElementById(`tp-w-${index}`);
-    if (newTp) {
-      newTp.classList.add('karaoke-word-active');
+    this.activeSentenceIndex = index;
+    const activeEl = document.getElementById(`tp-s-${index}`);
+    if (activeEl) {
+      activeEl.classList.remove('teleprompter-sentence-done');
+      activeEl.classList.add('teleprompter-sentence-active');
       try {
-        newTp.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
       } catch (e) {}
     }
 
-    const newChunk = document.getElementById(`chunk-w-${index}`);
-    if (newChunk) {
-      newChunk.classList.add('karaoke-word-active');
+    const floatPreview = document.getElementById('floatingPlayerSentencePreview');
+    if (floatPreview && displayText) {
+      floatPreview.innerText = displayText;
+    }
+
+    const progressTag = document.getElementById('teleprompterProgressTag');
+    if (progressTag && totalCount > 0) {
+      progressTag.innerText = `جملة ${index + 1} / ${totalCount}`;
     }
   },
 
-  clearKaraoke() {
-    if (this.karaokeTimer) {
-      clearTimeout(this.karaokeTimer);
-      this.karaokeTimer = null;
+  clearSentenceTracker() {
+    if (this.nextSentenceTimer) {
+      clearTimeout(this.nextSentenceTimer);
+      this.nextSentenceTimer = null;
     }
-    if (this.activeWordIndex !== -1) {
-      const prevTp = document.getElementById(`tp-w-${this.activeWordIndex}`);
-      if (prevTp) prevTp.classList.remove('karaoke-word-active');
-      const prevChunk = document.getElementById(`chunk-w-${this.activeWordIndex}`);
-      if (prevChunk) prevChunk.classList.remove('karaoke-word-active');
+    if (this.activeSentenceIndex !== -1) {
+      const prevEl = document.getElementById(`tp-s-${this.activeSentenceIndex}`);
+      if (prevEl) prevEl.classList.remove('teleprompter-sentence-active');
     }
-    this.activeWordIndex = -1;
-    this.hasReceivedRealWordBoundary = false;
+    this.activeSentenceIndex = -1;
+    this.activeSentenceCount = 0;
+
+    const floatPreview = document.getElementById('floatingPlayerSentencePreview');
+    if (floatPreview) floatPreview.innerText = '';
+    const progressTag = document.getElementById('teleprompterProgressTag');
+    if (progressTag) progressTag.innerText = '';
   },
 
   speakSmart(text, lang = 'en', onDone = null) {
@@ -477,106 +453,14 @@ const audioPlayer = {
       alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
       return;
     }
-    this.synth.cancel();
 
-    // فحص وإطلاق محاكاة المحادثات التبادلية
-    if (lang === 'en' && this.multiSpeaker) {
-      const turns = this.parseDialogueTurns(text);
-      if (turns && turns.length > 1) {
-        this.playDialogueTurns(turns, onDone);
-        return;
-      }
+    const { items, isDialogue } = this.buildSpeechItems(text, lang === 'en');
+    if (!items || items.length === 0) {
+      if (onDone) onDone();
+      return;
     }
 
-    // قراءة عادية بنبرة واحدة
-    this.speakText(text, lang, onDone);
-  },
-
-  playDialogueTurns(turns, onDone = null) {
-    let idx = 0;
-    this.isPlaying = true;
-    this.isPaused = false;
-    this.updateButtons();
-
-    const playNextTurn = () => {
-      if (!this.isPlaying || idx >= turns.length) {
-        this.isPlaying = false;
-        this.isPaused = false;
-        this.updateButtons();
-        if (onDone) onDone();
-        return;
-      }
-
-      const turn = turns[idx];
-      const cleanTurn = this.cleanTextForSpeech(turn.text);
-      if (!cleanTurn) {
-        idx++;
-        playNextTurn();
-        return;
-      }
-
-      const utt = new SpeechSynthesisUtterance(cleanTurn);
-      utt.rate = this.speed;
-      utt.volume = 1.0;
-
-      const primaryVoice = this.getBestVoice('en');
-      const secondaryVoice = this.getSecondaryVoice(primaryVoice);
-
-      if (turn.speaker === 0) {
-        if (primaryVoice) {
-          utt.voice = primaryVoice;
-          utt.lang = primaryVoice.lang;
-        }
-        utt.pitch = this.pitch;
-      } else {
-        if (secondaryVoice) {
-          utt.voice = secondaryVoice;
-          utt.lang = secondaryVoice.lang;
-          utt.pitch = this.pitch;
-        } else {
-          // تعديل ذكي لطبقة الصوت لصنع متحدث ثانٍ مميز تماماً حتى بدون صوت ثانٍ
-          if (primaryVoice) utt.voice = primaryVoice;
-          utt.pitch = Math.max(0.75, this.pitch * 0.88);
-        }
-      }
-
-      const label = turn.speakerName ? ` (${turn.speakerName})` : ` (المتحدث ${turn.speaker + 1})`;
-      this.updateStatus(`حوار جارٍ${label}... 🎙️`);
-      this.showFloatingPlayer(cleanTurn, `حوار: ${turn.speakerName || ('المتحدث ' + (turn.speaker + 1))} 🎙️`);
-      this.setupKaraoke(cleanTurn);
-
-      utt.onstart = () => {
-        this.startKaraokeLive();
-      };
-
-      utt.onboundary = (e) => {
-        if (e.name === 'word') {
-          this.hasReceivedRealWordBoundary = true;
-          if (e.charIndex !== undefined) {
-            this.handleWordBoundary(e.charIndex);
-          }
-        }
-      };
-
-      utt.onend = () => {
-        this.clearKaraoke();
-        idx++;
-        setTimeout(() => {
-          if (this.isPlaying) playNextTurn();
-        }, 380); // وقفة حوارية طبيعية بين المتحدثين
-      };
-
-      utt.onerror = (e) => {
-        console.warn('Dialogue turn error', e);
-        this.clearKaraoke();
-        idx++;
-        playNextTurn();
-      };
-
-      this.synth.speak(utt);
-    };
-
-    playNextTurn();
+    this.playSentenceQueue(items, isDialogue, lang, onDone);
   },
 
   speakText(text, lang = 'en', onDone = null) {
@@ -588,70 +472,116 @@ const audioPlayer = {
       alert('متصفحك لا يدعم القراءة الصوتية (Web Speech API).');
       return;
     }
-    this.synth.cancel();
 
-    const cleanText = this.cleanTextForSpeech(text);
-    if (!cleanText) {
+    const { items } = this.buildSpeechItems(text, false);
+    if (!items || items.length === 0) {
       if (onDone) onDone();
       return;
     }
 
-    const utt = new SpeechSynthesisUtterance(cleanText);
-    utt.rate = this.speed;   // السرعة الهادئة المتأنية
-    utt.pitch = this.pitch;  // النبرة الطبيعية المعتدلة
-    utt.volume = 1.0;
+    this.playSentenceQueue(items, false, lang, onDone);
+  },
 
-    const voice = this.getBestVoice(lang);
-    if (voice) {
-      utt.voice = voice;
-      utt.lang = voice.lang;
-    } else {
-      utt.lang = lang === 'en' ? 'en-GB' : 'ar-SA';
-    }
-
-    this.showFloatingPlayer(cleanText, 'قراءة النص 🔊');
-    this.setupKaraoke(cleanText);
-
-    utt.onstart = () => {
-      this.isPlaying = true;
-      this.isPaused = false;
-      this.updateButtons();
-      this.updateStatus('جارِ القراءة... 🔊');
-      this.startKaraokeLive();
-    };
-
-    utt.onboundary = (e) => {
-      if (e.name === 'word') {
-        this.hasReceivedRealWordBoundary = true;
-        if (e.charIndex !== undefined) {
-          this.handleWordBoundary(e.charIndex);
-        }
-      }
-    };
-
-    utt.onend = () => {
-      this.clearKaraoke();
-      this.isPlaying = false;
-      this.isPaused = false;
-      this.updateButtons();
-      this.hideFloatingPlayer();
-      if (onDone) onDone();
-    };
-
-    utt.onerror = (e) => {
-      console.warn('Speech error', e);
-      this.clearKaraoke();
-      this.isPlaying = false;
-      this.isPaused = false;
-      this.updateButtons();
-      this.hideFloatingPlayer();
-      if (onDone) onDone();
-    };
+  playSentenceQueue(items, isDialogue = false, lang = 'en', onDone = null) {
+    const sessionId = ++this.playbackSessionId;
+    this.synth.cancel();
+    this.clearSentenceTracker();
 
     this.isPlaying = true;
     this.isPaused = false;
     this.updateButtons();
-    this.synth.speak(utt);
+
+    const headerLabel = this.isLessonReading
+      ? ((document.getElementById('floatingPlayerSpeakerBadge') && document.getElementById('floatingPlayerSpeakerBadge').innerText) || 'قارئ الدرس 🔊')
+      : (isDialogue ? 'حوار تفاعلي 🎙️' : 'قراءة النص 🔊');
+    this.showFloatingPlayer(items.map(i => i.displayText).join(' '), headerLabel);
+    this.setupSentenceTracker(items, isDialogue);
+
+    const primaryVoice = this.getBestVoice(lang);
+    const secondaryVoice = isDialogue ? this.getSecondaryVoice(primaryVoice) : null;
+
+    let idx = 0;
+
+    const playNext = () => {
+      if (sessionId !== this.playbackSessionId || !this.isPlaying) return;
+
+      if (idx >= items.length) {
+        this.clearSentenceTracker();
+        if (!this.isLessonReading) {
+          this.isPlaying = false;
+          this.isPaused = false;
+          this.updateButtons();
+          this.hideFloatingPlayer();
+        }
+        if (onDone) onDone();
+        return;
+      }
+
+      const item = items[idx];
+      const utt = new SpeechSynthesisUtterance(item.spokenText);
+      utt.rate = this.speed;
+      utt.volume = 1.0;
+
+      if (isDialogue && item.speaker === 1) {
+        if (secondaryVoice) {
+          utt.voice = secondaryVoice;
+          utt.lang = secondaryVoice.lang;
+          utt.pitch = this.pitch;
+        } else {
+          if (primaryVoice) utt.voice = primaryVoice;
+          utt.lang = primaryVoice ? primaryVoice.lang : 'en-GB';
+          utt.pitch = Math.max(0.75, this.pitch * 0.88);
+        }
+      } else {
+        if (primaryVoice) {
+          utt.voice = primaryVoice;
+          utt.lang = primaryVoice.lang;
+        } else {
+          utt.lang = lang === 'en' ? 'en-GB' : 'ar-SA';
+        }
+        utt.pitch = this.pitch;
+      }
+
+      const speakerTitle = isDialogue
+        ? (item.speakerName ? `حوار: ${item.speakerName} 🎙️` : `المتحدث ${item.speaker + 1} 🎙️`)
+        : 'النص المقروء حالياً 🔊';
+
+      utt.onstart = () => {
+        if (sessionId !== this.playbackSessionId || !this.isPlaying) return;
+        this.isPaused = false;
+        this.updateButtons();
+        this.updateStatus(isDialogue && item.speakerName ? `حوار جارٍ (${item.speakerName})... 🎙️` : 'جارِ القراءة... 🔊');
+        const liveSpeaker = document.getElementById('teleprompterSpeakerBadge');
+        if (liveSpeaker) liveSpeaker.innerText = speakerTitle;
+        const floatSpeaker = document.getElementById('floatingPlayerSpeakerBadge');
+        if (floatSpeaker) floatSpeaker.innerText = speakerTitle;
+        this.setActiveSentenceIndex(idx, items.length, item.displayText);
+      };
+
+      utt.onend = () => {
+        if (sessionId !== this.playbackSessionId || !this.isPlaying) return;
+        const prevSpeaker = item.speaker;
+        idx++;
+        const nextItem = items[idx];
+        const pauseMs = nextItem && isDialogue && nextItem.speaker !== prevSpeaker ? 300 : 75;
+        this.nextSentenceTimer = setTimeout(() => {
+          if (sessionId !== this.playbackSessionId || !this.isPlaying) return;
+          playNext();
+        }, pauseMs);
+      };
+
+      utt.onerror = (e) => {
+        if (sessionId !== this.playbackSessionId || !this.isPlaying) return;
+        if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
+        console.warn('Speech sentence error', e);
+        idx++;
+        playNext();
+      };
+
+      this.synth.speak(utt);
+    };
+
+    playNext();
   },
 
   playCurrentLesson() {
@@ -673,10 +603,14 @@ const audioPlayer = {
       text: el.querySelector('.chunk-content-text') ? el.querySelector('.chunk-content-text').innerText : el.innerText
     }));
     this.currentChunkIdx = 0;
+    this.isLessonReading = true;
+    this.isPlaying = true;
+    this.isPaused = false;
     this.readNextChunk();
   },
 
   readNextChunk() {
+    if (!this.isLessonReading) return;
     if (this.currentChunkIdx >= this.chunks.length) {
       this.stop();
       this.updateStatus('اكتملت قراءة الدرس بنجاح ✅');
@@ -702,9 +636,10 @@ const audioPlayer = {
       return;
     }
     this.speakSmart(current.text, 'en', () => {
+      if (!this.isLessonReading) return;
       this.currentChunkIdx++;
-      setTimeout(() => {
-        if (this.isPlaying) {
+      this.nextSentenceTimer = setTimeout(() => {
+        if (this.isLessonReading && this.isPlaying) {
           this.readNextChunk();
         }
       }, 350);
@@ -715,10 +650,6 @@ const audioPlayer = {
     if (this.synth && this.isPlaying) {
       this.synth.pause();
       this.isPaused = true;
-      if (this.karaokeTimer) {
-        clearTimeout(this.karaokeTimer);
-        this.karaokeTimer = null;
-      }
       this.updateStatus('متوقف مؤقتاً ⏸️');
       this.updateButtons();
     }
@@ -730,7 +661,6 @@ const audioPlayer = {
       this.isPaused = false;
       this.updateStatus('جارِ القراءة... 🔊');
       this.updateButtons();
-      this.scheduleNextWord(this.activeWordIndex);
     }
   },
 
@@ -743,10 +673,12 @@ const audioPlayer = {
   },
 
   stop() {
+    this.playbackSessionId++;
+    this.isLessonReading = false;
     if (this.synth) {
       this.synth.cancel();
     }
-    this.clearKaraoke();
+    this.clearSentenceTracker();
     this.isPlaying = false;
     this.isPaused = false;
     document.querySelectorAll('.chunk-box').forEach(b => b.classList.remove('active-reading'));
@@ -769,10 +701,7 @@ const audioPlayer = {
     const headerStopBtn = document.getElementById('headerEmergencyStopBtn');
 
     const liveBox = document.getElementById('liveTeleprompterBox');
-    const liveText = document.getElementById('teleprompterCurrentText');
     const liveSpeaker = document.getElementById('teleprompterSpeakerBadge');
-
-    const clean = text ? text.replace(/[•📌📄🔹💡🔍📖]/g, '').trim() : '';
 
     if (floatBar) {
       floatBar.style.display = 'flex';
@@ -788,7 +717,7 @@ const audioPlayer = {
       floatLoc.innerText = `${uStr} ⮞ ${lStr}`;
     }
 
-    if (liveBox) liveBox.style.display = 'block';
+    if (liveBox && this.sentenceSync) liveBox.style.display = 'block';
     if (liveSpeaker) liveSpeaker.innerText = speakerLabel || 'النص المقروء حالياً 🔊';
 
     if (headerStopBtn) headerStopBtn.style.display = 'inline-flex';
@@ -850,11 +779,15 @@ const audioPlayer = {
     lsSet('multispeaker', this.multiSpeaker.toString());
   },
 
-  setKaraokeSync(val) {
-    this.karaokeSyncFactor = parseFloat(val) || 0.92;
-    lsSet('karaoke_sync', this.karaokeSyncFactor.toString());
-    const sel = document.getElementById('studioKaraokeSyncSelect');
-    if (sel) sel.value = this.karaokeSyncFactor.toString();
+  setSentenceSync(val) {
+    this.sentenceSync = !!val;
+    lsSet('sentence_sync', this.sentenceSync.toString());
+    const liveBox = document.getElementById('liveTeleprompterBox');
+    if (!this.sentenceSync && liveBox) {
+      liveBox.style.display = 'none';
+    } else if (this.sentenceSync && this.isPlaying && isEnglishCurriculum() && liveBox) {
+      liveBox.style.display = 'block';
+    }
   },
 
   updateStatus(msg) {
@@ -936,11 +869,8 @@ function openVoiceStudioModal() {
   const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
   if (multiSwitch) multiSwitch.checked = audioPlayer.multiSpeaker;
 
-  const syncSel = document.getElementById('studioKaraokeSyncSelect');
-  if (syncSel) syncSel.value = (audioPlayer.karaokeSyncFactor || 1.0).toString();
-
-  const offsetSel = document.getElementById('studioKaraokeOffsetSelect');
-  if (offsetSel) offsetSel.value = (audioPlayer.customSyncOffset || 'auto').toString();
+  const sentenceSyncSwitch = document.getElementById('studioSentenceSyncSwitch');
+  if (sentenceSyncSwitch) sentenceSyncSwitch.checked = audioPlayer.sentenceSync;
 
   modal.classList.remove('hidden');
 }
@@ -977,13 +907,10 @@ function saveStudioSettings() {
   const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
   if (multiSwitch) audioPlayer.setMultiSpeaker(multiSwitch.checked);
 
-  const syncSel = document.getElementById('studioKaraokeSyncSelect');
-  if (syncSel) audioPlayer.setKaraokeSync(syncSel.value);
+  const sentenceSyncSwitch = document.getElementById('studioSentenceSyncSwitch');
+  if (sentenceSyncSwitch) audioPlayer.setSentenceSync(sentenceSyncSwitch.checked);
 
-  const offsetSel = document.getElementById('studioKaraokeOffsetSelect');
-  if (offsetSel) audioPlayer.setSyncOffset(offsetSel.value);
-
-  alert('تم حفظ إعدادات الصوت وتزامن مؤشر الكلمات بنجاح واعتمادها للنظام بالكامل ✅\n- إعداد المهندس أسامة خليل هاشم');
+  alert('تم حفظ إعدادات الصوت وتزامن القراءة المتتبعة بنجاح واعتمادها للنظام بالكامل ✅\n- إعداد المهندس أسامة خليل هاشم');
   closeVoiceStudioModal();
 }
 
@@ -992,8 +919,7 @@ function resetStudioDefaults() {
   audioPlayer.setSpeed(0.82);
   audioPlayer.setPitch(1.0);
   audioPlayer.setMultiSpeaker(true);
-  audioPlayer.setKaraokeSync(1.0);
-  audioPlayer.setSyncOffset('auto');
+  audioPlayer.setSentenceSync(true);
 
   const studioVoiceSel = document.getElementById('studioVoiceSelect');
   if (studioVoiceSel) studioVoiceSel.value = 'auto';
@@ -1007,11 +933,9 @@ function resetStudioDefaults() {
   if (studioPitchVal) studioPitchVal.innerText = '1.0';
   const multiSwitch = document.getElementById('studioMultiSpeakerSwitch');
   if (multiSwitch) multiSwitch.checked = true;
-  const syncSel = document.getElementById('studioKaraokeSyncSelect');
-  if (syncSel) syncSel.value = '1.0';
-  const offsetSel = document.getElementById('studioKaraokeOffsetSelect');
-  if (offsetSel) offsetSel.value = 'auto';
+  const sentenceSyncSwitch = document.getElementById('studioSentenceSyncSwitch');
+  if (sentenceSyncSwitch) sentenceSyncSwitch.checked = true;
 
-  alert('تمت استعادة الإعدادات الصوتية الافتراضية الموصى بها (0.82x سرعة هادئة - نبرة 1.0 معتدلة - تزامن بافر تلقائي 2.2 ثانية).');
+  alert('تمت استعادة الإعدادات الصوتية الافتراضية الموصى بها (0.82x سرعة هادئة - نبرة 1.0 معتدلة - تفعيل التتبع المتزامن جملةً بجملة).');
 }
 

@@ -55,7 +55,7 @@
           </svg>
         </div>
         <div class="brand-text">
-          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" role="button" tabindex="0" onclick="showWhatsNewModal()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showWhatsNewModal();}" aria-label="عرض ما الجديد في هذا الإصدار">v5.13.2 ✨</span></h1>
+          <h1>النظام التعليمي التفاعلي الشامل <span class="version-badge" id="headerVersionBadge" role="button" tabindex="0" onclick="showWhatsNewModal()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showWhatsNewModal();}" aria-label="عرض ما الجديد في هذا الإصدار">v5.13.3 ✨</span></h1>
           <p class="brand-author" style="color: var(--primary); font-weight: 700; font-size: 0.8rem;">إعداد المهندس أسامة خليل هاشم</p>
         </div>
       </div>
@@ -623,7 +623,8 @@
                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                   <span class="pulsing-record-dot"></span>
                   <span style="font-size: 0.78rem; font-weight: 800; color: #c7d2fe;">🎙️ متابعة القراءة المباشرة (Live Speech Tracking)</span>
-                  <span style="font-size: 0.68rem; background: rgba(250, 204, 21, 0.2); color: #fde047; padding: 0.1rem 0.45rem; border-radius: 9999px; border: 1px solid rgba(250, 204, 21, 0.35); font-weight: 700;">✨ مؤشر تتبع الكلمات الحي</span>
+                  <span style="font-size: 0.68rem; background: rgba(250, 204, 21, 0.2); color: #fde047; padding: 0.1rem 0.45rem; border-radius: 9999px; border: 1px solid rgba(250, 204, 21, 0.35); font-weight: 700;">✨ تتبع الجملة النشطة (تزامن 100%)</span>
+                  <span id="teleprompterProgressTag" style="font-size: 0.68rem; color: #a5b4fc; font-weight: 700;"></span>
                 </div>
                 <span id="teleprompterSpeakerBadge" class="speaker-tag">قارئ المنهج 🔊</span>
               </div>
@@ -1147,7 +1148,7 @@
                 <div style="font-size: 0.75rem; color: var(--slate-500);">التحقق التلقائي واليدوي من توفر إصدارات جديدة لنظامك</div>
               </div>
             </div>
-            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.13.2</span>
+            <span class="version-badge" id="settingsVersionBadge2" style="font-size: 0.82rem; padding: 0.25rem 0.75rem;">الإصدار الحالي: v5.13.3</span>
           </div>
           
           <p style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.6; margin-bottom: 1rem;">
@@ -1172,7 +1173,7 @@
         <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; padding: 0.85rem; font-size: 0.8rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span style="font-weight: 700; color: var(--slate-800);">الإصدار الحالي للنظام:</span>
-            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.13.2</span>
+            <span class="version-badge" id="settingsVersionBadge" style="font-size: 0.8rem; padding: 0.2rem 0.6rem;">v5.13.3</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; color: var(--slate-600);">
             <span>المهندس المعد للنظام:</span>
@@ -1181,6 +1182,7 @@
           
           <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); margin-bottom: 0.4rem;">سجل التحديثات والإضافات:</div>
           <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.75rem; color: var(--slate-600);">
+            <div>• <strong style="color: var(--primary);">v5.13.3 (نوفمبر 2026):</strong> تطوير محرك القراءة المتتبعة في منهج اللغة الإنجليزية واستبدال المؤشر الزمني التخميني بالتتبع المتزامن 100% جملةً بجملة عبر أحداث النطق الفعلية (<code>onstart</code>/<code>onend</code>) دون أي تأخير مصطنع، وتثبيت شاشة المتابعة المباشرة والحفاظ على تنسيق نصوص الدرس، وتحديث عامل الخدمة <code>interactive-edu-pwa-v5.13.3</code> - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.13.2 (نوفمبر 2026):</strong> قصر زر «استمع للسؤال» في الاختبارات التفاعلية على أسئلة منهج اللغة الإنجليزية فقط وإخفاؤه في الرياضيات وبقية المناهج غير الإنجليزية، مع تنظيف علامات الفراغات والشروح الجانبية قبل النطق وتحديث عامل الخدمة <code>interactive-edu-pwa-v5.13.2</code> - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.13.1 (نوفمبر 2026):</strong> إصلاح شامل لاتجاه عرض الجذور والمعادلات الرياضية في النصوص العربية عبر عزل التعابير الرياضية والفيزيائية باتجاه LTR معزول (<code>.math-ltr</code> / <code>unicode-bidi: isolate</code>) في قاعة المذاكرة والتمارين والاختبارات التفاعلية وبنك القوانين والرسوم التوضيحية والامتحانات الرسمية والبحث والتقارير، مع تحديث عامل الخدمة <code>interactive-edu-pwa-v5.13.1</code> - إعداد المهندس أسامة خليل هاشم.</div>
             <div>• <strong style="color: var(--primary);">v5.13.0 (نوفمبر 2026):</strong> استخراج وربط صور صفحات كتاب الرياضيات الموحد (196 صفحة أصلية بدقة 150 DPI في book_images/math/page_1.jpeg .. page_196.jpeg)، وربط كافة صفحات المحتوى (ص 4–194) بمقاطع الدروس الـ 51 ومراجعات الفصول السبعة في curriculum_data_math.js، وتفعيل عارض الصفحات والمكتبة الرقمية والمعرض البصري وغلاف الكتاب، وتحديث تقارير التدقيق الحي وعامل الخدمة interactive-edu-pwa-v5.13.0 - إعداد المهندس أسامة خليل هاشم.</div>
@@ -1254,7 +1256,7 @@
       <div style="font-weight: 700; color: var(--slate-800); display: flex; align-items: center; gap: 0.5rem;">
         <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
         <span>النظام التعليمي التفاعلي</span>
-        <span class="version-badge" id="footerVersionBadge">v5.13.2</span>
+        <span class="version-badge" id="footerVersionBadge">v5.13.3</span>
       </div>
       <div style="font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.35rem 1rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.2);">
         ✨ إعداد وتطوير: المهندس أسامة خليل هاشم
@@ -1636,33 +1638,13 @@
           </div>
         </div>
 
-        <!-- ضبط تزامن مؤشر الكلمات المقروءة بدقة عالية -->
-        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <!-- تفعيل التتبع المتزامن جملةً بجملة -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
           <div>
-            <div style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800);">🎯 سرعة تزامن مؤشر الكلمات (Karaoke Tracker Calibration)</div>
-            <div style="font-size: 0.72rem; color: var(--slate-500);">مطابقة التظليل الذهبي مع سرعة نطق الصوت بدقة متناهية ومنع تقدم الصوت على الكلمات</div>
+            <label for="studioSentenceSyncSwitch" style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800); cursor: pointer;">🎯 تظليل القراءة المتتبعة جملةً بجملة (Sentence Sync Tracking)</label>
+            <div style="font-size: 0.72rem; color: var(--slate-500);">تظليل الجملة النشطة فور بدء نطقها الفعلي لضمان توافق 100% مع سرعة الصوت في كل المتصفحات دون أي تأخير</div>
           </div>
-          <select id="studioKaraokeSyncSelect" class="form-input" aria-label="ضبط سرعة تزامن مؤشر الكلمات" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; border-radius: 6px; border: 1px solid var(--slate-300); width: auto; max-width: 100%;" onchange="audioPlayer.setKaraokeSync(this.value)">
-            <option value="0.80">خاطف وسريع (0.80x) - للأصوات فائقة السرعة</option>
-            <option value="1.0" selected>✨ متطابق ذكي (1.00x) - الموصى به</option>
-            <option value="1.15">متأنٍ (1.15x) - للقراءة البطيئة جداً</option>
-          </select>
-        </div>
-
-        <!-- ضبط توقيت بافر الصوت وتزامن خروج الصوت من السماعات -->
-        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-          <div>
-            <div style="font-size: 0.85rem; font-weight: 800; color: var(--slate-800);">⏱️ معادلة بافر الصوت السحابي (Audio Buffer Pre-roll Offset)</div>
-            <div style="font-size: 0.72rem; color: var(--slate-500);">معادلة زمن استجابة وتدفق الصوت من السحابة ليضيء التظليل الكلمة عند خروج صوتها من السماعات تماماً</div>
-          </div>
-          <select id="studioKaraokeOffsetSelect" class="form-input" aria-label="معادلة بافر الصوت السحابي" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; border-radius: 6px; border: 1px solid var(--slate-300); width: auto; max-width: 100%;" onchange="audioPlayer.setSyncOffset(this.value)">
-            <option value="auto" selected>✨ تلقائي ذكي (معادلة 2.2 ثانية للأصوات السحابية)</option>
-            <option value="2500">2.5 ثانية (للإنترنت البطيء)</option>
-            <option value="2200">2.2 ثانية (الأفضل لأصوات Edge الطبيعية)</option>
-            <option value="1800">1.8 ثانية</option>
-            <option value="300">أصوات محلية بدون إنترنت (0.3 ثانية)</option>
-            <option value="0">بدون تأخير (0.0 ثانية)</option>
-          </select>
+          <input type="checkbox" id="studioSentenceSyncSwitch" aria-label="تفعيل تظليل القراءة المتتبعة جملة بجملة" checked style="width: 20px; height: 20px; cursor: pointer; accent-color: var(--primary); flex-shrink: 0;" onchange="audioPlayer.setSentenceSync(this.checked)">
         </div>
 
         <!-- تفعيل المحادثات التبادلية -->
@@ -1728,6 +1710,7 @@
         <span class="teleprompter-pulse-dot"></span>
         <span id="floatingPlayerSpeakerBadge" class="speaker-tag" style="background: rgba(99, 102, 241, 0.4); color: #e0e7ff; font-weight: 700;">قارئ المنهج 🔊</span>
         <span id="floatingPlayerLocationTag" style="font-size: 0.8rem; color: #f8fafc; font-weight: 700;">الوحدة 1 ⮞ الدرس 1 ⮞ صفحة 4</span>
+        <span id="floatingPlayerSentencePreview" class="floating-sentence-preview"></span>
       </div>
 
       <div style="display: flex; align-items: center; gap: 0.4rem;">
@@ -1750,7 +1733,7 @@
       <div class="pwa-update-title">
         <span>🚀</span>
         <span>تحديث جديد للنظام متاح الآن</span>
-        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.13.2</span>
+        <span class="pwa-update-badge" id="updateNewVersionBadge">v5.13.3</span>
       </div>
       <button type="button" class="pwa-btn-dismiss" onclick="dismissUpdateBanner()" aria-label="إغلاق إشعار التحديث مؤقتاً" title="إغلاق الإشعار مؤقتاً">✕</button>
     </div>
@@ -1778,13 +1761,13 @@
         <button type="button" onclick="closeWhatsNewModal()" aria-label="إغلاق نافذة ما الجديد" style="position: absolute; top: 1.25rem; left: 1.25rem; background: rgba(255,255,255,0.18); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" title="إغلاق النافذة">✕</button>
         <div class="whatsnew-header-title">
           <span>✨</span>
-          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.13.2؟</span>
+          <span id="whatsNewModalTitle">ما الجديد في الإصدار v5.13.3؟</span>
         </div>
         <div class="whatsnew-header-sub">
           <span>👨‍💻 إعداد المهندس أسامة خليل هاشم</span>
           <span>•</span>
           <span id="whatsNewModalDate">نوفمبر 2026</span>
-          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.13.2</span>
+          <span class="version-badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-inline-start: 0.5rem;" id="whatsNewModalVersionBadge">v5.13.3</span>
         </div>
       </div>
 
