@@ -6,9 +6,9 @@
 const LEGACY_STORAGE_KEY = 'interactive_educational_system_v2';
 const STORAGE_KEY = 'interactive_edu_state_v1';
 const BUILTIN_CURRICULUM_IDS = new Set([3, 4, 5, 6, 7, 8, 9, 10, 11]);
-const CURRENT_VERSION = '5.9.0';
-const CURRENT_VERSION_LABEL = 'v5.9.0';
-const SYSTEM_VERSION = 'v5.9.0';
+const CURRENT_VERSION = '5.10.0';
+const CURRENT_VERSION_LABEL = 'v5.10.0';
+const SYSTEM_VERSION = 'v5.10.0';
 const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
 const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
 const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -57,7 +57,7 @@ const BUILTIN_CURRICULA_META = [
     grade: 'الثاني متوسط',
     status: 'approved',
     image_folder: 'arabic_p2',
-    description: 'المنهج الرسمي المعتمد لكتاب اللغة العربية (الجزء الثاني): نصوص الفداء والإحسان والربيع وإرادة الحياة، وقواعد النداء والاستفهام والمضارع والجموع والميزان الصرفي.',
+    description: 'المنهج الرسمي المعتمد لكتاب اللغة العربية (الجزء الثاني): نصوص الفداء والإحسان والربيع وإرادة الحياة، وقواعد النداء والاستفهام والمضارع والمثنى والجموع والمقصور والمنقوص والممدود والممنوع من الصرف.',
     scripts: ['curriculum_data_arabic.js'],
     globalKey: 'ARABIC_CURRICULUM_P2',
     metaChaptersCount: 10,

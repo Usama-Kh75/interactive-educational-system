@@ -425,7 +425,15 @@ window.ReportManager = (() => {
           gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وأنشطة صفية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–139) مربوطة بمقاطعها.`);
         }
       } else if (spec.id === 7) {
-        gaps.push('حلول مراجعات الفصول شاملة (149 سؤالاً)، لكن مراجعات الدروس الـ 14 (اختبر معلوماتي) مدمجة كنص عادي غير تفاعلي.');
+        if (lessonsWithoutExercises > 0) {
+          gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً في الفيزياء بدون بطاقات تمارين تفاعلية داخلية.`);
+        }
+        if (referencedPages.size < (actualDiskImages - 4)) {
+          gaps.push(`${(actualDiskImages - 4) - referencedPages.size} صفحة محتوى من أصل ${actualDiskImages - 4} صفحة غير مرتبطة بمقاطع الدروس.`);
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} (14 درساً بمراجعات «أختبر معلوماتي» والتفكير الناقد + 6 مراجعات فصول) تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 5–88) مربوطة بمقاطعها مع 15 لوحة SVG.`);
+        }
       } else if (spec.id === 10) {
         if (lessonsWithoutExercises > 0) {
           gaps.push(`${lessonsWithoutExercises} من ${lessonsCount} درساً في الكيمياء بدون بطاقات تمارين تفاعلية داخلية.`);
@@ -440,10 +448,16 @@ window.ReportManager = (() => {
         gaps.push('تفاوت عدد الأسئلة بين الوحدات الأولى (38 سؤالاً) والأخيرة (9 أسئلة).');
       } else if (spec.id === 5) {
         const hasMamnoo = Array.isArray(window.ARABIC_GRAMMAR_RULES) && window.ARABIC_GRAMMAR_RULES.some(r => (r.title || '').includes('الممنوع من الصرف'));
+        const hasRabeeExercises = (chapters || []).some(ch => (ch.lessons || []).some(l => l.id === 5042 && (l.chunks || []).some(ck => Array.isArray(ck.exercises) && ck.exercises.length > 0)));
         if (!hasMamnoo) {
           gaps.push('قاعدة «الممنوع من الصرف» (الوحدة 9) غير مدرجة في بنك القواعد ومكانها تكرار «الميزان الصرفي».');
         }
-        gaps.push('درس المطالعة (وصف الربيع لأبي تمام - 5042) يخلو من تمارين المناقشة التفاعلية.');
+        if (!hasRabeeExercises) {
+          gaps.push('درس المطالعة (وصف الربيع لأبي تمام - 5042) يخلو من تمارين المناقشة التفاعلية.');
+        }
+        if (gaps.length === 0) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الوحدات التسع (بما فيها مطالعة وصف الربيع لأبي تمام) تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وبنك القواعد يضم قاعدة «الممنوع من الصرف»، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 3–135) مربوطة بمقاطعها.`);
+        }
       } else if (spec.id === 6) {
         gaps.push('تغطية شبه كاملة؛ فقط 4 صفحات داخلية (46، 68، 74، 96) غير مشار إليها في المقاطع.');
       } else if (spec.id === 3) {
@@ -487,9 +501,22 @@ window.ReportManager = (() => {
           status = 'جيد مع فجوات جزئية';
           statusTone = 'warning';
         }
+      } else if (spec.id === 7) {
+        if (lessonsWithoutExercises === 0 && referencedPages.size >= (actualDiskImages - 4)) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'جيد مع فجوات جزئية';
+          statusTone = 'warning';
+        }
       } else if (spec.id === 5) {
-        status = 'جيد مع فجوات جزئية';
-        statusTone = 'warning';
+        if (gaps.length === 1 && gaps[0].startsWith('تغطية كاملة')) {
+          status = 'مكتمل وعالي';
+          statusTone = 'success';
+        } else {
+          status = 'جيد مع فجوات جزئية';
+          statusTone = 'warning';
+        }
       }
 
       return {

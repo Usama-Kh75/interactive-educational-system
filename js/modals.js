@@ -4,12 +4,12 @@
 // =========================================================================
 
 const PHYSICS_REVIEW_CHAPTERS_META = [
-  { id: 7014, chapterNum: 1, title: 'الفصل 1: الحركة', subtitle: 'القياس، الحركة والسرعة، والتعجيل', pages: '21 - 23', startPage: 21 },
-  { id: 7023, chapterNum: 2, title: 'الفصل 2: قوانين الحركة', subtitle: 'قوانين نيوتن الثلاثة، الجاذبية، والسقوط الحر', pages: '32 - 33', startPage: 32 },
-  { id: 7033, chapterNum: 3, title: 'الفصل 3: الشغل والقدرة والطاقة', subtitle: 'حسابات الشغل، القدرة، الطاقة وتحولاتها', pages: '43 - 45', startPage: 43 },
-  { id: 7043, chapterNum: 4, title: 'الفصل 4: الآلات البسيطة', subtitle: 'العتلات بأنواعها الثلاث، البكرات، وكفاءة الآلة', pages: '54 - 55', startPage: 54 },
-  { id: 7053, chapterNum: 5, title: 'الفصل 5: الحركة الموجية والصوت', subtitle: 'الموجات، سرعة الصوت والصدى، والموجات فوق الصوتية', pages: '68 - 70', startPage: 68 },
-  { id: 7064, chapterNum: 6, title: 'الفصل 6: الضوء', subtitle: 'الانعكاس والمرايا، الانكسار والعدسات، وتفسير الرؤية', pages: '87 - 88', startPage: 87 }
+  { id: 701, unitId: 701, chapterNum: 1, title: 'الفصل 1: الحركة', subtitle: 'القياس، الحركة والسرعة، والتعجيل (3 دروس + مراجعة الفصل)', pages: '10 - 23', startPage: 21, primaryLessonId: 7014 },
+  { id: 702, unitId: 702, chapterNum: 2, title: 'الفصل 2: قوانين الحركة', subtitle: 'قوانين نيوتن الثلاثة، الجاذبية، والسقوط الحر (درسان + مراجعة الفصل)', pages: '26 - 33', startPage: 32, primaryLessonId: 7023 },
+  { id: 703, unitId: 703, chapterNum: 3, title: 'الفصل 3: الشغل والقدرة والطاقة', subtitle: 'حسابات الشغل، القدرة، الطاقة وتحولاتها (درسان + مراجعة الفصل)', pages: '38 - 45', startPage: 43, primaryLessonId: 7033 },
+  { id: 704, unitId: 704, chapterNum: 4, title: 'الفصل 4: الآلات البسيطة', subtitle: 'العتلات بأنواعها الثلاث، البكرات، وكفاءة الآلة (درسان + مراجعة الفصل)', pages: '48 - 55', startPage: 54, primaryLessonId: 7043 },
+  { id: 705, unitId: 705, chapterNum: 5, title: 'الفصل 5: الحركة الموجية والصوت', subtitle: 'الموجات، سرعة الصوت والصدى، والموجات فوق الصوتية (درسان + مراجعة الفصل)', pages: '61 - 70', startPage: 68, primaryLessonId: 7053 },
+  { id: 706, unitId: 706, chapterNum: 6, title: 'الفصل 6: الضوء', subtitle: 'الانعكاس والمرايا، الانكسار والعدسات، وتفسير الرؤية (3 دروس + مراجعة الفصل)', pages: '74 - 88', startPage: 87, primaryLessonId: 7064 }
 ];
 
 const ARABIC_P1_REVIEW_UNITS_META = [
@@ -194,10 +194,10 @@ const REVIEW_MODAL_CONFIGS = {
     key: 'physics',
     currId: 7,
     icon: '⚛️',
-    title: 'مركز الحلول النموذجية لمراجعات فصول الفيزياء',
-    subtitle: 'منهج الفيزياء للصف الثاني المتوسط (6 فصول معتمدة) • إعداد المهندس أسامة خليل هاشم',
-    mode: 'lesson-exercises',
-    defaultItemId: 7014,
+    title: 'مركز الحلول النموذجية لمراجعات دروس وفصول الفيزياء',
+    subtitle: 'منهج الفيزياء للصف الثاني المتوسط (6 فصول • 20 درساً • 60 بطاقة و 259 سؤالاً محلولاً) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 701,
     defaultSolutionsVisible: false,
     bookOpenMode: 'page',
     showChunkBookBtn: true,
@@ -216,7 +216,7 @@ const REVIEW_MODAL_CONFIGS = {
       gradient: 'linear-gradient(135deg, #0284c7, #0369a1)',
       shadowRgba: 'rgba(2,132,199,0.28)'
     },
-    getMetaList: () => PHYSICS_REVIEW_CHAPTERS_META.map(m => ({ ...m, itemKey: m.id, primaryLessonId: m.id })),
+    getMetaList: () => PHYSICS_REVIEW_CHAPTERS_META.map(m => ({ ...m, itemKey: m.unitId || m.id, primaryLessonId: m.primaryLessonId || m.id })),
     getCurriculum: () => window.PHYSICS_CURRICULUM || []
   },
   arabic_p1: {
@@ -253,7 +253,7 @@ const REVIEW_MODAL_CONFIGS = {
     currId: 5,
     icon: '📗',
     title: 'مركز الحلول النموذجية لمراجعات وتمارين اللغة العربية (الجزء الثاني)',
-    subtitle: 'كتاب اللغة العربية للصف الثاني المتوسط (9 وحدات معتمدة) • إعداد المهندس أسامة خليل هاشم',
+    subtitle: 'كتاب اللغة العربية للصف الثاني المتوسط (9 وحدات معتمدة • 70 بطاقة و 142 سؤالاً محلولاً) • إعداد المهندس أسامة خليل هاشم',
     mode: 'unit-exercises',
     defaultItemId: 501,
     defaultSolutionsVisible: false,
@@ -887,7 +887,7 @@ function toggleAllSocialModalSolutions() { toggleAllUnifiedReviewSolutions(); }
 function openCurrentModalSocReviewInStudy() { openUnifiedReviewInStudy(); }
 function openCurrentModalSocBookPage() { openUnifiedReviewBookPage(); }
 
-function openPhysicsReviewsModal(reviewLessonId = 7014) { return openChapterReviewsModal('physics', reviewLessonId); }
+function openPhysicsReviewsModal(reviewLessonId = 701) { return openChapterReviewsModal('physics', reviewLessonId); }
 function closePhysicsReviewsModal() { closeChapterReviewsModal(); }
 function switchPhysicsModalReviewChapter(id) { switchChapterReviewsItem(id); }
 function toggleAllPhysicsModalSolutions() { toggleAllUnifiedReviewSolutions(); }
