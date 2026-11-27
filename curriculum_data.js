@@ -3894,17 +3894,70 @@ window.CURRICULUM_DATA = [
           {
             "id": 526,
             "page": 39,
-            "heading": "Project: Different Sports - Skateboarding, Ultimate & Surfing (صفحات 39-40)",
-            "text": "Try a new sport! Read about three exciting sports:\n\n1. Skateboarding (التزلج على الألواح):\nSkateboarding began in the USA in the 1940s. In skateboarding, you ride a skateboard and do tricks.\nYou can do skateboarding anywhere with a smooth surface to skate on, but many cities have skateparks designed for skateboarding.\nYou can do it with your friends, but you don't play against anyone. You have to be fit and have strong legs.\nMost people skateboard to have fun and improve, and the sport has recently been added to the Olympics!\n\n2. Ultimate Frisbee (الفريسبي التنافسي):\nUltimate is quite a new sport. It started in the USA in 1967, and it is similar to football or American football.\nIn Ultimate, you throw a round disc called a Frisbee to your teammates.\nThere are seven players on each team. You play on a big field, and when a player catches the Frisbee at the end of the pitch, their team gets a point.\n\n3. Surfing (ركوب الأمواج):\nSurfing is not new - hundreds of years ago, there were surfers in the Pacific Ocean.\nSurfers swim into the ocean with a surfboard. When a wave comes, they stand up on their board, and the wave moves them towards the beach.\nMost people surf for fun, but it is a sport, too. Judges give surfers a score, and the surfer with the highest score wins the competition.\n\nStudent Profiles (صفحة 40):\n• Mason (12 years old, England):\n\"My favourite sport is swimming because I love being in the water. I go swimming twice a week, but I'm not very good at it!\"\n• Dania (12 years old, Iraq):\n\"My favourite sport is athletics because I love running. I do athletics three times a week, and I'm quite good at it.\"\n• Otto (13 years old, Germany):\n\"My favourite sport is football because I like playing in a team. I play on the school team. We practise twice a week, and we play a match every Saturday.\""
+            "heading": "Project: Different Sports - Skateboarding, Ultimate & Surfing (صفحة 39)",
+            "text": "Try a new sport! Read about three exciting sports:\n\n1. Skateboarding (التزلج على الألواح):\nSkateboarding began in the USA in the 1940s. In skateboarding, you ride a skateboard and do tricks.\nYou can do skateboarding anywhere with a smooth surface to skate on, but many cities have skateparks designed for skateboarding.\nYou can do it with your friends, but you don't play against anyone. You have to be fit and have strong legs.\nMost people skateboard to have fun and improve, and the sport has recently been added to the Olympics!\n\n2. Ultimate Frisbee (الفريسبي التنافسي):\nUltimate is quite a new sport. It started in the USA in 1967, and it is similar to football or American football.\nIn Ultimate, you throw a round disc called a Frisbee to your teammates.\nThere are seven players on each team. You play on a big field, and when a player catches the Frisbee at the end of the pitch, their team gets a point.\n\n3. Surfing (ركوب الأمواج):\nSurfing is not new - hundreds of years ago, there were surfers in the Pacific Ocean.\nSurfers swim into the ocean with a surfboard. When a wave comes, they stand up on their board, and the wave moves them towards the beach.\nMost people surf for fun, but it is a sport, too. Judges give surfers a score, and the surfer with the highest score wins the competition."
+          },
+          {
+            "id": 5261,
+            "page": 40,
+            "heading": "Project 2: Different Sports - Student Profiles & Table (صفحة 40)",
+            "text": "Read about three people and complete the table (Student Book p. 40):\n\n• Mason (12 years old, England):\n\"Hello. My name is Mason. I'm 12, and I'm from England. I like lots of different sports, but my favourite sport is swimming. I think it's because I love being in the water. I go swimming twice a week, but I'm not very good at it!\"\n\n• Dania (12 years old, Iraq):\n\"Hi there, I'm Dania. I'm from Iraq, and I'm 12 years old. My favourite sport is athletics because I love running. I do athletics three times a week, and I'm quite good at it. I usually do athletics with my friends, but I sometimes go with my brother.\"\n\n• Otto (13 years old, Germany):\n\"Hi. My name is Otto. I'm 13, and I'm from Germany. My favourite sport is football because I like playing in a team. I'm very good at football, and I play on the school football team. We practise twice a week, and we play a match at three o'clock every Saturday.\"",
+            "exercises": [
+              {
+                "id": "u3_l11_sb_p40",
+                "num": "Student Book (Page 40) D & E",
+                "title": "Read about Mason, Dania and Otto, complete the table, and suggest a new sport for each.",
+                "title_ar": "اقرأ عن ميسون ودانيا وأوتو وأكمل جدول البيانات واقترح رياضة جديدة مناسبة لكل منهم:",
+                "questions": [
+                  {
+                    "q": "1. Complete the profile table for Mason, Dania, and Otto (Name, Age, Country, Favourite sport, How often?, How good?):",
+                    "q_ar": "أكمل جدول المعلومات لكل من ميسون ودانيا وأوتو:",
+                    "a": "• Mason: Age 12 | Country: England | Favourite sport: swimming | How often: twice a week | How good: not very good\n• Dania: Age 12 | Country: Iraq | Favourite sport: athletics | How often: three times a week | How good: quite good\n• Otto: Age 13 | Country: Germany | Favourite sport: football | How often: twice a week (practise) + match every Saturday | How good: very good"
+                  },
+                  {
+                    "q": "2. Which of the sports from the magazine article (skateboarding, Ultimate, surfing) would Mason, Dania and Otto like to try? Why?",
+                    "q_ar": "أي من الرياضات الثلاث (التزلج على الألواح، الفريسبي، ركوب الأمواج) يود كل منهم تجربتها؟ ولماذا؟",
+                    "a": "• Mason: Surfing — because he loves being in the water.\n• Dania: Skateboarding — because she likes doing sports with her friends and loves being active.\n• Otto: Ultimate (Frisbee) — because he likes playing team sports similar to football."
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": 527,
             "page": 41,
-            "heading": "Project: The Sports Survey - Class Questionnaire & Results (صفحات 41-42)",
-            "text": "The Sports Survey by Umar and Ali:\nUmar and Ali created a class sports survey to find out what sports their classmates do and want to try.\n\nSurvey Questions:\n1. Do you do any sports? If yes, which ones?\n2. How often do you do sport each week?\n3. Which of the three new sports (Skateboarding, Ultimate, Surfing) would you like to try?\n4. Why do you enjoy your favourite sport?\n\nSurvey Results (Charts & Data):\n• Football is the most popular sport among the students.\n• Swimming and running are popular choices for staying fit.\n• Surfing is the new sport that most students would love to try during beach holidays.\n• Presenting data: using bar charts and pie charts to display sports habits clearly."
+            "heading": "Project: The Sports Survey - Class Questionnaire (صفحة 41)",
+            "text": "The Sports Survey by Umar and Ali (Student Book p. 41):\nUmar and Ali are talking about sport and designing a class survey.\n\nSurvey Questions (Exercise B):\n1. What sports do you do?\n2. What is your favourite sport?\n3. How often do you do sport?\n4. Which new sport would you like to try?\n\nSurvey Results Tally (Exercise C & D):\n• Every day: 7 | Three to six times a week: 4 | Twice a week: 11 | Once a week: 4 | Less than once a week: 8 | Never: 2\n• Total people asked: 36 students (11 do sport twice a week, and 2 never do sport)."
+          },
+          {
+            "id": 5271,
+            "page": 42,
+            "heading": "Project 2: The Sports Survey - Charts & Class Project (صفحة 42)",
+            "text": "Presenting Survey Results (Student Book p. 42):\nUmar and Ali are presenting the results of their survey using two charts (a pie chart for 'What is your favourite sport?' and a bar chart for 'Which new sport would you like to try?').\n\nHow to do your own class survey:\n1. Decide on three things you want to know about your classmates' interests and habits.\n2. Write your three questions and check grammar and punctuation.\n3. Decide who will ask the questions and who will note down the answers.\n4. Ask everyone in the class and note down all the answers.\n5. Use charts to show the results of your survey and present them to the class.",
+            "exercises": [
+              {
+                "id": "u3_l11_sb_p42",
+                "num": "Student Book (Page 42) E",
+                "title": "Look at Umar and Ali's two charts and answer the survey questions.",
+                "title_ar": "تأمل الرسمين البيانيين لاستطلاع عمر وعلي وأجب عن الأسئلة الخمسة (صفحة 42):",
+                "questions": [
+                  {
+                    "q": "1. What is the most popular sport? & 2. What is the least popular sport?",
+                    "q_ar": "ما الرياضة الأكثر شعبية؟ وما الرياضة الأقل شعبية؟",
+                    "a": "1. Most popular sport: Football.\n2. Least popular sport: Tennis."
+                  },
+                  {
+                    "q": "3. How many people want to try surfing? 4. Skateboarding? 5. None of these?",
+                    "q_ar": "كم عدد الطلاب الراغبين في تجربة ركوب الأمواج، والتزلج على الألواح، أو لا شيء منها؟",
+                    "a": "• Surfing: 9 students\n• Skateboarding: 14 students\n• Don't want to try any of the new sports (none of these): 7 students"
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": 52601,
+            "page": 42,
             "is_activity_book": true,
             "activity_book_page": 64,
             "heading": "📝 كراس النشاط (Activity Book - صفحة 64): الأنشطة الإضافية الموسعة والحلول النموذجية",
@@ -8532,8 +8585,39 @@ window.CURRICULUM_DATA = [
           {
             "id": 30101,
             "page": 80,
-            "heading": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower - مغامرة باريس وبرج إيفل (صفحات 80-81)",
-            "text": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (Part 1 - At the Eiffel Tower)\n\n'It's nearly time for you all to go back to your own countries, boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.'\n'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip.\n'That's right!' said Tom. 'Make sure you take some photographs for the magazine.'\n'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!'\n\nWe were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue.\n'Look at all these people!' said Aziz. 'We're going to be here for hours!'\n'It might move quickly,' I said.\n'But it might not,' said Jad. 'I've got an idea.'\nHe walked boldly to the front of the queue. We saw him talking politely to a man, and then he turned and waved to us! We followed him past the other people in the queue, and we all stepped into the lift.\n\n'How did you do that?' I asked Jad in amazement.\n'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international youth magazine!'\n'But that's not true!' said Paolo.\n'It's not true now,' smiled Jad. 'But it might be true in the future!'\n\nThe doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded.\n'There are so many people here!' said Marcus. We tried to get to the front railing, but we couldn't get past people.\n'Excuse me,' I said. But nobody moved.\n'Can I get past, please?' said Jad. But nobody moved.\nJad held his camera up high above the crowd to take photographs. Then suddenly, some people in the crowd turned around and started walking towards us. We turned around, too, and were pushed right back into the lift!\n'Wait!' I cried. 'We haven't seen anything yet!'\nBut the doors of the lift closed, and we started going back down again!\n\nAt the bottom of the tower, Jad looked through his photographs.\n'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. 'All I can see is the back of your head, Johnny!'\nI laughed, too. 'I'm going to miss you, Jad,' I said.\nJad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.'\n'Great idea, Jad!'\n\nPart 2 - The International Video Chat:\n'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' smiling faces on the screen.\n'It's not the morning here in Iraq, Johnny. It's the afternoon,' smiled Jad.\n'It's 7 a.m. here in the USA,' yawned Marcus. 'You woke me up!'\n'Sorry, but I wanted to check. Did Tom send you the published magazine?'\n'Yes!' they all cheered.\n'It looks great,' said Aziz. 'I love your story about Stonehenge, Johnny.'\n'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!'\n'The one of Johnny standing in the River Thames is good, too,' laughed Paolo.\n'I think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face!'\nI laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor!\nI heard Marcus call out through the speaker: 'Why didn't you catch it, Johnny?'\nAnd then I heard them all laughing together and shouting the same famous phrase:\n'Use your hands!'\n'Very funny, guys!' I said, and I laughed, too."
+            "heading": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (Part 1 - صفحة 80)",
+            "text": "Unit 7 Lesson 10: Story Time: Jad and Johnny - The Eiffel Tower (Part 1 - At the Eiffel Tower)\n\n'It's nearly time for you all to go back to your own countries, boys,' said Tom. 'But first, you're going to see one of the most famous places in Europe.'\n'It must be the Eiffel Tower!' said Marcus. We were in Paris, France, and it was the last day of our European trip.\n'That's right!' said Tom. 'Make sure you take some photographs for the magazine.'\n'I'll take a great photograph from the top,' said Jad. 'I think it will be on the cover of our magazine!'\n\nWe were all really excited to go up the Eiffel Tower. But when we got there, we saw a very long queue.\n'Look at all these people!' said Aziz. 'We're going to be here for hours!'\n'It might move quickly,' I said.\n'But it might not,' said Jad. 'I've got an idea.'\nHe walked boldly to the front of the queue. We saw him talking politely to a man, and then he turned and waved to us! We followed him past the other people in the queue, and we all stepped into the lift.\n\n'How did you do that?' I asked Jad in amazement.\n'I told them I'm a very famous photographer from Iraq. And I said you were journalists for an international youth magazine!'\n'But that's not true!' said Paolo.\n'It's not true now,' smiled Jad. 'But it might be true in the future!'\n\nThe doors of the lift opened, and we were at the top of the Eiffel Tower. It was very crowded.\n'There are so many people here!' said Marcus. We tried to get to the front, but we couldn't get past people."
+          },
+          {
+            "id": 301011,
+            "page": 81,
+            "heading": "Unit 7 Lesson 10: Story Time: Jad and Johnny - Top of the Tower & Video Chat (Part 2 - صفحة 81)",
+            "text": "Part 2 - Leaving the Tower & The International Video Chat (Student Book p. 81):\n\n'Excuse me,' I said. But nobody moved.\n'Can I get past, please?' said Jad. But nobody moved. He held his camera up high to take photographs. Then some people in the crowd turned around and started walking towards us. We turned around, too, and we were back in the lift.\n'Wait!' I said. 'We haven't seen anything yet!' But the doors of the lift closed, and we started to go back down again.\n\nAt the bottom of the tower, Jad looked at his photographs.\n'These photographs from the top of the Eiffel Tower may not get into our magazine, actually,' he laughed. 'All I can see is the back of your head, Johnny!' I laughed, too.\n'I'm going to miss you, Jad,' I said.\nJad replied, 'I'm going to miss you, too, Johnny. But don't worry. I'll set up an online group, and we can chat to each other every week.'\n'Great idea, Jad!'\n\n'Good morning, everyone!' I said. I was sitting in my bedroom at home in England. I was looking at my phone, and I could see my friends' faces on the screen.\n'It's not the morning here in Iraq, Johnny. It's the afternoon,' said Jad.\n'It's 7 a.m. here in the USA,' said Marcus. 'You woke me up!'\n'Sorry, but I wanted to check. Did Tom send you the magazine?'\n'Yes!' they all replied.\n'It looks great,' said Aziz. 'I love your story about Stonehenge, Johnny.'\n'There are some brilliant photographs, too,' said Marcus. 'I like the one of Johnny skiing down the mountain. He looks so scared!'\n'The one of Johnny standing in the River Thames is good, too,' laughed Paolo.\n'I think my favourite photograph of Johnny is in Munich,' said Jad. 'When the football hits him in the face.'\nI laughed, but because I was laughing so much, I dropped my phone, and it landed on the floor. I heard Marcus say 'Why didn't you catch it, Johnny?' And then I heard them all laughing and saying the same thing ...\n'Use your hands!'\n'Very funny, guys!' I said, and I laughed, too.",
+            "exercises": [
+              {
+                "id": "u7_l10_sb_p80_81",
+                "num": "Student Book (Pages 80-81) A",
+                "title": "Listen, read and find out (Story Time Comprehension Questions).",
+                "title_ar": "اقرأ القصة (صفحة 80-81) وأجب عن أسئلة الفهم والاستيعاب الثلاثة:",
+                "questions": [
+                  {
+                    "q": "1. What does Jad want to do at the Eiffel Tower?",
+                    "q_ar": "ماذا يريد جاد أن يفعل عند برج إيفل؟",
+                    "a": "He wants to take a great photograph from the top of the tower for the cover of their magazine."
+                  },
+                  {
+                    "q": "2. What happens at the top of the tower?",
+                    "q_ar": "ماذا حدث في قمة البرج؟",
+                    "a": "It is very crowded; they cannot get to the front, Jad holds his camera up high, and the crowd pushes them straight back into the lift before they see anything, so Jad only gets photos of the back of Johnny's head."
+                  },
+                  {
+                    "q": "3. Why does everyone say 'Use your hands' to Johnny?",
+                    "q_ar": "لماذا قال الجميع لجوني «استخدم يديك»؟",
+                    "a": "Because Johnny drops his phone while laughing during their video call, just like when the football hit him in the face in Munich."
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": 30102,
@@ -8639,8 +8723,41 @@ window.CURRICULUM_DATA = [
           {
             "id": 30111,
             "page": 82,
-            "heading": "Unit 7 Lesson 11: Project 4: Recycling at home - إعادة التدوير المنزلي ودليل صناعة حافظة أقلام (صفحات 82-85)",
-            "text": "Unit 7 Lesson 11: Project 4: Recycling at home (المشروع الرابع: إعادة التدوير المنزلي)\n\n1. The Global Rubbish Crisis (صفحة 82):\nOne of the biggest problems facing the modern world today is rubbish. Countries and cities across the globe have to deal with mountains of solid trash every single day. As we know, this causes immense problems for people, wildlife and our fragile environment.\nRight now, there are practical steps you and your family can take at home to reduce waste:\n• Use paper carefully and write on both sides of every sheet.\n• Try to reuse plastic water bottles instead of throwing them away.\n• Find creative ways to use old newspapers (wrapping gifts, cleaning, crafts).\n• Donate or repurpose outgrown clothes.\n• Think before you throw anything in the bin!\n\n2. The Rubbish Competition - Creative Upcycling (صفحة 83):\nIngenious items made entirely from household rubbish:\n• Present Tag: Cut out of scrap paper into a heart shape and tied with string.\n• Lampshade: Crafted using plastic drinking cups fastened together with paper clips.\n• Toy Rocket: Created for children using a cardboard paper towel tube and brightly coloured scraps.\n• Glass Bottle House: An astounding real building constructed from 4,000 recycled glass bottles!\n\n3. Useful or Not Useful? (صفحة 84):\nEvaluating home recycling inventions:\n• Does it replace a new plastic product?\n• Is it sturdy and safe for daily use?\n• How much waste does it divert from landfills?\n\n4. DIY Step-by-Step Recycling Project (صفحة 85):\n\"Make a Handy Pencil Case from Recycled Plastic Bottles!\"\nYou will need:\n- Two clean plastic bottles\n- One zipper fastener\n- A pair of scissors\n- Strong glue or glue gun\n\nInstructions:\n1. Use the scissors to cut the top off each bottle so that one bottle remains tall (for holding pencils) and the other is cut short (to serve as the lid).\n2. Use glue to stick one side of the zipper fastener neatly around the inside upper edge of the tall bottle.\n3. Glue the other side of the zipper fastener along the inside rim of the short bottle.\n4. Allow the glue to dry completely, then zip the two halves together.\n5. Put your pens, pencils and erasers in your new eco-friendly pencil case!\n\nShare your DIY recycling project with your classmates and publish your photo in the school magazine!"
+            "heading": "Unit 7 Lesson 11: Project 4: Turning Trash into Treasure! (صفحة 82)",
+            "text": "Unit 7 Lesson 11: Project 4: Recycling at home (المشروع الرابع: إعادة التدوير المنزلي)\n\nTurning Trash into Treasure! (Student Book p. 82):\nOne of the biggest problems in the world today is rubbish. Countries and cities around the world have to deal with mountains of trash every day. As we know, this causes many problems for people, wildlife and our environment.\nRight now, there are many ways you can reduce the amount of rubbish you and your family make:\n• Use paper carefully and write on both sides.\n• Try to use plastic bottles again.\n• Think of creative ways to reuse old newspapers and old clothes.\n• Remember the 3Rs: REDUCE, REUSE, RECYCLE — think before you throw things in the bin!"
+          },
+          {
+            "id": 301111,
+            "page": 83,
+            "heading": "Project 4: The Rubbish Competition (صفحة 83)",
+            "text": "The Rubbish Competition (Student Book p. 83):\nThe items below were made using rubbish (recycling). Give each idea a score from 4 (best) down to 1:\n• a. Present tag: This is a present tag. It is made from an old piece of paper and some string. It is cut to look like a heart.\n• b. Toy rocket: This is a toy rocket for a child. It is made from a cardboard tube and some colourful pieces of paper.\n• c. Lampshade: This is a lampshade. It is made from plastic cups and paper clips. The paper clips hold the cups together.\n• d. Bottle house: This is a small house for people to visit. It is made from 4,000 glass bottles!"
+          },
+          {
+            "id": 301112,
+            "page": 84,
+            "heading": "Project 4: What is it? - Useful or Not Useful? (صفحة 84)",
+            "text": "What can you see in each photograph? What is it made of? Is it useful? (Student Book p. 84):\n1. Greenhouse: This is a greenhouse in a garden. It is made of old plastic bottles! (Useful ✓)\n2. Shopping bag: This is a strong reusable shopping bag made from folded old newspapers! (Useful ✓)\n3. Flower decoration / Lamp craft: These are decorative flowers made from painted plastic bottle tops/cups! (Decorative craft)\n4. Sock puppet: This is a toy puppet made from an old sock, buttons, and coloured wool! (Useful / fun toy for children ✓)",
+            "exercises": [
+              {
+                "id": "u7_l11_sb_p84",
+                "num": "Student Book (Page 84) C",
+                "title": "Describe what is in each photograph, what it is made of, and whether it is useful.",
+                "title_ar": "صف ما في كل صورة وممّ صُنع وهل هو مفيد أم لا (صفحة 84):",
+                "questions": [
+                  {
+                    "q": "Photo 2 (Paper bag) & Photo 4 (Puppet): What is it and what is it made of?",
+                    "q_ar": "صف الصورتين 2 و 4 وممّ صُنع كل منهما:",
+                    "a": "• Photo 2: This is a shopping bag. It is made of old newspapers. (Useful ✓)\n• Photo 4: This is a hand puppet. It is made of an old sock, buttons and wool. (Useful as a toy ✓)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 301113,
+            "page": 85,
+            "heading": "Project 4: DIY Pencil Case & Flower Planter Instructions (صفحة 85)",
+            "text": "DIY Recycling Project (Student Book p. 85):\n\"You can reuse plastic bottles to make a new pencil case! Why not make your own?\"\nYou will need: two plastic bottles, a fastener (zipper), scissors, glue.\n1. Use the scissors to cut the top off each bottle so that one stays long and the other is short.\n2. Use glue to stick the fastener inside the edge of one of the bottles.\n3. Glue the other part of the fastener to the inside of the other bottle.\n4. Put your pencils in your new pencil case!\n\nExercise E: Plastic bottle hanging flower planter — cut a window in the side of an empty plastic bottle, hang it with string, fill it with soil, and plant flowers inside it!"
           },
           {
             "id": 30112,

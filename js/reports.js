@@ -445,7 +445,20 @@ window.ReportManager = (() => {
           gaps.push(`تغطية كاملة 100%؛ جميع الدروس الـ ${lessonsCount} تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 5–96) مربوطة بمقاطعها مع 16 لوحة SVG.`);
         }
       } else if (spec.id === 4) {
-        gaps.push('تفاوت عدد الأسئلة بين الوحدات الأولى (38 سؤالاً) والأخيرة (9 أسئلة).');
+        const unitQuestionCounts = (chapters || [])
+          .filter(ch => ch && ch.id >= 401 && ch.id <= 409)
+          .map(ch => {
+            let qSum = 0;
+            (ch.lessons || []).forEach(l => (l.chunks || []).forEach(ck => (ck.exercises || []).forEach(ex => { qSum += (ex.questions || []).length; })));
+            return qSum;
+          });
+        const minQ = unitQuestionCounts.length > 0 ? Math.min(...unitQuestionCounts) : 0;
+        const maxQ = unitQuestionCounts.length > 0 ? Math.max(...unitQuestionCounts) : 0;
+        if (unitQuestionCounts.length === 9 && minQ >= 20) {
+          gaps.push(`تغطية كاملة ومتوازنة 100%؛ جميع الوحدات التسع تضم تمارين وتطبيقات تفاعلية متوازنة (${answeredQuestionsCount} سؤالاً محلولاً عبر ${exerciseCardsCount} بطاقة، بمعدل ${minQ}–${maxQ} سؤالاً لكل وحدة) وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 5–135) مربوطة بمقاطعها.`);
+        } else {
+          gaps.push(`تفاوت عدد الأسئلة بين الوحدات (${minQ} إلى ${maxQ} سؤالاً).`);
+        }
       } else if (spec.id === 5) {
         const hasMamnoo = Array.isArray(window.ARABIC_GRAMMAR_RULES) && window.ARABIC_GRAMMAR_RULES.some(r => (r.title || '').includes('الممنوع من الصرف'));
         const hasRabeeExercises = (chapters || []).some(ch => (ch.lessons || []).some(l => l.id === 5042 && (l.chunks || []).some(ck => Array.isArray(ck.exercises) && ck.exercises.length > 0)));
@@ -459,9 +472,20 @@ window.ReportManager = (() => {
           gaps.push(`تغطية كاملة 100%؛ جميع الوحدات التسع (بما فيها مطالعة وصف الربيع لأبي تمام) تشتمل على تمارين تفاعلية وحلول نموذجية (${answeredQuestionsCount} سؤالاً)، وبنك القواعد يضم قاعدة «الممنوع من الصرف»، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 3–135) مربوطة بمقاطعها.`);
         }
       } else if (spec.id === 6) {
-        gaps.push('تغطية شبه كاملة؛ فقط 4 صفحات داخلية (46، 68، 74، 96) غير مشار إليها في المقاطع.');
+        const missingIslamic = [46, 68, 74, 96].filter(p => !referencedPages.has(p));
+        if (missingIslamic.length === 0 && referencedPages.size >= (actualDiskImages - 5)) {
+          gaps.push(`تغطية كاملة 100%؛ جميع الوحدات الست تشتمل على مناقشات وحلول نموذجية (${answeredQuestionsCount} سؤالاً عبر ${exerciseCardsCount} بطاقة)، وجميع صفحات المحتوى الـ ${referencedPages.size} (ص 4–118 بما فيها 46، 68، 74، 96) مربوطة بمقاطع الدروس.`);
+        } else {
+          gaps.push(`صفحات داخلية غير مشار إليها في المقاطع (${missingIslamic.join('، ') || (actualDiskImages - 5 - referencedPages.size)}).`);
+        }
       } else if (spec.id === 3) {
-        gaps.push('أغنى مادة تفاعلياً (1,016 سؤالاً مجاباً و124/127 صفحة نشاط)؛ فقط 6 صفحات داخلية من كتاب الطالب غير مشار إليها ولا تفتح من نافذة المراجعات الموحدة.');
+        const missingEngSb = [40, 42, 81, 83, 84, 85].filter(p => !referencedPages.has(p));
+        const hasEnReviewModal = typeof openEnglishReviewsModal === 'function';
+        if (missingEngSb.length === 0 && hasEnReviewModal) {
+          gaps.push(`تغطية كاملة 100%؛ أغنى مادة تفاعلياً (${answeredQuestionsCount} سؤالاً مجاباً عبر ${exerciseCardsCount} بطاقة و124/127 صفحة نشاط)، مع ربط جميع صفحات المحتوى الـ ${referencedPages.size} من كتاب الطالب (ص 4–120) وفتحها وتمارين الكراس من نافذة المراجعات الموحدة.`);
+        } else {
+          gaps.push(`فجوات ربط في اللغة الإنجليزية: صفحات غير مرتبطة (${missingEngSb.length}) أو نافذة المراجعات غير مفعلة.`);
+        }
       }
 
       let status = 'مكتمل وعالي';
@@ -509,7 +533,7 @@ window.ReportManager = (() => {
           status = 'جيد مع فجوات جزئية';
           statusTone = 'warning';
         }
-      } else if (spec.id === 5) {
+      } else if (spec.id === 5 || spec.id === 4 || spec.id === 6 || spec.id === 3) {
         if (gaps.length === 1 && gaps[0].startsWith('تغطية كاملة')) {
           status = 'مكتمل وعالي';
           statusTone = 'success';

@@ -1,7 +1,18 @@
 // =========================================================================
-// المحرك الموحد لنوافذ المراجعات والحلول النموذجية (8 مواد) والرسوم التوضيحية (3 مواد)
+// المحرك الموحد لنوافذ المراجعات والحلول النموذجية (9 مواد) والرسوم التوضيحية (4 مواد)
 // إعداد المهندس أسامة خليل هاشم
 // =========================================================================
+
+const ENGLISH_REVIEW_UNITS_META = [
+  { id: 190, unitNum: 1, title: 'الوحدة 1: A School Magazine (مجلة المدرسة)', subtitle: 'تمارين كتاب النشاط ومراجعة الوحدة الأولى (ص 4 - 21)', pages: '4 - 16', startPage: 4, primaryLessonId: 261 },
+  { id: 191, unitNum: 2, title: 'الوحدة 2: Healthy Lifestyle (نمط الحياة الصحي)', subtitle: 'تمارين كتاب النشاط ومراجعة الوحدة الثانية (ص 22 - 39 وص 63)', pages: '17 - 27', startPage: 17, primaryLessonId: 272 },
+  { id: 192, unitNum: 3, title: 'الوحدة 3: Sports and Games (الرياضة والألعاب)', subtitle: 'تمارين كتاب النشاط والمشاريع (ص 40 - 57 وص 64)', pages: '28 - 42', startPage: 28, primaryLessonId: 283 },
+  { id: 193, unitNum: 4, title: 'الوحدة 4: Review 1 (المراجعة الشاملة 1)', subtitle: 'مهارات الاستماع والقراءة والكتابة ومراجعة الكورس الأول (ص 58 - 61 و 65)', pages: '43 - 46', startPage: 43, primaryLessonId: 294 },
+  { id: 194, unitNum: 5, title: 'الوحدة 5: Getting & Sending Info (تلقي وإرسال المعلومات)', subtitle: 'تمارين كتاب النشاط ومراجعة الوحدة الخامسة (ص 66 - 83 وص 124)', pages: '47 - 59', startPage: 47, primaryLessonId: 2961 },
+  { id: 195, unitNum: 6, title: 'الوحدة 6: Jobs and Occupations (المهن والوظائف)', subtitle: 'تمارين كتاب النشاط ومراجعة الوحدة السادسة (ص 84 - 101 وص 125)', pages: '60 - 70', startPage: 60, primaryLessonId: 2981 },
+  { id: 196, unitNum: 7, title: 'الوحدة 7: The World Around Us (العالم من حولنا والبيئة)', subtitle: 'تمارين كتاب النشاط والقصص والمشاريع (ص 102 - 119 وص 126)', pages: '71 - 85', startPage: 71, primaryLessonId: 3001 },
+  { id: 197, unitNum: 8, title: 'الوحدة 8: Review 2 (المراجعة الشاملة 2)', subtitle: 'مراجعة الكورس الثاني الشاملة وتمارين الكراس (ص 120 - 123 و 127)', pages: '86 - 89', startPage: 86, primaryLessonId: 3021 }
+];
 
 const PHYSICS_REVIEW_CHAPTERS_META = [
   { id: 701, unitId: 701, chapterNum: 1, title: 'الفصل 1: الحركة', subtitle: 'القياس، الحركة والسرعة، والتعجيل (3 دروس + مراجعة الفصل)', pages: '10 - 23', startPage: 21, primaryLessonId: 7014 },
@@ -309,6 +320,39 @@ const REVIEW_MODAL_CONFIGS = {
       shortNavTitle: typeof m.unitNum === 'number' ? `الوحدة ${m.unitNum}` : 'أحكام التلاوة'
     })),
     getCurriculum: () => window.ISLAMIC_CURRICULUM || []
+  },
+  english: {
+    key: 'english',
+    currId: 3,
+    icon: '📘',
+    title: 'مركز الحلول النموذجية لتمارين كراس النشاط ومراجعات اللغة الإنجليزية',
+    subtitle: 'منهج اللغة الإنجليزية للصف الثاني المتوسط (English for Iraq • 8 وحدات • تمارين الكراس والكتاب) • إعداد المهندس أسامة خليل هاشم',
+    mode: 'unit-exercises',
+    defaultItemId: 190,
+    defaultSolutionsVisible: false,
+    bookOpenMode: 'page',
+    showChunkBookBtn: true,
+    usePhysicsMath: false,
+    itemTypeLabel: 'الوحدة',
+    theme: {
+      primary: '#4338ca',
+      darkText: '#1e1b4b',
+      accentText: '#3730a3',
+      lightBg: '#eef2ff',
+      softBg: '#e0e7ff',
+      border: '#c7d2fe',
+      cardBorder: '#c7d2fe',
+      solBg: '#f0fdfa',
+      solText: '#065f46',
+      gradient: 'linear-gradient(135deg, #4338ca, #4f46e5)',
+      shadowRgba: 'rgba(67,56,202,0.28)'
+    },
+    getMetaList: () => ENGLISH_REVIEW_UNITS_META.map(m => ({
+      ...m,
+      itemKey: m.id,
+      shortNavTitle: `الوحدة ${m.unitNum}`
+    })),
+    getCurriculum: () => window.CURRICULUM_DATA || []
   }
 };
 
@@ -512,12 +556,23 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
               ${item.showLessonTitle ? `<span style="font-size: 0.74rem; color: ${t.accentText}; margin-inline-start: 0.4rem; font-weight: 700;">• ${lesson.title}</span>` : ''}
             </div>
           </div>
-          <div style="display: flex; gap: 0.4rem; align-items: center;">
-            ${cfg.showChunkBookBtn ? `
-              <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 700; border-radius: 5px;">
-                📖 صورة صفحة (${pageNum})
-              </button>
-            ` : ''}
+          <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+            ${cfg.showChunkBookBtn ? (
+              (ch.is_activity_book && ch.activity_book_page) ? `
+                <button class="btn btn-sm" onclick="openBookPageModal(${ch.activity_book_page}, \`${escapeForAttribute(lesson.title)}\`, 'activity', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: #0d9488; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
+                  📝 صورة النشاط (${ch.activity_book_page})
+                </button>
+                ${ch.page ? `
+                  <button class="btn btn-sm" onclick="openBookPageModal(${ch.page}, \`${escapeForAttribute(lesson.title)}\`, 'student', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 700; border-radius: 5px;">
+                    📖 كتاب الطالب (${ch.page})
+                  </button>
+                ` : ''}
+              ` : `
+                <button class="btn btn-sm" onclick="openBookPageModal(${pageNum}, \`${escapeForAttribute(lesson.title)}\`, 'student', ${cfg.currId})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; font-weight: 700; border-radius: 5px;">
+                  📖 صورة صفحة (${pageNum})
+                </button>
+              `
+            ) : ''}
             <button class="btn btn-sm" onclick="toggleAllActivitySolutions('${listPrefix}')" style="font-size: 0.72rem; padding: 0.2rem 0.6rem; background: ${t.primary}; color: #ffffff; border: none; font-weight: 700; border-radius: 5px;">
               👁️ إظهار/إخفاء حلول هذا المقطع
             </button>
@@ -541,22 +596,32 @@ function renderUnifiedExerciseChunksHTML(cfg, activeMeta, chunkItems) {
 
         let qListHtml = '';
         if (ex.questions && ex.questions.length > 0) {
-          qListHtml = ex.questions.map((qObj, qIdx) => `
+          const isEnCfg = cfg.currId === 3;
+          qListHtml = ex.questions.map((qObj, qIdx) => {
+            const qIsEn = isEnCfg && /[a-zA-Z]{3,}/.test(qObj.q || '');
+            const aIsEn = isEnCfg && /[a-zA-Z]{3,}/.test(qObj.a || '');
+            const qDir = qIsEn ? 'ltr' : 'rtl';
+            const qAlign = qIsEn ? 'left' : 'right';
+            const aDir = aIsEn ? 'ltr' : 'rtl';
+            const aAlign = aIsEn ? 'left' : 'right';
+            return `
             <div style="margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid ${t.rowBorder};">
-              <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: rtl; text-align: right; line-height: 1.6; white-space: pre-wrap;">${formatReviewText(cfg, qObj.q)}</div>
+              <div style="font-weight: 700; color: var(--slate-900); font-size: 0.9rem; direction: ${qDir}; text-align: ${qAlign}; line-height: 1.6; white-space: pre-wrap;">${formatReviewText(cfg, qObj.q)}</div>
               ${(qObj.options && qObj.options.length > 0) ? `
-                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: rtl;">
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.35rem 0 0.2rem; font-size: 0.8rem; direction: ${qDir};">
                   ${qObj.options.map(opt => `<span style="background: ${t.chipBg}; border: 1px solid ${t.cardBorder}; padding: 0.15rem 0.45rem; border-radius: 4px; color: var(--slate-700); font-weight: 600;">${formatReviewText(cfg, opt)}</span>`).join('')}
                 </div>
               ` : ''}
+              ${qObj.q_ar ? `<div style="font-size: 0.78rem; color: var(--slate-500); margin-top: 0.2rem; direction: rtl; text-align: right;">${qObj.q_ar}</div>` : ''}
               <div class="unified-review-solution-box exam-model-answer-box${hiddenClass}" id="sol_${exId}_${qIdx}" style="margin-top: 0.45rem; padding: 0.65rem 0.85rem; font-size: 0.85rem; border-right: 4px solid ${t.primary}; background: ${t.solBg}; border-radius: 6px; border-top: 1px solid ${t.softBg}; border-bottom: 1px solid ${t.softBg}; border-left: 1px solid ${t.softBg};">
                 <div style="font-weight: 800; color: ${document.documentElement.dataset.theme === 'dark' ? '#6ee7b7' : t.primary}; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">
                   <span>💡</span> الحل النموذجي المعتمد:
                 </div>
-                <div style="direction: rtl; text-align: right; font-weight: 600; color: ${t.solText}; white-space: pre-wrap; line-height: 1.7;">${formatReviewText(cfg, qObj.a)}</div>
+                <div style="direction: ${aDir}; text-align: ${aAlign}; font-weight: 600; color: ${t.solText}; white-space: pre-wrap; line-height: 1.7;">${formatReviewText(cfg, qObj.a)}</div>
               </div>
             </div>
-          `).join('');
+          `;
+          }).join('');
         }
 
         html += `
@@ -703,15 +768,20 @@ function renderChapterReviewsModal() {
     return;
   }
 
-  // وضع unit-exercises (العربية بجزأيها والتربية الإسلامية)
+  // وضع unit-exercises (العربية بجزأيها والتربية الإسلامية واللغة الإنجليزية والفيزياء والأحياء والكيمياء والاجتماعيات والرياضيات)
   const targetUnit = curr.find(u => u.id === activeMeta.itemKey) || curr[0];
   if (!targetUnit) {
     contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا تتوفر تمرينات مسجلة لهذه الوحدة حالياً.</div>';
     return;
   }
   const reviewChunks = [];
+  const unitSbPages = new Set();
   (targetUnit.lessons || []).forEach(lesson => {
     (lesson.chunks || []).forEach(chunk => {
+      if (chunk.page && !chunk.is_activity_book) {
+        const pn = Number(chunk.page);
+        if (!isNaN(pn) && pn > 0) unitSbPages.add(pn);
+      }
       if (chunk.exercises && chunk.exercises.length > 0) {
         reviewChunks.push({ chunk, lesson, showLessonTitle: true });
       }
@@ -721,7 +791,22 @@ function renderChapterReviewsModal() {
     contentContainer.innerHTML = '<div style="text-align: center; color: var(--slate-400); padding: 3rem;">لا توجد تمرينات أو مناقشات مسجلة لهذه الوحدة حالياً.</div>';
     return;
   }
-  contentContainer.innerHTML = renderUnifiedExerciseChunksHTML(cfg, activeMeta, reviewChunks);
+  let sbStripHtml = '';
+  if (cfg.currId === 3 && unitSbPages.size > 0) {
+    const sortedSb = [...unitSbPages].sort((a, b) => a - b);
+    const unitTitleAttr = escapeForAttribute(activeMeta.title || targetUnit.title || 'كتاب الطالب');
+    sbStripHtml = `
+      <div style="background: ${t.lightBg}; border: 1px solid ${t.border}; border-radius: 10px; padding: 0.6rem 0.85rem; margin-bottom: 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+        <strong style="font-size: 0.8rem; color: ${t.darkText}; margin-inline-end: 0.3rem;">📖 صفحات كتاب الطالب للوحدة:</strong>
+        ${sortedSb.map(p => `
+          <button type="button" class="btn btn-sm" onclick="openBookPageModal(${p}, \`${unitTitleAttr}\`, 'student', 3)" style="font-size: 0.72rem; padding: 0.15rem 0.45rem; background: ${t.btnWhiteBg}; color: ${t.accentText}; border: 1px solid ${t.border}; border-radius: 5px; font-weight: 700;">
+            ص ${p}
+          </button>
+        `).join('')}
+      </div>
+    `;
+  }
+  contentContainer.innerHTML = sbStripHtml + renderUnifiedExerciseChunksHTML(cfg, activeMeta, reviewChunks);
 }
 
 function toggleUnifiedReviewSection(secIdx) {
@@ -858,8 +943,15 @@ window.addEventListener('ies:themechange', () => {
 });
 
 // =========================================================================
-// أغلفة التوافق الكامل مع استدعاءات المراجعات الثماني السابقة
+// أغلفة التوافق الكامل مع استدعاءات المراجعات التسع السابقة
 // =========================================================================
+function openEnglishReviewsModal(unitId = 190) { return openChapterReviewsModal('english', unitId); }
+function closeEnglishReviewsModal() { closeChapterReviewsModal(); }
+function switchEnglishModalReviewUnit(id) { switchChapterReviewsItem(id); }
+function toggleAllEnglishModalSolutions() { toggleAllUnifiedReviewSolutions(); }
+function openCurrentModalEnglishReviewInStudy() { openUnifiedReviewInStudy(); }
+function openCurrentModalEnglishBookPage() { openUnifiedReviewBookPage(); }
+
 function openMathReviewsModal(reviewLessonId = 8015) { return openChapterReviewsModal('math', reviewLessonId); }
 function closeMathReviewsModal() { closeChapterReviewsModal(); }
 function switchMathModalReviewChapter(id) { switchChapterReviewsItem(id); }

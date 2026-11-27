@@ -339,6 +339,9 @@ function renderCurriculumsList() {
             <button class="btn btn-primary" onclick="openSubjectTab(${engCurr.id})" style="font-weight: 800; background: linear-gradient(135deg, #4338ca, #6366f1); border: none; padding: 0.65rem 1.4rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);">
               📖 دخول قاعة المذاكرة والدروس ⮞
             </button>
+            <button class="btn btn-secondary" onclick="openEnglishReviewsModal()" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
+              🎯 تمارين الكراس والمراجعات (8 وحدات)
+            </button>
             <button class="btn btn-secondary" onclick="openPastExamsTab('midyear')" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0; font-weight: 800; padding: 0.65rem 1.1rem; font-size: 0.85rem;">
               📝 نماذج الامتحانات والأسئلة
             </button>
@@ -1457,6 +1460,9 @@ function renderActiveSubjectShowcase() {
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
             <button class="btn btn-primary" onclick="openSubjectTab(${curr.id})" style="background: linear-gradient(135deg, #4338ca, #6366f1); border: none; font-weight: 800; padding: 0.65rem 1.3rem; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);">
               📖 دخول قاعة المذاكرة والدروس ⮞
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="openEnglishReviewsModal()" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.55rem 0.95rem;">
+              🎯 تمارين الكراس والمراجعات (8 وحدات)
             </button>
             <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4, 'student')" style="background: #ffffff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.55rem 0.95rem;">
               📖 تصفح كتاب الطالب (119 صفحة)
