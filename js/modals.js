@@ -1166,21 +1166,23 @@ async function openDiagramViewerModal(subjectKey, diagId) {
   }
 
   if (infoWrap) {
+    const useMathFmt = (subjectKey === 'math' || subjectKey === 'physics') && typeof formatPhysicsMath === 'function';
+    const fmtDiag = (s) => useMathFmt ? formatPhysicsMath(s) : s;
     infoWrap.innerHTML = `
       <div style="background: #f0fdf4; border-right: 4px solid ${cfg.accentColor}; padding: 0.6rem 0.85rem; border-radius: 6px; font-size: 0.84rem; color: #064e3b; margin-bottom: 0.5rem; line-height: 1.6;">
-        <strong>${cfg.summaryLabel}</strong> ${diag.summary}
+        <strong>${cfg.summaryLabel}</strong> ${fmtDiag(diag.summary)}
       </div>
       ${diag.formula ? `
         <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.5rem 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
           <span style="font-size: 1.1rem;">${cfg.formulaIcon}</span>
           <strong style="font-size: 0.85rem; color: #1d4ed8;">${cfg.formulaLabel}</strong>
-          <span style="font-size: 0.85rem; font-weight: 800; color: #1e40af;">${diag.formula}</span>
+          <span style="font-size: 0.85rem; font-weight: 800; color: #1e40af;">${fmtDiag(diag.formula)}</span>
         </div>
       ` : ''}
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;">
         ${(diag.keyPoints || []).map(pt => `
           <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.45rem 0.75rem; font-size: 0.78rem; color: #334155; line-height: 1.5;">
-            <span style="color: ${cfg.accentColor}; font-weight: 800;">✔️</span> ${pt}
+            <span style="color: ${cfg.accentColor}; font-weight: 800;">✔️</span> ${fmtDiag(pt)}
           </div>
         `).join('')}
       </div>
@@ -1291,6 +1293,7 @@ function renderUnifiedDiagramsGrid() {
     return;
   }
 
+  const useGridMathFmt = (cfg.key === 'math' || cfg.key === 'physics') && typeof formatPhysicsMath === 'function';
   grid.innerHTML = list.map(diag => `
     <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
       <div>
@@ -1304,7 +1307,7 @@ function renderUnifiedDiagramsGrid() {
         <div role="button" tabindex="0" aria-label="تكبير وفحص ${escapeHtml(diag.title)}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDiagramViewerModal('${cfg.key}', '${diag.id}');}" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem; cursor: pointer;" onclick="openDiagramViewerModal('${cfg.key}', '${diag.id}')" title="انقر لتكبير الرسم">
           ${diag.svg}
         </div>
-        <p style="margin: 0 0 0.5rem 0; font-size: 0.77rem; color: #475569; line-height: 1.5;">${diag.summary}</p>
+        <p style="margin: 0 0 0.5rem 0; font-size: 0.77rem; color: #475569; line-height: 1.5;">${useGridMathFmt ? formatPhysicsMath(diag.summary) : diag.summary}</p>
       </div>
       <button type="button" class="btn btn-sm" onclick="openDiagramViewerModal('${cfg.key}', '${diag.id}')" style="background: ${cfg.accentColor}; color: white; width: 100%; font-size: 0.75rem; padding: 0.3rem 0.5rem; font-weight: 700; border: none; border-radius: 6px;">
         ${cfg.viewerIcon} فحص اللوحة والشرح الكامل

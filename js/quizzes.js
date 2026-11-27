@@ -247,12 +247,14 @@ function renderQuizQuestions() {
   }
 
   const currId = currentQuizMeta.currId || Number(appData.currentCurriculumId || 3);
+  const useMathFmt = (currId === 7 || currId === 8 || currId === 10) && typeof formatPhysicsMath === 'function';
 
   currentQuizQuestions.forEach((q, idx) => {
     const isArabicText = (currId !== 3) || /[\u0600-\u06FF]/.test(q.question);
     const textDir = isArabicText ? 'rtl' : 'ltr';
     const textAlign = isArabicText ? 'right' : 'left';
     const optionLetters = isArabicText ? ['أ', 'ب', 'ج', 'د', 'هـ', 'و'] : ['A', 'B', 'C', 'D', 'E', 'F'];
+    const fmtQuiz = (s) => useMathFmt ? formatPhysicsMath(s) : s;
 
     const qDiv = document.createElement('div');
     qDiv.className = 'quiz-question';
@@ -273,7 +275,7 @@ function renderQuizQuestions() {
       </div>
 
       <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign}; line-height: 1.65;">
-        ${q.question}
+        ${fmtQuiz(q.question)}
       </div>
 
       <div class="options-group">
@@ -282,13 +284,13 @@ function renderQuizQuestions() {
             <span style="display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; background: rgba(0,0,0,0.06); font-size: 0.72rem; font-weight: 800; margin-left: 0.5rem; margin-right: 0.5rem;">
               ${optionLetters[optIdx] || String.fromCharCode(65 + optIdx)}
             </span>
-            ${opt}
+            ${fmtQuiz(opt)}
           </button>
         `).join('')}
       </div>
 
       <div id="explanation-${q.id}" class="hidden" style="margin-top: 0.85rem; padding: 0.75rem 1rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; font-size: 0.82rem; color: var(--slate-700); direction: ${textDir}; text-align: ${textAlign}; line-height: 1.65; box-shadow: var(--shadow-sm);">
-        <strong style="color: var(--primary);">💡 التفسير والشرح النموذجي: </strong><span>${q.explanation || 'إجابة منهجية معتمدة وفق كتاب وزارة التربية العراقية.'}</span>
+        <strong style="color: var(--primary);">💡 التفسير والشرح النموذجي: </strong><span>${fmtQuiz(q.explanation || 'إجابة منهجية معتمدة وفق كتاب وزارة التربية العراقية.')}</span>
       </div>
     `;
     container.appendChild(qDiv);

@@ -481,10 +481,10 @@ async function renderGrammarRules() {
           </div>
           <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #581c87;">${rule.title}</h4>
           <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #6b21a8; line-height: 1.6; margin-bottom: 0.65rem;">
-            <strong>💡 نص القانون والنظرية:</strong> ${rule.summary}
+            <strong>💡 نص القانون والنظرية:</strong> ${formatPhysicsMath(rule.summary)}
           </div>
           <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
-            ${rule.details}
+            ${formatPhysicsMath(rule.details)}
           </div>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--slate-100); padding-top: 0.6rem; margin-top: 0.4rem;">
@@ -544,10 +544,10 @@ async function renderGrammarRules() {
           </div>
           <h4 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 900; color: #075985;">${rule.title}</h4>
           <div style="background: #f0f9ff; border: 1px solid #bae6fd; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.83rem; color: #0369a1; line-height: 1.6; margin-bottom: 0.65rem;">
-            <strong>💡 خلاصة القانون والمفهوم:</strong> ${rule.summary}
+            <strong>💡 خلاصة القانون والمفهوم:</strong> ${formatPhysicsMath(rule.summary)}
           </div>
           <div style="white-space: pre-wrap; font-size: 0.82rem; color: var(--slate-700); line-height: 1.7; background: #f8fafc; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--slate-200);">
-            ${rule.details}
+            ${formatPhysicsMath(rule.details)}
           </div>
           ${(() => {
             let diag = null;

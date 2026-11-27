@@ -745,7 +745,10 @@ async function renderCurrentLessonContent(currId, chapters) {
 
       innerContentHtml += `</div>`;
     } else {
-      innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'ltr' : 'rtl'}; text-align: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formatTextHighlights(text)}</div>`;
+      const formattedChunkText = (currId === 7 || currId === 8)
+        ? formatPhysicsMath(formatTextHighlights(text, false))
+        : formatTextHighlights(text, isEnCurr);
+      innerContentHtml = `<div class="chunk-content-text" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.85; color: var(--slate-800); direction: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'ltr' : 'rtl'}; text-align: ${(isEnCurr && /[a-zA-Z]{2,}/.test(text)) ? 'left' : 'right'}; unicode-bidi: plaintext;">${formattedChunkText}</div>`;
     }
 
             let chunkDiagramHtml = '';
@@ -785,7 +788,7 @@ async function renderCurrentLessonContent(currId, chapters) {
               </div>
             </div>
             <div style="margin-top: 0.5rem; background: ${bgLight}; border-right: 4px solid ${borderCol}; padding: 0.45rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: ${textDark}; line-height: 1.5;">
-              <strong>${diagExplainLabel}</strong>${diag.summary}
+              <strong>${diagExplainLabel}</strong>${(isMathDiag || appData.currentCurriculumId === 7) ? formatPhysicsMath(diag.summary) : diag.summary}
             </div>
           </div>
         `;
@@ -1532,13 +1535,13 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
 
         <!-- Summary & Formula -->
         <div style="background: #f0fdf4; border-right: 4px solid #10b981; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.82rem; color: #065f46; margin-bottom: 0.5rem; line-height: 1.5;">
-          <strong>💡 الشرح العلمي: </strong>${physDiagram.summary}
+          <strong>💡 الشرح العلمي: </strong>${formatPhysicsMath(physDiagram.summary)}
         </div>
 
         ${physDiagram.formula ? `
           <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
             <span style="font-size: 0.85rem;">📐</span>
-            <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${physDiagram.formula}</span>
+            <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${formatPhysicsMath(physDiagram.formula)}</span>
           </div>
         ` : ''}
 
@@ -1546,7 +1549,7 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
           ${(physDiagram.keyPoints || []).map(pt => `
             <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.76rem; color: #334155; line-height: 1.4;">
-              <span style="color: #0284c7; font-weight: 800;">•</span> ${pt}
+              <span style="color: #0284c7; font-weight: 800;">•</span> ${formatPhysicsMath(pt)}
             </div>
           `).join('')}
         </div>
@@ -1694,20 +1697,20 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
           </div>
 
           <div style="background: #faf5ff; border-right: 4px solid #7e22ce; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.8rem; color: #581c87; margin-top: 0.5rem; margin-bottom: 0.5rem; line-height: 1.5;">
-            <strong>💡 الشرح الهندسي: </strong>${mathDiagram.summary}
+            <strong>💡 الشرح الهندسي: </strong>${formatPhysicsMath(mathDiagram.summary)}
           </div>
 
           ${mathDiagram.formula ? `
             <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
               <span style="font-size: 0.85rem;">📐</span>
-              <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${mathDiagram.formula}</span>
+              <span style="font-size: 0.82rem; font-weight: 800; color: #1d4ed8;">القانون الرياضي: ${formatPhysicsMath(mathDiagram.formula)}</span>
             </div>
           ` : ''}
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.4rem;">
             ${(mathDiagram.keyPoints || []).map(pt => `
               <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem; color: #334155; line-height: 1.4;">
-                <span style="color: #7e22ce; font-weight: 800;">✔️</span> ${pt}
+                <span style="color: #7e22ce; font-weight: 800;">✔️</span> ${formatPhysicsMath(pt)}
               </div>
             `).join('')}
           </div>
@@ -1788,10 +1791,11 @@ function renderLessonMediaGallery(lesson, chapter, chunks) {
   container.innerHTML = html;
 }
 
-function formatTextHighlights(text) {
+function formatTextHighlights(text, highlightEnglish = true) {
   if (!text) return '';
   // تنقية النص من الرموز والتشكيلات المركبة غير المتوافقة مع خطوط العرض (مثل سهم المتجهات U+20D7)
   const clean = text.replace(/\u20d7/g, '');
+  if (!highlightEnglish) return clean;
   // إبراز الكلمات المفتاحية النحوية بأسلوب جمالي
   return clean
     .replace(/\b(Possessive 's'|A school magazine|article|cover|edit|editor|print|printer|report|reporter|for|since|used to|should|shouldn't|too much|too many|a few|a little|a lot of|headache|stomach ache|toothache|earache|painkiller|dentist|appendicitis|limerick|limericks|Stonehenge|healthy|unfit|exercise|regularly|fried|grilled|baked|boiled|starters|desserts|curry|marshmallow|marshmallows|ambulance|must|mustn't|play|go|do|passive|be going to)\b/gi, 

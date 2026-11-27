@@ -6,9 +6,9 @@
 const LEGACY_STORAGE_KEY = 'interactive_educational_system_v2';
 const STORAGE_KEY = 'interactive_edu_state_v1';
 const BUILTIN_CURRICULUM_IDS = new Set([3, 4, 5, 6, 7, 8, 9, 10, 11]);
-const CURRENT_VERSION = '5.13.0';
-const CURRENT_VERSION_LABEL = 'v5.13.0';
-const SYSTEM_VERSION = 'v5.13.0';
+const CURRENT_VERSION = '5.13.1';
+const CURRENT_VERSION_LABEL = 'v5.13.1';
+const SYSTEM_VERSION = 'v5.13.1';
 const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
 const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
 const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';
@@ -222,7 +222,7 @@ function matchesNormalizedQuery(haystack, query) {
 }
 
 // دالة تهيئة وتنسيق الرموز والمعادلات الرياضية والفيزيائية ومنع أي تشوه في نصوص RTL
-function formatPhysicsMath(text) {
+function formatPhysicsMath(text, options = {}) {
   if (!text || typeof text !== 'string') return text || '';
   text = text.replace(/\u20d7/g, '');
 
@@ -267,7 +267,176 @@ function formatPhysicsMath(text) {
 
   text = text.replace(/\$\$([^\$]+)\$\$/g, (m, inner) => cleanFormula(inner, true));
   text = text.replace(/\$([^\$]+)\$/g, (m, inner) => cleanFormula(inner, false));
-  return text;
+
+  if (options && options.skipInline) return text;
+  return isolateInlineMathHTML(text);
+}
+
+// عزل التعابير والجذور والمعادلات الرياضية المضمنة داخل النصوص العربية باتجاه LTR معزول
+function isolateInlineMathHTML(htmlText) {
+  if (!htmlText || typeof htmlText !== 'string') return htmlText || '';
+
+  const MARK_OPEN = '\uE001';
+  const MARK_CLOSE = '\uE002';
+
+  function stripTrailingPunct(s) {
+    while (s.length > 0) {
+      if (/[ \t.,:!?'"—–،؛؟]$/.test(s)) {
+        if (s.endsWith(';') && /&(?:[A-Za-z]+|#\d+|#x[0-9A-Fa-f]+);$/.test(s)) break;
+        s = s.slice(0, -1);
+      } else {
+        break;
+      }
+    }
+    return s;
+  }
+
+  function splitAtUnmatchedParens(seg) {
+    const parts = [];
+    let start = 0;
+    let bal = 0;
+    let lastOpenAtBal0 = -1;
+    for (let i = 0; i < seg.length; i++) {
+      const ch = seg[i];
+      if (ch === '(') {
+        if (bal === 0) lastOpenAtBal0 = i;
+        bal++;
+      } else if (ch === ')') {
+        if (bal === 0) {
+          parts.push(seg.slice(start, i + 1));
+          start = i + 1;
+          lastOpenAtBal0 = -1;
+        } else {
+          bal--;
+          if (bal === 0) lastOpenAtBal0 = -1;
+        }
+      }
+    }
+    let tail = seg.slice(start);
+    if (bal > 0 && lastOpenAtBal0 >= start) {
+      const rel = lastOpenAtBal0 - start;
+      if (rel > 0) {
+        parts.push(tail.slice(0, rel));
+        tail = tail.slice(rel);
+      }
+    }
+    if (tail) parts.push(tail);
+    return parts;
+  }
+
+  function trimMathRun(raw, atLineStart) {
+    let s = raw;
+    s = s.replace(/^[ \t.,:;!?'"—–،؛؟]+/, '');
+    s = s.replace(/^\d+[).:]\s+/, '');
+    if (atLineStart) s = s.replace(/^-\s+/, '');
+    s = s.replace(/^[ \t.,:;!?'"—–،؛؟]+/, '');
+    s = stripTrailingPunct(s);
+
+    let changed = true;
+    while (changed && s.length > 0) {
+      changed = false;
+      const pairs = [['(', ')'], ['[', ']'], ['{', '}']];
+      for (const [open, close] of pairs) {
+        let bal = 0;
+        for (const ch of s) {
+          if (ch === open) bal++;
+          else if (ch === close) bal--;
+        }
+        const isHalfOpen = (open === '[' && close === ']' && s.startsWith('[') && s.endsWith(')')) ||
+                           (open === '(' && close === ')' && s.startsWith('(') && s.endsWith(']'));
+        if (bal > 0) {
+          if (s.endsWith(open)) {
+            s = stripTrailingPunct(s.slice(0, -1));
+            changed = true;
+            break;
+          }
+          if (s.startsWith(open) && !isHalfOpen) {
+            s = s.slice(1).replace(/^[ \t.,:;!?'"—–]+/, '');
+            changed = true;
+            break;
+          }
+        } else if (bal < 0) {
+          if (s.startsWith(close)) {
+            s = s.slice(1).replace(/^[ \t.,:;!?'"—–]+/, '');
+            changed = true;
+            break;
+          }
+          if (s.endsWith(close) && !isHalfOpen) {
+            s = stripTrailingPunct(s.slice(0, -1));
+            changed = true;
+            break;
+          }
+        }
+      }
+    }
+    s = s.replace(/^[ \t.,:;!?'"—–،؛؟]+/, '');
+    s = stripTrailingPunct(s);
+    return s;
+  }
+
+  function isMathSpan(s) {
+    const clean = s.replace(/[\uE001\uE002]/g, '');
+    if (!clean) return false;
+    if (/[√∛∜⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾₀₁₂₃₄₅₆₇₈₉¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞⁄±×÷·=≠≈≡≤≥<>≪≫^|∈∉⊂⊃⊆⊇∪∩∅∞Δπθλμη∠°′″⇒⇐→➔↔\u0304]/.test(clean)) return true;
+    if (/&(?:lt|gt);/.test(clean)) return true;
+    if (/(?:^|[\s(\[{,])[+-]\d/.test(clean)) return true;
+    if (/[A-Za-z0-9)]\s*\/\s*[A-Za-z0-9(]/.test(clean)) return true;
+    if (/[(\[{]\s*[-+A-Za-z0-9.]+\s*,\s*[-+A-Za-z0-9.]+/.test(clean)) return true;
+    if (/(?:\d[A-Za-z]|[A-Za-z]\d|\b[A-Za-z]\b\s*[+-]\s*\b[A-Za-z0-9]\b)/.test(clean)) return true;
+    if (/(?:^|[\s(\[{,])[+-][A-Za-z](?:\b|$)/.test(clean)) return true;
+    return false;
+  }
+
+  function isolatePlainSegment(seg) {
+    if (!seg) return '';
+    // حماية وسوم <mark class="search-hit"> أثناء العزل حتى لا ينكسر التظليل داخل المعادلات
+    const hadMarks = seg.includes('<mark');
+    let work = hadMarks
+      ? seg.replace(/<mark class="search-hit">/g, MARK_OPEN).replace(/<\/mark>/g, MARK_CLOSE)
+      : seg;
+
+    const lines = work.split(/(\r?\n)/);
+    const out = lines.map((part, idx) => {
+      if (idx % 2 === 1) return part;
+      return part.replace(/[^\u0600-\u06FF\u060C\u061B\u061F]+/g, (match, offset) => {
+        const subParts = splitAtUnmatchedParens(match);
+        return subParts.map((sub, sIdx) => {
+          const trimmed = trimMathRun(sub, offset === 0 && sIdx === 0);
+          if (!isMathSpan(trimmed)) return sub;
+          const pos = sub.indexOf(trimmed);
+          const prefix = sub.slice(0, pos);
+          const suffix = sub.slice(pos + trimmed.length);
+          return `${prefix}<span dir="ltr" class="math-ltr">${trimmed}</span>${suffix}`;
+        }).join('');
+      });
+    }).join('');
+
+    return hadMarks
+      ? out.replace(/\uE001/g, '<mark class="search-hit">').replace(/\uE002/g, '</mark>')
+      : out;
+  }
+
+  // تجنب المساس بالكتل المعزولة مسبقاً أو وسوم HTML (باستثناء <mark class="search-hit"> و <code>)
+  const tokenRe = /(<(?:span|div)\b[^>]*\bdir\s*=\s*['"]ltr['"][^>]*>[\s\S]*?<\/(?:span|div)>|<code\b[^>]*>[\s\S]*?<\/code>|<(?!\/?mark\b)[^>]+>)/gi;
+  let result = '';
+  let lastIndex = 0;
+  for (const m of htmlText.matchAll(tokenRe)) {
+    const start = m.index || 0;
+    if (start > lastIndex) {
+      result += isolatePlainSegment(htmlText.slice(lastIndex, start));
+    }
+    const tagBlock = m[0];
+    if (/^<code\b/i.test(tagBlock) && !/\bdir\s*=/i.test(tagBlock) && !/[\u0600-\u06FF]/.test(tagBlock)) {
+      result += tagBlock.replace(/^<code\b/i, '<code dir="ltr" class="math-ltr-code"');
+    } else {
+      result += tagBlock;
+    }
+    lastIndex = start + tagBlock.length;
+  }
+  if (lastIndex < htmlText.length) {
+    result += isolatePlainSegment(htmlText.slice(lastIndex));
+  }
+  return result;
 }
 
 // متغيرات الحالة المشتركة

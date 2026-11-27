@@ -840,6 +840,7 @@ function renderPastExam(examId) {
   const isEnglish = (currentExamSubjectMode === 'en');
   const textDir = isEnglish ? 'ltr' : 'rtl';
   const textAlign = isEnglish ? 'left' : 'right';
+  const fmtExam = (s) => formatPhysicsMath(s, { skipInline: isEnglish });
 
   container.innerHTML = `
     <!-- الترويسة الرسمية لورقة الامتحان -->
@@ -898,14 +899,14 @@ function renderPastExam(examId) {
 
           ${q.content ? `
             <div class="exam-q-content" style="font-size: 0.9rem; line-height: 1.8; color: var(--slate-800); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign};">
-              ${formatPhysicsMath(q.content)}
+              ${fmtExam(q.content)}
             </div>
           ` : ''}
 
           ${q.branchA ? `
             <div style="margin-bottom: 0.85rem;">
               <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                ${formatPhysicsMath(q.branchA.title)}
+                ${fmtExam(q.branchA.title)}
               </div>
               ${q.branchA.boxWords ? `
                 <div style="background: white; border: 1px dashed var(--slate-300); border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 0.5rem; direction: ${textDir}; text-align: center; font-weight: 700; color: var(--primary);">
@@ -913,7 +914,7 @@ function renderPastExam(examId) {
                 </div>
               ` : ''}
               <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                ${q.branchA.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
+                ${q.branchA.items.map(it => `<div>${fmtExam(it)}</div>`).join('')}
               </div>
             </div>
           ` : ''}
@@ -921,10 +922,10 @@ function renderPastExam(examId) {
           ${q.branchB ? `
             <div style="margin-bottom: 0.85rem;">
               <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                ${formatPhysicsMath(q.branchB.title)}
+                ${fmtExam(q.branchB.title)}
               </div>
               <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                ${q.branchB.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
+                ${q.branchB.items.map(it => `<div>${fmtExam(it)}</div>`).join('')}
               </div>
             </div>
           ` : ''}
@@ -932,17 +933,17 @@ function renderPastExam(examId) {
           ${q.branchC ? `
             <div style="margin-bottom: 0.85rem;">
               <div style="font-size: 0.82rem; font-weight: 700; color: var(--slate-800); margin-bottom: 0.35rem; direction: ${textDir}; text-align: ${textAlign};">
-                ${formatPhysicsMath(q.branchC.title)}
+                ${fmtExam(q.branchC.title)}
               </div>
               <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-                ${q.branchC.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
+                ${q.branchC.items.map(it => `<div>${fmtExam(it)}</div>`).join('')}
               </div>
             </div>
           ` : ''}
 
           ${q.items ? `
             <div class="exam-questions-list" style="direction: ${textDir}; text-align: ${textAlign};">
-              ${q.items.map(it => `<div>${formatPhysicsMath(it)}</div>`).join('')}
+              ${q.items.map(it => `<div>${fmtExam(it)}</div>`).join('')}
             </div>
           ` : ''}
 
@@ -952,7 +953,7 @@ function renderPastExam(examId) {
               <span>💡</span> الجواب النموذجي المعتمد وتوزيع الدرجات الوزارية:
             </div>
             <div style="font-size: 0.88rem; line-height: 1.8; color: #166534;">
-              ${formatPhysicsMath(q.answer || q.solution || '')}
+              ${fmtExam(q.answer || q.solution || '')}
             </div>
           </div>
         </div>

@@ -980,6 +980,7 @@ window.ReportManager = (() => {
           </thead>
           <tbody>
             ${qs.map((q, idx) => {
+              const useQuizMath = (meta.currId === 7 || meta.currId === 8 || meta.currId === 10);
               const correctIdx = q.correct !== undefined ? q.correct : q.answer;
               const userIdx = ans[q.id];
               const isOk = userIdx === correctIdx;
@@ -989,11 +990,11 @@ window.ReportManager = (() => {
                 <tr>
                   <td>${idx + 1}</td>
                   <td>
-                    <div><strong>${getEscaped(q.question)}</strong></div>
-                    ${q.explanation ? `<div style="font-size:0.78rem;color:#475569;margin-top:0.2rem;">التفسير: ${getEscaped(q.explanation)}</div>` : ''}
+                    <div><strong>${formatRichText(q.question, useQuizMath)}</strong></div>
+                    ${q.explanation ? `<div style="font-size:0.78rem;color:#475569;margin-top:0.2rem;">التفسير: ${formatRichText(q.explanation, useQuizMath)}</div>` : ''}
                   </td>
-                  <td>${getEscaped(userText)}</td>
-                  <td>${getEscaped(corrText)}</td>
+                  <td>${formatRichText(userText, useQuizMath)}</td>
+                  <td>${formatRichText(corrText, useQuizMath)}</td>
                   <td><span class="report-pill ${isOk ? 'ok' : 'bad'}">${isOk ? 'صحيحة' : 'خاطئة'}</span></td>
                 </tr>
               `;
@@ -1325,8 +1326,10 @@ window.ReportManager = (() => {
       .report-words-box { background: #f8fafc; border: 1px dashed #94a3b8; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; margin-bottom: 0.4rem; }
       .report-empty-note { padding: 1.25rem; text-align: center; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; color: #475569; font-weight: 700; }
       .report-doc-footer { margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid #cbd5e1; display: flex; justify-content: space-between; font-size: 0.78rem; color: #475569; }
-      .phy-math-block { direction: ltr; text-align: center; font-weight: 800; margin: 0.4rem 0; padding: 0.35rem; background: #eef2ff; border-radius: 6px; color: #1e1b4b; }
-      .phy-formula { direction: ltr; display: inline-block; font-weight: 800; color: #1e40af; padding: 0 0.25rem; }
+      .phy-math-block { direction: ltr; unicode-bidi: isolate; text-align: center; font-weight: 800; margin: 0.4rem 0; padding: 0.35rem; background: #eef2ff; border-radius: 6px; color: #1e1b4b; }
+      .phy-formula { direction: ltr; unicode-bidi: isolate; display: inline-block; font-weight: 800; color: #1e40af; padding: 0 0.25rem; }
+      .math-ltr { direction: ltr; unicode-bidi: isolate; display: inline; }
+      .math-ltr-code { direction: ltr; unicode-bidi: isolate; display: inline-block; }
       @media print {
         body { background: #ffffff; padding: 0; }
         .no-print { display: none !important; }

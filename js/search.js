@@ -645,9 +645,9 @@ window.GlobalSearch = (() => {
             </div>
             <span class="search-result-action-hint">فتح ⏎</span>
           </div>
-          <div class="search-result-title">${highlightMatches(item.title, trimmed)}</div>
+          <div class="search-result-title">${(item.currId === 7 || item.currId === 8 || item.currId === 10) && typeof formatPhysicsMath === 'function' ? formatPhysicsMath(highlightMatches(item.title, trimmed)) : highlightMatches(item.title, trimmed)}</div>
           ${item.subtitle ? `<div class="search-result-sub">${highlightMatches(item.subtitle, trimmed)}</div>` : ''}
-          ${snippet ? `<div class="search-result-snippet">${highlightMatches(snippet, trimmed)}</div>` : ''}
+          ${snippet ? `<div class="search-result-snippet">${(item.currId === 7 || item.currId === 8 || item.currId === 10) && typeof formatPhysicsMath === 'function' ? formatPhysicsMath(highlightMatches(snippet, trimmed)) : highlightMatches(snippet, trimmed)}</div>` : ''}
         </button>
       `;
     }).join('');

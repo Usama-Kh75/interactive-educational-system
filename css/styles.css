@@ -1908,6 +1908,20 @@ img, .atmosphere-img, .atmosphere-visual, .feature-showcase-visual, .feature-sho
   box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
+.math-ltr {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline;
+  font-variant-numeric: lining-nums;
+}
+
+.math-ltr-code,
+.exam-q-card code {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+}
+
 .grammar-example-item {
   padding: 0.5rem;
   border-radius: 6px;
