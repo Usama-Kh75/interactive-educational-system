@@ -32,8 +32,8 @@ window.ReportManager = (() => {
       rulesKey: 'GRAMMAR_RULES',
       examMode: 'en',
       diagramsKey: null,
-      declaredLessons: 76,
-      declaredPages: 119,
+      declaredLessons: 84,
+      declaredPages: 120,
       declaredActivityPages: 127
     },
     {
@@ -492,7 +492,7 @@ window.ReportManager = (() => {
       let statusTone = 'success';
       if (spec.id === 8) {
         if (lessonsWithExercises >= 28 && lessonsWithoutExercises > 0) {
-          status = 'جيد (الجزء الأول مكتمل)';
+          status = 'جيد (الفصول 1 إلى 4 مكتملة)';
           statusTone = 'warning';
         } else if (lessonsWithoutExercises === 0) {
           status = 'مكتمل وعالي';

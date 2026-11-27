@@ -891,7 +891,7 @@ function bindBookModalSwipe() {
 // دالة مساعدة لتحديد إجمالي صفحات الكتاب المعتمد بدقة
 function getCurriculumMaxPages(currId, bookType = 'student') {
   const id = Number(currId);
-  if (id === 3) return (bookType === 'activity' ? 127 : 119);
+  if (id === 3) return (bookType === 'activity' ? 127 : 120);
   if (id === 4 || id === 5) return 136;
   if (id === 6) return 120;
   if (id === 7) return 88;
@@ -974,7 +974,7 @@ function renderDigitalLibraryPage(lessonTitle = '') {
 
   let folder = '';
   let bookName = isActivity ? 'كراس النشاط (Activity Book)' : 'كتاب اللغة الإنجليزية (Student\'s Book)';
-  let maxPages = isActivity ? 127 : 119;
+  let maxPages = isActivity ? 127 : 120;
 
   if (isActivity) {
     folder = 'english_activity/';

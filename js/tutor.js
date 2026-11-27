@@ -1010,7 +1010,7 @@ function generateMathLocalAnswer(query, lessonId, curr) {
 
   if (qClean.includes('فيثاغورس') || qClean.includes('مثلث قائم') || qClean.includes('وتر') || qClean.includes('عكس فيثاغورس')) {
     return {
-      content: '📌 **مبرهنة فيثاغورس وتطبيقاتها (كتاب الرياضيات - الجزء 1 ص 46):**\n\n' +
+      content: '📌 **مبرهنة فيثاغورس وتطبيقاتها (كتاب الرياضيات - الفصل 2):**\n\n' +
                '• **نص المبرهنة:** في أي مثلث قائم الزاوية، مساحة المربع المنشأ على الوتر تساوي مجموع مساحتي المربعين المنشأين على الضلعين القائمين الآخرين.\n' +
                '• **الصيغة الرياضية:** <span dir="ltr" class="phy-formula">c² = a² + b²</span> (حيث c هو الوتر).\n' +
                '• **طول الوتر:** <span dir="ltr" class="phy-formula">c = √(a² + b²)</span>.\n' +
@@ -1031,7 +1031,7 @@ function generateMathLocalAnswer(query, lessonId, curr) {
 
   if (qClean.includes('ميل') || qClean.includes('ميل المستقيم') || qClean.includes('تغير صادي') || qClean.includes('تغير سيني')) {
     return {
-      content: '📌 **ميل المستقيم وحالاته الأربع (الجزء 2 ص 12-16):**\n\n' +
+      content: '📌 **ميل المستقيم وحالاته الأربع (كتاب الرياضيات - الفصل 6):**\n\n' +
                '• **قانون الميل:** <span dir="ltr" class="phy-formula">m = (y₂ - y₁) / (x₂ - x₁)</span> (حيث x₂ ≠ x₁).\n' +
                '• **الحالات الأربع للميل:**\n' +
                '1. **الميل موجب (m > 0):** المستقيم يتجه للأعلى نحو اليمين (كلما زادت x زادت y).\n' +
@@ -1044,7 +1044,7 @@ function generateMathLocalAnswer(query, lessonId, curr) {
 
   if (qClean.includes('عامل مشترك') || qClean.includes('gcf') || qClean.includes('تحليل مقدار') || qClean.includes('فرق بين مربعين')) {
     return {
-      content: '📌 **طرائق تحليل المقادير الجبرية (الجزء 1 ص 78-86):**\n\n' +
+      content: '📌 **طرائق تحليل المقادير الجبرية (كتاب الرياضيات - الفصل 3):**\n\n' +
                '1. **التحليل باستخراج العامل المشترك الأكبر (G.C.F):** استخراج حاصل ضرب العوامل المشتركة بأصغر أس للرموز مع العامل المشترك العددي.\n' +
                '2. **خاصية التجميع والمعكوس:** تجميع الحدود ذات العوامل المشتركة مثنى مثنى، وإذا تعاكست الإشارات نستخرج (-1) كعامل مشترك.\n' +
                '3. **التحليل بالفرق بين مربعين:**\n' +
@@ -1056,7 +1056,7 @@ function generateMathLocalAnswer(query, lessonId, curr) {
 
   if (qClean.includes('مطلق') || qClean.includes('معادله القيمه المطلقه') || qClean.includes('متباينه') || qClean.includes('حل متباينه')) {
     return {
-      content: '📌 **معادلات القيمة المطلقة والمتباينات (الجزء 1 ص 100-112):**\n\n' +
+      content: '📌 **معادلات القيمة المطلقة والمتباينات (كتاب الرياضيات - الفصل 4):**\n\n' +
                '• **معادلة المطلق |x| = a (حيث a ≥ 0):** تكافئ حالتين: إما <span dir="ltr" class="phy-formula">x = a</span> أو <span dir="ltr" class="phy-formula">x = -a</span>.\n' +
                '• إذا كان a < 0 فإن مجموعة الحل خالية <span dir="ltr" class="phy-formula">S = ∅</span> لأن المطلق موجب دوماً.\n' +
                '• **قاعدة ذهبية في المتباينات:** عند ضرب أو قسمة طرفي المتباينة على عدد سالب، يجب **عكس اتجاه رمز التباين** (الأكبر يصبح أصغر والعكس).',

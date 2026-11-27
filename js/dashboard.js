@@ -27,7 +27,7 @@ function renderDashboardCurriculaQuickBar() {
           <strong style="font-size: 0.92rem; color: var(--slate-900);">اللغة الإنجليزية</strong>
           ${isEngActive ? '<span style="background: #4f46e5; color: #fff; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px;">النشط ✓</span>' : '<span style="background: #eef2ff; color: #4338ca; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">English</span>'}
         </div>
-        <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">8 وحدات • 76 درساً • 119 ص</div>
+        <div style="font-size: 0.74rem; color: var(--slate-500); font-weight: 600; margin-top: 0.15rem;">8 وحدات • 76 درساً • 120 ص</div>
       </div>
     </button>
 
@@ -673,7 +673,7 @@ function renderCurriculumsList() {
           <div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem;">
               <span class="curr-badge" style="background: #7e22ce; color: #ffffff; font-weight: 900; font-size: 0.78rem; padding: 0.25rem 0.75rem; border-radius: 6px;">مقرر وزاري معتمد</span>
-              <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الكامل (الجزء الأول والثاني • 7 فصول) • مكتمل 100%</span>
+              <span style="background: #ffffff; color: #6b21a8; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">✅ المنهج الكامل (كتاب موحد • 7 فصول) • مكتمل 100%</span>
               <span style="background: #ffffff; color: #581c87; border: 1px solid #d8b4fe; padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">📐 17 لوحة هندسية وبيانية SVG</span>
               <span style="background: #ffffff; color: var(--slate-700); border: 1px solid var(--slate-200); padding: 0.2rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700;">الصف: الثاني متوسط</span>
             </div>
@@ -704,7 +704,7 @@ function renderCurriculumsList() {
             <span style="font-size: 0.65rem; font-weight: 800; margin-top: 0.2rem;">الرياضيات</span>
           </div>
           <div>
-            <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (الجزأين 1 و 2)</div>
+            <div style="font-weight: 900; font-size: 1.05rem; color: #581c87; margin-bottom: 0.25rem;">كتاب الطالب الرسمي المعتمد (كتاب موحد من 7 فصول)</div>
             <div style="font-size: 0.82rem; color: var(--slate-500); font-weight: 700;">4 وحدات كبرى • 7 فصول • 51 درساً تفاعلياً • 17 لوحة SVG • بنك النظريات</div>
             <div style="font-size: 0.76rem; color: #7e22ce; font-weight: 800; margin-top: 0.2rem;">إعداد وتطوير: إعداد المهندس أسامة خليل هاشم</div>
           </div>
@@ -1204,7 +1204,7 @@ function renderActiveSubjectShowcase() {
                 <span>كتاب الرياضيات - الصف الثاني المتوسط</span>
               </h3>
               <p style="font-size: 0.85rem; color: #6b21a8; line-height: 1.6; margin: 0 0 0.75rem;">
-                المنهج الرسمي المعتمد لوزارة التربية العراقية (الجزء الأول والجزء الثاني): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 51 درساً تفاعلياً، 17 لوحة هندسية وبيانية SVG، وبنك النظريات والامتحانات المحلولة).
+                المنهج الرسمي المعتمد لوزارة التربية العراقية (كتاب موحد من 7 فصول): الأعداد النسبية، الأعداد الحقيقية، الحدوديات، المعادلات والمتباينات، الهندسة والقياس، الهندسة الإحداثية، والإحصاء والاحتمالات (7 فصول شاملة، 51 درساً تفاعلياً، 17 لوحة هندسية وبيانية SVG، وبنك النظريات والامتحانات المحلولة).
               </p>
             </div>
             <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
@@ -1465,7 +1465,7 @@ function renderActiveSubjectShowcase() {
               🎯 تمارين الكراس والمراجعات (8 وحدات)
             </button>
             <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4, 'student')" style="background: #ffffff; color: #4338ca; border-color: #c7d2fe; font-weight: 800; padding: 0.55rem 0.95rem;">
-              📖 تصفح كتاب الطالب (119 صفحة)
+              📖 تصفح كتاب الطالب (120 صفحة)
             </button>
             <button class="btn btn-secondary btn-sm" onclick="openDigitalLibraryReader(3, 4, 'activity')" style="background: #f0fdfa; color: #0f766e; border-color: #99f6e4; font-weight: 800; padding: 0.55rem 0.95rem;">
               📝 تصفح كراس النشاط (127 صفحة)
