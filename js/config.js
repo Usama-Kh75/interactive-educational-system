@@ -6,9 +6,9 @@
 const LEGACY_STORAGE_KEY = 'interactive_educational_system_v2';
 const STORAGE_KEY = 'interactive_edu_state_v1';
 const BUILTIN_CURRICULUM_IDS = new Set([3, 4, 5, 6, 7, 8, 9, 10, 11]);
-const CURRENT_VERSION = '5.13.1';
-const CURRENT_VERSION_LABEL = 'v5.13.1';
-const SYSTEM_VERSION = 'v5.13.1';
+const CURRENT_VERSION = '5.13.2';
+const CURRENT_VERSION_LABEL = 'v5.13.2';
+const SYSTEM_VERSION = 'v5.13.2';
 const SYSTEM_AUTHOR = 'المهندس أسامة خليل هاشم';
 const LAST_SEEN_VERSION_KEY = 'interactive_edu_last_seen_version';
 const DISMISSED_UPDATE_KEY = 'interactive_edu_dismissed_update';

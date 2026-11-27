@@ -248,9 +248,10 @@ function renderQuizQuestions() {
 
   const currId = currentQuizMeta.currId || Number(appData.currentCurriculumId || 3);
   const useMathFmt = (currId === 7 || currId === 8 || currId === 10) && typeof formatPhysicsMath === 'function';
+  const isEnCurr = (typeof isEnglishCurriculum === 'function') ? isEnglishCurriculum(currId) : (currId === 3);
 
   currentQuizQuestions.forEach((q, idx) => {
-    const isArabicText = (currId !== 3) || /[\u0600-\u06FF]/.test(q.question);
+    const isArabicText = !isEnCurr || /[\u0600-\u06FF]/.test(q.question);
     const textDir = isArabicText ? 'rtl' : 'ltr';
     const textAlign = isArabicText ? 'right' : 'left';
     const optionLetters = isArabicText ? ['أ', 'ب', 'ج', 'د', 'هـ', 'و'] : ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -269,9 +270,11 @@ function renderQuizQuestions() {
           </span>
           <span id="q-status-badge-${q.id}" style="font-size: 0.72rem; font-weight: 700; color: var(--slate-400);">لم يُجب بعد</span>
         </div>
-        <button type="button" class="mini-listen-btn" onclick="speakQuizQuestion(${q.id})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;" title="استمع للسؤال بصوت طبيعي">
-          🔊 استمع للسؤال
-        </button>
+        ${!isArabicText ? `
+          <button type="button" class="mini-listen-btn" onclick="speakQuizQuestion(${q.id})" style="font-size: 0.72rem; padding: 0.2rem 0.6rem;" title="استمع للسؤال باللغة الإنجليزية">
+            🔊 استمع للسؤال
+          </button>
+        ` : ''}
       </div>
 
       <div style="font-size: 0.95rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.85rem; direction: ${textDir}; text-align: ${textAlign}; line-height: 1.65;">
@@ -597,23 +600,34 @@ function printInteractiveQuiz() {
   setTimeout(cleanup, 1000);
 }
 
-// قراءة السؤال صوتياً عبر محرك TTS
+// قراءة السؤال صوتياً عبر محرك TTS (مخصص لأسئلة اللغة الإنجليزية فقط)
 function speakQuizQuestion(qId) {
   const q = currentQuizQuestions.find(item => item.id === qId);
   if (!q) return;
-  const isEnglish = (currentQuizMeta.currId === 3) && !(/[\u0600-\u06FF]/.test(q.question));
-  const lang = isEnglish ? 'en' : 'ar';
-  const arLetters = ['أ', 'ب', 'ج', 'د', 'هـ', 'و'];
-  const optionsSpeech = isEnglish
-    ? q.options.map((opt, i) => `Option ${String.fromCharCode(65 + i)}: ${opt}`).join('. ')
-    : q.options.map((opt, i) => `الخيار ${arLetters[i] || (i + 1)}: ${opt}`).join('. ');
-  const textToSpeak = `${q.question}. ${optionsSpeech}`;
+  const isEnCurr = (typeof isEnglishCurriculum === 'function')
+    ? isEnglishCurriculum(currentQuizMeta.currId)
+    : (Number(currentQuizMeta.currId) === 3);
+  const isEnglish = isEnCurr && !(/[\u0600-\u06FF]/.test(q.question));
+  if (!isEnglish) return;
+
+  const cleanPart = (s) => String(s || '')
+    .replace(/_{2,}/g, ' blank ')
+    .replace(/\([^)]*[\u0600-\u06FF][^)]*\)/g, '')
+    .replace(/[\u0600-\u06FF]+/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const optionsSpeech = (q.options || [])
+    .map((opt, i) => `Option ${String.fromCharCode(65 + i)}: ${cleanPart(opt)}`)
+    .join('. ');
+  const textToSpeak = `${cleanPart(q.question)}. ${optionsSpeech}`;
+
   if (typeof speakSnippet === 'function') {
-    speakSnippet(textToSpeak, lang);
+    speakSnippet(textToSpeak, 'en');
   } else if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(textToSpeak);
-    u.lang = isEnglish ? 'en-US' : 'ar-SA';
+    u.lang = 'en-US';
     window.speechSynthesis.speak(u);
   }
 }
